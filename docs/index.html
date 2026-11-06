@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Câmara Graphs Explorer</title>
+<meta name="description" content="Explore Brazil's Chamber of Deputies month by month as two graphs on the same deputies: who votes together and who signs together.">
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781;
+    --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11, 11, 11, 0.10);
+    --a: #e34948; --b: #2a78d6; --other: #c3c2b7; --line: #2a78d6; --edge: 11, 11, 11;
+    --wash: rgba(252, 252, 251, 0.74); --is-dark: 0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781;
+      --grid: #2c2c2a; --axis: #383835; --border: rgba(255, 255, 255, 0.10);
+      --a: #e66767; --b: #3987e5; --other: #5c5b57; --line: #3987e5; --edge: 240, 239, 236;
+      --wash: rgba(26, 26, 25, 0.76); --is-dark: 1;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255, 255, 255, 0.10);
+    --a: #e66767; --b: #3987e5; --other: #5c5b57; --line: #3987e5; --edge: 240, 239, 236;
+    --wash: rgba(26, 26, 25, 0.76); --is-dark: 1;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1240px; margin: 0 auto; padding: 24px 16px 48px; }
+  header h1 { font-size: 22px; margin: 0 0 4px; font-weight: 650; }
+  header p { margin: 0; color: var(--ink2); max-width: 820px; }
+  header a, footer a { color: var(--ink2); }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; margin: 20px 0 16px; }
+  .controls label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--ink2); }
+  .controls select, .controls input[type="search"] {
+    font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 6px 8px; min-height: 34px;
+  }
+  .controls input[type="range"] { width: 160px; accent-color: var(--line); }
+  .tau { display: flex; gap: 8px; align-items: center; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 12px; }
+  .tile .label { font-size: 12px; color: var(--ink2); }
+  .tile .value { font-size: 26px; font-weight: 600; margin: 2px 0; }
+  .tile .sub { font-size: 12px; color: var(--muted); }
+  .net { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 12px; margin-bottom: 12px; }
+  .panel-title { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; margin: 0 0 6px; }
+  .panel-title h2 { font-size: 15px; margin: 0; font-weight: 600; }
+  .panel-title span { color: var(--muted); font-size: 12px; }
+  .stage { position: relative; }
+  .stage + .panel-title { margin-top: 14px; }
+  .stage canvas { display: block; width: 100%; }
+  .stage canvas.overlay { position: absolute; inset: 0; cursor: crosshair; touch-action: none; }
+  .empty { color: var(--muted); padding: 40px 8px; text-align: center; }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--ink2); margin-top: 10px; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+  .legend i.hollow { background: transparent !important; border: 1.5px solid var(--other); }
+  aside h2 { font-size: 15px; margin: 0 0 4px; }
+  aside .who { color: var(--ink2); margin-bottom: 12px; }
+  aside h3 { font-size: 12px; font-weight: 600; color: var(--ink2); margin: 14px 0 6px; text-transform: none; }
+  aside ol { list-style: none; margin: 0; padding: 0; }
+  aside li button {
+    all: unset; box-sizing: border-box; display: flex; justify-content: space-between; gap: 8px; width: 100%;
+    padding: 4px 6px; border-radius: 6px; cursor: pointer; font-size: 13px;
+  }
+  aside li button:hover, aside li button:focus-visible { background: var(--page); outline: none; }
+  aside li .n { color: var(--ink2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  aside .hint { color: var(--muted); }
+  .clear { all: unset; cursor: pointer; color: var(--ink2); font-size: 12px; text-decoration: underline; }
+  .two { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 12px; }
+  .two h2 { font-size: 15px; margin: 0 0 2px; font-weight: 600; }
+  .two .note { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+  svg text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  #heat { overflow-x: auto; }
+  .heat rect.cell { cursor: default; }
+  .heat rect.cell:hover, .heat rect.cell:focus { stroke: var(--ink); stroke-width: 1.5; outline: none; }
+  .toggle { all: unset; cursor: pointer; font-size: 12px; color: var(--ink2); text-decoration: underline; margin-top: 8px; display: inline-block; }
+  table.view { border-collapse: collapse; font-size: 12px; margin-top: 8px; font-variant-numeric: tabular-nums; }
+  table.view th, table.view td { border-bottom: 1px solid var(--grid); padding: 3px 6px; text-align: right; }
+  table.view th:first-child { text-align: left; }
+  .tablewrap { overflow-x: auto; }
+  #tip {
+    position: fixed; pointer-events: none; z-index: 10; background: var(--surface); color: var(--ink);
+    border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12); max-width: 280px; display: none;
+  }
+  #tip strong { font-size: 14px; display: block; }
+  #tip .row { display: flex; align-items: center; gap: 6px; color: var(--ink2); }
+  #tip .row b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+  #tip .key { width: 12px; height: 2px; border-radius: 1px; display: inline-block; }
+  .loading .fade { opacity: 0.45; transition: opacity 0.15s; }
+  footer { margin-top: 20px; font-size: 12px; color: var(--muted); }
+  @media (max-width: 900px) {
+    .net, .two { grid-template-columns: 1fr; }
+    .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+</style>
+</head>
+<body>
+<main id="app">
+  <header>
+    <h1>Câmara Graphs Explorer</h1>
+    <p>Brazil's Chamber of Deputies, one month at a time, as two graphs on the same deputies: who <b>votes</b> together and who <b>signs</b> together. Computed in your browser from the open data in <a href="https://github.com/mbottoni/camara-graphs">mbottoni/camara-graphs</a>, which CI refreshes every week.</p>
+  </header>
+
+  <div class="controls" role="group" aria-label="Filters">
+    <label>Month <select id="month"></select></label>
+    <label>Vote-together threshold
+      <span class="tau"><input id="tau" type="range" min="0.5" max="0.95" step="0.05" value="0.8"><output id="tauOut">80%</output></span>
+    </label>
+    <label>Ignore items with more signers than
+      <select id="maxAuthors"><option>10</option><option>20</option><option selected>50</option><option>100</option><option value="0">no limit</option></select>
+    </label>
+    <label>Color party <select id="partyA"></select></label>
+    <label>and party <select id="partyB"></select></label>
+    <label>Find a deputy <input id="search" type="search" list="names" placeholder="Name…" autocomplete="off"></label>
+    <datalist id="names"></datalist>
+  </div>
+
+  <section class="tiles fade" aria-live="polite">
+    <div class="card tile"><div class="label">Deputies placed</div><div class="value" id="tN">–</div><div class="sub" id="tNs"></div></div>
+    <div class="card tile"><div class="label">Vote together</div><div class="value" id="tV">–</div><div class="sub" id="tVs"></div></div>
+    <div class="card tile"><div class="label">Sign together</div><div class="value" id="tS">–</div><div class="sub" id="tSs"></div></div>
+    <div class="card tile"><div class="label">Co-signers who also vote together</div><div class="value" id="tO">–</div><div class="sub" id="tOs"></div></div>
+  </section>
+
+  <section class="net">
+    <div class="card fade">
+      <div class="panel-title"><h2 id="h1">Vote together</h2><span id="h1s"></span></div>
+      <div class="stage" id="stage1"><canvas class="base"></canvas><canvas class="overlay" aria-label="Co-voting graph; use Find a deputy to select one"></canvas></div>
+      <div class="panel-title"><h2>Sign together</h2><span id="h2s"></span></div>
+      <div class="stage" id="stage2"><canvas class="base"></canvas><canvas class="overlay" aria-label="Co-authorship graph; use Find a deputy to select one"></canvas></div>
+      <div class="empty" id="netEmpty" hidden></div>
+      <div class="legend" id="legend"></div>
+    </div>
+    <aside class="card" id="panel" aria-live="polite"></aside>
+  </section>
+
+  <section class="two">
+    <div class="card fade">
+      <h2>How often parties vote alike</h2>
+      <p class="note" id="heatNote">Mean agreement between deputies of each pair of parties on contested roll calls, ordered from one end of the vote map to the other.</p>
+      <div id="heat"></div>
+      <button class="toggle" id="heatToggle" aria-expanded="false">Show as table</button>
+      <div class="tablewrap" id="heatTable" hidden></div>
+    </div>
+    <div class="card">
+      <h2>Every month since 2015</h2>
+      <p class="note">Density of each graph. Click a month to load it. Gaps are recesses and campaigns (fewer than 10 contested roll calls or co-signed items).</p>
+      <div id="timeline"></div>
+    </div>
+  </section>
+
+  <footer>
+    Each dot is a deputy with at least 10 contested Plenário votes that month, placed by the first two principal components of those votes. Edges and every default are defined in <a href="https://github.com/mbottoni/camara-graphs/blob/main/METHODOLOGY.md">METHODOLOGY.md</a>; this page reproduces the Python package's counts exactly (checked in CI). Source: Câmara dos Deputados, Dados Abertos.
+  </footer>
+</main>
+<div id="tip" role="tooltip"></div>
+<noscript>This page needs JavaScript. The data itself is browsable at <a href="https://github.com/mbottoni/camara-graphs">github.com/mbottoni/camara-graphs</a>.</noscript>
+
+<script type="module">
+import * as core from "./core.js";
+
+const LOCAL = ["localhost", "127.0.0.1"].includes(location.hostname);
+const DATA = LOCAL ? "../data/" : "https://raw.githubusercontent.com/mbottoni/camara-graphs/main/data/";
+const RAMP = ["#cde2fb", "#b7d3f6", "#9ec5f4", "#86b6ef", "#6da7ec", "#5598e7", "#3987e5", "#2a78d6", "#256abf", "#1c5cab", "#184f95", "#104281", "#0d366b"];
+const MIN_PARTY = 8;
+const $ = (s) => document.querySelector(s);
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const isDark = () => css("--is-dark") === "1";
+const fmt = (x) => x.toLocaleString("en-US");
+const pct = (x) => `${Math.round(x * 100)}%`;
+const plural = (n, word) => `${fmt(n)} ${word}${n === 1 ? "" : "s"}`;
+const el = (tag, props = {}, ...kids) => {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(props)) (k in e ? (e[k] = v) : e.setAttribute(k, v));
+  for (const k of kids) e.append(k);
+  return e;
+};
+const svg = (tag, attrs = {}) => {
+  const e = document.createElementNS("http://www.w3.org/2000/svg", tag);
+  for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+  return e;
+};
+
+const state = { month: null, tau: 0.8, maxAuthors: 50, partyA: "PT", partyB: "PL", selected: null, hover: null };
+const tables = new Map();   // month -> parsed CSVs + month-level caches
+let index = [];
+let view = null;            // everything drawn for the current month + parameters
+
+// ------------------------------------------------------------ data
+
+async function getText(path) {
+  const r = await fetch(DATA + path);
+  if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`);
+  return r.text();
+}
+
+async function loadMonth(m) {
+  if (!tables.has(m)) {
+    const [d, v, a] = await Promise.all(["deputies", "votes", "authorship"].map((k) => getText(`${k}/${m}.csv`)));
+    tables.set(m, { deputies: core.parseCSV(d), votes: core.parseCSV(v), authorship: core.parseCSV(a), co: new Map() });
+  }
+  return tables.get(m);
+}
+
+function compute(m) {
+  const t = tables.get(m);
+  if (!t.vm) {
+    t.info = new Map(t.deputies.map((r) => [+r.deputado_id, r]));
+    t.vm = core.voteMatrix(t.votes);
+    t.cv = core.covote(t.vm);
+    const party = (id) => t.info.get(id)?.partido ?? "";
+    t.P = t.cv.nodes.length >= 2 ? core.pca2(t.vm, t.cv.nodes, party) : [];
+  }
+  const key = state.maxAuthors;
+  if (!t.co.has(key)) t.co.set(key, core.cosponsor(t.authorship, { maxAuthors: key || null }));
+  const cs = t.co.get(key);
+
+  const nodes = t.cv.nodes, at = new Map(nodes.map((d, i) => [d, i]));
+  const N = nodes.length;
+  const vote = [], voteAdj = nodes.map(() => []);
+  for (let k = 0; k < t.cv.u.length; k++) {
+    const a = t.cv.agree[k] / t.cv.shared[k];
+    if (a < state.tau) continue;
+    const i = at.get(t.cv.u[k]), j = at.get(t.cv.v[k]);
+    vote.push([i, j]); voteAdj[i].push(j); voteAdj[j].push(i);
+  }
+  const signers = new Set(cs.nodes);
+  const sign = [], signAdj = nodes.map(() => []);
+  let unplaced = 0;
+  for (let k = 0; k < cs.u.length; k++) {
+    const i = at.get(cs.u[k]), j = at.get(cs.v[k]);
+    if (i === undefined || j === undefined) { unplaced++; continue; }
+    sign.push([i, j, cs.nItems[k]]); signAdj[i].push(j); signAdj[j].push(i);
+  }
+  // Overlap on the aligned vertex set (placed and signed something).
+  const aligned = nodes.map((d) => signers.has(d));
+  const voteSet = new Set(vote.map(([i, j]) => i * 4096 + j));
+  let nA = 0; for (const x of aligned) if (x) nA++;
+  let both = 0, signA = 0, voteA = 0;
+  for (const [i, j] of sign) if (aligned[i] && aligned[j]) { signA++; if (voteSet.has(i * 4096 + j)) both++; }
+  for (const [i, j] of vote) if (aligned[i] && aligned[j]) voteA++;
+  const pairsA = (nA * (nA - 1)) / 2;
+  const party = nodes.map((d) => t.info.get(d)?.partido ?? "");
+  return {
+    month: m, t, nodes, N, P: t.P, party, vote, sign, voteAdj, signAdj, signers, unplaced, at,
+    overlap: signA ? both / signA : null, base: pairsA ? voteA / pairsA : null, nA,
+    contested: t.vm.v,
+  };
+}
+
+// ----------------------------------------------------------- tiles
+
+function renderTiles() {
+  const v = view, pairs = (v.N * (v.N - 1)) / 2;
+  const row = index.find((r) => r.month === v.month);
+  $("#tN").textContent = v.N ? fmt(v.N) : "–";
+  $("#tNs").textContent = `${row ? fmt(+row.votacoes) : "?"} roll calls, ${fmt(v.contested)} contested`;
+  $("#tV").textContent = v.N ? fmt(v.vote.length) : "–";
+  $("#tVs").textContent = v.N ? `edges · density ${pairs ? (v.vote.length / pairs).toFixed(3) : "–"} · agree ≥ ${pct(state.tau)}` : "too few contested votes";
+  $("#tS").textContent = v.N ? fmt(v.sign.length) : "–";
+  $("#tSs").textContent = v.N ? `edges · density ${pairs ? (v.sign.length / pairs).toFixed(3) : "–"}` : "";
+  $("#tO").textContent = v.overlap === null ? "–" : pct(v.overlap);
+  $("#tOs").textContent = v.base === null ? "" : `vs ${pct(v.base)} of all pairs (${v.base ? (v.overlap / v.base).toFixed(1) : "–"}× more likely)`;
+}
+
+// --------------------------------------------------------- network
+
+const stages = [
+  { el: () => $("#stage1"), edges: () => view.vote, adj: () => view.voteAdj, hollow: false },
+  { el: () => $("#stage2"), edges: () => view.sign, adj: () => view.signAdj, hollow: true },
+];
+
+function colorOf(p) {
+  return p === state.partyA ? css("--a") : p === state.partyB ? css("--b") : css("--other");
+}
+
+function layout() {
+  const w = $("#stage1").clientWidth;
+  if (!view || view.N < 2 || !w) return null;
+  const xs = view.P.map((p) => p[0]), ys = view.P.map((p) => p[1]);
+  const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+  const rx = maxX - minX || 1, ry = maxY - minY || 1, pad = 14;
+  const h = Math.max(220, Math.min(460, Math.round(w * (ry / rx)) + 2 * pad));
+  const s = Math.min((w - 2 * pad) / rx, (h - 2 * pad) / ry);
+  const ox = (w - rx * s) / 2, oy = (h - ry * s) / 2;
+  return { w, h, xy: view.P.map(([x, y]) => [ox + (x - minX) * s, oy + (maxY - y) * s]) };
+}
+
+function sizeCanvas(c, w, h) {
+  const dpr = window.devicePixelRatio || 1;
+  c.width = Math.round(w * dpr); c.height = Math.round(h * dpr);
+  c.style.height = `${h}px`;
+  const ctx = c.getContext("2d");
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return ctx;
+}
+
+let geo = null;
+function drawNetwork() {
+  // Unhide before measuring: a hidden stage has zero width.
+  const ok = Boolean(view && view.N >= 2);
+  for (const s of stages) s.el().hidden = !ok;
+  document.querySelectorAll(".net .panel-title").forEach((e) => (e.hidden = !ok));
+  geo = ok ? layout() : null;
+  const empty = $("#netEmpty");
+  if (!geo) {
+    for (const s of stages) s.el().hidden = true;
+    document.querySelectorAll(".net .panel-title").forEach((e) => (e.hidden = true));
+    empty.hidden = false;
+    empty.textContent = view ? `${view.month} has ${view.contested} contested roll calls; a deputy needs at least 10 to be placed. Pick a month with more votes, or click one on the timeline.` : "Loading…";
+    return;
+  }
+  empty.hidden = true;
+  const surface = css("--surface"), edge = css("--edge"), other = css("--other");
+  for (const s of stages) {
+    const [base, over] = s.el().querySelectorAll("canvas");
+    const ctx = sizeCanvas(base, geo.w, geo.h);
+    sizeCanvas(over, geo.w, geo.h);
+    ctx.fillStyle = surface; ctx.fillRect(0, 0, geo.w, geo.h);
+    const E = s.edges();
+    ctx.globalAlpha = Math.max(0.02, Math.min(0.25, 700 / Math.max(E.length, 1)));
+    ctx.strokeStyle = `rgb(${edge})`; ctx.lineWidth = 0.6;
+    ctx.beginPath();
+    for (const [i, j] of E) { ctx.moveTo(...geo.xy[i]); ctx.lineTo(...geo.xy[j]); }
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+    const order = [...view.nodes.keys()].sort((a, b) => rank(view.party[a]) - rank(view.party[b]));
+    for (const i of order) {
+      const [x, y] = geo.xy[i];
+      const hollow = s.hollow && !view.signers.has(view.nodes[i]);
+      ctx.beginPath(); ctx.arc(x, y, 3.6, 0, 2 * Math.PI);
+      if (hollow) { ctx.fillStyle = surface; ctx.fill(); ctx.strokeStyle = other; ctx.lineWidth = 1.2; ctx.stroke(); }
+      else { ctx.fillStyle = colorOf(view.party[i]); ctx.fill(); ctx.strokeStyle = surface; ctx.lineWidth = 1; ctx.stroke(); }
+    }
+  }
+  drawOverlay();
+}
+const rank = (p) => (p === state.partyA ? 2 : p === state.partyB ? 1 : 0);
+
+function drawOverlay() {
+  if (!geo) return;
+  const focus = state.selected ?? state.hover;
+  const ink = css("--ink"), surface = css("--surface");
+  for (const s of stages) {
+    const over = s.el().querySelector("canvas.overlay");
+    const ctx = over.getContext("2d");
+    ctx.clearRect(0, 0, geo.w, geo.h);
+    if (focus == null) continue;
+    ctx.fillStyle = css("--wash"); ctx.fillRect(0, 0, geo.w, geo.h);
+    const nb = s.adj()[focus];
+    ctx.strokeStyle = ink; ctx.globalAlpha = Math.max(0.12, Math.min(0.5, 30 / Math.max(nb.length, 1))); ctx.lineWidth = 0.8;
+    ctx.beginPath();
+    for (const j of nb) { ctx.moveTo(...geo.xy[focus]); ctx.lineTo(...geo.xy[j]); }
+    ctx.stroke(); ctx.globalAlpha = 1;
+    for (const j of nb) {
+      const [x, y] = geo.xy[j];
+      ctx.beginPath(); ctx.arc(x, y, 3.6, 0, 2 * Math.PI);
+      ctx.fillStyle = colorOf(view.party[j]); ctx.fill(); ctx.strokeStyle = surface; ctx.lineWidth = 1; ctx.stroke();
+    }
+    const [x, y] = geo.xy[focus];
+    ctx.beginPath(); ctx.arc(x, y, 6.5, 0, 2 * Math.PI);
+    ctx.fillStyle = colorOf(view.party[focus]); ctx.fill(); ctx.strokeStyle = ink; ctx.lineWidth = 2; ctx.stroke();
+  }
+}
+
+function nearest(ev, canvas) {
+  if (!geo) return null;
+  const r = canvas.getBoundingClientRect();
+  const px = ev.clientX - r.left, py = ev.clientY - r.top;
+  let best = null, bd = 14 * 14;   // 28px hit area around each 7px dot
+  geo.xy.forEach(([x, y], i) => { const d = (x - px) ** 2 + (y - py) ** 2; if (d < bd) { bd = d; best = i; } });
+  return best;
+}
+
+function nodeTip(i, ev) {
+  const d = view.nodes[i], info = view.t.info.get(d) || {};
+  showTip(ev, [
+    el("strong", { textContent: info.nome || String(d) }),
+    el("div", { className: "row", textContent: `${info.partido || "?"} · ${info.uf || "?"}` }),
+    tipRow(css("--line"), fmt(view.voteAdj[i].length), "vote together"),
+    tipRow(css("--muted"), fmt(view.signAdj[i].length), "sign together"),
+  ]);
+}
+
+for (const s of stages) {
+  const over = s.el().querySelector("canvas.overlay");
+  over.addEventListener("pointermove", (ev) => {
+    const i = nearest(ev, over);
+    if (i !== state.hover) { state.hover = i; drawOverlay(); }
+    if (i === null) hideTip(); else nodeTip(i, ev);
+  });
+  over.addEventListener("pointerleave", () => { state.hover = null; hideTip(); drawOverlay(); });
+  over.addEventListener("click", (ev) => {
+    const i = nearest(ev, over);
+    select(i === null || i === state.selected ? null : i);
+  });
+}
+
+function legend() {
+  const box = $("#legend"); box.replaceChildren();
+  const count = (p) => view ? view.party.filter((x) => x === p).length : 0;
+  const others = view ? view.N - count(state.partyA) - count(state.partyB) : 0;
+  const item = (color, text, hollow) => el("span", {}, el("i", { className: hollow ? "hollow" : "", style: `background:${color}` }), text);
+  box.append(
+    item(css("--a"), `${state.partyA} (${count(state.partyA)})`),
+    item(css("--b"), `${state.partyB} (${count(state.partyB)})`),
+    item(css("--other"), `Other parties (${others})`),
+    item("", "Signed nothing this month (bottom panel)", true),
+  );
+}
+
+// ---------------------------------------------------- deputy panel
+
+function select(i) {
+  state.selected = i;
+  drawOverlay(); renderPanel(); syncURL();
+}
+
+function renderPanel() {
+  const box = $("#panel"); box.replaceChildren();
+  if (!view || !view.N) {
+    box.append(el("h2", { textContent: "Deputies" }), el("p", { className: "hint", textContent: "No co-voting graph this month." }));
+    return;
+  }
+  if (state.selected == null) {
+    box.append(
+      el("h2", { textContent: "Pick a deputy" }),
+      el("p", { className: "hint", textContent: "Hover a dot for a summary, click it (or use Find a deputy) to see who they vote and sign with. Lists are clickable." }),
+    );
+    return;
+  }
+  const i = state.selected, d = view.nodes[i], info = view.t.info.get(d) || {};
+  const t = view.t;
+  const alike = [];
+  for (let k = 0; k < t.cv.u.length; k++) {
+    if (t.cv.u[k] === d || t.cv.v[k] === d) {
+      const o = t.cv.u[k] === d ? t.cv.v[k] : t.cv.u[k];
+      alike.push([o, t.cv.agree[k] / t.cv.shared[k], t.cv.shared[k]]);
+    }
+  }
+  alike.sort((a, b) => b[1] - a[1] || b[2] - a[2]);
+  const cs = t.co.get(state.maxAuthors);
+  const signed = [];
+  for (let k = 0; k < cs.u.length; k++) {
+    if (cs.u[k] === d || cs.v[k] === d) signed.push([cs.u[k] === d ? cs.v[k] : cs.u[k], cs.nItems[k]]);
+  }
+  signed.sort((a, b) => b[1] - a[1] || a[0] - b[0]);
+  const list = (rows, label) => el("ol", {}, ...rows.map(([o, txt]) => {
+    const oi = view.at.get(o), oinfo = t.info.get(o) || {};
+    const b = el("button", { type: "button", title: label },
+      el("span", { textContent: `${oinfo.nome || o} (${oinfo.partido || "?"})` }), el("span", { className: "n", textContent: txt }));
+    if (oi !== undefined) b.addEventListener("click", () => select(oi)); else b.disabled = true;
+    return el("li", {}, b);
+  }));
+  const clear = el("button", { className: "clear", type: "button", textContent: "Clear selection" });
+  clear.addEventListener("click", () => select(null));
+  box.append(
+    el("h2", { textContent: info.nome || String(d) }),
+    el("div", { className: "who", textContent: `${info.partido || "?"} · ${info.uf || "?"} · ${plural(+info.n_votes || 0, "vote")} cast, ${plural(+info.n_authored || 0, "item")} signed in ${view.month}` }),
+    el("h3", { textContent: "Votes most alike" }),
+    list(alike.slice(0, 8).map(([o, a, s]) => [o, `${pct(a)} of ${s}`]), "agreement"),
+    el("h3", { textContent: "Votes least alike" }),
+    list(alike.slice(-5).reverse().map(([o, a, s]) => [o, `${pct(a)} of ${s}`]), "agreement"),
+    el("h3", { textContent: signed.length ? "Co-signed most with" : "Co-signed with nobody this month" }),
+    list(signed.slice(0, 8).map(([o, n]) => [o, `${n} item${n === 1 ? "" : "s"}`]), "items co-signed"),
+    clear,
+  );
+}
+
+// ---------------------------------------------------------- heatmap
+
+function heatColor(x) {
+  const ramp = isDark() ? [...RAMP].reverse() : RAMP;
+  const f = Math.max(0, Math.min(1, x)) * (ramp.length - 1), i = Math.floor(f), r = f - i;
+  if (i >= ramp.length - 1) return ramp[ramp.length - 1];
+  const h = (s) => [1, 3, 5].map((k) => parseInt(s.slice(k, k + 2), 16));
+  const [a, b] = [h(ramp[i]), h(ramp[i + 1])];
+  return `rgb(${a.map((c, k) => Math.round(c + (b[k] - c) * r)).join(",")})`;
+}
+
+function partyMatrix() {
+  const t = view.t, counts = new Map();
+  view.party.forEach((p) => counts.set(p, (counts.get(p) || 0) + 1));
+  const keep = [...counts].filter(([p, c]) => p && c >= MIN_PARTY).map(([p]) => p);
+  const mx = new Map(keep.map((p) => [p, 0]));
+  view.party.forEach((p, i) => { if (mx.has(p)) mx.set(p, mx.get(p) + view.P[i][0] / counts.get(p)); });
+  const order = keep.sort((a, b) => mx.get(a) - mx.get(b) || a.localeCompare(b));
+  const pos = new Map(order.map((p, i) => [p, i])), k = order.length;
+  const sum = Array.from({ length: k }, () => new Float64Array(k)), n = Array.from({ length: k }, () => new Float64Array(k));
+  const partyOf = (d) => t.info.get(d)?.partido;
+  for (let e = 0; e < t.cv.u.length; e++) {
+    const a = pos.get(partyOf(t.cv.u[e])), b = pos.get(partyOf(t.cv.v[e]));
+    if (a === undefined || b === undefined) continue;
+    const x = t.cv.agree[e] / t.cv.shared[e];
+    sum[a][b] += x; n[a][b]++;
+    if (a !== b) { sum[b][a] += x; n[b][a]++; }
+  }
+  return { order, counts, A: sum.map((r, i) => Array.from(r, (s, j) => (n[i][j] ? s / n[i][j] : null))), n };
+}
+
+function renderHeat() {
+  const box = $("#heat"), tableBox = $("#heatTable");
+  box.replaceChildren(); tableBox.replaceChildren();
+  if (!view || view.N < 2) { box.append(el("p", { className: "hint", textContent: "No co-voting graph this month." })); return; }
+  const { order, counts, A, n } = partyMatrix(), k = order.length;
+  const label = (p) => `${p} (${counts.get(p)})`;
+  const lw = 118, w = box.clientWidth || 480, cell = Math.max(14, Math.min(34, Math.floor((w - lw - 4) / k)));
+  const s = svg("svg", { width: lw + cell * k, height: lw + cell * k, class: "heat", role: "img", "aria-label": "Party agreement heatmap; see the table view for values" });
+  const ink2 = css("--ink2");
+  order.forEach((p, i) => {
+    const ty = svg("text", { x: lw - 6, y: lw + i * cell + cell / 2 + 4, "text-anchor": "end", "font-size": 11, fill: ink2 }); ty.textContent = label(p); s.append(ty);
+    const tx = svg("text", { transform: `translate(${lw + i * cell + cell / 2 + 4},${lw - 6}) rotate(-90)`, "font-size": 11, fill: ink2 }); tx.textContent = label(p); s.append(tx);
+  });
+  for (let i = 0; i < k; i++) for (let j = 0; j < k; j++) {
+    const v = A[i][j];
+    if (v === null) continue;
+    const r = svg("rect", { x: lw + j * cell + 1, y: lw + i * cell + 1, width: cell - 2, height: cell - 2, rx: 2, fill: heatColor(v), class: "cell", tabindex: 0 });
+    const tip = (ev) => showTip(ev, [
+      el("strong", { textContent: pct(v) }),
+      el("div", { className: "row", textContent: `${order[i]} × ${order[j]} · mean agreement over ${fmt(n[i][j])} pairs` }),
+    ]);
+    r.addEventListener("pointermove", tip); r.addEventListener("pointerleave", hideTip);
+    r.addEventListener("focus", () => { const b = r.getBoundingClientRect(); tip({ clientX: b.right, clientY: b.top }); });
+    r.addEventListener("blur", hideTip);
+    s.append(r);
+    if (cell >= 24) {
+      const darkCell = v >= 0.55, lightText = isDark() ? !darkCell : darkCell;
+      const t = svg("text", { x: lw + j * cell + cell / 2, y: lw + i * cell + cell / 2 + 4, "text-anchor": "middle", "font-size": 10, fill: lightText ? "#ffffff" : "#0b0b0b", "pointer-events": "none" });
+      t.textContent = Math.round(v * 100); s.append(t);
+    }
+  }
+  box.append(s);
+  const table = el("table", { className: "view" });
+  table.append(el("tr", {}, el("th", { textContent: "%" }), ...order.map((p) => el("th", { textContent: p }))));
+  order.forEach((p, i) => table.append(el("tr", {}, el("th", { textContent: label(p) }), ...A[i].map((v) => el("td", { textContent: v === null ? "–" : Math.round(v * 100) })))));
+  tableBox.append(table);
+}
+$("#heatToggle").addEventListener("click", (e) => {
+  const t = $("#heatTable"); t.hidden = !t.hidden;
+  e.target.textContent = t.hidden ? "Show as table" : "Hide table";
+  e.target.setAttribute("aria-expanded", String(!t.hidden));
+});
+
+// --------------------------------------------------------- timeline
+
+function renderTimeline() {
+  const box = $("#timeline"); box.replaceChildren();
+  const w = box.clientWidth || 600, ml = 40, mr = 8, ph = 104, gap = 34, top = 22;
+  const H = top + 2 * ph + gap + 22;
+  const s = svg("svg", { width: w, height: H, role: "img", "aria-label": "Monthly density of both graphs since 2015" });
+  const n = index.length, x = (i) => ml + (i / Math.max(n - 1, 1)) * (w - ml - mr);
+  const series = [
+    { key: "covote_density", ok: (r) => +r.votacoes_contested >= 10, title: "Vote together" },
+    { key: "cosponsor_density", ok: (r) => +r.items_cosigned >= 10, title: "Sign together" },
+  ];
+  const axis = css("--axis"), grid = css("--grid"), muted = css("--muted"), line = css("--line"), ink = css("--ink"), ink2 = css("--ink2");
+  series.forEach((ser, k) => {
+    const y0 = top + k * (ph + gap), vals = index.map((r) => (ser.ok(r) ? +r[ser.key] : null));
+    const vmax = Math.max(...vals.filter((v) => v !== null), 0.01) * 1.1;
+    const y = (v) => y0 + ph - (v / vmax) * ph;
+    const title = svg("text", { x: ml, y: y0 - 8, "font-size": 12, fill: ink, "font-weight": 600 }); title.textContent = ser.title; s.append(title);
+    for (const f of [0, 0.5, 1]) {
+      const v = vmax * f;
+      s.append(svg("line", { x1: ml, x2: w - mr, y1: y(v), y2: y(v), stroke: f ? grid : axis, "stroke-width": 1 }));
+      const t = svg("text", { x: ml - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 10, fill: muted }); t.textContent = v.toFixed(2); s.append(t);
+    }
+    index.forEach((r, i) => {
+      if (r.month.endsWith("-02") && core.legislatura(r.month) !== core.legislatura(`${r.month.slice(0, 4)}-01`))
+        s.append(svg("line", { x1: x(i), x2: x(i), y1: y0, y2: y0 + ph, stroke: axis, "stroke-width": 1 }));
+    });
+    let d = "", pen = false;
+    vals.forEach((v, i) => {
+      if (v === null) { pen = false; return; }
+      const solo = (i === 0 || vals[i - 1] === null) && (i === n - 1 || vals[i + 1] === null);
+      if (solo) s.append(svg("circle", { cx: x(i), cy: y(v), r: 2.2, fill: line }));
+      d += `${pen ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`; pen = true;
+    });
+    s.append(svg("path", { d, fill: "none", stroke: line, "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+  });
+  index.forEach((r, i) => {
+    if (r.month.endsWith("-01") && +r.month.slice(0, 4) % 2 === 0) {
+      const t = svg("text", { x: x(i), y: H - 4, "text-anchor": "middle", "font-size": 10, fill: muted }); t.textContent = r.month.slice(0, 4); s.append(t);
+    }
+  });
+  const sel = index.findIndex((r) => r.month === state.month);
+  if (sel >= 0) s.append(svg("line", { x1: x(sel), x2: x(sel), y1: top - 4, y2: top + 2 * ph + gap, stroke: ink2, "stroke-width": 1.5 }));
+  const hair = svg("line", { y1: top - 4, y2: top + 2 * ph + gap, stroke: ink2, "stroke-width": 1, opacity: 0 });
+  s.append(hair);
+  const hit = svg("rect", { x: ml, y: 0, width: w - ml - mr, height: H, fill: "transparent", style: "cursor:pointer" });
+  const at = (ev) => { const r = s.getBoundingClientRect(); return Math.max(0, Math.min(n - 1, Math.round(((ev.clientX - r.left - ml) / (w - ml - mr)) * (n - 1)))); };
+  hit.addEventListener("pointermove", (ev) => {
+    const i = at(ev), r = index[i];
+    hair.setAttribute("x1", x(i)); hair.setAttribute("x2", x(i)); hair.setAttribute("opacity", 1);
+    showTip(ev, [
+      el("strong", { textContent: r.month }),
+      el("div", { className: "row", textContent: `${r.votacoes} roll calls, ${r.votacoes_contested} contested · legislature ${r.legislatura}` }),
+      tipRow(line, series[0].ok(r) ? (+r.covote_density).toFixed(3) : "–", "vote-together density"),
+      tipRow(line, series[1].ok(r) ? (+r.cosponsor_density).toFixed(3) : "–", "sign-together density"),
+      el("div", { className: "row", textContent: "Click to load this month" }),
+    ]);
+  });
+  hit.addEventListener("pointerleave", () => { hair.setAttribute("opacity", 0); hideTip(); });
+  hit.addEventListener("click", (ev) => setMonth(index[at(ev)].month));
+  s.append(hit);
+  box.append(s);
+}
+
+// ---------------------------------------------------------- tooltip
+
+function tipRow(color, value, label) {
+  return el("div", { className: "row" }, el("span", { className: "key", style: `background:${color}` }), el("b", { textContent: value }), label);
+}
+function showTip(ev, kids) {
+  const t = $("#tip"); t.replaceChildren(...kids); t.style.display = "block";
+  const pad = 14, r = t.getBoundingClientRect();
+  let x = ev.clientX + pad, y = ev.clientY + pad;
+  if (x + r.width > innerWidth - 8) x = ev.clientX - r.width - pad;
+  if (y + r.height > innerHeight - 8) y = ev.clientY - r.height - pad;
+  t.style.left = `${x}px`; t.style.top = `${y}px`;
+}
+function hideTip() { $("#tip").style.display = "none"; }
+
+// ---------------------------------------------------------- controls
+
+function syncURL() {
+  const p = new URLSearchParams();
+  p.set("month", state.month);
+  if (state.tau !== 0.8) p.set("tau", state.tau);
+  if (state.maxAuthors !== 50) p.set("max", state.maxAuthors);
+  if (state.partyA !== "PT") p.set("a", state.partyA);
+  if (state.partyB !== "PL") p.set("b", state.partyB);
+  if (state.selected != null && view) p.set("dep", view.nodes[state.selected]);
+  history.replaceState(null, "", `?${p}`);
+}
+
+function fillParties() {
+  const parties = [...new Set(view.party)].filter(Boolean).sort();
+  for (const [id, cur] of [["#partyA", state.partyA], ["#partyB", state.partyB]]) {
+    const s = $(id); s.replaceChildren(...[...new Set([cur, ...parties])].map((p) => el("option", { value: p, textContent: p, selected: p === cur })));
+  }
+  $("#names").replaceChildren(...view.nodes.map((d) => el("option", { value: `${view.t.info.get(d)?.nome ?? d} (${view.t.info.get(d)?.partido ?? ""})` })));
+}
+
+function rerender({ keepSelection = true } = {}) {
+  const prev = keepSelection && state.selected != null && view ? view.nodes[state.selected] : null;
+  view = compute(state.month);
+  state.selected = prev != null && view.at.has(prev) ? view.at.get(prev) : null;
+  state.hover = null;
+  fillParties(); renderTiles(); legend(); drawNetwork(); renderPanel(); renderHeat(); renderTimeline(); syncURL();
+  $("#h1").textContent = `Vote together (agree on ≥ ${pct(state.tau)} of shared votes)`;
+  $("#h1s").textContent = view.N ? `${fmt(view.vote.length)} edges` : "";
+  $("#h2s").textContent = view.N ? `${fmt(view.sign.length)} edges${view.unplaced ? ` (+${fmt(view.unplaced)} to deputies not placed)` : ""}` : "";
+}
+
+async function setMonth(m, dep = null) {
+  state.month = m; $("#month").value = m;
+  $("#app").classList.add("loading");
+  try {
+    await loadMonth(m);
+    const keep = dep == null;
+    rerender({ keepSelection: keep });
+    if (dep != null && view.at.has(dep)) select(view.at.get(dep));
+  } catch (e) {
+    $("#netEmpty").hidden = false; $("#netEmpty").textContent = `Could not load ${m}: ${e.message}`;
+  } finally {
+    $("#app").classList.remove("loading");
+  }
+}
+
+$("#month").addEventListener("change", (e) => setMonth(e.target.value));
+$("#tau").addEventListener("input", (e) => { state.tau = +e.target.value; $("#tauOut").textContent = pct(state.tau); rerender(); });
+$("#maxAuthors").addEventListener("change", (e) => { state.maxAuthors = +e.target.value; rerender(); });
+$("#partyA").addEventListener("change", (e) => { state.partyA = e.target.value; rerender(); });
+$("#partyB").addEventListener("change", (e) => { state.partyB = e.target.value; rerender(); });
+$("#search").addEventListener("change", (e) => {
+  const q = e.target.value.trim().toLowerCase();
+  const i = view?.nodes.findIndex((d) => {
+    const info = view.t.info.get(d);
+    return info && (`${info.nome} (${info.partido})`.toLowerCase() === q || info.nome.toLowerCase() === q);
+  });
+  if (i >= 0) { select(i); e.target.value = ""; }
+});
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => view && rerender());
+// Redraw on width changes only: our own renders change the height.
+let resizeTimer, lastWidth = 0;
+new ResizeObserver(([entry]) => {
+  const w = Math.round(entry.contentRect.width);
+  if (w === lastWidth) return;
+  lastWidth = w;
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => view && (drawNetwork(), renderHeat(), renderTimeline()), 120);
+}).observe($("#app"));
+
+// ------------------------------------------------------------- boot
+
+(async () => {
+  try {
+    index = core.parseCSV(await getText("index.csv"));
+  } catch (e) {
+    $("#netEmpty").hidden = false; $("#netEmpty").textContent = `Could not load the data index: ${e.message}`;
+    return;
+  }
+  const q = new URLSearchParams(location.search);
+  const months = new Set(index.map((r) => r.month));
+  const full = index.filter((r) => +r.votacoes_contested >= 30).map((r) => r.month);
+  $("#month").replaceChildren(...[...index].reverse().map((r) => el("option", {
+    value: r.month, textContent: `${r.month} · ${r.votacoes_contested} contested${+r.votacoes_contested < 10 ? " (no co-voting)" : ""}`,
+  })));
+  const clamp = (v, lo, hi, d) => (Number.isFinite(v) ? Math.min(hi, Math.max(lo, v)) : d);
+  // (+null is 0, a finite number: only parse parameters that are present.)
+  state.tau = q.has("tau") ? Math.round(clamp(+q.get("tau"), 0.5, 0.95, 0.8) * 20) / 20 : 0.8;
+  $("#tau").value = state.tau; $("#tauOut").textContent = pct(state.tau);
+  const max = +q.get("max");
+  if ([0, 10, 20, 50, 100].includes(max) && q.has("max")) { state.maxAuthors = max; $("#maxAuthors").value = String(max); }
+  if (q.get("a")) state.partyA = q.get("a").slice(0, 20);
+  if (q.get("b")) state.partyB = q.get("b").slice(0, 20);
+  const m = months.has(q.get("month")) ? q.get("month") : full[full.length - 1] ?? index[index.length - 1].month;
+  const dep = q.has("dep") ? +q.get("dep") : null;
+  await setMonth(m, Number.isFinite(dep) ? dep : null);
+})();
+</script>
+</body>
+</html>

@@ -66,5 +66,5 @@ jobs:
           months=$(git diff --staged --name-only -- data/votes data/authorship | xargs -rn1 basename | sed 's/\.csv$//' | sort -u | tr '\n' ' ')
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "data: update through $(date -u +%F)" -m "Months changed: ${months:-none (index only)}"
+          git commit -m "data: update through $(date -u +%F)" -m "Months changed: ${months:-none (charts or index only)}"
           git push || { git pull --rebase && git push; }

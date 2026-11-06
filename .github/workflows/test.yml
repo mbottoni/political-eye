@@ -21,6 +21,15 @@ jobs:
       - name: Test
         run: uv run pytest -q
 
+      # The explorer (docs/) recomputes the graphs in JavaScript; it must
+      # agree with the Python package on every month.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Explorer parity with the Python package
+        run: node tests/parity.mjs
+
       # The committed data must load and produce graphs with the current code.
       # (Latest month with votes: January and July recesses have none.)
       - name: Smoke-test the latest voting month

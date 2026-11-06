@@ -12,7 +12,19 @@ It is meant for graph statistics on real, paired and evolving networks:
 
 ## See it
 
-The charts below are re-rendered by CI after every weekly update.
+**[Open the interactive explorer →](https://mbottoni.github.io/camara-graphs/)**
+
+The explorer runs in your browser:
+
+- pick any month, or click one on the timeline;
+- move the vote-together threshold;
+- hover or click a deputy to see who they vote and sign with;
+- hover the party heatmap;
+- share a view by its URL.
+
+It recomputes the graphs from `data/` and matches the Python package exactly; CI checks this on every month (`tests/parity.mjs`).
+
+The static charts below are re-rendered by CI after every weekly update.
 
 **The latest full month as two graphs on the same deputies.** Each dot is a deputy, placed by how they voted. The top panel links deputies who voted alike on at least 80% of contested roll calls. The bottom panel links deputies who co-signed a proposição.
 
@@ -134,6 +146,7 @@ data/
   index.csv               one row per month: counts, densities, aligned vertex-set size
   sources.json            ETag, size and Last-Modified of every raw file used
 figures/                  the charts above, light and dark (camaragraphs figures)
+docs/                     the interactive explorer (GitHub Pages), reading data/ live
 ```
 
 The files are sorted and rebuilt deterministically, so `git log -p data/votes/2025-09.csv` shows exactly what the Câmara changed and when.

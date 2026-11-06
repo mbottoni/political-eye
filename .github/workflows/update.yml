@@ -50,12 +50,15 @@ jobs:
           read -ra years <<< "$YEARS"
           uv run python -m camaragraphs update "${years[@]}"
 
+      - name: Render the README charts
+        run: uv run python -m camaragraphs figures
+
       - name: Commit if the data changed
         run: |
           # Stage first: a new month is an untracked file, invisible to a plain
           # `git diff`. sources.json changes nightly on the server side, so
           # only commit when the tables themselves moved.
-          git add data README.md
+          git add data figures README.md
           if git diff --staged --quiet -- . ':!data/sources.json'; then
             echo "No data changes."
             exit 0

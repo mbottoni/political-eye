@@ -54,6 +54,14 @@ def cmd_summarize(a) -> int:
     return 0
 
 
+def cmd_figures(a) -> int:
+    from .figures import render
+
+    month = render(a.data, a.out)
+    print(f"figures written to {a.out} (pictured month: {month})", file=sys.stderr)
+    return 0
+
+
 def cmd_export(a) -> int:
     kw = dict(data_dir=a.data)
     if a.kind == "covote":
@@ -85,6 +93,10 @@ def main(argv: list[str] | None = None) -> int:
     s = sub.add_parser("summarize", help="refresh data/index.csv and README tables only")
     s.add_argument("--readme", type=Path, default=REPO / "README.md")
     s.set_defaults(fn=cmd_summarize)
+
+    f = sub.add_parser("figures", help="render the README charts (needs matplotlib)")
+    f.add_argument("--out", type=Path, default=REPO / "figures")
+    f.set_defaults(fn=cmd_figures)
 
     e = sub.add_parser("export", help="print one month's edge list as CSV")
     e.add_argument("month", help="YYYY-MM")

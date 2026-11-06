@@ -16,7 +16,7 @@ Homepage = "https://github.com/mbottoni/camara-graphs"
 camaragraphs = "camaragraphs.__main__:main"
 
 [dependency-groups]
-dev = ["pytest>=8"]
+dev = ["pytest>=8", "matplotlib>=3.8"]
 
 [build-system]
 requires = ["hatchling"]

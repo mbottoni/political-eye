@@ -10,6 +10,48 @@ It is meant for graph statistics on real, paired and evolving networks:
 - **Dependence testing:** test dependence between co-voting and co-authorship, which share one vertex set.
 - **Change points:** look for structural breaks around the 2016 impeachment and the 2019 and 2023 turnovers of the house, with the 2027 turnover still to come.
 
+## See it
+
+The charts below are re-rendered by CI after every weekly update.
+
+**The latest full month as two graphs on the same deputies.** Each dot is a deputy, placed by how they voted. The top panel links deputies who voted alike on at least 80% of contested roll calls. The bottom panel links deputies who co-signed a proposição.
+
+The two graphs are related but far from copies of each other:
+
+- Pairs who co-sign are more likely than random pairs to also vote together. This held in every month since 2015 with at least 30 contested roll calls (as of November 2026), though sometimes only barely.
+- Most pairs who vote together never co-sign.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="figures/network-dark.png">
+  <img alt="Co-voting and co-authorship graphs of the latest full month, deputies colored PT, PL or other" src="figures/network-light.png">
+</picture>
+
+**How often each pair of parties votes alike** in that month. Parties are ordered from the government side to the opposition.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="figures/parties-dark.svg">
+  <img alt="Heatmap of mean pairwise agreement between parties" src="figures/parties-light.svg">
+</picture>
+
+**Every month since 2015.** Gaps are recesses and election campaigns.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="figures/timeline-dark.svg">
+  <img alt="Monthly density of the co-voting and co-authorship graphs, 2015 to today" src="figures/timeline-light.svg">
+</picture>
+
+### Browse the tables
+
+GitHub shows the smaller CSVs as searchable tables. To get one, open a file, or click **Raw** and save it.
+
+| what | file |
+|---|---|
+| one row per month: roll calls, graph sizes and densities | [`data/index.csv`](data/index.csv) |
+| deputies active in a month, with party and state | [`data/deputies/`](data/deputies) |
+| that month's roll calls, with what was voted | [`data/votacoes/`](data/votacoes) |
+| every deputy's vote | [`data/votes/`](data/votes) |
+| every deputy signature on a proposição | [`data/authorship/`](data/authorship) |
+
 ## Quick start
 
 ```bash
@@ -91,6 +133,7 @@ data/
   deputies/YYYY-MM.csv    deputado_id, nome, partido, uf, n_votes, n_authored
   index.csv               one row per month: counts, densities, aligned vertex-set size
   sources.json            ETag, size and Last-Modified of every raw file used
+figures/                  the charts above, light and dark (camaragraphs figures)
 ```
 
 The files are sorted and rebuilt deterministically, so `git log -p data/votes/2025-09.csv` shows exactly what the Câmara changed and when.
@@ -100,8 +143,8 @@ The files are sorted and rebuilt deterministically, so `git log -p data/votes/20
 `.github/workflows/update.yml` runs every Saturday, after the week's sessions (Plenário votes Tuesday to Thursday):
 
 1. It downloads the previous and current year's bulk files. The server drops long transfers, so downloads resume with `Range` + `If-Range`.
-2. It rebuilds those years and refreshes the index and the tables above.
-3. It commits only if a table changed.
+2. It rebuilds those years and refreshes the index, the tables and the charts above.
+3. It commits only if a table or chart changed. Rendering is byte-deterministic, so an unchanged month never produces a commit.
 
 To rebuild other years, run the workflow by hand with `years` set, or run locally:
 

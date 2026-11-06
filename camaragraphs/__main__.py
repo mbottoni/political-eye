@@ -55,13 +55,13 @@ def cmd_summarize(a) -> int:
 
 
 def cmd_figures(a) -> int:
-    from .figures import render
-    from .readme_map import update_readme
+    from .figures import render, render_parties
 
     month = render(a.data, a.out)
     if month:
-        update_readme(a.readme, month, a.data)
-    print(f"figures written to {a.out}; README map updated (pictured month: {month})", file=sys.stderr)
+        views = render_parties(month, a.out, a.data)
+        summary.replace_block(a.readme, "PARTIES", summary.party_block(month, views))
+    print(f"figures written to {a.out} (pictured month: {month})", file=sys.stderr)
     return 0
 
 

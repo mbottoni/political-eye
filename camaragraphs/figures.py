@@ -273,6 +273,106 @@ def pictured_month(idx: pd.DataFrame, full_month: int = FULL_MONTH) -> str | Non
     return full.month.iloc[-1] if len(full) else None
 
 
+# ------------------------------------------------------------ party views
+
+PARTY_VIEW_MIN = 30   # parties at least this large get a click-to-expand view in the README
+
+
+def _slug(p: str) -> str:
+    import unicodedata
+
+    ascii_ = unicodedata.normalize("NFKD", p).encode("ascii", "ignore").decode()
+    return "".join(ch for ch in ascii_ if ch.isalnum()) or "party"
+
+
+def _save_small_png(fig, path: Path) -> None:
+    """PNG quantized to a 64-colour palette: these views are re-rendered
+    whenever the pictured month changes, so keep each commit small."""
+    import io
+
+    import matplotlib.pyplot as plt
+    from PIL import Image
+
+    buf = io.BytesIO()
+    fig.savefig(buf, format="png", metadata={"Software": None}, bbox_inches="tight", pad_inches=0.12, dpi=110)
+    plt.close(fig)
+    buf.seek(0)
+    Image.open(buf).convert("RGB").quantize(colors=64, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE) \
+        .save(path, format="PNG", optimize=True)
+
+
+def party_view(month: str, party: str, path: Path, theme: str, ctx: dict) -> None:
+    plt, t = _mpl(theme)
+    from matplotlib.collections import LineCollection
+
+    nodes, P, partyof, gv, gc = ctx["nodes"], ctx["P"], ctx["party"], ctx["gv"], ctx["gc"]
+    xy = {n: P[i] for i, n in enumerate(nodes)}
+    focus = np.array([partyof[n] == party for n in nodes])
+    members = [n for n in nodes if partyof[n] == party]
+    fig, axes = plt.subplots(2, 1, figsize=(8.2, 6.4), gridspec_kw={"hspace": 0.08})
+    for ax, G, title, k in ((axes[0], gv, "Vote together", 150), (axes[1], gc, "Sign together", 120)):
+        # Edges touching the party (nbunch silently skips members absent from G).
+        segs = [(xy[u], xy[v]) for u, v in G.edges(members) if u in xy and v in xy]
+        alpha = max(0.02, min(0.35, k / max(len(segs), 1)))
+        ax.add_collection(LineCollection(segs, colors=t["ink"], linewidths=0.4, alpha=alpha, zorder=1))
+        ax.scatter(P[~focus, 0], P[~focus, 1], s=12, c=t["other"], edgecolors=t["surface"], linewidths=0.5, zorder=2)
+        ax.scatter(P[focus, 0], P[focus, 1], s=22, c=t["ink"], edgecolors=t["surface"], linewidths=0.7, zorder=3)
+        ax.set_title(f"{title}: {len(segs):,} edges touch {party}", fontsize=10)
+        ax.set_aspect("equal", adjustable="datalim")
+        ax.axis("off")
+    _save_small_png(fig, path)
+
+
+def render_parties(month: str, out_dir: Path, data_dir=None, *, min_size: int = PARTY_VIEW_MIN, **kw) -> list[dict]:
+    """One click-to-expand view per large party (both themes) plus the numbers
+    its README summary line states. Removes views of parties no longer shown."""
+    gv = g.graph(month, "covote", data_dir=data_dir, **kw)
+    gc = g.graph(month, "cosponsor", data_dir=data_dir, **kw)
+    nodes = list(gv.nodes)
+    partyof = {n: gv.nodes[n].get("party", "") for n in nodes}
+    for n in gc.nodes:
+        partyof.setdefault(n, gc.nodes[n].get("party", ""))
+    P = _orient(_positions(month, nodes, data_dir, **kw), [partyof[n] for n in nodes])
+    ctx = dict(nodes=nodes, P=P, party=partyof, gv=gv, gc=gc)
+
+    sizes = Counter(partyof[n] for n in nodes)
+    shown = sorted((p for p, c in sizes.items() if p and c >= min_size), key=lambda p: (-sizes[p], p))
+    e = g.covote_edges(month, data_dir=data_dir, **{k: v for k, v in kw.items() if k in ("min_shared", "lop", "obstruction_as_no")})
+    pu, pv = e.u.map(partyof), e.v.map(partyof)
+    between = pd.DataFrame({"a": pu, "b": pv, "x": e.agreement})
+    # Comparison parties: big enough for a stable mean (same cut as the heatmap).
+    peers = {p for p, c in sizes.items() if p and c >= 8}
+
+    views, keep = [], set()
+    for p in shown:
+        mine = between[(between.a == p) | (between.b == p)]
+        other = np.where(mine.a == p, mine.b, mine.a)
+        by = pd.Series(mine.x.to_numpy(), index=other).groupby(level=0).mean()
+        cohesion = float(by.get(p, np.nan))
+        rivals = by.drop(p, errors="ignore")
+        rivals = rivals[rivals.index.isin(peers)]
+        members = [n for n in nodes if partyof[n] == p]
+        vote_out = {v for m in members for v in gv.neighbors(m) if partyof.get(v) != p}
+        sign = {v for m in members if m in gc for v in gc.neighbors(m)}
+        files = {}
+        for theme in THEMES:
+            name = f"party-{_slug(p)}-{theme}.png"
+            party_view(month, p, out_dir / name, theme, ctx)
+            files[theme] = name
+            keep.add(name)
+        views.append({
+            "party": p, "size": len(members), "cohesion": cohesion, "files": files,
+            "nearest": (rivals.idxmax(), float(rivals.max())) if len(rivals) else None,
+            "farthest": (rivals.idxmin(), float(rivals.min())) if len(rivals) else None,
+            "vote_partners": len(vote_out), "sign_partners": len(sign),
+            "sign_outside": (sum(partyof.get(v) != p for v in sign) / len(sign)) if sign else 0.0,
+        })
+    for old in out_dir.glob("party-*.png"):
+        if old.name not in keep:
+            old.unlink()
+    return views
+
+
 def render(data_dir: Path, out_dir: Path, *, full_month: int = FULL_MONTH, min_size: int = 8, **kw) -> str | None:
     """Write every chart for both themes; return the month pictured."""
     idx = pd.read_csv(data_dir / "index.csv", dtype={"month": str})

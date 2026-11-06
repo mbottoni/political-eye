@@ -33,21 +33,21 @@ def test_pca_signs_are_pinned():
     assert np.allclose(_pca2(-M), _pca2(M))
 
 
-def test_readme_map_points_and_markers(built, tmp_path):
-    pytest.importorskip("matplotlib")
-    import json
-    from camaragraphs import readme_map
 
-    fc = readme_map.feature_collection("2025-03", built, min_shared=1)
-    assert [f["geometry"]["type"] for f in fc["features"]] == ["Point"] * 4   # deputies 10, 20, 30, 40
-    props = {f["properties"]["Deputy"]: f["properties"] for f in fc["features"]}
-    assert props["Ana"]["Party"] == "P1 · SP"
-    assert props["Ana"]["Closest ally"].startswith("Bia (B, 100%")
-    readme = tmp_path / "README.md"
-    readme.write_text("a\n<!-- BEGIN:MAP -->\n<!-- END:MAP -->\nb\n")
-    readme_map.update_readme(readme, "2025-03", built, min_shared=1)
-    once = readme.read_text()
-    readme_map.update_readme(readme, "2025-03", built, min_shared=1)
-    assert readme.read_text() == once and once.endswith("b\n")
-    body = once.split("```geojson\n")[1].split("\n```")[0]
-    assert len(json.loads(body)["features"]) == 4   # the fenced block is valid GeoJSON
+def test_party_views_and_readme_block(built, tmp_path):
+    pytest.importorskip("matplotlib")
+    from camaragraphs import figures, summary
+
+    out = tmp_path / "fig"
+    out.mkdir()
+    (out / "party-GONE-light.png").write_bytes(b"stale")
+    views = figures.render_parties("2025-03", out, built, min_size=1, min_shared=1)
+    names = sorted(p.name for p in out.glob("party-*.png"))
+    assert "party-GONE-light.png" not in names                      # stale view removed
+    assert {v["party"] for v in views} == {"P1", "B"}
+    assert all((out / f).exists() for v in views for f in v["files"].values())
+    b = next(v for v in views if v["party"] == "B")                 # deputy 20 alone
+    # co-signs items 1, 2 and the 5-signer PEC (under the default 50 cap): 10, 30, 40, 100
+    assert b["size"] == 1 and b["sign_partners"] == 4 and b["sign_outside"] == 1.0
+    block = summary.party_block("2025-03", views)
+    assert block.count("<details>") == 2 and "a=B" in block

@@ -89,11 +89,49 @@ def coverage(df: pd.DataFrame) -> str:
     )
 
 
+def _replace(text: str, tag: str, body: str) -> str:
+    pat = re.compile(rf"(<!-- BEGIN:{tag} -->\n).*?(<!-- END:{tag} -->)", re.S)
+    if not pat.search(text):
+        raise ValueError(f"README.md is missing the {tag} markers")
+    return pat.sub(lambda m: m.group(1) + body + "\n" + m.group(2), text)
+
+
+def replace_block(readme: Path, tag: str, body: str) -> None:
+    readme.write_text(_replace(readme.read_text(), tag, body))
+
+
 def update_readme(readme: Path, df: pd.DataFrame) -> None:
     text = readme.read_text()
     for tag, body in (("RECENT", recent_table(df)), ("COVERAGE", coverage(df))):
-        pat = re.compile(rf"(<!-- BEGIN:{tag} -->\n).*?(<!-- END:{tag} -->)", re.S)
-        if not pat.search(text):
-            raise ValueError(f"README.md is missing the {tag} markers")
-        text = pat.sub(lambda m: m.group(1) + body + "\n" + m.group(2), text)
+        text = _replace(text, tag, body)
     readme.write_text(text)
+
+
+EXPLORER = "https://mbottoni.github.io/camara-graphs/"
+
+
+def party_block(month: str, views: list[dict]) -> str:
+    """Click-to-expand party views: the only interaction a README allows."""
+    from html import escape
+    from urllib.parse import quote
+
+    out = [f"Click a party to see its deputies (dark) against everyone else in {month}, with everyone they "
+           f"vote together and sign together with. Each image opens that party in the explorer.\n"]
+    for v in views:
+        p = escape(v["party"])
+        near = f"closest: {escape(v['nearest'][0])} ({v['nearest'][1]:.0%})" if v["nearest"] else ""
+        far = f"farthest: {escape(v['farthest'][0])} ({v['farthest'][1]:.0%})" if v["farthest"] else ""
+        bits = " · ".join(x for x in (f"{v['size']} deputies", f"agree with each other {v['cohesion']:.0%}", near, far) if x)
+        link = f"{EXPLORER}?month={month}&amp;a={quote(v['party'])}"
+        out.append(
+            f"<details>\n<summary><b>{p}</b> · {bits}</summary>\n\n"
+            f"<a href=\"{link}\"><picture>\n"
+            f"  <source media=\"(prefers-color-scheme: dark)\" srcset=\"figures/{v['files']['dark']}\">\n"
+            f"  <img alt=\"{p} deputies and their vote-together and sign-together edges in {month}\" "
+            f"src=\"figures/{v['files']['light']}\">\n"
+            f"</picture></a>\n\n"
+            f"{p} deputies vote alike (≥ 80% of shared votes) with {v['vote_partners']} deputies outside the party, "
+            f"and co-signed with {v['sign_partners']} deputies, {v['sign_outside']:.0%} of them from other parties.\n\n"
+            f"</details>"
+        )
+    return "\n".join(out)

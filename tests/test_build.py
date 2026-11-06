@@ -57,15 +57,3 @@ def test_rebuild_is_byte_identical_and_removes_stale(tmp_path):
     assert report["authorship_off_year"] == 1
     assert report["authorship_no_proposicao"] == 1
 
-
-def test_readme_markers_are_idempotent(built, tmp_path):
-    from camaragraphs import summary
-
-    readme = tmp_path / "README.md"
-    readme.write_text("top\n<!-- BEGIN:COVERAGE -->\n<!-- END:COVERAGE -->\nmid\n<!-- BEGIN:RECENT -->\n<!-- END:RECENT -->\nend\n")
-    df = summary.build_index(built)
-    summary.update_readme(readme, df)
-    once = readme.read_text()
-    summary.update_readme(readme, df)
-    assert readme.read_text() == once
-    assert "| 2025-03 | 3 (2) |" in once and once.endswith("end\n")

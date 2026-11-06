@@ -1,11 +1,9 @@
-"""Per-month summary (``data/index.csv``) and the generated tables in README.md."""
+"""Per-month summary: ``data/index.csv``."""
 
 from __future__ import annotations
 
-import re
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 
 from . import graphs as g
@@ -46,92 +44,6 @@ def month_row(month: str, data_dir: Path) -> dict:
 
 
 def build_index(data_dir: Path) -> pd.DataFrame:
-    rows = [month_row(m, data_dir) for m in g.months(data_dir)]
-    df = pd.DataFrame(rows)
+    df = pd.DataFrame([month_row(m, data_dir) for m in g.months(data_dir)])
     df.to_csv(data_dir / "index.csv", index=False, lineterminator="\n")
     return df
-
-
-def _fmt(x, digits=3) -> str:
-    if x is None or (isinstance(x, float) and np.isnan(x)):
-        return "--"
-    if isinstance(x, float):
-        return f"{x:.{digits}f}"
-    return f"{x:,}"
-
-
-def recent_table(df: pd.DataFrame, n: int = 12) -> str:
-    head = (
-        "| month | roll calls (contested) | co-voting nodes | edges | density | mean agreement "
-        "| co-authorship nodes | edges | density | aligned nodes |\n"
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n"
-    )
-    lines = []
-    for r in df.tail(n).iloc[::-1].itertuples():
-        lines.append(
-            f"| {r.month} | {r.votacoes} ({r.votacoes_contested}) | {_fmt(r.covote_nodes)} | {_fmt(r.covote_edges)} "
-            f"| {_fmt(r.covote_density)} | {_fmt(r.mean_agreement)} | {_fmt(r.cosponsor_nodes)} "
-            f"| {_fmt(r.cosponsor_edges)} | {_fmt(r.cosponsor_density)} | {_fmt(r.aligned_nodes)} |"
-        )
-    return head + "\n".join(lines)
-
-
-def coverage(df: pd.DataFrame) -> str:
-    out = []
-    for leg, x in df.groupby("legislatura"):
-        out.append(
-            f"| {leg} | {x.month.min()} → {x.month.max()} | {len(x)} | {int(x.votacoes.sum()):,} "
-            f"| {int(x.votacoes_contested.sum()):,} | {int(x.items_cosigned.sum()):,} |"
-        )
-    return (
-        "| legislatura | from → to | months | roll calls | contested | co-signed items |\n"
-        "|---|---|---:|---:|---:|---:|\n" + "\n".join(out)
-    )
-
-
-def _replace(text: str, tag: str, body: str) -> str:
-    pat = re.compile(rf"(<!-- BEGIN:{tag} -->\n).*?(<!-- END:{tag} -->)", re.S)
-    if not pat.search(text):
-        raise ValueError(f"README.md is missing the {tag} markers")
-    return pat.sub(lambda m: m.group(1) + body + "\n" + m.group(2), text)
-
-
-def replace_block(readme: Path, tag: str, body: str) -> None:
-    readme.write_text(_replace(readme.read_text(), tag, body))
-
-
-def update_readme(readme: Path, df: pd.DataFrame) -> None:
-    text = readme.read_text()
-    for tag, body in (("RECENT", recent_table(df)), ("COVERAGE", coverage(df))):
-        text = _replace(text, tag, body)
-    readme.write_text(text)
-
-
-EXPLORER = "https://mbottoni.github.io/camara-graphs/"
-
-
-def party_block(month: str, views: list[dict]) -> str:
-    """Click-to-expand party views: the only interaction a README allows."""
-    from html import escape
-    from urllib.parse import quote
-
-    out = [f"Click a party to see its deputies (dark) against everyone else in {month}, with everyone they "
-           f"vote together and sign together with. Each image opens that party in the explorer.\n"]
-    for v in views:
-        p = escape(v["party"])
-        near = f"closest: {escape(v['nearest'][0])} ({v['nearest'][1]:.0%})" if v["nearest"] else ""
-        far = f"farthest: {escape(v['farthest'][0])} ({v['farthest'][1]:.0%})" if v["farthest"] else ""
-        bits = " · ".join(x for x in (f"{v['size']} deputies", f"agree with each other {v['cohesion']:.0%}", near, far) if x)
-        link = f"{EXPLORER}?month={month}&amp;a={quote(v['party'])}"
-        out.append(
-            f"<details>\n<summary><b>{p}</b> · {bits}</summary>\n\n"
-            f"<a href=\"{link}\"><picture>\n"
-            f"  <source media=\"(prefers-color-scheme: dark)\" srcset=\"figures/{v['files']['dark']}\">\n"
-            f"  <img alt=\"{p} deputies and their vote-together and sign-together edges in {month}\" "
-            f"src=\"figures/{v['files']['light']}\">\n"
-            f"</picture></a>\n\n"
-            f"{p} deputies vote alike (≥ 80% of shared votes) with {v['vote_partners']} deputies outside the party, "
-            f"and co-signed with {v['sign_partners']} deputies, {v['sign_outside']:.0%} of them from other parties.\n\n"
-            f"</details>"
-        )
-    return "\n".join(out)

@@ -43,24 +43,19 @@ def cmd_update(a) -> int:
         build_year(y, a.raw, a.data)
     graphs._load.cache_clear()
     df = summary.build_index(a.data)
-    summary.update_readme(a.readme, df)
     print(f"built {built}; index has {len(df)} months ({df.month.min()} → {df.month.max()})", file=sys.stderr)
     return 0
 
 
 def cmd_summarize(a) -> int:
-    df = summary.build_index(a.data)
-    summary.update_readme(a.readme, df)
+    summary.build_index(a.data)
     return 0
 
 
 def cmd_figures(a) -> int:
-    from .figures import render, render_parties
+    from .figures import render
 
     month = render(a.data, a.out)
-    if month:
-        views = render_parties(month, a.out, a.data)
-        summary.replace_block(a.readme, "PARTIES", summary.party_block(month, views))
     print(f"figures written to {a.out} (pictured month: {month})", file=sys.stderr)
     return 0
 
@@ -86,20 +81,17 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--data", type=Path, default=REPO / "data")
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    u = sub.add_parser("update", help="download, rebuild the given years, refresh index and README")
+    u = sub.add_parser("update", help="download, rebuild the given years, refresh data/index.csv")
     u.add_argument("years", nargs="*", type=int, help="default: previous and current year")
     u.add_argument("--raw", type=Path, default=REPO / ".cache" / "raw")
-    u.add_argument("--readme", type=Path, default=REPO / "README.md")
     u.add_argument("--skip-fetch", action="store_true", help="build from files already in --raw")
     u.set_defaults(fn=cmd_update)
 
-    s = sub.add_parser("summarize", help="refresh data/index.csv and README tables only")
-    s.add_argument("--readme", type=Path, default=REPO / "README.md")
+    s = sub.add_parser("summarize", help="refresh data/index.csv only")
     s.set_defaults(fn=cmd_summarize)
 
-    f = sub.add_parser("figures", help="render the README charts (needs matplotlib)")
+    f = sub.add_parser("figures", help="render the README chart (needs matplotlib)")
     f.add_argument("--out", type=Path, default=REPO / "figures")
-    f.add_argument("--readme", type=Path, default=REPO / "README.md")
     f.set_defaults(fn=cmd_figures)
 
     e = sub.add_parser("export", help="print one month's edge list as CSV")

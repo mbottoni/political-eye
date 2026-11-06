@@ -1,7 +1,7 @@
-"""The README's charts, in light and dark. CI re-renders them after every update.
+"""The README chart, in light and dark. CI re-renders it after every update.
 
-Output is byte-deterministic (fixed SVG hash salt, no timestamps, bundled
-font, explicit PCA signs), so an unchanged month never produces a commit.
+Output is byte-deterministic (no timestamps, bundled font, explicit PCA
+signs), so an unchanged month never produces a commit.
 """
 
 from __future__ import annotations
@@ -15,19 +15,13 @@ import pandas as pd
 from . import graphs as g
 
 THEMES = {
-    "light": dict(surface="#fcfcfb", ink="#0b0b0b", ink2="#52514e", muted="#898781", grid="#e1e0d9",
-                  axis="#c3c2b7", line="#2a78d6", PT="#e34948", PL="#2a78d6", other="#c3c2b7", edge="#0b0b0b"),
-    "dark": dict(surface="#1a1a19", ink="#f0efec", ink2="#c3c2b7", muted="#898781", grid="#2c2c2a",
-                 axis="#383835", line="#3987e5", PT="#e66767", PL="#3987e5", other="#5c5b57", edge="#f0efec"),
+    "light": dict(surface="#fcfcfb", ink="#0b0b0b", muted="#898781", PT="#e34948", PL="#2a78d6",
+                  other="#c3c2b7", edge="#0b0b0b"),
+    "dark": dict(surface="#1a1a19", ink="#f0efec", muted="#898781", PT="#e66767", PL="#3987e5",
+                 other="#5c5b57", edge="#f0efec"),
 }
-# One-hue sequential ramp (blue 100 -> 700). Dark mode runs it the other way,
-# so "near zero" recedes into the surface in both themes.
-RAMP = ["#cde2fb", "#b7d3f6", "#9ec5f4", "#86b6ef", "#6da7ec", "#5598e7", "#3987e5",
-        "#2a78d6", "#256abf", "#1c5cab", "#184f95", "#104281", "#0d366b"]
 EMPHASIS = ("PT", "PL")   # the two poles of the current house; everyone else is context
 FULL_MONTH = 30           # contested roll calls needed for a month to be pictured
-THIN = 10                 # below this, a month is a gap in the timeline (= MIN_SHARED: no edge is possible)
-EVENTS = [("2016-04", "Impeachment vote"), ("2020-03", "Remote sessions begin")]
 
 
 def _mpl(theme: str):
@@ -40,77 +34,18 @@ def _mpl(theme: str):
     plt.rcdefaults()
     plt.rcParams.update({
         "font.family": "DejaVu Sans", "font.size": 9,
-        "svg.hashsalt": "camara-graphs", "svg.fonttype": "path",
         "figure.facecolor": t["surface"], "axes.facecolor": t["surface"], "savefig.facecolor": t["surface"],
-        "text.color": t["ink"], "axes.labelcolor": t["ink2"],
-        "xtick.color": t["muted"], "ytick.color": t["muted"], "xtick.major.size": 0, "ytick.major.size": 0,
-        "axes.edgecolor": t["axis"], "axes.linewidth": 0.8,
-        "axes.spines.top": False, "axes.spines.right": False, "axes.spines.left": False,
-        "axes.grid": True, "axes.grid.axis": "y", "grid.color": t["grid"], "grid.linewidth": 0.6,
-        "axes.titlelocation": "left", "axes.titlesize": 10, "axes.titlecolor": t["ink"],
+        "text.color": t["ink"], "axes.titlelocation": "left", "axes.titlesize": 10, "axes.titlecolor": t["ink"],
         "legend.frameon": False, "legend.labelcolor": t["ink"],
     })
     return plt, t
 
 
 def _save(fig, path: Path) -> None:
-    meta = {"Date": None, "Creator": None} if path.suffix == ".svg" else {"Software": None}
-    fig.savefig(path, metadata=meta, bbox_inches="tight", pad_inches=0.15, dpi=200)
     import matplotlib.pyplot as plt
 
+    fig.savefig(path, metadata={"Software": None}, bbox_inches="tight", pad_inches=0.15, dpi=200)
     plt.close(fig)
-
-
-def _month_ts(months: pd.Series) -> pd.Series:
-    return pd.to_datetime(months + "-01")
-
-
-# ------------------------------------------------------------------ timeline
-
-def timeline(idx: pd.DataFrame, path: Path, theme: str) -> None:
-    plt, t = _mpl(theme)
-    x = _month_ts(idx.month)
-    covote = idx.covote_density.where(idx.votacoes_contested >= THIN)
-    cosign = idx.cosponsor_density.where(idx.items_cosigned >= THIN)
-
-    fig, axes = plt.subplots(2, 1, figsize=(10, 5.4), sharex=True, gridspec_kw={"hspace": 0.35})
-    panels = [
-        (axes[0], covote, "Co-voting graph density (agreement ≥ 80% on contested roll calls)"),
-        (axes[1], cosign, "Co-authorship graph density (co-signed ≥ 1 item)"),
-    ]
-    starts = [m for m in idx.month if m.endswith("-02") and g.legislatura(m) != g.legislatura(f"{int(m[:4])}-01")]
-    for ax, y, title in panels:
-        ax.plot(x, y, color=t["line"], lw=2, solid_capstyle="round", solid_joinstyle="round", zorder=3)
-        # A month between two gaps has no line segment; show it as a dot.
-        alone = y.notna() & y.shift(1).isna() & y.shift(-1).isna()
-        ax.scatter(x[alone], y[alone], s=14, color=t["line"], zorder=3, linewidths=0)
-        ax.set_title(title, pad=8)
-        ax.set_ylim(0, max(0.05, float(np.nanmax(y.to_numpy())) * 1.15) if y.notna().any() else 1)
-        ax.margins(x=0.01)
-        for m in starts:
-            ax.axvline(pd.Timestamp(m + "-01"), color=t["axis"], lw=0.8, zorder=1)
-    top = axes[0]
-    ymax = top.get_ylim()[1]
-    for m in starts:
-        top.text(pd.Timestamp(m + "-01"), ymax, f" {g.legislatura(m)}th legislature",
-                 va="top", ha="left", fontsize=8, color=t["ink2"])
-    # Event labels sit in the empty band at the bottom of the panel, tied to
-    # the line by a hairline, so they never cross the series.
-    for m, label in EVENTS:
-        row = idx.index[idx.month == m]
-        if not len(row) or pd.isna(covote.loc[row[0]]):
-            continue
-        xv, yv = pd.Timestamp(m + "-01"), covote.loc[row[0]]
-        top.scatter([xv], [yv], s=48, facecolors=t["surface"], edgecolors=t["line"], linewidths=2, zorder=4)
-        top.annotate(label, (xv, yv), xytext=(xv, ymax * 0.04), textcoords="data", ha="center", va="bottom",
-                     fontsize=8, color=t["ink2"], zorder=4,
-                     bbox=dict(boxstyle="square,pad=0.15", fc=t["surface"], ec="none"),
-                     arrowprops=dict(arrowstyle="-", color=t["axis"], lw=0.8, shrinkA=0, shrinkB=4))
-    fig.text(0.0, -0.02,
-             f"Monthly, {idx.month.iloc[0]} to {idx.month.iloc[-1]}. Gaps are months with fewer than {THIN} contested "
-             f"roll calls or co-signed items (recess, campaign season). Source: Câmara dos Deputados open data.",
-             fontsize=8, color=t["muted"], ha="left")
-    _save(fig, path)
 
 
 # ------------------------------------------------------------------- layout
@@ -202,70 +137,6 @@ def network(month: str, path: Path, theme: str, data_dir=None, **kw) -> None:
     _save(fig, path)
 
 
-# ------------------------------------------------------------------ parties
-
-def parties(month: str, path: Path, theme: str, data_dir=None, min_size: int = 8, **kw) -> None:
-    plt, t = _mpl(theme)
-    from matplotlib.colors import LinearSegmentedColormap
-
-    G = g.graph(month, "covote", data_dir=data_dir, **kw)
-    nodes = list(G.nodes)
-    party = {n: G.nodes[n].get("party", "") for n in nodes}
-    sizes = Counter(party.values())
-    keep = [p for p, c in sizes.items() if c >= min_size and p]
-    if not keep:
-        return
-    P = _orient(_positions(month, nodes, data_dir, **kw), [party[n] for n in nodes])
-    x = pd.Series(P[:, 0], index=nodes)
-    order = sorted(keep, key=lambda p: (x[[n for n in nodes if party[n] == p]].mean(), p))
-
-    e = g.covote_edges(month, data_dir=data_dir, **{k: v for k, v in kw.items() if k in ("min_shared", "lop", "obstruction_as_no")})
-    e = e[e.u.isin(nodes) & e.v.isin(nodes)]
-    pu, pv = e.u.map(party), e.v.map(party)
-    a = pd.DataFrame({"a": np.where(pu <= pv, pu, pv), "b": np.where(pu <= pv, pv, pu), "x": e.agreement})
-    mean = a.groupby(["a", "b"]).x.mean()
-    k = len(order)
-    A = np.full((k, k), np.nan)
-    for i, p in enumerate(order):
-        for j, q in enumerate(order):
-            key = (min(p, q), max(p, q))
-            if key in mean.index:
-                A[i, j] = mean[key]
-
-    ramp = RAMP if theme == "light" else RAMP[::-1]
-    cmap = LinearSegmentedColormap.from_list("ramp", ramp)
-    side = 0.42 * k + 1.6
-    fig, ax = plt.subplots(figsize=(side + 0.8, side))
-    mesh = ax.pcolormesh(A, cmap=cmap, vmin=0, vmax=1, edgecolors=t["surface"], linewidth=1.5)
-    for i in range(k):
-        for j in range(k):
-            if not np.isnan(A[i, j]):
-                dark_cell = A[i, j] >= 0.55
-                light_text = dark_cell if theme == "light" else not dark_cell
-                ax.text(j + 0.5, i + 0.5, f"{A[i, j] * 100:.0f}", ha="center", va="center", fontsize=7.5,
-                        color="#ffffff" if light_text else "#0b0b0b")
-    labels = [f"{p} ({sizes[p]})" for p in order]
-    ax.set_xticks(np.arange(k) + 0.5, labels, rotation=90)
-    ax.set_yticks(np.arange(k) + 0.5, labels)
-    ax.tick_params(colors=t["ink2"])
-    ax.invert_yaxis()
-    ax.set_aspect("equal")
-    ax.grid(False)
-    for s in ax.spines.values():
-        s.set_visible(False)
-    cb = fig.colorbar(mesh, ax=ax, fraction=0.035, pad=0.02)
-    cb.outline.set_visible(False)
-    cb.ax.tick_params(colors=t["muted"], size=0)
-    cb.set_label("Mean pairwise agreement (%)", color=t["ink2"])
-    cb.set_ticks([0, 0.25, 0.5, 0.75, 1], labels=["0", "25", "50", "75", "100"])
-    ax.set_title(f"{month}: % of contested roll calls on which two deputies voted alike", pad=30)
-    ax.text(0, 1.015,
-            f"Parties with at least {min_size} deputies, ordered by mean position on the first principal\n"
-            f"component of the votes. Diagonal: pairs within the same party.",
-            fontsize=8, color=t["muted"], ha="left", va="bottom", transform=ax.transAxes)
-    _save(fig, path)
-
-
 # -------------------------------------------------------------------- entry
 
 def pictured_month(idx: pd.DataFrame, full_month: int = FULL_MONTH) -> str | None:
@@ -273,114 +144,12 @@ def pictured_month(idx: pd.DataFrame, full_month: int = FULL_MONTH) -> str | Non
     return full.month.iloc[-1] if len(full) else None
 
 
-# ------------------------------------------------------------ party views
-
-PARTY_VIEW_MIN = 30   # parties at least this large get a click-to-expand view in the README
-
-
-def _slug(p: str) -> str:
-    import unicodedata
-
-    ascii_ = unicodedata.normalize("NFKD", p).encode("ascii", "ignore").decode()
-    return "".join(ch for ch in ascii_ if ch.isalnum()) or "party"
-
-
-def _save_small_png(fig, path: Path) -> None:
-    """PNG quantized to a 64-colour palette: these views are re-rendered
-    whenever the pictured month changes, so keep each commit small."""
-    import io
-
-    import matplotlib.pyplot as plt
-    from PIL import Image
-
-    buf = io.BytesIO()
-    fig.savefig(buf, format="png", metadata={"Software": None}, bbox_inches="tight", pad_inches=0.12, dpi=110)
-    plt.close(fig)
-    buf.seek(0)
-    Image.open(buf).convert("RGB").quantize(colors=64, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE) \
-        .save(path, format="PNG", optimize=True)
-
-
-def party_view(month: str, party: str, path: Path, theme: str, ctx: dict) -> None:
-    plt, t = _mpl(theme)
-    from matplotlib.collections import LineCollection
-
-    nodes, P, partyof, gv, gc = ctx["nodes"], ctx["P"], ctx["party"], ctx["gv"], ctx["gc"]
-    xy = {n: P[i] for i, n in enumerate(nodes)}
-    focus = np.array([partyof[n] == party for n in nodes])
-    members = [n for n in nodes if partyof[n] == party]
-    fig, axes = plt.subplots(2, 1, figsize=(8.2, 6.4), gridspec_kw={"hspace": 0.08})
-    for ax, G, title, k in ((axes[0], gv, "Vote together", 150), (axes[1], gc, "Sign together", 120)):
-        # Edges touching the party (nbunch silently skips members absent from G).
-        segs = [(xy[u], xy[v]) for u, v in G.edges(members) if u in xy and v in xy]
-        alpha = max(0.02, min(0.35, k / max(len(segs), 1)))
-        ax.add_collection(LineCollection(segs, colors=t["ink"], linewidths=0.4, alpha=alpha, zorder=1))
-        ax.scatter(P[~focus, 0], P[~focus, 1], s=12, c=t["other"], edgecolors=t["surface"], linewidths=0.5, zorder=2)
-        ax.scatter(P[focus, 0], P[focus, 1], s=22, c=t["ink"], edgecolors=t["surface"], linewidths=0.7, zorder=3)
-        ax.set_title(f"{title}: {len(segs):,} edges touch {party}", fontsize=10)
-        ax.set_aspect("equal", adjustable="datalim")
-        ax.axis("off")
-    _save_small_png(fig, path)
-
-
-def render_parties(month: str, out_dir: Path, data_dir=None, *, min_size: int = PARTY_VIEW_MIN, **kw) -> list[dict]:
-    """One click-to-expand view per large party (both themes) plus the numbers
-    its README summary line states. Removes views of parties no longer shown."""
-    gv = g.graph(month, "covote", data_dir=data_dir, **kw)
-    gc = g.graph(month, "cosponsor", data_dir=data_dir, **kw)
-    nodes = list(gv.nodes)
-    partyof = {n: gv.nodes[n].get("party", "") for n in nodes}
-    for n in gc.nodes:
-        partyof.setdefault(n, gc.nodes[n].get("party", ""))
-    P = _orient(_positions(month, nodes, data_dir, **kw), [partyof[n] for n in nodes])
-    ctx = dict(nodes=nodes, P=P, party=partyof, gv=gv, gc=gc)
-
-    sizes = Counter(partyof[n] for n in nodes)
-    shown = sorted((p for p, c in sizes.items() if p and c >= min_size), key=lambda p: (-sizes[p], p))
-    e = g.covote_edges(month, data_dir=data_dir, **{k: v for k, v in kw.items() if k in ("min_shared", "lop", "obstruction_as_no")})
-    pu, pv = e.u.map(partyof), e.v.map(partyof)
-    between = pd.DataFrame({"a": pu, "b": pv, "x": e.agreement})
-    # Comparison parties: big enough for a stable mean (same cut as the heatmap).
-    peers = {p for p, c in sizes.items() if p and c >= 8}
-
-    views, keep = [], set()
-    for p in shown:
-        mine = between[(between.a == p) | (between.b == p)]
-        other = np.where(mine.a == p, mine.b, mine.a)
-        by = pd.Series(mine.x.to_numpy(), index=other).groupby(level=0).mean()
-        cohesion = float(by.get(p, np.nan))
-        rivals = by.drop(p, errors="ignore")
-        rivals = rivals[rivals.index.isin(peers)]
-        members = [n for n in nodes if partyof[n] == p]
-        vote_out = {v for m in members for v in gv.neighbors(m) if partyof.get(v) != p}
-        sign = {v for m in members if m in gc for v in gc.neighbors(m)}
-        files = {}
-        for theme in THEMES:
-            name = f"party-{_slug(p)}-{theme}.png"
-            party_view(month, p, out_dir / name, theme, ctx)
-            files[theme] = name
-            keep.add(name)
-        views.append({
-            "party": p, "size": len(members), "cohesion": cohesion, "files": files,
-            "nearest": (rivals.idxmax(), float(rivals.max())) if len(rivals) else None,
-            "farthest": (rivals.idxmin(), float(rivals.min())) if len(rivals) else None,
-            "vote_partners": len(vote_out), "sign_partners": len(sign),
-            "sign_outside": (sum(partyof.get(v) != p for v in sign) / len(sign)) if sign else 0.0,
-        })
-    for old in out_dir.glob("party-*.png"):
-        if old.name not in keep:
-            old.unlink()
-    return views
-
-
-def render(data_dir: Path, out_dir: Path, *, full_month: int = FULL_MONTH, min_size: int = 8, **kw) -> str | None:
-    """Write every chart for both themes; return the month pictured."""
+def render(data_dir: Path, out_dir: Path, *, full_month: int = FULL_MONTH, **kw) -> str | None:
+    """Write the network chart for both themes; return the month pictured."""
     idx = pd.read_csv(data_dir / "index.csv", dtype={"month": str})
     out_dir.mkdir(parents=True, exist_ok=True)
     month = pictured_month(idx, full_month)
-    for theme in THEMES:
-        timeline(idx, out_dir / f"timeline-{theme}.svg", theme)
-        if month:
+    if month:
+        for theme in THEMES:
             network(month, out_dir / f"network-{theme}.png", theme, data_dir=data_dir, **kw)
-            parties(month, out_dir / f"parties-{theme}.svg", theme, data_dir=data_dir, min_size=min_size, **kw)
     return month

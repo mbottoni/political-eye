@@ -31,3 +31,23 @@ def test_pca_signs_are_pinned():
     # Negating every vote flips the raw SVD signs, just as a different BLAS
     # might; pinning must give back the same picture.
     assert np.allclose(_pca2(-M), _pca2(M))
+
+
+def test_readme_map_points_and_markers(built, tmp_path):
+    pytest.importorskip("matplotlib")
+    import json
+    from camaragraphs import readme_map
+
+    fc = readme_map.feature_collection("2025-03", built, min_shared=1)
+    assert [f["geometry"]["type"] for f in fc["features"]] == ["Point"] * 4   # deputies 10, 20, 30, 40
+    props = {f["properties"]["Deputy"]: f["properties"] for f in fc["features"]}
+    assert props["Ana"]["Party"] == "P1 · SP"
+    assert props["Ana"]["Closest ally"].startswith("Bia (B, 100%")
+    readme = tmp_path / "README.md"
+    readme.write_text("a\n<!-- BEGIN:MAP -->\n<!-- END:MAP -->\nb\n")
+    readme_map.update_readme(readme, "2025-03", built, min_shared=1)
+    once = readme.read_text()
+    readme_map.update_readme(readme, "2025-03", built, min_shared=1)
+    assert readme.read_text() == once and once.endswith("b\n")
+    body = once.split("```geojson\n")[1].split("\n```")[0]
+    assert len(json.loads(body)["features"]) == 4   # the fenced block is valid GeoJSON

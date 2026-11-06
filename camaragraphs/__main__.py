@@ -56,9 +56,12 @@ def cmd_summarize(a) -> int:
 
 def cmd_figures(a) -> int:
     from .figures import render
+    from .readme_map import update_readme
 
     month = render(a.data, a.out)
-    print(f"figures written to {a.out} (pictured month: {month})", file=sys.stderr)
+    if month:
+        update_readme(a.readme, month, a.data)
+    print(f"figures written to {a.out}; README map updated (pictured month: {month})", file=sys.stderr)
     return 0
 
 
@@ -96,6 +99,7 @@ def main(argv: list[str] | None = None) -> int:
 
     f = sub.add_parser("figures", help="render the README charts (needs matplotlib)")
     f.add_argument("--out", type=Path, default=REPO / "figures")
+    f.add_argument("--readme", type=Path, default=REPO / "README.md")
     f.set_defaults(fn=cmd_figures)
 
     e = sub.add_parser("export", help="print one month's edge list as CSV")

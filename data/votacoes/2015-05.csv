@@ -1,0 +1,58 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+298878-324,2015-05-05,2015-05-05T21:23:19,1,380,51,59,Aprovado o Requerimento. Sim: 380; não: 51; abstenção: 3; total: 434.
+298878-340,2015-05-05,2015-05-05T22:58:14,1,333,144,11,"Aprovada, em segundo turno, a Proposta de Emenda à Constituição nº 457 de 2005, ressalvado o destaque. Sim: 333; não: 144; abstenção: 10; total: 487."
+298878-343,2015-05-05,2015-05-05T23:44:00,1,350,125,11,Mantido o texto destacado. Sim: 350; não: 125; abstenção: 10; total: 485.
+865930-42,2015-05-06,2015-05-06T15:40:02,0,180,229,1,Rejeitado o Requerimento. Sim: 180; não: 229; total: 409.
+865930-56,2015-05-06,2015-05-06T18:09:17,0,49,304,110,Rejeitado o Requerimento. Sim: 49; não: 304; abstenção: 13; total: 366.
+865930-67,2015-05-06,2015-05-06T19:40:21,0,90,283,63,Rejeitado o Requerimento. Sim: 90; não: 283; abstenção: 8; total: 381.
+865930-80,2015-05-06,2015-05-06T21:45:25,1,252,227,2,"Aprovado o Projeto de Lei de Conversão nº 3 de 2015 apresentado à Medida Provisória nº 665 de 2014, ressalvados os destaques. Sim: 252; não: 227; abstenção: 1; total: 480."
+865930-84,2015-05-06,2015-05-06T22:11:53,1,247,220,5,Mantido o artigo destacado. Sim: 247; não: 220; abstenção: 4; total: 471.
+865930-86,2015-05-06,2015-05-06T22:30:56,1,234,229,3,Mantida a expressão destacada. Sim: 234; não: 229; abstenção: 2; total: 465.
+865930-92,2015-05-07,2015-05-07T15:52:10,1,258,195,4,Mantido o texto destacado. Sim: 258; não: 195; abstenção:3; total: 456.
+865930-95,2015-05-07,2015-05-07T16:30:24,0,186,251,4,Rejeitada a Emenda. Sim: 186; não: 251; abstenção:3; total: 440.
+865930-98,2015-05-07,2015-05-07T16:59:19,1,253,186,5,Mantido o texto destacado. Sim: 253; não: 186; abstenção:4; total: 443.
+865930-103,2015-05-07,2015-05-07T17:22:31,0,179,241,3,Rejeitada a Emenda. Sim: 179; não: 241; abstenção: 2; total: 422;
+865930-106,2015-05-07,2015-05-07T17:39:12,0,155,255,8,Rejeitada a Emenda. Sim: 155; não: 255; abstenção: 7; total: 417.
+865930-109,2015-05-07,2015-05-07T17:59:03,0,180,241,4,Rejeitada a Emenda. Sim: 180; não: 241; abstenção: 3; total: 424.
+865930-111,2015-05-07,2015-05-07T18:09:30,1,223,180,4,Mantido o texto destacado. Sim: 223; não: 180; abstenção: 3; total: 406.
+865930-117,2015-05-07,2015-05-07T18:25:00,0,180,244,3,Rejeitada a Emenda. Sim: 180; não: 244; abstenção: 2; total: 426.
+865930-120,2015-05-07,2015-05-07T18:41:39,1,233,184,6,Mantido o texto destacado. Sim: 233; não: 184; abstenção:5; total: 422.
+860923-38,2015-05-12,2015-05-12T18:57:17,1,299,120,2,"Aprovado o Projeto de Lei de Conversão nº 5 de 2015, apresentado à Medida Provisória nº 663 de 2014, ressalvados os destaques. Sim: 299; não: 120; abstenção: 1; total: 420."
+860923-54,2015-05-12,2015-05-12T20:33:54,0,149,285,1,Rejeitada a Emenda nº 11. Sim: 149; não: 285; total: 434.
+860923-62,2015-05-12,2015-05-12T22:01:02,1,243,199,2,Aprovada a Emenda nº 25. Sim: 243; não: 199; abstenção: 1; total: 443.
+865929-45,2015-05-13,2015-05-13T18:14:00,1,278,167,2,"Aprovado, em apreciação preliminar, o Parecer do Relator, na parte em que manifesta opinião favorável quanto ao atendimento dos pressupostos constitucionais de relevância e urgência e de sua adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 278; não: 167; abstenção: 1; total: 446."
+865929-52,2015-05-13,2015-05-13T19:37:53,1,277,178,2,"Aprovado o Projeto de Lei de Conversão nº 4 de 2015, apresentado à Medida Provisória nº 664 de 2014, ressalvados os destaques. Sim: 277; não: 178; abstenção: 01; total: 456."
+865929-59,2015-05-13,2015-05-13T20:40:50,0,194,261,5,Rejeitada a Emenda nº 507. Sim: 194; não: 261; abstenção: 4; total: 459.
+865929-62,2015-05-13,2015-05-13T21:36:40,1,232,210,3,Aprovado o texto destacado. Sim: 232; não: 210; abstenção: 2; total: 444.
+865929-69,2015-05-13,2015-05-13T22:09:00,1,294,158,3,Mantido o texto destacado. Sim: 294; não: 158; abstenção: 2; total: 454.
+865929-73,2015-05-13,2015-05-13T22:47:12,0,220,229,2,Suprimido o texto destacado. Sim: 220; não: 229; abstenção: 1; total: 450.
+865929-80,2015-05-14,2015-05-14T14:55:58,0,110,226,1,Rejeitada a Emenda Aglutinativa nº 5. Sim: 110; não: 226; total: 336.
+865929-88,2015-05-14,2015-05-14T15:35:05,1,244,144,3,Mantido o texto. Sim: 244; não: 144; abstenção: 2; total: 390.
+865929-92,2015-05-14,2015-05-14T16:21:04,1,267,144,4,Mantido o texto. Sim: 267; não: 144; abstenção: 3; total: 414.
+865929-98,2015-05-14,2015-05-14T16:58:59,1,248,143,4,Mantido o texto. Sim: 248; não: 143; abstenção: 3; total: 394.
+865929-105,2015-05-14,2015-05-14T17:19:55,1,221,172,7,Mantido o texto. Sim: 221; não: 172; abstenção: 6; total: 399.
+944494-33,2015-05-19,2015-05-19T19:58:46,0,157,287,2,Rejeitado o Recurso. Sim: 157; não: 287	; abstenção: 1; total: 445.
+944494-54,2015-05-19,2015-05-19T21:48:52,1,323,125,6,"Aprovado o Projeto de Lei de Conversão nº 6 de 2015, apresentado à Medida Provisória nº 668 de 2015, ressalvados os destaques. Sim: 323; não: 125; abstenção: 5; total: 453."
+944494-58,2015-05-19,2015-05-19T22:09:38,1,310,129,2,Mantido o artigo destacado. Sim: 310; não: 129; abstenção: 1; total: 440.
+944494-60,2015-05-19,2015-05-19T22:38:51,1,311,137,2,Mantido o texto destacado. Sim: 311; não: 137; abstenção: 1; total: 449.
+944494-63,2015-05-19,2015-05-19T23:03:42,1,230,221,2,Mantido o texto destacado.Sim: 230; não: 221; abstenção: 1; total: 452.
+944494-66,2015-05-19,2015-05-19T23:13:56,1,307,130,3,Mantido o texto destacado.Sim: 307; não: 130; abstenção: 2; total: 439.
+944494-81,2015-05-20,2015-05-20T17:47:05,0,1,306,1,Suprimida a expressão destacada. Sim:1; não: 306; total: 307.
+944494-87,2015-05-20,2015-05-20T18:09:53,0,109,283,4,Suprimido o artigo destacado. Sim:109; não: 283; abstenção: 3; total: 395.
+944494-91,2015-05-20,2015-05-20T18:26:34,1,267,125,1,Mantido o artigo destacado. Sim: 266; não: 125; total: 391.
+944494-92,2015-05-20,2015-05-20T18:40:56,0,12,289,106,"Suprimido o artigo destacado. Sim:12; não: 289; abstenção: 10; total: 311. 
+**Em decorrência da rejeição da redação proposta pelo artigo 24 do Projeto de Lei de Conversão nº 6 ao artigo 34-A da Lei 13.097/2015, fica sem efeito a cláusula de vigência constante do inciso VI do artigo 35."
+944494-98,2015-05-20,2015-05-20T19:32:09,0,123,315,1,Suprimido o artigo destacado. Sim: 123; não: 315; total: 438.
+944494-100,2015-05-20,2015-05-20T19:43:44,0,104,325,1,Suprimido o dispositivo destacado. Sim: 104; não: 325; total: 429.
+944494-110,2015-05-20,2015-05-20T20:48:32,1,273,184,8,"Aprovada a Redação Final, na parte referente ao art. 3º do Projeto de Lei de Conversão nº 6 (Relator: Dep. Manoel Junior (PMDB-PB)). Sim: 273; não: 184; abstenção: 7; total: 464."
+373327-129,2015-05-26,2015-05-26T18:32:34,0,21,402,3,Rejeitada a Emenda Aglutinativa nº 4. Sim: 21; não: 402; abstenção: 2; total: 425.
+373327-136,2015-05-26,2015-05-26T19:42:27,0,99,369,3,Rejeitada a Emenda Aglutinativa nº 2. Sim: 99; não: 369; abstenção: 2; total: 470.
+373327-143,2015-05-26,2015-05-26T22:15:44,0,210,267,6,Rejeitado o artigo 1º do Substitutivo. Sim: 210; não: 267; abstenção: 5; total: 482.
+373327-157,2015-05-26,2015-05-27T00:42:13,0,264,207,5,Rejeitada a Emenda Aglutinativa nº 22. Sim: 264; não: 207; abstenção: 4; total: 475.
+373327-170,2015-05-27,2015-05-27T19:43:50,0,164,240,67,Rejeitada a Emenda Aglutinativa nº 10. Sim: 164; não: 240; abstenção: 66; total: 470.
+373327-174,2015-05-27,2015-05-27T20:21:45,0,56,343,59,Rejeitada a Emenda Aglutinativa nº 32. Sim: 56; não: 343; abstenção: 58; total: 457.
+373327-179,2015-05-27,2015-05-27T21:51:49,1,330,141,6,Aprovada a Emenda Aglutinativa nº 28. Sim: 330; não: 141; abstenção: 1; total: 472.
+373327-190,2015-05-27,2015-05-27T23:25:54,1,452,19,2,Aprovado o art. 3º do Substitutivo oferecido pelo Relator da Comissão Especial. Sim: 452; não: 19; abstenção: 1; total: 472.
+373327-203,2015-05-28,2015-05-28T15:37:41,0,38,219,1,Rejeitado o requerimento de destaque de preferência. Sim: 38; não: 219; total: 257.
+373327-211,2015-05-28,2015-05-28T17:32:29,0,206,236,6,Rejeitado o artigo destacado. Sim: 206; não: 236; abstenção: 5; total: 447.
+373327-219,2015-05-28,2015-05-28T18:54:20,1,369,39,33,Aprovado o artigo 5º do Substitutivo oferecido pelo Relator da Comissão Especial. Sim: 369; não: 39; abstenção: 5; total: 413.

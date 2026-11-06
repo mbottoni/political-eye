@@ -1,0 +1,99 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2296277-8,2021-09-01,2021-09-01T16:31:00,1,379,73,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 379; não: 73; abstenção: 1; total: 453.
+2283432-38,2021-09-01,2021-09-01T17:26:12,1,423,9,1,"Aprovada a Medida Provisória nº 1.050, de 2021, na forma do Projeto de Lei de Conversão, ressalvados os destaques. Sim: 423; não: 9; total: 432."
+2283432-41,2021-09-01,2021-09-01T17:40:19,,392,14,4,Mantido o texto. Sim: 392; não: 14; abstenção: 2; total: 408.
+2283432-45,2021-09-01,2021-09-01T17:49:47,,335,26,1,Mantido o texto. Sim: 335; não: 26; abstenção: 1; total: 362.
+2270403-59,2021-09-01,2021-09-01T18:53:26,1,466,0,2,"Aprovado o Substitutivo ao Projeto de Lei nº 486, de 2021, da Comissão de Educação. Sim: 466; total: 466."
+2288389-68,2021-09-01,2021-09-01T19:12:42,0,44,391,1,Rejeitado o Requerimento. Sim: 44; não: 391; total: 435.
+2288389-78,2021-09-01,2021-09-01T21:20:03,1,398,77,6,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 2.337, de 2021, adotada pelo Relator da Comissão Especial, ressalvados os destaques. Sim: 398; não: 77; abstenção: 5; total: 480."
+2288389-88,2021-09-02,2021-09-02T13:11:09,0,51,300,3,Rejeitada a Emenda de Plenário º 78. Sim: 51; não: 300; abstenção:2 total: 353.
+2288389-91,2021-09-02,2021-09-02T13:23:46,0,110,295,2,Rejeitada a Emenda de Plenário nº 106. Sim: 110; não: 295; abstenção: 1; total: 406.
+2288389-92,2021-09-02,2021-09-02T13:33:05,0,113,294,2,Rejeitada a Emenda de Plenário nº 64. Sim: 113; não: 294; abstenção: 1; total; 408.
+2288389-98,2021-09-02,2021-09-02T14:06:44,1,319,140,3,Aprovada a Emenda de Plenário nº 125. Sim: 319; não: 140; abstenção: 2; total: 461.
+2288389-103,2021-09-02,2021-09-02T14:36:18,0,133,311,3,Rejeitada a Emenda de Plenário nº 39. Sim: 133; não: 311; abstenção: 2; total: 446.
+2288389-105,2021-09-02,2021-09-02T15:00:40,0,153,289,1,Rejeitada a Emenda de Plenário nº 153. Sim: 153; não: 289; total: 442.
+2288389-107,2021-09-02,2021-09-02T15:11:07,0,73,328,2,Rejeitada a Emenda de Plenário º 116. Sim: 73; não: 328; abstenção: 1; total: 402.
+2288389-110,2021-09-02,2021-09-02T15:19:41,0,84,302,1,Rejeitada a Emenda de Plenário nº 115. Sim: 84; não: 302; total: 386.
+2288389-113,2021-09-02,2021-09-02T15:30:02,0,121,290,3,Rejeitada a Emenda de Plenário nº 164. Sim: 121; não: 290; abstenção: 2; total: 413.
+2288389-115,2021-09-02,2021-09-02T15:40:47,0,185,227,3,Rejeitada a Emenda de Plenário nº 43. Sim: 185; não: 227; abstenção: 2; total: 414.
+2288389-117,2021-09-02,2021-09-02T15:50:00,,211,209,4,Mantido o texto. Sim: 211; não: 209; abstenção: 3; total: 423.
+2288389-122,2021-09-02,2021-09-02T16:03:43,0,177,262,2,Rejeitada a Emenda de Plenário nº 50. Sim: 177; não: 262; abstenção: 1; total: 440.
+2288389-132,2021-09-02,2021-09-02T16:13:43,0,68,371,2,Rejeitada a Emenda de Plenário n° 155. Sim: 68; não: 371; abstenção: 1; total: 440.
+2288389-146,2021-09-02,2021-09-02T16:23:01,0,94,335,2,Rejeitada a Emenda de Plenário n° 133. Sim: 94; não: 335; abstenção: 1; total: 430.
+2288389-160,2021-09-02,2021-09-02T16:41:35,0,47,416,2,Rejeitada a Emenda de Plenário n° 145. Sim: 47; não: 416; abstenção: 1; total: 464.
+2283064-28,2021-09-02,2021-09-02T17:16:14,0,95,268,1,Rejeitado o Requerimento. Sim: 95; não: 268; total: 363.
+2283064-54,2021-09-02,2021-09-02T18:24:08,0,110,276,1,Rejeitada a Emenda de Plenário n° 1. Sim: 110; não: 276; total: 386.
+2283064-57,2021-09-02,2021-09-02T18:35:15,,290,116,1,Mantido o texto. Sim: 290; não: 116; total: 406.
+2292163-29,2021-09-02,2021-09-02T19:07:01,0,118,324,1,Rejeitado o Requerimento. Sim: 118; não: 324; total: 442.
+2292163-35,2021-09-02,2021-09-02T19:37:52,0,119,294,2,Rejeitado o Requerimento. Sim: 119; não: 294; abstenção: 1; total: 414.
+2297227-10,2021-09-08,2021-09-08T18:05:13,1,316,96,3,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 316; não: 96; abstenção: 2; total: 414.
+2297849-7,2021-09-08,2021-09-08T18:28:13,1,300,149,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 300; não: 149; total: 449.
+2297870-6,2021-09-08,2021-09-08T18:48:02,1,302,140,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 302; não: 140; abstenção: 1; total: 443.
+2293710-37,2021-09-09,2021-09-09T14:52:39,1,399,34,4,"Aprovado o Substitutivo ao Projeto de Lei nº 783, de 2021, adotado pelo relator da Comissão de Constituição e Justiça e de Cidadania, ressalvados os destaques. Sim: 399; não: 34; abstenção: 3; total: 436."
+2292163-66,2021-09-09,2021-09-09T15:15:40,0,65,365,2,Rejeitado o Requerimento. Sim: 65; não: 365; abstenção: 1; total: 431.
+2292163-72,2021-09-09,2021-09-09T16:06:51,1,378,80,3,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei Complementar nº 112, de 2021, adotada pela Relatora da Comissão de Constituição e Justiça e de Cidadania, ressalvados os destaques. Sim: 378; não: 80; abstenção: 2; total: 460."
+2292163-77,2021-09-09,2021-09-09T16:28:06,,138,304,4,Suprimido o texto. Sim: 138; não: 304; abstenção: 3; total: 445.
+2292163-81,2021-09-09,2021-09-09T16:44:28,1,287,141,4,Aprovada a Emenda de Plenário n° 100. Sim: 287; não: 141; abstenção: 3; total: 431.
+2292163-85,2021-09-09,2021-09-09T17:03:06,,401,38,3,Mantido o texto. Sim: 401; não: 38; abstenção: 2; total: 441.
+2292163-88,2021-09-09,2021-09-09T17:20:25,0,171,253,4,Rejeitada a Emenda de Plenário n° 40. Sim: 171; não: 253; abstenção: 3; total: 427.
+2292163-92,2021-09-09,2021-09-09T17:35:40,0,183,240,3,Rejeitada a Emenda de Plenário n° 50. Sim: 183; não: 240; abstenção: 2; total:425.
+2292163-97,2021-09-09,2021-09-09T17:55:55,,254,170,4,Suprimido o texto. Sim: 254; não: 170; abstenção: 3; total: 427.
+2292163-98,2021-09-09,2021-09-09T18:11:24,1,257,179,3,Aprovada a Emenda de Plenário n° 36. Sim: 257; não: 179; abstenção: 2; total: 438.
+2292163-103,2021-09-09,2021-09-09T19:21:53,,52,405,5,Suprimido o texto. Sim: 52; não: 405; abstenção: 4; total: 461.
+2292163-104,2021-09-09,2021-09-09T19:39:52,,14,411,2,Suprimido o texto. Sim: 14; não: 411; abstenção: 1; total: 426.
+2292163-122,2021-09-15,2021-09-15T19:59:49,0,129,320,1,Rejeitado o requerimento. Sim: 129; não: 320; total: 449.
+2292163-125,2021-09-15,2021-09-15T21:01:41,1,273,211,4,Aprovada a Emenda Aglutinativa nº 2. Sim: 273; não: 211; abstenção: 3; total: 487.
+2292163-130,2021-09-15,2021-09-15T21:13:44,0,42,381,2,Rejeitada a Emenda de Plenário nº 53. Sim: 42; não: 381; abstenção: 1; total: 424.
+2292163-131,2021-09-15,2021-09-15T21:33:24,,401,40,3,Mantido o texto. Sim: 401; não: 40; abstenção: 2; total: 443.
+2292163-137,2021-09-15,2021-09-15T21:48:32,0,194,254,4,Rejeitada a Emenda de Plenário nº 68. Sim: 194; não: 254; abstenção: 3; total: 451.
+2292163-139,2021-09-15,2021-09-15T22:04:51,0,222,221,2,Rejeitada a Emenda de Plenário nº 25. Sim: 222; não: 221; abstenção: 1; total: 444.
+2292163-142,2021-09-15,2021-09-15T22:16:31,0,52,381,3,Rejeitada a Emenda de Plenário nº 27. Sim: 52; não: 381; abstenção: 2; total: 435.
+2292163-145,2021-09-15,2021-09-15T22:32:26,,331,111,3,Mantido o texto. Sim: 331; não: 111; abstenção: 2; total; 444.
+2292163-148,2021-09-15,2021-09-15T22:35:33,,297,8,3,Mantido o texto. Sim: 297; não: 8; abstenção: 2; total: 307.
+2292163-151,2021-09-15,2021-09-15T22:55:04,0,159,283,2,Rejeitada a Emenda de Plenário nº 64. Sim: 159; não: 283; abstenção: 1; total: 443.
+2292163-154,2021-09-15,2021-09-15T23:34:32,1,309,166,2,Aprovada a Emenda de Plenário nº 45. Sim: 309; não: 166; abstenção: 1; total: 476.
+2292163-157,2021-09-15,2021-09-15T23:50:31,,167,276,2,Suprimido o texto. Sim: 167; não: 276; abstenção: 1; total: 444.
+2292163-167,2021-09-15,2021-09-16T00:09:12,,355,92,4,Mantido o texto. Sim: 355; não: 92; abstenção: 3; total: 450.
+2292163-182,2021-09-15,2021-09-16T00:17:12,0,26,386,3,Rejeitada a Emenda de Plenário nº 2. Sim: 26; não: 386; abstenção: 2; total: 414.
+2292163-188,2021-09-15,2021-09-16T00:27:07,1,428,3,4,"Aprovadas as Emendas de Redação nºs 1, 2, 3 e 5. Sim: 428; não: 3; abstenção: 3; total: 434."
+2283678-32,2021-09-16,2021-09-16T11:43:39,0,102,272,1,Rejeitado o requerimento. Sim: 102; não: 272; total: 374.
+2283678-40,2021-09-16,2021-09-16T12:17:03,0,106,298,1,Rejeitado o requerimento. Sim: 106; não: 298; total: 404.
+2283678-47,2021-09-16,2021-09-16T13:18:16,1,301,111,1,Aprovado o Requerimento. Sim: 301; não: 111; total: 412.
+2283678-55,2021-09-16,2021-09-16T13:51:50,1,312,110,1,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião favorável quanto ao atendimento dos pressupostos constitucionais de relevância e urgência e à adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 312; não: 110; total: 422."
+2283678-56,2021-09-16,2021-09-16T13:59:02,1,273,107,1,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião pelo não atendimento dos pressupostos constitucionais de relevância e urgência e pela inadequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 273; não: 107; total: 380."
+2283678-59,2021-09-16,2021-09-16T14:12:21,1,301,105,1,"Aprovada a Medida Provisória nº 1.052, de 2021, na forma do Projeto de Lei de Conversão, ressalvados os destaques. Sim: 301; não: 105; total: 406."
+2283678-61,2021-09-16,2021-09-16T14:21:16,0,92,293,1,"Rejeitadas as Emendas de Plenário, ressalvados os destaques. Sim: 92; não: 293; total: 385."
+2283678-64,2021-09-16,2021-09-16T14:29:32,,256,101,1,Mantido o texto. Sim: 256; não: 101; total: 357.
+2283678-69,2021-09-16,2021-09-16T14:40:39,,275,107,1,Mantido o texto. Sim: 275; não: 107; total: 382.
+2283678-72,2021-09-16,2021-09-16T14:51:11,,295,110,1,Mantido o texto. Sim: 295; não: 110; total: 405.
+2283678-77,2021-09-16,2021-09-16T15:04:08,,281,110,1,Mantido o texto. Sim: 281; não: 110; total: 391.
+2283678-84,2021-09-16,2021-09-16T15:17:28,,258,129,1,Mantido o texto. Sim: 258; não: 129; total: 387.
+2273453-40,2021-09-21,2021-09-21T16:26:10,0,100,257,1,Rejeitado o Requerimento. Sim: 100; não: 257; total: 357.
+2273453-49,2021-09-21,2021-09-21T16:44:13,0,90,280,1,Rejeitado o Requerimento. Sim: 90; não: 280; total: 370.
+2273453-62,2021-09-21,2021-09-21T17:11:08,0,97,329,2,Rejeitado o Requerimento. Sim: 97; não: 329; abstenção: 1; total: 427.
+2273453-64,2021-09-21,2021-09-21T17:23:39,1,304,109,3,"Aprovado o Projeto de Lei nº 813, de 2021, ressalvados os destaques. Sim:304; não: 109; abstenção: 2; total; 415."
+2273453-69,2021-09-21,2021-09-21T17:54:00,0,102,322,2,Rejeitadas as Emendas de Plenário. Sim: 102; não: 322; abstenção: 1; total: 425.
+2273453-73,2021-09-21,2021-09-21T18:23:20,,313,123,2,Mantido o texto. Sim: 313; não: 123; abstenção: 1; total: 437.
+2273453-79,2021-09-21,2021-09-21T18:38:09,0,108,300,1,Rejeitada a Emenda de Plenário nº 3. Sim: 108; não: 300; total: 408.
+2273453-83,2021-09-21,2021-09-21T18:52:07,0,107,275,2,Rejeitada a Emenda de Plenário nº 2. Sim: 107; não: 275; abstenção: 1; total: 383.
+2264253-10,2021-09-21,2021-09-21T19:07:54,1,275,145,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 275; não: 145; total: 420.
+2299545-8,2021-09-21,2021-09-21T19:38:07,1,423,26,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 423; não: 26; total: 449.
+2285702-7,2021-09-21,2021-09-21T19:48:24,1,413,6,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 413; não: 6; total: 419.
+2296768-8,2021-09-21,2021-09-21T20:31:25,1,385,16,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 385; não: 16; total: 401.
+2275723-79,2021-09-22,2021-09-22T17:51:23,1,438,31,2,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 1.100, de 2021, adotada pelo relator da Comissão de Seguridade Social e Família. Sim: 438; não: 31; total: 469."
+2297260-11,2021-09-22,2021-09-22T18:27:01,1,430,7,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 430; não: 7; total: 437.
+2296914-11,2021-09-28,2021-09-28T16:45:14,1,377,18,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 377; não: 18; total: 395.
+2299647-11,2021-09-28,2021-09-28T17:00:53,1,398,15,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 398; não: 15; total: 413.
+2293230-44,2021-09-28,2021-09-28T17:17:36,1,390,20,2,"Aprovado o Projeto de Lei nº 2.695, de 2021. Sim: 390; não: 20; abstenção: 1; total: 411."
+2236607-77,2021-09-28,2021-09-28T18:52:47,1,443,14,1,"Aprovada a Subemenda Substitutiva Reformulada ao Projeto de Lei nº 130, de 2020, adotada pelo relator da Comissão de Viação e Transportes, ressalvados os destaques. Sim: 443; não: 14; total: 457."
+2268884-83,2021-09-28,2021-09-28T19:11:34,0,23,357,1,Rejeitado o Requerimento. Sim: 23; não: 357; total: 380.
+2268884-94,2021-09-28,2021-09-28T20:15:18,1,416,22,1,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei Complementar nº 5, de 2021, adotada pelo Relator da Comissão de Finanças e Tributação. Sim: 416; não: 22; total: 438."
+2236340-80,2021-09-29,2021-09-29T17:02:01,0,59,325,2,Rejeitado o Requerimento. Sim: 59; não: 325; abstenção: 1; total: 385.
+2236340-89,2021-09-29,2021-09-29T17:29:08,0,91,343,2,Rejeitado o Requerimento. Sim: 91; não: 343; abstenção: 1; total: 435.
+2236340-105,2021-09-29,2021-09-29T18:08:39,1,413,15,1,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 21, de 2020, adotada pela relatora da Comissão de Ciência e Tecnologia, Comunicação e Informática, ressalvados os destaques. Sim: 413; não: 15; total: 428."
+2236340-109,2021-09-29,2021-09-29T18:21:49,0,112,268,1,Rejeitada a Emenda de Plenário n° 2. Sim: 112; não: 268; total: 380.
+2236340-116,2021-09-29,2021-09-29T18:30:12,0,108,276,1,Rejeitada a Emenda de Plenário n° 3. Sim: 108; não: 276; total: 384.
+2294651-25,2021-09-30,2021-09-30T12:08:01,0,14,309,1,Rejeitado o Requerimento. Sim: 14; não: 309; total: 323.
+2294651-33,2021-09-30,2021-09-30T12:37:58,1,372,13,1,"Aprovado o Projeto de Lei Complementar nº 123, de 2021, ressalvados os destaques. Sim: 372; não: 13; total: 385."
+2294651-38,2021-09-30,2021-09-30T12:46:42,,346,15,1,Mantido o texto. Sim: 346; não: 15; total: 361.
+2276547-54,2021-09-30,2021-09-30T12:56:12,1,381,1,1,"Aprovado o Projeto de Decreto Legislativo nº 146, de 2021. Sim: 381; não: 1; total: 382."

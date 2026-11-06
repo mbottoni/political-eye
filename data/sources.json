@@ -1,0 +1,386 @@
+{
+  "proposicoes-2015": {
+    "dataset": "proposicoes",
+    "year": 2015,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2015.csv",
+    "size": 34170467,
+    "etag": "\"6aed58bc-2096663\"",
+    "last_modified": "Fri, 06 Nov 2026 04:34:04 GMT"
+  },
+  "proposicoes-2016": {
+    "dataset": "proposicoes",
+    "year": 2016,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2016.csv",
+    "size": 21376491,
+    "etag": "\"6aed584a-1462deb\"",
+    "last_modified": "Fri, 06 Nov 2026 04:32:10 GMT"
+  },
+  "proposicoes-2017": {
+    "dataset": "proposicoes",
+    "year": 2017,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2017.csv",
+    "size": 27697680,
+    "etag": "\"6aed58c8-1a6a210\"",
+    "last_modified": "Fri, 06 Nov 2026 04:34:16 GMT"
+  },
+  "proposicoes-2018": {
+    "dataset": "proposicoes",
+    "year": 2018,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2018.csv",
+    "size": 16253104,
+    "etag": "\"6aed5840-f800b0\"",
+    "last_modified": "Fri, 06 Nov 2026 04:32:00 GMT"
+  },
+  "proposicoes-2019": {
+    "dataset": "proposicoes",
+    "year": 2019,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2019.csv",
+    "size": 33307012,
+    "etag": "\"6aed58c8-1fc3984\"",
+    "last_modified": "Fri, 06 Nov 2026 04:34:16 GMT"
+  },
+  "proposicoes-2020": {
+    "dataset": "proposicoes",
+    "year": 2020,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2020.csv",
+    "size": 25268855,
+    "etag": "\"6aed5853-1819277\"",
+    "last_modified": "Fri, 06 Nov 2026 04:32:19 GMT"
+  },
+  "proposicoes-2021": {
+    "dataset": "proposicoes",
+    "year": 2021,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2021.csv",
+    "size": 34586540,
+    "etag": "\"6aed58cc-20fbfac\"",
+    "last_modified": "Fri, 06 Nov 2026 04:34:20 GMT"
+  },
+  "proposicoes-2022": {
+    "dataset": "proposicoes",
+    "year": 2022,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2022.csv",
+    "size": 23190232,
+    "etag": "\"6aed5853-161dad8\"",
+    "last_modified": "Fri, 06 Nov 2026 04:32:19 GMT"
+  },
+  "proposicoes-2023": {
+    "dataset": "proposicoes",
+    "year": 2023,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2023.csv",
+    "size": 52257986,
+    "etag": "\"6aed58d6-31d64c2\"",
+    "last_modified": "Fri, 06 Nov 2026 04:34:30 GMT"
+  },
+  "proposicoes-2024": {
+    "dataset": "proposicoes",
+    "year": 2024,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2024.csv",
+    "size": 53085387,
+    "etag": "\"6aed58a5-32a04cb\"",
+    "last_modified": "Fri, 06 Nov 2026 04:33:41 GMT"
+  },
+  "proposicoes-2025": {
+    "dataset": "proposicoes",
+    "year": 2025,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2025.csv",
+    "size": 90192457,
+    "etag": "\"6aed5916-5603a49\"",
+    "last_modified": "Fri, 06 Nov 2026 04:35:34 GMT"
+  },
+  "proposicoes-2026": {
+    "dataset": "proposicoes",
+    "year": 2026,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2026.csv",
+    "size": 42510231,
+    "etag": "\"6aed587f-288a797\"",
+    "last_modified": "Fri, 06 Nov 2026 04:33:03 GMT"
+  },
+  "proposicoesAutores-2015": {
+    "dataset": "proposicoesAutores",
+    "year": 2015,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2015.csv",
+    "size": 14394726,
+    "etag": "\"6aed632c-dba566\"",
+    "last_modified": "Fri, 06 Nov 2026 05:18:36 GMT"
+  },
+  "proposicoesAutores-2016": {
+    "dataset": "proposicoesAutores",
+    "year": 2016,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2016.csv",
+    "size": 8775344,
+    "etag": "\"6aed6335-85e6b0\"",
+    "last_modified": "Fri, 06 Nov 2026 05:18:45 GMT"
+  },
+  "proposicoesAutores-2017": {
+    "dataset": "proposicoesAutores",
+    "year": 2017,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2017.csv",
+    "size": 16164295,
+    "etag": "\"6aed6341-f6a5c7\"",
+    "last_modified": "Fri, 06 Nov 2026 05:18:57 GMT"
+  },
+  "proposicoesAutores-2018": {
+    "dataset": "proposicoesAutores",
+    "year": 2018,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2018.csv",
+    "size": 5566844,
+    "etag": "\"6aed6349-54f17c\"",
+    "last_modified": "Fri, 06 Nov 2026 05:19:05 GMT"
+  },
+  "proposicoesAutores-2019": {
+    "dataset": "proposicoesAutores",
+    "year": 2019,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2019.csv",
+    "size": 32918667,
+    "etag": "\"6aed6364-1f64c8b\"",
+    "last_modified": "Fri, 06 Nov 2026 05:19:32 GMT"
+  },
+  "proposicoesAutores-2020": {
+    "dataset": "proposicoesAutores",
+    "year": 2020,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2020.csv",
+    "size": 14165100,
+    "etag": "\"6aed6379-d8246c\"",
+    "last_modified": "Fri, 06 Nov 2026 05:19:53 GMT"
+  },
+  "proposicoesAutores-2021": {
+    "dataset": "proposicoesAutores",
+    "year": 2021,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2021.csv",
+    "size": 19442789,
+    "etag": "\"6aed6393-128ac65\"",
+    "last_modified": "Fri, 06 Nov 2026 05:20:19 GMT"
+  },
+  "proposicoesAutores-2022": {
+    "dataset": "proposicoesAutores",
+    "year": 2022,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2022.csv",
+    "size": 11093939,
+    "etag": "\"6aed63a2-a947b3\"",
+    "last_modified": "Fri, 06 Nov 2026 05:20:34 GMT"
+  },
+  "proposicoesAutores-2023": {
+    "dataset": "proposicoesAutores",
+    "year": 2023,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2023.csv",
+    "size": 42276306,
+    "etag": "\"6aed63df-28515d2\"",
+    "last_modified": "Fri, 06 Nov 2026 05:21:35 GMT"
+  },
+  "proposicoesAutores-2024": {
+    "dataset": "proposicoesAutores",
+    "year": 2024,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2024.csv",
+    "size": 24401498,
+    "etag": "\"6aed63f6-174565a\"",
+    "last_modified": "Fri, 06 Nov 2026 05:21:58 GMT"
+  },
+  "proposicoesAutores-2025": {
+    "dataset": "proposicoesAutores",
+    "year": 2025,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2025.csv",
+    "size": 38939258,
+    "etag": "\"6aed6419-2522a7a\"",
+    "last_modified": "Fri, 06 Nov 2026 05:22:33 GMT"
+  },
+  "proposicoesAutores-2026": {
+    "dataset": "proposicoesAutores",
+    "year": 2026,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2026.csv",
+    "size": 15322580,
+    "etag": "\"6aed6429-e9cdd4\"",
+    "last_modified": "Fri, 06 Nov 2026 05:22:49 GMT"
+  },
+  "votacoes-2015": {
+    "dataset": "votacoes",
+    "year": 2015,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2015.csv",
+    "size": 6674562,
+    "etag": "\"6aed7a8d-65d882\"",
+    "last_modified": "Fri, 06 Nov 2026 06:58:21 GMT"
+  },
+  "votacoes-2016": {
+    "dataset": "votacoes",
+    "year": 2016,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2016.csv",
+    "size": 3788821,
+    "etag": "\"6aed792f-39d015\"",
+    "last_modified": "Fri, 06 Nov 2026 06:52:31 GMT"
+  },
+  "votacoes-2017": {
+    "dataset": "votacoes",
+    "year": 2017,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2017.csv",
+    "size": 4899719,
+    "etag": "\"6aed79c6-4ac387\"",
+    "last_modified": "Fri, 06 Nov 2026 06:55:02 GMT"
+  },
+  "votacoes-2018": {
+    "dataset": "votacoes",
+    "year": 2018,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2018.csv",
+    "size": 2498791,
+    "etag": "\"6aed78ef-2620e7\"",
+    "last_modified": "Fri, 06 Nov 2026 06:51:27 GMT"
+  },
+  "votacoes-2019": {
+    "dataset": "votacoes",
+    "year": 2019,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2019.csv",
+    "size": 5822520,
+    "etag": "\"6aed7aa6-58d838\"",
+    "last_modified": "Fri, 06 Nov 2026 06:58:46 GMT"
+  },
+  "votacoes-2020": {
+    "dataset": "votacoes",
+    "year": 2020,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2020.csv",
+    "size": 1251121,
+    "etag": "\"6aed7919-131731\"",
+    "last_modified": "Fri, 06 Nov 2026 06:52:09 GMT"
+  },
+  "votacoes-2021": {
+    "dataset": "votacoes",
+    "year": 2021,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2021.csv",
+    "size": 6439306,
+    "etag": "\"6aed7a29-62418a\"",
+    "last_modified": "Fri, 06 Nov 2026 06:56:41 GMT"
+  },
+  "votacoes-2022": {
+    "dataset": "votacoes",
+    "year": 2022,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2022.csv",
+    "size": 3658359,
+    "etag": "\"6aed7931-37d277\"",
+    "last_modified": "Fri, 06 Nov 2026 06:52:33 GMT"
+  },
+  "votacoes-2023": {
+    "dataset": "votacoes",
+    "year": 2023,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2023.csv",
+    "size": 6706788,
+    "etag": "\"6aed7ac1-665664\"",
+    "last_modified": "Fri, 06 Nov 2026 06:59:13 GMT"
+  },
+  "votacoes-2024": {
+    "dataset": "votacoes",
+    "year": 2024,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2024.csv",
+    "size": 6271039,
+    "etag": "\"6aed7924-5fb03f\"",
+    "last_modified": "Fri, 06 Nov 2026 06:52:20 GMT"
+  },
+  "votacoes-2025": {
+    "dataset": "votacoes",
+    "year": 2025,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2025.csv",
+    "size": 8765235,
+    "etag": "\"6aed7b0d-85bf33\"",
+    "last_modified": "Fri, 06 Nov 2026 07:00:29 GMT"
+  },
+  "votacoes-2026": {
+    "dataset": "votacoes",
+    "year": 2026,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2026.csv",
+    "size": 4877550,
+    "etag": "\"6aed78e1-4a6cee\"",
+    "last_modified": "Fri, 06 Nov 2026 06:51:13 GMT"
+  },
+  "votacoesVotos-2015": {
+    "dataset": "votacoesVotos",
+    "year": 2015,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2015.csv",
+    "size": 37588311,
+    "etag": "\"6aed7e50-23d8d57\"",
+    "last_modified": "Fri, 06 Nov 2026 07:14:24 GMT"
+  },
+  "votacoesVotos-2016": {
+    "dataset": "votacoesVotos",
+    "year": 2016,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2016.csv",
+    "size": 24038129,
+    "etag": "\"6aed7c58-16ecaf1\"",
+    "last_modified": "Fri, 06 Nov 2026 07:06:00 GMT"
+  },
+  "votacoesVotos-2017": {
+    "dataset": "votacoesVotos",
+    "year": 2017,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2017.csv",
+    "size": 25395971,
+    "etag": "\"6aed7d2e-1838303\"",
+    "last_modified": "Fri, 06 Nov 2026 07:09:34 GMT"
+  },
+  "votacoesVotos-2018": {
+    "dataset": "votacoesVotos",
+    "year": 2018,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2018.csv",
+    "size": 15251571,
+    "etag": "\"6aed7ae4-e8b873\"",
+    "last_modified": "Fri, 06 Nov 2026 06:59:48 GMT"
+  },
+  "votacoesVotos-2019": {
+    "dataset": "votacoesVotos",
+    "year": 2019,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2019.csv",
+    "size": 40315179,
+    "etag": "\"6aed7cfb-267292b\"",
+    "last_modified": "Fri, 06 Nov 2026 07:08:43 GMT"
+  },
+  "votacoesVotos-2020": {
+    "dataset": "votacoesVotos",
+    "year": 2020,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2020.csv",
+    "size": 53142330,
+    "etag": "\"6aed7d96-32ae33a\"",
+    "last_modified": "Fri, 06 Nov 2026 07:11:18 GMT"
+  },
+  "votacoesVotos-2021": {
+    "dataset": "votacoesVotos",
+    "year": 2021,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2021.csv",
+    "size": 107223020,
+    "etag": "\"6aed803b-66417ec\"",
+    "last_modified": "Fri, 06 Nov 2026 07:22:35 GMT"
+  },
+  "votacoesVotos-2022": {
+    "dataset": "votacoesVotos",
+    "year": 2022,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2022.csv",
+    "size": 65607779,
+    "etag": "\"6aed7ce0-3e91863\"",
+    "last_modified": "Fri, 06 Nov 2026 07:08:16 GMT"
+  },
+  "votacoesVotos-2023": {
+    "dataset": "votacoesVotos",
+    "year": 2023,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2023.csv",
+    "size": 42793597,
+    "etag": "\"6aed7e1d-28cfa7d\"",
+    "last_modified": "Fri, 06 Nov 2026 07:13:33 GMT"
+  },
+  "votacoesVotos-2024": {
+    "dataset": "votacoesVotos",
+    "year": 2024,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2024.csv",
+    "size": 38680746,
+    "etag": "\"6aed7cc7-24e38aa\"",
+    "last_modified": "Fri, 06 Nov 2026 07:07:51 GMT"
+  },
+  "votacoesVotos-2025": {
+    "dataset": "votacoesVotos",
+    "year": 2025,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2025.csv",
+    "size": 58233239,
+    "etag": "\"6aed7f1c-3789197\"",
+    "last_modified": "Fri, 06 Nov 2026 07:17:48 GMT"
+  },
+  "votacoesVotos-2026": {
+    "dataset": "votacoesVotos",
+    "year": 2026,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv",
+    "size": 17665811,
+    "etag": "\"6aed7ad3-10d8f13\"",
+    "last_modified": "Fri, 06 Nov 2026 06:59:31 GMT"
+  }
+}

@@ -1,0 +1,56 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2256130-22,2020-07-01,2020-07-01T15:58:03,0,16,466,1,Rejeitado o Requerimento. Sim: 16; não: 466; total: 482.
+2256130-37,2020-07-01,2020-07-01T18:00:04,1,402,90,4,"Aprovada, em primeiro turno, a Proposta de Emenda à Constituição nº 18, de 2020, ressalvado os destaques. Sim: 402; não: 90; abstenções: 4; total: 496."
+2256130-40,2020-07-01,2020-07-01T18:32:18,,71,389,1,Suprimido o texto. Sim: 71; não: 379; abstenção: 1; total: 451.
+2256130-44,2020-07-01,2020-07-01T19:01:38,,154,316,0,Suprimido o texto. Sim: 154; não: 316; total: 470.
+2256130-46,2020-07-01,2020-07-01T19:12:29,,454,3,1,Mantido o texto. Sim: 454; não: 3; abstenção: 1; total: 458.
+2256130-50,2020-07-01,2020-07-01T19:22:46,1,442,1,0,Aprovada a Emenda de Redação n° 1. Sim: 442; não: 1; total: 443.
+2256130-56,2020-07-01,2020-07-01T19:37:04,1,407,70,1,"Aprovada em segundo turno a Proposta de Emenda à Constituição nº 18, de 2020; sim: 407; não: 70; abstenção: 1: total: 478."
+2242413-59,2020-07-07,2020-07-07T16:01:40,0,147,289,1,Rejeitada a Emenda nº 18. Sim: 147; não: 289; total: 436.
+2242413-81,2020-07-07,2020-07-07T17:42:23,0,150,286,1,Rejeitada a Emenda nº 2. Sim: 150; não: 286; total: 436.
+2241642-59,2020-07-08,2020-07-08T17:06:34,,317,135,0,Mantido o texto. Sim: 317; não: 135; total: 452.
+2241642-76,2020-07-08,2020-07-08T18:26:01,1,380,82,1,Aprovada a Emenda nº 9. Sim: 380; não: 82; total: 462.
+2241642-91,2020-07-08,2020-07-08T19:53:05,0,132,333,2,Rejeitada a Emenda nº 14. Sim: 132; não: 333; abstenção: 1; total: 466.
+2254253-51,2020-07-09,2020-07-09T16:12:43,1,362,1,7,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião pelo não atendimento dos pressupostos constitucionais de relevância e urgência e pela inadequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim 362; não 1; abstenção: 6; total: 369."
+2254253-62,2020-07-09,2020-07-09T17:16:05,,316,144,2,Mantido o texto. Sim 316; não 144; abstenção 1; total 461.
+2254253-67,2020-07-09,2020-07-09T17:52:34,0,125,327,1,Rejeitada a Emenda n° 9. Sim 125; não 327;  total  452.
+2247980-114,2020-07-14,2020-07-14T15:36:49,1,272,185,1,Aprovação das Emendas do Senado Federal de nºs 1 e 2. Sim 272; não 185; total 457.
+2241660-35,2020-07-14,2020-07-14T15:56:02,0,6,279,0,Rejeitado o Requerimento. Sim 6; não 279; total 285.
+2241660-61,2020-07-14,2020-07-14T18:17:10,,340,92,1,Mantido o texto. Sim: 340; não: 92; total: 432.
+2241660-73,2020-07-14,2020-07-14T19:01:10,0,120,307,1,Rejeitada a Emenda de Plenário n. 3. Sim: 120; Não: 307; Total: 427.
+2241660-77,2020-07-14,2020-07-14T19:32:07,0,128,326,0,Rejeitada a Emenda de Comissão n° 27. Sim: 128; Não: 326; Total: 454.
+2241660-85,2020-07-14,2020-07-14T19:47:51,,342,90,1,Mantido o texto. Sim: 342; Não: 90; Total: 432.
+2241660-90,2020-07-14,2020-07-14T20:08:59,,244,163,1,Mantido o texto. Sim: 244; Não: 163; Total: 407.
+2241660-99,2020-07-14,2020-07-14T20:23:00,,262,137,1,Mantido o texto. Sim: 262; Não: 137; Abstenção: 1; Total: 400.
+2253356-65,2020-07-15,2020-07-15T16:37:24,0,123,309,2,"Rejeitado o Recurso. Em consequência, fica prejudicada a tramitação da Emenda de nº 3. Sim 123; não 309; abstenção 1; total 433."
+2243108-76,2020-07-15,2020-07-15T21:40:42,1,345,125,2,Aprovada a Emenda de Plenário nº 1. Sim: 345; não: 125; abstenção: 2; total: 472.
+2253471-47,2020-07-16,2020-07-16T11:31:12,0,143,278,1,Rejeitado o Requerimento. Sim: 147; Não: 278; Total: 421.
+2236858-34,2020-07-20,2020-07-20T18:32:39,0,21,388,1,Rejeitado o Requerimento. Sim 21; não 388; total 409.
+1198512-250,2020-07-21,2020-07-21T20:41:18,1,499,7,0,"Aprovado, em primeiro turno, o Substitutivo adotado pela Relatora da Comissão Especial à Proposta de Emenda à Constituição nº 15, de 2015. Sim: 499; não: 7; total: 506."
+1198512-254,2020-07-21,2020-07-21T21:16:21,,201,267,1,Suprimido o texto. Sim 201; não 267; abstenção 1; total 469.
+1198512-257,2020-07-21,2020-07-21T21:27:46,,399,19,2,Mantido o texto. Sim: 399; não: 19; abstenção: 2; total: 420.
+1198512-272,2020-07-21,2020-07-21T22:02:32,1,492,6,1,"Aprovada, em segundo turno, a Proposta de Emenda à Constituição nº 15, de 2015, ressalvado o destaque. Sim 492; não 6; abstenção 1; total 499."
+1198512-279,2020-07-21,2020-07-21T23:28:34,,393,83,3,Mantido o texto. Sim 393; não 83; abstenção 3; total 479.
+2230248-6,2020-07-29,2020-07-29T12:07:16,1,323,113,2,Aprovado o Requerimento. Sim: 323; não: 113; abstenção: 1; total: 437.
+2253458-7,2020-07-29,2020-07-29T12:12:48,1,300,10,2,Aprovado o Requerimento. Sim: 300; não: 10; abstenção: 1; total: 311.
+2255237-7,2020-07-29,2020-07-29T12:46:56,1,263,212,3,Aprovado o Requerimento. Sim: 263; não: 212; abstenção: 2; total: 477.
+2242887-152,2020-07-29,2020-07-29T13:51:05,0,157,288,1,Rejeitada a Emenda de nº 2. Sim: 157; não: 288; abstenção: 1; total: 446.
+2246357-57,2020-07-29,2020-07-29T16:56:09,0,153,269,1,Rejeitada a Emenda de Plenário nº 11. Sim: 153; não: 269; total: 422.
+2242888-38,2020-07-29,2020-07-29T18:16:04,0,56,346,1,Rejeitado o Requerimento. Sim: 56; não: 346; total: 402.
+2242888-48,2020-07-29,2020-07-29T19:23:14,0,81,325,0,Rejeitado o Requerimento. Sim: 81; não: 325; total: 406.
+2242888-56,2020-07-29,2020-07-29T19:49:02,0,81,345,1,Rejeitado o Requerimento. Sim: 81; não: 345; total: 426.
+2242888-60,2020-07-29,2020-07-29T20:23:33,0,82,330,1,Rejeitado o Requerimento. Sim: 82; não: 330; total: 412.
+2242888-66,2020-07-29,2020-07-29T21:15:04,1,351,79,1,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião favorável quanto ao atendimento dos pressupostos constitucionais de relevância e urgência e à adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 351; não: 79; total: 430."
+2242888-67,2020-07-29,2020-07-29T21:35:17,1,354,76,0,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião pelo não atendimento dos pressupostos constitucionais de relevância e urgência e pela inadequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 354; não: 76; total: 430."
+2242888-71,2020-07-29,2020-07-29T22:07:11,1,408,67,1,"Aprovada a Medida Provisória nº 945, de 2020, na forma do Projeto de Lei de Conversão, ressalvados os destaques. Sim: 408; não: 67; total: 475."
+2242888-78,2020-07-29,2020-07-29T22:47:14,0,148,293,1,Rejeitado o Destaque. Sim: 148; não: 293; total: 441.
+2242888-93,2020-07-29,2020-07-29T23:11:47,0,4,314,3,Rejeitado o Requerimento. Sim: 4; não: 314; abstenção: 2; total: 320.
+2242888-95,2020-07-29,2020-07-29T23:29:13,0,126,282,1,Rejeitado o Destaque. Sim: 126; não: 282; total: 408.
+2242888-100,2020-07-29,2020-07-29T23:47:17,,295,134,0,Mantido o texto. Sim: 295; não: 134; total: 429.
+2242888-105,2020-07-29,2020-07-30T00:14:55,0,149,270,2,Rejeitada a Emenda de Comissão nº 96. Sim: 149; não: 271 (Computando o voto oral do Dep. Gastão Vieira); abstenção: 1; total: 421.
+2242888-108,2020-07-29,2020-07-30T00:32:51,,276,137,1,Mantido o texto. Sim: 276; não: 137; total: 413.
+2242888-111,2020-07-29,2020-07-30T00:46:45,,274,131,1,Mantido o texto. Sim: 274; não: 131; total; 405.
+2242888-114,2020-07-29,2020-07-30T01:24:34,,269,118,1,Mantido o texto. Sim: 269; não: 118; total: 387.
+2242888-115,2020-07-29,2020-07-30T01:37:03,,259,128,1,Mantido o texto. Sim: 259; não: 128; total: 387.
+2244243-62,2020-07-29,2020-07-30T02:08:56,,180,142,1,Mantido o texto. Sim: 180; não: 142; total: 322.
+2244243-71,2020-07-29,2020-07-30T02:50:04,0,99,201,3,Rejeitada a Emenda de Comissão nº 140. Sim: 99; não: 201; abstenção: 2; total: 302.

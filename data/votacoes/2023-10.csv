@@ -1,0 +1,35 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2309053-157,2023-10-03,2023-10-03T18:14:01,0,10,243,38,Rejeitado o Requerimento. Sim: 10; não: 243; abstenção: 4; total: 257.
+2309053-167,2023-10-03,2023-10-03T18:36:12,0,22,266,53,Rejeitado o Requerimento. Sim: 22; não: 266; abstenção: 2; total: 290.
+2309053-173,2023-10-03,2023-10-03T20:06:55,0,26,291,68,Rejeitado o Requerimento. Sim: 26; não: 291; abstenção: 6; total: 323.
+2309053-174,2023-10-03,2023-10-03T20:13:41,1,305,11,66,"Aprovadas as Emendas do Senado Federal de nºs 1, 2, 3, 5, 6, 7, 8, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 26, 27, 30, 31, 32, 33, 34, 36, 37, 39, 40, 41, 42 (exceto o § 7º do art. 37 da Lei nº 9.492, de 1997), 43, 44, 45, 46, 49 e 50 ao Projeto de Lei nº 4.188, de 2021. Sim: 305; não: 11; abstenção: 5; total: 321."
+2309053-176,2023-10-03,2023-10-03T20:24:57,0,9,305,62,"Rejeitadas as Emendas do Senado Federal de nºs 4, 9, 10, 15, 24, 25, 28, 29, 35, 38, 42 (apenas do § 7º do art. 37 da Lei nº 9.492, de 1997), 47 e 48 ao Projeto de Lei nº 4.188, de 2021. Sim: 9; não: 305; abstenção: 5; total: 319."
+2309053-179,2023-10-03,2023-10-03T21:00:13,0,159,251,12,Rejeitada a Emenda nº 33 do Senado Federal. Sim: 159; não: 251; abstenção: 6; total: 416.
+2224999-67,2023-10-03,2023-10-03T21:20:24,0,29,301,66,Rejeitado o Requerimento. Sim: 29; não: 301; abstenção: 2; total: 332.
+2224999-77,2023-10-03,2023-10-03T22:02:58,0,26,281,62,Rejeitado o Requerimento. Sim: 26; não: 281; abstenção: 2; total: 309.
+2224999-88,2023-10-03,2023-10-03T22:47:25,0,19,283,59,Rejeitado o Requerimento. Sim: 19; não: 283; abstenção: 2; total: 304.
+2224999-96,2023-10-03,2023-10-03T23:13:22,1,312,25,62,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 5.497, de 2019, adotada pela relatora da Comissão de Cultura, ressalvados os destaques. Sim: 312; não: 25; abstenção: 8; total: 345."
+2224999-104,2023-10-03,2023-10-03T23:26:04,0,57,270,59,Rejeitada a Emenda de Plenário nº 4. Sim: 57; não: 270; total: 327.
+2224999-107,2023-10-03,2023-10-03T23:32:52,1,301,15,62,Aprovada a Redação Final assinada pela Relatora Dep. Jandira Feghali (PCdoB-RJ). Sim: 301; não: 15; abstenção: 2; total: 318.
+2387035-44,2023-10-04,2023-10-04T20:35:59,0,30,350,47,Rejeitado o Requerimento. Sim: 30; não: 350; abstenção: 2; total: 382.
+2387035-55,2023-10-04,2023-10-04T21:33:11,0,20,259,52,Rejeitado o Requerimento. Sim: 20; não: 259; abstenção: 2; total: 281.
+2358915-39,2023-10-04,2023-10-04T21:49:26,0,56,272,61,Rejeitado o Requerimento. Sim: 56; não: 272; abstenção: 5; total: 333.
+2358915-53,2023-10-04,2023-10-04T22:08:10,0,29,283,60,Rejeitado o Requerimento. Sim: 29; não: 283; abstenção: 2; total: 314.
+2358915-67,2023-10-04,2023-10-04T23:08:48,1,309,28,67,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 2.245, de 2023, adotada pelo Relator da Comissão de Educação, ressalvados os destaques. Sim: 309; não: 28; abstenção: 3; total: 340."
+2394478-15,2023-10-10,2023-10-10T16:44:09,1,312,0,1,Aprovado o Requerimento. Sim: 312; total: 312.
+2149303-50,2023-10-18,2023-10-18T19:03:46,1,323,98,4,"Aprovado o Projeto de Decreto Legislativo nº 745, de 2017. Sim: 323; não: 98; abstenção: 3; total: 424."
+2383287-23,2023-10-25,2023-10-25T18:25:55,0,121,279,2,Rejeitado o Requerimento. Sim: 121; não: 279; abstenção: 1 total: 401.
+2383287-30,2023-10-25,2023-10-25T19:08:40,0,128,287,2,Rejeitado o Requerimento. Sim: 128; não: 287; abstenção: 1; total: 416.
+2383287-41,2023-10-25,2023-10-25T20:33:21,0,118,318,2,Rejeitado o Requerimento. Sim: 118; não:318; total: 436.
+2383287-43,2023-10-25,2023-10-25T20:46:05,1,323,119,2,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 4.173, de 2023, adotada pelo relator da Comissão de Finanças e Tributação, ressalvados os destaques. Sim: 323; não: 119; abstenção: 1; total: 443."
+2383287-47,2023-10-25,2023-10-25T20:59:25,0,116,303,2,Rejeitada a Emenda de Plenário nº 12. Sim: 116; não: 303; abstenção: 1; total: 420.
+2383287-50,2023-10-25,2023-10-25T21:05:35,0,116,277,2,Rejeitada a Emenda de Plenário nº 27. Sim: 116; não: 277; abstenção: 1; total: 394.
+2383287-53,2023-10-25,2023-10-25T21:18:13,0,116,318,1,Rejeitada a Emenda de Plenário nº 19. Sim: 116; não: 318; total: 434.
+2383287-61,2023-10-25,2023-10-25T21:30:42,0,127,302,1,Rejeitada a Emenda de Plenário nº 8. Sim: 127; não: 302; total: 429.
+2400118-7,2023-10-30,2023-10-30T20:45:53,1,401,37,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 401; não: 37; total: 438.
+2400115-8,2023-10-30,2023-10-30T21:46:29,1,358,55,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 358; não: 55; total: 413.
+503670-99,2023-10-31,2023-10-31T20:19:19,0,96,268,2,Rejeitado o Requerimento. Sim: 96; não: 268; abstenção: 1; total: 365.
+2376169-40,2023-10-31,2023-10-31T21:43:55,0,81,234,1,Rejeitado o Requerimento. Sim: 81; não: 234; total: 315.
+2376169-46,2023-10-31,2023-10-31T22:36:35,0,93,246,1,Rejeitado o Requerimento. Sim: 93; não: 246; total: 339.
+2376169-55,2023-10-31,2023-10-31T23:44:31,0,91,253,2,Rejeitado o Requerimento. Sim: 91; não: 253; abstenção: 1; total: 345.
+2376169-62,2023-10-31,2023-11-01T00:01:39,1,269,87,2,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 3.780, de 2023, adotada pelo Relator da Comissão de Constituição e Justiça e de Cidadania, ressalvados os destaques. Sim: 269; não: 87; abstenção: 1; total: 357."

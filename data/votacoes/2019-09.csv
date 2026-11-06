@@ -1,0 +1,31 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2204056-174,2019-09-03,2019-09-03T16:54:26,0,0,296,66,Rejeitado o Requerimento. Não: 296; total: 296.
+2204056-183,2019-09-03,2019-09-03T17:59:20,0,0,312,66,Rejeitado o Requerimento. Não: 312; abstenção: 1; total: 313.
+2204056-190,2019-09-03,2019-09-03T18:37:10,1,291,87,12,"Aprovado os artigos nºs 1, 3, 4, 5 e 7 do Substitutivo do Senado Federal. Sim: 291; não: 87; total: 378"
+2187087-39,2019-09-03,2019-09-03T22:14:29,0,79,296,6,Rejeitado o Requerimento. Sim: 79; não: 296; abstenção: 1; total: 376.
+2187087-53,2019-09-03,2019-09-03T23:04:45,0,67,295,10,Rejeitado o Requerimento. Sim: 67; não: 295; total: 362.
+2187087-60,2019-09-03,2019-09-03T23:36:02,1,263,144,8,"Aprovada a Subemenda Substitutiva Global de Plenário ao Projeto de Lei nº 11.021, de 2018, adotada pelo Relator da Comissão de Constituição e Justiça e de Cidadania, ressalvados os destaques. Sim: 263; não: 144; total: 407."
+2187087-67,2019-09-04,2019-09-04T18:47:13,0,62,305,12,Rejeitado o Requerimento. Sim: 62; não: 305; total: 367.
+2187087-99,2019-09-04,2019-09-04T20:34:26,,140,293,1,Suprimido o texto. Sim: 140; não: 293; total: 433.
+2214151-11,2019-09-10,2019-09-10T17:33:06,1,329,11,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 329; não: 11; total: 340.
+2219406-6,2019-09-10,2019-09-10T18:47:59,1,319,101,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 319; não: 101; total: 420.
+16526-556,2019-09-11,2019-09-11T17:35:07,,298,82,2,Mantido o texto. Sim: 298; não: 82; abstenção: 1; total: 381.
+16526-572,2019-09-11,2019-09-11T19:52:06,0,130,219,1,Rejeitada a Emenda n°48. Sim: 130; Não: 219; Total: 349.
+16526-580,2019-09-11,2019-09-11T20:45:59,0,134,273,2,Rejeitada a Emenda n° 36. Sim: 134; não: 273; abstenção: 1; total: 408.
+16526-582,2019-09-11,2019-09-11T21:05:21,1,232,137,1,Aprovada a Emenda n° 3. Sim: 232; não: 137; total: 369.
+2219905-7,2019-09-17,2019-09-17T17:55:51,0,134,213,50,Rejeitado o Requerimento de Urgência (Art. 155 do RICD). Sim: 134; não: 213; abstenção: 2; total: 349.
+16526-596,2019-09-17,2019-09-17T18:51:45,,268,108,2,Mantido o texto. Sim: 268; não: 108; abstenção: 1; total: 377.
+2187087-144,2019-09-18,2019-09-18T18:51:03,0,147,270,1,Rejeitado o Requerimento; Sim: 147; não: 270; total: 417.
+2187087-155,2019-09-18,2019-09-18T19:27:11,0,64,269,61,Rejeitado o Requerimento; Sim: 64; não: 269; abstenção: 5; total: 338.
+2187087-162,2019-09-18,2019-09-18T20:11:22,0,68,262,47,Rejeitado o Requerimento; Sim: 68; não: 262; abstenção: 6; total: 336.
+2187087-169,2019-09-18,2019-09-18T21:06:19,0,68,223,56,Rejeitado o Requerimento; Sim: 68; não: 223; abstenção: 4; total: 295.
+2187087-172,2019-09-18,2019-09-18T21:22:53,0,47,265,69,Rejeitado o Requerimento; Sim: 47; não: 265; abstenção: 5; total: 317.
+2187087-174,2019-09-18,2019-09-18T21:55:38,0,150,252,2,Rejeitadas as emendas. Mantidos os dispositivos aprovados pela Câmara. Sim: 150; não: 252; total: 402.
+2187087-179,2019-09-18,2019-09-18T22:04:50,,136,174,1,Mantido o texto aprovado pela Câmara. Rejeitada a Emenda. Sim: 136; não: 174; total: 310.
+2187087-182,2019-09-18,2019-09-18T22:16:35,,164,249,1,Mantido o texto aprovado pela Câmara. Rejeitada a emenda. Sim: 164; não: 249: total: 413.
+2187087-185,2019-09-18,2019-09-18T22:28:51,,165,243,3,Mantido o texto aprovado pela Câmara. Rejeitada a Emenda. Sim: 165; não: 243; abstenção: 2; total: 410.
+2187087-189,2019-09-18,2019-09-18T22:39:01,,148,244,1,Mantido o texto aprovado pela Câmara. Rejeitada a Emenda. Sim: 148; não: 244; total: 392.
+2187087-192,2019-09-18,2019-09-18T22:50:24,,158,244,2,Mantido o texto aprovado pela Câmara. Rejeitada a Emenda. Sim: 158; não: 244: abstenção: 1; total: 403.
+2187087-194,2019-09-18,2019-09-18T23:01:18,,181,213,1,Mantido o texto aprovado pela Câmara. Rejeitada a Emenda. Sim: 181; não: 213; total: 394.
+2187087-196,2019-09-18,2019-09-18T23:10:10,,146,251,2,Mantido o texto aprovado pela Câmara. Rejeitada a Emenda. Sim: 146; não: 251; abstenção: 1; total: 398.
+2190190-68,2019-09-25,2019-09-25T17:29:52,,214,83,2,Mantido o texto. Sim: 214; não: 83; abstenção: 1; total: 298.

@@ -1,0 +1,57 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2233324-71,2025-05-05,2025-05-05T21:10:41,0,111,261,5,Rejeitado o Requerimento. Sim: 111; Não: 261; Total: 372.
+2233324-75,2025-05-05,2025-05-05T21:43:00,0,108,261,3,Rejeitado o Requerimento. Sim: 108; Não: 261; Total: 369.
+2233324-83,2025-05-05,2025-05-05T22:38:26,0,113,248,6,Rejeitado o Requerimento. Sim: 113; Não: 248; Total: 361.
+2233324-86,2025-05-05,2025-05-05T23:15:56,1,233,125,6,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 6.366, de 2019, adotada pela relatora da Comissão de Cultura, ressalvados os destaques. Sim: 233; Não: 125; Total: 358."
+2503292-9,2025-05-06,2025-05-06T20:02:48,1,268,199,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 268; Não: 199; Total: 467.
+2383019-46,2025-05-06,2025-05-06T20:58:03,0,156,288,3,Rejeitado o Requerimento. Sim: 156; Não: 288; Abstenção: 2; Total: 446.
+2383019-50,2025-05-06,2025-05-06T22:23:36,1,298,154,1,Aprovado o Requerimento. Sim: 298; Não: 154; Total: 452.
+2383019-54,2025-05-06,2025-05-06T22:51:39,1,270,207,1,"Aprovado o Substitutivo ao Projeto de Lei Complementar nº 177, de 2023, adotado pelo relator da Comissão de Finanças e Tributação. Sim: 270; Não: 207; Abstenção: 1; Total: 478."
+2494565-52,2025-05-07,2025-05-07T21:26:24,1,315,143,5,"Aprovado o parecer da Comissão de Constituição e Justiça e de Cidadania à Sustação de Andamento de Ação Penal nº 1, de 2025, pela sustação do andamento da Ação Penal. . Sim: 315; Não: 143; Abstenção: 4; Total: 462."
+2494408-21,2025-05-21,2025-05-21T17:09:08,0,93,242,1,Rejeitado o Requerimento. Sim: 93; Não: 242; Total: 335.
+2494408-30,2025-05-21,2025-05-21T19:21:16,1,388,43,1,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 1.466, de 2025, adotada pelo relator da Comissão de Administração e Serviço Público, ressalvado o destaque. Sim: 388; Não: 43; Total: 431."
+2494408-43,2025-05-21,2025-05-21T19:40:06,,290,134,1,Mantido o texto. Sim: 290; Não: 134; Total: 424.
+2442331-41,2025-05-22,2025-05-22T11:48:44,0,95,247,1,Rejeitado o Requerimento. Sim: 95; Não: 247; Total: 342.
+2442331-44,2025-05-22,2025-05-22T11:55:08,0,77,206,1,Rejeitado o Requerimento. Sim: 77; Não: 206; Total: 283.
+2442331-46,2025-05-22,2025-05-22T12:04:25,1,363,11,2,"Aprovado o Projeto de Decreto Legislativo nº 308, de 2024. Sim: 363; Não: 11; Abstenção: 1; Total: 375."
+2456110-43,2025-05-22,2025-05-22T12:18:41,0,92,268,1,Rejeitado o Requerimento. Sim: 92; Não: 268; Total: 360.
+2456110-48,2025-05-22,2025-05-22T12:57:02,0,103,300,1,Rejeitado o Requerimento. Sim: 103; Não: 300; Total: 403.
+2456110-50,2025-05-22,2025-05-22T13:02:53,1,280,5,1,"Aprovado o Projeto de Decreto Legislativo nº 344, de 2024. Sim: 280; Não: 5; Total: 285."
+2481257-29,2025-05-22,2025-05-22T13:16:11,0,73,216,4,Rejeitado o Requerimento. Sim: 73; Não: 216; Total: 289.
+2481257-34,2025-05-22,2025-05-22T13:35:09,0,94,278,4,Rejeitado o Requerimento. Sim: 94; Não: 278; Total: 372.
+2481257-37,2025-05-22,2025-05-22T14:00:15,1,397,5,4,Aprovado o Projeto de Decreto Legislativo nº 725 de 2024. Sim: 397; Não: 5; Total: 402.
+2193584-7,2025-05-26,2025-05-26T19:32:08,1,286,113,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 286; Não: 113; Total: 399.
+2512384-8,2025-05-26,2025-05-26T19:57:29,1,294,107,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 294; Não: 107; Total: 401.
+2515228-8,2025-05-26,2025-05-26T20:15:42,1,297,133,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 297; Não: 133; Total: 430.
+2515229-8,2025-05-26,2025-05-26T20:32:35,1,286,144,3,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 286; Não: 144; Abstenção: 2; Total: 432.
+2233324-97,2025-05-26,2025-05-26T20:49:57,0,139,302,2,Rejeitado o Requerimento. Sim: 139; Não: 302; Abstenção: 1; Total: 442.
+2233324-100,2025-05-26,2025-05-26T21:14:56,,231,202,10,Mantido o texto. Sim: 231; Não: 202; Abstenção: 8; Total: 441.
+2233324-103,2025-05-26,2025-05-26T21:32:25,,284,147,3,Mantido o texto. Sim: 284; Não: 147; Abstenção: 2; Total: 433.
+2233324-106,2025-05-26,2025-05-26T21:46:45,,233,174,4,Mantido o texto. Sim: 233; Não: 174; Abstenção: 3; Total: 410.
+2497993-21,2025-05-26,2025-05-26T22:14:16,0,132,301,1,Rejeitado o Requerimento. Sim: 132; Não: 301; Total: 433.
+2497993-25,2025-05-26,2025-05-26T22:24:07,0,98,211,1,Rejeitado o Requerimento. Sim: 98; Não: 211; Total: 309.
+2497993-30,2025-05-26,2025-05-26T22:39:56,0,128,284,1,Rejeitado o Requerimento. Sim: 128; Não: 284; Total: 412.
+2497993-33,2025-05-26,2025-05-26T22:57:15,1,289,136,1,"Aprovado o Projeto de Lei nº 1.708, de 2025. Sim: 289; Não: 136; Total: 425."
+2453219-36,2025-05-27,2025-05-27T17:31:24,0,77,285,1,Rejeitado o Requerimento. Sim: 77; Não: 285; Total: 362.
+2121642-88,2025-05-27,2025-05-27T17:59:24,0,82,311,2,Rejeitado o Requerimento. Sim: 82; Não: 311; Abstenção: 1; Total: 394.
+2121642-95,2025-05-27,2025-05-27T18:34:52,0,84,315,2,Rejeitado o Requerimento. Sim: 84; Não: 315; Abstenção: 1; Total: 400.
+2121642-102,2025-05-27,2025-05-27T19:07:43,,319,93,1,Mantido o texto. Sim: 319; Não: 93; Total: 412.
+2121642-105,2025-05-27,2025-05-27T19:31:02,,310,105,2,Mantido o texto. Sim: 310; Não: 105; Abstenção: 1; Total: 416.
+604557-191,2025-05-27,2025-05-27T20:40:41,1,378,66,2,"Aprovado o Substitutivo ao Projeto de Lei nº 6.969, de 2013, adotado pelo relator da Comissão de Constituição e Justiça e de Cidadania, ressalvado o destaque. Sim: 378; Não: 66; Abstenção: 1; Total: 445."
+604557-205,2025-05-27,2025-05-27T20:55:44,,351,68,2,Mantido o texto. Sim: 351; Não: 68; Abstenção: 1; Total: 420.
+2355104-96,2025-05-27,2025-05-27T22:15:28,0,90,289,6,Rejeitado o Requerimento.
+2453934-47,2025-05-28,2025-05-28T16:59:41,0,64,197,2,Rejeitado o Requerimento. Sim: 64; Não: 197; Abstenção: 1; Total: 262.
+2453934-59,2025-05-28,2025-05-28T18:26:49,1,277,123,1,"Aprovado o Substitutivo ao Projeto de Lei nº 3.224, de 2024, adotado pela relatora da Comissão de Previdência, Assistência Social, Infância, Adolescência e Família, ressalvados os destaques.
+ Sim: 277; Não: 123; Total: 400."
+2453934-65,2025-05-28,2025-05-28T18:49:14,,264,110,2,Mantido o texto. Sim: 264; Não: 110; Abstenção: 1; Total: 375.
+2453934-72,2025-05-28,2025-05-28T19:15:59,,152,220,2,Suprimido o texto. Sim: 152; Não: 220; Abstenção: 1; Total: 373.
+2341047-55,2025-05-28,2025-05-28T20:17:42,0,76,303,1,Rejeitado o Requerimento. Sim: 76; Não: 303; Total: 379.
+2341047-60,2025-05-28,2025-05-28T20:36:57,0,105,289,0,Rejeitado o Requerimento. Sim: 105; Não: 289; Total: 394.
+2297512-65,2025-05-29,2025-05-29T11:44:58,0,102,258,1,Rejeitado o Requerimento. Sim: 102; Não: 258; Total: 360.
+2297512-70,2025-05-29,2025-05-29T12:10:53,1,392,7,1,"Aprovado o Projeto de Decreto Legislativo nº 609, de 2021.
+. Sim: 392; Não: 7; Total: 399."
+2324988-18,2025-05-29,2025-05-29T12:28:14,0,121,270,1,Rejeitado o Requerimento. Sim: 121; Não: 270; Total: 391.
+2324988-23,2025-05-29,2025-05-29T13:13:01,1,295,9,1,"Aprovado o Projeto de Decreto Legislativo nº 167, de 2022. Sim: 295; Não: 9; Total: 304."
+2306513-111,2025-05-29,2025-05-29T13:27:47,0,48,322,2,Rejeitado o Requerimento. Sim: 48; Não: 322; Abstenção: 1; Total: 371.
+2306513-113,2025-05-29,2025-05-29T13:50:55,1,214,204,2,Aprovada a Emenda n° 2. Sim: 214; Não: 204; Abstenção: 1; Total: 419.
+2306513-116,2025-05-29,2025-05-29T14:28:09,1,285,116,4,Aprovada a parte da Emenda nº 3. Sim: 285; Não: 116; Abstenção: 3; Total: 404.

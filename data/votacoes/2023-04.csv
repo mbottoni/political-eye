@@ -1,0 +1,11 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2326749-8,2023-04-11,2023-04-11T18:53:40,1,296,107,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 296; não: 107; total: 403.
+2352500-11,2023-04-11,2023-04-11T19:22:24,1,264,144,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 264; não: 144; total: 408.
+2354899-8,2023-04-11,2023-04-11T19:45:46,1,319,106,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 319; não: 106; total: 425.
+2337246-43,2023-04-25,2023-04-25T18:20:53,1,360,3,1,"Aprovado o Substitutivo ao Projeto de Lei Complementar nº 139, de 2022, adotado pelo Relator da Comissão de Finanças e Tributação. Sim: 360; não: 3; total: 363."
+2310837-8,2023-04-25,2023-04-25T19:09:51,1,238,192,1,Aprovado o Requerimento de Urgência (Art. 154 do RICD). Sim: 238; não: 192; total: 430.
+2344938-48,2023-04-25,2023-04-25T21:04:07,,289,108,1,Mantido o texto. Sim: 289; não: 108; total: 397.
+2344938-60,2023-04-25,2023-04-25T21:14:10,,282,115,2,Mantido o texto. Sim: 282; não: 115; total: 397.
+2344938-71,2023-04-25,2023-04-25T21:47:25,0,132,242,1,Rejeitada a Emenda de Comissão nº 9. Sim: 132; não: 242; total: 374.
+2345484-39,2023-04-26,2023-04-26T20:57:49,1,204,202,2,Aprovado o Requerimento. Sim: 204; não: 202; abstenção: 1; total: 407.
+2345484-83,2023-04-27,2023-04-27T13:27:33,1,181,171,3,Aprovada a Emenda de Plenário nº 7. Sim: 181; não: 171; total: 352.

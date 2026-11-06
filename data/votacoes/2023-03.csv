@@ -1,0 +1,10 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2351332-7,2023-03-14,2023-03-14T19:20:56,1,366,41,2,Aprovado o Requerimento de Urgência (Art. 154 do RICD). Sim: 366; não: 41; abstenção: 1; total: 408.
+2345140-8,2023-03-14,2023-03-14T19:48:40,1,374,27,3,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 374; não: 27; abstenção: 2; total: 403.
+2350706-6,2023-03-15,2023-03-15T17:47:24,1,280,97,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 280; não: 97; abstenção: 1; total: 378.
+2350702-8,2023-03-21,2023-03-21T17:18:30,1,397,1,0,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 397; não: 1 ; total: 398.
+2301683-33,2023-03-22,2023-03-22T17:38:43,0,56,247,1,Rejeitado o Requerimento. Sim: 56; não: 247; total: 303.
+2345368-50,2023-03-30,2023-03-30T16:12:07,1,150,122,1,Aprovada a Emenda de Plenário nº 4. Sim: 150; não: 122; total: 272.
+2345368-56,2023-03-30,2023-03-30T16:25:53,0,143,195,1,Rejeitada a Emenda de Comissão nº 15. Sim: 143; não: 195; total: 338.
+2345378-38,2023-03-30,2023-03-30T16:57:32,1,337,27,1,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião favorável quanto ao atendimento dos pressupostos constitucionais de relevância e urgência e à adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 327; não: 27; total: 354."
+2345468-38,2023-03-30,2023-03-30T17:50:38,1,369,10,1,"Aprovada a Medida Provisória nº 1.152 de 2022, na forma do Projeto de Lei de Conversão, ressalvado o destaque. Sim: 369; não: 10; total: 379."

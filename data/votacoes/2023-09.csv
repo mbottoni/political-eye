@@ -1,0 +1,39 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2336833-9,2023-09-04,2023-09-04T21:34:17,1,360,18,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 360; não: 18; total: 378.
+2336393-56,2023-09-05,2023-09-05T18:18:30,,349,24,3,Mantido o texto. Sim: 349; não: 24; abstenção: 2; total: 375.
+2336393-59,2023-09-05,2023-09-05T18:28:50,0,101,301,1,Rejeitada a Emenda de Plenário nº 1. Sim: 101; não: 301; total: 402.
+2336393-61,2023-09-05,2023-09-05T18:39:37,0,51,347,3,Rejeitada a Emenda de Plenário nº 2. Sim: 51; não: 347; abstenção: 1; total: 399.
+2336393-64,2023-09-05,2023-09-05T18:47:19,0,148,231,2,Rejeitada a Emenda de Plenário nº 4. Sim: 148; não: 231; abstenção: 1; total: 380.
+2336393-67,2023-09-05,2023-09-05T19:00:00,0,135,261,1,Rejeitada a Emenda de Plenário nº 8. Sim: 135; não: 261; total: 396.
+2380935-9,2023-09-05,2023-09-05T21:04:25,1,305,89,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 305; não: 89; total: 394.
+2288318-70,2023-09-12,2023-09-12T21:02:24,1,464,3,2,"Aprovada, em primeiro turno, a Proposta de Emenda à Constituição nº 16, de 2021. Sim: 464; não: 3; abstenção: 1; total: 468."
+2288318-78,2023-09-12,2023-09-12T21:18:50,1,453,3,1,"Aprovada, em segundo turno, a Proposta de Emenda à Constituição nº 16, de 2021. Sim: 453; não: 3; total: 456."
+2387264-8,2023-09-13,2023-09-13T17:55:56,1,366,60,3,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 366; não: 60; abstenção: 2; total: 428.
+2387266-8,2023-09-13,2023-09-13T18:12:05,1,384,51,4,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 384; não: 51; abstenção: 3; total: 438.
+2374400-46,2023-09-13,2023-09-13T19:57:43,0,82,342,9,Rejeitada a Emenda de Plenário nº 26. Sim: 82; não: 342; abstenção: 8; total: 432.
+2374400-53,2023-09-13,2023-09-13T20:26:43,,222,242,3,Suprimido o texto. Sim: 222; não: 242; abstenção: 2; total: 466.
+2374400-58,2023-09-13,2023-09-13T20:37:17,1,203,164,1,Aprovada a Emenda de Plenário nº 34. Sim: 203; não: 164; total: 367.
+2387066-44,2023-09-13,2023-09-13T21:02:21,0,57,376,3,Rejeitado o Requerimento. Sim: 57; não: 376; abstenção: 2; total: 435.
+2387066-55,2023-09-13,2023-09-13T21:50:28,0,63,360,2,Rejeitado o Requerimento. Sim: 63; não: 360; abstenção: 1; total: 424.
+2387066-63,2023-09-13,2023-09-13T22:11:50,1,367,86,3,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 4.438, de 2023, adotada pelo Relator da Comissão de Constituição e Justiça e de Cidadania, ressalvados os destaques. Sim: 367; não: 86; abstenção: 1; total: 454."
+2387066-70,2023-09-14,2023-09-14T15:19:03,0,48,282,1,Rejeitado o Requerimento. Sim: 48; não: 282; total: 330.
+2387066-78,2023-09-14,2023-09-14T15:58:51,0,122,304,5,Rejeitada a Emenda de Plenário nº 21. Sim: 122; não: 304; abstenção: 4; total: 430.
+2387066-80,2023-09-14,2023-09-14T16:08:39,0,13,271,2,Rejeitada a Emenda de Plenário nº 1.
+2387066-84,2023-09-14,2023-09-14T16:24:44,0,90,316,2,Rejeitada a Emenda de Plenário nº 45. Sim: 90; não: 316; abstenção: 1; total: 407.
+2387066-89,2023-09-14,2023-09-14T16:33:32,0,154,245,2,Rejeitada a Emenda de Plenário nº 13. Sim: 154; não: 245; abstenção: 1; total: 400.
+2387066-91,2023-09-14,2023-09-14T16:48:23,,207,215,3,Suprimido o texto. Sim: 207; não: 215; abstenção: 2; total: 424.
+2387066-94,2023-09-14,2023-09-14T17:02:33,1,246,172,2,Aprovada a Emenda de Plenário nº 30. Sim: 246; não: 172; abstenção: 1; total: 419.
+2387066-100,2023-09-14,2023-09-14T17:14:41,0,125,249,1,Rejeitada a Emenda de Plenário nº 31. Sim: 125; não: 249; total: 374.
+2387066-101,2023-09-14,2023-09-14T17:20:07,0,38,329,2,Rejeitada a Emenda nº 38. Sim: 38; não: 329; abstenção: 1; total: 368.
+2372071-26,2023-09-14,2023-09-14T17:32:52,0,21,341,1,Rejeitado o Requerimento. Sim: 21; não: 341; total: 362.
+2387067-33,2023-09-14,2023-09-14T18:15:35,1,345,55,2,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei Complementar nº 192, de 2023, adotada pelo Relator da Comissão de Constituição e Justiça e de Cidadania, ressalvados os destaques. Sim: 345; não: 55; abstenção: 1; total: 401."
+2372071-41,2023-09-14,2023-09-14T19:06:01,1,349,68,3,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei Complementar nº 136, de 2023, adotada pelo Relator da Comissão de Finanças e Tributação, ressalvados os destaques. Sim: 349; não: 68; abstenção: 2; total: 419."
+2372071-44,2023-09-14,2023-09-14T19:18:51,,270,146,2,Mantido o texto. Sim: 270; não: 146; abstenção: 1; total: 417.
+2375630-8,2023-09-19,2023-09-19T19:00:05,1,297,105,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 297; não: 105; abstenção: 1; total: 403.
+2282142-9,2023-09-20,2023-09-20T18:07:50,1,285,113,3,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 285; não: 113; abstenção: 2; total: 400.
+2367600-30,2023-09-27,2023-09-27T19:19:24,0,19,292,45,Rejeitado o Requerimento. Sim: 19; não: 292; abstenção: 4; total: 315.
+2367600-35,2023-09-27,2023-09-27T20:23:02,0,9,286,56,Rejeitado o Requerimento. Sim: 9; não: 286; abstenção: 3; total: 298.
+2367600-45,2023-09-27,2023-09-27T21:11:20,1,275,2,56,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista de Planos, Orçamentos Públicos e Fiscalização, na parte em que manifesta opinião favorável quanto ao atendimento dos pressupostos constitucionais de relevância e urgência e de sua adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 275; não: 2; abstenção: 4; total: 281.
+ "
+2367600-47,2023-09-27,2023-09-27T21:33:23,1,259,1,50,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista de Planos, Orçamentos Públicos e Fiscalização, na parte em que manifesta opinião pelo não atendimento dos pressupostos constitucionais de relevância e urgência e de sua adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 259; não: 1; abstenção: 3; total: 263."
+2367600-49,2023-09-27,2023-09-27T21:55:04,1,270,1,53,"Aprovada a Medida Provisória nº 1.177, de 2023. Sim: 270; não: 1; abstenção: 1; total: 272."

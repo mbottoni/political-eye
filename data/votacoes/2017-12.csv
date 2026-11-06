@@ -1,0 +1,19 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2082483-103,2017-12-05,2017-12-05T19:22:04,1,348,1,5,Aprovado o Requerimento. Sim: 348; não: 1; total: 349.
+2148437-84,2017-12-05,2017-12-05T20:27:31,1,232,185,1,Mantido o texto. Sim: 232; não: 185; total: 417.
+2148437-104,2017-12-05,2017-12-05T23:52:30,1,241,183,3,Mantido o texto. Sim: 241; não: 183; abstenção: 2; total: 426.
+2148437-123,2017-12-05,2017-12-06T01:33:40,0,123,222,24,Rejeitada a substituição. Sim: 123; não: 222; abstenção: 4; total: 349.
+2164332-6,2017-12-06,2017-12-06T16:11:44,1,317,4,6,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 317; não: 4; total: 321.
+2162525-6,2017-12-06,2017-12-06T16:32:34,1,292,0,3,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 292; abstenção: 2; total: 294.
+2164134-31,2017-12-06,2017-12-06T19:48:00,1,318,13,7,"Aprovado o Substitutivo oferecido pelo Relator da Comissão de Trabalho, de Administração e Serviço Público ao PL 9247/17. Sim: 318; não 13; abstenção: 2; total: 333."
+1805641-58,2017-12-06,2017-12-06T20:40:33,1,332,1,1,"Aprovado o Substitutivo oferecido pelo Relador da Comissão de Finanças e Tributação, ressalvados os destaques. Sim: 332; não: 1; total: 333."
+2082483-112,2017-12-06,2017-12-06T20:51:14,1,390,0,1,"Aprovada, em segundo turno, a Proposta de Emenda à Constituição n° 212, de 2016. Sim: 390; total: 390."
+2129185-69,2017-12-12,2017-12-12T15:23:11,0,6,261,77,Rejeitado o Requerimento. Sim: 6; não: 261; abstenção: 4; total: 271.
+2129185-75,2017-12-12,2017-12-12T17:00:29,0,5,253,40,Rejeitado o Requerimento. Sim: 5; não 253; abstenção: 4; total: 262.
+2129185-86,2017-12-12,2017-12-12T18:16:25,1,202,108,11,Mantido o texto. Sim: 202; não: 108; abstenção: 1; total: 311.
+2148437-158,2017-12-13,2017-12-13T18:38:11,0,18,234,105,Rejeitado o Requerimento. Sim: 18; não: 234; abstenção: 4; total: 256.
+2148437-171,2017-12-13,2017-12-13T21:01:56,0,193,206,9,Rejeitada a Emenda. Sim: 193; não: 206;  abstenção: 2; total: 401.
+2139214-8,2017-12-13,2017-12-13T21:35:58,1,323,12,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 323; não: 12; abstenção: 1; total: 336.
+2137715-10,2017-12-13,2017-12-13T21:45:00,1,293,7,7,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 293; não: 7; abstenção: 2; total: 302.
+2091000-106,2017-12-19,2017-12-19T17:21:56,0,14,241,80,Rejeitado o Requerimento. Sim: 14; não: 241; abstenção: 3; total: 258.
+2077691-20,2017-12-19,2017-12-19T20:55:07,1,273,9,25,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 273; não: 9; abstenção: 1; total: 283.

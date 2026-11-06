@@ -1,0 +1,89 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2313545-34,2022-05-03,2022-05-03T18:22:49,1,342,2,1,"Aprovada a Medida Provisória nº 1.081, de 2021, ressalvados os destaques. Sim: 342; não: 2; total: 344."
+2313545-40,2022-05-03,2022-05-03T18:38:15,0,127,225,1,Rejeitada a Emenda de Comissão nº 5. Sim: 127; não: 225; total: 352.
+2313545-43,2022-05-03,2022-05-03T18:53:25,0,125,228,1,Rejeitada a Emenda de Plenário nº 1. Sim: 125; não: 228; total: 353.
+2310615-80,2022-05-03,2022-05-03T20:06:22,1,405,1,1,"Aprovadas as Emendas do Senado Federal nºs 1 a 4 ao Projeto de Lei de Conversão, ressalvados os destaques. Sim: 405; não:1; total: 406."
+2310615-84,2022-05-03,2022-05-03T20:45:27,1,297,119,2,Aprovada a Emenda do Senado nº 2. Sim: 297; não: 119; total: 416.
+2320333-7,2022-05-03,2022-05-03T21:10:39,1,410,11,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 410; não: 11; abstenção: 1; total: 422.
+2320527-8,2022-05-04,2022-05-04T17:19:23,1,373,8,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 373; não: 8; total: 381.
+2319532-14,2022-05-04,2022-05-04T17:37:34,1,358,32,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 358; não: 32; abstenção: 1; total: 391.
+2313739-33,2022-05-04,2022-05-04T18:18:26,1,408,20,1,"Aprovada a Medida Provisória nº 1.094 de 2021, na forma do Projeto de Lei de Conversão, ressalvados os destaques. Sim: 408; não: 20: total: 428."
+2313739-36,2022-05-04,2022-05-04T18:30:17,0,158,244,1,Rejeitada a Emenda de Comissão nº 3. Sim: 158; não: 244; total: 402.
+2309349-122,2022-05-04,2022-05-04T19:04:53,0,14,430,1,Rejeitado o Requerimento. Sim: 14; não: 430; total: 444.
+2309349-146,2022-05-04,2022-05-04T20:38:44,1,449,12,1,"Aprovado o Projeto de Lei 2.564, de 2020, ressalvado o destaque. Sim: 449; não: 12; total: 461."
+2312504-49,2022-05-05,2022-05-05T11:29:55,,211,49,1,Mantido o texto. Sim: 211; não: 49; total: 260.
+622070-128,2022-05-05,2022-05-05T11:59:23,1,294,10,1,"Aprovada a Submenda Substitutiva Global ao Projeto de Lei nº 7.922, de 2014, adotada pela relatora da Comissão de Trabalho, de Administração e Serviço Público. Sim: 294; não: 10; total: 304."
+2313729-44,2022-05-05,2022-05-05T12:26:09,1,259,64,2,"Aprovada a Medida Provisória nº 1.085 de 2021, ressalvados os destaques. Sim: 259; não: 64; abstenção: 1; total: 324."
+2313729-50,2022-05-05,2022-05-05T12:40:03,,213,78,1,Mantido o texto. Sim: 213; não: 78; total: 291.
+2313729-60,2022-05-05,2022-05-05T12:51:21,0,79,224,1,Rejeitada a Emenda de Comissão nº 19. Sim: 79; não: 224; total: 303.
+2313729-71,2022-05-05,2022-05-05T13:05:07,0,83,217,1,Rejeitada a Emenda de Comissão nº 21. Sim: 83; não: 217; total: 300.
+2313170-43,2022-05-11,2022-05-11T16:57:53,0,11,343,1,Rejeitado o requerimento. Sim: 11; não: 343; total: 354.
+2319511-13,2022-05-11,2022-05-11T18:32:11,1,334,17,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 334; não: 17; abstenção: 1; total: 352.
+2313781-39,2022-05-11,2022-05-11T19:02:20,0,13,278,82,Rejeitado o Requerimento. Sim: 13; não: 278; abstenção: 1; total: 292.
+2313781-47,2022-05-11,2022-05-11T20:11:31,0,11,274,78,Rejeitado o Requerimento. Sim: 11; não: 274; abstenção: 3; total: 288.
+2313781-57,2022-05-11,2022-05-11T21:19:11,0,4,268,78,Rejeitado o Requerimento. Sim: 4; não: 268: abstenção: 4; total: 276.
+2313781-63,2022-05-11,2022-05-11T22:09:07,1,251,96,3,"Aprovada a Medida Provisória nº 1.099 de 2022, na forma do Projeto de Lei de Conversão, ressalvados os destaques. Sim: 251; não: 96; abstenção: 2; total: 349."
+2313781-70,2022-05-11,2022-05-11T22:30:42,0,85,224,2,Rejeitado o Destaque. Sim: 85; não: 224; abstenção: 1; total: 310.
+2313781-71,2022-05-11,2022-05-11T22:44:45,0,92,237,1,Rejeitada a Emenda de Plenário nº 3. Sim: 92; não: 237; total: 329.
+2313781-74,2022-05-11,2022-05-11T22:59:48,0,107,218,3,Rejeitada a Emenda de Comissão nº 26. Sim: 107; não: 208; abstenção: 1; total: 326.
+2313781-82,2022-05-11,2022-05-11T23:12:34,0,99,227,1,Rejeitada a Emenda de Plenário nº 5. Sim: 99; não: 227; total: 326.
+2313781-85,2022-05-11,2022-05-11T23:27:13,0,102,230,1,Rejeitada a Emenda de Plenário nº 1. Sim: 102; não: 230; total: 332.
+2313781-88,2022-05-11,2022-05-11T23:40:10,0,102,217,1,Rejeitada a Emenda de Comissão nº 173. Sim: 102; não: 217; total: 319.
+2313781-91,2022-05-11,2022-05-11T23:55:13,0,91,226,1,Rejeitada a Emenda de Plenário nº 2. Sim: 91; não: 226; total: 317.
+2313740-51,2022-05-17,2022-05-17T17:52:58,0,9,325,1,Rejeitado o destaque. Sim: 9; não: 325; total: 334.
+2313740-53,2022-05-17,2022-05-17T17:58:35,1,265,7,1,"Aprovada a Medida Provisória nº 1.095 de 2021, na forma do Projeto de Lei de Conversão, ressalvados os destaques. Sim: 265; não: 7; total: 272."
+2313740-63,2022-05-17,2022-05-17T18:11:00,0,120,225,1,Rejeitada a Emenda de Plenário nº 3. Sim: 120; não: 225; totaal: 345.
+2313740-66,2022-05-17,2022-05-17T18:22:50,,248,89,1,Mantido o texto. Sim: 248; não: 89; total: 337.
+2313735-47,2022-05-17,2022-05-17T20:48:36,1,405,9,1,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei de Conversão, adotada pelo Relator da Comissão Mista, ressalvados os destaques. Sim: 405; não: 9; total: 414."
+2313735-50,2022-05-17,2022-05-17T21:02:30,0,24,369,1,Rejeitado o destaque. Sim: 24; não: 369; total: 393.
+2313735-55,2022-05-17,2022-05-17T21:22:56,1,262,141,1,Aprovada a Emenda de Comissão nº 48. Sim: 262; não: 141; total: 403.
+2313735-56,2022-05-17,2022-05-17T21:29:54,0,150,215,1,Rejeitada a Emenda de Comissão n° 74. Sim: 150; não: 215; total: 365.
+2313735-59,2022-05-17,2022-05-17T21:40:23,,262,141,1,Mantido o texto. Sim: 261; não: 132; total: 393.
+2313735-62,2022-05-17,2022-05-17T21:49:46,,262,141,1,Mantido o texto. Sim: 242; não: 116; total: 358.
+2313735-75,2022-05-17,2022-05-17T22:10:12,,30,342,2,Suprimido o texto. Sim: 30; não: 342; abstenção: 1; total: 373.
+2313735-78,2022-05-17,2022-05-17T22:23:45,,260,123,1,Mantido o texto. Sim: 260; não: 123; total: 383.
+2313735-80,2022-05-17,2022-05-17T22:38:04,,270,120,2,Mantido o texto. Sim: 270; não: 120; abstenção: 1; total: 391.
+2320686-11,2022-05-17,2022-05-17T22:56:54,1,290,116,0,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 290; não: 116; total: 406.
+2258716-15,2022-05-18,2022-05-18T18:29:50,1,290,144,2,Aprovado o Requerimento. Sim: 290; não: 144; abstenção: 1; total: 435.
+534328-155,2022-05-18,2022-05-18T19:21:13,0,47,275,79,Rejeitado o Requerimento. Sim: 47; não: 275; abstenção: 2; total: 324.
+534328-167,2022-05-18,2022-05-18T21:05:09,1,264,144,3,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 3.179, de 2012, adotada pela Relatora da Comissão Especial, ressalvados os destaques. Sim: 264; não: 144; abstenção: 2; total: 410."
+534328-174,2022-05-19,2022-05-19T11:39:05,0,29,228,49,Rejeitado o Requerimento. Sim: 29; não: 228; abstenção: 1; total: 258.
+534328-177,2022-05-19,2022-05-19T12:01:28,0,42,231,47,Rejeitada a Emenda de Plenário n° 11. Sim: 42; não: 231; abstenção: 2; total: 275.
+534328-180,2022-05-19,2022-05-19T12:24:19,,227,105,1,Mantido o texto. Sim: 227; não: 105; total: 332.
+534328-184,2022-05-19,2022-05-19T12:42:45,0,54,271,1,Rejeitada a Emenda de Plenário n° 4. Sim: 54; não: 271; total: 325.
+534328-187,2022-05-19,2022-05-19T13:17:47,0,111,252,1,Rejeitada a Emenda de Plenário n° 6. Sim: 111; não: 252: total: 363.
+534328-190,2022-05-19,2022-05-19T13:41:41,0,123,220,1,Rejeitada a Emenda de Plenário n° 14. Sim: 123; não: 220; total: 343.
+534328-194,2022-05-19,2022-05-19T14:07:36,0,47,283,1,Rejeitada a Emenda de Plenário n° 3. Sim: 47; não: 283; total: 330.
+534328-197,2022-05-19,2022-05-19T14:22:30,,206,89,1,Mantido o texto. Sim: 206; não: 89; total: 295.
+534328-200,2022-05-19,2022-05-19T14:38:03,0,96,197,1,Rejeitada a Emenda de Plenário n° 12. Sim: 96; não: 197; total: 293.
+534328-203,2022-05-19,2022-05-19T15:03:03,0,99,229,1,Rejeitada a Emenda de Plenário n° 5. Sim: 99; não: 229; total: 328.
+2323667-9,2022-05-24,2022-05-24T17:38:24,1,278,89,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 278; não: 89; total: 367.
+2313734-116,2022-05-24,2022-05-24T18:15:22,1,231,77,1,Aprovada a Emenda de Senado Federal n° 1. Sim: 231; não: 77; total: 308.
+2313734-120,2022-05-24,2022-05-24T18:33:42,1,266,82,1,Aprovada a Emenda do Senado Federal n° 2. Sim: 266; não: 82; total: 348.
+2313736-41,2022-05-24,2022-05-24T19:26:13,1,355,0,1,"Aprovada a Medida Provisória nº 1.091, de 2021, ressalvados destaques. Sim: 355; toral: 355."
+2313736-46,2022-05-24,2022-05-24T19:39:53,0,120,226,1,Rejeitada a Emenda. Sim: 120; não: 226; total: 346.
+2313736-54,2022-05-24,2022-05-24T19:54:06,0,126,222,1,Rejeitada a Emenda. Sim: 126; não: 222; total: 348.
+2313738-33,2022-05-24,2022-05-24T20:05:32,0,78,256,1,Rejeitado o Requerimento. Sim: 78; não: 256; total 334.
+2313738-41,2022-05-24,2022-05-24T20:29:04,1,346,9,1,"Aprovada a Medida Provisória nº 1.093, de 2021. Sim: 346; não: 9; total: 355."
+2313738-48,2022-05-24,2022-05-24T20:40:43,,257,87,1,Mantido o texto. Sim: 257; não: 87; total: 344.
+2322436-12,2022-05-24,2022-05-24T21:00:33,1,364,15,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 364; não: 15; total: 379.
+2312948-43,2022-05-25,2022-05-25T17:53:40,0,104,247,10,Rejeitado o Requerimento. Sim: 104; não: 247; total: 351.
+2312948-57,2022-05-25,2022-05-25T18:24:09,0,113,263,7,Rejeitado o Requerimento. Sim: 113; não: 263; total: 376.
+2312948-71,2022-05-25,2022-05-25T20:43:25,0,77,298,38,Rejeitado o Requerimento. Sim: 77; não: 298; abstenção: 2; total: 377.
+2312948-74,2022-05-25,2022-05-25T21:19:54,1,403,10,3,"Aprovado o Substitutivo adotado pelo Relator da Comissão de Finanças e Tributação ao Projeto de Lei Complementar nº 18, de 2022.. Sim: 403; não: 10; abstenção: 2; total: 415."
+2312948-77,2022-05-25,2022-05-25T21:39:57,0,116,273,3,Rejeitadas as Emendas ao Substitutivo. Sim: 116; não: 273; abstenção: 2; total: 391.
+2312948-80,2022-05-25,2022-05-25T21:51:35,0,124,239,2,Rejeitada a Emenda de Plenário n° 11. Sim: 124; não: 239; abstenção: 1; total: 364.
+2312948-83,2022-05-25,2022-05-25T21:59:42,0,131,215,2,Rejeitada a Emenda de Plenário n° 8. Sim: 131; não: 215; abstenção: 1; total: 347.
+2312948-89,2022-05-25,2022-05-25T22:30:20,0,123,248,3,Rejeitada a Emenda de Plenário n° 2. Sim: 123; não: 248; abstenção: 2; total: 373.
+2312948-92,2022-05-25,2022-05-25T22:46:57,0,229,165,1,Rejeitada a Emenda de Plenário n° 13. Sim: 229; não: 165; total: 394.
+2312948-93,2022-05-25,2022-05-25T22:49:10,0,117,257,2,Rejeitada a Emenda de Plenário n° 10. Sim: 117; não: 257; abstenção: 1; total: 375.
+2312948-96,2022-05-25,2022-05-25T22:55:18,0,102,251,2,Rejeitada a Emenda de Plenário n° 7. Sim: 102; não: 251; abstenção: 1; total: 354.
+2312948-113,2022-05-25,2022-05-25T23:09:06,0,131,238,1,Rejeitada a Emenda de Plenário n° 7. Sim: 131; não: 238; total: 369.
+2312948-116,2022-05-25,2022-05-25T23:23:24,0,98,263,1,Rejeitada a Emenda de Plenário n° 1. Sim: 98; não: 263; total: 361.
+2312948-118,2022-05-25,2022-05-25T23:31:04,1,354,4,1,Aprovada a Emenda de Redação n° 1. Sim: 354; não: 4; total: 358.
+2297552-15,2022-05-31,2022-05-31T18:26:45,0,77,187,1,Rejeitado o Recurso. Sim: 77; não: 187; total: 264.
+2313740-96,2022-05-31,2022-05-31T18:53:38,0,95,235,1,Rejeitada a Emenda do Senado Federal nº 2. Sim: 95; não: 235; total: 330.
+2313740-97,2022-05-31,2022-05-31T19:21:20,0,116,250,1,Rejeitada a Emenda do Senado Federal nº 7. Sim: 116; não: 250; total: 366.
+2313740-101,2022-05-31,2022-05-31T19:35:53,0,114,224,1,Rejeitada a Emenda do Senado Federal nº 3. Sim: 114; não: 224; total: 338.
+2313729-92,2022-05-31,2022-05-31T20:21:01,1,366,8,0,Aprovadas as Emendas do Senado Federal nºs 1 a 15 à Medida Provisória. Sim: 366; não: 8; total: 374.
+2325377-10,2022-05-31,2022-05-31T20:54:38,1,371,0,0,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 371; total: 371.

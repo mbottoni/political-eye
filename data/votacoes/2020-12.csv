@@ -1,0 +1,146 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2260971-30,2020-12-03,2020-12-03T10:55:44,0,6,280,1,Rejeitado o Requerimento. Sim: 6; não: 280; total: 286.
+2260971-38,2020-12-03,2020-12-03T11:45:52,0,4,308,0,Rejeitado o Requerimento. Sim: 4; não: 308; total: 312.
+2260971-43,2020-12-03,2020-12-03T12:14:14,0,2,255,1,Rejeitado o Requerimento. Sim: 2; não: 255; abstenção: 1; total: 258.
+2260971-60,2020-12-03,2020-12-03T13:49:51,0,3,328,0,Rejeitado o Requerimento. Sim: 3; não: 328; total: 331.
+2260971-62,2020-12-03,2020-12-03T14:24:59,0,3,269,1,Rejeitado o Requerimento. Sim: 3; não: 269; abstenção: 1; total: 273.
+2260971-64,2020-12-03,2020-12-03T14:40:05,0,1,290,0,Rejeitado o Requerimento. Sim: 1: não: 290; total: 291.
+2260971-69,2020-12-03,2020-12-03T15:00:13,0,2,269,0,Rejeitado o Requerimento. Sim: 2; não: 269; total: 271.
+2260971-74,2020-12-03,2020-12-03T15:22:45,1,292,4,2,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião favorável quanto ao atendimento dos pressupostos constitucionais de relevância e urgência e à adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 292; não: 4; abstenção: 2; total: 298."
+2260971-83,2020-12-03,2020-12-03T15:46:02,1,291,1,1,Aprovado o Requerimento. Sim: 291; não: 1; total: 292.
+2260971-85,2020-12-03,2020-12-03T16:03:59,0,9,266,1,"Rejeitada a admissibilidade dos destaques simples. Em consequência, ficam prejudicados os referidos destaques. Sim: 9; não: 266; total: 275."
+2260971-89,2020-12-03,2020-12-03T16:52:52,1,367,7,2,"Aprovada a Subemenda Substitutiva oferecida ao Projeto de Lei de Conversão, ressalvados os destaques. Sim: 367; não: 7; abstenção: 1; total: 375."
+2260971-98,2020-12-03,2020-12-03T17:14:17,0,110,242,2,Rejeitada a Emenda de Comissão nº 27. Sim: 110; não: 242; abstenção: 1; total: 353.
+2260971-103,2020-12-03,2020-12-03T17:35:50,,224,93,1,Mantido o texto. Sim: 224; não: 93; total: 317.
+2260971-110,2020-12-03,2020-12-03T17:58:44,0,87,220,2,Rejeitada a Emenda de Comissão nº 408. Sim: 87; não: 220; abstenção: 1; total: 308.
+2260971-117,2020-12-03,2020-12-03T18:14:43,0,115,242,2,Rejeitada a Emenda de Comissão nº 137. Sim: 115; não: 242; abstenção: 1; total: 358.
+2260971-122,2020-12-03,2020-12-03T18:31:38,,291,111,1,Mantido o texto. Sim: 291; não: 111; total: 402.
+2260971-130,2020-12-03,2020-12-03T18:41:08,0,96,222,1,Rejeitada a Emenda de Comissão nº 50. Sim: 96; não: 222; total: 318.
+2260971-134,2020-12-03,2020-12-03T18:54:32,,280,108,2,Mantido o texto. Sim: 280; não: 108; abstenção: 1; total: 389.
+2260971-146,2020-12-03,2020-12-03T19:11:55,,229,99,1,Mantido o texto. Sim: 229; não: 99; total: 328.
+2260971-149,2020-12-03,2020-12-03T19:24:03,0,118,285,2,Rejeitada a Emenda de Comissão nº 150. Sim: 118; não: 285; abstenção: 1; total: 404.
+2260433-53,2020-12-07,2020-12-07T16:17:51,0,5,283,1,Rejeitado o Requerimento. Sim: 5; não: 283; total: 288.
+2260433-58,2020-12-07,2020-12-07T17:09:43,0,3,259,1,Rejeitado o Requerimento. Sim: 3; não: 259; total: 262.
+2260433-64,2020-12-07,2020-12-07T17:31:33,0,6,266,1,Rejeitado o Requerimento. Sim: 6; não: 266; total: 272.
+2260433-76,2020-12-07,2020-12-07T19:21:14,0,5,287,1,Rejeitado o Requerimento. Sim: 5; não: 287; total: 292.
+2260433-81,2020-12-07,2020-12-07T19:44:09,0,3,307,1,Rejeitado o Requerimento. Sim: 3; não: 307; total: 310.
+2260433-83,2020-12-07,2020-12-07T20:11:49,0,5,291,0,Rejeitado o Requerimento. Sim: 5; não: 291; total: 296.
+2260433-87,2020-12-07,2020-12-07T20:28:05,1,269,2,0,Aprovado o Requerimento. Sim: 269; não: 2; total: 271.
+2260433-92,2020-12-07,2020-12-07T20:43:56,0,12,266,1,"Rejeitada a admissibilidade dos destaques simples. Em consequência, ficam prejudicados os referidos destaques. Sim: 12; não: 266; total: 278."
+2260433-96,2020-12-07,2020-12-07T21:02:39,1,324,114,2,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 4.199, de 2020, adotada pelo Relator da Comissão de Especial, ressalvados os destaques. Sim: 324; não: 114; abstenção: 1; total: 439."
+2260433-104,2020-12-07,2020-12-07T21:24:32,0,2,269,1,Rejeitado o Requerimento. Sim: 2; não: 269; total: 271.
+2260433-108,2020-12-07,2020-12-07T21:43:26,0,114,307,1,Rejeitada a Emenda n° 116. Sim:114; não: 307; total 421.
+2260433-116,2020-12-07,2020-12-07T21:55:11,,275,116,2,Mantido o texto. Sim: 275; não: 116; abstenção: 1; total: 392.
+2260433-124,2020-12-07,2020-12-07T22:38:01,0,119,323,0,Rejeitada a Emenda n° 64. Sim: 119; não: 323;  total:442.
+2260433-129,2020-12-07,2020-12-07T23:03:30,,306,124,2,Mantido o texto. Sim: 306; não: 124; abstenção: 1; total: 431.
+2260433-136,2020-12-07,2020-12-07T23:25:33,,239,161,2,Mantido o texto. Sim: 239; não: 161; abstenção: 1; total: 401.
+2260433-145,2020-12-07,2020-12-07T23:44:00,,226,149,2,Mantido o texto. Sim: 226; não: 149; abstenção: 1; total: 376.
+2260433-156,2020-12-07,2020-12-08T00:33:16,,192,157,3,Mantido o texto. Sim: 192; não: 157; abstenção: 2; total: 351.
+2260433-162,2020-12-07,2020-12-08T00:57:13,,244,107,2,Mantido o texto. Sim: 244; não: 107; abstenção: 1; total: 352.
+2260433-167,2020-12-07,2020-12-08T01:35:24,0,30,224,3,Rejeitada a Emenda. Sim: 30; Não: 224; Abstenção: 2; Total: 256.
+2260433-176,2020-12-07,2020-12-08T02:09:12,1,233,19,6,Aprovada a Emenda. Sim: 233; Não: 19; Abstenção: 5; Total: 257.
+2260433-194,2020-12-08,2020-12-08T15:14:01,0,36,309,1,Rejeitado o Requerimento. Sim: 36; não: 309; total: 345.
+2260433-198,2020-12-08,2020-12-08T15:38:02,0,108,295,2,Rejeitada a Emenda de Plenário n° 114. Sim: 108; não: 295; abstenção: 1; total: 404.
+2260433-200,2020-12-08,2020-12-08T16:00:16,,153,262,3,Suprimido o texto. Sim 153 não: 262; abstenções: 2; total: 417.
+2260433-204,2020-12-08,2020-12-08T16:19:40,,149,247,1,Suprimido o texto. Sim 149; não: 247; total: 396.
+2260433-210,2020-12-08,2020-12-08T16:43:07,,313,128,2,Mantido o texto. Sim 313; não: 128; abstenção: 1;  total: 442.
+2266253-8,2020-12-08,2020-12-08T17:38:19,1,414,13,1,Aprovado o Requerimento. Sim: 414; não: 13; total: 427
+2258717-9,2020-12-08,2020-12-08T18:00:53,1,296,105,1,Aprovado o Requerimento. Sim: 296; não: 105; Total: 401.
+2264837-9,2020-12-08,2020-12-08T18:43:01,1,394,31,1,Aprovado o Requerimento. Sim: 394; não: 31; total: 425.
+2265440-8,2020-12-08,2020-12-08T18:59:32,1,374,42,1,Aprovado o Requerimento. Sim: 374; não: 42; Total: 416 .
+2164132-54,2020-12-09,2020-12-09T17:59:36,1,414,39,4,"Aprovado, em primeiro turno, nos termos do § 3º do art. 5º da Constituição Federal, o Projeto de Decreto Legislativo nº 861, de 2017. Sim: 414; não: 39; abstenção: 4; total: 457."
+2164132-60,2020-12-09,2020-12-09T18:46:45,1,417,42,3,"Aprovado, em segundo turno, nos termos do § 3º do art. 5º da Constituição Federal, o Projeto de Decreto Legislativo nº 861, de 2017. Sim: 417; não: 42; abstenção: 3; total: 462."
+2266304-9,2020-12-09,2020-12-09T19:50:03,1,331,107,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 331; não: 107; total: 438.
+946625-101,2020-12-10,2020-12-10T15:11:14,0,132,308,1,Rejeitada a Emenda de Plenário de nº 2. Sim: 132; não: 308; abstenção: 1; total: 441.
+2261121-82,2020-12-10,2020-12-10T19:33:47,1,258,180,0,Aprovada a Emenda de Plenário nº 40. Sim: 258; não: 180; total; 438.
+2261121-88,2020-12-10,2020-12-10T20:28:28,1,311,131,1,Aprovada a Emenda de Plenário nº 10. Sim: 311; não: 131; abstenção: 1; total: 443.
+2261121-90,2020-12-10,2020-12-10T21:07:12,1,272,167,0,Aprovada a Emenda de Plenário nº 7. Sim: 272;  não: 167; total: 439.
+2261121-99,2020-12-10,2020-12-10T22:09:25,0,162,218,2,Rejeitada a Emenda n° 31. Sim: 162; não: 218; abstenção: 1: total: 381.
+2261121-104,2020-12-10,2020-12-10T22:39:56,1,212,205,1,Aprovada a Emenda n° 6. Sim: 212; não: 205; total: 417.
+2261121-110,2020-12-10,2020-12-10T23:17:46,0,11,365,1,Rejeitada a Emenda n° 35. Sim:11; não 365; total: 377.
+2261121-114,2020-12-10,2020-12-11T00:00:17,1,205,198,1,Aprovada a Emenda n° 20. Sim 205; não: 198; total: 403.
+2265505-38,2020-12-14,2020-12-14T16:19:43,0,15,409,1,Rejeitada a Emenda de Plenário nº 1. Sim: 15; não: 409; total: 424.
+2265505-41,2020-12-14,2020-12-14T16:33:49,1,408,9,1,"Aprovado o Projeto de Lei Complementar nº 133, de 2020. Sim: 408; não: 9; total: 417."
+2205645-60,2020-12-14,2020-12-14T17:21:24,0,59,319,1,Rejeitado o Requerimento. Sim: 59; não: 319; total: 378.
+2205645-74,2020-12-14,2020-12-14T18:11:02,0,59,330,0,Rejeitado o Requerimento. Sim: 59; não: 330; total: 389.
+2205645-77,2020-12-14,2020-12-14T18:49:40,1,361,66,2,"Aprovada a Subemenda Substitutiva Global de Plenário ao Projeto de Lei Complementar nº 146, de 2019, adotada pelo Relator da Comissão Especial, ressalvados os destaques. Sim: 361; não: 66; abstenção: 1; total: 428."
+2205645-82,2020-12-14,2020-12-14T19:17:13,0,88,299,2,Rejeitada a Emenda de Plenário nº 35. Sim: 88; não: 299; abstenção: 1; total: 388.
+2205645-92,2020-12-14,2020-12-14T19:40:10,0,105,303,1,Rejeitada a Emenda de Plenário nº 25. Sim: 105; não: 303; total: 408.
+2205645-99,2020-12-14,2020-12-14T20:16:45,0,36,367,1,Rejeitada a Emenda de Plenário nº 7. Sim: 36; não: 367; total: 403.
+2205645-102,2020-12-14,2020-12-14T20:42:02,,336,105,2,Mantido o texto. Sim: 336; não: 105; abstenção: 1; total: 442.
+2205645-105,2020-12-14,2020-12-14T21:06:01,,309,135,1,Mantido o texto. Sim: 309; não: 135; total: 444.
+2205645-110,2020-12-14,2020-12-14T21:37:27,,328,117,1,Mantido o texto. Sim: 328; não: 117; total: 445.
+2205645-113,2020-12-14,2020-12-14T21:54:52,0,115,251,1,Rejeitada a Emenda de Plenário nº 20. Sim: 115; não: 251; total: 366.
+2205645-121,2020-12-14,2020-12-14T22:20:41,0,65,365,1,Rejeitada a Emenda de Plenário nº 8. Sim: 65; não: 365; total: 430.
+2233718-10,2020-12-15,2020-12-15T14:55:03,1,316,105,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 316; não: 105; abstenção:1; total: 422.
+2266321-8,2020-12-15,2020-12-15T15:16:44,1,294,108,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 294; não: 108;  total: 402.
+2249891-32,2020-12-15,2020-12-15T15:35:09,0,68,328,1,Rejeitado o Requerimento. Sim: 68; não: 328; total: 396.
+2249891-47,2020-12-15,2020-12-15T17:40:53,0,26,285,6,Rejeitado o Requerimento. Sim: 26; não: 285; abstenção: 5; total: 316.
+2249891-52,2020-12-15,2020-12-15T18:21:29,1,381,57,5,"Aprovada a Subemenda Substitutiva Global de Plenário ao Projeto de Lei Complementar nº 101, de 2020, adotada pelo Relator da Comissão Especial, ressalvados os destaques. Sim: 381; não: 57; abstenção: 5; total: 443."
+2249891-58,2020-12-15,2020-12-15T18:51:16,0,49,336,1,Rejeitado o destaque. Sim: 49; não: 336; abstenção: 1; total: 386.
+2249891-60,2020-12-15,2020-12-15T18:58:53,0,97,312,0,Rejeitada a Emenda de Plenário nº 28. Sim: 97; não: 312; total: 405.
+2249891-64,2020-12-15,2020-12-15T19:22:28,0,106,333,1,Rejeitada a Emenda de Plenário nº 29. Sim: 106; não: 333; abstenção: 1; total: 440.
+2249891-73,2020-12-15,2020-12-15T19:53:52,0,14,434,0,Rejeitado o Requerimento. Sim: 14; não: 434; total: 448.
+2249891-78,2020-12-15,2020-12-15T20:09:39,1,326,102,1,Aprovada a Emenda de Plenário nº 30. Sim: 326; não: 102; abstenção: 1; total: 429.
+2249891-85,2020-12-15,2020-12-15T20:28:37,,324,91,0,Mantido o texto. Sim: 324; não: 91; total: 415.
+2249891-95,2020-12-15,2020-12-15T20:50:26,,338,104,0,Mantido o texto. Sim: 338; não: 104; total: 442.
+2249891-98,2020-12-15,2020-12-15T21:09:35,,321,114,1,Mantido o texto. Sim: 321; não: 114; abstenção: 1; total: 436.
+2249891-100,2020-12-15,2020-12-15T21:27:32,,423,13,0,Mantido o texto. Sim: 423; não: 13; total: 436.
+2242000-151,2020-12-16,2020-12-16T17:58:36,0,170,262,1,Rejeitada a Emenda do Senado Federal de nº 1. Sim: 170; não: 262; total: 432.
+2261939-31,2020-12-16,2020-12-16T19:04:37,0,194,241,1,Rejeitado o Requerimento. Sim: 194; não: 241; total: 435.
+2261939-42,2020-12-16,2020-12-16T19:52:48,0,92,321,2,Rejeitado o Requerimento. Sim: 92; não: 321; abstenção: 1. Total: 414.
+2261939-48,2020-12-16,2020-12-16T20:36:35,0,79,285,0,Rejeitado o Requerimento. Sim: 79; não: 285; total: 364.
+2261939-52,2020-12-16,2020-12-16T20:51:07,0,71,268,0,Rejeitado o Requerimento. Sim: 71; não: 268; total: 339.
+2261939-55,2020-12-16,2020-12-16T21:20:32,1,311,114,1,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião favorável quanto ao atendimento dos pressupostos constitucionais de relevância e urgência e à adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 311; não: 114; total: 425."
+2261939-58,2020-12-16,2020-12-16T21:29:23,1,191,87,1,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião pelo não atendimento dos pressupostos constitucionais de relevância e urgência e pela inadequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 191; não: 87; total: 278."
+2261939-62,2020-12-16,2020-12-16T21:53:18,1,296,132,2,"Aprovada a Subemenda Substitutiva Global oferecida ao Projeto de Lei de Conversão, ressalvados os destaques. Sim: 296; não: 132; abstenção: 1; total: 429."
+2261939-72,2020-12-16,2020-12-16T22:16:51,0,113,238,0,Rejeitado o Requerimento. Sim: 113; não: 238; total: 351.
+2261939-76,2020-12-16,2020-12-16T22:36:33,0,118,287,1,Rejeitada a Emenda n° 3. Sim: 118; não: 287; abstenção: 1; total: 406.
+2261939-80,2020-12-16,2020-12-16T22:46:18,0,17,341,1,Rejeitada a Emenda n° 83. Sim: 17; não: 341; total: 358.
+2261939-85,2020-12-16,2020-12-16T23:05:39,0,129,289,1,Rejeitada a Emenda n° 149. Sim: 129; não: 289; total: 418.
+2261939-89,2020-12-16,2020-12-16T23:20:37,1,248,159,1,Aprovada a Emenda n° 63. Sim: 248; não: 159; total: 407.
+2261939-94,2020-12-16,2020-12-16T23:42:03,1,275,150,2,Aprovada a Emenda n° 4. Sim: 275; não: 150; abstenção: 1; total: 426.
+2261939-99,2020-12-17,2020-12-17T10:15:23,0,80,320,3,Rejeitado o Requerimento. Sim: 80; não: 320; abstenção: 2; total: 402.
+2261939-107,2020-12-17,2020-12-17T11:18:00,0,114,321,1,Rejeitada a Emenda de Comissão nº 121. Sim: 114; não: 321; total: 435.
+2261939-110,2020-12-17,2020-12-17T11:44:50,1,393,10,3,Aprovada a Emenda de Plenáio nº 1. Sim: 393; não: 10; abstenção: 2; total: 405.
+2261939-113,2020-12-17,2020-12-17T12:20:55,0,111,312,1,Rejeitada a Emenda de Plenário nº 5. Sim: 111; não: 312; total: 423.
+2261121-172,2020-12-17,2020-12-17T18:31:27,1,470,15,2,"Aprovado o Substitutivo do Senado Federal ao Projeto de Lei nº 4.372, de 2020, ressalvados os Destaques. Sim: 470; não: 15; abstenção; 1; total: 486."
+2261121-177,2020-12-17,2020-12-17T19:34:10,,286,163,1,Mantido o texto do Senado Federal. Sim: 286; não: 163; total: 449.
+2262099-33,2020-12-17,2020-12-17T19:53:38,1,385,18,3,"Aprovado o Projeto de Lei Complementar nº 135, de 2020. Sim: 385; não: 18; abstenção: 2; total; 405."
+2253778-59,2020-12-17,2020-12-17T20:57:38,1,384,79,2,"Aprovado o Substitutivo ao Projeto de Lei Complementar nº 137, de 2020, adotado pelo relator da Comissão de Seguridade Social e Família, ressalvados os destaques. Sim: 384; não: 79; abstenção: 1; total: 464."
+2253778-63,2020-12-17,2020-12-17T21:12:30,0,117,306,2,Rejeitadas as Emendas de Plenário ao Substitutivo. Sim: 117; não: 306; abstenção: 1; total: 424.
+2253778-67,2020-12-17,2020-12-17T21:28:26,0,40,364,1,Rejeitada a Emenda de Plenário nº 4. Sim: 40; não: 364; total: 404.
+2253778-69,2020-12-17,2020-12-17T21:50:00,1,302,116,2,Aprovada a Emenda de Plenário nº 14. Sim: 302; não: 116; abstenção: 1; total: 419.
+2253778-73,2020-12-17,2020-12-17T22:05:48,,295,104,1,Mantido o texto. Sim: 295; não: 104; total: 399.
+2253778-79,2020-12-17,2020-12-17T22:34:06,0,129,279,1,Rejeitada a Emenda de Plenário nº 1. Sim: 129; não: 279; total: 408.
+2253778-86,2020-12-17,2020-12-17T22:58:34,,287,121,2,Mantido o texto. Sim:287; não: 121; abstenção: 1; total: 409.
+2253778-89,2020-12-17,2020-12-17T23:36:55,,292,58,1,Mantido o texto. Sim: 292; Não: 58; Total: 350.
+2253778-93,2020-12-17,2020-12-17T23:51:56,0,23,336,2,Rejeitada a Emenda de Plenário nº 9. Sim: 23; não: 336; abstenção: 1; total: 360.
+2253778-117,2020-12-18,2020-12-18T13:52:32,0,167,300,0,Rejeitada a Emenda de Plenário nº 5. Sim: 167; não: 300; Total: 467.
+2253778-118,2020-12-18,2020-12-18T13:53:08,,17,341,0,Suprimido o texto. Sim: 17; não: 341; total: 358.
+2253778-120,2020-12-18,2020-12-18T13:58:17,,1,358,0,Suprimido o texto. Sim: 1; não: 358; total: 359.
+2263410-69,2020-12-18,2020-12-18T18:42:22,1,235,150,1,Aprovada a Emenda n° 32. Sim: 235; não: 150; total: 385.
+2263410-70,2020-12-18,2020-12-18T19:02:28,0,126,275,1,Rejeitada a Emenda n° 1. Sim: 126; não: 275; total: 401.
+2263410-74,2020-12-18,2020-12-18T19:46:17,0,124,314,2,Rejeitada a Emenda n° 39. Sim: 124; não: 314; abstenção: 1; total: 439.
+2256246-12,2020-12-21,2020-12-21T15:23:36,1,294,4,6,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 294; não: 4; abstenção: 5; total: 303.
+946475-111,2020-12-21,2020-12-21T15:35:41,0,6,257,2,Rejeitado o Requerimento. Sim: 6; não: 257; abstenção: 1; total: 264.
+946475-127,2020-12-21,2020-12-21T16:46:51,0,0,254,5,Rejeitado o Requerimento. Não: 254; abstenção: 4; total: 258.
+946475-129,2020-12-21,2020-12-21T17:08:25,0,0,292,3,Rejeitado o Requerimento. Não: 292; abstenção: 2; total: 294.
+946475-131,2020-12-21,2020-12-21T17:43:18,1,298,2,3,"Aprovado o Substitutivo do Senado Federal ao Projeto de Lei nº 312-B, de 2015, ressalvados os destques. Sim: 298; não: 2; abstenção: 2 total: 302."
+946475-138,2020-12-21,2020-12-21T18:04:39,,2,269,2,Suprimido o texto. Sim: 2; não: 269; abstenção: 1; total 272.
+618055-78,2020-12-21,2020-12-21T18:27:07,0,4,271,3,Rejeitado o Requerimento. Sim: 4; não: 271; abstenção: 2; total: 277.
+618055-89,2020-12-21,2020-12-21T19:07:55,0,4,258,3,Rejeitado o Requerimento. Sim: 4; não: 258; abstenção: 2; total: 264.
+2191205-43,2020-12-21,2020-12-21T19:45:55,0,20,238,1,Rejeitado o Requerimento. Sim: 20; não: 238; abstenção: 1; total; 259.
+2191205-54,2020-12-21,2020-12-21T20:26:58,0,21,238,3,Rejeitado o Requerimento. Sim: 21; não: 238; abstenção: 2; total; 261.
+2191205-76,2020-12-21,2020-12-21T21:58:58,0,178,266,3,Rejeitado o Destaque. Sim: 178; não: 266; abstenção: 2; total: 446.
+2191205-79,2020-12-21,2020-12-21T22:24:10,,302,99,2,Mantido o texto. Sim: 302; não: 99; abstenção: 2; total: 403.
+2265295-39,2020-12-22,2020-12-22T12:09:41,0,34,281,1,Rejeitado o Requerimento. Sim: 34; não: 281; total: 315.
+2265295-61,2020-12-22,2020-12-22T13:29:55,0,39,364,1,Rejeitado o Requerimento. Sim: 39; não: 364; total: 403.
+2265295-72,2020-12-22,2020-12-22T14:38:44,0,105,319,1,Rejeitado o Destaque. Sim: 105; não: 319; total: 424.
+2265295-74,2020-12-22,2020-12-22T15:10:30,,295,115,2,Mantido o texto. Sim: 295;  não: 115; abstenção: 1; total: 411.
+2254441-9,2020-12-22,2020-12-22T15:40:44,1,383,36,0,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 383; não: 36; total: 419.
+2265599-15,2020-12-22,2020-12-22T16:52:23,0,223,217,3,Rejeitado o Requerimento de Urgência (Art. 155 do RICD). Sim: 223; não: 217; abstenção: 2; total: 442.
+2224067-44,2020-12-22,2020-12-22T17:39:10,0,106,346,1,Rejeitado o Requerimento. Sim: 106; não: 346; total: 452.
+2224067-58,2020-12-22,2020-12-22T18:44:02,0,6,259,1,Rejeitado o Requerimento. Sim: 6; não: 259; total: 265.
+2267660-10,2020-12-22,2020-12-22T20:14:01,1,429,20,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 429; não: 20; abstenção: 1; total: 450.
+2265603-43,2020-12-22,2020-12-22T23:35:42,0,11,256,1,Rejeitado o Requerimento. Sim: 11; não: 256; total: 267.

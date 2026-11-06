@@ -1,0 +1,53 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2507258-33,2025-07-01,2025-07-01T16:14:29,0,69,221,1,Rejeitado o Requerimento. Sim: 69; Não: 221; Total: 290.
+2191678-93,2025-07-01,2025-07-01T18:51:25,,274,73,2,Mantido o texto. Sim: 274; Não: 73; Abstenção: 1; Total: 348.
+2351284-38,2025-07-02,2025-07-02T19:23:41,1,334,65,2,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 1.112, de 2023, adotada pelo relator da Comissão de Constituição e Justiça e de Cidadania. Sim: 334; Não: 65; Total: 399."
+2413257-114,2025-07-08,2025-07-08T17:34:19,0,90,288,2,Rejeitado o Requerimento. Sim: 90; Não: 288; Abstenção: 1; Total: 379.
+2413257-115,2025-07-08,2025-07-08T17:41:08,0,103,281,1,Rejeitada a Preferência. Sim: 103; Não: 281; Total: 384.
+2413257-116,2025-07-08,2025-07-08T17:57:57,1,302,99,1,"Aprovado o Substitutivo ao Projeto de Lei nº 6.020, de 2023, adotado pela relatora da Comissão de Constituição e Justiça e de Cidadania, ressalvados os destaques. Sim: 302; Não: 99; Total: 401."
+2413257-125,2025-07-08,2025-07-08T18:20:26,0,159,243,1,Rejeitado o Destaque. Sim: 159; Não: 243; Total: 402.
+2252295-110,2025-07-08,2025-07-08T18:38:35,0,55,212,1,Rejeitado o Requerimento. Sim: 55; Não: 212; Total: 267.
+2252295-120,2025-07-08,2025-07-08T20:18:49,1,352,63,1,"Aprovado o Substitutivo ao Projeto de Lei nº 2.583, de 2020, adotado pelo relator da Comissão de Saúde, ressalvados os destaques. Sim: 352; Não: 63; Total: 415."
+2252295-130,2025-07-08,2025-07-08T20:39:49,,316,110,2,Mantido o texto. Sim: 316; Não: 110; Total: 426.
+2421211-73,2025-07-08,2025-07-08T21:37:42,0,174,237,2,Rejeitado o Requerimento. Sim: 174; Não: 237; Abstenção: 1; Total: 412.
+2421211-77,2025-07-08,2025-07-08T22:20:34,0,158,239,4,Rejeitado o Requerimento. Sim: 158; Não: 239; Abstenção: 3; Total: 400.
+2421211-85,2025-07-08,2025-07-08T23:37:40,0,158,211,4,Rejeitado o Requerimento. Sim: 158; Não: 211; Abstenção: 3; Total: 372.
+2421211-88,2025-07-08,2025-07-08T23:59:43,1,209,165,5,"Aprovado o Substitutivo ao Projeto de Lei nº 769, de 2024, adotado pelo relator da Comissão de Finanças e Tributação, ressalvados os destaques. Sim: 209; Não: 165; Abstenção: 4; Total: 378."
+2421211-100,2025-07-09,2025-07-09T18:05:10,0,110,159,1,Rejeitado o Requerimento. Sim: 110; Não: 159; Total: 269.
+2421211-103,2025-07-09,2025-07-09T18:39:14,,208,174,1,Mantido o texto. Sim: 208; Não: 174; Total: 382.
+2421211-106,2025-07-09,2025-07-09T19:12:59,,210,174,1,Mantido o texto. Sim: 210; Não: 174; Total: 384.
+2421211-109,2025-07-09,2025-07-09T19:49:39,,204,162,1,Mantido o texto. Sim: 204; Não: 162; Total: 366.
+2421211-112,2025-07-09,2025-07-09T20:10:14,1,178,155,2,"Aprovada a Redação Final assinada pelo relator, Dep. Defensor Stélio Dener (REPUBLICANOS/RR). Sim: 178; Não: 155; Abstenção: 1; Total: 334."
+2480979-91,2025-07-14,2025-07-14T21:18:37,0,7,407,1,Rejeitada a Emenda de Plenário ao Substitutivo. Sim: 7; Não: 407; Total: 414.
+2480979-96,2025-07-14,2025-07-14T21:33:04,1,471,0,0,"Aprovado o Substitutivo ao Projeto de Lei Complementar nº 234, de 2024, da Comissão Especial. Sim: 471; Total: 471."
+2454495-142,2025-07-15,2025-07-15T20:29:38,1,338,28,1,Aprovado o Requerimento. Sim: 338; Não: 28; Total: 366.
+2454495-144,2025-07-15,2025-07-15T21:18:20,1,404,67,4,"Aprovado, em primeiro turno, o Substitutivo da Comissão Especial à Proposta de Emenda Constitucional nº 66, de 2023, ressalvados os destaques. Sim: 404; Não: 67; Abstenção: 3; Total: 474."
+2454495-151,2025-07-15,2025-07-15T21:40:37,0,117,335,4,Rejeitada a Emenda nº 5. Sim: 117; Não: 335; Abstenção: 3; Total: 455.
+2454495-154,2025-07-15,2025-07-15T22:20:52,,318,144,2,Mantido o texto. Sim: 318; Não: 144; Abstenção: 2; Total: 464.
+2536848-6,2025-07-15,2025-07-15T22:30:48,1,319,70,1,"Aprovado o Requerimento nº 2.779/2025, dos Senhores Líderes, que solicita a quebra de interstício de 5 sessões previsto no § 6º do art. 202 do RICD, para apreciação do segundo turno da PEC 66, de 2023. Sim: 319; Não: 70; Total: 389."
+2454495-166,2025-07-15,2025-07-15T23:19:14,1,367,97,2,"Aprovada, em segundo turno, a Proposta de Emenda à Constituição nº 66, de 2023, ressalvado o destaque. Sim: 367; Não: 97; Abstenção: 2; Total: 466."
+2454495-171,2025-07-15,2025-07-15T23:55:13,,342,126,1,Mantido o texto. Sim: 342; Não: 126; Abstenção: 1; Total: 469.
+2454495-174,2025-07-15,2025-07-16T00:09:04,1,353,76,3,"Aprovada a Redação Final assinada pelo Relator, Dep. Baleia Rossi (MDB/SP). Sim: 353; Não: 76; Abstenção: 3; Total: 432."
+2533420-8,2025-07-15,2025-07-16T00:17:11,1,323,55,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 323; Não: 55; Abstenção: 2; Total: 380.
+2489217-10,2025-07-16,2025-07-16T17:41:14,1,376,42,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 376; Não: 42; Total: 418.
+2411961-13,2025-07-16,2025-07-16T18:22:43,1,347,107,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 347; Não: 107; Total: 454.
+2408145-17,2025-07-16,2025-07-16T19:02:27,1,291,173,2,"Aprovado o Recurso nº 38/2023 (art. 58, § 1º c/c art. 132, § 2º, RICD). Sim: 291; Não: 173; Total: 464."
+2500330-36,2025-07-16,2025-07-16T19:41:30,0,174,268,2,Rejeitado o Requerimento. Sim: 174; Não: 268; Abstenção: 1; Total: 443.
+2500330-43,2025-07-16,2025-07-16T20:32:44,1,264,169,6,"Aprovado o Substitutivo ao Projeto de Lei nº 1.872, de 2025, adotado pela relatora da Comissão de Finanças e Tributação, ressalvado o destaque.
+. Sim: 264; Não: 169; Abstenção: 4; Total: 437."
+2398530-57,2025-07-16,2025-07-16T21:04:16,0,100,350,1,Rejeitado o Requerimento. Sim: 100; Não: 350; Total: 450.
+2398530-60,2025-07-16,2025-07-16T21:35:12,0,104,350,3,Rejeitado o Requerimento. Sim: 104; Não: 350; Abstenção: 2; Total: 456.
+2398530-68,2025-07-16,2025-07-16T22:24:46,0,101,332,1,Rejeitado o Requerimento. Sim: 101; Não: 332; Total: 433.
+2398530-73,2025-07-16,2025-07-16T22:52:35,1,346,93,2,"Aprovado o Substitutivo Reformulado ao Projeto de Lei nº 5.122, de 2023, adotado pelo relator da Comissão de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural, ressalvado o destaque. Sim: 346; Não: 93; Abstenção: 1; Total: 440."
+257161-442,2025-07-16,2025-07-17T00:12:46,0,124,269,1,Rejeitado o Requerimento. Sim: 124; Não: 269; Total: 393.
+257161-446,2025-07-16,2025-07-17T00:39:49,0,119,273,1,Rejeitado o Requerimento. Sim: 119; Não: 273; Total: 392.
+257161-450,2025-07-16,2025-07-17T01:36:36,1,256,109,1,Aprovado o Requerimento. Sim: 256; Não: 109; Total: 365.
+257161-454,2025-07-16,2025-07-17T01:53:52,1,267,116,1,"Aprovadas.
+ Sim: 267; Não: 116; Total: 383."
+257161-462,2025-07-16,2025-07-17T02:21:29,1,242,117,1,Aprovada a Emenda do Senado Federal nº 1. Sim: 242; Não: 117; Total: 359.
+257161-465,2025-07-16,2025-07-17T02:32:05,1,232,104,1,Aprovada a Emenda do Senado Federal nº 3. Sim: 232; Não: 104; Total: 336.
+257161-467,2025-07-16,2025-07-17T02:51:13,1,234,101,1,"Aprovada a Emenda do Senado Federal nº 4.
+ Sim: 234; Não: 101; Total: 335."
+257161-476,2025-07-16,2025-07-17T03:11:13,1,221,77,8,Aprovada a Emenda do Senado Federal nº 18. Sim: 221; Não: 77; Abstenção: 1; Total: 299.
+257161-479,2025-07-16,2025-07-17T03:27:34,1,229,82,11,Aprovada a Emenda do Senado nº 28. Sim: 229; Não: 82; Abstenção: 1; Total: 312.
+257161-483,2025-07-16,2025-07-17T03:37:38,1,231,87,2,"Aprovada a Redação Final assinada pelo Relator, Dep. Zé Vitor (PL-MG). Sim: 231; Não: 87; Total: 318."

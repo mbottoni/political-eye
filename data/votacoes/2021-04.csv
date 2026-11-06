@@ -1,0 +1,40 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2274204-47,2021-04-06,2021-04-06T17:29:08,0,110,315,1,Rejeitado o Requerimento. Sim: 110; não: 315; total: 425.
+2276120-16,2021-04-06,2021-04-06T17:55:34,1,316,116,1,Aprovado o Requerimento. Sim: 316; não: 116; total: 432.
+2274204-57,2021-04-06,2021-04-06T18:04:47,0,108,297,1,Rejeitado o Requerimento. Sim: 108; não: 297; total: 405.
+2274204-67,2021-04-06,2021-04-06T19:03:58,1,343,117,2,Aprovado o Requerimento. Sim: 343; não: 117; total: 460
+2274204-81,2021-04-06,2021-04-06T19:59:04,0,114,316,1,Rejeitado o Requerimento. Sim: 114; não: 316; total: 430.
+2274204-85,2021-04-06,2021-04-06T20:27:59,0,116,324,1,Rejeitado o Requerimento. Sim: 116; não: 324; total: 440.
+2274204-88,2021-04-06,2021-04-06T20:51:06,1,317,120,3,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 948, de 2021, adotada pelo Relatora da Comissão de Seguridade Social e Família, ressalvados os destaques. Sim: 317; não: 120; abstenção: 2; total: 439."
+2274204-97,2021-04-06,2021-04-06T21:34:08,0,118,295,3,Rejeitada a Emenda n° 5. Sim: 188; não: 295; abstenção: 2; total: 415.
+2274204-101,2021-04-06,2021-04-06T22:08:25,0,128,332,2,Rejeitada a Emenda n° 17. Sim: 128; não: 332; total: 460.
+2274204-104,2021-04-06,2021-04-06T22:43:03,,296,117,3,Mantido o texto. Sim: 296; não: 117; abstenção: 2; total: 415.
+2274204-110,2021-04-06,2021-04-06T23:31:40,0,124,319,2,Rejeitada a Emenda n° 19. Sim: 124; não: 319; abstenção: 1 total: 444.
+2274204-137,2021-04-07,2021-04-07T15:29:43,0,114,306,1,Rejeitado o Requerimento. Sim: 114; não: 306; total: 420.
+2274204-149,2021-04-07,2021-04-07T16:01:51,0,144,285,1,Rejeitado a Emenda nº 2. Sim: 144; não: 285; total: 429.
+2274204-151,2021-04-07,2021-04-07T16:28:31,0,124,287,2,Rejeitada a Emenda n° 12. Sim: 124; não: 287; abstenção: 1; total: 412.
+2274204-155,2021-04-07,2021-04-07T16:57:43,0,133,322,3,Rejeitada a Emenda nº 16. Sim: 133; não: 322; abstenção: 2; total: 457.
+2275192-9,2021-04-07,2021-04-07T18:30:59,1,402,54,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 402; não: 54; total: 456.
+2270163-9,2021-04-13,2021-04-13T16:51:47,1,342,10,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 342; não: 10; abstenção: 1; total: 353.
+2274464-8,2021-04-13,2021-04-13T17:40:30,1,307,131,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 307; não: 131; total: 438.
+2275355-10,2021-04-20,2021-04-20T15:53:01,1,386,57,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 386; não: 57; abstenção: 1; total: 444.
+2278141-8,2021-04-20,2021-04-20T17:13:35,1,280,165,7,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 280; não: 165; abstenção: 1; total: 446.
+2267745-52,2021-04-20,2021-04-20T17:48:51,0,130,279,1,Rejeitado o Requerimento. Sim: 130; não: 279; total: 409.
+2267745-65,2021-04-20,2021-04-20T18:50:04,0,111,310,9,Rejeitado o Requerimento. Sim: 111; não: 310; total: 421.
+2267745-68,2021-04-20,2021-04-20T19:20:45,0,46,302,77,Rejeitado o Requerimento. Sim: 46; não: 302; total: 348.
+2267745-74,2021-04-20,2021-04-20T19:57:43,1,259,19,83,Aprovado o Requerimento. Sim: 259; não: 19; abstenção: 1; total: 279.
+2267745-89,2021-04-20,2021-04-20T20:32:26,0,22,290,93,Rejeitado o Requerimento. Sim: 22; não 290; abstenção: 1; total: 313.
+2267745-94,2021-04-20,2021-04-20T21:02:39,0,38,305,76,Rejeitado o Requerimento. Sim: 38; não; 305; total: 343.
+2267745-99,2021-04-20,2021-04-20T21:50:44,0,138,307,2,Rejeitado o destaque de preferência. Sim: 138; não: 307; total: 445.
+2267745-104,2021-04-20,2021-04-20T22:39:11,1,276,164,2,"Aprovado o Substitutivo ao PL nº 5995/20, adotado pela Relatora da Comissão de Educação. Sim: 276; não: 164; total: 440."
+2253453-10,2021-04-22,2021-04-22T11:45:36,1,366,37,0,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 366; não: 37; total: 403.
+2267686-44,2021-04-27,2021-04-27T17:14:58,0,120,311,1,Rejeitado o Requerimento. Sim: 120; não: 311; total: 431.
+2267686-52,2021-04-27,2021-04-27T18:03:35,0,127,304,3,Rejeitado o Destaque. Sim: 127; não: 304; abstenção: 2; total: 433.
+2267685-33,2021-04-28,2021-04-28T15:46:44,0,100,289,1,Rejeitado o Requerimento. Sim: 100; não: 289; total: 389.
+2267685-38,2021-04-28,2021-04-28T16:35:00,0,20,319,63,Rejeitado o Requerimento. Sim: 20; não: 319; abstenção: 2; total: 341.
+2267685-46,2021-04-28,2021-04-28T17:45:33,1,386,14,61,Aprovado o Requerimento. Sim: 386; não: 14; total: 400.
+2267685-56,2021-04-28,2021-04-28T18:22:37,0,14,362,63,Rejeitado o Requerimento. Sim: 14; não: 362; abstenção: 1; total: 377.
+2267685-64,2021-04-28,2021-04-28T18:46:16,0,79,347,2,Rejeitado o DTQ 4. Sim: 79; não: 347; abstenção: 1; total: 427.
+2267685-96,2021-04-29,2021-04-29T12:16:56,,278,126,1,Mantido o texto. Sim: 278; não: 126; total: 404.
+2279545-9,2021-04-29,2021-04-29T14:07:30,1,390,19,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 390; não: 19; total: 409.
+2277242-56,2021-04-29,2021-04-29T16:13:01,,200,188,1,Mantido o texto. Sim: 200; não: 188; total: 388.

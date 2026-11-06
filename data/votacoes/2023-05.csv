@@ -1,0 +1,42 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2357871-9,2023-05-03,2023-05-03T19:10:17,1,322,136,3,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 322; não: 136; abstenção: 2; total: 460.
+2355135-39,2023-05-03,2023-05-03T19:36:17,0,114,265,3,Rejeitado o Requerimento. Sim: 114; não: 265; abstenção: 2; total: 381.
+2355135-49,2023-05-03,2023-05-03T20:48:22,1,295,136,2,"Aprovado o Substitutivo ao Projeto de Decreto Legislativo nº 98, de 2023, adotado pelo relator da Comissão de Desenvolvimento Urbano. Sim: 295; não: 136; abstenção: 1; total: 432."
+2351179-51,2023-05-04,2023-05-04T12:02:58,1,325,36,4,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 1.085, de 2023, adotada pela relatora da Comissão de Defesa dos Direitos da Mulher, ressalvados os destaques. Sim: 325; não: 36; abstenção: 3; total: 364."
+2357639-9,2023-05-09,2023-05-09T18:52:05,1,348,48,3,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 348; não: 48; abstenção: 2; total: 398.
+2358527-8,2023-05-09,2023-05-09T19:14:22,1,346,53,4,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 346; não: 53; abstenção: 3; total: 402.
+2354502-8,2023-05-10,2023-05-10T16:30:34,1,330,43,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 330; não: 43; abstenção: 1; total: 374.
+2334279-38,2023-05-10,2023-05-10T17:26:12,0,54,347,1,Rejeitado o Requerimento. Sim: 54; não: 347; total: 401.
+2334279-57,2023-05-10,2023-05-10T18:32:39,1,335,79,4,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 2.342, de 2022, adotada pela relatora da Comissão de Administração e Serviço Público. Sim: 335; não: 79; abstenção: 3; total: 417."
+2357055-29,2023-05-10,2023-05-10T20:39:56,1,346,72,4,"Aprovado o Projeto de Lei nº 1.987, de 2023. Sim: 346; não: 72; abstenção: 3; total: 421."
+2359287-7,2023-05-16,2023-05-16T19:27:10,1,274,157,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 274; não: 157; abstenção: 1; total: 432.
+2362137-8,2023-05-16,2023-05-16T20:05:38,1,356,89,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 356; não: 89; abstenção: 1; total: 446.
+2362292-8,2023-05-17,2023-05-17T18:21:32,1,367,102,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 367; não: 102; abstenção: 1; total: 470.
+2115253-104,2023-05-17,2023-05-17T19:09:01,0,184,213,1,Rejeitado o Requerimento. Sim: 184; não: 213; total: 397.
+2115253-111,2023-05-17,2023-05-17T19:34:59,0,187,232,1,Rejeitado o Requerimento. Sim: 187; não: 232; total: 419.
+2115253-116,2023-05-17,2023-05-17T20:36:35,0,173,221,1,Rejeitado o Requerimento. Sim: 173; não: 221; total: 394.
+2115253-118,2023-05-17,2023-05-17T20:45:20,1,217,180,1,"Aprovado o Substitutivo ao Projeto de Lei nº 6.385, de 2016, da Comissão de Ciência e Tecnologia, Comunicação e Informática. Sim: 217; não: 180; total: 397."
+2357053-30,2023-05-23,2023-05-23T21:31:33,0,105,342,3,Rejeitado o Requerimento. Sim: 105; não: 342; abstenção: 2; total: 449.
+2357053-38,2023-05-23,2023-05-23T23:07:50,1,371,105,3,Aprovado o Requerimento. Sim: 371; não: 105; abstenção: 2; total: 478.
+2357053-47,2023-05-23,2023-05-23T23:31:18,1,372,108,1,"Aprovado o Substitutivo ao Projeto de Lei Complementar nº 93, de 2023, adotado pelo relator da Comissão de Finanças e Tributação, ressalvados os destaques. Sim: 372; não: 108; abstenção: 1; total: 481."
+2357053-50,2023-05-23,2023-05-23T23:38:26,0,102,346,2,"Rejeitadas as Emendas de Plenário ao Substitutivo, ressalvados os destaques. Sim: 102; não: 346; abstenção: 1; total: 449."
+2357053-53,2023-05-23,2023-05-23T23:52:08,,429,20,2,Mantido o texto. Sim: 429; não: 20; abstenção: 1; total: 450.
+2357053-59,2023-05-24,2023-05-24T18:48:07,,326,138,1,Mantido o texto. Sim: 326; não: 138; total: 464.
+2357053-62,2023-05-24,2023-05-24T19:16:24,,316,160,4,Mantido o texto. Sim: 316; não: 160; abstenção: 3; total: 479.
+2357053-65,2023-05-24,2023-05-24T19:53:19,,306,170,0,Mantido o texto. Sim: 306; não: 170; total: 476.
+2357053-70,2023-05-24,2023-05-24T20:17:28,0,126,335,1,Rejeitada a Emenda de Plenário nº 85. Sim: 126; não: 335; total: 461.
+2345368-78,2023-05-24,2023-05-24T20:48:09,0,66,364,3,"Rejeitada a Emenda nº 1 e restabelecidos os dispositivos aprovados pela câmara consubstanciados no Projeto de Lei de Conversão nº 6, de 2023. Sim: 66; não: 364; abtenção: 2; total: 432."
+2362190-9,2023-05-24,2023-05-24T21:15:59,1,324,131,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 324; não: 131; abstenção: 1; total: 456.
+345311-248,2023-05-30,2023-05-30T18:24:54,0,123,257,1,Rejeitado o Requerimento. Sim: 123; não: 257; total: 380.
+345311-257,2023-05-30,2023-05-30T19:26:04,1,311,137,2,Aprovado o Requerimento. Sim: 311; não: 137; abstenção: 1; total: 449.
+345311-270,2023-05-30,2023-05-30T20:12:44,1,283,155,2,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 490, de 2007, adotada pelo relator da Comissão de Constituição e Justiça e de Cidadania, ressalvados os destaques. Sim: 283; não: 155; abstenção: 1; total: 439."
+345311-276,2023-05-30,2023-05-30T20:29:35,,288,148,3,Mantido o texto. Sim: 288; não: 148; abstenção: 2; total: 438.
+345311-279,2023-05-30,2023-05-30T20:45:28,,290,142,2,Mantido o texto. Sim: 290; não: 142; abstenção: 1; total: 433.
+2349947-42,2023-05-30,2023-05-30T23:37:15,0,159,270,2,Rejeitada a Emenda de Comissão nº 98. Sim: 159; não: 270; total: 429.
+2345493-31,2023-05-31,2023-05-31T21:49:22,0,130,337,2,Rejeitado o Requerimento. Sim: 130; não: 337; abstenção: 1; total: 468.
+2345493-35,2023-05-31,2023-05-31T22:41:38,1,324,114,2,Aprovado o Requerimento. Sim: 324; não: 114; abstenção: 1; total: 439.
+2345493-38,2023-05-31,2023-05-31T22:49:54,1,319,111,2,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião pelo atendimento dos pressupostos constitucionais de relevância e urgência e pela inadequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 319; não: 111; abstenção: 1; total: 431."
+2345493-41,2023-05-31,2023-05-31T23:07:18,1,337,125,2,"Aprovada a Medida Provisória nº 1.154 de 2023, na forma do Projeto de Lei de Conversão, ressalvados os destaques. Sim: 337; não: 125; abstenção: 1; total: 463."
+2345493-44,2023-05-31,2023-05-31T23:37:29,,324,114,2,Mantido o texto. Sim: 324; não:  114; abstenção: 1; total: 439.
+2345493-47,2023-05-31,2023-05-31T23:56:17,,260,186,3,Mantido o texto. Sim: 260; não: 186; abstenção: 2; total: 448.
+2345493-50,2023-05-31,2023-06-01T00:14:11,0,182,243,3,Rejeitada a Emenda de Comissão nº 14. Sim: 182; não: ; 243; abstenção: 2; total: 427.

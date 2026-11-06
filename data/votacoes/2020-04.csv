@@ -1,0 +1,41 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2242344-15,2020-04-01,2020-04-01T22:01:10,1,321,14,0,"Aprovada a Minuta de Proposição Legislativa nº 1, de 2020, para dar cumprimento ao quórum de iniciativa previsto no art. 60 da Constituição Federal à Proposta de Emenda à Constituição que ""Institui Regime Extraordinário Fiscal, Financeiro e de Contratações para enfrentamento da Calamidade Pública Nacional decorrente de Pandemia Internacional e dá outras providências"". Sim: 321; não: 14; total: 335."
+2242583-25,2020-04-01,2020-04-01T23:48:49,1,341,73,1,"Aprovada a admissibilidade das Emendas de nºs 1 a 26 oferecidas à Proposta de Emenda à Constituição nº 10, de 2020, para dar cumprimento, excepcionalmente, ao quórum estabelecido no §3º do art. 202 do Regimento Interno, tendo em vista a impossibilidade momentânea de apresentação de proposições de iniciativa coletiva obrigatória. Sim: 341; não: 73; abstenção: 1; total: 415."
+2242583-46,2020-04-03,2020-04-03T18:04:56,0,12,254,0,Rejeitado o Requerimento. Sim: 12; não: 254; total: 266.
+2242583-51,2020-04-03,2020-04-03T20:47:34,1,505,2,0,"Aprovado, em primeiro turno, o Substitutivo Reformulado em Plenário adotado pelo Relator da  Comissão Especial à Proposta de Emenda à Constituição nº 10, de 2020. Sim: 505; não: 2; total: 507."
+2242583-55,2020-04-03,2020-04-03T21:19:37,,388,71,2,Mantido o texto. Sim: 388; não: 71; abstenção: 2; total: 461.
+2242583-61,2020-04-03,2020-04-03T21:34:22,1,423,1,0,"Aprovada, em segundo turno, a Proposta de Emenda à Constituição n° 10, de 2020, ressalvado os destaques. Sim: 423; Não: 1; Total: 424."
+2242583-63,2020-04-03,2020-04-03T21:56:18,,390,58,3,Mantido o texto. Sim: 390; não: 58; abstenção: 3; total: 451.
+2242583-66,2020-04-03,2020-04-03T22:10:34,,395,54,5,Mantido o texto. Sim: 395; não: 54; abstenção: 5; total: 454.
+2242621-7,2020-04-03,2020-04-03T22:35:43,1,440,15,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 440; não: 15; total: 456.
+2242282-7,2020-04-09,2020-04-09T10:53:13,1,330,25,0,"Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 331; não: 25; total: 356. Computado o voto verbal ""sim"" do Dep. Rubens Bueno."
+2206395-51,2020-04-13,2020-04-13T20:10:59,1,431,70,0,"Aprovada a Subemenda Substitutiva Global de Plenário ao Projeto de Lei Complementar nº 149, de 2019, adotada pelo Relator da Comissão Especial. Sim: 431; não: 70; total: 501."
+2206395-55,2020-04-13,2020-04-13T20:40:39,0,16,338,0,Rejeitada a Emenda nº 35. Sim: 16; não: 338; total: 354.
+2206395-58,2020-04-13,2020-04-13T21:13:30,0,80,372,0,Rejeitada a Emenda nº 94. Sim: 80; não: 372; total: 452.
+2206395-99,2020-04-13,2020-04-13T22:03:29,0,65,419,1,Rejeitada a Emenda nº 111. Sim: 65; não: 419; abstenção: 1; total; 485.
+2229308-40,2020-04-14,2020-04-14T15:34:30,0,35,284,3,Rejeitado o Requerimento. Sim: 35; não: 284; abstenção: 3;  total: 322.
+2229308-44,2020-04-14,2020-04-14T18:53:18,1,313,21,1,Aprovado o Requerimento. Sim: 313; não: 21; abstenção: 1; total: 335.
+2229308-50,2020-04-14,2020-04-14T19:35:19,0,15,262,1,Rejeitado o Requerimento. Sim: 15; não: 262; abstenção: 1; total: 278.
+2229308-53,2020-04-14,2020-04-14T19:46:55,0,13,247,1,Rejeitada a votação parcelada. Sim: 13; não: 247; abstenção: 1; total: 261.
+2229308-55,2020-04-14,2020-04-14T20:41:31,1,337,74,3,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião favorável quanto ao atendimento dos pressupostos constitucionais de relevância e urgência e à adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 337; não: 74; abstenção: 3; total: 414."
+2229308-56,2020-04-14,2020-04-14T21:16:11,1,346,23,2,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião pelo não atendimento dos pressupostos constitucionais de relevância e urgência e pela inadequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 346; não: 23; abstenção: 2; total: 371."
+2229308-64,2020-04-14,2020-04-14T22:09:52,1,322,153,2,Aprovada a Emenda Aglutinativa Global nº 1. Sim: 322; não: 153; abstenção: 2; total: 477.
+2229308-65,2020-04-14,2020-04-14T22:10:47,1,322,153,2,"Aprovada a Medida Provisória nº 905, de 2019, na forma da Emenda Aglutinativa Global nº 1, ressalvados os destaques. Sim: 322; não: 153: abstenção: 2; total: 477."
+2229308-66,2020-04-14,2020-04-14T22:49:44,,334,137,2,Mantido o texto. Sim: 334; não: 137; abstenção: 2; total: 473.
+2229308-70,2020-04-14,2020-04-14T23:31:06,1,248,214,2,Aprovado o Destaque. Modificado o texto. Sim: 248; não: 214; abstenção: 2; total: 464.
+2229308-71,2020-04-14,2020-04-14T23:47:52,,124,317,0,Mantido o texto. Sim: 124; não: 317; total: 441.
+2229308-75,2020-04-14,2020-04-15T00:11:36,,292,162,2,Mantido o texto. Sim: 292; não: 162; abstenção: 2; total: 456.
+2229308-77,2020-04-14,2020-04-15T00:30:02,,304,134,2,Mantido o texto. Sim: 304; não: 134; abstenção: 2; total: 440.
+2229308-80,2020-04-14,2020-04-15T00:42:09,,275,132,1,Mantido o texto. Sim: 275; não: 132; abstenção: 1; total: 408.
+2229308-83,2020-04-14,2020-04-15T01:01:46,,260,165,1,Mantido o texto. Sim: 260; não: 165; abstenção: 1; total: 426.
+2229308-89,2020-04-14,2020-04-15T01:31:49,1,291,121,0,Aprovada a Emenda nª 770. Sim: 291; não: 121; total: 412.
+2229308-92,2020-04-14,2020-04-15T01:52:37,,277,151,1,Mantido o texto. Sim: 277; não: 151; abstenção: 1; total: 429.
+2242868-76,2020-04-16,2020-04-16T22:43:04,0,191,291,2,Rejeitada a Emenda nº 64. Sim: 191; não: 291; abstenção: 1; total: 483.
+2230815-65,2020-04-27,2020-04-27T20:12:55,0,131,277,1,Rejeitada a Emenda de Plenário de  nº 17. Sim: 132 (Computado o voto da Deputada Fernanda Melchionna); não: 277; total: 409.
+2230815-71,2020-04-27,2020-04-27T20:50:54,,222,232,3,Suprimido o texto. Sim: 222; não: 232; abstensão: 2; total: 456.
+2242140-63,2020-04-28,2020-04-28T17:27:41,0,190,260,0,Rejeitada a Emenda nº 13. Sim: 190; não: 260; total: 450.
+2242140-72,2020-04-28,2020-04-28T18:38:40,0,154,286,1,Rejeitado o DTQ 3. Sim: 154; não: 286; total: 440.
+2242140-81,2020-04-28,2020-04-28T20:22:21,1,246,209,1,Aprovada a Emenda nº 20. Sim: 246; não: 209; total: 455.
+2242488-47,2020-04-29,2020-04-29T18:54:55,,235,232,1,Mantido o texto. Sim: 235; não: 232; total: 467.
+2242488-56,2020-04-29,2020-04-29T20:56:37,0,131,337,2,Rejeitada a Emenda nº 5. Sim: 131; não: 337; abstenção: 1; total: 469.
+2236213-24,2020-04-29,2020-04-29T21:46:58,0,43,271,1,Rejeitado o Requerimento. Sim: 43; não: 271; total: 314.

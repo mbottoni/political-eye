@@ -1,0 +1,45 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2541991-38,2025-12-02,2025-12-02T20:30:18,,300,123,1,Mantido o texto. Sim: 300; Não: 123; Total: 423.
+2422905-68,2025-12-02,2025-12-02T20:47:29,1,412,4,1,"Aprovada, em primeiro turno, a Proposta de Emenda à Constituição nº 72, de 2023. Sim: 412; Não: 4; Total: 416."
+2422905-75,2025-12-02,2025-12-02T20:59:09,1,397,3,1,"Aprovada, em segundo turno, a Proposta de Emenda à Constituição nº 72, de 2023. Sim: 397; Não: 3; Total: 400."
+2471177-99,2025-12-09,2025-12-09T21:00:51,1,311,114,1,Aprovado o Requerimento. Sim: 311; Não: 114; Total: 425.
+2471177-102,2025-12-09,2025-12-09T21:11:55,1,310,115,2,"Aprovado o Substitutivo do Senado Federal ao Projeto de Lei nº 4.497, de 2024, ressalvados os destaques. Sim: 310; Não: 115; Total: 425."
+2471177-105,2025-12-09,2025-12-09T21:25:54,,283,116,1,Mantido o texto. Sim: 283; Não: 116; Total: 399.
+2471177-108,2025-12-09,2025-12-09T21:40:46,,302,124,1,Mantido o texto. Sim: 302; Não: 124; Total: 426.
+2471177-111,2025-12-09,2025-12-09T21:51:54,,298,117,1,Mantido o texto. Sim: 298; Não: 117; Total: 415.
+2471177-114,2025-12-09,2025-12-09T22:00:59,,286,107,1,Mantido o texto. Sim: 286; Não: 107; Total: 393.
+2471177-117,2025-12-09,2025-12-09T22:10:47,,298,112,1,Mantido o texto. Sim: 298; Não: 112; Total: 410.
+2559194-42,2025-12-09,2025-12-09T23:26:58,1,436,2,1,"Aprovado o Projeto de Lei Complementar nº 125, de 2022. Sim: 436; Não: 2; Total: 438."
+2559194-44,2025-12-09,2025-12-09T23:32:48,0,8,382,1,Rejeitadas as Emendas de Plenário. Sim: 8; Não: 382; Total: 390.
+2358548-51,2025-12-09,2025-12-09T23:48:14,0,146,294,1,Rejeitado o Requerimento. Sim: 146; Não: 294; Total: 440.
+2358548-55,2025-12-09,2025-12-10T00:45:03,0,147,287,1,Rejeitado o Requerimento. Sim: 147; Não: 287; Total: 434.
+2358548-81,2025-12-09,2025-12-10T02:43:44,,218,136,2,Mantido o texto. Sim: 218; Não: 136; Abstenção: 1; Total: 355.
+2358548-86,2025-12-09,2025-12-10T02:55:28,,208,121,1,Mantido o texto. Sim: 208; Não: 121; Total: 329.
+2358548-89,2025-12-09,2025-12-10T02:58:21,1,291,148,2,"Aprovado o Substitutivo ao Projeto de Lei nº 2.162, de 2023, adotado pelo relator da Comissão Especial, ressalvados os destaques. Sim: 291; Não: 148; Abstenção: 1; Total: 440."
+2358548-90,2025-12-09,2025-12-10T03:09:21,,230,34,60,Mantido o texto. Sim: 230; Não: 34; Abstenção: 4; Total: 268.
+2358548-93,2025-12-09,2025-12-10T03:22:33,,229,26,70,Mantido o texto. Sim: 229; Não: 26; Abstenção: 3; Total: 258.
+2358548-98,2025-12-09,2025-12-10T03:55:33,1,235,25,65,"Aprovada a Redação Final assinada pelo relator, Dep. Paulinho da Força (SOLIDARIEDADE/SP). Sim: 235; Não: 25; Abstenção: 3; Total: 263."
+2428478-62,2025-12-10,2025-12-10T18:23:17,0,171,245,4,Rejeitado o Requerimento. Sim: 171; Não: 245; Abstenção: 3; Total: 419.
+2595686-22,2025-12-10,2025-12-10T20:30:01,1,242,181,2,Aprovado o Requerimento. Sim: 242; Não: 181; Abstenção: 1; Total: 424.
+2595686-29,2025-12-10,2025-12-10T21:27:15,1,226,220,4,Aprovada a Preferência. Sim: 226; Não: 220; Abstenção: 3; Total: 449.
+2595686-31,2025-12-10,2025-12-10T22:00:52,1,318,141,4,Aprovada a Emenda de Plenário nº 1. Sim: 318; Não: 141; Abstenção: 3; Total: 462.
+2525122-73,2025-12-10,2025-12-10T22:22:10,0,151,236,4,Rejeitado o Requerimento. Sim: 151; Não: 236; Abstenção: 3; Total: 390.
+2525122-81,2025-12-10,2025-12-11T00:46:14,0,227,170,11,"Rejeitado o Parecer da Comissão de Constituição e Justiça e de Cidadania à Representação nº 2, de 2025, que conclui pela procedência da representação e pela perda do mandato da Dep. Carla Zambelli. Sim: 227; Não: 170; Abstenção: 10; Total: 407."
+2554285-43,2025-12-15,2025-12-15T21:15:02,0,127,292,2,Rejeitado o Requerimento. Sim: 127; Não: 292; Abstenção: 1; Total: 420.
+2554285-48,2025-12-15,2025-12-15T21:51:35,1,325,119,4,"Aprovado o Projeto de Lei nº 4.278, de 2025, ressalvado o destaque. Sim: 325; Não: 119; Abstenção: 3; Total: 447."
+2554285-51,2025-12-15,2025-12-15T22:04:03,,293,120,5,Mantido o texto. Sim: 293; Não: 120; Abstenção: 4; Total: 417.
+2541109-77,2025-12-15,2025-12-15T22:12:01,0,108,290,1,Rejeitado o Requerimento. Sim: 108; Não: 290; Total: 398.
+2541109-88,2025-12-15,2025-12-15T22:56:09,1,320,109,1,"Aprovado o Substitutivo do Senado Federal ao Projeto de Lei Complementar nº 163, de 2025. Sim: 320; Não: 109; Total: 429."
+2438459-113,2025-12-15,2025-12-16T00:02:36,1,330,104,1,"Aprovado o Substitutivo do Senado Federal ao Projeto de Lei Complementar nº 108, de 2024, com parecer pela aprovação, excetuadas as modificações indicadas no Parecer da Comissão de Indústria, Comércio e Serviços. Sim: 330; Não: 104; Total: 434."
+2438459-115,2025-12-15,2025-12-16T00:10:52,0,77,252,1,"Rejeitados os dispositivos do Substitutivo do Senado Federal ao Projeto de Lei complementar nº 108, de 2024, com parecer pela rejeição, indicados no Parecer da Comissão de Indústria, Comércio e Serviços. Sim: 77; Não: 252; Total: 329."
+2438459-126,2025-12-16,2025-12-16T18:37:52,0,81,289,1,Rejeitado o Requerimento. Sim: 81; Não: 289; Total: 370.
+2438459-135,2025-12-16,2025-12-16T18:55:41,,63,373,2,Suprimido o texto. Sim: 63; Não: 373; Abstenção: 1; Total: 437.
+2438459-139,2025-12-16,2025-12-16T19:11:12,,441,3,1,Mantido o texto. Sim: 441; Não: 3; Total: 444.
+2438459-141,2025-12-16,2025-12-16T19:26:57,,423,23,2,Mantido o texto. Sim: 423; Não: 23; Abstenção: 1; Total: 447.
+2438459-143,2025-12-16,2025-12-16T19:31:12,,15,334,1,Suprimido o texto. Sim: 15; Não: 334; Total: 349.
+2438459-146,2025-12-16,2025-12-16T20:19:14,,221,242,3,Suprimido o texto. Sim: 221; Não: 242; Abstenção: 2; Total: 465.
+2438459-148,2025-12-16,2025-12-16T20:26:23,1,408,3,2,"Aprovadas as Emendas de Redação nºs 1, 2 e 4. Sim: 408; Não: 3; Abstenção: 1; Total: 412."
+2520670-40,2025-12-16,2025-12-16T22:36:34,0,114,319,11,Rejeitado o Requerimento. Sim: 114; Não: 319; Abstenção: 2; Total: 435.
+2520670-46,2025-12-16,2025-12-16T23:52:07,1,276,67,22,Aprovado o Requerimento. Sim: 276; Não: 67; Total: 343.
+2520670-52,2025-12-16,2025-12-17T00:51:43,1,310,85,38,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei Complementar nº 128, de 2025, adotada pelo relator da Comissão de Desenvolvimento Econômico, ressalvado o destaque. Sim: 310; Não: 85; Abstenção: 1; Total: 396."
+2520670-66,2025-12-16,2025-12-17T01:31:24,,286,116,2,Mantido o texto. Sim: 286; Não: 116; Total: 402.

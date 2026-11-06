@@ -1,0 +1,30 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2455033-10,2024-09-09,2024-09-09T20:16:35,1,293,118,26,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 293; Não: 118; Abstenção: 4; Total: 415.
+2457208-7,2024-09-09,2024-09-09T20:20:44,1,316,19,76,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 316; Não: 19; Abstenção: 4; Total: 339.
+2204088-80,2024-09-09,2024-09-09T20:39:28,0,14,348,73,Rejeitado o Requerimento. Sim: 14; Não: 348; Abstenção: 1; Total: 363.
+2204088-85,2024-09-09,2024-09-09T21:03:28,0,5,366,76,Rejeitado o Requerimento. Sim: 5; Não: 366; Abstenção: 3; Total: 374.
+2204088-88,2024-09-09,2024-09-09T21:28:20,1,450,1,3,"Aprovado o Substitutivo ao Projeto de Lei nº 3.010, de 2019, adotado pelo Relator da Comissão de Saúde. Sim: 450; Não: 1; Abstenção: 2; Total: 453."
+2325845-23,2024-09-10,2024-09-10T17:53:25,1,386,9,58,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 386; Não: 9; Abstenção: 4; Total: 399.
+2457424-6,2024-09-10,2024-09-10T18:17:19,1,339,39,67,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 339; Não: 39; Abstenção: 2; Total: 380.
+2447191-32,2024-09-10,2024-09-10T18:43:16,0,20,350,78,Rejeitado o Requerimento. Sim: 20; Não: 350; Abstenção: 2; Total: 372.
+2447191-38,2024-09-10,2024-09-10T19:57:01,0,16,316,72,Rejeitado o Requerimento. Sim: 16; Não: 316; Abstenção: 3; Total: 335.
+2447191-41,2024-09-10,2024-09-10T20:13:30,1,432,2,2,"Aprovado o Projeto de Lei Complementar nº 72, de 2024.  Sim: 432; Não: 2; Abstenção: 1; Total: 435."
+2457520-7,2024-09-11,2024-09-11T18:02:13,1,296,104,3,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 296; Não: 104; Abstenção: 2; Total: 402.
+2238434-146,2024-09-11,2024-09-11T18:26:56,0,14,280,66,Rejeitado o Requerimento. Sim: 14; Não: 280; Abstenção: 2; Total: 296.
+2238434-150,2024-09-11,2024-09-11T18:43:15,0,22,309,69,Rejeitado o Requerimento. Sim: 22; Não: 309; Abstenção: 2; Total: 333.
+2408709-73,2024-09-11,2024-09-11T19:33:35,0,9,352,66,Rejeitado o Requerimento. Sim: 9; Não: 352; Abstenção: 1; Total: 362.
+2408709-77,2024-09-11,2024-09-11T19:44:43,0,4,329,62,Rejeitado o Requerimento. Sim: 4; Não: 329; Total: 333.
+2410466-47,2024-09-11,2024-09-11T20:12:28,0,1,347,67,Rejeitado o Requerimento. Sim: 1; Não: 347; Total: 348.
+2410466-50,2024-09-11,2024-09-11T20:40:08,0,2,377,60,Rejeitado o Requerimento. Sim: 2; Não: 377; Abstenção: 4; Total: 383.
+2418020-7,2024-09-11,2024-09-11T21:39:02,1,353,7,77,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 353; Não: 7; Abstenção: 1; Total: 361.
+2454704-36,2024-09-11,2024-09-11T22:00:24,0,43,243,59,Rejeitado o Requerimento. Sim: 43; Não: 243; Total: 286.
+2454704-40,2024-09-11,2024-09-11T22:17:45,0,57,269,45,Rejeitado o Requerimento. Sim: 57; Não: 269; Abstenção: 4; Total: 330.
+2454704-50,2024-09-11,2024-09-11T23:28:42,0,53,240,64,Rejeitado o Requerimento. Sim: 53; Não: 240; Abstenção: 2; Total: 295.
+2454704-53,2024-09-11,2024-09-11T23:57:15,1,253,67,69,"Aprovado o Projeto de Lei nº 1.847, de 2024, ressalvados os destaques.  Sim: 253; Não: 67; Abstenção: 4; Total: 324."
+2454704-55,2024-09-11,2024-09-12T00:08:24,0,57,228,69,Rejeitadas as Emendas de Plenário. Sim: 57; Não: 228; Abstenção: 3; Total: 288.
+2454704-58,2024-09-11,2024-09-12T00:20:15,0,133,204,1,Rejeitada a Emenda de Plenário nº 18. Sim: 133; Não: 204; Total: 337.
+2454704-64,2024-09-11,2024-09-12T00:32:21,,206,70,57,Mantido o texto. Sim: 206; Não: 70; Total: 276.
+2454704-67,2024-09-11,2024-09-12T00:43:04,,200,80,45,Mantido o texto. Sim: 200; Não: 80; Abstenção: 1; Total: 281.
+2454704-70,2024-09-11,2024-09-12T01:04:24,,189,140,1,Mantido o texto. Sim: 189; Não: 140; Total: 329.
+2454704-76,2024-09-12,2024-09-12T10:46:09,1,231,54,55,Aprovada a Emenda de Redação n° 1 Sim: 231; Não: 54; Abstenção: 1; Total: 286.
+2452037-70,2024-09-18,2024-09-18T15:41:53,0,22,342,68,Rejeitado o Requerimento. Sim: 22; Não: 342; Abstenção: 2; Total: 366.

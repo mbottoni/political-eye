@@ -1,0 +1,57 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2288801-59,2021-12-01,2021-12-01T17:36:12,1,407,10,1,"Aprovada a Subemenda Substitutiva ao Projeto de Lei nº 2.380, de 2021, adotada pelo Relator da Comissão de Finanças e Tributação, ressalvados os destaques. Sim: 407; não: 10; total: 417."
+2288801-72,2021-12-01,2021-12-01T17:49:55,,300,96,1,Mantido o texto. Sim: 300; não; 96. total: 396.
+2288801-77,2021-12-01,2021-12-01T18:02:19,,269,97,1,Mantido o texto. Sim: 269; não: 97; total: 366.
+2211506-10,2021-12-08,2021-12-08T17:34:39,0,228,199,1,Rejeitado o Requerimento. Sim: 228; não: 199; total: 427.
+2199215-162,2021-12-08,2021-12-08T18:22:13,0,137,274,1,"Rejeitada a Emenda do Senado Federal ao Projeto de Lei nº 2.510, de 2019. Sim: 137; não: 274; total: 411."
+2305189-27,2021-12-08,2021-12-08T19:15:35,1,248,158,3,Aprovado o Requerimento. Sim: 248; não: 158; abstenção: 2; total: 408.
+2301371-65,2021-12-08,2021-12-08T20:31:15,1,421,1,2,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 3.418, de 2021, adotada pelo Relator da Comissão de Educação, ressalvados os destaques. Sim: 421; não: 1; abstenção: 1; total: 423."
+2301371-72,2021-12-08,2021-12-08T20:49:54,0,75,283,1,Rejeitada a Emenda de Plenário nº 4. Sim: 75; não: 283; total: 358.
+2301371-74,2021-12-08,2021-12-08T21:01:21,,286,112,1,Mantido o texto. Sim: 286; não: 112; total: 398.
+2301371-78,2021-12-08,2021-12-08T21:16:10,0,45,360,2,Rejeitada a Emenda de Plenário nº 2. Sim: 45; não: 360; abstenção: 1; total: 406.
+2263846-8,2021-12-08,2021-12-08T22:47:28,1,264,141,4,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 264; não: 141; abstenção: 3; total: 408.
+1555470-234,2021-12-08,2021-12-08T22:57:18,0,40,308,1,Rejeitado o Requerimento. Sim: 40; não: 308; total: 348.
+2285694-50,2021-12-09,2021-12-09T12:23:06,0,36,226,13,Rejeitado o Requerimento. Sim: 36; não: 226; total: 262.
+2285694-55,2021-12-09,2021-12-09T12:46:50,0,20,266,36,Rejeitado o Requerimento. Sim: 20; não: 266; abstenção: 2; total: 288.
+2285694-58,2021-12-09,2021-12-09T13:22:57,1,300,60,7,"Aprovado o Projeto de Decreto Legislativo nº 228, de 2021. Sim: 300; não: 60; abstenção: 1; total: 361."
+2304326-37,2021-12-13,2021-12-13T21:08:21,0,16,241,67,Rejeitado o Requerimento. Sim: 16; não: 241; abstenção: 1; total: 258.
+2304326-42,2021-12-13,2021-12-13T21:44:27,0,6,251,85,Rejeitado o Requerimento. Sim: 6; não: 251; abstenção: 2; total: 259.
+2304326-64,2021-12-14,2021-12-14T16:29:19,,243,88,2,Mantido o texto. Sim: 243; não: 88; abstenção: 1; total: 332.
+2297579-44,2021-12-14,2021-12-14T17:25:09,1,386,2,1,"Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião favorável quanto ao atendimento dos pressupostos constitucionais de relevância e urgência e à adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN. Sim: 386; não: 2; total: 388."
+2297579-49,2021-12-14,2021-12-14T17:35:31,0,86,270,2,Rejeitada a Emenda de Plenário nº 2 ao Projeto de Lei de Conversão. Sim: 86; não: 270; abstenção: 1; total: 357.
+2297579-53,2021-12-14,2021-12-14T17:47:46,0,86,266,1,Rejeitada a Emenda de Comissão nº 58. Sim: 86; não: 266; total: 352.
+2297579-56,2021-12-14,2021-12-14T18:03:02,0,142,264,1,Rejeitada a Emenda de Plenário nº 1. Sim: 142; não: 264; total: 406.
+2311542-20,2021-12-14,2021-12-14T18:22:09,0,130,315,2,Rejeitado o Requerimento. Sim: 130; não: 315; abstenção: 1; total: 446.
+2311542-25,2021-12-14,2021-12-14T19:31:23,0,121,307,2,Rejeitado o Requerimento. Sim: 121; não: 307; abstenção: 1; total: 429.
+2311542-30,2021-12-14,2021-12-14T19:57:28,1,300,144,2,Aprovada a preferência. Sim: 300; não: 144; abstenção: 1; total: 445.
+2311542-31,2021-12-14,2021-12-14T20:34:17,1,327,147,1,"Aprovada, em primeiro turno, a Proposta de Emenda à Constituição nº 46, de 2021, ressalvados os destaques. Sim: 327; não: 147; abstenção: 1; total: 475."
+2311542-34,2021-12-14,2021-12-14T21:07:35,,344,124,2,Mantido o texto. Sim: 344; não: 124; abstenção: 1; total: 469.
+2311542-37,2021-12-14,2021-12-14T21:33:47,,330,137,2,Mantido o texto. Sim: 330; não: 137; abstenção: 2; total: 469.
+2260433-305,2021-12-15,2021-12-15T13:59:59,0,11,314,1,Rejeitado o Requerimento. Sim: 11; não: 314; total: 325.
+2260433-312,2021-12-15,2021-12-15T14:46:32,1,384,19,1,"Aprovadas as Emendas do Senado Federal ao Projeto de Lei nº 4.199, de 2020. Sim: 384; não: 19; total: 403."
+2260433-329,2021-12-15,2021-12-15T15:11:18,0,82,252,1,Rejeitada a Emenda do Senado Federal nº 8. Sim: 82; não: 252; total: 334.
+2260433-338,2021-12-15,2021-12-15T15:16:57,0,98,228,1,Rejeitada a Emenda do Senado Federal nº 11. Sim: 98; não: 228; 326.
+2311542-41,2021-12-15,2021-12-15T15:27:56,0,116,268,2,Rejeitado o Requerimento. Sim: 116; não: 268; abstenção: 1; total: 385.
+2311542-49,2021-12-15,2021-12-15T16:00:33,,339,135,0,Mantido o texto. Sim: 339; não: 135; total: 474.
+2311542-52,2021-12-15,2021-12-15T16:12:30,,423,22,1,Mantido o texto. Sim: 423; não: 22; total: 445.
+2311542-55,2021-12-15,2021-12-15T16:27:37,,168,285,1,Suprimido o texto. Sim: 168; não: 285; abstenção: 1; total: 454.
+2312447-5,2021-12-15,2021-12-15T16:35:12,1,293,129,1,"Aprovado o Requerimento nº 2818/2021, que solicita dispensa do interstício regimental entre o primeiro e o segundo turno de deliberação da Proposta de Emenda à Constituição nº 46, de 2021. Sim: 293; não: 129; total: 422."
+2311542-62,2021-12-15,2021-12-15T16:57:55,1,332,141,2,"Aprovada, em segundo turno, a Proposta de Emenda à Constituição nº 46, de 2021, ressalvado os destaques. Sim: 332; não: 141; abstenção: 1; total: 474."
+2311542-66,2021-12-15,2021-12-15T17:29:05,,329,138,2,Mantido o texto. Sim: 329; não: 138; abstenção: 1; total: 468.
+2311542-69,2021-12-15,2021-12-15T17:42:29,,425,15,3,Mantido o texto. Sim: 425; não: 15; abstenção: 1; total: 441.
+2312515-18,2021-12-15,2021-12-15T18:13:11,1,322,18,8,Aprovado o Projeto de Decreto Legislativo nº 1.118 de 2021. Sim: 322; não: 18; abstenção: 8; total: 348 (Aprova a indicação do Sr. Antonio Augusto Junho Anastasia para o cargo de Ministro do Tribunal de Contas da União).
+2268069-50,2021-12-15,2021-12-15T18:51:12,0,45,370,1,Rejeitado o Requerimento. Sim: 45; não: 370; total: 415.
+2268069-69,2021-12-15,2021-12-15T19:52:53,1,394,45,2,"Aprovado o Substitutivo ao Projeto de Lei nº 3.819, de 2020, adotado pelo Relator da Comissão de Viação e Transportes, ressalvados os destaques. Sim: 394; não: 45; abstenção: 1: total: 440."
+2268069-73,2021-12-15,2021-12-15T19:57:18,0,64,220,2,Rejeitadas as Emendas de Plenário ao Substitutivo. Sim: 64; não: 220; abesteção: 1; total: 285.
+2238652-59,2021-12-15,2021-12-15T20:48:50,1,432,1,1,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei Complementar nº 27, de 2020, adotada pelo Relator da Comissão de Finanças e Tributação, ressalvados os destaques. Sim: 432; não: 1; total: 433."
+2293229-55,2021-12-16,2021-12-16T15:07:23,1,387,1,2,"Aprovado o Substitutivo ao Projeto de Complementar nº 32, de 2021, adotado pelo Relator da Comissão de Finanças e Tributação, ressalvados os Destaques. Sim: 387; não: 1; abstenção: 1; total: 389."
+2293229-61,2021-12-16,2021-12-16T15:24:41,0,55,322,2,Rejeitada a Emenda de Plenário nº 3. Sim: 55; não: 322; total: 377.
+2293712-45,2021-12-16,2021-12-16T16:06:55,1,382,10,1,"Aprovado o Projeto de Lei de Complementar nº 46, de 2021. Sim: 382; não: 10; total: 392."
+2293712-48,2021-12-16,2021-12-16T16:13:56,1,367,1,2,Aprovada a Emenda de Redação nº 2. Sim: 367; não: 1; abstenção: 1; total: 369.
+2254287-56,2021-12-16,2021-12-16T17:19:43,1,359,17,1,"Aprovado o Projeto de Lei de Complementar nº 150, de 2020, ressalvados os destaques. Sim: 359; não: 17; total: 376."
+2254287-60,2021-12-16,2021-12-16T17:41:58,,309,99,1,Mantido o texto. Sim: 309; não: 99; total: 408.
+2254287-63,2021-12-16,2021-12-16T17:55:40,0,124,228,1,Rejeitado o destaque. Sim: 124; não: 228; total: 352.
+2254287-66,2021-12-16,2021-12-16T18:04:07,0,125,187,1,Rejeitado o destaque. Sim: 125; não: 187; total: 312.
+2114626-17,2021-12-16,2021-12-16T18:52:22,1,293,138,12,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 293; não: 138; abstenção: 11; total: 442.
+2080470-78,2021-12-16,2021-12-16T19:21:36,1,393,37,5,"Aprovada, em primeiro turno, a Proposta de Emenda à Constituição nº 200, de 2016. Sim: 393; não: 37; abstenção: 4; total: 434."
+2080470-86,2021-12-16,2021-12-16T19:34:44,1,376,30,5,"Aprovada, em segundo turno, a Proposta de Emenda à Constituição n° 200, de 2016. Sim: 376; não: 30; abstenção: 5; total: 411."

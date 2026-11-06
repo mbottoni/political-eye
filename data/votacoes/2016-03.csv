@@ -1,0 +1,24 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+1806248-46,2016-03-01,2016-03-01T21:02:18,0,193,245,8,Suprimido o texto. Sim: 193; não: 245; abstenção: 7; total: 445.
+1806249-55,2016-03-02,2016-03-02T18:08:58,0,159,183,1,Rejeitado o Requerimento. Sim: 159; não: 183; total: 342.
+1806249-68,2016-03-02,2016-03-02T19:43:12,1,261,184,2,Mantido o texto. Sim: 261; não: 184; total: 445.
+2077084-47,2016-03-09,2016-03-09T13:14:35,0,14,226,142,Rejeitado o Requerimento. Sim: 14; não: 226; abstenções: 20; total: 260.
+2077084-59,2016-03-09,2016-03-09T14:26:37,0,10,79,67,"Adiada a votação por falta de ""quorum"" (Obstrução). Sim: 10; Não: 79; abstenção: 11; Total: 100."
+2078488-8,2016-03-10,2016-03-10T11:52:02,1,268,4,58,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 268; não: 4; abstenção: 3; total: 275.
+2024766-31,2016-03-15,2016-03-15T18:42:06,0,35,225,86,Rejeitado o Requerimento. Sim: 35; não: 225; abstenção: 3; total: 263.
+2024766-53,2016-03-16,2016-03-16T17:59:59,0,16,284,105,Rejeitado o Requerimento. Sim: 16; não: 284; abstenção: 3; total: 303.
+2079730-5,2016-03-17,2016-03-17T15:51:48,1,433,1,1,"Eleitos os Deputados que irão compor a Comissão Especial destinada a dar parecer sobre a denúncia em desfavor da Presidente da República, Sra. Dilma Vana Rousseff, por Crime de Responsabilidade. 
+
+Sim: 433 votos. 
+Não: 1 voto. 
+Total: 434 votos.
+
+RESULTADO:
+
+CHAPA ELEITA: CHAPA ÚNICA"
+2024766-72,2016-03-21,2016-03-21T22:15:29,0,160,180,1,Rejeitada a Emenda nº 7.  Sim: 160; não: 180; total: 340.
+1063052-105,2016-03-22,2016-03-22T18:44:39,1,384,26,9,"Aprovada, em segundo turno, a Proposta de Emenda à Constituição nº 11 de 2015. Sim: 384; não: 26; abstenção: 7; total:  417."
+945979-103,2016-03-22,2016-03-22T21:44:04,1,402,1,1,"Aprovada, em primeiro turno, a Emenda Aglutinativa Substitutiva Global nº 1. Sim: 402.; não: 1; total: 403."
+2075925-53,2016-03-28,2016-03-28T20:58:14,1,277,15,51,"Aprovado o Projeto de Lei de Conversão nº 6, de 2016, ressalvado o destaque. Sim: 277; não: 15; abstenção: 2; total: 294."
+2076264-43,2016-03-29,2016-03-29T17:03:23,1,221,165,1,"Aprovado, em apreciação preliminar, o Parecer do Relator, na parte em que manifesta opinião pelo atendimento parcial dos pressupostos constitucionais de relevância, urgência e imprevisibilidade das despesas e pela adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN, ressalvado o destaque. Sim: 221; não: 165;  total: 386."
+1712771-52,2016-03-29,2016-03-29T17:59:22,0,213,173,1,Rejeitado o Requerimento. Sim: 213; Não: 173; Total: 386.

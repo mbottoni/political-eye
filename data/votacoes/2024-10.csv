@@ -1,0 +1,12 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2451405-8,2024-10-15,2024-10-15T19:30:27,1,276,140,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 276; Não: 140; Abstenção: 1; Total: 417.
+565397-185,2024-10-16,2024-10-16T20:04:20,0,149,204,1,Rejeitada a Emenda de Plenário nº 1. Sim: 149; Não: 204; Total: 353.
+2244008-82,2024-10-16,2024-10-16T20:40:33,0,105,292,1,Rejeitado o Requerimento. Sim: 105; Não: 292; Total: 397.
+2432865-33,2024-10-17,2024-10-17T12:41:22,0,106,262,0,Rejeitado o Requerimento. Sim: 106; Não: 262; Total: 368.
+2438459-63,2024-10-30,2024-10-30T16:08:14,0,71,221,1,Rejeitado o Requerimento. Sim: 71; Não: 221; Total: 292.
+2438459-66,2024-10-30,2024-10-30T16:26:35,,292,106,1,Mantido o texto. Sim: 292; Não: 106; Total: 398.
+2438459-69,2024-10-30,2024-10-30T16:42:42,1,403,0,1,Aprovada a Emenda Aglutinativa n° 1. Sim: 403; Total: 403.
+2438459-77,2024-10-30,2024-10-30T17:01:31,0,136,262,1,Rejeitada a Emenda de Plenário n° 8. Sim: 136; Não: 262; Total: 398.
+2456554-50,2024-10-30,2024-10-30T18:44:17,0,156,245,1,Rejeitada a Emenda de Plenário n° 8. Sim: 156; Não: 245; Total: 401.
+2456554-54,2024-10-30,2024-10-30T18:53:23,0,135,229,1,Rejeitada a Emenda de Plenário n° 9. Sim: 135; Não: 229; Total: 364.
+2456554-57,2024-10-30,2024-10-30T19:28:42,1,227,198,3,Aprovada a Emenda de Plenario n° 10. Sim: 227; Não: 198; Abstenção: 2; Total: 427.

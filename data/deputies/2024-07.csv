@@ -1,0 +1,520 @@
+deputado_id,nome,partido,uf,n_votes,n_authored
+62881,Danilo Forte,UNIÃO,CE,23,10
+66385,Julio Arcoverde,PP,PI,25,2
+66828,Fausto Pinato,PP,SP,22,11
+68720,Fábio Henrique,UNIÃO,SE,21,2
+69871,Bacelar,PV,BA,1,16
+72442,Felipe Carreras,PSB,PE,23,15
+73433,Arlindo Chinaglia,PT,SP,22,4
+73441,Celso Russomanno,REPUBLICANOS,SP,16,4
+73486,Pompeo de Mattos,PDT,RS,25,6
+73531,Ivan Valente,PSOL,SP,26,13
+73579,Alberto Fraga,PL,DF,27,24
+73692,Osmar Terra,MDB,RS,26,9
+73701,Benedita da Silva,PT,RJ,22,16
+73768,Dilceu Sperafico,PP,PR,24,2
+73778,Luiz Carlos Hauly,PODE,PR,11,19
+73801,Renildo Calheiros,PCdoB,PE,27,4
+74041,Luiz Couto,PT,PB,26,13
+74043,Wellington Roberto,PL,PB,22,3
+74044,Wilson Santiago,REPUBLICANOS,PB,20,4
+74052,Bosco Costa,PL,SE,24,0
+74057,Alice Portugal,PCdoB,BA,26,26
+74060,Daniel Almeida,PCdoB,BA,24,9
+74075,Elcione Barbalho,MDB,PA,25,1
+74079,José Priante,MDB,PA,18,1
+74084,Raimundo Santos,PSD,PA,26,40
+74090,Átila Lins,PSD,AM,27,13
+74095,Pauderney Avelino,UNIÃO,AM,26,47
+74141,Josias Gomes,PT,BA,26,6
+74156,Leonardo Monteiro,PT,MG,20,8
+74159,Odair Cunha,PT,MG,26,49
+74160,Patrus Ananias,PT,MG,20,117
+74161,Reginaldo Lopes,PT,MG,12,9
+74171,Chico Alencar,PSOL,RJ,26,86
+74253,Julio Lopes,PP,RJ,22,18
+74262,Carlos Sampaio,PSD,SP,27,7
+74270,Gilberto Nascimento,PSD,SP,11,4
+74273,Jefferson Campos,PL,SP,26,7
+74283,Vicentinho,PT,SP,19,8
+74317,Júlio Cesar,PSD,PI,25,2
+74356,Silas Câmara,REPUBLICANOS,AM,21,134
+74371,Rubens Otoni,PT,GO,21,11
+74374,Geraldo Resende,PSDB,MS,26,11
+74376,Vander Loubet,PT,MS,24,8
+74383,Giacobo,PL,PR,13,2
+74398,Maria do Rosário,PT,RS,17,12
+74428,Mendonça Filho,UNIÃO,PE,22,12
+74454,Eunício Oliveira,MDB,CE,26,2
+74467,Damião Feliciano,UNIÃO,PB,26,5
+74478,Luciano Bivar,UNIÃO,PE,3,122
+74537,Claudio Cajado,PP,BA,27,4
+74550,João Leão,PP,BA,23,3
+74554,José Rocha,UNIÃO,BA,26,3
+74574,Paulo Magalhães,PSD,BA,27,5
+74585,Lincoln Portela,PL,MG,24,9
+74646,Aécio Neves,PSDB,MG,21,2
+74696,Alberto Mourão,MDB,SP,4,2
+74784,Luiza Erundina,PSOL,SP,0,6
+74848,Jandira Feghali,PCdoB,RJ,24,15
+74856,Laura Carneiro,PSD,RJ,25,129
+74858,Lindbergh Farias,PT,RJ,27,16
+80815,Leo Prates,PDT,BA,27,15
+81055,Márcio Jerry,PCdoB,MA,23,8
+88256,Clodoaldo Magalhães,PV,PE,19,15
+91228,Waldemar Oliveira,AVANTE,PE,27,80
+92102,Leur Lomanto Júnior,UNIÃO,BA,17,2
+92346,Eduardo Bolsonaro,PL,SP,27,10
+92699,Fernando Monteiro,PP,PE,24,5
+92776,Stefano Aguiar,PSD,MG,20,4
+98057,Lafayette de Andrada,REPUBLICANOS,MG,26,34
+98148,Cobalchini,MDB,SC,27,43
+98615,Ismael,PSD,SC,27,16
+103758,Luciano Azevedo,PSD,RS,24,0
+104552,Socorro Neri,PP,AC,27,32
+107283,Gleisi Hoffmann,PT,PR,19,7
+107970,Ana Paula Leão,PP,MG,26,7
+109429,Benes Leocádio,UNIÃO,RN,26,7
+116379,Darci de Matos,PSD,SC,19,19
+121948,Adriano do Baldy,PP,GO,27,5
+122158,Pedro Paulo,PSD,RJ,18,6
+122195,Leonardo Gadelha,PODE,PB,26,7
+122974,Pedro Lucas Fernandes,UNIÃO,MA,26,5
+123086,Átila Lira,PP,PI,18,6
+123756,Antônia Lúcia,REPUBLICANOS,AC,18,5
+130398,ANDRE FERNANDES,,,0,1
+133439,André Figueiredo,PDT,CE,26,10
+133810,Marcelo Moraes,PL,RS,25,17
+136811,Afonso Hamm,PP,RS,19,6
+139285,Lídice da Mata,PSB,BA,24,9
+141391,Arnaldo Jardim,CIDADANIA,SP,24,13
+141398,Carlos Zarattini,PT,SP,11,8
+141408,Cleber Verde,MDB,MA,25,6
+141411,Dagoberto Nogueira,PSDB,MS,22,6
+141421,Eduardo da Fonte,PP,PE,24,3
+141431,Fernando Coelho Filho,UNIÃO,PE,22,8
+141450,Hugo Leal,PSD,RJ,21,27
+141456,Jilmar Tatto,PT,SP,22,6
+141458,João Carlos Bacelar,PL,BA,18,1
+141459,João Maia,PP,RN,25,1
+141464,José Airton Félix Cirilo,PT,CE,23,6
+141470,José Guimarães,PT,CE,27,28
+141480,Lázaro Botelho,PP,TO,24,2
+141485,Luiz Carlos Busato,UNIÃO,RS,12,5
+141487,Luiz Fernando Faria,PSD,MG,20,2
+141516,Paulo Abi-Ackel,PSDB,MG,21,0
+141531,Rodrigo de Castro,UNIÃO,MG,24,2
+141555,Vinicius Carvalho,REPUBLIC,SP,0,12
+143632,Domingos Neto,PSD,CE,15,6
+150418,Márcio Marinho,REPUBLICANOS,BA,25,24
+152605,Glauber Braga,PSOL,RJ,25,13
+153423,Renilce Nicodemos,MDB,PA,20,11
+156190,Marcel van Hattem,NOVO,RS,27,23
+157130,Túlio Gadêlha,REDE,PE,24,87
+160161,Marcelo Queiroz,PP,RJ,26,21
+160510,Luis Tibé,AVANTE,MG,14,2
+160512,Aureo Ribeiro,SOLIDARIEDADE,RJ,20,62
+160517,Paulo Folletto,PSB,ES,26,9
+160518,Weliton Prado,SOLIDARIEDADE,MG,25,10
+160527,Aguinaldo Ribeiro,PP,PB,17,1
+160535,Marcon,PT,RS,23,8
+160538,Bohn Gass,PT,RS,25,7
+160541,Arthur Lira,PP,AL,22,0
+160545,Alexandre Leite,UNIÃO,SP,22,1
+160548,Jonas Donizette,PSB,SP,25,11
+160553,Antonio Brito,PSD,BA,13,30
+160556,Padre João,PT,MG,25,16
+160558,Paulo Freire Costa,PL,SP,0,1
+160559,Alceu Moreira,MDB,RS,22,18
+160569,Waldenor Pereira,PT,BA,20,15
+160575,Erika Kokay,PT,DF,27,41
+160588,Diego Andrade,PSD,MG,17,2
+160591,Vinicius Gurgel,PL,AP,25,2
+160592,Zeca Dirceu,PT,PR,22,7
+160598,Flávia Morais,PDT,GO,10,83
+160599,Dimas Fabiano,PP,MG,1,0
+160600,Arthur Oliveira Maia,UNIÃO,BA,22,9
+160601,Pr. Marco Feliciano,PL,SP,25,93
+160610,Valmir Assunção,PT,BA,24,8
+160629,Romero Rodrigues,PODE,PB,24,41
+160632,Zé Silva,SOLIDARIEDADE,MG,26,15
+160640,Eros Biondini,PL,MG,27,10
+160642,Pastor Eurico,PL,PE,21,6
+160665,Augusto Coutinho,REPUBLICANOS,PE,27,10
+160666,Félix Mendonça Júnior,PDT,BA,12,4
+160673,Giovani Cherini,PL,RS,23,18
+160674,Hugo Motta,REPUBLICANOS,PB,24,28
+160758,Domingos Sávio,PL,MG,20,13
+160976,Tiririca,PL,SP,23,1
+161440,Pezenti,MDB,SC,25,11
+161550,Emidinho Madeira,PL,MG,24,1
+162067,Kiko Celeguim,PT,SP,23,9
+162332,Luiz Nishimori,PSD,PR,22,13
+163321,Ronaldo Nogueira,REPUBLICANOS,RS,22,10
+164360,Carmen Zanotto,CIDADANIA,SC,12,3
+165470,Rodrigo Valadares,UNIÃO,SE,25,28
+166402,Magda Mofatto,PRD,GO,0,1
+171139,Loreny,SOLIDARIEDADE,SP,16,9
+171617,Paulão,PT,AL,25,7
+171786,Miguel Ângelo,PT,MG,19,8
+178829,Capitão Augusto,PL,SP,27,8
+178835,Afonso Motta,PDT,RS,24,82
+178843,Marx Beltrão,PP,AL,25,7
+178854,Elmar Nascimento,UNIÃO,BA,5,14
+178857,Jorge Solla,PT,BA,24,26
+178858,Mário Negromonte Jr.,PP,BA,26,4
+178860,Paulo Azi,UNIÃO,BA,17,2
+178866,Luizianne Lins,PT,CE,23,10
+178871,Evair Vieira de Melo,PP,ES,19,62
+178873,Helder Salomão,PT,ES,20,52
+178876,Célio Silveira,MDB,GO,25,4
+178881,Aluisio Mendes,REPUBLICANOS,MA,26,4
+178884,Hildo Rocha,MDB,MA,27,5
+178887,Rubens Pereira Júnior,PT,MA,25,11
+178895,Misael Varella,PSD,MG,27,2
+178896,Newton Cardoso Jr,MDB,MG,19,0
+178908,Delegado Éder Mauro,PL,PA,24,7
+178909,Hélio Leite,UNIÃO,PA,4,4
+178910,Joaquim Passarinho,PL,PA,27,10
+178927,Aliel Machado,PV,PR,15,5
+178929,Diego Garcia,REPUBLICANOS,PR,25,38
+178931,Luciano Ducci,PSB,PR,25,15
+178933,Sergio Souza,MDB,PR,21,18
+178934,Toninho Wandscheer,PP,PR,24,26
+178937,Altineu Côrtes,PL,RJ,18,113
+178943,Marcos Soares,UNIÃO,RJ,21,3
+178946,Soraya Santos,PL,RJ,26,4
+178947,Sóstenes Cavalcante,PL,RJ,17,25
+178954,Lucio Mosquini,MDB,RO,19,5
+178963,Covatti Filho,PP,RS,14,13
+178964,Heitor Schuch,PSB,RS,23,21
+178970,João Daniel,PT,SE,19,28
+178972,Alex Manente,CIDADANIA,SP,9,9
+178975,Baleia Rossi,MDB,SP,23,1
+178983,Marcio Alvino,PL,SP,24,1
+178985,Miguel Lombardi,PL,SP,27,2
+178986,Nilto Tatto,PT,SP,27,39
+178987,Orlando Silva,PCdoB,SP,25,9
+178992,Vitor Lippi,PSDB,SP,19,10
+178993,Carlos Henrique Gaguim,UNIÃO,TO,26,7
+178997,Moses Rodrigues,UNIÃO,CE,26,6
+179000,Marcelo Álvaro Antônio,PL,MG,19,2
+179001,Márcio Biolchi,MDB,RS,24,1
+180214,Pastor Diniz,UNIÃO,RR,24,9
+188097,Merlong Solano,PT,PI,27,8
+191923,Flávio Nogueira,PT,PI,24,12
+198197,Greyce Elias,AVANTE,MG,16,5
+198783,Emanuel Pinheiro Neto,MDB,MT,5,2
+204351,Dr. Luiz Ovando,PP,MS,26,7
+204355,Da Vitoria,PP,ES,26,9
+204356,Amaro Neto,REPUBLICANOS,ES,27,3
+204358,Beto Pereira,PSDB,MS,11,5
+204360,Silvia Cristina,PP,RO,11,14
+204361,Carlos Chiodini,MDB,SC,17,4
+204362,Ricardo Guidi,PL,SC,1,0
+204365,Gilson Marques,NOVO,SC,27,34
+204367,Daniel Freitas,PL,SC,22,5
+204368,Fabio Schiochet,UNIÃO,SC,23,3
+204369,Caroline de Toni,PL,SC,27,11
+204372,Julio Cesar Ribeiro,REPUBLICANOS,DF,27,12
+204374,Bia Kicis,PL,DF,21,40
+204378,Coronel Chrisóstomo,PL,RO,26,16
+204379,Acácio Favacho,MDB,AP,23,4
+204387,Sargento Fahur,PSD,PR,27,17
+204388,Bibo Nunes,PL,RS,26,23
+204390,Professor Alcides,PL,GO,21,7
+204391,José Nelto,PP,GO,19,1
+204394,Gervásio Maia,PSB,PB,27,28
+204395,Pedro Lupion,PP,PR,13,91
+204396,Vermelho,PL,PR,20,28
+204398,Felipe Francischini,UNIÃO,PR,22,16
+204404,Lucas Redecker,PSDB,RS,27,5
+204406,Pedro Westphalen,PP,RS,17,12
+204407,Fernanda Melchionna,PSOL,RS,26,91
+204408,Gustinho Ribeiro,REPUBLICANOS,SE,19,1
+204409,Daniel Trzeciak,PSDB,RS,25,3
+204410,Luisa Canziani,PSD,PR,16,6
+204411,Filipe Barros,PL,PR,8,1
+204412,Dr. Zacharias Calil,UNIÃO,GO,26,20
+204416,Sanderson,PL,RS,23,14
+204419,Glaustin da Fokus,PODE,GO,20,4
+204422,Ossesio Silva,REPUBLICANOS,PE,27,9
+204423,André Ferreira,PL,PE,8,5
+204426,Carlos Veras,PT,PE,23,8
+204427,Fernando Rodolfo,PL,PE,21,2
+204431,Marcos Aurélio Sampaio,PSD,PI,25,1
+204436,Isnaldo Bulhões Jr.,MDB,AL,17,25
+204441,Otoni de Paula,MDB,RJ,20,2
+204444,Helio Lopes,PL,RJ,20,10
+204445,Fernando Mineiro,PT,RN,21,13
+204449,Nelson Barbudo,PL,MT,26,12
+204450,Doutor Luizinho,PP,RJ,12,13
+204453,Natália Bonavides,PT,RN,23,10
+204455,Luiz Lima,PL,RJ,27,14
+204456,Gutemberg Reis,MDB,RJ,26,3
+204457,Juninho do Pneu,UNIÃO,RJ,25,10
+204459,Daniela do Waguinho,UNIÃO,RJ,26,2
+204462,Chris Tonietto,PL,RJ,25,15
+204464,Talíria Petrone,PSOL,RJ,27,11
+204472,José Medeiros,PL,MT,13,48
+204473,General Girão,PL,RN,26,19
+204476,Chiquinho Brazão,S.PART.,RJ,0,1
+204479,Nicoletti,UNIÃO,RR,11,20
+204480,Rogério Correia,PT,MG,24,12
+204481,Dr. Jaziel,PL,CE,22,1
+204482,Euclydes Pettersen,REPUBLICANOS,MG,18,2
+204485,Luiz Carlos Motta,PL,SP,23,6
+204486,Mauro Benevides Filho,PDT,CE,27,7
+204488,Célio Studart,PSD,CE,21,17
+204489,Robério Monteiro,PDT,CE,23,3
+204491,Gilberto Abramo,REPUBLICANOS,MG,24,14
+204492,Paulo Guedes,PT,MG,25,14
+204494,Fred Costa,PRD,MG,14,14
+204495,Airton Faleiro,PT,PA,24,9
+204497,Júnior Ferrari,PSD,PA,23,7
+204498,Olival Marques,MDB,PA,0,1
+204501,Alencar Santana,PT,SP,26,13
+204504,Cezinha de Madureira,PSD,SP,21,7
+204506,Marcos Pereira,REPUBLICANOS,SP,17,697
+204507,Carla Zambelli,PL,SP,27,25
+204508,Igor Timo,PODE,MG,25,1
+204511,David Soares,UNIÃO,SP,5,6
+204512,Delegado Marcelo Freitas,UNIÃO,MG,27,6
+204515,André Janones,AVANTE,MG,22,4
+204517,Zé Vitor,PL,MG,11,14
+204518,Dr. Frederico,PRD,MG,24,20
+204520,Junio Amaral,PL,MG,1,9
+204524,Pinheirinho,PP,MG,21,3
+204525,Rosana Valle,PL,SP,24,7
+204526,Luiz Philippe de Orleans e Bragança,PL,SP,24,43
+204528,Adriana Ventura,NOVO,SP,26,42
+204530,Rodrigo Agostinho,PSB,,0,1
+204533,Idilvan Alencar,PDT,CE,26,5
+204534,Tabata Amaral,PSB,SP,23,26
+204535,Sâmia Bomfim,PSOL,SP,23,28
+204536,Kim Kataguiri,UNIÃO,SP,16,102
+204540,Maria Rosas,REPUBLICANOS,SP,27,2
+204541,Eduardo Bismarck,PDT,CE,26,10
+204549,AJ Albuquerque,PP,CE,23,0
+204550,Júnior Mano,PL,CE,8,13
+204553,Pastor Sargento Isidório,AVANTE,BA,26,4
+204557,Sidney Leite,PSD,AM,19,51
+204559,Zé Neto,PT,BA,8,2
+204560,Adolfo Viana,PSDB,BA,21,11
+204563,Josimar Maranhãozinho,PL,MA,1,0
+204566,Marreca Filho,PRD,MA,20,8
+204567,Raimundo Costa,PODE,BA,20,6
+204570,Pastor Gil,PL,MA,25,5
+204571,Alex Santana,REPUBLICANOS,BA,3,1
+204572,Capitão Alberto Neto,PL,AM,20,107
+204573,Otto Alencar Filho,PSD,BA,21,6
+204574,Junior Lourenço,PL,MA,8,1
+205476,Charles Fernandes,PSD,BA,25,4
+205550,Jorge Braz,REPUBLICANOS,RJ,24,1
+205865,Reinhold Stephanes,PSD,PR,21,4
+206018,Célia Xakriabá,PSOL,MG,26,58
+209189,Joseildo Ramos,PT,BA,25,7
+209787,Nikolas Ferreira,PL,MG,24,32
+210989,Bruno Farias,AVANTE,MG,24,24
+212625,Dr. Gonçalo,PODE,MA,23,2
+213274,Ricardo Silva,PSD,SP,16,6
+214694,Jorge Goetten,REPUBLICANOS,SC,24,15
+215043,Josivaldo JP,PSD,MA,20,6
+218086,Ely Santos,REPUBLICANOS,SP,20,2
+219585,Marco Brasil,PP,PR,24,6
+220008,Eliza Virgínia,PP,PB,17,6
+220526,Gilvan da Federal,PL,ES,25,7
+220527,Jack Rocha,PT,ES,26,12
+220528,Dr. Victor Linhalis,PODE,ES,26,9
+220529,Gilson Daniel,PODE,ES,27,161
+220530,Messias Donato,REPUBLICANOS,ES,25,45
+220531,Gilvan Maximo,REPUBLICANOS,DF,15,10
+220532,Rafael Prudente,MDB,DF,11,6
+220533,Prof. Reginaldo Veras,PV,DF,27,17
+220534,Fred Linhares,REPUBLICANOS,DF,27,6
+220536,Zé Haroldo Cathedral,PSD,RR,27,8
+220537,Helena Lima,MDB,RR,21,9
+220538,Albuquerque,REPUBLICANOS,RR,26,10
+220539,Defensor Stélio Dener,REPUBLICANOS,RR,27,11
+220540,Duda Ramos,MDB,RR,15,31
+220542,Alexandre Guimarães,MDB,TO,22,13
+220543,Ricardo Ayres,REPUBLICANOS,TO,27,32
+220544,Antonio Andrade,REPUBLICANOS,TO,25,3
+220545,Filipe Martins,PL,TO,27,10
+220546,Rodolfo Nogueira,PL,MS,26,9
+220547,Marcos Pollon,PL,MS,27,34
+220548,Camila Jara,PT,MS,26,16
+220549,Any Ortiz,CIDADANIA,RS,25,9
+220550,Mauricio Marcon,PODE,RS,24,20
+220551,Franciane Bayer,REPUBLICANOS,RS,22,7
+220552,Zucco,PL,RS,27,13
+220553,Denise Pessôa,PT,RS,25,23
+220554,Alexandre Lindenmeyer,PT,RS,19,11
+220555,Daiana Santos,PCdoB,RS,22,5
+220556,Ana Paula Lima,PT,SC,23,35
+220557,Daniela Reinehr,PL,SC,25,56
+220558,Zé Trovão,PL,SC,26,37
+220559,Julia Zanatta,PL,SC,27,74
+220561,Delegada Katarina,PSD,SE,20,6
+220563,Icaro de Valmir,PL,SE,1,3
+220564,Yandra Moura,UNIÃO,SE,1,6
+220565,Delegada Adriana Accorsi,PT,GO,15,5
+220566,Lêda Borges,PSDB,GO,23,27
+220567,Jeferson Rodrigues,REPUBLICANOS,GO,24,1
+220568,Gustavo Gayer,PL,GO,11,41
+220569,Silvye Alves,UNIÃO,GO,10,16
+220570,Dr. Ismael Alexandrino,PSD,GO,21,7
+220571,Daniel Agrobom,PL,GO,17,22
+220572,Marussa Boldrin,MDB,GO,24,24
+220573,Dorinaldo Malafaia,PDT,AP,24,8
+220574,Cabo Gilberto Silva,PL,PB,24,43
+220575,Sonize Barbosa,PL,AP,25,0
+220576,Alfredo Gaspar,UNIÃO,AL,26,31
+220577,Augusto Puppio,MDB,AP,25,12
+220578,Josenildo,PDT,AP,27,23
+220579,Silvia Waiãpi,PL,AP,24,24
+220580,Professora Goreth,PDT,AP,25,19
+220581,Luciano Amaral,PV,AL,27,6
+220582,Daniel Barbosa,PP,AL,23,1
+220583,Delegado Fabio Costa,PP,AL,26,7
+220584,Murilo Galdino,REPUBLICANOS,PB,22,6
+220586,Rafael Brito,MDB,AL,27,15
+220587,Gerlen Diniz,PP,AC,25,3
+220588,Roberto Duarte,REPUBLICANOS,AC,26,12
+220589,Eduardo Velloso,UNIÃO,AC,23,5
+220590,Coronel Ulysses,UNIÃO,AC,26,12
+220591,Meire Serafim,UNIÃO,AC,27,5
+220592,Zezinho Barbary,PP,AC,19,4
+220593,Abilio Brunini,PL,MT,22,5
+220594,Coronel Assis,UNIÃO,MT,27,10
+220595,Coronel Fernanda,PL,MT,27,20
+220597,Thiago Flores,REPUBLICANOS,RO,27,13
+220598,Tarcísio Motta,PSOL,RJ,27,24
+220599,Marcelo Crivella,REPUBLICANOS,RJ,24,10
+220600,Lebrão,UNIÃO,RO,10,5
+220601,Washington Quaquá,PT,RJ,0,12
+220602,Dimas Gadelha,PT,RJ,27,5
+220603,Dani Cunha,UNIÃO,RJ,22,1
+220604,Marcos Tavares,PDT,RJ,20,302
+220605,Bandeira de Mello,PSB,RJ,1,8
+220606,Reimont,PT,RJ,21,20
+220607,Max Lemos,PDT,RJ,27,4
+220608,Cristiane Lopes,UNIÃO,RO,27,15
+220609,Maurício Carvalho,UNIÃO,RO,15,4
+220610,Dr. Fernando Máximo,UNIÃO,RO,11,8
+220611,General Pazuello,PL,RJ,25,15
+220612,Bebeto,PP,RJ,27,8
+220613,Roberto Monteiro Pai,PL,RJ,26,4
+220614,Dr. Daniel Soranz,PSD,RJ,26,5
+220615,Pastor Henrique Vieira,PSOL,RJ,27,16
+220616,Luciano Vieira,REPUBLICANOS,RJ,4,2
+220617,Murillo Gouvea,UNIÃO,RJ,10,6
+220618,Sargento Portugal,PODE,RJ,25,86
+220619,Delegado Ramagem,PL,RJ,11,22
+220620,Rosângela Reis,PL,MG,25,1
+220621,Sargento Gonçalves,PL,RN,25,16
+220622,Nely Aquino,PODE,MG,26,10
+220623,Duda Salabert,PDT,MG,25,27
+220624,Robinson Faria,PL,RN,27,1
+220625,Delegada Ione,AVANTE,MG,23,4
+220626,Rafael Simoes,UNIÃO,MG,27,4
+220627,Paulinho Freire,UNIÃO,RN,21,9
+220628,Mauricio do Vôlei,PL,MG,27,13
+220629,Dandara,PT,MG,24,26
+220630,Pedro Aihara,PRD,MG,11,16
+220631,Samuel Viana,REPUBLICANOS,MG,25,4
+220632,Ana Pimentel,PT,MG,26,12
+220633,Ricardo Salles,PL,SP,17,13
+220635,Bruno Ganem,PODE,SP,27,13
+220638,Antonio Carlos Rodrigues,PL,SP,25,15
+220639,Guilherme Boulos,PSOL,SP,26,11
+220640,Juliana Cardoso,PT,SP,16,16
+220641,Rodrigo Gambale,PODE,SP,24,3
+220644,Rosangela Moro,UNIÃO,SP,25,31
+220645,Erika Hilton,PSOL,SP,15,57
+220647,Mauricio Neves,PP,SP,15,3
+220648,Marangoni,UNIÃO,SP,11,49
+220649,Delegado da Cunha,PP,SP,22,6
+220650,Paulo Alexandre Barbosa,PSDB,SP,25,7
+220651,Simone Marquetto,MDB,SP,25,5
+220652,Delegado Palumbo,MDB,SP,27,10
+220653,Fábio Teruel,MDB,SP,25,1
+220654,Delegado Paulo Bilynskyj,PL,SP,26,129
+220655,Mario Frias,PL,SP,5,9
+220656,Fernanda Pessoa,UNIÃO,CE,26,11
+220657,André Fernandes,PL,CE,14,11
+220658,Luiz Gastão,PSD,CE,24,7
+220659,Dayany Bittencourt,UNIÃO,CE,27,20
+220660,Yury Bruno,MDB,CE,1,3
+220661,Matheus Noronha,PL,CE,22,3
+220662,Lucas Ramos,PSB,PE,24,6
+220663,Eriberto Medeiros,PSB,PE,25,10
+220664,Guilherme Uchoa,PSB,PE,26,7
+220666,Coronel Meira,PL,PE,27,12
+220667,Pedro Campos,PSB,PE,26,20
+220668,Maria Arraes,SOLIDARIEDADE,PE,26,11
+220669,Lula da Fonte,PP,PE,24,2
+220670,Iza Arruda,MDB,PE,26,7
+220671,Dilvanda Faro,PT,PA,27,6
+220672,Henderson Pinto,MDB,PA,25,4
+220673,Delegado Caveira,PL,PA,21,17
+220674,Dra. Alessandra Haber,MDB,PA,19,6
+220675,Antônio Doido,MDB,PA,5,2
+220676,Andreia Siqueira,MDB,PA,9,2
+220677,Keniston Braga,MDB,PA,22,2
+220682,Tadeu Veneri,PT,PR,23,10
+220683,Beto Richa,PSDB,PR,25,3
+220684,Tião Medeiros,PP,PR,23,11
+220685,Paulo Litro,PSD,PR,25,7
+220686,Duarte Jr.,PSB,MA,27,25
+220688,Dr. Francisco,PT,PI,26,10
+220689,Detinha,PL,MA,1,2
+220690,Capitão Alden,PL,BA,25,18
+220691,Diego Coronel,PSD,BA,27,10
+220692,Dal Barreto,UNIÃO,BA,26,1
+220693,Roberta Roma,PL,BA,17,4
+220694,Ricardo Maia,MDB,BA,9,4
+220695,Rogéria Santos,REPUBLICANOS,BA,25,28
+220696,Ivoneide Caetano,PT,BA,26,3
+220697,Jadyel Alencar,REPUBLICANOS,PI,24,9
+220698,Beto Preto,PSD,PR,22,16
+220699,Castro Neto,PSD,PI,27,6
+220700,Florentino Neto,PT,PI,25,7
+220701,Delegado Matheus Laiola,UNIÃO,PR,27,13
+220702,Geraldo Mendes,UNIÃO,PR,1,2
+220703,Neto Carletto,PP,BA,26,2
+220704,Carol Dartora,PT,PR,24,29
+220706,Padovani,UNIÃO,PR,19,8
+220708,Gabriel Nunes,PSD,BA,26,3
+220713,Saullo Vianna,UNIÃO,AM,18,396
+220714,Adail Filho,REPUBLICANOS,AM,11,2
+220715,Amom Mandel,CIDADANIA,AM,19,279
+221148,Alfredinho,PT,SP,27,29
+221328,Adilson Barroso,PL,SP,27,17
+221338,Professora Luciene Cavalcante,PSOL,SP,25,25
+221339,Dr. Benjamim,UNIÃO,MA,4,1
+221378,Reginete Bispo,PT,RS,25,8
+222142,Coronel Telhada,PP,SP,24,15
+222429,Luis Carlos Gomes,REPUBLICANOS,RJ,24,1
+223128,Rodrigo Estacho,PSD,PR,21,2
+223398,Ulisses Guimarães,MDB,MG,1,3
+224117,Gabriel Mota,REPUBLICANOS,RR,26,12
+224333,Welter,PT,PR,27,7
+226179,Gisela Simona,UNIÃO,MT,27,11
+226708,Allan Garcês,PP,MA,20,19
+226837,Saulo Pedroso,PSD,SP,26,12
+227433,Douglas Viegas,UNIÃO,SP,25,11
+227660,Nitinho,PSD,SE,26,6
+227991,Dr Flávio,PL,RJ,24,3
+228272,Délio Pinheiro,PDT,MG,12,4
+228616,Dr. Remy Soares,PP,MA,20,3
+228797,Júlio Oliveira,PP,TO,23,11
+228837,Juliana Kolankiewicz,MDB,MT,25,11
+228941,Daniel José,PODE,SP,23,7
+229069,Capitão Samuel,PP,SE,24,4
+229082,Lucyana Genésio,PDT,MA,23,9
+229106,Carla Ayres,PT,SC,26,39
+229112,Pedro Jr,PL,TO,23,6
+229225,Michele Collins,PP,PE,26,23
+229259,Pedro Tourinho,PT,SP,26,3
+229333,Gláucia Santiago,PL,MG,25,2

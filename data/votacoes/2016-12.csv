@@ -1,0 +1,21 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+1594910-125,2016-12-06,2016-12-06T21:44:17,1,207,83,2,Mantido o texto. Sim: 207; Não: 83; Abstenção: 1;Total: 291.
+2112064-56,2016-12-07,2016-12-07T15:00:13,0,10,252,63,Rejeitado o Requerimento. Sim: 10; não 252; abstenções: 2; total: 264.
+2112064-71,2016-12-07,2016-12-07T16:24:49,0,119,188,2,Rejeitado o Artigo 1° da Emenda n° 20. Sim: 119; não: 188; total: 307.
+2112490-44,2016-12-07,2016-12-07T19:00:08,0,36,232,74,Rejeitado o Requerimento. Sim: 36; não: 232; total: 268.
+2112490-59,2016-12-07,2016-12-07T21:13:12,0,29,228,58,Rejeitado o Requerimento. Sim: 29; Não: 228; Total: 257.
+2112490-66,2016-12-07,2016-12-07T22:10:30,1,263,106,4,"Aprovada a Medida Provisória nº 746 de 2016, na forma do Projeto de Lei de Conversão nº 34 de 2016, ressalvados os destaques. Sim: 263; não: 106; abstenções: 3; total: 372."
+2112490-92,2016-12-13,2016-12-13T17:24:59,0,121,192,2,Rejeitada a Emenda. Sim: 121; Não: 192; Abstenção: 1; Total: 314.
+2112490-95,2016-12-13,2016-12-13T17:46:56,0,120,171,1,Rejeitada a Emenda. Sim: 120; Não: 171; Total: 291.
+2112490-105,2016-12-13,2016-12-13T19:05:52,1,229,124,2,Mantido o texto. Sim: 229; Não: 124; Abstenção: 1; Total: 354.
+2112490-107,2016-12-13,2016-12-13T19:28:35,0,148,208,1,Rejeitada a Emenda. Sim: 148; Não: 208: Total: 356.
+2112490-110,2016-12-13,2016-12-13T19:42:45,1,324,5,2,Aprovada a  Emenda n° 24. Sim: 324; Não: 5: Abstenção: 1; Total: 330.
+2112490-118,2016-12-13,2016-12-13T20:30:07,1,190,86,1,Mantido o texto. Sim: 190; Não: 86: Total: 276.
+2112490-124,2016-12-13,2016-12-13T20:46:08,0,112,230,1,Rejeitada a Emenda nº 183. Sim: 112; Não: 230; Total: 342.
+2110829-59,2016-12-14,2016-12-14T22:03:04,0,79,210,2,Rejeitada a Emenda n°4. Sim: 79; não: 210; abstenção: 1; total: 290.
+2110829-65,2016-12-14,2016-12-14T22:37:25,1,196,92,2,Mantido o texto. Sim: 196; não: 92; abstenção: 1; total: 289.
+2110829-68,2016-12-14,2016-12-14T22:52:41,0,85,193,2,Rejeitada a Emenda n° 11. Sim: 85; não: 193; abstenção: 1; Total: 279.
+2080237-226,2016-12-15,2016-12-15T14:21:45,0,96,160,12,Rejeitado o Requerimento. Sim: 96; não: 160; abstenções: 2; total: 258.
+2080237-233,2016-12-20,2016-12-20T13:29:54,0,14,255,38,Rejeitado o Requerimento. Sim: 14; não: 255; abstenções; 4; total; 273.
+2080237-260,2016-12-20,2016-12-20T16:32:54,1,296,12,4,"Aprovados os dispositivos do Substitutivo do Senado Federal ao Projeto de Lei Complementar nº 257-D, de 2016, com pareceres pela aprovação, ressalvados os destaques. Sim: 296; Não: 12; Abstenções: 3; Total: 311."
+2080237-266,2016-12-20,2016-12-20T17:35:06,0,3,325,2,"Rejeitados os dispositivos do Substitutivo do Senado Federal ao Projeto de Lei Complementar nº 257-D, de 2016, com pareceres pela rejeição, ressalvados os destaques. Sim: 3; Não: 325; Abstenção: 1; Total: 329."

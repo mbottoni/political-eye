@@ -1,0 +1,42 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2345281-63,2023-11-06,2023-11-06T19:53:20,,284,106,1,Mantido o texto. Sim: 284 ; não: 106; total: .390.
+2390639-8,2023-11-07,2023-11-07T18:01:10,1,277,33,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim:  277; não: 33 ; total:310.
+2399396-7,2023-11-07,2023-11-07T18:07:54,1,309,35,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 309; não: 35; total: 344.
+2397925-16,2023-11-07,2023-11-07T18:19:19,0,94,279,1,Rejeitado o Requerimento. Sim: 94; não: 279; total: 373.
+2397925-25,2023-11-07,2023-11-07T18:45:31,1,372,26,2,"Aprovado o Projeto de Lei nº 5.086, de 2023. Sim: 372; não: 26; abstenção: 1; total: 399."
+2344909-65,2023-11-07,2023-11-07T21:18:37,1,311,107,1,Aprovada a Emenda de Plenário n° 3. Sim: 311; Não: 107; total: 418.
+2115253-156,2023-11-08,2023-11-08T19:37:36,0,104,274,1,Rejeitado o Requerimento. Sim: 104; não: 274; total: 378.
+2115253-167,2023-11-08,2023-11-08T20:04:08,0,120,269,1,Rejeitado o Requerimento. Sim: 120; não: 269; total: 389.
+2115253-172,2023-11-08,2023-11-08T20:35:37,0,49,288,61,Rejeitado o Requerimento.Sim: 49; não: 288; abstenção: 2; total: 339.
+2115253-175,2023-11-08,2023-11-08T21:16:00,1,296,121,13,"Aprovado o Substitutivo do Senado Federal ao Projeto de Lei nº 6.385-C, de 2016, ressalvados os destaques. Sim: 296; não: 121; abstenção: 2; total: 419."
+2115253-179,2023-11-08,2023-11-08T21:33:07,,268,124,1,Mantido o texto. Sim: 268; não: 124; total: 392.
+2115253-183,2023-11-08,2023-11-08T21:53:12,1,286,112,1,"Aprovada a Redação Final assinada pelo relator, Dep. Vicentinho Júnior (PP-TO). Sim: 286; não: 112; total: 398."
+2391935-43,2023-11-08,2023-11-08T22:33:51,1,369,5,1,"Aprovado o Projeto de Lei nº 4.287, de 2023. Sim:  369; não: 5; total: 374."
+2393997-9,2023-11-08,2023-11-08T23:10:37,0,240,159,7,Rejeitado o Requerimento de Urgência (Art. 155 do RICD). Sim: 240; não: 159; abstenção: 1; total: 400.
+2404958-8,2023-11-21,2023-11-21T19:30:01,1,303,115,3,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim:303; não: 115; abstenção: 2; total: 420.
+2194442-74,2023-11-21,2023-11-21T19:46:23,0,63,349,2,Rejeitado o requerimento. Sim:63; não: 349; abstenção: 1; total: 413
+575585-69,2023-11-21,2023-11-21T20:35:48,0,53,332,1,Rejeitado o Requerimento. Sim: 53; não: 332; total: 385.
+575585-92,2023-11-21,2023-11-21T22:00:45,1,286,91,1,"Aprovado o Substitutivo ao Projeto de Lei nº 5.228, de 2019, apensado, adotado pela relatora da Comissão de Previdência, Assistência Social, Infância, Adolescência e Família, ressalvados os destaques. Sim: 286; não: 91; total: 377."
+575585-99,2023-11-21,2023-11-21T22:17:30,,312,104,1,Mantido o texto. Sim: 312; não: 104; total: 416.
+2405312-8,2023-11-21,2023-11-21T22:43:33,1,301,131,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 301; não: 131; total: 432.
+2312373-128,2023-11-22,2023-11-22T19:37:40,0,45,371,1,"Rejeitado o requerimento. Sim:  45; não: 371, total: 416."
+2312373-140,2023-11-22,2023-11-22T20:20:51,0,31,375,6,"Rejeitada a Emenda do Senado Federal ao Projeto de Lei nº 4.416, de 2023. Sim: 31, não: 375, abstenção: 2, total: 408."
+2355510-35,2023-11-22,2023-11-22T20:32:51,0,41,377,1,Rejeitado o Requerimento. Sim: 41; não: 377; total: 418.
+2355510-53,2023-11-22,2023-11-22T21:11:06,1,423,11,2,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 1.768, de 2023, adotada pela Relatora da Comissão de Indústria, Comércio e Serviços, ressalvados os destaques. Sim: 423; não: 11; abstenção: 1; total: 435."
+2381043-35,2023-11-22,2023-11-22T22:28:52,0,132,260,2,Rejeitado o Requerimento. Sim: 132; não: 260; abstenção: 1; total: 393.
+2381043-45,2023-11-22,2023-11-22T22:49:35,0,123,250,1,Rejeitado o Requerimento. Sim: 123; não: 250; total: 373.
+2381043-60,2023-11-22,2023-11-22T23:48:34,0,106,255,17,Rejeitado o Requerimento. Sim: 106; não: 255; abstenção: 1; total: 362.
+2381043-63,2023-11-22,2023-11-23T00:34:17,1,235,110,8,"Aprovado o Projeto de Lei nº 4.035, de 2023, ressalvados os destaques. Sim: 235; não: 110; abstenção: 1; total: 346."
+2381043-66,2023-11-22,2023-11-23T00:58:20,,205,53,57,Mantido o texto. Sim: 205; não: 53; abstenção: 5; total: 263.
+2190084-79,2023-11-29,2023-11-29T18:29:56,1,403,16,1,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 11.247, de 2018, adotada pelo relator da Comissão de Minas e Energia, ressalvados os destaques. Sim: 403; não: 16; total: 419."
+2190084-88,2023-11-29,2023-11-29T18:46:35,,387,38,1,Mantido o texto. Sim: 387; não: 38; total: 425.
+2190084-93,2023-11-29,2023-11-29T18:56:55,1,253,160,2,Aprovada a Emenda de Plenário nº 7. Sim: 253; não: 160; abstenção: 1; total: 414.
+2125189-161,2023-11-29,2023-11-29T19:06:53,0,98,292,2,Rejeitado o Requerimento. Sim: 98; não: 292; abstenção: 1; total: 391.
+2125189-174,2023-11-29,2023-11-29T20:07:48,0,106,308,1,Rejeitado o Requerimento. Sim: 106; não: 308; total: 414.
+2125189-176,2023-11-29,2023-11-29T20:16:57,1,305,101,2,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 7.082, de 2017, adotada pelo relator da Comissão de Constituição e Justiça e de Cidadania, ressalvados os destaques. Sim: 305; não: 101; abstenção: 1; total: 407."
+2125189-180,2023-11-29,2023-11-29T20:26:40,0,119,278,1,Rejeitada a Emenda de Plenário nº 17. Sim: 119; não: 278; total: 397.
+2125189-191,2023-11-29,2023-11-29T20:34:20,,276,105,1,Mantido o texto. Sim: 276; não: 105; total: 381.
+2299903-53,2023-11-29,2023-11-29T21:38:48,1,286,121,3,"Aprovado o Projeto de Lei nº 3.268, de 2021. Sim: 286; não: 121; abstenção: 2; total: 409."
+2398741-64,2023-11-29,2023-11-29T23:12:07,1,326,84,2,"Aprovado o Projeto de Lei Complementar nº 205, de 2023.Sim: 326; não: 84; abstenção: 1; total: 411."
+2407960-8,2023-11-29,2023-11-29T23:57:05,1,302,57,4,Aprovado o Requerimento de Urgência (art. 155 do RICD). Sim: 302; não: 57; total: 359.
+2333929-40,2023-11-29,2023-11-30T00:39:58,1,307,27,5,"Aprovado o Projeto de Lei nº 3.954, de 2023. Sim: 307; não: 27; abstenção: 1; total: 338."

@@ -1,0 +1,56 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2579995-8,2025-11-03,2025-11-03T20:32:59,1,275,146,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 275; Não: 146; Total: 421.
+2579996-8,2025-11-03,2025-11-03T20:49:35,1,295,118,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 295; Não: 118; Total: 413.
+2579999-8,2025-11-03,2025-11-03T21:04:46,0,236,178,1,Rejeitado o Requerimento de Urgência (Art. 155 do RICD). Sim: 236; Não: 178; Total: 414.
+2580122-8,2025-11-03,2025-11-03T21:17:32,1,386,26,4,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 386; Não: 26; Abstenção: 3; Total: 415.
+2576234-34,2025-11-03,2025-11-03T22:06:30,1,360,23,3,"Aprovado o Projeto de Lei Complementar nº 204, de 2025, ressalvado o destaque. Sim: 360; Não: 23; Abstenção: 2; Total: 385."
+2576234-41,2025-11-03,2025-11-03T22:22:43,,387,30,2,Mantido o texto. Sim: 387; Não: 30; Abstenção: 1; Total: 418.
+2122682-86,2025-11-04,2025-11-04T14:08:48,1,417,6,1,"Aprovada, em primeiro turno, a Proposta de Emenda à Constituição nº 39, de 2022. Sim: 417; Não: 6; Abstenção: 1; Total: 424."
+2122682-94,2025-11-04,2025-11-04T14:19:33,1,414,3,2,"Aprovada, em segundo turno, a Proposta de Emenda à Constituição nº 39, de 2022. Sim: 414; Não: 3; Abstenção: 2; Total: 419."
+2564274-29,2025-11-04,2025-11-04T14:31:30,0,125,287,1,Rejeitado o Requerimento. Sim: 125; Não: 287; Total: 412.
+2564274-37,2025-11-04,2025-11-04T15:15:52,1,299,119,5,"Aprovado o Projeto de Lei nº 4.750, de 2025. Sim: 299; Não: 119; Abstenção: 4; Total: 422."
+408349-216,2025-11-04,2025-11-04T18:54:02,,377,50,4,Mantido o texto. Sim: 377; Não: 50; Abstenção: 2; Total: 429.
+2157806-125,2025-11-04,2025-11-04T19:15:25,0,158,269,2,Rejeitado o Requerimento. Sim: 158; Não: 269; Abstenção: 1; Total: 428.
+2157806-131,2025-11-04,2025-11-04T20:51:10,1,308,103,2,Aprovado o Requerimento. Sim: 308; Não: 103; Abstenção: 1; Total: 412.
+2157806-137,2025-11-04,2025-11-04T21:15:46,1,330,118,4,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 8.889, de 2017, adotada pelo relator da Comissão Especial, ressalvados os destaques.  Sim: 330; Não: 118; Abstenção: 3; Total: 451."
+2483863-74,2025-11-05,2025-11-05T10:45:06,,382,17,1,Mantido o texto. Sim: 382; Não: 17; Total: 399.
+2448069-50,2025-11-05,2025-11-05T11:53:06,,295,118,1,Mantido o texto. Sim: 295; Não: 118; Total: 413.
+106701-223,2025-11-05,2025-11-05T12:42:37,1,427,1,1,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 347, de 2003, adotado pelo relator da Comissão de Meio Ambiente e Desenvolvimento Sustentável, ressalvado o destaque. Sim: 427; Não: 1; Total: 428."
+106701-227,2025-11-05,2025-11-05T12:56:44,1,269,154,1,Aprovada a Emenda de Plenário n. 7. Sim: 269; Não: 154; Total: 423.
+2526776-31,2025-11-05,2025-11-05T13:12:31,0,134,267,1,Rejeitado o Requerimento. Sim: 134; Não: 267; Total: 401.
+2157806-143,2025-11-05,2025-11-05T14:49:26,0,87,254,1,Rejeitado o Requerimento. Sim: 87; Não: 254; Total: 341.
+2157806-168,2025-11-05,2025-11-05T15:01:55,1,325,94,1,Aprovada a Emenda Aglutinativa nº 1. Sim: 325; Não: 94; Total: 419.
+2157806-177,2025-11-05,2025-11-05T15:29:30,,327,98,1,Mantido o texto. Sim: 327; Não: 98; Total: 425.
+2553457-17,2025-11-05,2025-11-05T17:02:20,1,313,119,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 313; Não: 119; Abstenção: 1; Total: 433.
+2482078-49,2025-11-05,2025-11-05T17:55:20,0,124,297,1,Rejeitado o Requerimento. Sim: 124; Não: 297; Total: 421.
+2482078-54,2025-11-05,2025-11-05T19:38:02,1,310,120,2,Aprovado o Requerimento. Sim: 310; Não: 120; Abstenção: 1; Total: 431.
+2482078-57,2025-11-05,2025-11-05T20:07:03,1,317,111,2,"Aprovado o Projeto de Decreto Legislativo nº 3, de 2025. Sim: 317; Não: 111; Abstenção: 1; Total: 429."
+2386051-80,2025-11-05,2025-11-05T20:25:46,0,120,295,1,Rejeitado o Requerimento. Sim: 120; Não: 295; Total: 415.
+2386051-84,2025-11-05,2025-11-05T20:59:13,0,114,294,1,Rejeitado o Requerimento. Sim: 114; Não: 294; Total: 408.
+2386051-90,2025-11-05,2025-11-05T21:43:04,0,100,259,2,Rejeitado o Requerimento. Sim: 100; Não: 259; Abstenção: 1; Total: 360.
+2386051-93,2025-11-05,2025-11-05T21:59:33,1,287,113,1,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 4.357, de 2023, adotada pelo relator da Comissão de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural, ressalvados os destaques. Sim: 287; Não: 113; Total: 400."
+2386051-101,2025-11-05,2025-11-05T22:12:27,,274,101,1,Mantido o texto. Sim: 274; Não: 101; Total: 375.
+2533204-41,2025-11-05,2025-11-05T22:33:27,1,265,33,3,"Aprovado o Projeto de Lei nº 3.292, de 2025. Sim: 265; Não: 33; Total: 298."
+2481858-53,2025-11-11,2025-11-11T17:12:32,1,411,3,1,"Aprovado o Substitutivo ao Projeto de Lei Complementar nº 124, de 2022, adotado pelo relator da Comissão de Constituição e Justiça e de Cidadania. Sim: 411; Não: 3; Total: 414."
+2399380-8,2025-11-12,2025-11-12T17:33:31,1,340,8,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 340; Não: 8; Total: 348.
+2570219-7,2025-11-12,2025-11-12T17:39:08,1,303,55,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 303; Não: 55; Total: 358.
+2583550-7,2025-11-12,2025-11-12T17:49:28,1,323,86,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 323; Não: 86; Total: 409.
+2583574-8,2025-11-12,2025-11-12T18:06:31,1,300,114,1,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 300; Não: 114; Total: 414.
+2564132-13,2025-11-12,2025-11-12T18:27:09,0,72,350,5,Rejeitado o Requerimento de Urgência (Art. 155 do RICD). Sim: 72; Não: 350; Abstenção: 4; Total: 426.
+2270325-88,2025-11-12,2025-11-12T20:25:56,1,348,100,2,"Aprovada a Subemenda Substitutiva Global ao Projeto de Lei Complementar nº 18, de 2021, adotada pelo relator da Comissão de Saúde, ressalvado o destaque. Sim: 348; Não: 100; Abstenção: 1; Total: 449."
+2270325-92,2025-11-12,2025-11-12T20:41:57,0,148,215,1,Rejeitada a Emenda de Plenário nº 6. Sim: 148; Não: 215; Total: 363.
+2579832-41,2025-11-18,2025-11-18T18:11:45,0,110,316,1,Rejeitado o Requerimento. Sim: 110; Não: 316; Total: 426.
+2579832-49,2025-11-18,2025-11-18T18:58:32,0,114,335,1,Rejeitado o Requerimento. Sim: 114; Não: 335; Total: 449.
+2579832-54,2025-11-18,2025-11-18T19:51:52,1,335,111,1,Aprovado o Requerimento. Sim: 335; Não: 111; Total: 446.
+2579832-61,2025-11-18,2025-11-18T20:35:55,0,156,306,1,Rejeitada a Preferência. Sim: 156; Não: 306; Total: 462.
+2579832-62,2025-11-18,2025-11-18T21:24:57,1,370,110,4,"Aprovado o Substitutivo ao Projeto de Lei nº 5.582, de 2025, adotado pelo relator da Comissão de Segurança Pública e Combate ao Crime Organizado, ressalvados os destaques. Sim: 370; Não: 110; Abstenção: 3; Total: 483."
+2579832-95,2025-11-18,2025-11-18T21:48:46,0,142,298,2,Rejeitada a Emenda de Plenário nº 33. Sim: 142; Não: 298; Abstenção: 1; Total: 441.
+2579832-96,2025-11-18,2025-11-18T22:01:24,,298,109,2,Mantido o texto. Sim: 298; Não: 109; Abstenção: 1; Total: 408.
+2579832-99,2025-11-18,2025-11-18T22:11:52,0,107,298,3,Rejeitada a preferência. Sim: 107; Não: 298; Abstenção: 2; Total: 407.
+2579832-105,2025-11-18,2025-11-18T22:26:21,1,349,40,2,Aprovada a Emenda de Plenário nº 25. Sim: 349; Não: 40; Abstenção: 1; Total: 390.
+2555110-45,2025-11-26,2025-11-26T17:33:13,,278,107,1,Mantido o texto. Sim: 278; Não: 107; Total: 385.
+2237596-92,2025-11-26,2025-11-26T17:59:38,1,386,7,1,"Aprovado o Substitutivo ao Projeto de Lei nº 331, de 2020, adotado pelo relator da Comissão de Constituição e Justiça e de Cidadania. Sim: 386; Não: 7; Total: 393."
+2164336-110,2025-11-26,2025-11-26T19:21:55,1,427,18,1,"Aprovado o Substitutivo Reformulado ao Projeto de Lei Complementar nº 453, de 2017, adotado pelo relator da Comissão de Constituição e Justiça e de Cidadania. Sim: 427; Não: 18; Total: 445."
+2524984-25,2025-11-26,2025-11-26T19:44:01,0,127,270,1,Rejeitado o Requerimento. Sim: 127; Não: 270; Total: 397.
+2524984-33,2025-11-26,2025-11-26T20:40:27,1,350,77,3,"Aprovado o Substitutivo ao Projeto de Lei nº 2.829, de 2025, adotado pelo relator da Comissão de Administração e Serviço Público, ressalvado o destaque. Sim: 350; Não: 77; Abstenção: 2; Total: 429."
+2524984-37,2025-11-26,2025-11-26T21:10:04,,313,88,3,Mantido o texto. Sim: 313; Não: 88; Abstenção: 2; Total: 403.

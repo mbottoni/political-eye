@@ -1,0 +1,18 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2244243-105,2020-08-04,2020-08-04T15:45:41,1,294,148,2,Aprovado o Requerimento. Sim: 294; não: 148; abstenção: 1; total: 443.
+2253431-33,2020-08-04,2020-08-04T17:41:38,0,12,412,1,Rejeitado o Requerimento. Sim: 12; não: 412; total: 424.
+2246359-31,2020-08-05,2020-08-05T15:53:15,1,244,232,3,Aprovado o Requerimento. Sim: 244; não: 232; abstenção: 2; total: 478.
+2250300-35,2020-08-05,2020-08-05T16:13:36,0,74,332,1,Rejeitado o Requerimento. Sim: 74; não: 332; total: 406.
+2250300-52,2020-08-05,2020-08-05T17:35:34,0,54,347,0,Rejeitado o Requerimento. Sim: 54; não 347; total: 401.
+2255363-43,2020-08-11,2020-08-11T19:47:52,0,10,434,1,Rejeitado o Requerimento. Sim: 10; não: 434; total: 444.
+2255363-59,2020-08-11,2020-08-11T21:17:15,0,210,257,2,Rejeitada a Emenda de Comissão n° 2. Sim: 210; não: 257; abstenção: 1; total: 468.
+2255363-71,2020-08-11,2020-08-11T22:08:07,0,157,254,1,Rejeitada a Emenda de Plenário nº 8. Sim: 157; não: 254; total: 411.
+2251922-8,2020-08-13,2020-08-13T13:29:17,1,301,137,2,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 301; não: 137; abstenção: 1; total: 439.
+2258907-9,2020-08-13,2020-08-13T14:29:48,1,350,19,4,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 350; não: 19; abstenção: 3; total: 372.
+2250977-41,2020-08-25,2020-08-25T18:21:35,0,85,318,0,Rejeitado o Requerimento. Sim: 85; não: 318;  total: 403.
+2250977-44,2020-08-25,2020-08-25T18:50:40,0,85,326,0,Rejeitado o Requerimento. Sim: 85; não: 326; total: 411.
+2250977-56,2020-08-25,2020-08-25T19:24:43,,306,109,2,Mantido o texto. Sim: 306; não: 109; abstenção: 1; total: 416.
+2228978-53,2020-08-25,2020-08-25T21:21:58,0,50,400,1,Rejeitado o Requerimento. Sim: 50; não: 400; abstenção: 1; total: 451.
+2255387-65,2020-08-26,2020-08-26T18:10:39,0,161,289,5,Rejeitada a Emenda de Plenário nº 2. Sim: 161; não: 289; abstenção: 4; total: 454.
+2255387-98,2020-08-26,2020-08-26T19:39:56,0,121,304,2,Rejeitada a Emenda de Plenário nº 54. Sim: 121; não: 304; abstenção: 1; total: 426.
+2251191-45,2020-08-26,2020-08-26T21:27:30,0,107,282,1,Rejeitada a Emenda de Comissão nº 11. Sim: 107; não: 282; total: 389.

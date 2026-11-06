@@ -1,0 +1,25 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+28692-121,2019-03-12,2019-03-12T18:00:11,0,96,275,1,Rejeitado o Requerimento. Sim: 96; não: 275; total: 371.
+28692-138,2019-03-12,2019-03-12T19:26:11,,269,121,2,Mantido o texto. Sim: 269; não: 121; abstenção: 1; total: 391.
+1672576-97,2019-03-19,2019-03-19T18:52:29,0,45,308,44,Rejeitado o Requerimento. Sim: 45; não: 308; abstenção: 4; total: 357.
+1672576-101,2019-03-19,2019-03-19T19:30:02,0,40,317,48,Rejeitado o Requerimento. Sim: 40; não: 317; abstenção: 1; total: 358.
+1672576-109,2019-03-19,2019-03-19T21:17:28,1,338,65,54,Aprovado o Requerimento. Sim: 338; não: 65; total: 403.
+1672576-120,2019-03-20,2019-03-20T17:04:38,0,17,269,39,Rejeitado o Requerimento. Sim: 17; não: 269; abstenção: 2; total: 288.
+1672576-124,2019-03-20,2019-03-20T17:28:53,0,26,234,23,Rejeitado o Requerimento. Sim: 26; não: 234; abstenção: 1; total: 261.
+1672576-128,2019-03-20,2019-03-20T17:47:36,0,24,322,39,Rejeitado o Requerimento. Sim: 24; não: 322; total: 346.
+1672576-133,2019-03-20,2019-03-20T18:35:07,0,36,342,46,Rejeitada a admissibilidade dos destaques simples. Sim: 36; não: 342; total: 378.
+1672576-136,2019-03-20,2019-03-20T19:12:24,1,329,44,51,"Aprovada a Subemenda Substitutiva Global de Plenário Reformulada ao Projeto de Lei n° 2.724, de 2015, oferecida pelo Relator da Comissão Especial, ressalvados os destaques. Sim: 329; não: 44; abstenção: 1; total: 374."
+1672576-141,2019-03-20,2019-03-20T19:49:48,,301,115,7,Mantido o texto. Sim: 301; não: 115; abstenção: 5; total: 421.
+1672576-147,2019-03-20,2019-03-20T20:12:17,0,42,333,22,Rejeitado o Requerimento. Sim: 42; não: 333; abstenção: 1; total: 376.
+1672576-150,2019-03-20,2019-03-20T20:35:40,0,158,246,2,Rejeitada a Emenda nº 17. Sim: 158; não: 246; abstenção: 1; total: 405.
+1672576-153,2019-03-20,2019-03-20T21:12:21,0,89,305,30,Rejeitada a Emenda nº 3. Sim: 89; não: 305; total: 394.
+2194357-6,2019-03-26,2019-03-26T17:01:51,1,334,30,50,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 334; não: 30; abstenção: 4; total: 368.
+2194540-7,2019-03-26,2019-03-26T17:34:31,1,329,47,5,Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 329; não: 47; abstenção: 4 ; total: 380.
+1672576-171,2019-03-26,2019-03-26T18:14:55,0,191,221,2,Rejeitada a Emenda nº 15. Sim: 191; não: 221; abstenção: 1; total: 413.
+1672576-177,2019-03-26,2019-03-26T18:56:00,,3,414,23,Suprimido o texto. Sim: 3; não: 414; abstenção: 1; total: 418.
+1672576-193,2019-03-26,2019-03-26T20:34:35,,310,132,3,Mantido o texto. Sim: 310; não: 132; abstenção: 2; total: 444.
+946494-64,2019-03-26,2019-03-26T21:04:23,1,448,3,0,"Aprovada, em primeiro turno, o Substitutivo adotado pela Comissão Especial à Proposta de Emenda à Constituição nº 2, de 2015, ressalvados os destaques. Sim: 448; não: 3; total: 451."
+946494-67,2019-03-26,2019-03-26T21:10:12,,5,389,0,Suprimido o texto. Sim: 5; não: 389: total: 394.
+946494-68,2019-03-26,2019-03-26T21:17:30,,2,436,1,Suprimido o texto. Sim: 2; não: 436; total: 438.
+946494-75,2019-03-26,2019-03-26T21:21:34,1,392,1,1,Aprovada as Emendas de Redação de nºs 1 a 4. Sim: 392; não: 1: total: 393.
+946494-77,2019-03-26,2019-03-26T21:38:35,1,453,6,1,"Aprovado, em segundo turno, a Proposta de Emenda à Constituição nº 2, de 2015. Sim: 453; não: 6; abstenção: 1; total: 460."

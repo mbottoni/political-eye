@@ -1,0 +1,35 @@
+id,data,hora_registro,aprovacao,votos_sim,votos_nao,votos_outros,descricao
+2158536-10,2019-07-09,2019-07-09T15:18:54,1,343,32,34,Aprovado o Requerimento. Sim: 343; não: 32; abstenção: 6; total: 381.
+2147241-38,2019-07-09,2019-07-09T16:47:39,0,19,346,39,Rejeitado o Requerimento. Sim: 19; não: 346; abstenção: 3; total: 368.
+2147241-44,2019-07-09,2019-07-09T17:48:01,0,17,243,26,Rejeitado o Requerimento. Sim: 17; não: 243; abstenção: 2; total: 262.
+2147241-47,2019-07-09,2019-07-09T18:27:41,0,15,335,29,Rejeitado o Requerimento. Sim: 15; não: 335; abstenção: 3; total: 353.
+2147241-51,2019-07-09,2019-07-09T19:24:30,1,391,28,35,Aprovado o Requerimento. Sim: 391; não: 28; abstenção: 3; total: 422.
+2147241-54,2019-07-09,2019-07-09T19:48:34,0,20,323,34,Rejeitada a admissibilidade dos destaques simples. Sim: 20; não: 323; abstenção: 3; total: 346.
+2147241-60,2019-07-09,2019-07-09T20:48:08,1,402,34,34,"Aprovado o Projeto de Lei 8.240, de 2017, ressalvados os destaques. Sim: 402; não: 34; abstenção: 4; total: 440."
+2192459-588,2019-07-09,2019-07-09T22:31:20,0,117,331,2,Rejeitado o Requerimento. Sim: 117; não: 331; total: 448.
+2192459-591,2019-07-09,2019-07-09T22:50:35,0,80,199,1,Rejeitado o Recurso. Sim: 80; não: 199; total: 279.
+2192459-601,2019-07-09,2019-07-10T00:44:15,1,353,118,1,Aprovado o Requerimento de encerramento da discussão. Sim: 353; não: 118; total: 471.
+2192459-609,2019-07-10,2019-07-10T13:37:53,0,29,334,83,Rejeitado o Requerimento. Sim: 29; não: 334; abstenção: 3; total: 366.
+2192459-612,2019-07-10,2019-07-10T14:14:33,0,43,299,61,Rejeitados os Requerimentos de votação parcelada. Sim: 43; não: 299; abstenção: 2; total: 344.
+2192459-616,2019-07-10,2019-07-10T15:21:59,1,324,34,82,Aprovado o Requerimento. Sim: 324; não: 34; abstenção: 5; total: 363.
+2192459-619,2019-07-10,2019-07-10T16:14:51,0,22,345,91,Rejeitada a admissibilidade dos destaques simples. Sim: 22; não: 345; abstenção: 1; total: 368.
+2192459-625,2019-07-10,2019-07-10T17:06:06,0,25,314,81,Rejeitado o Requerimento. Sim: 25; não: 314; abstenção: 2; total: 341.
+2192459-636,2019-07-10,2019-07-10T20:09:35,1,379,131,0,"Aprovado, em primeiro turno, o Substitutivo da Comissão Especial à Proposta de Emenda à Constituição nº 6, de 2019, ressalvados os destaques. Sim: 379; não: 131; total: 510."
+2192459-640,2019-07-10,2019-07-10T20:53:02,0,265,184,3,Rejeitada a Emenda nº 176. Sim: 265; não: 184; abstenção: 2; total: 451.
+2192459-646,2019-07-11,2019-07-11T18:27:59,0,75,339,53,Rejeitado o Requerimento. Sim: 75; não: 339; abstenção: 3; total: 417.
+2192459-649,2019-07-11,2019-07-11T20:20:30,1,344,132,15,Aprovada a Emenda Aglutinativa nº 5. Sim: 344; não: 132; abstenção: 15; total: 491.
+2192459-653,2019-07-11,2019-07-11T21:23:04,,334,155,0,Mantido o texto. Sim: 334; não: 155; total: 489.
+2192459-657,2019-07-11,2019-07-11T22:15:48,,322,164,2,Mantido o texto. Sim: 322; não: 164; abstenção: 2; total: 488.
+2192459-662,2019-07-11,2019-07-11T22:49:51,0,58,347,65,Rejeitado o Requerimento. Sim: 58; não: 347; abstenção: 2; total: 407.
+2192459-665,2019-07-11,2019-07-12T00:05:58,,326,164,1,Mantido o texto. Sim: 326; não: 164; abstenção: 1; total: 491.
+2192459-668,2019-07-11,2019-07-12T00:49:48,1,467,15,2,Aprovada a Emenda Aglutinativa n° 8. Sim: 467; não: 15; abstenção: 1; total: 483.
+2192459-671,2019-07-11,2019-07-12T01:41:47,,15,445,1,Suprimido o texto. Sim: 15; não: 445; total: 460.
+2192459-690,2019-07-12,2019-07-12T12:52:25,0,32,260,63,Rejeitado o Requerimento. Sim: 32; não: 260; abstenção: 1; total: 293.
+2192459-692,2019-07-12,2019-07-12T13:47:55,0,165,296,1,Rejeitada a Emenda Aglultinativa nº 4. Sim: 165; não: 296; total: 461.
+2192459-696,2019-07-12,2019-07-12T15:06:00,,387,103,1,Mantido o texto. Sim: 387; não: 103; total: 490.
+2192459-704,2019-07-12,2019-07-12T17:07:23,,25,465,2,Suprimido o texto. Sim: 25; não: 465; abstenção: 1; total: 491.
+2192459-705,2019-07-12,2019-07-12T17:09:55,0,21,243,40,Rejeitado o Requerimento. Sim: 21; não: 243; abstenção: 1; total: 265.
+2192459-724,2019-07-12,2019-07-12T18:13:04,,328,156,0,Mantido o texto. Sim: 328; não: 156; total: 484.
+2192459-727,2019-07-12,2019-07-12T19:04:22,,346,131,0,Mantido o texto. Sim: 346; não: 131; total: 477.
+2192459-730,2019-07-12,2019-07-12T19:32:18,,340,129,2,Mantido o texto. Sim: 340; não: 129; abstenção: 1; total: 470.
+2192459-734,2019-07-12,2019-07-12T20:27:39,1,435,3,2,"Aprovada a Emenda de Redação nº 1. Sim: 435, não: 3; abstenção: 1; total: 439."

@@ -1,0 +1,67 @@
+name: update
+
+# Plenário votes Tuesday to Thursday, and the Câmara republishes its bulk files
+# every night (around 04:00-07:00 UTC). Running Saturday morning means each
+# commit is one legislative week, and its diff is what changed that week,
+# including any corrections to earlier months.
+on:
+  schedule:
+    - cron: "37 10 * * 6"   # Saturdays, 10:37 UTC
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "Years to rebuild, space-separated (empty = previous and current year)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Test
+        run: uv run pytest -q
+
+      - name: Download and rebuild
+        env:
+          YEARS: ${{ inputs.years }}
+        run: |
+          if [[ ! "$YEARS" =~ ^[0-9\ ]*$ ]]; then
+            echo "years must be digits and spaces, got: $YEARS" >&2
+            exit 1
+          fi
+          read -ra years <<< "$YEARS"
+          uv run python -m camaragraphs update "${years[@]}"
+
+      - name: Commit if the data changed
+        run: |
+          # Stage first: a new month is an untracked file, invisible to a plain
+          # `git diff`. sources.json changes nightly on the server side, so
+          # only commit when the tables themselves moved.
+          git add data README.md
+          if git diff --staged --quiet -- . ':!data/sources.json'; then
+            echo "No data changes."
+            exit 0
+          fi
+          months=$(git diff --staged --name-only -- data/votes data/authorship | xargs -rn1 basename | sed 's/\.csv$//' | sort -u | tr '\n' ' ')
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: update through $(date -u +%F)" -m "Months changed: ${months:-none (index only)}"
+          git push || { git pull --rebase && git push; }

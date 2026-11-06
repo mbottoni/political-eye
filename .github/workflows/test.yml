@@ -1,0 +1,36 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Test
+        run: uv run pytest -q
+
+      # The committed data must load and produce graphs with the current code.
+      # (Latest month with votes: January and July recesses have none.)
+      - name: Smoke-test the latest voting month
+        run: |
+          uv run python - <<'EOF'
+          import pandas as pd
+          import camaragraphs as cg
+          idx = pd.read_csv("data/index.csv")
+          m = idx[idx.covote_nodes > 0].month.iloc[-1]
+          gv, gc = cg.aligned(m)
+          print(m, gv.number_of_nodes(), gv.number_of_edges(), gc.number_of_edges())
+          assert gv.number_of_nodes() > 0
+          EOF

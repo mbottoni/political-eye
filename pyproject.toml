@@ -1,0 +1,26 @@
+[project]
+name = "camara-graphs"
+version = "0.1.0"
+description = "Monthly co-voting and co-authorship graphs of Brazil's Câmara dos Deputados, rebuilt weekly from the official open data."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Maruan Ottoni" }]
+keywords = ["networks", "graphs", "roll-call", "brazil", "congress", "temporal-graphs", "dataset"]
+dependencies = ["numpy>=1.26", "pandas>=2.1", "networkx>=3.2"]
+
+[project.urls]
+Homepage = "https://github.com/mbottoni/camara-graphs"
+
+[project.scripts]
+camaragraphs = "camaragraphs.__main__:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["camaragraphs"]

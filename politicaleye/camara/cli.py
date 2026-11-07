@@ -10,7 +10,7 @@ from pathlib import Path
 
 from ..io import write_sources
 from ..paths import REPO
-from . import graphs, summary
+from . import graphs, orientations, summary
 from .build import build_year
 from .fetch import DATASETS, fetch_years
 
@@ -67,6 +67,12 @@ def cmd_export(a) -> int:
     return 0
 
 
+def cmd_discipline(a) -> int:
+    df = orientations.discipline(a.month, lop=a.lop, data_dir=a.data)
+    df.to_csv(sys.stdout, index=False, lineterminator="\n")
+    return 0
+
+
 def register(sources: argparse._SubParsersAction) -> None:
     p = sources.add_parser("camara", help="Câmara dos Deputados: monthly co-voting and co-authorship graphs")
     p.add_argument("--data", type=Path, default=REPO / "data" / "camara")
@@ -98,3 +104,8 @@ def register(sources: argparse._SubParsersAction) -> None:
     e.add_argument("--exclude", default=",".join(sorted(graphs.EXCLUDE_TYPES)),
                    help="comma-separated types to drop ('' keeps all)")
     e.set_defaults(fn=cmd_export)
+
+    d = sub.add_parser("discipline", help="print one month's votes with party and government, per deputy, as CSV")
+    d.add_argument("month", help="YYYY-MM")
+    d.add_argument("--lop", type=float, default=graphs.LOP)
+    d.set_defaults(fn=cmd_discipline)

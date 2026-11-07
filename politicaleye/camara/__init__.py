@@ -21,10 +21,12 @@ from .graphs import (
     series,
     vote_matrix,
 )
+from .orientations import applicable, decode, discipline, party_key
 
 __all__ = [
     "EXCLUDE_TYPES",
     "LOP", "MAX_AUTHORS", "MIN_ITEMS", "MIN_SHARED", "TAU", "Month", "aligned",
     "cosponsor_edges", "covote_edges", "graph", "legislatura", "load_month",
     "months", "series", "vote_matrix",
+    "applicable", "decode", "discipline", "party_key",
 ]

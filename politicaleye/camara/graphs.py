@@ -52,11 +52,12 @@ def _csv(root: str | Path, rel: str, **kw) -> pd.DataFrame:
 
 @dataclass(frozen=True)
 class Month:
-    """The four tidy tables for one month. Treat the frames as read-only."""
+    """The five tidy tables for one month. Treat the frames as read-only."""
 
     month: str
     votacoes: pd.DataFrame
     votes: pd.DataFrame
+    orientations: pd.DataFrame
     authorship: pd.DataFrame
     deputies: pd.DataFrame
 
@@ -66,7 +67,9 @@ def _load(month: str, root: str | Path) -> Month:
     return Month(
         month=month,
         votacoes=_csv(root, f"votacoes/{month}.csv", dtype=str),
-        votes=_csv(root, f"votes/{month}.csv", dtype={"votacao_id": str, "deputado_id": "int64", "voto": str}),
+        votes=_csv(root, f"votes/{month}.csv",
+                   dtype={"votacao_id": str, "deputado_id": "int64", "voto": str, "partido": str}),
+        orientations=_csv(root, f"orientations/{month}.csv", dtype=str),
         authorship=_csv(root, f"authorship/{month}.csv", dtype={
             "proposicao_id": "int64", "sigla_tipo": str, "data_apresentacao": str,
             "deputado_id": "int64", "ordem_assinatura": str, "proponente": str,

@@ -23,12 +23,17 @@ VOTACOES = ["id", "data", "dataHoraRegistro", "siglaOrgao", "aprovacao", "votosS
 VOTOS = ["idVotacao", "dataHoraVoto", "voto", "deputado_id", "deputado_nome", "deputado_siglaPartido", "deputado_siglaUf"]
 PROPS = ["id", "siglaTipo", "dataApresentacao"]
 AUTORES = ["idProposicao", "idDeputadoAutor", "nomeAutor", "siglaPartidoAutor", "siglaUFAutor", "ordemAssinatura", "proponente"]
+ORIENT = ["idVotacao", "uriVotacao", "siglaOrgao", "descricao", "siglaBancada", "uriBancada", "orientacao"]
 
 NAMES = {"10": "Ana", "20": "Bia", "30": "Caio", "40": "Davi", "100": "Eva"}
 
 
 def vote(vid, t, voto, dep, party="P1"):
     return [vid, t, voto, dep, NAMES[dep], party, "SP"]
+
+
+def orient(vid, bancada, orientacao, orgao="PLEN"):
+    return [vid, f"https://dadosabertos.camara.leg.br/api/v2/votacoes/{vid}", orgao, "", bancada, "", orientacao]
 
 
 def author(pid, dep, order="1"):
@@ -61,8 +66,22 @@ def write_raw_2025(raw: Path) -> None:
         *[vote("v3", "2025-03-12T15:01:00", "Sim", d, party="B" if d == "20" else "P1") for d in ("10", "20", "30", "40")],
         vote("v4", "2025-03-12T16:01:00", "Sim", "10"),
         vote("v5", "2025-04-01T15:01:00", "Sim", "10"),
-        vote("v5", "2025-04-01T15:01:00", "Não", "20"),
+        vote("v5", "2025-04-01T15:01:00", "Não", "20", party="C"),
         vote("v6", "2024-12-30T15:01:00", "Sim", "10"),
+    ])
+    _raw(raw / "votacoesOrientacoes-2025.csv", ORIENT, [
+        orient("v1", "P1", "Sim"),
+        orient("v1", "P1", "Sim"),            # duplicate
+        orient("v1", "A", "Não"),
+        orient("v1", "Governo", "Sim"),
+        orient("v2", "P1", ""),               # no orientation: the federation's applies
+        orient("v2", "B", "Liberado"),        # freed: the federation's does not apply
+        orient("v2", "Fdr P1-B", "Não"),
+        orient("v2", "GOV.", "Não"),
+        orient("v3", "P1", "Sim"),            # unanimous vote: kept here, ignored by discipline
+        orient("v4", "P1", "Sim", "CCJC"),    # committee vote: dropped
+        orient("v999", "P1", "Sim"),          # not a kept votação: dropped
+        orient("v5", "P1", ""),               # April: P1 listed but gave none; C not listed at all
     ])
     _raw(raw / "proposicoes-2025.csv", PROPS, [
         ["1", "PL", "2025-03-05T10:00:00"],

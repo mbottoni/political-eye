@@ -4,7 +4,8 @@ Output per month ``YYYY-MM`` (all CSV, sorted, ``\\n`` line endings, so a
 rebuild that changes nothing produces no git diff):
 
     data/camara/votacoes/YYYY-MM.csv     Plenário roll-call votes (one row per vote)
-    data/camara/votes/YYYY-MM.csv        how each deputy voted in each of them
+    data/camara/votes/YYYY-MM.csv        how each deputy voted in each of them, and their party then
+    data/camara/orientations/YYYY-MM.csv how each party, federation, bloc and leadership oriented
     data/camara/authorship/YYYY-MM.csv   deputy signatures on proposições presented
     data/camara/deputies/YYYY-MM.csv     everyone in either table, with party and UF
 
@@ -55,6 +56,19 @@ def load_votes(raw: Path, year: int) -> tuple[pd.DataFrame, pd.DataFrame, dict]:
     vv = vv.sort_values("dataHoraVoto").drop_duplicates(["idVotacao", "deputado_id"], keep="last")
     report["votes_duplicate"] = n - len(vv)
     return vt, vv, report
+
+
+def load_orientations(raw: Path, year: int, votacao_ids: pd.Series) -> tuple[pd.DataFrame, dict]:
+    """Orientations for the kept votações, as published (names decoded later)."""
+    o = _read(raw / f"votacoesOrientacoes-{year}.csv", ["idVotacao", "siglaBancada", "orientacao"])
+    o = o[o.idVotacao.isin(votacao_ids)]
+    n = len(o)
+    o = o.drop_duplicates(["idVotacao", "siglaBancada"], keep="last")
+    report = {
+        "orientations_duplicate": n - len(o),
+        "votacoes_without_orientation": int((~votacao_ids.isin(o.idVotacao)).sum()),
+    }
+    return o, report
 
 
 def load_authorship(raw: Path, year: int) -> tuple[pd.DataFrame, dict]:
@@ -112,7 +126,8 @@ def build_year(year: int, raw: Path, data_dir: Path) -> dict:
     """Rebuild every month of ``year``. Returns counts of what was dropped."""
     vt, vv, r1 = load_votes(raw, year)
     au, r2 = load_authorship(raw, year)
-    report = {"year": year, **r1, **r2}
+    vo, r3 = load_orientations(raw, year, vt.id)
+    report = {"year": year, **r1, **r3, **r2}
 
     vt = vt.assign(month=vt.data.str[:7])
     vv = vv.merge(vt[["id", "month", "dataHoraRegistro"]], left_on="idVotacao", right_on="id")
@@ -120,7 +135,7 @@ def build_year(year: int, raw: Path, data_dir: Path) -> dict:
     months = sorted(set(vt.month) | set(au.month))
 
     stale = {
-        p for sub in ("votacoes", "votes", "authorship", "deputies")
+        p for sub in ("votacoes", "votes", "orientations", "authorship", "deputies")
         for p in (data_dir / sub).glob(f"{year}-*.csv")
     }
     for month in months:
@@ -137,7 +152,16 @@ def build_year(year: int, raw: Path, data_dir: Path) -> dict:
         votes = (
             mvv.assign(_o=mvv.idVotacao.map(order), _k=_as_int(mvv.deputado_id))
             .sort_values(["_o", "_k"])
-            .rename(columns={"idVotacao": "votacao_id"})[["votacao_id", "deputado_id", "voto"]]
+            .rename(columns={"idVotacao": "votacao_id", "deputado_siglaPartido": "partido"})
+            [["votacao_id", "deputado_id", "voto", "partido"]]
+        )
+
+        mvo = vo[vo.idVotacao.isin(mvt.id)]
+        orientations = (
+            mvo.assign(_o=mvo.idVotacao.map(order))
+            .sort_values(["_o", "siglaBancada"])
+            .rename(columns={"idVotacao": "votacao_id", "siglaBancada": "bancada"})
+            [["votacao_id", "bancada", "orientacao"]]
         )
 
         authorship = (
@@ -152,6 +176,7 @@ def build_year(year: int, raw: Path, data_dir: Path) -> dict:
         out = {
             "votacoes": votacoes,
             "votes": votes,
+            "orientations": orientations,
             "authorship": authorship,
             "deputies": _deputies(mvv, mau),
         }
@@ -165,6 +190,7 @@ def build_year(year: int, raw: Path, data_dir: Path) -> dict:
     report["months"] = len(months)
     report["votacoes"] = int(len(vt))
     report["votes"] = int(len(vv))
+    report["orientations"] = int(len(vo))
     report["authorship_rows"] = int(len(au))
     _log(" ".join(f"{k}={v}" for k, v in report.items()))
     return report

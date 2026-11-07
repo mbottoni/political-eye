@@ -287,6 +287,102 @@
     "etag": "\"6aed78e1-4a6cee\"",
     "last_modified": "Fri, 06 Nov 2026 06:51:13 GMT"
   },
+  "votacoesOrientacoes-2015": {
+    "dataset": "votacoesOrientacoes",
+    "year": 2015,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2015.csv",
+    "size": 1298933,
+    "etag": "\"6aed7cf1-13d1f5\"",
+    "last_modified": "Fri, 06 Nov 2026 07:08:33 GMT"
+  },
+  "votacoesOrientacoes-2016": {
+    "dataset": "votacoesOrientacoes",
+    "year": 2016,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2016.csv",
+    "size": 1245308,
+    "etag": "\"6aed7c03-13007c\"",
+    "last_modified": "Fri, 06 Nov 2026 07:04:35 GMT"
+  },
+  "votacoesOrientacoes-2017": {
+    "dataset": "votacoesOrientacoes",
+    "year": 2017,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2017.csv",
+    "size": 1222948,
+    "etag": "\"6aed7c8c-12a924\"",
+    "last_modified": "Fri, 06 Nov 2026 07:06:52 GMT"
+  },
+  "votacoesOrientacoes-2018": {
+    "dataset": "votacoesOrientacoes",
+    "year": 2018,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2018.csv",
+    "size": 729109,
+    "etag": "\"6aed7b71-b2015\"",
+    "last_modified": "Fri, 06 Nov 2026 07:02:09 GMT"
+  },
+  "votacoesOrientacoes-2019": {
+    "dataset": "votacoesOrientacoes",
+    "year": 2019,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2019.csv",
+    "size": 1701827,
+    "etag": "\"6aed7c66-19f7c3\"",
+    "last_modified": "Fri, 06 Nov 2026 07:06:14 GMT"
+  },
+  "votacoesOrientacoes-2020": {
+    "dataset": "votacoesOrientacoes",
+    "year": 2020,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2020.csv",
+    "size": 2203269,
+    "etag": "\"6aed7b6c-219e85\"",
+    "last_modified": "Fri, 06 Nov 2026 07:02:04 GMT"
+  },
+  "votacoesOrientacoes-2021": {
+    "dataset": "votacoesOrientacoes",
+    "year": 2021,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2021.csv",
+    "size": 5484729,
+    "etag": "\"6aed7bc9-53b0b9\"",
+    "last_modified": "Fri, 06 Nov 2026 07:03:37 GMT"
+  },
+  "votacoesOrientacoes-2022": {
+    "dataset": "votacoesOrientacoes",
+    "year": 2022,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2022.csv",
+    "size": 3395543,
+    "etag": "\"6aed7bc7-33cfd7\"",
+    "last_modified": "Fri, 06 Nov 2026 07:03:35 GMT"
+  },
+  "votacoesOrientacoes-2023": {
+    "dataset": "votacoesOrientacoes",
+    "year": 2023,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2023.csv",
+    "size": 1052068,
+    "etag": "\"6aed7c94-100da4\"",
+    "last_modified": "Fri, 06 Nov 2026 07:07:00 GMT"
+  },
+  "votacoesOrientacoes-2024": {
+    "dataset": "votacoesOrientacoes",
+    "year": 2024,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2024.csv",
+    "size": 1023616,
+    "etag": "\"6aed7c22-f9e80\"",
+    "last_modified": "Fri, 06 Nov 2026 07:05:06 GMT"
+  },
+  "votacoesOrientacoes-2025": {
+    "dataset": "votacoesOrientacoes",
+    "year": 2025,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2025.csv",
+    "size": 1095383,
+    "etag": "\"6aed7d63-10b6d7\"",
+    "last_modified": "Fri, 06 Nov 2026 07:10:27 GMT"
+  },
+  "votacoesOrientacoes-2026": {
+    "dataset": "votacoesOrientacoes",
+    "year": 2026,
+    "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2026.csv",
+    "size": 453882,
+    "etag": "\"6aed7bb5-6ecfa\"",
+    "last_modified": "Fri, 06 Nov 2026 07:03:17 GMT"
+  },
   "votacoesVotos-2015": {
     "dataset": "votacoesVotos",
     "year": 2015,

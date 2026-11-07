@@ -6,13 +6,14 @@ and the explorer use.
 
 ## Source
 
-Four yearly bulk files from the Câmara's open data portal,
+Five yearly bulk files from the Câmara's open data portal,
 `https://dadosabertos.camara.leg.br/arquivos/<dataset>/csv/<dataset>-<year>.csv`:
 
 | dataset | what it gives us |
 |---|---|
 | `votacoes` | every votação: date, body (`siglaOrgao`), outcome, description |
-| `votacoesVotos` | how each deputy voted, for votações with a per-deputy record |
+| `votacoesVotos` | how each deputy voted, for votações with a per-deputy record, and their party at that moment |
+| `votacoesOrientacoes` | how each party, federation, bloc and leadership told its members to vote |
 | `proposicoes` | every proposição: type (`siglaTipo`) and presentation date |
 | `proposicoesAutores` | every signer of every proposição |
 
@@ -115,6 +116,79 @@ Capped, it had 0.07 and 0.05.
 the cap. A deputy who only joined signature drives is an isolated node, not a
 missing one.
 
+## Party orientations
+
+**What is published.** For each votação, one row per *bancada* that oriented,
+kept as published in `data/camara/orientations/` (`votacao_id, bancada,
+orientacao`) for the Plenário roll calls above. The orientation is `Sim`,
+`Não`, `Obstrução`, `Liberado` (members are free), `Abstenção` (6 times, all
+in 2015), or empty: the bancada is listed but gave no orientation, which
+appears from 2021 on. Almost every roll call has orientations (all but 5 of
+about 3,900 since 2015).
+
+**What a bancada is.** `politicaleye.camara.decode()` reads the name:
+
+- **A party**, under a label that is often cut short (`Solidaried`,
+  `Republican`) and that differs from the deputies' own records (`SOLIDARI`,
+  `REPUBLIC`, `PP**`). Both sides are matched on one key (`party_key()`), which
+  also maps renames to the current name: PMDB→MDB, PR→PL, PPS→Cidadania,
+  PTN→Podemos, PEN→Patriota, PTdoB→Avante, PSDC→DC, PRB→Republicanos.
+  Mergers are not mapped: DEM and PSL both existed before they became União.
+- **A federation** (from 2023), whose name lists its parties:
+  `Fdr PT-PCdoB-PV`.
+- **A bloc**, named by concatenating its parties' abbreviations
+  (`PmdbPpPtbPscPhsPen`, `Bl MdbPsdRepPode`). A federation inside a bloc is
+  written `Fdr` plus its first party (`FdrPt` means PT, PCdoB and PV). Long
+  names are cut off with `...`, and the parties after the cut cannot be
+  known. The Câmara's blocs API lists only today's blocs, with no dates, so
+  it is not used for past votes.
+- **A leadership**: the Government (`GOV.` until 2022, then `Governo`), the
+  Majority, the Minority, the Opposition.
+
+**Which orientation applies to a deputy.** The party is the one on the vote
+record (`partido` in `data/camara/votes/`, recorded at the moment of the
+vote), so a deputy who switched parties mid-month is held to the right party
+on each side of the switch. That party's own orientation applies first, then
+its federation's, then its bloc's. An empty orientation passes to the next
+level; `Liberado` does not. If two bancadas at the same level disagree for a
+party, no orientation applies.
+
+**Discipline.** `politicaleye.camara.discipline(month)` (or
+`python -m politicaleye camara discipline YYYY-MM`) counts, per deputy, the
+contested votes of the co-voting graph (lopsided votes dropped: a unanimous
+vote says nothing about discipline), coded the same way:
+
+- `with_party`: of the votes where the party had a line to follow (`Sim`,
+  `Não`, `Obstrução`), the share where the deputy voted it. An `Obstrução`
+  orientation is followed by an `Obstrução` or `Não` vote, as in the vote
+  coding.
+- `with_gov`: the same against the Government leader's orientation.
+- `n_free`: the party freed its members. `n_none`: the party, federation or
+  bloc is listed but gave no orientation. `n_unknown`: the deputy's party
+  matches no published bancada, almost always because a bloc's name was cut
+  off.
+
+**Coverage, and the 2025 gap.** `data/camara/index.csv` has, per month,
+`orientation_coverage` (the share of contested votes whose party matches a
+published bancada), `oriented_share` (the share with a line to follow), and
+the pooled `with_party` and `with_gov`.
+
+- **2015–2022:** median monthly coverage 95–100%.
+- **2023–2026:** lower, because large blocs' names are cut off. In 2023 the
+  missing parties (PDT, PSB, Avante, Solidariedade, Patriota) are the hidden
+  tail of `Bl UniPpFdrPsdbCid...`. In 2026 they are Republicanos, MDB,
+  Podemos and PSDB, the tail of `Bl UniPpPsd...`.
+- **February to October 2025:** almost every party sat in one bloc
+  (`Bl PlFdrPTUniPp...`) that gave no orientation on most votes. The open
+  data (the bulk files and the API alike) records no separate orientation
+  for its parties.
+
+A month's `with_party` is left empty when under half of its contested votes
+had a line to follow (`MIN_ORIENTED` in `summary.py`), since it would describe
+only the few parties that did orient: February to October 2025, and
+February 2019, the first month of the 56th legislature. The per-deputy
+numbers stay correct for deputies whose party did orient.
+
 ## Months and vertex sets
 
 **Buckets.** Months are calendar months: the votação date for votes, and
@@ -139,7 +213,8 @@ Agreement over fewer than about 20 contested votes is noisy.
 - *Party:* a deputy's party is the one on their latest record that month,
   with vote records preferred. Deputies switch parties (14 did in 2025), and
   parties merge (DEM and PSL became União Brasil in 2022). Use the deputy id
-  as the identity, never the party.
+  as the identity, never the party. Each vote also carries the party at the
+  moment of the vote (`partido` in `data/camara/votes/`).
 
 ## Rows that are dropped
 
@@ -150,8 +225,6 @@ every such count.
 
 ## Not included (yet)
 
-- **Party orientations** (`votacoesOrientacoes`, how each party leader told
-  the party to vote). This would allow party-discipline features per edge.
 - **The Senado**, which publishes its own API. It will be its own source
   in this repo (`data/senado/`), not part of these tables.
 - **Committee and symbolic votes.**

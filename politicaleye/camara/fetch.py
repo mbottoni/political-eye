@@ -13,7 +13,7 @@ from pathlib import Path
 from ..fetch import download, log
 
 BASE_URL = "https://dadosabertos.camara.leg.br/arquivos"
-DATASETS = ("votacoes", "votacoesVotos", "proposicoes", "proposicoesAutores")
+DATASETS = ("votacoes", "votacoesVotos", "votacoesOrientacoes", "proposicoes", "proposicoesAutores")
 
 
 @dataclass

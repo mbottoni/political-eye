@@ -7,6 +7,12 @@ from pathlib import Path
 import pandas as pd
 
 from . import graphs as g
+from . import orientations as o
+
+# Below this share of contested votes with a party orientation to follow, a
+# month's with_party would describe only the few parties that oriented; it is
+# left empty (the per-deputy numbers are still right). See methodology/camara.md.
+MIN_ORIENTED = 0.5
 
 
 def month_row(month: str, data_dir: Path) -> dict:
@@ -18,6 +24,12 @@ def month_row(month: str, data_dir: Path) -> dict:
     ec_on = ec[ec.n_items >= g.MIN_ITEMS]
     au = d.authorship[~d.authorship.sigla_tipo.isin(list(g.EXCLUDE_TYPES))]
     k = au.groupby("proposicao_id").size()
+
+    disc = o.discipline(month, data_dir=data_dir)
+    n_votes, n_party, n_gov = int(disc.n_votes.sum()), int(disc.n_party.sum()), int(disc.n_gov.sum())
+
+    def share(num, den) -> float | None:
+        return round(num / den, 4) if den else None
 
     def density(n_nodes: int, n_edges: int) -> float:
         return round(2 * n_edges / (n_nodes * (n_nodes - 1)), 4) if n_nodes > 1 else 0.0
@@ -40,6 +52,12 @@ def month_row(month: str, data_dir: Path) -> dict:
         "cosponsor_edges": len(ec_on),
         "cosponsor_density": density(len(nc), len(ec_on)),
         "aligned_nodes": len(set(nv.tolist()) & set(nc.tolist())),
+        # Party orientations, over the same contested votes (see orientations.py).
+        "orientation_coverage": share(n_votes - int(disc.n_unknown.sum()), n_votes),
+        "oriented_share": share(n_party, n_votes),
+        "with_party": share(int(disc.n_with_party.sum()), n_party)
+        if n_votes and n_party / n_votes >= MIN_ORIENTED else None,
+        "with_gov": share(int(disc.n_with_gov.sum()), n_gov),
     }
 
 

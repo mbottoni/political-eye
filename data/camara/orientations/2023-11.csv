@@ -1,0 +1,411 @@
+votacao_id,bancada,orientacao
+2345281-63,Bl MdbPsdRepPode,Sim
+2345281-63,Bl UniPpFdrPsdbCid...,Sim
+2345281-63,Fdr PSOL-REDE,Sim
+2345281-63,Fdr PT-PCdoB-PV,Sim
+2345281-63,Governo,Sim
+2345281-63,Maioria,Sim
+2345281-63,Minoria,Não
+2345281-63,Novo,Não
+2345281-63,Oposição,Não
+2345281-63,PL,Não
+2390639-8,Bl MdbPsdRepPode,Sim
+2390639-8,Bl UniPpFdrPsdbCid...,Sim
+2390639-8,Fdr PSOL-REDE,
+2390639-8,Fdr PT-PCdoB-PV,Sim
+2390639-8,Governo,Sim
+2390639-8,Maioria,Sim
+2390639-8,Minoria,Liberado
+2390639-8,Novo,Não
+2390639-8,Oposição,Liberado
+2390639-8,PL,Sim
+2399396-7,Bl MdbPsdRepPode,Sim
+2399396-7,Bl UniPpFdrPsdbCid...,Sim
+2399396-7,Fdr PSOL-REDE,Sim
+2399396-7,Fdr PT-PCdoB-PV,Sim
+2399396-7,Governo,Sim
+2399396-7,Maioria,Sim
+2399396-7,Minoria,Não
+2399396-7,Novo,Não
+2399396-7,Oposição,Liberado
+2399396-7,PL,Sim
+2397925-16,Bl MdbPsdRepPode,Não
+2397925-16,Bl UniPpFdrPsdbCid...,Não
+2397925-16,Fdr PSOL-REDE,Não
+2397925-16,Fdr PT-PCdoB-PV,Não
+2397925-16,Governo,Não
+2397925-16,Maioria,
+2397925-16,Minoria,
+2397925-16,Novo,Sim
+2397925-16,Oposição,Sim
+2397925-16,PL,Sim
+2397925-25,Bl MdbPsdRepPode,Sim
+2397925-25,Bl UniPpFdrPsdbCid...,Sim
+2397925-25,Fdr PSOL-REDE,Sim
+2397925-25,Fdr PT-PCdoB-PV,Sim
+2397925-25,Governo,
+2397925-25,Maioria,
+2397925-25,Minoria,
+2397925-25,Novo,Não
+2397925-25,Oposição,Liberado
+2397925-25,PL,Sim
+2344909-65,Bl MdbPsdRepPode,Sim
+2344909-65,Bl UniPpFdrPsdbCid...,Sim
+2344909-65,Fdr PSOL-REDE,Não
+2344909-65,Fdr PT-PCdoB-PV,Não
+2344909-65,Governo,Não
+2344909-65,Maioria,Não
+2344909-65,Minoria,Sim
+2344909-65,Novo,Sim
+2344909-65,Oposição,Sim
+2344909-65,PL,Sim
+2115253-156,Bl MdbPsdRepPode,Não
+2115253-156,Bl UniPpFdrPsdbCid...,Não
+2115253-156,Fdr PSOL-REDE,Não
+2115253-156,Fdr PT-PCdoB-PV,Não
+2115253-156,Governo,Não
+2115253-156,Maioria,Não
+2115253-156,Minoria,Sim
+2115253-156,Novo,Sim
+2115253-156,Oposição,Sim
+2115253-156,PL,Sim
+2115253-167,Bl MdbPsdRepPode,Liberado
+2115253-167,Bl UniPpFdrPsdbCid...,Não
+2115253-167,Fdr PSOL-REDE,Não
+2115253-167,Fdr PT-PCdoB-PV,Não
+2115253-167,Governo,Não
+2115253-167,Maioria,Não
+2115253-167,Minoria,Sim
+2115253-167,Novo,Sim
+2115253-167,Oposição,Sim
+2115253-167,PL,Sim
+2115253-172,Bl MdbPsdRepPode,Liberado
+2115253-172,Bl UniPpFdrPsdbCid...,Não
+2115253-172,Fdr PSOL-REDE,Não
+2115253-172,Fdr PT-PCdoB-PV,Não
+2115253-172,Governo,Não
+2115253-172,Maioria,Não
+2115253-172,Minoria,Obstrução
+2115253-172,Novo,Obstrução
+2115253-172,Oposição,Obstrução
+2115253-172,PL,Obstrução
+2115253-175,Bl MdbPsdRepPode,Liberado
+2115253-175,Bl UniPpFdrPsdbCid...,Sim
+2115253-175,Fdr PSOL-REDE,Sim
+2115253-175,Fdr PT-PCdoB-PV,Sim
+2115253-175,Governo,Sim
+2115253-175,Maioria,Sim
+2115253-175,Minoria,Não
+2115253-175,Novo,Não
+2115253-175,Oposição,Não
+2115253-175,PL,Não
+2115253-179,Bl MdbPsdRepPode,Liberado
+2115253-179,Bl UniPpFdrPsdbCid...,Sim
+2115253-179,Fdr PSOL-REDE,Sim
+2115253-179,Fdr PT-PCdoB-PV,Sim
+2115253-179,Governo,Sim
+2115253-179,Maioria,Sim
+2115253-179,Minoria,Não
+2115253-179,Novo,Não
+2115253-179,Oposição,Não
+2115253-179,PL,Não
+2115253-183,Bl MdbPsdRepPode,Sim
+2115253-183,Bl UniPpFdrPsdbCid...,Sim
+2115253-183,Fdr PSOL-REDE,Sim
+2115253-183,Fdr PT-PCdoB-PV,Sim
+2115253-183,Governo,Sim
+2115253-183,Maioria,Sim
+2115253-183,Minoria,Não
+2115253-183,Novo,Não
+2115253-183,Oposição,Não
+2115253-183,PL,Não
+2391935-43,Bl MdbPsdRepPode,Sim
+2391935-43,Bl UniPpFdrPsdbCid...,Sim
+2391935-43,Fdr PSOL-REDE,Liberado
+2391935-43,Fdr PT-PCdoB-PV,Sim
+2391935-43,Governo,Sim
+2391935-43,Maioria,Sim
+2391935-43,Minoria,Sim
+2391935-43,Novo,Sim
+2391935-43,Oposição,Sim
+2391935-43,PL,Sim
+2393997-9,Bl MdbPsdRepPode,Liberado
+2393997-9,Bl UniPpFdrPsdbCid...,Sim
+2393997-9,Fdr PSOL-REDE,Sim
+2393997-9,Fdr PT-PCdoB-PV,Sim
+2393997-9,Governo,
+2393997-9,Maioria,Sim
+2393997-9,Minoria,Não
+2393997-9,Novo,Não
+2393997-9,Oposição,Não
+2393997-9,PL,Não
+2404958-8,Bl MdbPsdRepPode,Sim
+2404958-8,Bl UniPpFdrPsdbCid...,Sim
+2404958-8,Fdr PSOL-REDE,Sim
+2404958-8,Fdr PT-PCdoB-PV,Sim
+2404958-8,Governo,Sim
+2404958-8,Maioria,Sim
+2404958-8,Minoria,Não
+2404958-8,Novo,Não
+2404958-8,Oposição,Não
+2404958-8,PL,Não
+2194442-74,Bl MdbPsdRepPode,Não
+2194442-74,Bl UniPpFdrPsdbCid...,Não
+2194442-74,Fdr PSOL-REDE,Não
+2194442-74,Fdr PT-PCdoB-PV,Sim
+2194442-74,Governo,Não
+2194442-74,Maioria,
+2194442-74,Minoria,Não
+2194442-74,Novo,Não
+2194442-74,Oposição,Não
+2194442-74,PL,Não
+575585-69,Bl MdbPsdRepPode,Não
+575585-69,Bl UniPpFdrPsdbCid...,Não
+575585-69,Fdr PSOL-REDE,Sim
+575585-69,Fdr PT-PCdoB-PV,Liberado
+575585-69,Governo,
+575585-69,Maioria,
+575585-69,Minoria,Não
+575585-69,Novo,Não
+575585-69,Oposição,
+575585-69,PL,Não
+575585-92,Bl MdbPsdRepPode,Sim
+575585-92,Bl UniPpFdrPsdbCid...,Sim
+575585-92,Fdr PSOL-REDE,Não
+575585-92,Fdr PT-PCdoB-PV,Não
+575585-92,Governo,Liberado
+575585-92,Maioria,Liberado
+575585-92,Minoria,Sim
+575585-92,Novo,Sim
+575585-92,Oposição,Sim
+575585-92,PL,Sim
+575585-99,Bl MdbPsdRepPode,Sim
+575585-99,Bl UniPpFdrPsdbCid...,Sim
+575585-99,Fdr PSOL-REDE,Não
+575585-99,Fdr PT-PCdoB-PV,Não
+575585-99,Governo,Liberado
+575585-99,Maioria,Liberado
+575585-99,Minoria,Sim
+575585-99,Novo,Sim
+575585-99,Oposição,Sim
+575585-99,PL,Sim
+2405312-8,Bl MdbPsdRepPode,Liberado
+2405312-8,Bl UniPpFdrPsdbCid...,Sim
+2405312-8,Fdr PSOL-REDE,Não
+2405312-8,Fdr PT-PCdoB-PV,Não
+2405312-8,Governo,Não
+2405312-8,Maioria,
+2405312-8,Minoria,Sim
+2405312-8,Novo,Sim
+2405312-8,Oposição,Sim
+2405312-8,PL,Sim
+2312373-128,Bl MdbPsdRepPode,Não
+2312373-128,Bl UniPpFdrPsdbCid...,Não
+2312373-128,Fdr PSOL-REDE,Sim
+2312373-128,Fdr PT-PCdoB-PV,Não
+2312373-128,Governo,Não
+2312373-128,Maioria,Não
+2312373-128,Minoria,Liberado
+2312373-128,Novo,Sim
+2312373-128,Oposição,Liberado
+2312373-128,PL,Não
+2312373-140,Bl MdbPsdRepPode,Não
+2312373-140,Bl UniPpFdrPsdbCid...,Não
+2312373-140,Fdr PSOL-REDE,Não
+2312373-140,Fdr PT-PCdoB-PV,Não
+2312373-140,Governo,Não
+2312373-140,Maioria,
+2312373-140,Minoria,Liberado
+2312373-140,Novo,Obstrução
+2312373-140,Oposição,Liberado
+2312373-140,PL,Não
+2355510-35,Bl MdbPsdRepPode,Não
+2355510-35,Bl UniPpFdrPsdbCid...,Não
+2355510-35,Fdr PSOL-REDE,Não
+2355510-35,Fdr PT-PCdoB-PV,Não
+2355510-35,Governo,
+2355510-35,Maioria,Não
+2355510-35,Minoria,Liberado
+2355510-35,Novo,Sim
+2355510-35,Oposição,Liberado
+2355510-35,PL,Não
+2355510-53,Bl MdbPsdRepPode,Sim
+2355510-53,Bl UniPpFdrPsdbCid...,Sim
+2355510-53,Fdr PSOL-REDE,Sim
+2355510-53,Fdr PT-PCdoB-PV,Sim
+2355510-53,Governo,
+2355510-53,Maioria,Sim
+2355510-53,Minoria,Sim
+2355510-53,Novo,Não
+2355510-53,Oposição,Liberado
+2355510-53,PL,Sim
+2381043-35,Bl MdbPsdRepPode,Não
+2381043-35,Bl UniPpFdrPsdbCid...,Não
+2381043-35,Fdr PSOL-REDE,Não
+2381043-35,Fdr PT-PCdoB-PV,Não
+2381043-35,Governo,Não
+2381043-35,Maioria,Não
+2381043-35,Minoria,Sim
+2381043-35,Novo,Sim
+2381043-35,Oposição,Sim
+2381043-35,PL,Sim
+2381043-45,Bl MdbPsdRepPode,Não
+2381043-45,Bl UniPpFdrPsdbCid...,
+2381043-45,Fdr PSOL-REDE,Não
+2381043-45,Fdr PT-PCdoB-PV,Não
+2381043-45,Governo,Não
+2381043-45,Maioria,Não
+2381043-45,Minoria,Sim
+2381043-45,Novo,Sim
+2381043-45,Oposição,Sim
+2381043-45,PL,Sim
+2381043-60,Bl MdbPsdRepPode,Não
+2381043-60,Bl UniPpFdrPsdbCid...,Não
+2381043-60,Fdr PSOL-REDE,Não
+2381043-60,Fdr PT-PCdoB-PV,Não
+2381043-60,Governo,Não
+2381043-60,Maioria,Não
+2381043-60,Minoria,Sim
+2381043-60,Novo,Sim
+2381043-60,Oposição,Sim
+2381043-60,PL,Sim
+2381043-63,Bl MdbPsdRepPode,Sim
+2381043-63,Bl UniPpFdrPsdbCid...,Sim
+2381043-63,Fdr PSOL-REDE,Sim
+2381043-63,Fdr PT-PCdoB-PV,Sim
+2381043-63,Governo,Sim
+2381043-63,Maioria,Sim
+2381043-63,Minoria,Não
+2381043-63,Novo,Não
+2381043-63,Oposição,Não
+2381043-63,PL,Não
+2381043-66,Bl MdbPsdRepPode,Sim
+2381043-66,Bl UniPpFdrPsdbCid...,Sim
+2381043-66,Fdr PSOL-REDE,Sim
+2381043-66,Fdr PT-PCdoB-PV,Sim
+2381043-66,Governo,Sim
+2381043-66,Maioria,Sim
+2381043-66,Minoria,Obstrução
+2381043-66,Novo,Obstrução
+2381043-66,Oposição,Obstrução
+2381043-66,PL,Obstrução
+2190084-79,Bl MdbPsdRepPode,Sim
+2190084-79,Bl UniPpFdrPsdbCid...,Sim
+2190084-79,Fdr PSOL-REDE,Liberado
+2190084-79,Fdr PT-PCdoB-PV,Sim
+2190084-79,Governo,Sim
+2190084-79,Maioria,Liberado
+2190084-79,Minoria,Sim
+2190084-79,Novo,Sim
+2190084-79,Oposição,Sim
+2190084-79,PL,Sim
+2190084-88,Bl MdbPsdRepPode,Sim
+2190084-88,Bl UniPpFdrPsdbCid...,Sim
+2190084-88,Fdr PSOL-REDE,Não
+2190084-88,Fdr PT-PCdoB-PV,Sim
+2190084-88,Governo,Sim
+2190084-88,Maioria,
+2190084-88,Minoria,Sim
+2190084-88,Novo,Sim
+2190084-88,Oposição,
+2190084-88,PL,Sim
+2190084-93,Bl MdbPsdRepPode,Liberado
+2190084-93,Bl UniPpFdrPsdbCid...,Sim
+2190084-93,Fdr PSOL-REDE,Não
+2190084-93,Fdr PT-PCdoB-PV,Não
+2190084-93,Governo,Não
+2190084-93,Maioria,
+2190084-93,Minoria,Sim
+2190084-93,Novo,
+2190084-93,Oposição,Sim
+2190084-93,PL,Sim
+2125189-161,Bl MdbPsdRepPode,Não
+2125189-161,Bl UniPpFdrPsdbCid...,Não
+2125189-161,Fdr PSOL-REDE,Sim
+2125189-161,Fdr PT-PCdoB-PV,Sim
+2125189-161,Governo,
+2125189-161,Maioria,
+2125189-161,Minoria,Não
+2125189-161,Novo,Não
+2125189-161,Oposição,
+2125189-161,PL,Não
+2125189-174,Bl MdbPsdRepPode,Não
+2125189-174,Bl UniPpFdrPsdbCid...,Não
+2125189-174,Fdr PSOL-REDE,Sim
+2125189-174,Fdr PT-PCdoB-PV,Sim
+2125189-174,Governo,
+2125189-174,Maioria,
+2125189-174,Minoria,Não
+2125189-174,Novo,Não
+2125189-174,Oposição,Não
+2125189-174,PL,Não
+2125189-176,Bl MdbPsdRepPode,Sim
+2125189-176,Bl UniPpFdrPsdbCid...,Sim
+2125189-176,Fdr PSOL-REDE,Não
+2125189-176,Fdr PT-PCdoB-PV,Não
+2125189-176,Governo,
+2125189-176,Maioria,
+2125189-176,Minoria,Sim
+2125189-176,Novo,Sim
+2125189-176,Oposição,Sim
+2125189-176,PL,Sim
+2125189-180,Bl MdbPsdRepPode,Não
+2125189-180,Bl UniPpFdrPsdbCid...,Não
+2125189-180,Fdr PSOL-REDE,Sim
+2125189-180,Fdr PT-PCdoB-PV,Sim
+2125189-180,Governo,
+2125189-180,Maioria,Liberado
+2125189-180,Minoria,Não
+2125189-180,Novo,Não
+2125189-180,Oposição,
+2125189-180,PL,Não
+2125189-191,Bl MdbPsdRepPode,Sim
+2125189-191,Bl UniPpFdrPsdbCid...,Sim
+2125189-191,Fdr PSOL-REDE,Não
+2125189-191,Fdr PT-PCdoB-PV,Não
+2125189-191,Governo,
+2125189-191,Maioria,
+2125189-191,Minoria,
+2125189-191,Novo,Sim
+2125189-191,Oposição,
+2125189-191,PL,Sim
+2299903-53,Bl MdbPsdRepPode,Sim
+2299903-53,Bl UniPpFdrPsdbCid...,Sim
+2299903-53,Fdr PSOL-REDE,Sim
+2299903-53,Fdr PT-PCdoB-PV,Sim
+2299903-53,Governo,Sim
+2299903-53,Maioria,Sim
+2299903-53,Minoria,Não
+2299903-53,Novo,Não
+2299903-53,Oposição,Não
+2299903-53,PL,Não
+2398741-64,Bl MdbPsdRepPode,Sim
+2398741-64,Bl UniPpFdrPsdbCid...,Sim
+2398741-64,Fdr PSOL-REDE,Sim
+2398741-64,Fdr PT-PCdoB-PV,Sim
+2398741-64,Governo,Sim
+2398741-64,Maioria,Sim
+2398741-64,Minoria,Não
+2398741-64,Novo,Não
+2398741-64,Oposição,Não
+2398741-64,PL,Liberado
+2407960-8,Bl MdbPsdRepPode,Sim
+2407960-8,Bl UniPpFdrPsdbCid...,Sim
+2407960-8,Fdr PSOL-REDE,Não
+2407960-8,Fdr PT-PCdoB-PV,Sim
+2407960-8,Governo,Sim
+2407960-8,Maioria,
+2407960-8,Minoria,Liberado
+2407960-8,Novo,Obstrução
+2407960-8,Oposição,Liberado
+2407960-8,PL,Sim
+2333929-40,Bl MdbPsdRepPode,Sim
+2333929-40,Bl UniPpFdrPsdbCid...,Sim
+2333929-40,Fdr PSOL-REDE,Não
+2333929-40,Fdr PT-PCdoB-PV,Sim
+2333929-40,Governo,Sim
+2333929-40,Maioria,
+2333929-40,Minoria,Liberado
+2333929-40,Novo,Obstrução
+2333929-40,Oposição,Liberado
+2333929-40,PL,Sim

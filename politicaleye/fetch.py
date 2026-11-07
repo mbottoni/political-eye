@@ -16,6 +16,7 @@ Every download returns its :class:`Provenance`, which a source records in its
 
 from __future__ import annotations
 
+import gzip
 import http.client
 import json
 import sys
@@ -69,6 +70,8 @@ def get_bytes(url: str, *, attempts: int = 4, timeout: float = 30, backoff: floa
         try:
             with urllib.request.urlopen(_req(url, headers=headers, user_agent=user_agent), timeout=timeout) as r:
                 body = r.read()
+            if body[:2] == b"\x1f\x8b":   # some servers (IBGE) gzip without being asked
+                body = gzip.decompress(body)
             if check is not None:
                 check(body)
             return body

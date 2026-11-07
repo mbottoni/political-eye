@@ -30,6 +30,9 @@ jobs:
       - name: Explorer parity with the Python package (camara)
         run: node tests/camara/parity.mjs
 
+      - name: Browser graph code parity with the Python package (senado)
+        run: node tests/senado/parity.mjs
+
       # The committed data must load and produce graphs with the current code.
       # (Latest month with votes: January and July recesses have none.)
       - name: Smoke-test the latest Câmara voting month

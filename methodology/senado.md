@@ -171,5 +171,7 @@ Senators are identified by `CodigoParlamentar`, the Senado's own code.
 - **Joint sessions of the Congresso Nacional**, published per veto without
   senator codes.
 - **Committee votes.**
-- **An explorer page.** The browser code (`docs/camara/core.js`) already takes
-  the Senado's column names; the page itself is still to be written.
+- **An explorer page.** The browser code (`docs/camara/core.js`, with the
+  Senado's defaults and windows in `docs/senado/window.js`) already
+  reproduces every window of `index.csv` exactly (`tests/senado/parity.mjs`,
+  run in CI); the page itself is still to be written.

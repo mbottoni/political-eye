@@ -5,7 +5,8 @@ Brazilian politics and public money from official open data, committed as it cha
 | source | status |
 |---|---|
 | [Câmara dos Deputados](https://mbottoni.github.io/political-eye/camara/): who votes and who signs together | weekly |
-| [Câmara party orientations](https://github.com/mbottoni/political-eye/blob/main/methodology/camara.md#party-orientations): how often each deputy votes with their party and with the government | weekly |
+| [Câmara party orientations](https://github.com/mbottoni/political-eye/blob/main/methodology/camara.md#party-orientations): how often each deputy votes with their party, the government and their party's majority | weekly |
+| [Câmara blocs](https://github.com/mbottoni/political-eye/blob/main/methodology/camara.md#party-orientations): which party was in which bloc, and when (the Câmara keeps no history) | daily |
 | Senado: the same graphs for the Senate | planned |
 | Parliamentary amendments (emendas, including "Pix" transfers) | planned |
 | Sanctioned companies (CEIS, CNEP) | planned |

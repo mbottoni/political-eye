@@ -1,0 +1,51 @@
+name: camara-blocos
+
+# The Câmara's blocs API has no dates and forgets dissolved blocs, so a daily
+# snapshot is the only record of who was in which bloc and when. Runs before
+# dawn in Brasília (03:23), so a change first seen on day D happened on D-1
+# or overnight. Commits only when the listing changed.
+on:
+  schedule:
+    - cron: "23 6 * * *"   # daily, 06:23 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: camara-blocos
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Record the blocs
+        run: uv run python -m politicaleye camara blocos
+
+      - name: Commit if the listing changed
+        run: |
+          git add data/camara/blocos
+          if git diff --staged --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "camara: blocs changed on $(date -u +%F)"
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase
+          done
+          exit 1

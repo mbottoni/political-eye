@@ -1,4 +1,4 @@
-"""``python -m politicaleye camara {update,summarize,figures,export}``."""
+"""``python -m politicaleye camara {update,blocos,summarize,figures,export,discipline}``."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 
 from ..io import write_sources
 from ..paths import REPO
-from . import graphs, orientations, summary
+from . import blocos, graphs, orientations, summary
 from .build import build_year
 from .fetch import DATASETS, fetch_years
 
@@ -67,8 +67,13 @@ def cmd_export(a) -> int:
     return 0
 
 
+def cmd_blocos(a) -> int:
+    blocos.update(a.data)
+    return 0
+
+
 def cmd_discipline(a) -> int:
-    df = orientations.discipline(a.month, lop=a.lop, data_dir=a.data)
+    df = orientations.discipline(a.month, lop=a.lop, blocs=None if a.blocs == "none" else a.blocs, data_dir=a.data)
     df.to_csv(sys.stdout, index=False, lineterminator="\n")
     return 0
 
@@ -83,6 +88,9 @@ def register(sources: argparse._SubParsersAction) -> None:
     u.add_argument("--raw", type=Path, default=REPO / ".cache" / "raw" / "camara")
     u.add_argument("--skip-fetch", action="store_true", help="build from files already in --raw")
     u.set_defaults(fn=cmd_update)
+
+    b = sub.add_parser("blocos", help="record today's blocs and federations from the Câmara's API")
+    b.set_defaults(fn=cmd_blocos)
 
     s = sub.add_parser("summarize", help="refresh index.csv only")
     s.set_defaults(fn=cmd_summarize)
@@ -105,7 +113,11 @@ def register(sources: argparse._SubParsersAction) -> None:
                    help="comma-separated types to drop ('' keeps all)")
     e.set_defaults(fn=cmd_export)
 
-    d = sub.add_parser("discipline", help="print one month's votes with party and government, per deputy, as CSV")
+    d = sub.add_parser("discipline", help="print one month's votes with party, government and party majority, "
+                                         "per deputy, as CSV")
     d.add_argument("month", help="YYYY-MM")
     d.add_argument("--lop", type=float, default=graphs.LOP)
+    d.add_argument("--blocs", choices=["recorded", "listed", "none"], default="recorded",
+                   help="complete cut-off bloc names from the recorded blocs API: only on recorded days "
+                        "(default), also before recording started, or never")
     d.set_defaults(fn=cmd_discipline)

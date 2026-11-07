@@ -58,6 +58,7 @@ def month_row(month: str, data_dir: Path) -> dict:
         "with_party": share(int(disc.n_with_party.sum()), n_party)
         if n_votes and n_party / n_votes >= MIN_ORIENTED else None,
         "with_gov": share(int(disc.n_with_gov.sum()), n_gov),
+        "with_majority": share(int(disc.n_with_majority.sum()), int(disc.n_majority.sum())),
     }
 
 

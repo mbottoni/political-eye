@@ -139,9 +139,8 @@ about 3,900 since 2015).
 - **A bloc**, named by concatenating its parties' abbreviations
   (`PmdbPpPtbPscPhsPen`, `Bl MdbPsdRepPode`). A federation inside a bloc is
   written `Fdr` plus its first party (`FdrPt` means PT, PCdoB and PV). Long
-  names are cut off with `...`, and the parties after the cut cannot be
-  known. The Câmara's blocs API lists only today's blocs, with no dates, so
-  it is not used for past votes.
+  names are cut off with `...`; see "Blocs, recorded daily" below for how
+  the parties after the cut are recovered.
 - **A leadership**: the Government (`GOV.` until 2022, then `Governo`), the
   Majority, the Minority, the Opposition.
 
@@ -163,15 +162,22 @@ vote says nothing about discipline), coded the same way:
   orientation is followed by an `Obstrução` or `Não` vote, as in the vote
   coding.
 - `with_gov`: the same against the Government leader's orientation.
+- `with_majority`: of the votes where the *other* deputies of the same party
+  who voted had a majority side, the share where the deputy voted with it.
+  This is the usual party-unity measure in political science. It needs no
+  orientations, so it covers 97–99% of contested votes in every month, the
+  2025 gap included. A deputy's own vote never counts towards the majority they
+  are measured against, so a party's only deputy, or a tie among the others,
+  gives no majority. Deputies with no party (`S.PART.`) have none.
 - `n_free`: the party freed its members. `n_none`: the party, federation or
-  bloc is listed but gave no orientation. `n_unknown`: the deputy's party
-  matches no published bancada, almost always because a bloc's name was cut
-  off.
+  bloc is listed but gave no orientation, or the deputy has no party.
+  `n_unknown`: the deputy's party matches no published bancada, almost
+  always because a bloc's name was cut off.
 
 **Coverage, and the 2025 gap.** `data/camara/index.csv` has, per month,
 `orientation_coverage` (the share of contested votes whose party matches a
 published bancada), `oriented_share` (the share with a line to follow), and
-the pooled `with_party` and `with_gov`.
+the pooled `with_party`, `with_gov` and `with_majority`.
 
 - **2015–2022:** median monthly coverage 95–100%.
 - **2023–2026:** lower, because large blocs' names are cut off. In 2023 the
@@ -187,7 +193,47 @@ A month's `with_party` is left empty when under half of its contested votes
 had a line to follow (`MIN_ORIENTED` in `summary.py`), since it would describe
 only the few parties that did orient: February to October 2025, and
 February 2019, the first month of the 56th legislature. The per-deputy
-numbers stay correct for deputies whose party did orient.
+numbers stay correct for deputies whose party did orient. `with_majority`
+is unaffected: the median month is 87–94% in every year.
+
+**Blocs, recorded daily.** The Câmara's blocs API
+(`/api/v2/blocos?idLegislatura=N`) names each bloc by its full list of
+parties (`UNIÃO, PP, PSD, REPUBLICANOS, MDB, Federação PSDB CIDADANIA,
+PODE`) and lists its members, but it has no dates and stops listing a bloc
+once it is dissolved: the 2023–2024 bloc behind `Bl UniPpFdrPsdbCid...` is
+already gone. A daily job (`.github/workflows/camara-blocos.yml`,
+`python -m politicaleye camara blocos`) records what it lists for the
+legislatures since 2015 in `data/camara/blocos/`:
+
+- `blocos.csv`: `bloco_id, legislatura, nome, federacao, listed_from,
+  listed_until`;
+- `members.csv`: `bloco_id, partido, listed_from, listed_until`. Members come
+  from `/blocos/{id}/partidos`, or, when that is empty (it is for some
+  blocs), from the parties the bloc's name lists.
+
+`listed_from` is the first snapshot that listed the row and `listed_until`
+the first that no longer did (empty while still listed); a row that comes
+back gets a new row. Recording started on 2026-11-07, so rows listed that day
+may be older. The job runs at 03:23 in Brasília, before any session: a row
+first listed on day D counts for votes from D on, and a row first missing on
+day D counts until D−2, since it may have left during D−1. A skipped run
+widens that window. A listing with no blocs at all is treated as an outage
+and not recorded.
+
+**Completing cut-off names.** A cut-off name is completed when exactly one
+recorded bloc of the same legislature, in effect on the day of the votação,
+has a name that starts with the same parties in the same order and members
+that include them. Two candidate blocs, a different order or a missing party
+leave it unknown. `discipline(month, blocs=...)` chooses which record counts:
+
+- `"recorded"` (the default, and what `index.csv` uses): only days the record
+  covers, so it changes nothing before 2026-11-07;
+- `"listed"`: also earlier days, for blocs already listed when recording
+  started. This assumes the bloc had the same members all its life, which
+  the API cannot confirm. It completes `Bl UniPpPsd...` and
+  `Bl AvanSolidPrd...` and raises coverage from November 2025 to October
+  2026 from about 76% to 100%;
+- `None`: never.
 
 ## Months and vertex sets
 

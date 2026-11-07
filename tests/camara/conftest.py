@@ -7,8 +7,8 @@ from pathlib import Path
 
 import pytest
 
-from camaragraphs import graphs
-from camaragraphs.build import build_year
+from politicaleye.camara import graphs
+from politicaleye.camara.build import build_year
 
 
 def _raw(path: Path, header: list[str], rows: list[list[str]]) -> None:

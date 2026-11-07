@@ -17,6 +17,8 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 
+from ..paths import DATA
+
 TAU = 0.8          # co-voting: minimum agreement rate for an edge
 MIN_SHARED = 10    # co-voting: minimum votes two deputies both cast
 LOP = 0.025        # co-voting: drop votes whose minority side is smaller than this
@@ -27,12 +29,17 @@ MIN_ITEMS = 1      # co-authorship: minimum co-signed items for an edge
 # break that comes from bookkeeping rather than politics. See METHODOLOGY.md.
 EXCLUDE_TYPES = frozenset({"RPD", "DOC"})
 
-REPO_DATA = Path(__file__).resolve().parent.parent / "data"
+REPO_DATA = DATA / "camara"
 SIGN = {"Sim": 1, "Não": -1}
 
 
 def _root(data_dir: str | Path | None) -> str | Path:
-    d = data_dir if data_dir is not None else os.environ.get("CAMARA_GRAPHS_DATA", REPO_DATA)
+    """The Câmara's data directory: ``data_dir``, else ``$POLITICAL_EYE_DATA/camara``
+    (a local path or a raw URL to the repo's ``data/``), else this checkout's."""
+    d = data_dir
+    if d is None:
+        env = os.environ.get("POLITICAL_EYE_DATA")
+        d = f"{env.rstrip('/')}/camara" if env else REPO_DATA
     if isinstance(d, str) and d.startswith(("http://", "https://")):
         return d.rstrip("/")
     return Path(d)

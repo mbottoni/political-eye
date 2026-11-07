@@ -1,4 +1,7 @@
-"""Monthly co-voting and co-authorship graphs of Brazil's Câmara dos Deputados."""
+"""Monthly co-voting and co-authorship graphs of Brazil's Câmara dos Deputados.
+
+Data in ``data/camara/``; every default is explained in ``methodology/camara.md``.
+"""
 
 from .graphs import (
     EXCLUDE_TYPES,

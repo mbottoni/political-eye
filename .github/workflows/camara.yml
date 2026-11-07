@@ -1,4 +1,4 @@
-name: update
+name: camara
 
 # Plenário votes Tuesday to Thursday, and the Câmara republishes its bulk files
 # every night (around 04:00-07:00 UTC). Running Saturday morning means each
@@ -17,8 +17,10 @@ on:
 permissions:
   contents: write
 
+# One group per source. Sources write to separate directories, so concurrent
+# pushes from different sources rebase cleanly (see the retry loop below).
 concurrency:
-  group: update
+  group: camara
   cancel-in-progress: false
 
 jobs:
@@ -48,23 +50,27 @@ jobs:
             exit 1
           fi
           read -ra years <<< "$YEARS"
-          uv run python -m camaragraphs update "${years[@]}"
+          uv run python -m politicaleye camara update "${years[@]}"
 
-      - name: Render the README charts
-        run: uv run python -m camaragraphs figures
+      - name: Render the README chart
+        run: uv run python -m politicaleye camara figures
 
       - name: Commit if the data changed
         run: |
           # Stage first: a new month is an untracked file, invisible to a plain
           # `git diff`. sources.json changes nightly on the server side, so
           # only commit when the tables themselves moved.
-          git add data figures README.md
-          if git diff --staged --quiet -- . ':!data/sources.json'; then
+          git add data/camara figures/camara
+          if git diff --staged --quiet -- . ':!data/camara/sources.json'; then
             echo "No data changes."
             exit 0
           fi
-          months=$(git diff --staged --name-only -- data/votes data/authorship | xargs -rn1 basename | sed 's/\.csv$//' | sort -u | tr '\n' ' ')
+          months=$(git diff --staged --name-only -- data/camara/votes data/camara/authorship | xargs -rn1 basename | sed 's/\.csv$//' | sort -u | tr '\n' ' ')
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "data: update through $(date -u +%F)" -m "Months changed: ${months:-none (charts or index only)}"
-          git push || { git pull --rebase && git push; }
+          git commit -m "camara: update through $(date -u +%F)" -m "Months changed: ${months:-none (charts or index only)}"
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase
+          done
+          exit 1

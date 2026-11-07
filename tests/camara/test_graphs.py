@@ -1,6 +1,6 @@
 import pytest
 
-from camaragraphs import graphs as g
+from politicaleye.camara import graphs as g
 
 
 def pairs(df, *cols):

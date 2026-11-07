@@ -3,10 +3,10 @@
 Output per month ``YYYY-MM`` (all CSV, sorted, ``\\n`` line endings, so a
 rebuild that changes nothing produces no git diff):
 
-    data/votacoes/YYYY-MM.csv     Plenário roll-call votes (one row per vote)
-    data/votes/YYYY-MM.csv        how each deputy voted in each of them
-    data/authorship/YYYY-MM.csv   deputy signatures on proposições presented
-    data/deputies/YYYY-MM.csv     everyone in either table, with party and UF
+    data/camara/votacoes/YYYY-MM.csv     Plenário roll-call votes (one row per vote)
+    data/camara/votes/YYYY-MM.csv        how each deputy voted in each of them
+    data/camara/authorship/YYYY-MM.csv   deputy signatures on proposições presented
+    data/camara/deputies/YYYY-MM.csv     everyone in either table, with party and UF
 
 Each month is built from that year's files only. Rows whose date falls in a
 different year than the file they came from are dropped and counted.
@@ -19,22 +19,14 @@ from pathlib import Path
 
 import pandas as pd
 
+from ..io import read_raw as _read
+from ..io import write_csv as _write
+
 PLENARIO = "PLEN"
 
 
 def _log(msg: str) -> None:
     print(f"[build] {msg}", file=sys.stderr)
-
-
-def _read(path: Path, usecols: list[str]) -> pd.DataFrame:
-    return pd.read_csv(
-        path, sep=";", dtype=str, keep_default_na=False, encoding="utf-8-sig", usecols=usecols
-    )
-
-
-def _write(df: pd.DataFrame, path: Path) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(path, index=False, lineterminator="\n")
 
 
 def _as_int(s: pd.Series) -> pd.Series:

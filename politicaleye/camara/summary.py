@@ -1,4 +1,4 @@
-"""Per-month summary: ``data/index.csv``."""
+"""Per-month summary: ``data/camara/index.csv``."""
 
 from __future__ import annotations
 

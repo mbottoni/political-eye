@@ -1,6 +1,6 @@
-// Graph definitions for the explorer page, mirroring camaragraphs/graphs.py.
-// tests/parity.mjs runs this file under Node against every month in
-// data/ and fails CI if any node or edge count differs from data/index.csv.
+// Graph definitions for the explorer page, mirroring politicaleye/camara/graphs.py.
+// tests/camara/parity.mjs runs this file under Node against every month in
+// data/camara/ and fails CI if any node or edge count differs from index.csv.
 
 export const DEFAULTS = Object.freeze({
   tau: 0.8, minShared: 10, lop: 0.025, obstructionAsNo: true,

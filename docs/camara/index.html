@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Câmara Graphs Explorer</title>
+<title>Câmara Explorer · political-eye</title>
 <meta name="description" content="Explore Brazil's Chamber of Deputies month by month as two graphs on the same deputies: who votes together and who signs together.">
 <style>
   :root {
@@ -35,6 +35,7 @@
   header h1 { font-size: 22px; margin: 0 0 4px; font-weight: 650; }
   header p { margin: 0; color: var(--ink2); max-width: 820px; }
   header a, footer a { color: var(--ink2); }
+  header .crumb { margin: 0 0 6px; font-size: 13px; }
   .controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; margin: 20px 0 16px; }
   .controls label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--ink2); }
   .controls select, .controls input[type="search"] {
@@ -104,8 +105,9 @@
 <body>
 <main id="app">
   <header>
-    <h1>Câmara Graphs Explorer</h1>
-    <p>Brazil's Chamber of Deputies, one month at a time, as two graphs on the same deputies: who <b>votes</b> together and who <b>signs</b> together. Computed in your browser from the open data in <a href="https://github.com/mbottoni/camara-graphs">mbottoni/camara-graphs</a>, which CI refreshes every week.</p>
+    <p class="crumb"><a href="../">political-eye</a> / Câmara</p>
+    <h1>Câmara Explorer</h1>
+    <p>Brazil's Chamber of Deputies, one month at a time, as two graphs on the same deputies: who <b>votes</b> together and who <b>signs</b> together. Computed in your browser from the open data in <a href="https://github.com/mbottoni/political-eye/tree/main/data/camara">mbottoni/political-eye</a>, which CI refreshes every week.</p>
   </header>
 
   <div class="controls" role="group" aria-label="Filters">
@@ -157,17 +159,17 @@
   </section>
 
   <footer>
-    Each dot is a deputy with at least 10 contested Plenário votes that month, placed by the first two principal components of those votes. Edges and every default are defined in <a href="https://github.com/mbottoni/camara-graphs/blob/main/METHODOLOGY.md">METHODOLOGY.md</a>; this page reproduces the Python package's counts exactly (checked in CI). Source: Câmara dos Deputados, Dados Abertos.
+    Each dot is a deputy with at least 10 contested Plenário votes that month, placed by the first two principal components of those votes. Edges and every default are defined in <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/camara.md">methodology/camara.md</a>; this page reproduces the Python package's counts exactly (checked in CI). Source: Câmara dos Deputados, Dados Abertos.
   </footer>
 </main>
 <div id="tip" role="tooltip"></div>
-<noscript>This page needs JavaScript. The data itself is browsable at <a href="https://github.com/mbottoni/camara-graphs">github.com/mbottoni/camara-graphs</a>.</noscript>
+<noscript>This page needs JavaScript. The data itself is browsable at <a href="https://github.com/mbottoni/political-eye/tree/main/data/camara">github.com/mbottoni/political-eye</a>.</noscript>
 
 <script type="module">
 import * as core from "./core.js";
 
 const LOCAL = ["localhost", "127.0.0.1"].includes(location.hostname);
-const DATA = LOCAL ? "../data/" : "https://raw.githubusercontent.com/mbottoni/camara-graphs/main/data/";
+const DATA = LOCAL ? "../../data/camara/" : "https://raw.githubusercontent.com/mbottoni/political-eye/main/data/camara/";
 const RAMP = ["#cde2fb", "#b7d3f6", "#9ec5f4", "#86b6ef", "#6da7ec", "#5598e7", "#3987e5", "#2a78d6", "#256abf", "#1c5cab", "#184f95", "#104281", "#0d366b"];
 const MIN_PARTY = 8;
 const $ = (s) => document.querySelector(s);

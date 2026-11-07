@@ -21,25 +21,25 @@ jobs:
       - name: Test
         run: uv run pytest -q
 
-      # The explorer (docs/) recomputes the graphs in JavaScript; it must
-      # agree with the Python package on every month.
+      # Each explorer page (docs/<source>/) recomputes its numbers in
+      # JavaScript; it must agree with the Python package on every month.
       - uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Explorer parity with the Python package
-        run: node tests/parity.mjs
+      - name: Explorer parity with the Python package (camara)
+        run: node tests/camara/parity.mjs
 
       # The committed data must load and produce graphs with the current code.
       # (Latest month with votes: January and July recesses have none.)
-      - name: Smoke-test the latest voting month
+      - name: Smoke-test the latest Câmara voting month
         run: |
           uv run python - <<'EOF'
           import pandas as pd
-          import camaragraphs as cg
-          idx = pd.read_csv("data/index.csv")
+          from politicaleye import camara
+          idx = pd.read_csv("data/camara/index.csv")
           m = idx[idx.covote_nodes > 0].month.iloc[-1]
-          gv, gc = cg.aligned(m)
+          gv, gc = camara.aligned(m)
           print(m, gv.number_of_nodes(), gv.number_of_edges(), gc.number_of_edges())
           assert gv.number_of_nodes() > 0
           EOF

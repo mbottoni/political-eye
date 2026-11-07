@@ -1,19 +1,18 @@
-"""Command line: ``python -m camaragraphs {update,summarize,export}``."""
+"""``python -m politicaleye camara {update,summarize,figures,export}``."""
 
 from __future__ import annotations
 
 import argparse
 import datetime as dt
-import json
 import sys
 from dataclasses import asdict
 from pathlib import Path
 
+from ..io import write_sources
+from ..paths import REPO
 from . import graphs, summary
 from .build import build_year
-from .fetch import fetch_years
-
-REPO = Path(__file__).resolve().parent.parent
+from .fetch import DATASETS, fetch_years
 
 
 def _default_years() -> list[int]:
@@ -23,22 +22,14 @@ def _default_years() -> list[int]:
     return [y - 1, y]
 
 
-def _write_sources(path: Path, sources) -> None:
-    old = json.loads(path.read_text()) if path.exists() else {}
-    for s in sources:
-        old[f"{s.dataset}-{s.year}"] = asdict(s)
-    path.write_text(json.dumps(dict(sorted(old.items())), indent=2, ensure_ascii=False) + "\n")
-
-
 def cmd_update(a) -> int:
     years = sorted(set(a.years or _default_years()))
     if a.skip_fetch:
-        built = [y for y in years if all((a.raw / f"{d}-{y}.csv").exists() for d in
-                                         ("votacoes", "votacoesVotos", "proposicoes", "proposicoesAutores"))]
+        built = [y for y in years if all((a.raw / f"{d}-{y}.csv").exists() for d in DATASETS)]
     else:
         sources = fetch_years(years, a.raw)
         built = sorted({s.year for s in sources})
-        _write_sources(a.data / "sources.json", sources)
+        write_sources(a.data / "sources.json", {f"{s.dataset}-{s.year}": asdict(s) for s in sources})
     for y in built:
         build_year(y, a.raw, a.data)
     graphs._load.cache_clear()
@@ -76,22 +67,22 @@ def cmd_export(a) -> int:
     return 0
 
 
-def main(argv: list[str] | None = None) -> int:
-    p = argparse.ArgumentParser(prog="camaragraphs", description=__doc__)
-    p.add_argument("--data", type=Path, default=REPO / "data")
+def register(sources: argparse._SubParsersAction) -> None:
+    p = sources.add_parser("camara", help="Câmara dos Deputados: monthly co-voting and co-authorship graphs")
+    p.add_argument("--data", type=Path, default=REPO / "data" / "camara")
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    u = sub.add_parser("update", help="download, rebuild the given years, refresh data/index.csv")
+    u = sub.add_parser("update", help="download, rebuild the given years, refresh index.csv")
     u.add_argument("years", nargs="*", type=int, help="default: previous and current year")
-    u.add_argument("--raw", type=Path, default=REPO / ".cache" / "raw")
+    u.add_argument("--raw", type=Path, default=REPO / ".cache" / "raw" / "camara")
     u.add_argument("--skip-fetch", action="store_true", help="build from files already in --raw")
     u.set_defaults(fn=cmd_update)
 
-    s = sub.add_parser("summarize", help="refresh data/index.csv only")
+    s = sub.add_parser("summarize", help="refresh index.csv only")
     s.set_defaults(fn=cmd_summarize)
 
     f = sub.add_parser("figures", help="render the README chart (needs matplotlib)")
-    f.add_argument("--out", type=Path, default=REPO / "figures")
+    f.add_argument("--out", type=Path, default=REPO / "figures" / "camara")
     f.set_defaults(fn=cmd_figures)
 
     e = sub.add_parser("export", help="print one month's edge list as CSV")
@@ -107,10 +98,3 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--exclude", default=",".join(sorted(graphs.EXCLUDE_TYPES)),
                    help="comma-separated types to drop ('' keeps all)")
     e.set_defaults(fn=cmd_export)
-
-    a = p.parse_args(argv)
-    return a.fn(a)
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())

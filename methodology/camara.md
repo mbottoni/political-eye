@@ -1,8 +1,8 @@
-# Methodology
+# Câmara: methodology
 
 Every choice below changes the graphs. Each one is a parameter of
-`camaragraphs.graph()`, and the defaults are what `data/index.csv` and the
-README tables use.
+`politicaleye.camara.graph()`, and the defaults are what `data/camara/index.csv`
+and the explorer use.
 
 ## Source
 
@@ -19,8 +19,8 @@ Four yearly bulk files from the Câmara's open data portal,
 The schema has been identical since at least 2015. The server republishes
 the files nightly. The scheduled job rebuilds the previous and current year
 each week, so corrections to recent records show up as diffs.
-`data/sources.json` records the ETag, size and `Last-Modified` of every file a
-build used.
+`data/camara/sources.json` records the ETag, size and `Last-Modified` of
+every file a build used.
 
 ## Votes
 
@@ -119,7 +119,7 @@ missing one.
 
 **Buckets.** Months are calendar months: the votação date for votes, and
 `dataApresentacao` for proposições. Legislatures start on 1 February, so no
-month straddles two. `legislatura` is a column of `data/index.csv` and an
+month straddles two. `legislatura` is a column of `data/camara/index.csv` and an
 attribute of every graph.
 
 **Thin months.** Some months have little or no voting:
@@ -127,7 +127,7 @@ attribute of every graph.
 - January and the second half of July are recess.
 - Election years (2018, 2022, 2026) are thin from August to October.
 
-Check `votacoes_contested` in `data/index.csv` before trusting a month.
+Check `votacoes_contested` in `data/camara/index.csv` before trusting a month.
 Agreement over fewer than about 20 contested votes is noisy.
 
 **The vertex set moves.**
@@ -152,5 +152,6 @@ every such count.
 
 - **Party orientations** (`votacoesOrientacoes`, how each party leader told
   the party to vote). This would allow party-discipline features per edge.
-- **The Senado**, which publishes its own API.
+- **The Senado**, which publishes its own API. It will be its own source
+  in this repo (`data/senado/`), not part of these tables.
 - **Committee and symbolic votes.**

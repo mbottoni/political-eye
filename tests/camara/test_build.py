@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from camaragraphs.build import build_year
+from politicaleye.camara.build import build_year
 
 from .conftest import write_raw_2025
 

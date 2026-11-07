@@ -3,7 +3,7 @@ import pytest
 
 def test_figures_render_both_themes_deterministically(built, tmp_path):
     pytest.importorskip("matplotlib")
-    from camaragraphs import figures, summary
+    from politicaleye.camara import figures, summary
 
     summary.build_index(built)
     kw = dict(full_month=2, min_shared=1)
@@ -18,7 +18,7 @@ def test_figures_render_both_themes_deterministically(built, tmp_path):
 
 def test_pca_signs_are_pinned():
     import numpy as np
-    from camaragraphs.figures import _pca2
+    from politicaleye.camara.figures import _pca2
 
     rng = np.random.default_rng(0)
     M = rng.choice(np.array([-1, 0, 1], dtype=np.int8), size=(40, 25))

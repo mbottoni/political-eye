@@ -7,7 +7,7 @@ Brazilian politics and public money from official open data, committed as it cha
 | [Câmara dos Deputados](https://mbottoni.github.io/political-eye/camara/): who votes and who signs together | weekly |
 | [Câmara party orientations](https://github.com/mbottoni/political-eye/blob/main/methodology/camara.md#party-orientations): how often each deputy votes with their party, the government and their party's majority | weekly |
 | [Câmara blocs](https://github.com/mbottoni/political-eye/blob/main/methodology/camara.md#party-orientations): which party was in which bloc, and when (the Câmara keeps no history) | daily |
-| [Senado Federal](https://github.com/mbottoni/political-eye/blob/main/methodology/senado.md): the same two graphs for the Senate, over the twelve months to date | weekly |
+| [Senado Federal](https://mbottoni.github.io/political-eye/senado/): the same two graphs for the Senate, over the twelve months to date, and senators' party discipline | weekly |
 | [Parliamentary amendments](https://github.com/mbottoni/political-eye/blob/main/methodology/emendas.md): who sent money where, what was paid and who received it, "Pix" transfers included | daily |
 | [Sanctions](https://github.com/mbottoni/political-eye/blob/main/methodology/sancoes.md) (CEIS, CNEP, CEPIM, leniency): who is barred, and when each entered and left the lists | daily |
 | [Campaign finance](https://github.com/mbottoni/political-eye/blob/main/methodology/tse.md) (TSE, 2018, 2022, 2026): each candidate's money by origin and fund, party transfers, large donors | weekly |

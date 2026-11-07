@@ -179,6 +179,16 @@ needing no orientation), and `n_free`, `n_none`. `data/senado/index.csv`
 adds `oriented_share`, `with_party`, `with_gov` and `with_majority` per
 window. `OBSTRUÇÃO` (8 times in all) counts as a `Não`.
 
+## Explorer
+
+[mbottoni.github.io/political-eye/senado/](https://mbottoni.github.io/political-eye/senado/)
+draws both graphs for any window in the browser, from the committed tables:
+the Câmara explorer's code (`docs/camara/core.js`) with the Senado's
+defaults and windows (`docs/senado/window.js`). With the default twelve-month
+window it reproduces every count in `index.csv` exactly
+(`tests/senado/parity.mjs`, run in CI); it also offers 6-, 3- and 1-month
+windows, which the index does not record.
+
 ## Tables
 
 | table | one row per |
@@ -200,7 +210,3 @@ Senators are identified by `CodigoParlamentar`, the Senado's own code.
 - **Joint sessions of the Congresso Nacional**, published per veto without
   senator codes.
 - **Committee votes.**
-- **An explorer page.** The browser code (`docs/camara/core.js`, with the
-  Senado's defaults and windows in `docs/senado/window.js`) already
-  reproduces every window of `index.csv` exactly (`tests/senado/parity.mjs`,
-  run in CI); the page itself is still to be written.

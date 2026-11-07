@@ -17,6 +17,7 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 
+from .. import graphs as core
 from ..paths import DATA
 
 TAU = 0.8          # co-voting: minimum agreement rate for an edge
@@ -30,7 +31,8 @@ MIN_ITEMS = 1      # co-authorship: minimum co-signed items for an edge
 EXCLUDE_TYPES = frozenset({"RPD", "DOC"})
 
 REPO_DATA = DATA / "camara"
-SIGN = {"Sim": 1, "Não": -1}
+SIGN = core.SIGN
+MEMBER = "deputado_id"
 
 
 def _root(data_dir: str | Path | None) -> str | Path:
@@ -94,10 +96,7 @@ def months(data_dir: str | Path | None = None) -> list[str]:
     return sorted({p.stem for sub in ("votes", "authorship") for p in (root / sub).glob("*.csv")})
 
 
-def legislatura(month: str) -> int:
-    """Legislature number in force during ``month`` (each starts on 1 February)."""
-    year, mon = int(month[:4]), int(month[5:7])
-    return (year - (1 if mon == 1 else 0) - 1795) // 4
+legislatura = core.legislatura
 
 
 # ---------------------------------------------------------------- co-voting
@@ -110,46 +109,12 @@ def vote_matrix(
     Lopsided votes (minority share below ``lop``) are dropped, then any deputy
     left with no votes. Returns ``(deputy_ids, votacao_ids, M)``.
     """
-    sign = votes.voto.map(SIGN)
-    if obstruction_as_no:
-        sign = sign.mask(votes.voto == "Obstrução", -1)
-    ok = sign.notna().to_numpy()
-    dep = votes.deputado_id.to_numpy()[ok]
-    vid = votes.votacao_id.to_numpy()[ok]
-    s = sign.to_numpy()[ok].astype(np.int8)
-
-    deputies = np.unique(dep)
-    votacoes = pd.unique(vid)
-    col = {v: i for i, v in enumerate(votacoes)}
-    M = np.zeros((len(deputies), len(votacoes)), dtype=np.int8)
-    M[np.searchsorted(deputies, dep), [col[v] for v in vid]] = s
-
-    yes, no = (M == 1).sum(0), (M == -1).sum(0)
-    with np.errstate(invalid="ignore", divide="ignore"):
-        minority = np.minimum(yes, no) / (yes + no)
-    keep = (yes + no > 0) & (minority >= lop)
-    M = M[:, keep]
-    active = (M != 0).any(1)
-    return deputies[active], np.asarray(votacoes)[keep], M[active]
+    return core.vote_matrix(votes, member=MEMBER, lop=lop, obstruction_as_no=obstruction_as_no)
 
 
 def _covote(month: str, *, min_shared: int, lop: float, obstruction_as_no: bool, data_dir):
-    ids, _, M = vote_matrix(load_month(month, data_dir).votes, lop=lop, obstruction_as_no=obstruction_as_no)
-    A = (M != 0).astype(np.int32)
-    P = (M == 1).astype(np.int32)
-    N = (M == -1).astype(np.int32)
-    shared = A @ A.T
-    agree = P @ P.T + N @ N.T
-    i, j = np.triu_indices(len(ids), 1)
-    s = shared[i, j]
-    keep = s >= min_shared
-    edges = pd.DataFrame({
-        "u": ids[i[keep]], "v": ids[j[keep]],
-        "n_shared": s[keep].astype("int64"), "n_agree": agree[i, j][keep].astype("int64"),
-    })
-    edges["agreement"] = edges.n_agree / edges.n_shared
-    nodes = ids[A.sum(1) >= min_shared]
-    return nodes, edges
+    return core.covote(load_month(month, data_dir).votes, member=MEMBER, min_shared=min_shared, lop=lop,
+                       obstruction_as_no=obstruction_as_no)
 
 
 def covote_edges(
@@ -167,32 +132,8 @@ def covote_edges(
 # ------------------------------------------------------------ co-authorship
 
 def _cosponsor(month: str, *, max_authors: int | None, types, exclude, data_dir):
-    au = load_month(month, data_dir).authorship
-    if types is not None:
-        au = au[au.sigla_tipo.isin(list(types))]
-    if exclude:
-        au = au[~au.sigla_tipo.isin(list(exclude))]
-    nodes = np.unique(au.deputado_id.to_numpy())
-    k = au.groupby("proposicao_id").deputado_id.transform("size")
-    multi = au[(k >= 2) & ((k <= max_authors) if max_authors is not None else True)]
-    cols = ["u", "v", "n_items", "weight"]
-    if multi.empty:
-        return nodes, pd.DataFrame({c: pd.Series(dtype="int64" if c != "weight" else "float64") for c in cols})
-
-    items = pd.unique(multi.proposicao_id)
-    col = {p: n for n, p in enumerate(items)}
-    B = np.zeros((len(nodes), len(items)))
-    B[np.searchsorted(nodes, multi.deputado_id.to_numpy()), [col[p] for p in multi.proposicao_id]] = 1.0
-    size = B.sum(0)
-    count = B @ B.T
-    newman = (B / (size - 1)) @ B.T
-    i, j = np.triu_indices(len(nodes), 1)
-    keep = count[i, j] > 0
-    return nodes, pd.DataFrame({
-        "u": nodes[i[keep]], "v": nodes[j[keep]],
-        "n_items": count[i, j][keep].round().astype("int64"),
-        "weight": newman[i, j][keep],
-    })
+    return core.cosponsor(load_month(month, data_dir).authorship, member=MEMBER, item="proposicao_id",
+                          max_authors=max_authors, types=types, exclude=exclude)
 
 
 def cosponsor_edges(
@@ -210,20 +151,6 @@ def cosponsor_edges(
 
 
 # ------------------------------------------------------------------- graphs
-
-def _nx(month, kind, nodes, edges, deputies, params) -> nx.Graph:
-    G = nx.Graph(month=month, kind=kind, legislatura=legislatura(month), **params)
-    info = deputies.set_index("deputado_id")[["nome", "partido", "uf"]]
-    for d in sorted(int(n) for n in nodes):
-        row = info.loc[d] if d in info.index else None
-        G.add_node(d, **({} if row is None else {"name": row.nome, "party": row.partido, "uf": row.uf}))
-    attrs = [c for c in edges.columns if c not in ("u", "v")]
-    G.add_edges_from(
-        (int(r[0]), int(r[1]), dict(zip(attrs, r[2:])))
-        for r in edges.itertuples(index=False, name=None)
-    )
-    return G
-
 
 def graph(
     month: str,
@@ -266,7 +193,8 @@ def graph(
         edges = edges[edges.n_items >= min_items]
     else:
         raise ValueError(f"kind must be 'covote' or 'cosponsor', not {kind!r}")
-    return _nx(month, kind, nodes, edges, d, {k: v for k, v in params.items() if v is not None})
+    return core.to_nx(month, kind, nodes, edges, d, member=MEMBER,
+                      params={k: v for k, v in params.items() if v is not None})
 
 
 def aligned(month: str, **kw) -> tuple[nx.Graph, nx.Graph]:
@@ -275,16 +203,7 @@ def aligned(month: str, **kw) -> tuple[nx.Graph, nx.Graph]:
     The vertex set is the deputies present in both graphs, so the pair is
     ready for a two-graph dependence test. Accepts every :func:`graph` keyword.
     """
-    gv = graph(month, "covote", **kw)
-    gc = graph(month, "cosponsor", **kw)
-    common = sorted(set(gv) & set(gc))
-    out = []
-    for g in (gv, gc):
-        h = nx.Graph(**g.graph)
-        h.add_nodes_from((n, g.nodes[n]) for n in common)
-        h.add_edges_from(g.subgraph(common).edges(data=True))
-        out.append(h)
-    return out[0], out[1]
+    return core.align(graph(month, "covote", **kw), graph(month, "cosponsor", **kw))
 
 
 def series(

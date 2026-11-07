@@ -1,5 +1,5 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-6919,2025-03-11,451477,DOR,8664217,PEC 18/2024,PEC,0,A,72,0,0,"Votação nominal da Proposta de Emenda à Constituição nº 18, de 2024, nos termos do parecer (1º Turno)."
-6920,2025-03-11,451477,DOR,8664217,PEC 18/2024,PEC,0,A,70,0,0,"Votação nominal da Proposta de Emenda à Constituição nº 18, de 2024 (2º Turno)."
-6921,2025-03-18,452147,DOR,8544415,PLP 192/2023,PLP,0,R,34,21,1,Votação nominal da decisão da Presidência na Questão de Ordem apresentada pelo Senador Alessandro Vieira.
-6922,2025-03-19,452148,DOR,8803985,PLP 22/2025 (Substitutivo-CD),PLP,0,A,66,2,0,"Votação nominal do Substitutivo da Câmara dos Deputados ao PLP nº 22/2025, nos termos do parecer."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6919,2025-03-11,451477,4235,DOR,8664217,PEC 18/2024,PEC,0,A,72,0,0,"Votação nominal da Proposta de Emenda à Constituição nº 18, de 2024, nos termos do parecer (1º Turno)."
+6920,2025-03-11,451477,4236,DOR,8664217,PEC 18/2024,PEC,0,A,70,0,0,"Votação nominal da Proposta de Emenda à Constituição nº 18, de 2024 (2º Turno)."
+6921,2025-03-18,452147,4238,DOR,8544415,PLP 192/2023,PLP,0,R,34,21,1,Votação nominal da decisão da Presidência na Questão de Ordem apresentada pelo Senador Alessandro Vieira.
+6922,2025-03-19,452148,4239,DOR,8803985,PLP 22/2025 (Substitutivo-CD),PLP,0,A,66,2,0,"Votação nominal do Substitutivo da Câmara dos Deputados ao PLP nº 22/2025, nos termos do parecer."

@@ -1,2 +1,2 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-6918,2025-02-19,450520,DOR,8793330,PLP 22/2025,PLP,0,A,65,1,0,"Votação nominal da Emenda nº 1 (Substitutivo) ao Projeto de Lei Complementar nº 22, de 2025, nos termos do parecer."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6918,2025-02-19,450520,4234,DOR,8793330,PLP 22/2025,PLP,0,A,65,1,0,"Votação nominal da Emenda nº 1 (Substitutivo) ao Projeto de Lei Complementar nº 22, de 2025, nos termos do parecer."

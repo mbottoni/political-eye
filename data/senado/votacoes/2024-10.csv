@@ -1,2 +1,2 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-6876,2024-10-08,418862,DOR,8718211,MSF 42/2024,MSF,1,A,66,5,0,"Votação nominal da Mensagem nº 42, de 2024 - Gabriel Muricca Galípolo (Banco Central do Brasil)."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6876,2024-10-08,418862,4192,DOR,8718211,MSF 42/2024,MSF,1,A,66,5,0,"Votação nominal da Mensagem nº 42, de 2024 - Gabriel Muricca Galípolo (Banco Central do Brasil)."

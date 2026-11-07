@@ -1,20 +1,20 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-6325,2021-06-08,233248,SDR,8021206,MPV 1029/2021,MPV,0,A,59,16,0,Votação nominal.
-6326,2021-06-09,233519,SDR,8077949,PL 1805/2021 (Substitutivo-CD),PL,0,A,73,0,0,Votação nomial.
-6327,2021-06-10,233880,SDR,8073115,PL 1674/2021,PL,0,A,72,0,0,"Votação nominal do Projeto de Lei nº 1674, de 2021, nos termos do Parecer."
-6328,2021-06-15,234627,SDR,7391095,PEC 6/2018,PEC,0,A,76,0,0,"Votação nominal, em 1º Turno"
-6329,2021-06-15,234627,SDR,7391095,PEC 6/2018,PEC,0,A,73,0,0,"Votação nominal, em 2º Turno."
-6376,2021-06-16,234933,SDR,8025319,MPV 1031/2021,MPV,0,A,44,35,0,"(Pressupostos de relevância e urgência, adequação financeira e orçamentária e pertinência temática da matéria.)"
-6377,2021-06-16,234933,SDR,8025319,MPV 1031/2021,MPV,0,A,42,37,0,"(Dispõe sobre a desestatização da empresa Centrais Elétricas Brasileiras S.A. (Eletrobras); altera as Leis nºs 5.899, de 1973, 9.991, de 2000, 10.438, de 2002, 10.848, de 2004, 13.182, de 2015, e 14.118, de 2021; e revoga dispositivos da Lei nº 3.890-A, de 1961.)"
-6378,2021-06-16,234933,SDR,8025319,MPV 1031/2021,MPV,0,R,35,41,0,"Emenda nº 610, destacada."
-6379,2021-06-16,234933,SDR,8025319,MPV 1031/2021,MPV,0,R,32,41,0,"Emenda nº 618, destacada."
-6330,2021-06-22,236085,SDR,8028076,MPV 1033/2021,MPV,0,A,42,35,0,Votação nominal do Requerimento de preferência para votação da Medida Provisória
-6331,2021-06-22,236085,SDR,8028076,MPV 1033/2021,MPV,0,A,52,23,0,Votação nominal da Medida Provisória
-6332,2021-06-22,236085,SDR,8041810,MPV 1034/2021,MPV,0,R,30,40,0,"Votação nominal da Emenda nº 38, destacada."
-6333,2021-06-22,236085,SDR,8041810,MPV 1034/2021,MPV,0,A,38,29,0,"Votação nominal da Emenda nº 97, destacada."
-6334,2021-06-22,236085,SDR,8041810,MPV 1034/2021,MPV,0,A,31,30,0,"Votação nominal da Emenda nº 88, destacada."
-6335,2021-06-22,236085,SDR,8041810,MPV 1034/2021,MPV,0,A,50,18,0,"Votação nominal conjunta de parte da Emenda nº 91 e da primeira parte da Emenda nº 96, destacadas."
-6336,2021-06-23,237016,SDR,8081774,PL 827/2020,PL,0,A,38,36,0,"Votação do PL 827/2020, ressalvado o destaque."
-6337,2021-06-23,237016,SDR,8081774,PL 827/2020,PL,0,A,43,27,0,"Votação nominal da Emenda nº 8, destacada."
-6338,2021-06-29,237603,SDR,7384346,PLS 206/2018,PLS,0,A,69,5,0,Votação nominal
-6339,2021-06-30,237942,SDR,7897127,PL 1106/2020,PL,0,A,50,22,0,"Votação nominal da Emenda nº 6 - PLEN ao Projeto de Lei nº 1.106, de 2020, destacada."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6325,2021-06-08,233248,,SDR,8021206,MPV 1029/2021,MPV,0,A,59,16,0,Votação nominal.
+6326,2021-06-09,233519,3607,SDR,8077949,PL 1805/2021 (Substitutivo-CD),PL,0,A,73,0,0,Votação nomial.
+6327,2021-06-10,233880,3608,SDR,8073115,PL 1674/2021,PL,0,A,72,0,0,"Votação nominal do Projeto de Lei nº 1674, de 2021, nos termos do Parecer."
+6328,2021-06-15,234627,,SDR,7391095,PEC 6/2018,PEC,0,A,76,0,0,"Votação nominal, em 1º Turno"
+6329,2021-06-15,234627,,SDR,7391095,PEC 6/2018,PEC,0,A,73,0,0,"Votação nominal, em 2º Turno."
+6376,2021-06-16,234933,3611,SDR,8025319,MPV 1031/2021,MPV,0,A,44,35,0,"(Pressupostos de relevância e urgência, adequação financeira e orçamentária e pertinência temática da matéria.)"
+6377,2021-06-16,234933,3612,SDR,8025319,MPV 1031/2021,MPV,0,A,42,37,0,"(Dispõe sobre a desestatização da empresa Centrais Elétricas Brasileiras S.A. (Eletrobras); altera as Leis nºs 5.899, de 1973, 9.991, de 2000, 10.438, de 2002, 10.848, de 2004, 13.182, de 2015, e 14.118, de 2021; e revoga dispositivos da Lei nº 3.890-A, de 1961.)"
+6378,2021-06-16,234933,3613,SDR,8025319,MPV 1031/2021,MPV,0,R,35,41,0,"Emenda nº 610, destacada."
+6379,2021-06-16,234933,3614,SDR,8025319,MPV 1031/2021,MPV,0,R,32,41,0,"Emenda nº 618, destacada."
+6330,2021-06-22,236085,,SDR,8028076,MPV 1033/2021,MPV,0,A,42,35,0,Votação nominal do Requerimento de preferência para votação da Medida Provisória
+6331,2021-06-22,236085,,SDR,8028076,MPV 1033/2021,MPV,0,A,52,23,0,Votação nominal da Medida Provisória
+6332,2021-06-22,236085,,SDR,8041810,MPV 1034/2021,MPV,0,R,30,40,0,"Votação nominal da Emenda nº 38, destacada."
+6333,2021-06-22,236085,,SDR,8041810,MPV 1034/2021,MPV,0,A,38,29,0,"Votação nominal da Emenda nº 97, destacada."
+6334,2021-06-22,236085,,SDR,8041810,MPV 1034/2021,MPV,0,A,31,30,0,"Votação nominal da Emenda nº 88, destacada."
+6335,2021-06-22,236085,,SDR,8041810,MPV 1034/2021,MPV,0,A,50,18,0,"Votação nominal conjunta de parte da Emenda nº 91 e da primeira parte da Emenda nº 96, destacadas."
+6336,2021-06-23,237016,3621,SDR,8081774,PL 827/2020,PL,0,A,38,36,0,"Votação do PL 827/2020, ressalvado o destaque."
+6337,2021-06-23,237016,3622,SDR,8081774,PL 827/2020,PL,0,A,43,27,0,"Votação nominal da Emenda nº 8, destacada."
+6338,2021-06-29,237603,,SDR,7384346,PLS 206/2018,PLS,0,A,69,5,0,Votação nominal
+6339,2021-06-30,237942,3624,SDR,7897127,PL 1106/2020,PL,0,A,50,22,0,"Votação nominal da Emenda nº 6 - PLEN ao Projeto de Lei nº 1.106, de 2020, destacada."

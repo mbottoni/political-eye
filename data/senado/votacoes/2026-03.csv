@@ -1,4 +1,4 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-7050,2026-03-24,550535,DOR,8378111,PL 896/2023,PL,0,A,67,0,0,"Votação nominal da Emenda nº 8 (Substitutivo) ao Projeto de Lei nº 896, de 2023, nos termos do parecer, ressalvado o destaque."
-7051,2026-03-24,550535,DOR,9018529,PLP 77/2026,PLP,0,A,60,1,0,"Votação nominal do Projeto de Lei Complementar nº 77, de 2026, nos termos do parecer."
-7052,2026-03-25,550536,DOR,9016403,PLP 6/2024,PLP,0,A,62,0,0,"Votação nominal do Projeto de Lei Complementar n° 6, de 2024."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+7050,2026-03-24,550535,4363,DOR,8378111,PL 896/2023,PL,0,A,67,0,0,"Votação nominal da Emenda nº 8 (Substitutivo) ao Projeto de Lei nº 896, de 2023, nos termos do parecer, ressalvado o destaque."
+7051,2026-03-24,550535,4364,DOR,9018529,PLP 77/2026,PLP,0,A,60,1,0,"Votação nominal do Projeto de Lei Complementar nº 77, de 2026, nos termos do parecer."
+7052,2026-03-25,550536,4365,DOR,9016403,PLP 6/2024,PLP,0,A,62,0,0,"Votação nominal do Projeto de Lei Complementar n° 6, de 2024."

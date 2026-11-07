@@ -146,12 +146,46 @@ threshold of 171.
 least one matéria (`min_items`), `n_items` and Newman's weight
 `sum(1 / (k - 1))`.
 
+## Party orientations
+
+**Source.** `/plenario/votacao/orientacaoBancada/Y0101/Y1231`, one call per
+year from 2018: for each roll call on the electronic panel, how party leaders,
+the Government, the Majority, the Minority, the Opposition and the women's
+caucus (`Banc Fem`) oriented (`SIM`, `NÃO`, `LIVRE`, `OBSTRUÇÃO`). Kept as
+published in `data/senado/orientations/` (`votacao_id, bancada, orientacao`);
+a leader who changed orientation keeps the last one given.
+
+**Coverage.** Orientations start in October 2018 and exist for about half the
+roll calls (1,041 records, 492 with any orientation). They join to
+`/votacao` through `sequencialVotacao` (`sequencial` in
+`data/senado/votacoes/`), which is empty before 2019: the 5 oriented roll
+calls of 2018 do not join. Some oriented roll calls are missing from
+`/votacao` itself (59 in 2021, 18 in 2022, 10 in 2023: veto votes and
+amendments, the API survey found); the build log counts them as
+`orientacoes_sem_votacao`.
+
+**Which orientation applies.** The Senado's lists have no blocs or
+federations, so a senator follows their own party's orientation, matched on
+the party at the vote (`partido` in `votes/`) with the Câmara's key
+(`party_key()`) plus the panel's own abbreviations (`Republica`, `PROGRES`,
+`Progressistas`). `LIVRE` frees the senator. Senators with no party
+(`S/Partido`) have none.
+
+**Discipline.** `politicaleye.senado.orientations.discipline(month)` counts,
+per senator, the contested votes of the window ending at `month`, as in the
+Câmara: `with_party`, `with_gov` (against the Government leader),
+`with_majority` (against the other senators of their party who voted,
+needing no orientation), and `n_free`, `n_none`. `data/senado/index.csv`
+adds `oriented_share`, `with_party`, `with_gov` and `with_majority` per
+window. `OBSTRUÇÃO` (8 times in all) counts as a `Não`.
+
 ## Tables
 
 | table | one row per |
 |---|---|
-| `data/senado/votacoes/YYYY-MM.csv` | roll call: `id` (`codigoSessaoVotacao`), `data`, `sessao`, `tipo_sessao`, `processo_id`, `materia`, `sigla`, `secreta`, `resultado` (`A` approved, `R` rejected), `votos_sim`, `votos_nao`, `votos_abstencao`, `descricao` |
+| `data/senado/votacoes/YYYY-MM.csv` | roll call: `id` (`codigoSessaoVotacao`), `data`, `sessao`, `sequencial` (`sequencialVotacao`), `tipo_sessao`, `processo_id`, `materia`, `sigla`, `secreta`, `resultado` (`A` approved, `R` rejected), `votos_sim`, `votos_nao`, `votos_abstencao`, `descricao` |
 | `data/senado/votes/YYYY-MM.csv` | senator and roll call: `voto`, `partido` and `uf` as recorded |
+| `data/senado/orientations/YYYY-MM.csv` | roll call and bench: `orientacao` as published |
 | `data/senado/authorship/YYYY-MM.csv` | senator and matéria: `processo_id`, `sigla_tipo`, `materia`, `data_apresentacao`, `partido`, `lider` |
 | `data/senado/senators/YYYY-MM.csv` | senator seen that month: `nome`, `partido` and `uf` from the latest vote (else the latest signature, else the legislature list), `n_votes`, `n_authored` |
 
@@ -163,11 +197,6 @@ Senators are identified by `CodigoParlamentar`, the Senado's own code.
 
 ## Not included (yet)
 
-- **Party and government orientations.** The Senado publishes them from
-  October 2018 (`/plenario/votacao/orientacaoBancada/{inicio}/{fim}`), but
-  each senator's vote there carries a name, not a code, and the orientations
-  join to roll calls only through `sequencialVotacao`, which is empty before
-  2019.
 - **Joint sessions of the Congresso Nacional**, published per veto without
   senator codes.
 - **Committee votes.**

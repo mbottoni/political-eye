@@ -65,3 +65,30 @@ def test_index(built):
     apr = df.set_index("month").loc["2025-04"]
     assert (apr.votacoes, apr.items_signed) == (4, 3)          # March and April pooled
     assert (built / "index.csv").read_text().startswith("month,legislatura,window_start,votacoes,")
+
+
+def test_orientations_table(built):
+    from .test_build import read
+    t = read(built, "orientations", "2025-03")
+    assert t.columns.tolist() == ["votacao_id", "bancada", "orientacao"]
+    assert t.values.tolist() == [["11", "Governo", "SIM"], ["11", "MDB", "LIVRE"], ["11", "PL", "NÃO"], ["11", "PT", "SIM"],
+                                 ["12", "Governo", "NÃO"], ["12", "PT", "SIM"], ["12", "Progressistas", "SIM"]]
+    assert read(built, "votacoes", "2025-03").set_index("id").sequencial.to_dict() == {"11": "4011", "13": "", "12": "4012"}
+
+
+def test_discipline(built):
+    from politicaleye.senado import orientations as o
+    d = o.discipline("2025-03", data_dir=built).set_index("senador_id")
+    cols = ["n_votes", "n_party", "n_with_party", "n_free", "n_none", "n_gov", "n_with_gov", "n_majority", "n_with_majority"]
+    # 11: Ana S, Bia S, Caio N, Davi N; 12: Ana S, Bia N, Caio N, Davi N, Eva S
+    assert d.loc[1, cols].tolist() == [2, 2, 2, 0, 0, 2, 1, 2, 1]   # PT said Sim twice; Bia agreed in 11 only
+    assert d.loc[2, cols].tolist() == [2, 2, 1, 0, 0, 2, 2, 2, 1]
+    assert d.loc[3, cols].tolist() == [2, 1, 1, 0, 1, 2, 1, 2, 2]   # PL oriented in 11 only
+    assert d.loc[5, cols].tolist() == [1, 0, 0, 0, 1, 1, 0, 0, 0]   # MDB: no orientation in 12 (free only in 11)
+    assert o.party_key("Republica") == "REPUBLICANOS" and o.party_key("PROGRES") == o.party_key("Progressistas") == "PP"
+
+
+def test_index_orientation_columns(built):
+    row = summary.month_row("2025-03", built)
+    assert row["oriented_share"] == round(6 / 9, 4)          # PT twice (Ana, Bia), PL once (Caio, Davi)
+    assert row["with_gov"] == round(5 / 9, 4)

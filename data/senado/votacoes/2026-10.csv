@@ -1,4 +1,4 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-7106,2026-10-14,591267,DOR,9056435,PEC 221/2019,PEC,0,A,75,1,0,"Votação nominal da Proposta de Emenda à Constituição nº 221, de 2019, em primeiro turno."
-7107,2026-10-14,591267,DOR,9056435,PEC 221/2019,PEC,0,A,75,1,0,"Votação nominal da Proposta de Emenda à Constituição nº 221, de 2019, em segundo turno."
-7108,2026-10-15,591273,DOR,9114338,PLP 186/2026,PLP,0,A,78,0,0,"Votação nominal do Projeto de Lei Complementar nº 186, de 2026, nos termos do parecer."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+7106,2026-10-14,591267,4420,DOR,9056435,PEC 221/2019,PEC,0,A,75,1,0,"Votação nominal da Proposta de Emenda à Constituição nº 221, de 2019, em primeiro turno."
+7107,2026-10-14,591267,4421,DOR,9056435,PEC 221/2019,PEC,0,A,75,1,0,"Votação nominal da Proposta de Emenda à Constituição nº 221, de 2019, em segundo turno."
+7108,2026-10-15,591273,4422,DOR,9114338,PLP 186/2026,PLP,0,A,78,0,0,"Votação nominal do Projeto de Lei Complementar nº 186, de 2026, nos termos do parecer."

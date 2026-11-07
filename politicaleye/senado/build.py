@@ -5,6 +5,7 @@ that changes nothing produces no git diff):
 
     data/senado/votacoes/YYYY-MM.csv   Plenário roll calls (one row per vote)
     data/senado/votes/YYYY-MM.csv      each senator's recorded vote, party and UF then
+    data/senado/orientations/YYYY-MM.csv how party and government leaders oriented each roll call
     data/senado/authorship/YYYY-MM.csv senators' signatures on matérias presented
     data/senado/senators/YYYY-MM.csv   everyone in either table, with party and UF
 
@@ -23,9 +24,10 @@ import pandas as pd
 from ..io import write_csv
 from .fetch import legislaturas, senators_listed
 
-VOTACOES = ["id", "data", "sessao", "tipo_sessao", "processo_id", "materia", "sigla", "secreta", "resultado",
+VOTACOES = ["id", "data", "sessao", "sequencial", "tipo_sessao", "processo_id", "materia", "sigla", "secreta", "resultado",
             "votos_sim", "votos_nao", "votos_abstencao", "descricao"]
 VOTES = ["votacao_id", "senador_id", "voto", "partido", "uf"]
+ORIENTATIONS = ["votacao_id", "bancada", "orientacao"]
 AUTHORSHIP = ["processo_id", "sigla_tipo", "materia", "data_apresentacao", "senador_id", "partido", "lider"]
 SENATORS = ["senador_id", "nome", "partido", "uf", "n_votes", "n_authored"]
 NO_PARTY = {"", "Sem registro"}
@@ -96,7 +98,8 @@ def load_votes(raw: Path, year: int) -> tuple[pd.DataFrame, pd.DataFrame, dict]:
         cast = [v[2] for v in rows.values()]
         total = (lambda k, w: _s(r.get(k)) if secret else str(cast.count(w)))
         vt.append({
-            "id": vid, "data": day, "sessao": _s(r.get("codigoSessao")), "tipo_sessao": _s(r.get("siglaTipoSessao")),
+            "id": vid, "data": day, "sessao": _s(r.get("codigoSessao")), "sequencial": _s(r.get("sequencialVotacao")),
+            "tipo_sessao": _s(r.get("siglaTipoSessao")),
             "processo_id": _s(r.get("idProcesso")), "materia": _s(r.get("identificacao")), "sigla": _s(r.get("sigla")),
             "secreta": int(secret), "resultado": _s(r.get("resultadoVotacao")),
             "votos_sim": total("totalVotosSim", "Sim"), "votos_nao": total("totalVotosNao", "Não"),
@@ -107,6 +110,34 @@ def load_votes(raw: Path, year: int) -> tuple[pd.DataFrame, pd.DataFrame, dict]:
     vt = pd.DataFrame(vt, columns=VOTACOES)
     vv = pd.DataFrame(vv, columns=[*VOTES, "nome"])
     return vt, vv, report
+
+
+def load_orientations(raw: Path, year: int, vt: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
+    """Leaders' orientations for the year's roll calls, joined on ``sequencialVotacao``.
+
+    The orientation endpoint names roll calls by the electronic panel's
+    sequence number, which ``/votacao`` also carries (from 2019; empty before).
+    A leader who changed orientation keeps the last one given.
+    """
+    path = raw / f"orientacao-{year}.json"
+    if not path.exists():
+        return pd.DataFrame(columns=ORIENTATIONS), {}
+    by_seq = dict(zip(vt.sequencial, vt.id))
+    by_seq.pop("", None)
+    rows, report = [], {"orientacoes_votacoes": 0, "orientacoes_sem_votacao": 0}
+    for x in json.loads(path.read_text()).get("votacoes") or []:
+        given = x.get("orientacoesLideranca") or []
+        if not given:
+            continue
+        report["orientacoes_votacoes"] += 1
+        vid = by_seq.get(_s(x.get("sequencialVotacao")))
+        if vid is None:
+            report["orientacoes_sem_votacao"] += 1
+            continue
+        for o in sorted(given, key=lambda o: _s(o.get("dataHora"))):
+            rows.append((vid, _s(o.get("partido")), _s(o.get("voto"))))
+    o = pd.DataFrame(rows, columns=ORIENTATIONS).drop_duplicates(["votacao_id", "bancada"], keep="last")
+    return o, report
 
 
 def load_authorship(raw: Path, year: int) -> tuple[pd.DataFrame, dict]:
@@ -173,8 +204,9 @@ def build_year(year: int, raw: Path, data_dir: Path) -> dict:
     """Rebuild every month of ``year``. Returns counts of what was dropped."""
     vt, vv, r1 = load_votes(raw, year)
     au, r2 = load_authorship(raw, year)
+    vo, r3 = load_orientations(raw, year, vt)
     listed = pd.DataFrame(senators_listed(raw, legislaturas(year)), columns=["codigo", "nome", "uf"])
-    report = {"year": year, **r1, **r2}
+    report = {"year": year, **r1, **r3, **r2}
 
     vt = vt.assign(month=vt.data.str[:7], _s=_num(vt.sessao), _i=_num(vt.id)).sort_values(["data", "_s", "_i"])
     order = {v: i for i, v in enumerate(vt.id)}
@@ -184,12 +216,15 @@ def build_year(year: int, raw: Path, data_dir: Path) -> dict:
         ["data_apresentacao", "_p", "_k"])
     months = sorted(set(vt.month) | set(au.month))
 
-    stale = {p for sub in ("votacoes", "votes", "authorship", "senators") for p in (data_dir / sub).glob(f"{year}-*.csv")}
+    vo = vo.assign(_o=vo.votacao_id.map(order)).sort_values(["_o", "bancada"])
+    stale = {p for sub in ("votacoes", "votes", "orientations", "authorship", "senators")
+             for p in (data_dir / sub).glob(f"{year}-*.csv")}
     for month in months:
         mvv, mau = vv[vv.month == month], au[au.month == month]
         out = {
             "votacoes": vt[vt.month == month][VOTACOES],
             "votes": mvv[VOTES],
+            "orientations": vo[vo.votacao_id.isin(set(mvv.votacao_id))][ORIENTATIONS],
             "authorship": mau[AUTHORSHIP],
             "senators": _senators(mvv, mau, listed),
         }

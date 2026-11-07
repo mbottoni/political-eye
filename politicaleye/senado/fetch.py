@@ -10,7 +10,10 @@ Per year ``Y`` the raw cache (``.cache/raw/senado/``) holds:
 - ``autoria/Y/<code>.json``: ``/processo?codigoParlamentarAutor=<code>`` for
   ``Y``, every matéria each of those senators signed. The by-date listing
   names authors only as text, so co-authors are found from each senator's
-  side.
+  side;
+- ``orientacao-Y.json``: ``/plenario/votacao/orientacaoBancada/Y0101/Y1231``,
+  how party and government leaders oriented each roll call (from October
+  2018).
 
 The API asks clients to stay under 10 requests a second; this stays near 4.
 Endpoints marked deprecated in the API's OpenAPI document are not used.
@@ -28,6 +31,7 @@ from ..fetch import get_bytes, log
 API = "https://legis.senado.leg.br/dadosabertos"
 PAUSE = 0.25   # seconds between requests
 FIRST_YEAR = 2015
+FIRST_ORIENTATION_YEAR = 2018
 
 
 def legislaturas(year: int) -> list[int]:
@@ -64,6 +68,10 @@ def autoria_url(code: str, year: int, api: str = API) -> str:
             f"&dataInicioApresentacao={year}-01-01&dataFimApresentacao={year}-12-31")
 
 
+def orientacao_url(year: int, api: str = API) -> str:
+    return f"{api}/plenario/votacao/orientacaoBancada/{year}0101/{year}1231"
+
+
 def senators_listed(raw: Path, legs: list[int]) -> list[dict]:
     """Everyone in the cached legislature lists: ``{codigo, nome, uf}``, by code."""
     out = {}
@@ -81,6 +89,8 @@ def fetch_year(year: int, raw: Path, *, api: str = API) -> dict[str, dict]:
     """Download everything ``year`` is built from. Returns provenance records by name."""
     records = {}
     records[f"votacao-{year}"] = _get(votacao_url(year, api), raw / f"votacao-{year}.json")
+    if year >= FIRST_ORIENTATION_YEAR:
+        records[f"orientacao-{year}"] = _get(orientacao_url(year, api), raw / f"orientacao-{year}.json")
     legs = legislaturas(year)
     for leg in legs:
         records[f"senadores-{leg}"] = _get(senadores_url(leg, api), raw / f"senadores-{leg}.json")

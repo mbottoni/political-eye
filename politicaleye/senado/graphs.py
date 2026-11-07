@@ -55,13 +55,14 @@ def _csv(root: str | Path, rel: str, **kw) -> pd.DataFrame:
 
 @dataclass(frozen=True)
 class Month:
-    """The four tidy tables for one month. Treat the frames as read-only."""
+    """The tidy tables for one month (or a window). Treat the frames as read-only."""
 
     month: str
     votacoes: pd.DataFrame
     votes: pd.DataFrame
     authorship: pd.DataFrame
     senators: pd.DataFrame
+    orientations: pd.DataFrame
 
 
 @lru_cache(maxsize=64)
@@ -75,7 +76,15 @@ def _load(month: str, root: str | Path) -> Month:
             c: str for c in ("sigla_tipo", "materia", "data_apresentacao", "partido")} | {"lider": "int64"}),
         senators=_csv(root, f"senators/{month}.csv", dtype={
             MEMBER: "int64", "nome": str, "partido": str, "uf": str, "n_votes": "int64", "n_authored": "int64"}),
+        orientations=_optional(root, f"orientations/{month}.csv", ["votacao_id", "bancada", "orientacao"]),
     )
+
+
+def _optional(root, rel: str, cols: list[str]) -> pd.DataFrame:
+    try:
+        return _csv(root, rel, dtype=str)
+    except (FileNotFoundError, OSError):
+        return pd.DataFrame(columns=cols, dtype=str)
 
 
 def load_month(month: str, data_dir: str | Path | None = None) -> Month:
@@ -129,7 +138,7 @@ def _window(month: str, window: int, root: str | Path) -> Month:
         n = senators.groupby(MEMBER)[["n_votes", "n_authored"]].sum()
         senators = last.join(n).reset_index()
     return Month(month=month, votacoes=cat("votacoes"), votes=cat("votes"), authorship=cat("authorship"),
-                 senators=senators)
+                 senators=senators, orientations=cat("orientations"))
 
 
 @lru_cache(maxsize=1)
@@ -137,7 +146,8 @@ def _load_empty() -> Month:
     e = pd.DataFrame
     return Month("", e(columns=["id"]), e(columns=["votacao_id", MEMBER, "voto", "partido", "uf"]),
                  e(columns=[ITEM, "sigla_tipo", "materia", "data_apresentacao", MEMBER, "partido", "lider"]),
-                 e(columns=[MEMBER, "nome", "partido", "uf", "n_votes", "n_authored"]))
+                 e(columns=[MEMBER, "nome", "partido", "uf", "n_votes", "n_authored"]),
+                 e(columns=["votacao_id", "bancada", "orientacao"]))
 
 
 def load_window(month: str, window: int = WINDOW, data_dir: str | Path | None = None) -> Month:

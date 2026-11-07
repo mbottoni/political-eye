@@ -12,6 +12,7 @@ import pandas as pd
 
 from .. import graphs as core
 from . import graphs as g
+from . import orientations as o
 
 
 def month_row(month: str, data_dir: Path) -> dict:
@@ -25,6 +26,12 @@ def month_row(month: str, data_dir: Path) -> dict:
     ec_on = ec[ec.n_items >= g.MIN_ITEMS]
     au = d.authorship[~d.authorship.sigla_tipo.isin(list(g.EXCLUDE_TYPES))]
     k = au.groupby(g.ITEM).size()
+    disc = o.discipline(month, window=w, data_dir=data_dir)
+    n_votes, n_party = int(disc.n_votes.sum()), int(disc.n_party.sum())
+
+    def share(num, den) -> float | None:
+        return round(num / den, 4) if den else None
+
     return {
         "month": month,
         "legislatura": g.legislatura(month),
@@ -43,6 +50,11 @@ def month_row(month: str, data_dir: Path) -> dict:
         "cosponsor_edges": len(ec_on),
         "cosponsor_density": core.density(len(nc), len(ec_on)),
         "aligned_nodes": len(set(nv.tolist()) & set(nc.tolist())),
+        # Orientations, over the same contested votes (see orientations.py).
+        "oriented_share": share(n_party, n_votes),
+        "with_party": share(int(disc.n_with_party.sum()), n_party),
+        "with_gov": share(int(disc.n_with_gov.sum()), int(disc.n_gov.sum())),
+        "with_majority": share(int(disc.n_with_majority.sum()), int(disc.n_majority.sum())),
     }
 
 

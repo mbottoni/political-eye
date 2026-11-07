@@ -1,5 +1,5 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-7109,2026-11-03,594169,DOR,9006525,PEC 18/2025,PEC,0,A,38,36,1,"Votação nominal dos Requerimentos nºs 741 e 742, de 2026, do Relator, para que as Emendas nºs 84 e 87 passem a constituir proposições em separado."
-7110,2026-11-03,594169,DOR,9006525,PEC 18/2025,PEC,0,A,73,0,0,"Votação nominal da Proposta de Emenda à Constituição nº 18, de 2025, nos termos dos pareceres, ressalvado o destaque (1º Turno)."
-7111,2026-11-03,594169,DOR,9006525,PEC 18/2025,PEC,0,A,67,0,0,"Votação nominal da Emenda nº 85 à Proposta de Emenda à Constituição nº 18, de 2025, nos termos do acordo de Plenário."
-7112,2026-11-03,594169,DOR,9006525,PEC 18/2025,PEC,0,A,75,0,0,"Votação nominal da Proposta de Emenda à Constituição nº 18, de 2025, nos termos do parecer da Comissão Diretora (2º Turno)."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+7109,2026-11-03,594169,4423,DOR,9006525,PEC 18/2025,PEC,0,A,38,36,1,"Votação nominal dos Requerimentos nºs 741 e 742, de 2026, do Relator, para que as Emendas nºs 84 e 87 passem a constituir proposições em separado."
+7110,2026-11-03,594169,4424,DOR,9006525,PEC 18/2025,PEC,0,A,73,0,0,"Votação nominal da Proposta de Emenda à Constituição nº 18, de 2025, nos termos dos pareceres, ressalvado o destaque (1º Turno)."
+7111,2026-11-03,594169,4425,DOR,9006525,PEC 18/2025,PEC,0,A,67,0,0,"Votação nominal da Emenda nº 85 à Proposta de Emenda à Constituição nº 18, de 2025, nos termos do acordo de Plenário."
+7112,2026-11-03,594169,4426,DOR,9006525,PEC 18/2025,PEC,0,A,75,0,0,"Votação nominal da Proposta de Emenda à Constituição nº 18, de 2025, nos termos do parecer da Comissão Diretora (2º Turno)."

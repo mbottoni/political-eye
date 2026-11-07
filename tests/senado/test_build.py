@@ -98,6 +98,8 @@ def test_fetch_year(monkeypatch, tmp_path):
         asked.append(url)
         if "/votacao?" in url:
             return b"[]"
+        if "orientacaoBancada" in url:
+            return b'{"votacoes": []}'
         if "/senador/lista/legislatura/" in url:
             return json.dumps(senadores(["1", "2"])).encode()
         return b"[]"
@@ -106,7 +108,9 @@ def test_fetch_year(monkeypatch, tmp_path):
     monkeypatch.setattr(fetch, "PAUSE", 0)
     rec = fetch.fetch_year(2026, tmp_path)
     assert asked[0] == "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2026-01-01&dataFim=2026-12-31"
-    assert asked[1].endswith("/senador/lista/legislatura/57.json?exercicio=S")
-    assert asked[2].endswith("/processo?codigoParlamentarAutor=1&dataInicioApresentacao=2026-01-01&dataFimApresentacao=2026-12-31")
-    assert sorted(rec) == ["autoria-2026", "senadores-57", "votacao-2026"] and rec["autoria-2026"]["files"] == 2
+    assert asked[1].endswith("/plenario/votacao/orientacaoBancada/20260101/20261231")
+    assert asked[2].endswith("/senador/lista/legislatura/57.json?exercicio=S")
+    assert asked[3].endswith("/processo?codigoParlamentarAutor=1&dataInicioApresentacao=2026-01-01&dataFimApresentacao=2026-12-31")
+    assert sorted(rec) == ["autoria-2026", "orientacao-2026", "senadores-57", "votacao-2026"]
+    assert rec["autoria-2026"]["files"] == 2
     assert (tmp_path / "autoria" / "2026" / "2.json").read_text() == "[]"

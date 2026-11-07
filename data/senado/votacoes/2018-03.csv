@@ -1,4 +1,4 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-5835,2018-03-13,61050,DOR,7353199,MSF 4/2018,MSF,1,A,51,2,1,"Votação referente à indicação do Senhor Ricardo Guerra de Araújo, Ministro de Segunda Classe da Carreira de Diplomata do Ministério das Relações Exteriores, para exercer o cargo de Embaixador do Brasil junto à República da Nigéria."
-5836,2018-03-14,61352,DOR,7353203,MSF 5/2018,MSF,1,A,65,1,2,"Votação referente à indicação do Senhor João André Pinto Dias Lima, Ministro de Primeira Classe da Carreira de Diplomata do Ministério das Relações Exteriores, para exercer o cargo de Embaixador do Brasil na República de El Salvador."
-5837,2018-03-21,62141,DOR,2946048,PLS 626/2011,PLS,0,,19,37,1,"Requerimento de reexame pela CDR e CMA para o PLS nº 626, de 2011."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+5835,2018-03-13,61050,,DOR,7353199,MSF 4/2018,MSF,1,A,51,2,1,"Votação referente à indicação do Senhor Ricardo Guerra de Araújo, Ministro de Segunda Classe da Carreira de Diplomata do Ministério das Relações Exteriores, para exercer o cargo de Embaixador do Brasil junto à República da Nigéria."
+5836,2018-03-14,61352,,DOR,7353203,MSF 5/2018,MSF,1,A,65,1,2,"Votação referente à indicação do Senhor João André Pinto Dias Lima, Ministro de Primeira Classe da Carreira de Diplomata do Ministério das Relações Exteriores, para exercer o cargo de Embaixador do Brasil na República de El Salvador."
+5837,2018-03-21,62141,,DOR,2946048,PLS 626/2011,PLS,0,,19,37,1,"Requerimento de reexame pela CDR e CMA para o PLS nº 626, de 2011."

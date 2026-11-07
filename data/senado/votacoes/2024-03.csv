@@ -1,4 +1,4 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-6820,2024-03-05,387067,DOR,7755648,PLP 137/2019,PLP,0,A,62,3,0,"Votação nominal do Projeto de Lei Complementar nº 137, de 2019, nos termos do parecer."
-6821,2024-03-13,389236,DOR,8611954,PEC 72/2023,PEC,0,A,66,4,0,"Votação, em primeiro turno, da PEC nº 72/2023, nos termos do Parecer com ajuste redacional."
-6822,2024-03-13,389236,DOR,8611954,PEC 72/2023,PEC,0,A,65,4,0,"Votação, em segundo turno, da PEC nº 72/2023."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6820,2024-03-05,387067,4142,DOR,7755648,PLP 137/2019,PLP,0,A,62,3,0,"Votação nominal do Projeto de Lei Complementar nº 137, de 2019, nos termos do parecer."
+6821,2024-03-13,389236,4143,DOR,8611954,PEC 72/2023,PEC,0,A,66,4,0,"Votação, em primeiro turno, da PEC nº 72/2023, nos termos do Parecer com ajuste redacional."
+6822,2024-03-13,389236,4144,DOR,8611954,PEC 72/2023,PEC,0,A,65,4,0,"Votação, em segundo turno, da PEC nº 72/2023."

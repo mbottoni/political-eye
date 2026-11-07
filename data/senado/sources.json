@@ -71,6 +71,51 @@
     "size": 5073170,
     "sha256": "e2d6cd534dfc7117dbc8b274785122f0b606df0b4db859d75fe83db670f4fa26"
   },
+  "orientacao-2018": {
+    "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20180101/20181231",
+    "size": 170216,
+    "sha256": "bb605f91c844ede1b7fa5b756c9bdad34a66e247da28aac6808664a5ecbb4249"
+  },
+  "orientacao-2019": {
+    "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20190101/20191231",
+    "size": 786675,
+    "sha256": "e4bb70ee299eca391ad2faffc99707bc0fdf741f664e682b7eb00d5a98da110b"
+  },
+  "orientacao-2020": {
+    "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20200101/20201231",
+    "size": 102424,
+    "sha256": "04b251abfa51daf574015c36ca2a4f2ef4707ba1b1eeb97af5c13634a3407efe"
+  },
+  "orientacao-2021": {
+    "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20210101/20211231",
+    "size": 1545275,
+    "sha256": "efba4a066beea1ffdd073666fea65c197d133e5b67fe01dd646d0709d1985c11"
+  },
+  "orientacao-2022": {
+    "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20220101/20221231",
+    "size": 1101634,
+    "sha256": "02439be04ed77a80d721e8711eb829aacb0b77ff7059ae750303e36deb4a4ba5"
+  },
+  "orientacao-2023": {
+    "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20230101/20231231",
+    "size": 855597,
+    "sha256": "fdacbafdf0cad494bf0926da25e607be295ceeb385e082727b3f30fd94fe7e32"
+  },
+  "orientacao-2024": {
+    "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20240101/20241231",
+    "size": 561449,
+    "sha256": "7a39d04718bc5edd45f7ec8b11fbfea66f58471a9f95f69a77b39c93422e6311"
+  },
+  "orientacao-2025": {
+    "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20250101/20251231",
+    "size": 715711,
+    "sha256": "cf013f9d0c555eed9716b6db2babfed44746bcee479367a0cdc562a72a54a2c0"
+  },
+  "orientacao-2026": {
+    "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20260101/20261231",
+    "size": 372380,
+    "sha256": "1c2c755d3a348245126110a9d89f01fdf7dc4ca669e9ab92d9a2e1b35d4e0b78"
+  },
   "senadores-54": {
     "url": "https://legis.senado.leg.br/dadosabertos/senador/lista/legislatura/54.json?exercicio=S",
     "size": 193524,

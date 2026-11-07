@@ -1,7 +1,7 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-6877,2024-11-12,426494,DOR,8617321,PL 182/2024,PL,0,A,52,16,0,"Votação nominal da Emenda nº 58 ao Substitutivo da Relatora ao Projeto de Lei nº 182, de 2024, destacada."
-6878,2024-11-12,426494,DOR,8746458,PLP 175/2024,PLP,0,A,46,18,1,"Votação nominal da Emenda nº 45 (Substitutivo) ao PLP nº 175/2024, nos termos do parecer, ressalvados os destaques."
-6879,2024-11-18,436503,DEX,8746458,PLP 175/2024,PLP,0,R,14,47,1,"Votação nominal dos dispositivos do art. 12 do Substitutivo do Relator ao PLP nº 175/2024, destacados."
-6880,2024-11-18,436503,DEX,8746458,PLP 175/2024,PLP,0,R,25,39,0,"Votação nominal do §4º do art. 4º do Substitutivo do Relator ao PLP nº 175/2024, destacado."
-6881,2024-11-18,436503,DEX,8746458,PLP 175/2024,PLP,0,A,64,0,0,"Votação nominal da Subemenda ao Substitutivo do Relator ao PLP nº 175/2024, destacada."
-6882,2024-11-27,426503,DOR,8734173,PLP 153/2024,PLP,0,A,67,0,0,"Votação nominal do Projeto de Lei Complementar nº 153 de 2024, nos termos do parecer."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6877,2024-11-12,426494,4193,DOR,8617321,PL 182/2024,PL,0,A,52,16,0,"Votação nominal da Emenda nº 58 ao Substitutivo da Relatora ao Projeto de Lei nº 182, de 2024, destacada."
+6878,2024-11-12,426494,4194,DOR,8746458,PLP 175/2024,PLP,0,A,46,18,1,"Votação nominal da Emenda nº 45 (Substitutivo) ao PLP nº 175/2024, nos termos do parecer, ressalvados os destaques."
+6879,2024-11-18,436503,4195,DEX,8746458,PLP 175/2024,PLP,0,R,14,47,1,"Votação nominal dos dispositivos do art. 12 do Substitutivo do Relator ao PLP nº 175/2024, destacados."
+6880,2024-11-18,436503,4196,DEX,8746458,PLP 175/2024,PLP,0,R,25,39,0,"Votação nominal do §4º do art. 4º do Substitutivo do Relator ao PLP nº 175/2024, destacado."
+6881,2024-11-18,436503,4197,DEX,8746458,PLP 175/2024,PLP,0,A,64,0,0,"Votação nominal da Subemenda ao Substitutivo do Relator ao PLP nº 175/2024, destacada."
+6882,2024-11-27,426503,4198,DOR,8734173,PLP 153/2024,PLP,0,A,67,0,0,"Votação nominal do Projeto de Lei Complementar nº 153 de 2024, nos termos do parecer."

@@ -1,8 +1,8 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-6626,2022-08-03,304487,DOR,8231550,MPV 1109/2022,MPV,0,A,51,17,0,"Votação nominal da MPV nº 1.109/2022 e seus Pressupostos Constitucionais, nos termos do Parecer, ressalvado o destaque."
-6627,2022-08-03,304487,DOR,8231550,MPV 1109/2022,MPV,0,R,19,39,0,"Votação nominal da Emenda nº 172 à Medida Provisória nº 1.109, de 2022, destacada."
-6628,2022-08-03,304487,DOR,8236047,MPV 1112/2022,MPV,0,R,20,41,0,"Votação nominal da Emenda nº 59 à Medida Provisória nº 1.112, de 2022, destacada."
-6629,2022-08-03,304487,DOR,8236047,MPV 1112/2022,MPV,0,R,31,28,0,"Votação nominal do Art. 14 do Projeto de Lei de Conversão nº 19, de 2022, destacado."
-6630,2022-08-03,304487,DOR,8244948,MPV 1113/2022,MPV,0,R,16,35,0,"Votação nominal da Emenda nº 45 ao Projeto de Lei de Conversão nº 20, de 2022, destacada."
-6631,2022-08-03,304487,DOR,8231544,MPV 1108/2022,MPV,0,R,21,28,0,"Votação nominal da Emenda nº 161 ao Projeto de Lei de Conversão nº 21, de 2022, destacada."
-6632,2022-08-31,307375,DOR,8250918,MPV 1116/2022,MPV,0,R,32,30,0,"Votação nominal do Parágrafo único do art. 5º do Projeto de Lei de Conversão nº 23, de 2022, destacado."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6626,2022-08-03,304487,3944,DOR,8231550,MPV 1109/2022,MPV,0,A,51,17,0,"Votação nominal da MPV nº 1.109/2022 e seus Pressupostos Constitucionais, nos termos do Parecer, ressalvado o destaque."
+6627,2022-08-03,304487,3945,DOR,8231550,MPV 1109/2022,MPV,0,R,19,39,0,"Votação nominal da Emenda nº 172 à Medida Provisória nº 1.109, de 2022, destacada."
+6628,2022-08-03,304487,3946,DOR,8236047,MPV 1112/2022,MPV,0,R,20,41,0,"Votação nominal da Emenda nº 59 à Medida Provisória nº 1.112, de 2022, destacada."
+6629,2022-08-03,304487,3947,DOR,8236047,MPV 1112/2022,MPV,0,R,31,28,0,"Votação nominal do Art. 14 do Projeto de Lei de Conversão nº 19, de 2022, destacado."
+6630,2022-08-03,304487,3948,DOR,8244948,MPV 1113/2022,MPV,0,R,16,35,0,"Votação nominal da Emenda nº 45 ao Projeto de Lei de Conversão nº 20, de 2022, destacada."
+6631,2022-08-03,304487,3949,DOR,8231544,MPV 1108/2022,MPV,0,R,21,28,0,"Votação nominal da Emenda nº 161 ao Projeto de Lei de Conversão nº 21, de 2022, destacada."
+6632,2022-08-31,307375,3950,DOR,8250918,MPV 1116/2022,MPV,0,R,32,30,0,"Votação nominal do Parágrafo único do art. 5º do Projeto de Lei de Conversão nº 23, de 2022, destacado."

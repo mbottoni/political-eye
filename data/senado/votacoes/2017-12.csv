@@ -1,21 +1,21 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-5803,2017-12-05,55508,DOR,5378083,OFS 50/2017,OFS,1,A,56,6,1,"Votação referente à indicação do Juiz Francisco Luciano de Azevedo Frota, para compor o Conselho Nacional de Justiça - CNJ."
-5804,2017-12-05,55508,DOR,7230206,MSF 68/2017,MSF,1,A,31,11,3,"Votação referente à indicação da Senhora Alessandra Bastos Soares, para exercer o cargo de Diretora da Agência Nacional de Vigilância Sanitária - ANVISA."
-5805,2017-12-06,55735,DOR,3042212,PEC 24/2012,PEC,0,,58,1,0,"Votação da Emenda nº 3 - CCJ (Substitutivo) à PEC nº 24, de 2012 (1º Turno)."
-5806,2017-12-06,55735,DOR,3042212,PEC 24/2012,PEC,0,,1,56,0,Votação que institui o Fundo Nacional de Desenvolvimento da Segurança Pública.
-5807,2017-12-06,55735,DOR,7156908,PEC 29/2017,PEC,0,A,56,0,0,Votação que altera o art. 159 da Constituição Federal para disciplinar a distribuição de recursos pela União ao Fundo de Participação dos Municípios (FPM).
-5808,2017-12-06,55735,DOR,7156908,PEC 29/2017,PEC,0,,57,0,0,Votação que altera o art. 159 da Constituição Federal para disciplinar a distribuição de recursos pela União ao Fundo de Participação dos Municípios (FPM).
-5809,2017-12-12,56464,DEX,7329957,PEC 45/2017 (fase 2),PEC,0,A,54,0,0,Votação que institui o novo regime especial de pagamentos de precatórios.
-5810,2017-12-12,56464,DEX,3042212,PEC 24/2012,PEC,0,A,62,0,0,Votação que institui o Fundo Nacional de Desenvolvimento da Segurança Pública.
-5811,2017-12-12,56464,DEX,7329957,PEC 45/2017 (fase 2),PEC,0,A,61,0,0,Votação que institui o novo regime especial de pagamentos de precatórios.
-5812,2017-12-12,56464,DEX,7283947,PLS 445/2017,PLS,0,,62,0,0,"Votação que dispõe sobre o padrão nacional de obrigação acessória do Imposto Sobre Serviços de Qualquer Natureza, de competência dos Municípios e do Distrito Federal."
-5813,2017-12-12,56464,DEX,7307151,PLC 157/2017,PLC,0,A,60,0,0,"Votação que altera o art. 2º da Lei Complementar nº 130, de 17 de abril de 2009, que dispõe sobre o Sistema Nacional de Crédito Cooperativo."
-5814,2017-12-12,56464,DEX,7109536,MPV 795/2017,MPV,0,,27,20,0,"Votação que dispõe sobre o tratamento tributário das atividades de exploração e de desenvolvimento de campo de pretróleo ou de gás natural; institui regime tributário especial para atividades de exploração, desenvolvimento e produção de pretóleo, gás natural e de outros hidrocarbonetos fluídos."
-5819,2017-12-13,57023,DEX,7329755,PLC 164/2017,PLC,0,A,64,0,0,Votação que institui o Programa Especial de Regularização Tributária das Microempresas e Empresas de Pequeno Porte optantes pelo Simples Nacional (Pert-SN).
-5820,2017-12-13,57023,DEX,2914472,PLS 204/2016,PLS,0,,43,18,2,"Votação da Emenda nº 16 - CAE (Substitutivo) ao Projeto de Lei do Senado nº 204, de 2016 - Complementar."
-5821,2017-12-13,57023,DEX,1400691,PEC 48/2015,PEC,0,A,58,1,0,Votação que acrescenta o § 13 ao art. 37 da Constituição Federal para dispor sobre a convalidação de atos administrativos.
-5822,2017-12-13,57023,DEX,1400691,PEC 48/2015,PEC,0,,55,1,0,Votação que acrescenta o § 13 ao art. 37 da Constituição Federal para dispor sobre a convalidação de atos administrativos.
-5823,2017-12-13,57023,DEX,7319490,MSF 72/2017,MSF,1,A,33,12,0,"Votação referente à indicação da Senhora Christianne Dias Ferreira, para exercer o cargo de Diretor da Agência Nacional de Águas - ANA."
-5824,2017-12-13,57023,DEX,7319808,MSF 74/2017,MSF,1,A,38,4,0,"Votação referente à indicação do Sr. Marcelo Cruz, para exercer o cargo de Diretor da Agência Nacional de Águas - ANA."
-5825,2017-12-13,57023,DEX,7324643,MSF 75/2017,MSF,1,A,40,4,0,"Votação referente à indicação do Sr. Oscar de Moraes Cordeiro Netto, para exercer o cargo de Diretor da Agência Nacional de Águas - ANA."
-5826,2017-12-14,57256,DEX,7317027,PLS 475/2017,PLS,0,,48,0,1,"Votação que define que a isenção do ISSQN se dá no caso de exportações de serviços para o exterior do País, quando os benefícios do serviço se verificam em território estrangeiro e há ingresso de divisas no país."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+5803,2017-12-05,55508,,DOR,5378083,OFS 50/2017,OFS,1,A,56,6,1,"Votação referente à indicação do Juiz Francisco Luciano de Azevedo Frota, para compor o Conselho Nacional de Justiça - CNJ."
+5804,2017-12-05,55508,,DOR,7230206,MSF 68/2017,MSF,1,A,31,11,3,"Votação referente à indicação da Senhora Alessandra Bastos Soares, para exercer o cargo de Diretora da Agência Nacional de Vigilância Sanitária - ANVISA."
+5805,2017-12-06,55735,,DOR,3042212,PEC 24/2012,PEC,0,,58,1,0,"Votação da Emenda nº 3 - CCJ (Substitutivo) à PEC nº 24, de 2012 (1º Turno)."
+5806,2017-12-06,55735,,DOR,3042212,PEC 24/2012,PEC,0,,1,56,0,Votação que institui o Fundo Nacional de Desenvolvimento da Segurança Pública.
+5807,2017-12-06,55735,,DOR,7156908,PEC 29/2017,PEC,0,A,56,0,0,Votação que altera o art. 159 da Constituição Federal para disciplinar a distribuição de recursos pela União ao Fundo de Participação dos Municípios (FPM).
+5808,2017-12-06,55735,,DOR,7156908,PEC 29/2017,PEC,0,,57,0,0,Votação que altera o art. 159 da Constituição Federal para disciplinar a distribuição de recursos pela União ao Fundo de Participação dos Municípios (FPM).
+5809,2017-12-12,56464,,DEX,7329957,PEC 45/2017 (fase 2),PEC,0,A,54,0,0,Votação que institui o novo regime especial de pagamentos de precatórios.
+5810,2017-12-12,56464,,DEX,3042212,PEC 24/2012,PEC,0,A,62,0,0,Votação que institui o Fundo Nacional de Desenvolvimento da Segurança Pública.
+5811,2017-12-12,56464,,DEX,7329957,PEC 45/2017 (fase 2),PEC,0,A,61,0,0,Votação que institui o novo regime especial de pagamentos de precatórios.
+5812,2017-12-12,56464,,DEX,7283947,PLS 445/2017,PLS,0,,62,0,0,"Votação que dispõe sobre o padrão nacional de obrigação acessória do Imposto Sobre Serviços de Qualquer Natureza, de competência dos Municípios e do Distrito Federal."
+5813,2017-12-12,56464,,DEX,7307151,PLC 157/2017,PLC,0,A,60,0,0,"Votação que altera o art. 2º da Lei Complementar nº 130, de 17 de abril de 2009, que dispõe sobre o Sistema Nacional de Crédito Cooperativo."
+5814,2017-12-12,56464,,DEX,7109536,MPV 795/2017,MPV,0,,27,20,0,"Votação que dispõe sobre o tratamento tributário das atividades de exploração e de desenvolvimento de campo de pretróleo ou de gás natural; institui regime tributário especial para atividades de exploração, desenvolvimento e produção de pretóleo, gás natural e de outros hidrocarbonetos fluídos."
+5819,2017-12-13,57023,,DEX,7329755,PLC 164/2017,PLC,0,A,64,0,0,Votação que institui o Programa Especial de Regularização Tributária das Microempresas e Empresas de Pequeno Porte optantes pelo Simples Nacional (Pert-SN).
+5820,2017-12-13,57023,,DEX,2914472,PLS 204/2016,PLS,0,,43,18,2,"Votação da Emenda nº 16 - CAE (Substitutivo) ao Projeto de Lei do Senado nº 204, de 2016 - Complementar."
+5821,2017-12-13,57023,,DEX,1400691,PEC 48/2015,PEC,0,A,58,1,0,Votação que acrescenta o § 13 ao art. 37 da Constituição Federal para dispor sobre a convalidação de atos administrativos.
+5822,2017-12-13,57023,,DEX,1400691,PEC 48/2015,PEC,0,,55,1,0,Votação que acrescenta o § 13 ao art. 37 da Constituição Federal para dispor sobre a convalidação de atos administrativos.
+5823,2017-12-13,57023,,DEX,7319490,MSF 72/2017,MSF,1,A,33,12,0,"Votação referente à indicação da Senhora Christianne Dias Ferreira, para exercer o cargo de Diretor da Agência Nacional de Águas - ANA."
+5824,2017-12-13,57023,,DEX,7319808,MSF 74/2017,MSF,1,A,38,4,0,"Votação referente à indicação do Sr. Marcelo Cruz, para exercer o cargo de Diretor da Agência Nacional de Águas - ANA."
+5825,2017-12-13,57023,,DEX,7324643,MSF 75/2017,MSF,1,A,40,4,0,"Votação referente à indicação do Sr. Oscar de Moraes Cordeiro Netto, para exercer o cargo de Diretor da Agência Nacional de Águas - ANA."
+5826,2017-12-14,57256,,DEX,7317027,PLS 475/2017,PLS,0,,48,0,1,"Votação que define que a isenção do ISSQN se dá no caso de exportações de serviços para o exterior do País, quando os benefícios do serviço se verificam em território estrangeiro e há ingresso de divisas no país."

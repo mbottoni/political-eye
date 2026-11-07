@@ -1,9 +1,9 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-5984,2019-07-02,108990,DOR,7725540,PEC 17/2019,PEC,0,A,65,0,0,"PEC nº 17, de 2019, com a Emenda nº 1 - CCJ (Redação), nos termos do Parecer (1º Turno)"
-5985,2019-07-02,108990,DOR,7725540,PEC 17/2019,PEC,0,A,62,0,0,"Proposta de Emenda à Constituição nº 17, de 2019 (2º Turno)"
-5986,2019-07-02,108990,DOR,7761852,MSF 29/2019,MSF,1,A,64,2,3,Mensagem nº 29 de 2019 - Fernanda Feitosa Nechio (Banco Central)
-5987,2019-07-09,111179,DOR,7760603,OFS 30/2019,OFS,1,,64,7,1,"Ofício ""S"" nº 30, de 2019 - Emmanoel Pereira (CNJ)"
-5988,2019-07-09,111179,DOR,7774143,OFS 32/2019,OFS,1,,64,1,2,"Ofício ""S"" nº 32, de 2019 - Josué Alfredo Pellegrini (IFI)"
-5989,2019-07-10,111969,DOR,7759563,OFS 23/2019,OFS,1,A,59,4,2,"Ofício ""S"" nº 23, de 2019 - Rubens de Mendonça Canuto Neto (CNJ)"
-5990,2019-07-10,111969,DOR,7759568,OFS 24/2019,OFS,1,A,58,5,1,"Ofício ""S"" nº 24, de 2019 - Candice Lavocat Galvão Jobim (CNJ)"
-5991,2019-07-10,111969,DOR,7761131,MSF 33/2019,MSF,1,A,61,3,2,"Mensagem nº 33, de 2019 - Antonio Barra Torres (ANVISA)"
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+5984,2019-07-02,108990,2887,DOR,7725540,PEC 17/2019,PEC,0,A,65,0,0,"PEC nº 17, de 2019, com a Emenda nº 1 - CCJ (Redação), nos termos do Parecer (1º Turno)"
+5985,2019-07-02,108990,2866,DOR,7725540,PEC 17/2019,PEC,0,A,62,0,0,"Proposta de Emenda à Constituição nº 17, de 2019 (2º Turno)"
+5986,2019-07-02,108990,2998,DOR,7761852,MSF 29/2019,MSF,1,A,64,2,3,Mensagem nº 29 de 2019 - Fernanda Feitosa Nechio (Banco Central)
+5987,2019-07-09,111179,3003,DOR,7760603,OFS 30/2019,OFS,1,,64,7,1,"Ofício ""S"" nº 30, de 2019 - Emmanoel Pereira (CNJ)"
+5988,2019-07-09,111179,3020,DOR,7774143,OFS 32/2019,OFS,1,,64,1,2,"Ofício ""S"" nº 32, de 2019 - Josué Alfredo Pellegrini (IFI)"
+5989,2019-07-10,111969,2945,DOR,7759563,OFS 23/2019,OFS,1,A,59,4,2,"Ofício ""S"" nº 23, de 2019 - Rubens de Mendonça Canuto Neto (CNJ)"
+5990,2019-07-10,111969,2946,DOR,7759568,OFS 24/2019,OFS,1,A,58,5,1,"Ofício ""S"" nº 24, de 2019 - Candice Lavocat Galvão Jobim (CNJ)"
+5991,2019-07-10,111969,3043,DOR,7761131,MSF 33/2019,MSF,1,A,61,3,2,"Mensagem nº 33, de 2019 - Antonio Barra Torres (ANVISA)"

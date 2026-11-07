@@ -1,4 +1,4 @@
-id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
-7015,2025-10-07,513326,DOR,8906998,PLP 235/2019 (Substitutivo-CD),PLP,0,A,70,0,1,"Votação nominal do Substitutivo da Câmara dos Deputados ao PLP nº 235, de 2019, nos termos do parecer."
-7016,2025-10-21,513336,DOR,8862654,PL 769/2024,PL,0,A,36,18,0,"Votação nominal do Projeto de Lei nº 769, de 2024, nos termos do parecer."
-7017,2025-10-22,513337,DOR,8922384,PLP 204/2025,PLP,0,A,57,4,0,"Emenda nº 2 (Substitutivo) ao Projeto de Lei Complementar nº 204, de 2025, nos termos do parecer."
+id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+7015,2025-10-07,513326,4331,DOR,8906998,PLP 235/2019 (Substitutivo-CD),PLP,0,A,70,0,1,"Votação nominal do Substitutivo da Câmara dos Deputados ao PLP nº 235, de 2019, nos termos do parecer."
+7016,2025-10-21,513336,4332,DOR,8862654,PL 769/2024,PL,0,A,36,18,0,"Votação nominal do Projeto de Lei nº 769, de 2024, nos termos do parecer."
+7017,2025-10-22,513337,4333,DOR,8922384,PLP 204/2025,PLP,0,A,57,4,0,"Emenda nº 2 (Substitutivo) ao Projeto de Lei Complementar nº 204, de 2025, nos termos do parecer."

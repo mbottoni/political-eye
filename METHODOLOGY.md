@@ -10,6 +10,7 @@ changes its numbers and every problem found in its data:
 | Parliamentary amendments | `data/emendas/` | [methodology/emendas.md](methodology/emendas.md) |
 | Sanctions | `data/sancoes/` | [methodology/sancoes.md](methodology/sancoes.md) |
 | Campaign finance (TSE) | `data/tse/` | [methodology/tse.md](methodology/tse.md) |
+| Reference tables (one politician across sources) | `data/ref/` | [methodology/ref.md](methodology/ref.md) |
 
 The rules below hold for every source.
 

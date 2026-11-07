@@ -1,0 +1,52 @@
+name: ref
+
+# Rebuilds the crosswalk that links one politician across sources, after the
+# Saturday jobs have refreshed the Câmara, Senado and TSE data.
+on:
+  schedule:
+    - cron: "17 12 * * 0"   # Sundays, 12:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ref
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Test
+        run: uv run pytest -q tests/ref
+
+      - name: Download and rebuild
+        run: uv run python -m politicaleye ref update
+
+      - name: Commit if the data changed
+        run: |
+          git add data/ref
+          if git diff --staged --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "ref: update through $(date -u +%F)"
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase
+          done
+          exit 1

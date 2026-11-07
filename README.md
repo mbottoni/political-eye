@@ -8,7 +8,7 @@ Brazilian politics and public money from official open data, committed as it cha
 | [Câmara party orientations](https://github.com/mbottoni/political-eye/blob/main/methodology/camara.md#party-orientations): how often each deputy votes with their party, the government and their party's majority | weekly |
 | [Câmara blocs](https://github.com/mbottoni/political-eye/blob/main/methodology/camara.md#party-orientations): which party was in which bloc, and when (the Câmara keeps no history) | daily |
 | [Senado Federal](https://github.com/mbottoni/political-eye/blob/main/methodology/senado.md): the same two graphs for the Senate, over the twelve months to date | weekly |
-| Parliamentary amendments (emendas, including "Pix" transfers) | planned |
+| [Parliamentary amendments](https://github.com/mbottoni/political-eye/blob/main/methodology/emendas.md): who sent money where, what was paid and who received it, "Pix" transfers included | daily |
 | Sanctioned companies (CEIS, CNEP) | planned |
 | Campaign finance (TSE) | planned |
 | Municipal finances (Siconfi) | planned |

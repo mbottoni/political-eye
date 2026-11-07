@@ -1,0 +1,54 @@
+name: emendas
+
+# The Portal da Transparência regenerates the amendments file every night
+# (around 03:00 UTC). Running at 09:17 UTC means each commit is one day of
+# commitments and payments; its diff is what moved that day.
+on:
+  schedule:
+    - cron: "17 9 * * *"   # daily, 09:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: emendas
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Test
+        run: uv run pytest -q tests/emendas tests/test_fetch.py
+
+      - name: Download and rebuild
+        run: uv run python -m politicaleye emendas update
+
+      - name: Commit if the data changed
+        run: |
+          git add data/emendas
+          if git diff --staged --quiet -- . ':!data/emendas/sources.json'; then
+            echo "No data changes."
+            exit 0
+          fi
+          years=$(git diff --staged --name-only -- data/emendas/emendas data/emendas/pagamentos | xargs -rn1 basename | sed 's/\.csv$//' | sort -u | tr '\n' ' ')
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "emendas: update through $(date -u +%F)" -m "Years changed: ${years:-none (totals or names only)}"
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase
+          done
+          exit 1

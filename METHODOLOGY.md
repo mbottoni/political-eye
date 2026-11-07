@@ -7,6 +7,7 @@ changes its numbers and every problem found in its data:
 |---|---|---|
 | Câmara dos Deputados | `data/camara/` | [methodology/camara.md](methodology/camara.md) |
 | Senado Federal | `data/senado/` | [methodology/senado.md](methodology/senado.md) |
+| Parliamentary amendments | `data/emendas/` | [methodology/emendas.md](methodology/emendas.md) |
 
 The rules below hold for every source.
 

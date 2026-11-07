@@ -24,3 +24,23 @@ Empty means the source has nothing for that person: no contested vote with
 an orientation, no linked amendment author, or no linked candidacy. In the
 57th legislature every deputy links to a candidacy (suplentes who took office
 included) and 84% to amendments; the rest took office late or briefly.
+
+## `data/views/municipios.csv`: one row per municipality and year
+
+Every municipality in Siconfi's list (`entes.csv`), for every year either
+source covers, joined on the IBGE code.
+
+| columns | from | meaning |
+|---|---|---|
+| `cod_ibge`, `ente`, `uf`, `populacao` | Siconfi | the municipality, with Siconfi's population figure |
+| `ano` | | the budget year (amendments) and fiscal year (Siconfi) |
+| `emendas`, `emendas_empenhado`, `emendas_pago` | Portal da Transparência ([emendas.md](emendas.md)) | amendments applied to the municipality that year, all types: distinct amendment codes, committed, paid |
+| `emendas_pix_pago` | Portal da Transparência | of that, paid by "Pix" amendments (`especial`), sent straight to the town's account |
+| `emendas_pago_por_habitante` | both | paid per inhabitant |
+| `dtp_pct`, `situacao` | Siconfi ([siconfi.md](siconfi.md)) | payroll as a share of net current revenue, and where it stands against the legal limits |
+| `caixa_liquida_livre` | Siconfi | unrestricted cash left after carried-over commitments, at the end of the year |
+
+Amendments applied to several municipalities, to a whole state or nationally
+are not split among towns, so a town's amendment money here is a lower
+bound. Siconfi columns fill in as its history is read
+([siconfi.md](siconfi.md#source)).

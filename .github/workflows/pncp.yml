@@ -1,0 +1,68 @@
+name: pncp
+
+# Reads yesterday's contracts (published and updated) from the PNCP, then the
+# history back to September 2021, newest day first, for up to five hours; the
+# next run continues. The API throttles hard (HTTP 429 past ~20 requests a
+# minute), so requests are paced. Once the history is read, a run takes a few
+# minutes. Commits only when a table changed.
+on:
+  schedule:
+    - cron: "47 8 * * *"   # daily, 08:47 UTC
+  workflow_dispatch:
+    inputs:
+      hours:
+        description: "Time budget in hours"
+        required: false
+        default: "5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pncp
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Test
+        run: uv run pytest -q tests/pncp
+
+      - name: Read contracts
+        env:
+          HOURS: ${{ inputs.hours || '5' }}
+        run: |
+          if [[ ! "$HOURS" =~ ^[0-9.]+$ ]]; then
+            echo "hours must be a number, got: $HOURS" >&2
+            exit 1
+          fi
+          uv run python -m politicaleye pncp update --hours "$HOURS"
+
+      - name: Commit if a table changed
+        run: |
+          git add data/pncp
+          if git diff --staged --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          n=$(git diff --staged -U0 -- data/pncp/dias.csv | grep -c '^+[0-9]' || true)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "pncp: update through $(date -u +%F)" -m "Days read or updated: ${n}"
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase
+          done
+          exit 1

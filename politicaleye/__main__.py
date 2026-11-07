@@ -10,13 +10,15 @@ import argparse
 
 from .camara import cli as camara_cli
 from .emendas import cli as emendas_cli
+from .pncp import cli as pncp_cli
 from .ref import cli as ref_cli
 from .sancoes import cli as sancoes_cli
 from .senado import cli as senado_cli
+from .siconfi import cli as siconfi_cli
 from .tse import cli as tse_cli
 from .views import cli as views_cli
 
-SOURCES = (camara_cli, senado_cli, emendas_cli, sancoes_cli, tse_cli, ref_cli, views_cli)
+SOURCES = (camara_cli, senado_cli, emendas_cli, sancoes_cli, tse_cli, siconfi_cli, pncp_cli, ref_cli, views_cli)
 
 
 def main(argv: list[str] | None = None) -> int:

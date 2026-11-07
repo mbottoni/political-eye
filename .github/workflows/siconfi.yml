@@ -1,0 +1,70 @@
+name: siconfi
+
+# The Siconfi API allows one request a second and answers one municipality
+# and report per call. Each daily run reads for up to five hours from a queue
+# (the year in progress every 25 days, then the history, biggest towns
+# first) and commits what it read; the next run continues. Once the history
+# is read, most days find nothing due and finish in a minute.
+on:
+  schedule:
+    - cron: "13 4,16 * * *"   # twice a day, 04:13 and 16:13 UTC, while the history is read
+  workflow_dispatch:
+    inputs:
+      hours:
+        description: "Time budget in hours"
+        required: false
+        default: "5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: siconfi
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Test
+        run: uv run pytest -q tests/siconfi
+
+      - name: Read reports
+        env:
+          HOURS: ${{ inputs.hours || '5' }}
+        run: |
+          if [[ ! "$HOURS" =~ ^[0-9.]+$ ]]; then
+            echo "hours must be a number, got: $HOURS" >&2
+            exit 1
+          fi
+          uv run python -m politicaleye siconfi update --hours "$HOURS"
+
+      - name: Commit what was read
+        run: |
+          # consultas.csv only records when each report was read: commit it
+          # with data, but not on its own.
+          git add data/siconfi
+          if git diff --staged --quiet -- . ':!data/siconfi/consultas.csv'; then
+            echo "No data changes."
+            exit 0
+          fi
+          years=$(git diff --staged --name-only -- data/siconfi/pessoal | xargs -rn1 basename | sed 's/\.csv$//' | sort -u | tr '\n' ' ')
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "siconfi: update through $(date -u +%F)" -m "Years changed: ${years:-none}"
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase
+          done
+          exit 1

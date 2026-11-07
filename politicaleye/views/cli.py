@@ -7,13 +7,15 @@ from pathlib import Path
 
 from ..camara.graphs import legislatura
 from ..paths import DATA
-from . import deputados
+from . import deputados, municipios
 
 
 def cmd_update(a) -> int:
     latest = legislatura(max(p.stem for p in (a.data / "camara" / "votes").glob("*.csv")))
     for leg in a.legislaturas or [latest - 1, latest]:
         deputados.build(leg, a.data)
+    if (a.data / "siconfi" / "entes.csv").exists():
+        municipios.build(a.data)
     return 0
 
 

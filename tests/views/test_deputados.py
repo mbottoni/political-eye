@@ -37,3 +37,23 @@ def test_view(tmp_path):
     assert "100" not in out.deputado_id.tolist()                                    # never cast a contested vote
     assert out.set_index("deputado_id").loc["20", "campanha_sq_candidato"] == ""    # no link
     cg._load.cache_clear()
+
+
+def test_municipios(tmp_path):
+    from politicaleye.views import municipios as mv
+    data = tmp_path / "data"
+    (data / "siconfi" / "pessoal").mkdir(parents=True)
+    pd.DataFrame({"cod_ibge": ["1", "2"], "ente": ["A", "B"], "uf": ["SP", "SP"], "regiao": "SE", "populacao": ["1000", "0"],
+                  "cnpj": "x", "capital": "0"}).to_csv(data / "siconfi" / "entes.csv", index=False)
+    pd.DataFrame({"cod_ibge": ["1"], "ano": ["2025"], "periodicidade": "Q", "periodo": "3", "rcl": "1", "rcl_ajustada": "1",
+                  "dtp": "1", "dtp_pct": ["55.1"], "limite_maximo_pct": "54", "limite_prudencial_pct": "51.3",
+                  "limite_alerta_pct": "48.6", "situacao": ["acima_maximo"]}).to_csv(data / "siconfi" / "pessoal" / "2025.csv", index=False)
+    (data / "emendas").mkdir()
+    pd.DataFrame({"municipio_ibge": ["1", "1"], "ano": ["2025", "2025"], "tipo": ["individual", "especial"],
+                  "emendas": ["2", "1"], "empenhado": ["100.00", "50.00"], "liquidado": "0", "pago": ["80.00", "50.00"]}
+                 ).to_csv(data / "emendas" / "por_municipio.csv", index=False)
+    out = mv.build(data).set_index(["cod_ibge", "ano"])
+    a = out.loc[("1", "2025")]
+    assert (a.emendas, a.emendas_pago, a.emendas_pix_pago, a.emendas_pago_por_habitante) == (3, "130.00", "50.00", "0.13")
+    assert (a.dtp_pct, a.situacao) == ("55.1", "acima_maximo")
+    assert out.loc[("2", "2025"), "emendas_pago"] == "0.00" and out.loc[("2", "2025"), "emendas_pago_por_habitante"] == ""

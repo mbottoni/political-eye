@@ -10,8 +10,10 @@ changes its numbers and every problem found in its data:
 | Parliamentary amendments | `data/emendas/` | [methodology/emendas.md](methodology/emendas.md) |
 | Sanctions | `data/sancoes/` | [methodology/sancoes.md](methodology/sancoes.md) |
 | Campaign finance (TSE) | `data/tse/` | [methodology/tse.md](methodology/tse.md) |
+| Municipal finances (Siconfi) | `data/siconfi/` | [methodology/siconfi.md](methodology/siconfi.md) |
+| Public contracts (PNCP) | `data/pncp/` | [methodology/pncp.md](methodology/pncp.md) |
 | Reference tables (one politician across sources) | `data/ref/` | [methodology/ref.md](methodology/ref.md) |
-| Views across sources (one row per deputy) | `data/views/` | [methodology/views.md](methodology/views.md) |
+| Views across sources (one row per deputy, one per municipality and year) | `data/views/` | [methodology/views.md](methodology/views.md) |
 
 The rules below hold for every source.
 

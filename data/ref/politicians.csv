@@ -330,6 +330,7 @@ camara:141438,emendas,2417,FRANCISCO PRACIANO,nome_parlamentar+mandato
 camara:141439,camara,141439,Chico D'Angelo,
 camara:141439,emendas,2497,CHICO DANGELO,nome_parlamentar+mandato
 camara:141439,tse,190000615527,CHICO D ANGELO,nome_civil+nascimento
+camara:141439,tse,190001640615,CHICO D ANGELO,nascimento+primeiro_nome+uf
 camara:141440,camara,141440,CHICO LOPES,
 camara:141440,emendas,2437,CHICO LOPES,nome_parlamentar+mandato
 camara:141440,tse,60000611001,CHICO LOPES,nome_civil+nascimento
@@ -571,6 +572,7 @@ camara:141870,camara,141870,VILSON COVATTI,
 camara:141870,emendas,2568,VILSON COVATTI,nome_parlamentar+mandato
 camara:143084,camara,143084,Tiago Dimas,
 camara:143084,emendas,4071,TIAGO DIMAS,nome_parlamentar+mandato
+camara:143084,tse,270000618825,TIAGO DIMAS,nascimento+primeiro_nome+uf
 camara:143084,tse,270001642303,TIAGO DIMAS,nome_civil+nascimento
 camara:143084,tse,270002548435,TIAGO DIMAS,nome_civil+nascimento
 camara:143632,camara,143632,Domingos Neto,
@@ -716,6 +718,8 @@ camara:160515,tse,240000609552,RONALDO BENEDET,nome_civil+nascimento
 camara:160516,camara,160516,RAIMUNDÃO,
 camara:160517,camara,160517,Paulo Folletto,
 camara:160517,emendas,2774,PAULO FOLLETTO,nome_parlamentar+mandato
+camara:160517,tse,80000620175,FOLETTO,nascimento+primeiro_nome+uf
+camara:160517,tse,80001620975,PAULO FOLETTO,nascimento+primeiro_nome+uf
 camara:160518,camara,160518,Weliton Prado,
 camara:160518,emendas,2768,WELITON PRADO,nome_parlamentar+mandato
 camara:160518,tse,130000620691,WELITON PRADO,nome_civil+nascimento
@@ -750,6 +754,7 @@ camara:160533,emendas,2785,LILIAM SA,nome_parlamentar+mandato
 camara:160533,tse,190001603091,LILIAM SÁ,nome_civil+nascimento
 camara:160534,camara,160534,Lauriete,
 camara:160534,emendas,2773,LAURIETE,nome_parlamentar+mandato
+camara:160534,tse,80000607498,LAURIETE,nascimento+primeiro_nome+uf
 camara:160534,tse,80001615363,LAURIETE,nome_civil+nascimento
 camara:160535,camara,160535,Marcon,
 camara:160535,emendas,2867,MARCON,nome_parlamentar+mandato
@@ -922,6 +927,7 @@ camara:160588,tse,130001604337,DIEGO ANDRADE,nome_civil+nascimento
 camara:160588,tse,130002545559,DIEGO ANDRADE,nome_civil+nascimento
 camara:160589,camara,160589,Bruna Furlan,
 camara:160589,emendas,2797,BRUNA FURLAN,nome_parlamentar+mandato
+camara:160589,tse,250000605403,BRUNA FURLAN,nascimento+primeiro_nome+uf
 camara:160590,camara,160590,HÉLIO SANTOS,
 camara:160590,emendas,2696,HELIO SANTOS,nome_parlamentar+mandato
 camara:160591,camara,160591,Vinicius Gurgel,
@@ -1224,6 +1230,7 @@ camara:160974,emendas,2706,HUGO NAPOLEAO,nome_parlamentar+mandato
 camara:160976,camara,160976,Tiririca,
 camara:160976,emendas,2818,TIRIRICA,nome_parlamentar+mandato
 camara:160976,tse,60002537025,TIRIRICA,nome_civil+nascimento
+camara:160976,tse,250000619516,TIRIRICA,nascimento+primeiro_nome+uf
 camara:160976,tse,250001611321,TIRIRICA,nome_civil+nascimento
 camara:161440,camara,161440,Pezenti,
 camara:161440,emendas,4448,PEZENTI,nome_parlamentar+mandato
@@ -1504,8 +1511,10 @@ camara:178850,emendas,3723,MARCOS ROTTA,nome_parlamentar+mandato
 camara:178851,camara,178851,JOZI ARAÚJO,
 camara:178851,emendas,3696,JOZI ARAUJO,nome_parlamentar+mandato
 camara:178851,tse,30000619279,JOZI ARAUJO,nome_civil+nascimento
+camara:178851,tse,30001611421,JOZI ARAUJO,nascimento+primeiro_nome+uf
 camara:178852,camara,178852,MARCOS REATEGUI,
 camara:178852,emendas,3722,MARCOS REATEGUI,nome_parlamentar+mandato
+camara:178852,tse,30000617208,MARCOS REATEGUI,nascimento+primeiro_nome+uf
 camara:178853,camara,178853,Caetano,
 camara:178853,emendas,3062,CAETANO,nome_parlamentar+mandato
 camara:178853,tse,50000607791,CAETANO,nome_civil+nascimento
@@ -1839,6 +1848,7 @@ camara:178938,camara,178938,CABO DACIOLO,
 camara:178938,emendas,3058,CABO DACIOLO,nome_parlamentar+mandato
 camara:178939,camara,178939,Clarissa Garotinho,
 camara:178939,emendas,3075,CLARISSA GAROTINHO,nome_parlamentar+mandato
+camara:178939,tse,190000607870,CLARISSA GARONTINHO,nascimento+primeiro_nome+uf
 camara:178940,camara,178940,DR. JOÃO,
 camara:178940,emendas,3085,DR. JOAO,nome_parlamentar+mandato
 camara:178940,tse,190002550507,DR. JOÃO,nome_civil+nascimento
@@ -1921,6 +1931,7 @@ camara:178960,camara,178960,REMÍDIO MONAI,
 camara:178960,emendas,3745,REMIDIO MONAI,nome_parlamentar+mandato
 camara:178961,camara,178961,Shéridan,
 camara:178961,emendas,3763,SHERIDAN,nome_parlamentar+mandato
+camara:178961,tse,230000604574,SHÉRIDAN,nascimento+primeiro_nome+uf
 camara:178962,camara,178962,Carlos Gomes,
 camara:178962,emendas,3067,CARLOS GOMES,nome_parlamentar+mandato
 camara:178962,tse,210000604811,CARLOS GOMES,nome_civil+nascimento
@@ -1941,6 +1952,7 @@ camara:178965,emendas,3685,JOAO DERLY,nome_parlamentar+mandato
 camara:178965,tse,210000604840,JOÃO DERLY,nome_civil+nascimento
 camara:178966,camara,178966,Geovania de Sá,
 camara:178966,emendas,3235,GEOVANIA DE SA,nome_parlamentar+mandato
+camara:178966,tse,240000609626,GEOVANIA DE SA,nascimento+primeiro_nome+uf
 camara:178966,tse,240001611940,GEOVANIA DE SÁ,nome_civil+nascimento
 camara:178966,tse,240002537081,GEOVANIA DE SÁ,nome_civil+nascimento
 camara:178967,camara,178967,JOÃO PAULO KLEINÜBING,
@@ -2028,6 +2040,7 @@ camara:178988,emendas,3690,JOAO PAULO PAPA,nome_parlamentar+mandato
 camara:178988,tse,250000605407,PAPA,nome_civil+nascimento
 camara:178989,camara,178989,Renata Abreu,
 camara:178989,emendas,3746,RENATA ABREU,nome_parlamentar+mandato
+camara:178989,tse,250000613702,RENATA ABREU,nascimento+primeiro_nome+uf
 camara:178989,tse,250001610258,RENATA ABREU,nome_civil+nascimento
 camara:178989,tse,250002544340,RENATA ABREU,nome_civil+nascimento
 camara:178990,camara,178990,Samuel Moreira,
@@ -2060,6 +2073,7 @@ camara:178997,camara,178997,Moses Rodrigues,
 camara:178997,emendas,3733,MOSES RODRIGUES,nome_parlamentar+mandato
 camara:178997,tse,60000605078,MOSES RODRIGUES,nome_civil+nascimento
 camara:178997,tse,60001608894,MOSES RODRIGUES,nome_civil+nascimento
+camara:178997,tse,60002534893,MOSES RODRIGUES,nascimento+primeiro_nome+uf
 camara:178998,camara,178998,RAQUEL MUNIZ,
 camara:178998,emendas,3743,RAQUEL MUNIZ,nome_parlamentar+mandato
 camara:178998,tse,130000613226,RAQUEL MUNIZ,nome_civil+nascimento
@@ -2172,6 +2186,7 @@ camara:194340,camara,194340,VAL AMÉLIO,
 camara:194340,tse,20000621943,VAL AMÉLIO,nome_civil+nascimento
 camara:194340,tse,20001621221,VAL AMELIO,nome_civil+nascimento
 camara:194592,camara,194592,ILDON MARQUES,
+camara:194592,tse,100000601461,ILDON MARQUES,nascimento+primeiro_nome+uf
 camara:195143,camara,195143,ANDRÉ AMARAL,
 camara:195143,emendas,3847,ANDRE AMARAL,nome_parlamentar+mandato
 camara:195143,tse,150000604502,ANDRÉ AMARAL,nome_civil+nascimento
@@ -2217,6 +2232,8 @@ camara:198198,camara,198198,LUZIA FERREIRA,
 camara:198783,camara,198783,Emanuel Pinheiro Neto,
 camara:198783,emendas,3975,EMANUEL PINHEIRO NETO,nome_parlamentar+mandato
 camara:198783,tse,110000611603,EMANUELZINHO,nome_civil+nascimento
+camara:198783,tse,110001623300,EMANUELZINHO,nascimento+primeiro_nome+uf
+camara:198783,tse,110002548041,EMANUELZINHO,nascimento+primeiro_nome+uf
 camara:198963,camara,198963,ROGÉRIO SILVA,
 camara:198963,tse,110000622428,ROGÉRIO SILVA,nome_civil+nascimento
 camara:199809,camara,199809,XUXU DAL MOLIN,
@@ -2363,6 +2380,7 @@ camara:204379,tse,30000613842,ACÁCIO FAVACHO,nome_civil+nascimento
 camara:204379,tse,30001605451,ACÁCIO FAVACHO,nome_civil+nascimento
 camara:204380,camara,204380,Celina Leão,
 camara:204380,emendas,3934,CELINA LEAO,nome_parlamentar+mandato
+camara:204380,tse,70000614533,CELINA LEÃO,nascimento+primeiro_nome+uf
 camara:204381,camara,204381,Luis Miranda,
 camara:204381,emendas,9103,LUIS MIRANDA,nome_parlamentar+mandato
 camara:204381,tse,70000625533,LUIS MIRANDA,nome_civil+nascimento
@@ -2483,6 +2501,7 @@ camara:204409,tse,210001620060,DANIEL TRZECIAK  DANIEL DA TV,nome_civil+nascimen
 camara:204409,tse,210002541429,DANIEL TRZECIAK  DANIEL DA TV,nome_civil+nascimento
 camara:204410,camara,204410,Luisa Canziani,
 camara:204410,emendas,4034,LUISA CANZIANI,nome_parlamentar+mandato
+camara:204410,tse,160000623130,LUISA CANZIANI,nascimento+primeiro_nome+uf
 camara:204410,tse,160001622297,LUÍSA CANZIANI,nome_civil+nascimento
 camara:204410,tse,160002532855,LUISA CANZIANI,nome_civil+nascimento
 camara:204411,camara,204411,Filipe Barros,
@@ -2633,6 +2652,8 @@ camara:204447,emendas,3988,FLORDELIS,nome_parlamentar+mandato
 camara:204447,tse,190000607923,FLORDELIS,nome_civil+nascimento
 camara:204448,camara,204448,Luiz Antonio Corrêa,
 camara:204448,emendas,4114,LUIZ ANTONIO CORREA,nome_parlamentar+mandato
+camara:204448,tse,190000625195,LUIZ ANTÔNIO,nascimento+primeiro_nome+uf
+camara:204448,tse,190001605598,LUIZ ANTÔNIO,nascimento+primeiro_nome+uf
 camara:204449,camara,204449,Nelson Barbudo,
 camara:204449,emendas,4047,NELSON BARBUDO,nome_parlamentar+mandato
 camara:204449,tse,110000621666,NELSON BARBUDO,nome_civil+nascimento
@@ -2688,6 +2709,8 @@ camara:204459,tse,190001619522,DANIELA DO WAGUINHO,nome_civil+nascimento
 camara:204459,tse,190002543344,DANIELA DO WAGUINHO,nome_civil+nascimento
 camara:204460,camara,204460,Carlos Jordy,
 camara:204460,emendas,3930,CARLOS JORDY,nome_parlamentar+mandato
+camara:204460,tse,190000614646,CARLOS JORDY,nascimento+primeiro_nome+uf
+camara:204460,tse,190001596781,CARLOS JORDY,nascimento+primeiro_nome+uf
 camara:204460,tse,190002532808,CARLOS JORDY,nome_civil+nascimento
 camara:204461,camara,204461,Paulo Ganime,
 camara:204461,emendas,4054,PAULO GANIME,nome_parlamentar+mandato
@@ -2892,6 +2915,7 @@ camara:204506,tse,250001611863,MARCOS PEREIRA,nome_civil+nascimento
 camara:204506,tse,250002537942,MARCOS PEREIRA,nome_civil+nascimento
 camara:204507,camara,204507,Carla Zambelli,
 camara:204507,emendas,3928,CARLA ZAMBELLI,nome_parlamentar+mandato
+camara:204507,tse,250000613295,CARLA ZAMBELLI,nascimento+primeiro_nome+uf
 camara:204507,tse,250001611365,CARLA ZAMBELLI,nome_civil+nascimento
 camara:204508,camara,204508,Igor Timo,
 camara:204508,emendas,4148,IGOR TIMO,nome_parlamentar+mandato
@@ -2980,6 +3004,7 @@ camara:204525,tse,250002535972,ROSANA VALLE,nome_civil+nascimento
 camara:204526,camara,204526,Luiz Philippe de Orleans e Bragança,
 camara:204526,emendas,4036,LUIZ PHILIPPE DE ORLEANS E BRAGANCA,nome_parlamentar+mandato
 camara:204526,tse,250000613393,LUIZ PHILIPPE O. BRAGANÇA,nome_civil+nascimento
+camara:204526,tse,250001611333,LUIZ PHILIPPE DE O BRAGANÇA,nascimento+primeiro_nome+uf
 camara:204526,tse,250002535958,LUIZ PHILIPPE DE O E BRAGANÇA,nome_civil+nascimento
 camara:204527,camara,204527,Geninho Zuliani,
 camara:204527,emendas,3996,GENINHO ZULIANI,nome_parlamentar+mandato
@@ -3064,6 +3089,7 @@ camara:204544,emendas,3907,ALEXANDRE FROTA,nome_parlamentar+mandato
 camara:204544,tse,250000613358,ALEXANDRE FROTA,nome_civil+nascimento
 camara:204545,camara,204545,Alê Silva,
 camara:204545,emendas,3904,ALE SILVA,nome_parlamentar+mandato
+camara:204545,tse,130000616616,ALÊ SILVA,nascimento+primeiro_nome+uf
 camara:204545,tse,130001619742,ALÊ SILVA,nome_civil+nascimento
 camara:204546,camara,204546,Joice Hasselmann,
 camara:204546,emendas,4021,JOICE HASSELMANN,nome_parlamentar+mandato
@@ -3186,6 +3212,9 @@ camara:204573,tse,50000607811,OTTO ALENCAR FILHO,nome_civil+nascimento
 camara:204573,tse,50001607228,OTTO FILHO,nome_civil+nascimento
 camara:204574,camara,204574,Junior Lourenço,
 camara:204574,emendas,4111,JUNIOR LOURENCO,nome_parlamentar+mandato
+camara:204574,tse,100000601457,JUNIOR LOURENÇO,nascimento+primeiro_nome+uf
+camara:204574,tse,100001603111,JÚNIOR LOURENÇO,nascimento+primeiro_nome+uf
+camara:204574,tse,100002536094,JUNIOR LOURENÇO,nascimento+primeiro_nome+uf
 camara:204575,camara,204575,Gil Cutrim,
 camara:204575,emendas,3998,GIL CUTRIM,nome_parlamentar+mandato
 camara:204575,tse,100000601470,GIL CUTRIM,nome_civil+nascimento
@@ -3357,6 +3386,8 @@ camara:217480,tse,190001603396,JONES MOURA,nome_civil+nascimento
 camara:217480,tse,190002534862,JONES MOURA,nome_civil+nascimento
 camara:218086,camara,218086,Ely Santos,
 camara:218086,emendas,4229,ELY SANTOS,nome_parlamentar+mandato
+camara:218086,tse,250000606285,ELY SANTOS,nascimento+primeiro_nome+uf
+camara:218086,tse,250001611845,ELY SANTOS,nascimento+primeiro_nome+uf
 camara:218245,camara,218245,Jorielson,
 camara:218245,tse,30000602686,JORIELSON FEDERAL,nome_civil+nascimento
 camara:218245,tse,30001648513,JORIELSON FEDERAL,nome_civil+nascimento
@@ -3575,6 +3606,7 @@ camara:220576,emendas,4296,ALFREDO GASPAR,nome_parlamentar+mandato
 camara:220576,tse,20001611726,ALFREDO GASPAR,nome_civil+nascimento
 camara:220577,camara,220577,Augusto Puppio,
 camara:220577,emendas,4310,AUGUSTO PUPPIO,nome_parlamentar+mandato
+camara:220577,tse,30001605452,DR. PUPIO,nascimento+primeiro_nome+uf
 camara:220578,camara,220578,Josenildo,
 camara:220578,emendas,4400,JOSENILDO,nome_parlamentar+mandato
 camara:220578,tse,30001601832,JOSENILDO,nome_civil+nascimento
@@ -3601,6 +3633,7 @@ camara:220583,tse,20002547849,DELEGADO FABIO COSTA,nome_civil+nascimento
 camara:220584,camara,220584,Murilo Galdino,
 camara:220584,emendas,4436,MURILO GALDINO,nome_parlamentar+mandato
 camara:220584,tse,150001619544,MURILO GALDINO,nome_civil+nascimento
+camara:220584,tse,150002544203,MURILO GALDINO,nascimento+primeiro_nome+uf
 camara:220585,camara,220585,Mersinho Lucena,
 camara:220585,emendas,4432,MERSINHO LUCENA,nome_parlamentar+mandato
 camara:220585,tse,150001612074,MERSINHO LUCENA,nome_civil+nascimento
@@ -3698,6 +3731,8 @@ camara:220607,tse,190001606579,MAX,nome_civil+nascimento
 camara:220607,tse,190002541073,MAX,nome_civil+nascimento
 camara:220608,camara,220608,Cristiane Lopes,
 camara:220608,emendas,4331,CRISTIANE LOPES,nome_parlamentar+mandato
+camara:220608,tse,220000611015,CRISTIANE LOPES,nascimento+primeiro_nome+uf
+camara:220608,tse,220001600709,CRISTIANE LOPES,nascimento+primeiro_nome+uf
 camara:220608,tse,220002536038,CRISTIANE LOPES,nome_civil+nascimento
 camara:220609,camara,220609,Maurício Carvalho,
 camara:220609,emendas,4426,MAURICIO CARVALHO,nome_parlamentar+mandato
@@ -3757,6 +3792,7 @@ camara:220622,tse,130002548795,NELY AQUINO,nome_civil+nascimento
 camara:220623,camara,220623,Duda Salabert,
 camara:220623,emendas,4366,DUDA SALABERT,nome_parlamentar+mandato
 camara:220623,tse,130001606697,DUDA SALABERT,nome_civil+nascimento
+camara:220623,tse,130002539728,DUDA SALABERT,nascimento+primeiro_nome+uf
 camara:220624,camara,220624,Robinson Faria,
 camara:220624,emendas,4465,ROBINSON FARIA,nome_parlamentar+mandato
 camara:220624,tse,200001603001,ROBINSON FARIA,nome_civil+nascimento
@@ -3830,6 +3866,7 @@ camara:220642,emendas,4289,DELEGADO BRUNO LIMA,nome_parlamentar+mandato
 camara:220642,tse,250001611973,DELEGADO BRUNO LIMA,nome_civil+nascimento
 camara:220642,tse,250002544341,DELEGADO BRUNO LIMA,nome_civil+nascimento
 camara:220643,camara,220643,Sônia Guajajara,
+camara:220643,tse,250001613792,SÔNIA GUAJAJARA,nascimento+primeiro_nome+uf
 camara:220643,tse,250002539593,SÔNIA GUAJAJARA,nome_civil+nascimento
 camara:220644,camara,220644,Rosangela Moro,
 camara:220644,emendas,4471,ROSANGELA MORO,nome_parlamentar+mandato
@@ -3838,6 +3875,7 @@ camara:220644,tse,250001602030,ROSÂNGELA MORO,nome_civil+nascimento
 camara:220645,camara,220645,Erika Hilton,
 camara:220645,emendas,4368,ERIKA HILTON,nome_parlamentar+mandato
 camara:220645,tse,250001613814,ERIKA HILTON,nome_civil+nascimento
+camara:220645,tse,250002539612,ERIKA HILTON,nascimento+primeiro_nome+uf
 camara:220646,camara,220646,Felipe Becari,
 camara:220646,emendas,4372,FELIPE BECARI,nome_parlamentar+mandato
 camara:220646,tse,250001602037,FELIPE BECARI,nome_civil+nascimento
@@ -3860,6 +3898,7 @@ camara:220650,tse,250001612092,PAULO ALEXANDRE BARBOSA,nome_civil+nascimento
 camara:220650,tse,250002541120,PAULO ALEXANDRE BARBOSA,nome_civil+nascimento
 camara:220651,camara,220651,Simone Marquetto,
 camara:220651,emendas,4479,SIMONE MARQUETTO,nome_parlamentar+mandato
+camara:220651,tse,250001611242,SIMONE MARQUETTO,nascimento+primeiro_nome+uf
 camara:220652,camara,220652,Delegado Palumbo,
 camara:220652,emendas,4349,DELEGADO PALUMBO,nome_parlamentar+mandato
 camara:220652,tse,250001611227,DELEGADO PALUMBO,nome_civil+nascimento
@@ -3909,6 +3948,8 @@ camara:220663,tse,170000614066,ERIBERTO MEDEIROS,nome_civil+nascimento
 camara:220663,tse,170001619893,ERIBERTO MEDEIROS,nome_civil+nascimento
 camara:220664,camara,220664,Guilherme Uchoa,
 camara:220664,emendas,4387,GUILHERME UCHOA,nome_parlamentar+mandato
+camara:220664,tse,170001619889,GUILHERME UCHOA JUNIOR,nascimento+primeiro_nome+uf
+camara:220664,tse,170002540312,GUILHERME UCHOA JUNIOR,nascimento+primeiro_nome+uf
 camara:220665,camara,220665,Clarissa Tércio,
 camara:220665,emendas,4323,CLARISSA TERCIO,nome_parlamentar+mandato
 camara:220665,tse,170001618605,CLARISSA TÉRCIO,nome_civil+nascimento
@@ -3920,6 +3961,8 @@ camara:220666,tse,170001609070,CORONEL MEIRA,nome_civil+nascimento
 camara:220666,tse,170002539175,CORONEL MEIRA,nome_civil+nascimento
 camara:220667,camara,220667,Pedro Campos,
 camara:220667,emendas,4447,PEDRO CAMPOS,nome_parlamentar+mandato
+camara:220667,tse,170001619899,PEDRO CAMPOS,nascimento+primeiro_nome+uf
+camara:220667,tse,170002540301,PEDRO CAMPOS,nascimento+primeiro_nome+uf
 camara:220668,camara,220668,Maria Arraes,
 camara:220668,emendas,4422,MARIA ARRAES,nome_parlamentar+mandato
 camara:220668,tse,170001610574,MARIA ARRAES,nome_civil+nascimento
@@ -4226,10 +4269,13 @@ camara:229069,tse,260002547412,CAPITÃO SAMUEL,nome_civil+nascimento
 camara:229082,camara,229082,Lucyana Genésio,
 camara:229082,tse,100001601140,LUCYANA GENESIO,nome_civil+nascimento
 camara:229106,camara,229106,Carla Ayres,
+camara:229106,tse,240001645216,CARLA AYRES,nascimento+primeiro_nome+uf
 camara:229106,tse,240002533825,CARLA AYRES,nome_civil+nascimento
 camara:229112,camara,229112,Pedro Jr,
 camara:229112,tse,270001643549,PEDRO JR.,nome_civil+nascimento
 camara:229225,camara,229225,Missionária Michele Collins,
+camara:229225,tse,170001618615,MISSIONÁRIA MICHELE COLLINS,nascimento+primeiro_nome+uf
+camara:229225,tse,170002543808,MISSIONÁRIA MICHELE COLLINS,nascimento+primeiro_nome+uf
 camara:229259,camara,229259,Pedro Tourinho,
 camara:229259,tse,250001610649,PEDRO TOURINHO,nome_civil+nascimento
 camara:229259,tse,250002536761,PEDRO TOURINHO,nome_civil+nascimento
@@ -4256,6 +4302,8 @@ camara:230762,camara,230762,Pastor Claudio Mariano,
 camara:230762,tse,140001604553,PASTOR CLAUDIO MARIANO,nome_civil+nascimento
 camara:230762,tse,140002540473,PASTOR CLAUDIO MARIANO,nome_civil+nascimento
 camara:230764,camara,230764,Ivan Junior,
+camara:230764,tse,100001610556,IVAN JUNIOR,nascimento+primeiro_nome+uf
+camara:230764,tse,100002542868,IVAN JÚNIOR,nascimento+primeiro_nome+uf
 camara:230765,camara,230765,Enfermeira Rejane,
 camara:230765,emendas,4550,ENFERMEIRA REJANE,nome_parlamentar+mandato
 camara:230765,tse,190001619210,ENFERMEIRA REJANE,nome_civil+nascimento
@@ -4300,6 +4348,8 @@ camara:234310,camara,234310,Ricardo Galvão,
 camara:234310,tse,250001613765,RICARDO GALVÃO,nome_civil+nascimento
 camara:234310,tse,250002539397,RICARDO GALVÃO,nome_civil+nascimento
 camara:234388,camara,234388,Fabiano Cazeca,
+camara:234388,tse,130000620690,FABIANO CAZECA,nascimento+primeiro_nome+uf
+camara:234388,tse,130001596001,FABIANO CAZECA,nascimento+primeiro_nome+uf
 camara:234388,tse,130002542006,FABIANO CAZECA,nome_civil+nascimento
 camara:234406,camara,234406,Elmano Férrer,
 camara:234406,senado,5531,Elmano Férrer,nome_civil
@@ -4814,6 +4864,7 @@ camara:74159,tse,130001607254,ODAIR CUNHA,nome_civil+nascimento
 camara:74160,camara,74160,Patrus Ananias,
 camara:74160,emendas,1408,PATRUS ANANIAS,nome_parlamentar+mandato
 camara:74160,tse,130000626967,PATRUS ANANIAS,nome_civil+nascimento
+camara:74160,tse,130001607244,PATRUS ANANIAS,nascimento+primeiro_nome+uf
 camara:74161,camara,74161,Reginaldo Lopes,
 camara:74161,emendas,1411,REGINALDO LOPES,nome_parlamentar+mandato
 camara:74161,tse,130000626978,REGINALDO LOPES,nome_civil+nascimento
@@ -5132,6 +5183,7 @@ camara:74554,tse,50001634584,JOSÉ ROCHA,nome_civil+nascimento
 camara:74556,camara,74556,PEDRO EUGÊNIO,
 camara:74558,camara,74558,GIVALDO CARIMBÃO,
 camara:74558,emendas,3542,GIVALDO CARIMBAO,nome_parlamentar+mandato
+camara:74558,tse,20000621934,GIVALDO CARIMBÃO,nascimento+primeiro_nome+uf
 camara:74559,camara,74559,JOÃO CALDAS,
 camara:74566,camara,74566,GERALDO SIMÕES,
 camara:74566,emendas,3557,GERALDO SIMOES,nome_parlamentar+mandato

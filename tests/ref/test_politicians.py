@@ -33,6 +33,7 @@ def write_inputs(root):
                ["902", "ESPERIDIÃO AMIN HELOU FILHO", "AMIN", "SENADOR", "SC", "21/12/1947"]],
         2022: [["903", "ANA PAULA SOUZA", "ANA PAULA", "DEPUTADO FEDERAL", "SP", "01/01/1980"],   # runs again
                ["904", "ANA PAULA LIMA", "ANA PAULA", "DEPUTADO FEDERAL", "SC", ""]],             # no birth date
+        2026: [["905", "ANA PAULA SOUSA MACHADO", "ANA PAULA", "DEPUTADO FEDERAL", "SP", "01/01/1980"]],  # respelled
     }.items():
         t = io.StringIO()
         w = csv.writer(t, delimiter=";", quoting=csv.QUOTE_ALL)
@@ -63,6 +64,7 @@ def test_crosswalk(tmp_path):
     assert who[("emendas", "2210")] == who[("emendas", "2850")] == amin       # one code per mandate
     assert who[("tse", "901")] == who[("tse", "903")] == "camara:2"          # the same person, two elections
     assert who[("tse", "904")] == "camara:3"                                   # no birth date: name + state
+    assert who[("tse", "905")] == "camara:2"                                   # birth date, first name, state
     assert ("emendas", "5000") not in who.index                                # two deputies called Ana Paula
     assert ("emendas", "7121") not in who.index                                # a bench, not a person
     assert ("camara", "4") not in who.index                                    # left before 2011

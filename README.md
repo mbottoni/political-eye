@@ -11,6 +11,7 @@ Brazilian politics and public money from official open data, committed as it cha
 | [Parliamentary amendments](https://github.com/mbottoni/political-eye/blob/main/methodology/emendas.md): who sent money where, what was paid and who received it, "Pix" transfers included | daily |
 | [Sanctions](https://github.com/mbottoni/political-eye/blob/main/methodology/sancoes.md) (CEIS, CNEP, CEPIM, leniency): who is barred, and when each entered and left the lists | daily |
 | [Campaign finance](https://github.com/mbottoni/political-eye/blob/main/methodology/tse.md) (TSE, 2018, 2022, 2026): each candidate's money by origin and fund, party transfers, large donors | weekly |
+| [Deputies across sources](https://github.com/mbottoni/political-eye/blob/main/methodology/views.md): each deputy's discipline, amendments and campaign money in one row | weekly |
 | Municipal finances (Siconfi) | planned |
 | STF: how long justices hold cases | planned |
 | Public procurement (PNCP) | planned |

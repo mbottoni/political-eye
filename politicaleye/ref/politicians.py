@@ -144,6 +144,14 @@ def build(raw: Path, data: Path, overrides: Path | None = None) -> dict:
         links += [("camara", a, "tse", b, "nome_civil+nascimento") for a, b in zip(m1.id_l, m1.id_r)]
         m2 = _unique(dep_uf, fed[~fed.id.isin(set(m1.id_r))], ["civil", "uf"])
         links += [("camara", a, "tse", b, "nome_civil+uf") for a, b in zip(m2.id_l, m2.id_r)]
+        # Spelling differs between the two registries (SOUZA / SOUSA, an added
+        # JUNIOR or married name): birth date, first name and state.
+        done = set(m1.id_r) | set(m2.id_r)
+        linked = set(m1.id_l) | set(m2.id_l)
+        m3 = _unique(dep_uf[~dep_uf.id.isin(linked)].assign(first=lambda t: t.civil.str.split().str[0].fillna("")),
+                     fed[~fed.id.isin(done)].assign(first=lambda t: t.civil.str.split().str[0].fillna("")),
+                     ["nasc", "first", "uf"])
+        links += [("camara", a, "tse", b, "nascimento+primeiro_nome+uf") for a, b in zip(m3.id_l, m3.id_r)]
 
         # Senado <-> TSE (senator and suplente candidacies): full name + state.
         st = cand[cand.cargo.isin(["SENADOR", "1º SUPLENTE", "2º SUPLENTE"]) & (cand.ano == y)]

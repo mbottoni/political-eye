@@ -11,6 +11,7 @@ changes its numbers and every problem found in its data:
 | Sanctions | `data/sancoes/` | [methodology/sancoes.md](methodology/sancoes.md) |
 | Campaign finance (TSE) | `data/tse/` | [methodology/tse.md](methodology/tse.md) |
 | Reference tables (one politician across sources) | `data/ref/` | [methodology/ref.md](methodology/ref.md) |
+| Views across sources (one row per deputy) | `data/views/` | [methodology/views.md](methodology/views.md) |
 
 The rules below hold for every source.
 

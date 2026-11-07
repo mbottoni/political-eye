@@ -29,7 +29,10 @@ guessed:
 1. **Câmara ↔ TSE**, one election at a time (people run again): the civil
    name (accents, case and punctuation removed) and birth date
    (`nome_civil+nascimento`); then, for candidacies left, the civil name and
-   state (`nome_civil+uf`), the deputy's state taken from their vote records.
+   state (`nome_civil+uf`), the deputy's state taken from their vote records;
+   then birth date, first name and state (`nascimento+primeiro_nome+uf`),
+   since the two registries spell names differently (SOUZA and SOUSA, an
+   added JUNIOR or married name, ORLEANS BRAGANCA and ORLEANS E BRAGANCA).
 2. **Senado ↔ TSE**, one election at a time: the full name and state.
 3. **Senado ↔ Câmara**: the full civil name (`nome_civil`), for senators who
    were deputies.
@@ -46,8 +49,9 @@ People are the connected groups of these links. `data/ref/overrides.csv`
 
 **Coverage** (2026-11-07):
 
-- 96% of the federal deputies elected in 2018, and 98% in 2022, link to a
-  Câmara id; 94% of this legislature's deputies link to a candidacy.
+- 99.4% of the federal deputies elected in 2018, and 99.8% in 2022, link to
+  a Câmara id; every deputy who voted in this legislature links to a
+  candidacy.
 - 2026: 64% of elected deputies and 26% of elected senators, because those
   elected for the first time get a Câmara or Senado id only when they take
   office on 1 February 2027. The weekly job links them then.

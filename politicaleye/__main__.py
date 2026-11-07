@@ -14,8 +14,9 @@ from .ref import cli as ref_cli
 from .sancoes import cli as sancoes_cli
 from .senado import cli as senado_cli
 from .tse import cli as tse_cli
+from .views import cli as views_cli
 
-SOURCES = (camara_cli, senado_cli, emendas_cli, sancoes_cli, tse_cli, ref_cli)
+SOURCES = (camara_cli, senado_cli, emendas_cli, sancoes_cli, tse_cli, ref_cli, views_cli)
 
 
 def main(argv: list[str] | None = None) -> int:

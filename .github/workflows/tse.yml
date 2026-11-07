@@ -1,0 +1,67 @@
+name: tse
+
+# TSE regenerates the candidate and campaign-finance files as accounts are
+# filed and judged, for months after an election. Weekly is enough; the
+# latest general election is rebuilt (about 360 MB of zips for 2026).
+on:
+  schedule:
+    - cron: "37 11 * * 6"   # Saturdays, 11:37 UTC
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "Elections to rebuild, space-separated (empty = the latest; covered: 2018 2022 2026)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tse
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Test
+        run: uv run pytest -q tests/tse tests/test_fetch.py
+
+      - name: Download and rebuild
+        env:
+          YEARS: ${{ inputs.years }}
+        run: |
+          if [[ ! "$YEARS" =~ ^[0-9\ ]*$ ]]; then
+            echo "years must be digits and spaces, got: $YEARS" >&2
+            exit 1
+          fi
+          read -ra years <<< "$YEARS"
+          uv run python -m politicaleye tse update "${years[@]}"
+
+      - name: Commit if the data changed
+        run: |
+          git add data/tse
+          if git diff --staged --quiet -- . ':!data/tse/sources.json'; then
+            echo "No data changes."
+            exit 0
+          fi
+          years=$(git diff --staged --name-only -- data/tse | grep -oE '/[0-9]{4}/' | tr -d / | sort -u | tr '\n' ' ')
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "tse: update through $(date -u +%F)" -m "Elections changed: ${years:-none}"
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase
+          done
+          exit 1

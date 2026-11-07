@@ -1,0 +1,38 @@
+{
+  "consulta_cand_2018": {
+    "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2018.zip",
+    "size": 4722704,
+    "etag": "\"481010-626cdb7da9ee2\"",
+    "last_modified": "Wed, 13 Nov 2024 16:20:54 GMT"
+  },
+  "consulta_cand_2022": {
+    "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2022.zip",
+    "size": 4442176,
+    "etag": "\"43c840-65fa9bc806c5d\"",
+    "last_modified": "Sat, 07 Nov 2026 06:21:16 GMT"
+  },
+  "consulta_cand_2026": {
+    "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2026.zip",
+    "size": 3289753,
+    "etag": "\"323299-65fae207eabd0\"",
+    "last_modified": "Sat, 07 Nov 2026 11:35:34 GMT"
+  },
+  "prestacao_de_contas_eleitorais_candidatos_2018": {
+    "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/prestacao_contas/prestacao_de_contas_eleitorais_candidatos_2018.zip",
+    "size": 305897986,
+    "etag": "\"123ba202-65f30fe21cb94\"",
+    "last_modified": "Sun, 01 Nov 2026 06:18:06 GMT"
+  },
+  "prestacao_de_contas_eleitorais_candidatos_2022": {
+    "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/prestacao_contas/prestacao_de_contas_eleitorais_candidatos_2022.zip",
+    "size": 495259842,
+    "etag": "\"1d8510c2-65f3b24b0be49\"",
+    "last_modified": "Sun, 01 Nov 2026 18:24:43 GMT"
+  },
+  "prestacao_de_contas_eleitorais_candidatos_2026": {
+    "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/prestacao_contas/prestacao_de_contas_eleitorais_candidatos_2026.zip",
+    "size": 352521786,
+    "etag": "\"15030e3a-65faab5a4ae9d\"",
+    "last_modified": "Sat, 07 Nov 2026 07:30:56 GMT"
+  }
+}

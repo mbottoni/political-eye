@@ -1,0 +1,55 @@
+name: sancoes
+
+# CGU publishes each sanctions list as a snapshot of the previous day (CEPIM
+# less often), and keeps only the latest: this job is what records when a
+# company or person entered and left each list. Commits only when a list
+# changed.
+on:
+  schedule:
+    - cron: "47 9 * * *"   # daily, 09:47 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sancoes
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Test
+        run: uv run pytest -q tests/sancoes tests/test_fetch.py
+
+      - name: Download and rebuild
+        run: uv run python -m politicaleye sancoes update
+
+      - name: Commit if a list changed
+        run: |
+          git add data/sancoes
+          if git diff --staged --quiet -- . ':!data/sancoes/sources.json'; then
+            echo "No data changes."
+            exit 0
+          fi
+          n=$(git diff --staged -U0 -- data/sancoes/changes.csv | grep -c '^+[0-9]' || true)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "sancoes: update through $(date -u +%F)" -m "Entries added to or removed from the lists: ${n}"
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase
+          done
+          exit 1

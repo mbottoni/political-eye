@@ -103,7 +103,7 @@ def build(leg: int, data: Path) -> pd.DataFrame:
     for c in COLS:
         if c not in out:
             out[c] = ""
-    out = out.fillna("")
+    out = out.astype(object).where(out.notna(), "")   # empty, not NaN, in every column
     for c in ("emendas_empenhado", "emendas_pago"):
         out[c] = _reais(out[c].astype("int64"))
     for c in ("meses", "n_votes", "n_party", "n_gov", "n_majority"):

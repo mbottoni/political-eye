@@ -69,7 +69,7 @@ def build(data: Path) -> pd.DataFrame:
     for c in COLS:
         if c not in out:
             out[c] = ""
-    out = out.fillna("")
+    out = out.astype(object).where(out.notna(), "")
     out = out.assign(_c=pd.to_numeric(out.cod_ibge), _a=pd.to_numeric(out.ano)).sort_values(["_c", "_a"]).drop(columns=["_c", "_a"])
     write_csv(out[COLS], data / "views" / "municipios.csv")
     _log(f"municipios: {out.cod_ibge.nunique()} municipalities x {len(years)} years; "

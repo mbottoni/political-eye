@@ -1,0 +1,83 @@
+senador_id,nome,partido,uf,n_votes,n_authored
+22,Esperidião Amin,PP,SC,32,11
+35,Jader Barbalho,MDB,PA,32,8
+70,Renan Calheiros,MDB,AL,32,11
+285,Marcio Bittar,PSL,AC,32,2
+345,Flávio Arns,PODE,PR,32,13
+374,Paulo Rocha,PT,PA,32,31
+470,Chico Rodrigues,DEM,RR,32,6
+581,Jaques Wagner,PT,BA,32,22
+611,Chiquinho Feitosa,DEM,CE,32,2
+677,Roberto Rocha,PSDB,MA,32,2
+742,Marcelo Castro,MDB,PI,32,12
+825,Paulo Paim,PT,RS,32,22
+878,José Aníbal,PSDB,SP,32,7
+945,Alvaro Dias,PODE,PR,32,11
+1023,Maria do Carmo Alves,DEM,SE,32,5
+1173,Wellington Fagundes,PL,MT,32,9
+1186,Luis Carlos Heinze,PP,RS,32,5
+1249,Kátia Abreu,PP,TO,32,4
+2331,Rose de Freitas,MDB,ES,32,7
+3777,Eduardo Gomes,MDB,TO,32,3
+3806,Zequinha Marinho,PSC,PA,32,13
+3830,Davi Alcolumbre,DEM,AP,32,4
+4525,Fernando Collor,PROS,AL,32,5
+4531,Jayme Campos,DEM,MT,32,9
+4545,Jarbas Vasconcelos,MDB,PE,32,2
+4560,Sérgio Petecão,PSD,AC,32,6
+4610,Alexandre Silveira,PSD,,0,1
+4770,Izalci Lucas,PSDB,DF,32,22
+4981,Acir Gurgacz,PDT,RO,32,5
+4994,Eduardo Braga,MDB,AM,32,8
+5008,Humberto Costa,PT,PE,32,20
+5012,Randolfe Rodrigues,REDE,AP,32,13
+5236,Reguffe,PODE,DF,32,6
+5281,Nilda Gondim,MDB,PB,32,10
+5322,Romário,PL,RJ,32,7
+5350,Jorginho Mello,PL,SC,32,2
+5352,Rogério Carvalho,PT,SE,32,19
+5376,Mara Gabrilli,PSDB,SP,32,22
+5385,Irajá,PSD,TO,32,5
+5411,Weverton,PDT,MA,32,11
+5422,Marcos Rogério,DEM,RO,32,6
+5502,Plínio Valério,PSDB,AM,32,9
+5523,Otto Alencar,PSD,BA,32,11
+5525,Omar Aziz,PSD,AM,32,3
+5527,Simone Tebet,MDB,MS,32,7
+5529,Antonio Anastasia,PSD,MG,32,8
+5531,Elmano Férrer,PP,PI,32,4
+5533,Lasier Martins,PODE,RS,32,7
+5535,Telmário Mota,PROS,RR,32,18
+5537,Dário Berger,MDB,SC,32,7
+5540,Fernando Bezerra Coelho,MDB,PE,32,5
+5557,Mailza Gomes,PP,AC,32,8
+5585,Luiz Carlos do Carmo,MDB,GO,32,3
+5627,Jean-Paul Prates,PT,RN,32,18
+5718,Eliziane Gama,CIDADANIA,MA,32,9
+5732,Rodrigo Pacheco,PSD,MG,32,1
+5748,Veneziano Vital do Rêgo,MDB,PB,32,9
+5783,Zenaide Maia,PROS,RN,32,9
+5894,Flávio Bolsonaro,PL,RJ,32,3
+5895,Jorge Kajuru,PODE,GO,32,11
+5898,Eliane Nogueira,PP,PI,32,2
+5899,Vanderlan Cardoso,PSD,GO,32,5
+5905,Rodrigo Cunha,PSDB,AL,32,17
+5924,Oriovisto Guimarães,PODE,PR,32,8
+5926,Lucas Barreto,PSD,AP,32,8
+5936,Carlos Portinho,PL,RJ,32,9
+5942,Marcos do Val,PODE,ES,32,6
+5953,Fabiano Contarato,REDE,ES,32,18
+5959,Styvenson Valentim,PODE,RN,32,9
+5967,Angelo Coronel,PSD,BA,32,3
+5973,Cid Gomes,PDT,CE,32,7
+5976,Eduardo Girão,PODE,CE,32,8
+5979,Leila Barros,CIDADANIA,DF,32,13
+5982,Alessandro Vieira,CIDADANIA,SE,32,15
+5985,Nelsinho Trad,PSD,MS,32,18
+5988,Soraya Thronicke,PSL,MS,32,5
+5990,Carlos Viana,PSD,MG,32,5
+5998,Daniella Ribeiro,PP,PB,32,9
+6008,Giordano,MDB,SP,32,1
+6019,Maria Eliza,MDB,RO,32,6
+6027,Mecias de Jesus,REPUBLICANOS,RR,32,5
+6295,Carlos Fávaro,PSD,MT,32,11

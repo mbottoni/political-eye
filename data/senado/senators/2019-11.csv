@@ -1,0 +1,82 @@
+senador_id,nome,partido,uf,n_votes,n_authored
+22,Esperidião Amin,PP,SC,11,11
+35,Jader Barbalho,MDB,PA,11,0
+70,Renan Calheiros,MDB,AL,11,0
+90,José Serra,PSDB,SP,11,1
+285,Marcio Bittar,MDB,AC,11,4
+345,Flávio Arns,REDE,PR,11,14
+374,Paulo Rocha,PT,PA,11,8
+470,Chico Rodrigues,DEM,RR,11,7
+475,Confúcio Moura,MDB,RO,11,9
+581,Jaques Wagner,PT,BA,11,11
+677,Roberto Rocha,PSDB,MA,11,5
+739,Ciro Nogueira,PP,PI,11,6
+742,Marcelo Castro,MDB,PI,11,2
+751,Arolde de Oliveira,PSD,RJ,11,14
+825,Paulo Paim,PT,RS,11,19
+945,Alvaro Dias,PODE,PR,11,7
+1023,Maria do Carmo Alves,DEM,SE,11,9
+1173,Wellington Fagundes,PL,MT,11,8
+1186,Luis Carlos Heinze,PP,RS,11,7
+1249,Kátia Abreu,PDT,TO,11,3
+2331,Rose de Freitas,PODE,ES,11,6
+3361,José Maranhão,MDB,PB,11,4
+3396,Tasso Jereissati,PSDB,CE,11,8
+3777,Eduardo Gomes,MDB,TO,11,6
+3806,Zequinha Marinho,PSC,PA,11,9
+3830,Davi Alcolumbre,DEM,AP,11,0
+4525,Fernando Collor,PROS,AL,11,0
+4531,Jayme Campos,DEM,MT,11,4
+4545,Jarbas Vasconcelos,MDB,PE,11,0
+4560,Sérgio Petecão,PSD,AC,11,2
+4770,Izalci Lucas,PSDB,DF,11,11
+4981,Acir Gurgacz,PDT,RO,11,3
+4994,Eduardo Braga,MDB,AM,11,10
+5008,Humberto Costa,PT,PE,11,14
+5012,Randolfe Rodrigues,REDE,AP,11,19
+5236,Reguffe,PODE,DF,11,8
+5322,Romário,PODE,RJ,11,3
+5350,Jorginho Mello,PL,SC,11,7
+5352,Rogério Carvalho,PT,SE,11,13
+5376,Mara Gabrilli,PSDB,SP,11,5
+5385,Irajá,PSD,TO,11,3
+5411,Weverton,PDT,MA,11,8
+5422,Marcos Rogério,DEM,RO,11,3
+5502,Plínio Valério,PSDB,AM,11,12
+5523,Otto Alencar,PSD,BA,11,10
+5525,Omar Aziz,PSD,AM,11,6
+5527,Simone Tebet,MDB,MS,11,6
+5529,Antonio Anastasia,PSDB,MG,11,7
+5531,Elmano Férrer,PODE,PI,11,5
+5533,Lasier Martins,PODE,RS,11,12
+5535,Telmário Mota,PROS,RR,11,10
+5537,Dário Berger,MDB,SC,11,6
+5540,Fernando Bezerra Coelho,MDB,PE,11,8
+5557,Mailza Gomes,PP,AC,11,4
+5585,Luiz Carlos do Carmo,MDB,GO,11,8
+5627,Jean-Paul Prates,PT,RN,11,12
+5666,Major Olimpio,PSL,SP,11,11
+5718,Eliziane Gama,CIDADANIA,MA,11,10
+5732,Rodrigo Pacheco,DEM,MG,11,9
+5748,Veneziano Vital do Rêgo,PSB,PB,11,22
+5783,Zenaide Maia,PROS,RN,11,9
+5894,Flávio Bolsonaro,PSL,RJ,11,1
+5895,Jorge Kajuru,CIDADANIA,GO,11,16
+5899,Vanderlan Cardoso,PP,GO,11,5
+5905,Rodrigo Cunha,PSDB,AL,11,10
+5924,Oriovisto Guimarães,PODE,PR,11,10
+5926,Lucas Barreto,PSD,AP,11,4
+5929,Juíza Selma,PODE,MT,11,8
+5942,Marcos do Val,PODE,ES,11,7
+5953,Fabiano Contarato,REDE,ES,11,17
+5959,Styvenson Valentim,PODE,RN,11,13
+5967,Angelo Coronel,PSD,BA,11,4
+5973,Cid Gomes,PDT,CE,11,5
+5976,Eduardo Girão,PODE,CE,11,14
+5979,Leila Barros,PSB,DF,11,12
+5982,Alessandro Vieira,CIDADANIA,SE,11,13
+5985,Nelsinho Trad,PSD,MS,11,13
+5988,Soraya Thronicke,PSL,MS,11,4
+5990,Carlos Viana,PSD,MG,11,7
+5998,Daniella Ribeiro,PP,PB,11,5
+6027,Mecias de Jesus,REPUBLICANOS,RR,11,8

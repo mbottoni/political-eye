@@ -1,0 +1,11 @@
+id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6944,2025-06-10,461394,DOR,8787136,MSF 6/2025,MSF,1,A,40,1,1,"Votação nominal da Mensagem nº 6, de 2025 - Maria Clara de Abreu Rada (Sérvia e Montenegro)."
+6945,2025-06-10,461394,DOR,8799376,MSF 10/2025,MSF,1,A,40,2,1,"Votação nominal da Mensagem nº 10, de 2025 - Bernard Jorg Leopold de García Klingl (Azerbaijão)."
+6946,2025-06-10,461394,DOR,8808623,MSF 12/2025,MSF,1,A,42,1,1,"Votação nominal da Mensagem nº 12, de 2025 - Pablo Duarte Cardoso (Guiné-Bissau)."
+6947,2025-06-11,461395,DOR,8822445,MSF 17/2025,MSF,1,A,43,0,1,"Votação nominal da Mensagem nº 17, de 2025 - Daniella Ortega de Paiva Menezes (Malásia e Brunei Darussalam)."
+6948,2025-06-11,461395,DOR,8822414,MSF 18/2025,MSF,1,A,40,0,1,"Votação nominal da Mensagem nº 18, de 2025 - Maria Elisa Teófilo de Luna (Granada)."
+6949,2025-06-11,461395,DOR,8822396,MSF 19/2025,MSF,1,A,41,1,1,"Votação nominal da Mensagem nº 19, de 2025 - Vivian Loss Sanmartin (Camboja)."
+6950,2025-06-25,461404,DOR,8847325,RQS 451/2025,RQS,0,A,43,30,0,"(Votação nominal do Requerimento nº 451, de 2025, que solicita urgência para o Projeto de Lei Complementar nº 177, de 2023)."
+6951,2025-06-25,461404,DOR,8826229,PLP 177/2023,PLP,0,A,41,33,0,"Votação nominal do Projeto de Lei Complementar nº 177, de 2023, nos termos do parecer, ressalvado o destaque"
+6952,2025-06-25,461404,DOR,8826229,PLP 177/2023,PLP,0,R,20,26,0,"Votação nominal da Emenda nº 3 ao Projeto de Lei Complementar nº 177, de 2023, destacada."
+6953,2025-06-25,461404,DOR,8826229,PLP 177/2023,PLP,0,A,43,30,0,"Votação nominal do Requerimento nº 451, de 2025, que solicita urgência para o Projeto de Lei Complementar nº 177, de 2023"

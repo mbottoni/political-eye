@@ -1,0 +1,154 @@
+{
+  "autoria-2015": {
+    "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2015-01-01&dataFimApresentacao=2015-12-31",
+    "files": 187,
+    "size": 10048779,
+    "sha256": "9920640ceda8b980a0362c5bac2ed6f16f17bc9e42722084a220147c93774918"
+  },
+  "autoria-2016": {
+    "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2016-01-01&dataFimApresentacao=2016-12-31",
+    "files": 142,
+    "size": 5298533,
+    "sha256": "0fda897af2ece990cc2ba792926e85952a255d4d5ea45393e4fb05bf4eda5c56"
+  },
+  "autoria-2017": {
+    "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2017-01-01&dataFimApresentacao=2017-12-31",
+    "files": 142,
+    "size": 7264724,
+    "sha256": "a06bd42d4169c02d710d00186e81fac95d9b9b35bbb66396647bb9ea68f13052"
+  },
+  "autoria-2018": {
+    "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2018-01-01&dataFimApresentacao=2018-12-31",
+    "files": 142,
+    "size": 4362595,
+    "sha256": "6af184514a3c094eda18da5901befa28c228914e6ed58f403530d7bfa6f99c2c"
+  },
+  "autoria-2019": {
+    "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2019-01-01&dataFimApresentacao=2019-12-31",
+    "files": 221,
+    "size": 15997866,
+    "sha256": "86d54556cb8bd0074b8c97dbde89bcad414ace0df8b7b8ebe4db4ffc39964b51"
+  },
+  "autoria-2020": {
+    "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2020-01-01&dataFimApresentacao=2020-12-31",
+    "files": 135,
+    "size": 7176772,
+    "sha256": "9fc9dad2429848a40b617ae936ce92306782d5073ae95fb34b6f34b23c4275bc"
+  },
+  "autoria-2021": {
+    "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2021-01-01&dataFimApresentacao=2021-12-31",
+    "files": 135,
+    "size": 7851490,
+    "sha256": "fef487c1fe3931278a3690a087d2e2ea8aa483c2198ba614cb4e1ebcb1eea28b"
+  },
+  "autoria-2022": {
+    "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2022-01-01&dataFimApresentacao=2022-12-31",
+    "files": 135,
+    "size": 5697801,
+    "sha256": "0a528014efb2456431ba6b95f255a5c24dd682095b4c2daf8b6665fce6ee90d3"
+  },
+  "autoria-2023": {
+    "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2023-01-01&dataFimApresentacao=2023-12-31",
+    "files": 169,
+    "size": 13773447,
+    "sha256": "efa6a0cea8a9144412f670f5eedb4e339ca7fb47f4f73f06de06ea03e2f09ef6"
+  },
+  "autoria-2024": {
+    "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2024-01-01&dataFimApresentacao=2024-12-31",
+    "files": 126,
+    "size": 7760398,
+    "sha256": "d064b14ffac0f3ec76499b1a6b1054548b9abcedc0fa78af60fd6d8a0f8a6b7d"
+  },
+  "autoria-2025": {
+    "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2025-01-01&dataFimApresentacao=2025-12-31",
+    "files": 126,
+    "size": 8793879,
+    "sha256": "4ff4204e8890357432fb1aad9f43639f0959f07e9406a6c059b68a2f16e0826c"
+  },
+  "autoria-2026": {
+    "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2026-01-01&dataFimApresentacao=2026-12-31",
+    "files": 126,
+    "size": 5073170,
+    "sha256": "e2d6cd534dfc7117dbc8b274785122f0b606df0b4db859d75fe83db670f4fa26"
+  },
+  "senadores-54": {
+    "url": "https://legis.senado.leg.br/dadosabertos/senador/lista/legislatura/54.json?exercicio=S",
+    "size": 193524,
+    "sha256": "d52fbda39da9ce9e5cbec382af958608ee1a668179839fc57246c3a54100b1c2"
+  },
+  "senadores-55": {
+    "url": "https://legis.senado.leg.br/dadosabertos/senador/lista/legislatura/55.json?exercicio=S",
+    "size": 189256,
+    "sha256": "0b770459c8fc6e120fe750200bdab5112e69bdc19aa52bf92e1bf51e16b722b4"
+  },
+  "senadores-56": {
+    "url": "https://legis.senado.leg.br/dadosabertos/senador/lista/legislatura/56.json?exercicio=S",
+    "size": 176610,
+    "sha256": "4145847811dd0c14d823012bca3093d1a0650003bfc57cfd90b92e20a73693c7"
+  },
+  "senadores-57": {
+    "url": "https://legis.senado.leg.br/dadosabertos/senador/lista/legislatura/57.json?exercicio=S",
+    "size": 163370,
+    "sha256": "9ad3871f295d7f947fe3e80cead393ca8bc2ef6120bf2e1d75dab7613e70d1f8"
+  },
+  "votacao-2015": {
+    "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2015-01-01&dataFim=2015-12-31",
+    "size": 314855,
+    "sha256": "ddb3299733f6ad39d6a242167c8cd00ad6e357009918358efb8f72c380dbeb5a"
+  },
+  "votacao-2016": {
+    "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2016-01-01&dataFim=2016-12-31",
+    "size": 237130,
+    "sha256": "fe7741f76beb9f83daedeb381411ca23dc75229b598f8fabe3bb7246af3aca08"
+  },
+  "votacao-2017": {
+    "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2017-01-01&dataFim=2017-12-31",
+    "size": 2801768,
+    "sha256": "f03b14bba2ee372c23240750e7cf209402274bc6d2b4aa64b91b0a920f222bb5"
+  },
+  "votacao-2018": {
+    "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2018-01-01&dataFim=2018-12-31",
+    "size": 2099253,
+    "sha256": "1979a668abef72320b00a0ce29a3435ee9e0655a2bb688df2bc493ec5da61d03"
+  },
+  "votacao-2019": {
+    "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2019-01-01&dataFim=2019-12-31",
+    "size": 2490055,
+    "sha256": "59dbc40ca2b15132e6b8ab990fd7d8339253b71b20b2a8b8d6ce06932da8c386"
+  },
+  "votacao-2020": {
+    "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2020-01-01&dataFim=2020-12-31",
+    "size": 3766663,
+    "sha256": "c1aacde84aaa29aa9dac2320e8025804d5abff5de217a54c66c7c1a2eee0ef5b"
+  },
+  "votacao-2021": {
+    "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2021-01-01&dataFim=2021-12-31",
+    "size": 4311841,
+    "sha256": "fafeb02f1365fc8397df39bbef362bff2d76c9ceba33bc0d1ee0792273a033c9"
+  },
+  "votacao-2022": {
+    "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2022-01-01&dataFim=2022-12-31",
+    "size": 3221982,
+    "sha256": "c21f6cabc394eb476b50cfe1244ac2e3d1e2bb005622d1454f90d712a929bc2a"
+  },
+  "votacao-2023": {
+    "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2023-01-01&dataFim=2023-12-31",
+    "size": 2684857,
+    "sha256": "20a5572f03c8928f2e74001f2ce28a54dd4e1075297e2ecfec0334fbd6dbe6dd"
+  },
+  "votacao-2024": {
+    "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2024-01-01&dataFim=2024-12-31",
+    "size": 1834790,
+    "sha256": "af022b1355d956576fdeda08531ae9a0940c17c65f7ca6f4d573bbf1ed7defec"
+  },
+  "votacao-2025": {
+    "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2025-01-01&dataFim=2025-12-31",
+    "size": 2431403,
+    "sha256": "38ddf6be316ff298e3242ff2bfe3b51d08cee7bde637099b9922a06008a36eec"
+  },
+  "votacao-2026": {
+    "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2026-01-01&dataFim=2026-12-31",
+    "size": 1258555,
+    "sha256": "d7b8e63fe2c235b82ebc17727a50eb4eb8ad6bec8b23e7d9ab6aa54ed74b6a0b"
+  }
+}

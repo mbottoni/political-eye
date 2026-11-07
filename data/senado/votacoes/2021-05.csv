@@ -1,0 +1,14 @@
+id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6311,2021-05-05,226658,SDR,8062773,PL 4554/2020 (Substitutivo-CD),PL,0,A,76,0,0,Votação nominal
+6312,2021-05-06,227076,SDR,7782169,PL 4209/2019,PL,0,A,72,0,0,"Votação nominal do Projeto de Lei nº 4.209, de 2019, nos termos do Parecer. (Determina que, para fins de registro, os medicamentos que contenham insumo farmacêutico ativo (IFA) nacional sejam enquadrados na categoria prioritária.)"
+6313,2021-05-11,227628,SDR,8004052,MPV 1014/2020,MPV,0,A,71,0,1,Votação nominal
+6314,2021-05-12,227847,SDR,7987960,PL 4725/2020,PL,0,A,70,3,0,"Votação nominal do Projeto de Lei nº 4.725, de 2020, nos termos do Parecer."
+6315,2021-05-13,228101,SDR,8010359,MPV 1017/2020,MPV,0,A,72,1,0,Votação nominal
+6316,2021-05-13,228101,SDR,8049687,PL 939/2021,PL,0,A,58,6,0,Votação nominal
+6317,2021-05-18,229139,SDR,8010346,MPV 1016/2020,MPV,0,A,75,0,0,"Votação do Projeto de Lei de Conversão nº 4, de 2021 e Pressupostos de Relevância e Urgência da MPV nº 1016/2020."
+6319,2021-05-19,229480,SDR,7919426,PL 2872/2020,PL,0,A,78,0,0,Votação nominal.
+6320,2021-05-25,230501,SDR,8010599,MPV 1018/2020,MPV,0,R,41,31,0,"Votação nominal do Art. 5º do Projeto de Lei de Conversão nº 8, de 2021, destacado."
+6321,2021-05-25,230501,SDR,8010599,MPV 1018/2020,MPV,0,R,36,31,0,"Votação nominal do Art. 1º, § 1º, da Lei nº 9.998/2000, alterado pelo art. 6º do PLV nº 8, de 2021, destacado."
+6322,2021-05-25,230501,SDR,8010599,MPV 1018/2020,MPV,0,A,33,31,0,"Votação nominal da Emenda nº 24 - PLEN à Medida Provisória nº 1.018, de 2020, destacada."
+6323,2021-05-26,230885,SDR,7961238,PL 3884/2020,PL,0,A,73,1,0,"Votação da Emenda nº 8 - PLEN (Substitutivo) do Relator ao Projeto de Lei nº 3.884, de 2020."
+6324,2021-05-27,231247,SDR,7255000,PLC 148/2017,PLC,0,A,57,9,0,"Votação nominal do Projeto de Lei da Câmara nº 148, de 2017 - Complementar, nos termos do Parecer."

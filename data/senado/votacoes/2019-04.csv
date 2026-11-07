@@ -1,0 +1,10 @@
+id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+5951,2019-04-02,91082,DOR,1396563,PEC 141/2015,PEC,0,,64,1,0,"PEC nº 141, de 2015, com as Emendas nºs 1 e 2 - CCJ (redação), no termos do Parecer (1º Turno)"
+5952,2019-04-03,91625,DOR,1396563,PEC 141/2015,PEC,0,,67,0,0,"Proposta de Emenda à Constituição nº 141, de 2015 (2º Turno)"
+5953,2019-04-03,91625,DOR,7733971,PEC 34/2019,PEC,0,,59,5,0,"Proposta de Emenda à Constituição nº 34, de 2019 (2º Turno)"
+5954,2019-04-03,91625,DOR,7733971,PEC 34/2019,PEC,0,A,58,6,0,"Emenda nº 10 - CCJ (Substitutivo) à PEC nº 34, de 2019, nos termos do Parecer (1º Turno)"
+5955,2019-04-09,92361,DOR,1400095,PEC 61/2015,PEC,0,A,62,4,1,"Emenda nº 6-Plen (Substitutivo) à Proposta de Emenda à Constituição nº 61, de 2015 (1º Turno)"
+5956,2019-04-09,92361,DOR,1400095,PEC 61/2015,PEC,0,A,62,3,1,"Proposta de Emenda à Constituição nº 61, de 2015 (2º Turno)"
+5957,2019-04-16,93304,DOR,7739116,PL 1321/2019,PL,0,A,36,16,0,"Emenda nº 13-Plen ao Projeto de Lei nº 1321, de 2019"
+5958,2019-04-23,93988,DOR,7198328,PEC 31/2017,PEC,0,A,68,0,0,"Proposta de Emenda à Constituição nº 31, de 2017 (2º Turno)"
+5959,2019-04-23,93988,DOR,7198328,PEC 31/2017,PEC,0,A,66,0,0,"PEC nº 31, de 2017, com as Emendas nºs 1 e 2 - CCJ (redação), nos termos do Parecer (1º Turno)"

@@ -1,0 +1,9 @@
+id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+7007,2025-09-02,480035,DOR,8544415,PLP 192/2023,PLP,0,A,50,24,0,"Votação nominal do PLP nº 192/2023, nos termos dos pareceres, com adequações redacionais do Relator."
+7008,2025-09-02,480035,DOR,8865064,PEC 66/2023 (fase 2),PEC,0,A,49,28,0,"Votação nominal da Expressão do §19 do art. 165 da Constituição, constante do art. 1º da PEC nº 66/2023, destacada."
+7009,2025-09-02,480035,DOR,8865064,PEC 66/2023 (fase 2),PEC,0,A,71,2,0,"Votação nominal da Proposta de Emenda à Constituição nº 66, de 2023 (2º turno)."
+7010,2025-09-02,480035,DOR,8305123,PLP 125/2022,PLP,0,A,71,0,0,"Votação nominal da Emenda nº 6 (Substitutivo) ao PLP nº 125/2022, nos termos da subemenda substitutiva de Plenário."
+7011,2025-09-17,480051,DOR,8834254,MPV 1300/2025,MPV,0,A,49,3,3,"Votação nominal do PLV nº 4, de 2025 e dos pressupostos constitucionais da MPV nº 1.300, de 2025, nos termos do parecer, ressalvados os destaques."
+7012,2025-09-24,480055,DOR,8878491,PLP 168/2025,PLP,0,A,64,0,0,"Votação nominal do Projeto de Lei Complementar nº 168, de 2025, nos termos dos pareceres, ressalvados os destaques."
+7013,2025-09-30,480053,DOR,8746627,PLP 108/2024,PLP,0,A,51,10,1,"Votação nominal da Emenda nº 721 (Substitutivo) ao PLP nº 108/2024, nos termos do parecer, ressalvado o destaque."
+7014,2025-09-30,480053,DOR,8746627,PLP 108/2024,PLP,0,R,33,27,1,"Votação nominal da Emenda nº 587 ao Projeto de Lei Complementar nº 108, de 2024, destacada."

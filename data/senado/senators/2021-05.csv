@@ -1,0 +1,82 @@
+senador_id,nome,partido,uf,n_votes,n_authored
+22,Esperidião Amin,PP,SC,13,6
+35,Jader Barbalho,MDB,PA,13,3
+70,Renan Calheiros,MDB,AL,13,4
+90,José Serra,PSDB,SP,13,2
+285,Marcio Bittar,MDB,AC,13,3
+345,Flávio Arns,PODE,PR,13,8
+374,Paulo Rocha,PT,PA,13,35
+470,Chico Rodrigues,DEM,RR,13,6
+475,Confúcio Moura,MDB,RO,13,5
+581,Jaques Wagner,PT,BA,13,17
+677,Roberto Rocha,PSDB,MA,13,0
+739,Ciro Nogueira,PP,PI,13,4
+742,Marcelo Castro,MDB,PI,13,3
+825,Paulo Paim,PT,RS,13,26
+945,Alvaro Dias,PODE,PR,13,15
+1023,Maria do Carmo Alves,DEM,SE,13,2
+1173,Wellington Fagundes,PL,MT,13,7
+1186,Luis Carlos Heinze,PP,RS,13,3
+1249,Kátia Abreu,PP,TO,13,0
+2331,Rose de Freitas,MDB,ES,13,8
+3396,Tasso Jereissati,PSDB,CE,13,4
+3777,Eduardo Gomes,MDB,TO,13,2
+3806,Zequinha Marinho,PSC,PA,13,9
+3830,Davi Alcolumbre,DEM,AP,13,0
+4525,Fernando Collor,PROS,AL,13,2
+4531,Jayme Campos,DEM,MT,13,3
+4545,Jarbas Vasconcelos,MDB,PE,13,0
+4560,Sérgio Petecão,PSD,AC,13,2
+4770,Izalci Lucas,PSDB,DF,13,26
+4981,Acir Gurgacz,PDT,RO,13,3
+4994,Eduardo Braga,MDB,AM,13,28
+5008,Humberto Costa,PT,PE,13,14
+5012,Randolfe Rodrigues,REDE,AP,13,5
+5236,Reguffe,PODE,DF,13,3
+5281,Nilda Gondim,MDB,PB,13,4
+5322,Romário,PL,RJ,13,4
+5350,Jorginho Mello,PL,SC,13,4
+5352,Rogério Carvalho,PT,SE,13,14
+5376,Mara Gabrilli,PSDB,SP,13,7
+5385,Irajá,PSD,TO,13,2
+5411,Weverton,PDT,MA,13,8
+5422,Marcos Rogério,DEM,RO,13,4
+5502,Plínio Valério,PSDB,AM,13,4
+5523,Otto Alencar,PSD,BA,13,1
+5525,Omar Aziz,PSD,AM,13,2
+5527,Simone Tebet,MDB,MS,13,12
+5529,Antonio Anastasia,PSD,MG,13,4
+5531,Elmano Férrer,PP,PI,13,4
+5533,Lasier Martins,PODE,RS,13,7
+5535,Telmário Mota,PROS,RR,13,10
+5537,Dário Berger,MDB,SC,13,5
+5540,Fernando Bezerra Coelho,MDB,PE,13,2
+5557,Mailza Gomes,PP,AC,13,10
+5585,Luiz Carlos do Carmo,MDB,GO,13,3
+5627,Jean-Paul Prates,PT,RN,13,29
+5718,Eliziane Gama,CIDADANIA,MA,13,14
+5732,Rodrigo Pacheco,DEM,MG,13,0
+5748,Veneziano Vital do Rêgo,MDB,PB,13,9
+5783,Zenaide Maia,PROS,RN,13,15
+5894,Flávio Bolsonaro,S/Partido,RJ,13,2
+5895,Jorge Kajuru,PODE,GO,13,9
+5899,Vanderlan Cardoso,PSD,GO,13,1
+5905,Rodrigo Cunha,PSDB,AL,13,3
+5924,Oriovisto Guimarães,PODE,PR,13,2
+5926,Lucas Barreto,PSD,AP,13,8
+5936,Carlos Portinho,PL,RJ,13,8
+5942,Marcos do Val,PODE,ES,13,2
+5953,Fabiano Contarato,REDE,ES,13,16
+5959,Styvenson Valentim,PODE,RN,13,4
+5967,Angelo Coronel,PSD,BA,13,8
+5973,Cid Gomes,PDT,CE,13,1
+5976,Eduardo Girão,PODE,CE,13,2
+5979,Leila Barros,PSB,DF,13,8
+5982,Alessandro Vieira,CIDADANIA,SE,13,5
+5985,Nelsinho Trad,PSD,MS,13,14
+5988,Soraya Thronicke,PSL,MS,13,3
+5990,Carlos Viana,PSD,MG,13,4
+5998,Daniella Ribeiro,PP,PB,13,6
+6008,Giordano,PSL,SP,13,2
+6027,Mecias de Jesus,REPUBLICANOS,RR,13,0
+6295,Carlos Fávaro,PSD,MT,13,3

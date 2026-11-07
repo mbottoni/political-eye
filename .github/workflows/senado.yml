@@ -1,0 +1,68 @@
+name: senado
+
+# The Senado votes Tuesday to Thursday. Runs Saturday morning, half an hour
+# after the Câmara, so each commit is one legislative week; its diff is what
+# changed that week, including corrections to earlier months.
+on:
+  schedule:
+    - cron: "7 11 * * 6"   # Saturdays, 11:07 UTC
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "Years to rebuild, space-separated (empty = previous and current year)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: senado
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    # About 260 API calls for two years, at a polite pace (see fetch.py).
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Test
+        run: uv run pytest -q tests/senado tests/test_fetch.py
+
+      - name: Download and rebuild
+        env:
+          YEARS: ${{ inputs.years }}
+        run: |
+          if [[ ! "$YEARS" =~ ^[0-9\ ]*$ ]]; then
+            echo "years must be digits and spaces, got: $YEARS" >&2
+            exit 1
+          fi
+          read -ra years <<< "$YEARS"
+          uv run python -m politicaleye senado update "${years[@]}"
+
+      - name: Commit if the data changed
+        run: |
+          git add data/senado
+          if git diff --staged --quiet -- . ':!data/senado/sources.json'; then
+            echo "No data changes."
+            exit 0
+          fi
+          months=$(git diff --staged --name-only -- data/senado/votes data/senado/authorship | xargs -rn1 basename | sed 's/\.csv$//' | sort -u | tr '\n' ' ')
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "senado: update through $(date -u +%F)" -m "Months changed: ${months:-none (index only)}"
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase
+          done
+          exit 1

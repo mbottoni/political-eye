@@ -1,0 +1,11 @@
+id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6417,2021-10-05,255408,DOR,8145787,PLP 5/2021,PLP,0,A,67,3,1,"Votação nominal do Projeto de Lei Complementar nº 5, de 2021, nos termos do Parecer."
+6418,2021-10-13,256823,DOR,7782137,PL 4194/2019,PL,0,A,71,0,0,"Votação nominal do Projeto de Lei nº 4.194, de 2019, nos termos do Parecer."
+6419,2021-10-14,257166,DOR,8117717,PL 2753/2021,PL,0,A,67,0,0,"Votação nominal do Projeto de Lei nº 2.753, de 2021, nos termos do Parecer."
+6420,2021-10-19,257833,DOR,8097479,PL 2350/2021,PL,0,A,76,1,0,"Votação, em turno único, da Emenda nº 1-PLEN (substitutivo) ao PL 1.374/2021."
+6421,2021-10-20,258286,DOR,8132478,PEC 17/2019 (fase 2),PEC,0,A,64,0,0,"Votação nominal da Proposta de Emenda à Constituição nº 17, de 2019 (1º Turno)."
+6422,2021-10-20,258286,DOR,8132478,PEC 17/2019 (fase 2),PEC,0,A,76,0,0,"Votação nominal da Proposta de Emenda à Constituição nº 17, de 2019 (2º Turno)."
+6423,2021-10-21,258552,DOR,8062307,PL 1417/2021,PL,0,A,77,0,0,Votação nominal.
+6424,2021-10-26,259266,DOR,7797185,PL 4808/2019,PL,0,A,73,0,0,"Votação nominal do PL 4.808, de 2019, em turno único."
+6425,2021-10-27,259555,DOR,8006262,PL 123/2019,PL,0,A,74,0,0,"Votação nominal do Projeto de Lei nº 123, de 2019, nos termos do Parecer."
+6426,2021-10-28,260029,DOR,8083999,PL 1932/2021,PL,0,A,71,0,0,Votação nominal.

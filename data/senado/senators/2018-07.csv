@@ -1,0 +1,83 @@
+senador_id,nome,partido,uf,n_votes,n_authored
+3,Antonio Carlos Valadares,PSB,SE,7,4
+16,Edison Lobão,MDB,MA,7,0
+35,Jader Barbalho,MDB,PA,7,0
+40,José Agripino,DEM,RN,7,0
+70,Renan Calheiros,MDB,AL,7,0
+72,Roberto Requião,MDB,PR,7,1
+73,Romero Jucá,MDB,RR,7,3
+87,Garibaldi Alves Filho,MDB,RN,7,2
+90,José Serra,PSDB,SP,7,2
+374,Paulo Rocha,PT,PA,7,5
+391,Aécio Neves,PSDB,MG,7,0
+456,Ronaldo Caiado,DEM,GO,7,2
+558,Vanessa Grazziotin,PCdoB,AM,7,7
+612,Eunício Oliveira,MDB,CE,7,0
+615,José Pimentel,PT,CE,7,2
+631,Magno Malta,PL,ES,7,2
+635,Ricardo Ferraço,PSDB,ES,7,6
+643,Lúcia Vânia,PSB,GO,7,2
+677,Roberto Rocha,PSDB,MA,7,0
+715,Armando Monteiro,PTB,PE,7,4
+739,Ciro Nogueira,PP,PI,7,4
+825,Paulo Paim,PT,RS,7,3
+945,Alvaro Dias,PODE,PR,7,5
+950,João Alberto Souza,MDB,MA,7,0
+1023,Maria do Carmo Alves,DEM,SE,7,0
+1173,Wellington Fagundes,PL,MT,7,1
+1176,Waldemir Moka,MDB,MS,7,3
+1249,Kátia Abreu,PDT,TO,7,2
+2207,Raimundo Lira,PSD,PB,7,0
+2331,Rose de Freitas,PODE,ES,7,2
+3361,José Maranhão,MDB,PB,7,1
+3372,Valdir Raupp,MDB,RO,7,2
+3394,João Capiberibe,PSB,AP,7,1
+3396,Tasso Jereissati,PSDB,CE,7,4
+3398,Cristovam Buarque,CIDADANIA,DF,7,6
+3634,Flexa Ribeiro,PSDB,PA,7,5
+3695,Lindbergh Farias,PT,RJ,7,15
+3713,Fátima Bezerra,PT,RN,7,4
+3741,Paulo Bauer,PSDB,SC,7,3
+3823,Benedito de Lira,PP,AL,7,4
+3830,Davi Alcolumbre,DEM,AP,7,0
+4525,Fernando Collor,PTC,AL,7,0
+4558,Gladson Cameli,PP,AC,7,4
+4560,Sérgio Petecão,PSD,AC,7,2
+4575,Lídice da Mata,PSB,BA,7,3
+4697,Ângela Portela,PDT,RR,7,0
+4721,Eduardo Amorim,PSDB,SE,7,0
+4763,Vicentinho Alves,PL,TO,7,0
+4767,Eduardo Lopes,REPUBLICANOS,RJ,7,1
+4981,Acir Gurgacz,PDT,RO,7,5
+4988,Ana Amélia,PP,RS,7,6
+4990,Jorge Viana,PT,AC,7,1
+4994,Eduardo Braga,MDB,AM,7,3
+5000,Marta Suplicy,MDB,SP,7,2
+5006,Gleisi Hoffmann,PT,PR,7,0
+5008,Humberto Costa,PT,PE,7,3
+5012,Randolfe Rodrigues,REDE,AP,7,2
+5052,Roberto Muniz,PP,BA,7,1
+5070,Wilder Morais,DEM,,7,0
+5072,Reditario Cassol,PP,RO,7,2
+5100,Hélio José,PROS,DF,7,5
+5110,Rodrigues Palma,PL,MT,7,4
+5112,José Medeiros,PODE,MT,7,5
+5116,Pedro Chaves,REPUBLICANOS,MS,7,3
+5132,Dalirio Beber,PSDB,SC,7,5
+5140,Airton Sandoval,MDB,SP,7,5
+5144,Zeze Perrella,MDB,MG,7,1
+5164,Ataídes Oliveira,PSDB,TO,7,2
+5182,Regina Sousa,PT,PI,7,5
+5197,Cássio Cunha Lima,PSDB,PB,7,0
+5236,Reguffe,S/Partido,DF,7,3
+5322,Romário,PODE,RJ,7,2
+5523,Otto Alencar,PSD,BA,7,2
+5525,Omar Aziz,PSD,AM,7,0
+5527,Simone Tebet,MDB,MS,7,5
+5529,Antonio Anastasia,PSDB,MG,7,2
+5531,Elmano Férrer,PODE,PI,3,3
+5533,Lasier Martins,PSD,RS,7,3
+5537,Dário Berger,MDB,SC,7,0
+5540,Fernando Bezerra Coelho,MDB,PE,7,5
+5621,Rudson Leite,PV,RR,7,6
+5849,José Amauri,PODE,PI,4,1

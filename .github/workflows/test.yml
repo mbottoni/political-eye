@@ -43,3 +43,15 @@ jobs:
           print(m, gv.number_of_nodes(), gv.number_of_edges(), gc.number_of_edges())
           assert gv.number_of_nodes() > 0
           EOF
+
+      - name: Smoke-test the latest Senado window
+        run: |
+          uv run python - <<'EOF'
+          import pandas as pd
+          from politicaleye import senado
+          idx = pd.read_csv("data/senado/index.csv")
+          m = idx[idx.covote_nodes > 0].month.iloc[-1]
+          gv, gc = senado.aligned(m)
+          print(m, gv.number_of_nodes(), gv.number_of_edges(), gc.number_of_edges())
+          assert gv.number_of_nodes() > 0
+          EOF

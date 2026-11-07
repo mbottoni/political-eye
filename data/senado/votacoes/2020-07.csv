@@ -1,0 +1,14 @@
+id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6150,2020-07-02,182267,SDR,7883289,MPV 931/2020,MPV,0,A,75,0,0,Votação do Projeto de Lei de Conversão nº 19 de 2020 e Pressupostos de Relevância e Urgência da MPV nº 931/2020.
+6151,2020-07-07,182629,SDR,7918647,PL 1826/2020,PL,0,A,76,0,0,"Votação do Projeto de Lei nº 1.826 de 2020, nos termos do Parecer."
+6153,2020-07-08,182934,SDR,7883283,MPV 930/2020,MPV,0,A,67,8,0,Votação do Projeto de Lei de Conversão nº 21 de 2020 e Pressupostos de Relevância e Urgência da MPV nº 930/2020.
+6154,2020-07-14,183557,DEX,7920333,PLP 9/2020,PLP,0,A,70,0,0,"Projeto de Lei Complementar nº 9, de 2020."
+6155,2020-07-15,183913,SDR,7876822,MPV 925/2020,MPV,0,A,72,2,0,"Votação do PLV nº 23/2020 e Pressupostos da MPV nº 925/2020, nos termos do Parecer."
+6156,2020-07-15,183913,SDR,7890428,MPV 944/2020,MPV,0,A,72,0,0,"Votação do PLV nº 20/2020 e Pressupostos da MPV nº 944/2020, nos termos do Parecer, com ajustes do Relator."
+6157,2020-07-16,184662,SDR,7877306,MPV 926/2020,MPV,0,A,59,10,1,Votação do PLV nº 25/2020 e Pressupostos de Relevância e Urgência da MPV nº 926/2020.
+6152,2020-07-22,184964,SDR,7934550,MPV 986/2020,MPV,0,A,76,0,0,"Votação da Medida Provisória nº 986 de 2020, em conjunto com seus Pressupostos de Relevância e Urgência."
+6158,2020-07-23,185217,SDR,7884424,MPV 934/2020,MPV,0,A,73,0,0,Votação do Projeto de Lei de Conversão nº 22 de 2020 e Pressupostos de Relevância e Urgência da MPV nº 934/2020.
+6159,2020-07-29,185576,SDR,7922056,MPV 975/2020,MPV,0,A,73,0,0,Votação do Projeto de Lei de Conversão nº 24 de 2020 e Pressupostos de Relevância e Urgência da MPV nº 975/2020.
+6160,2020-07-30,185901,SDR,7890481,MPV 945/2020,MPV,0,A,65,8,0,"Votação do Projeto de Lei de Conversão nº 30 de 2020 e Pressupostos de Relevância e Urgência da MPV nº 945/2020, ressalvado o destaque."
+6161,2020-07-30,185901,SDR,7890481,MPV 945/2020,MPV,0,R,55,14,0,"Votação do Art. 12º do Projeto de Lei de Conversão nº 30, de 2020, destacado."
+6162,2020-07-30,185901,SDR,7893574,MPV 946/2020,MPV,0,A,72,0,0,"Votação do PLV nº 31, de 2020 e Pres. de Relevância e Urgência, com adendo do Relator."

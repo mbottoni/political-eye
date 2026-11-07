@@ -6,6 +6,7 @@ changes its numbers and every problem found in its data:
 | source | data | methodology |
 |---|---|---|
 | Câmara dos Deputados | `data/camara/` | [methodology/camara.md](methodology/camara.md) |
+| Senado Federal | `data/senado/` | [methodology/senado.md](methodology/senado.md) |
 
 The rules below hold for every source.
 
@@ -23,8 +24,9 @@ third-party mirrors.
 - **Tables are deterministic.** CSV, sorted, `\n` line endings. A rebuild
   that changes nothing produces no diff, so each commit's diff is what
   changed at the source that week or day, corrections included.
-- **Provenance.** `data/<source>/sources.json` records the URL, size, ETag
-  and `Last-Modified` of every file a build used.
+- **Provenance.** `data/<source>/sources.json` records what every build
+  used: the URL, size, ETag and `Last-Modified` of each bulk file, or the
+  URL, size and SHA-256 of each API response.
 - **Dropped rows are counted.** A build that drops rows (off-year dates,
   duplicates, missing keys) prints how many and why.
 - **Size.** Each source's methodology states how much it adds per year. Raw

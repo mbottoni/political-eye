@@ -58,22 +58,37 @@ def _sleep(backoff: float, attempt: int) -> None:
     time.sleep(min(backoff**attempt, 30))
 
 
-def get_json(url: str, *, attempts: int = 4, timeout: float = 30, backoff: float = 2.0,
-             user_agent: str = USER_AGENT):
-    """GET a small JSON document with retries. Returns ``None`` on 404."""
+def get_bytes(url: str, *, attempts: int = 4, timeout: float = 30, backoff: float = 2.0,
+              headers: dict | None = None, user_agent: str = USER_AGENT, check=None) -> bytes | None:
+    """GET a small document with retries. ``None`` on 404.
+
+    ``check(body)`` may raise to reject a body (a truncated JSON, say), which
+    counts as a failed attempt. 429 and 5xx answers are retried with backoff.
+    """
     for attempt in range(1, attempts + 1):
         try:
-            with urllib.request.urlopen(_req(url, user_agent=user_agent), timeout=timeout) as r:
-                return json.loads(r.read().decode("utf-8"))
+            with urllib.request.urlopen(_req(url, headers=headers, user_agent=user_agent), timeout=timeout) as r:
+                body = r.read()
+            if check is not None:
+                check(body)
+            return body
         except urllib.error.HTTPError as e:
             if e.code == 404:
                 return None
             err: Exception = e
-        except (*NETWORK_ERRORS, json.JSONDecodeError) as e:
+        except (*NETWORK_ERRORS, ValueError) as e:   # json.JSONDecodeError is a ValueError
             err = e
         if attempt < attempts:
             _sleep(backoff, attempt)
     raise RuntimeError(f"GET {url} failed {attempts} times: {err}")
+
+
+def get_json(url: str, *, attempts: int = 4, timeout: float = 30, backoff: float = 2.0,
+             headers: dict | None = None, user_agent: str = USER_AGENT):
+    """GET a small JSON document with retries. Returns ``None`` on 404."""
+    body = get_bytes(url, attempts=attempts, timeout=timeout, backoff=backoff, user_agent=user_agent,
+                     headers={"Accept": "application/json", **(headers or {})}, check=lambda b: json.loads(b))
+    return None if body is None else json.loads(body)
 
 
 def download(url: str, dest: Path, *, attempts: int = 8, timeout: float = 60, backoff: float = 2.0,

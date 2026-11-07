@@ -1,0 +1,83 @@
+senador_id,nome,partido,uf,n_votes,n_authored
+16,Edison Lobão,MDB,MA,20,4
+35,Jader Barbalho,MDB,PA,20,2
+40,José Agripino,DEM,RN,20,5
+70,Renan Calheiros,MDB,AL,20,3
+72,Roberto Requião,MDB,PR,20,5
+73,Romero Jucá,MDB,RR,20,13
+87,Garibaldi Alves Filho,MDB,RN,20,10
+90,José Serra,PSDB,SP,20,3
+374,Paulo Rocha,PT,PA,20,12
+391,Aécio Neves,PSDB,MG,20,1
+456,Ronaldo Caiado,DEM,GO,20,0
+558,Vanessa Grazziotin,PCdoB,AM,20,16
+612,Eunício Oliveira,MDB,CE,20,0
+615,José Pimentel,PT,CE,20,6
+631,Magno Malta,PL,ES,20,13
+643,Lúcia Vânia,PSB,GO,20,3
+677,Roberto Rocha,PSDB,MA,20,5
+715,Armando Monteiro,PTB,PE,20,14
+739,Ciro Nogueira,PP,PI,20,1
+825,Paulo Paim,PT,RS,20,23
+945,Alvaro Dias,PODE,PR,20,10
+950,João Alberto Souza,MDB,MA,20,1
+1023,Maria do Carmo Alves,DEM,SE,20,2
+1173,Wellington Fagundes,PL,MT,20,13
+1176,Waldemir Moka,MDB,MS,20,4
+1249,Kátia Abreu,S/Partido,TO,20,0
+2207,Raimundo Lira,MDB,PB,20,11
+2331,Rose de Freitas,MDB,ES,20,10
+3361,José Maranhão,MDB,PB,20,6
+3372,Valdir Raupp,MDB,RO,20,6
+3394,João Capiberibe,PSB,AP,20,9
+3396,Tasso Jereissati,PSDB,CE,20,2
+3398,Cristovam Buarque,CIDADANIA,DF,20,20
+3634,Flexa Ribeiro,PSDB,PA,20,12
+3695,Lindbergh Farias,PT,RJ,20,16
+3713,Fátima Bezerra,PT,RN,20,13
+3741,Paulo Bauer,PSDB,SC,20,7
+3823,Benedito de Lira,PP,AL,20,5
+3830,Davi Alcolumbre,DEM,AP,20,2
+4525,Fernando Collor,PTC,AL,20,0
+4558,Gladson Cameli,PP,AC,20,2
+4560,Sérgio Petecão,PSD,AC,20,8
+4575,Lídice da Mata,PSB,BA,20,11
+4645,Vital do Rêgo,,,0,1
+4697,Ângela Portela,PDT,RR,20,6
+4721,Eduardo Amorim,PSDB,SE,20,10
+4763,Vicentinho Alves,PL,TO,20,5
+4767,Eduardo Lopes,REPUBLICANOS,RJ,20,12
+4969,Elber Batalha,PSB,SE,20,10
+4981,Acir Gurgacz,PDT,RO,20,9
+4988,Ana Amélia,PP,RS,20,4
+4990,Jorge Viana,PT,AC,20,7
+4994,Eduardo Braga,MDB,AM,20,2
+5000,Marta Suplicy,MDB,SP,20,5
+5004,Ivo Cassol,PP,RO,20,3
+5006,Gleisi Hoffmann,PT,PR,20,2
+5008,Humberto Costa,PT,PE,20,7
+5012,Randolfe Rodrigues,REDE,AP,20,13
+5052,Roberto Muniz,PP,BA,20,6
+5070,Wilder Morais,PP,,20,0
+5100,Hélio José,PROS,DF,20,16
+5106,Sérgio de Castro,PDT,ES,20,7
+5108,Cidinho Santos,PL,MT,20,10
+5112,José Medeiros,PODE,MT,20,15
+5116,Pedro Chaves,PSC,MS,20,6
+5132,Dalirio Beber,PSDB,SC,20,3
+5140,Airton Sandoval,MDB,SP,20,12
+5144,Zeze Perrella,MDB,MG,20,2
+5164,Ataídes Oliveira,PSDB,TO,20,3
+5182,Regina Sousa,PT,PI,20,16
+5197,Cássio Cunha Lima,PSDB,PB,20,10
+5236,Reguffe,S/Partido,DF,20,4
+5322,Romário,PODE,RJ,20,5
+5523,Otto Alencar,PSD,BA,20,4
+5525,Omar Aziz,PSD,AM,20,2
+5527,Simone Tebet,MDB,MS,20,0
+5529,Antonio Anastasia,PSDB,MG,20,8
+5531,Elmano Férrer,MDB,PI,20,13
+5533,Lasier Martins,PSD,RS,20,7
+5535,Telmário Mota,PTB,RR,20,9
+5537,Dário Berger,MDB,SC,20,7
+5540,Fernando Bezerra Coelho,MDB,PE,20,12

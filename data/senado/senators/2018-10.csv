@@ -1,0 +1,87 @@
+senador_id,nome,partido,uf,n_votes,n_authored
+3,Antonio Carlos Valadares,PSB,SE,18,1
+16,Edison Lobão,MDB,MA,18,1
+35,Jader Barbalho,MDB,PA,18,0
+40,José Agripino,DEM,RN,18,1
+70,Renan Calheiros,MDB,AL,18,0
+72,Roberto Requião,MDB,PR,18,2
+73,Romero Jucá,MDB,RR,18,4
+87,Garibaldi Alves Filho,MDB,RN,18,1
+90,José Serra,PSDB,SP,18,1
+374,Paulo Rocha,PT,PA,18,0
+391,Aécio Neves,PSDB,MG,18,0
+456,Ronaldo Caiado,DEM,GO,18,1
+558,Vanessa Grazziotin,PCdoB,AM,18,4
+604,Walter Pinheiro,S/Partido,BA,7,0
+612,Eunício Oliveira,MDB,CE,18,1
+615,José Pimentel,PT,CE,18,2
+631,Magno Malta,PL,ES,18,1
+635,Ricardo Ferraço,PSDB,ES,18,3
+643,Lúcia Vânia,PSB,GO,7,0
+677,Roberto Rocha,PSDB,MA,18,0
+715,Armando Monteiro,PTB,PE,18,1
+739,Ciro Nogueira,PP,PI,18,3
+825,Paulo Paim,PT,RS,18,16
+945,Alvaro Dias,PODE,PR,18,0
+950,João Alberto Souza,MDB,MA,18,0
+1023,Maria do Carmo Alves,DEM,SE,18,1
+1173,Wellington Fagundes,PL,MT,18,1
+1176,Waldemir Moka,MDB,MS,18,2
+1249,Kátia Abreu,PDT,TO,7,8
+2207,Raimundo Lira,PSD,PB,18,0
+2331,Rose de Freitas,PODE,ES,18,0
+3361,José Maranhão,MDB,PB,18,0
+3372,Valdir Raupp,MDB,RO,18,1
+3394,João Capiberibe,PSB,AP,18,0
+3396,Tasso Jereissati,PSDB,CE,18,2
+3398,Cristovam Buarque,CIDADANIA,DF,18,1
+3634,Flexa Ribeiro,PSDB,PA,18,2
+3695,Lindbergh Farias,PT,RJ,18,5
+3713,Fátima Bezerra,PT,RN,18,1
+3741,Paulo Bauer,PSDB,SC,18,2
+3830,Davi Alcolumbre,DEM,AP,18,0
+4525,Fernando Collor,PTC,AL,18,2
+4558,Gladson Cameli,PP,AC,18,1
+4560,Sérgio Petecão,PSD,AC,18,2
+4575,Lídice da Mata,PSB,BA,18,3
+4697,Ângela Portela,PDT,RR,18,0
+4721,Eduardo Amorim,PSDB,SE,18,0
+4763,Vicentinho Alves,PL,TO,18,1
+4767,Eduardo Lopes,REPUBLICANOS,RJ,18,3
+4981,Acir Gurgacz,PDT,RO,18,1
+4988,Ana Amélia,PP,RS,18,5
+4990,Jorge Viana,PT,AC,18,1
+4994,Eduardo Braga,MDB,AM,18,4
+5000,Marta Suplicy,MDB,SP,18,1
+5004,Ivo Cassol,PP,RO,11,0
+5006,Gleisi Hoffmann,PT,PR,18,1
+5008,Humberto Costa,PT,PE,18,1
+5012,Randolfe Rodrigues,REDE,AP,18,0
+5030,Givago Tenório,PP,AL,18,5
+5052,Roberto Muniz,PP,BA,11,0
+5070,Wilder Morais,DEM,,18,0
+5072,Reditario Cassol,PP,RO,7,0
+5076,Ione Guimarães,PTB,GO,11,1
+5100,Hélio José,PROS,DF,18,6
+5108,Cidinho Santos,PL,MT,18,1
+5112,José Medeiros,PODE,MT,18,2
+5116,Pedro Chaves,REPUBLICANOS,MS,18,7
+5132,Dalirio Beber,PSDB,SC,18,3
+5140,Airton Sandoval,MDB,SP,18,4
+5144,Zeze Perrella,MDB,MG,18,0
+5164,Ataídes Oliveira,PSDB,TO,18,2
+5182,Regina Sousa,PT,PI,18,3
+5197,Cássio Cunha Lima,PSDB,PB,18,0
+5236,Reguffe,S/Partido,DF,18,0
+5322,Romário,PODE,RJ,18,0
+5523,Otto Alencar,PSD,BA,18,2
+5525,Omar Aziz,PSD,AM,18,3
+5527,Simone Tebet,MDB,MS,18,8
+5529,Antonio Anastasia,PSDB,MG,18,1
+5533,Lasier Martins,PSD,RS,18,7
+5535,Telmário Mota,PTB,RR,18,0
+5537,Dário Berger,MDB,SC,18,1
+5540,Fernando Bezerra Coelho,MDB,PE,18,4
+5637,Donizeti Nogueira,PT,,0,1
+5639,Guaracy Silveira,DC,TO,7,0
+5849,José Amauri,PODE,PI,18,1

@@ -1,0 +1,17 @@
+id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6081,2020-04-01,164495,SDR,7877935,PL 873/2020,PL,0,A,79,0,0,Votação do PL 873/2020
+6084,2020-04-03,165497,SDR,7883024,PL 1179/2020,PL,0,A,49,27,0,"Votação da Emenda nº 85 ao Projeto de Lei nº 1179, de 2020, destacada"
+6085,2020-04-07,165980,SDR,7884747,PL 1282/2020,PL,0,A,78,0,0,"Votação do Projeto de Lei nº 1282, de 2020."
+6086,2020-04-14,167009,SDR,7834698,MPV 903/2019,MPV,0,A,75,0,0,"Votação da Medida Provisória nº 903, de 2019."
+6087,2020-04-14,167009,SDR,7883830,PL 1194/2020,PL,0,A,79,0,0,"Votação do Projeto de Lei nº 1194, de 2020."
+6088,2020-04-15,167444,SDR,7890828,PEC 10/2020,PEC,0,A,58,21,1,"Votação da Emenda nº 63 (Substitutivo) do Relator à PEC nº 10, de 2020, ressalvados os destaques (1º Turno)"
+6089,2020-04-15,167444,SDR,7890828,PEC 10/2020,PEC,0,R,23,53,1,"Votação da Emenda nº 42 à Proposta de Emenda à Constituição nº 10, de 2020, destacada"
+6090,2020-04-15,167444,SDR,7890828,PEC 10/2020,PEC,0,R,17,53,1,"Votação da Emenda nº 46 à Proposta de Emenda à Constituição nº 10, de 2020, destacada"
+6091,2020-04-15,167444,SDR,7890828,PEC 10/2020,PEC,0,A,62,13,1,"Votação da Art. 6º do Substitutivo à Proposta de Emenda à Constituição nº 10, de 2020, destacado"
+6092,2020-04-15,167444,SDR,7890828,PEC 10/2020,PEC,0,A,74,2,0,"Votação da Redação proposta pelo Relator, em substituição às Emendas nºs 34 e 45 à PEC nº 10/2020 (1º Turno)"
+6093,2020-04-17,168179,SDR,7890828,PEC 10/2020,PEC,0,A,63,15,1,"Votação da Proposta de Emenda à Constituição nº 10, de 2020 (2º Turno)"
+6094,2020-04-22,168593,SDR,7900950,PL 873/2020 (Substitutivo-CD),PL,0,A,80,0,0,"Votação do Substitutivo da Câmara dos Deputados ao Projeto de Lei do Senado nº 873, de 2020."
+6095,2020-04-24,168964,SDR,7904013,PL 1282/2020 (Substitutivo-CD),PL,0,A,74,0,1,"Votação do Substitutivo da Câmara dos Deputados ao Projeto de Lei nº 1282, de 2020."
+6096,2020-04-24,168964,SDR,7904013,PL 1282/2020 (Substitutivo-CD),PL,0,R,24,48,0,"Votação do parágrafo 3º do art. 2º do texto aprovado pelo Senado ao Substitutivo da Câmara dos Deputados ao Projeto de Lei nº 1.282, de 2020."
+6097,2020-04-27,169261,SDR,7838916,MPV 906/2019,MPV,0,A,74,0,1,"Votação do Projeto de Lei de Conversão nº 7, de 2020."
+6105,2020-04-28,169496,SDR,7846031,MPV 907/2019,MPV,0,A,79,0,0,"Votação do Projeto de Lei de Conversão nº 8, de 2020 e Pressupostos de Relevância e Urgência da MPV nº 907/2019."

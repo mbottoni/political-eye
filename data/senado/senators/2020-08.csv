@@ -1,0 +1,82 @@
+senador_id,nome,partido,uf,n_votes,n_authored
+22,Esperidião Amin,PP,SC,10,23
+35,Jader Barbalho,MDB,PA,10,9
+70,Renan Calheiros,MDB,AL,10,3
+90,José Serra,PSDB,SP,10,5
+285,Marcio Bittar,MDB,AC,10,5
+345,Flávio Arns,REDE,PR,10,7
+374,Paulo Rocha,PT,PA,10,17
+470,Chico Rodrigues,DEM,RR,10,11
+475,Confúcio Moura,MDB,RO,10,13
+581,Jaques Wagner,PT,BA,10,14
+677,Roberto Rocha,PSDB,MA,10,12
+739,Ciro Nogueira,PP,PI,10,7
+742,Marcelo Castro,MDB,PI,10,10
+751,Arolde de Oliveira,PSD,RJ,10,6
+825,Paulo Paim,PT,RS,10,32
+945,Alvaro Dias,PODE,PR,10,24
+1023,Maria do Carmo Alves,DEM,SE,10,5
+1173,Wellington Fagundes,PL,MT,10,13
+1186,Luis Carlos Heinze,PP,RS,10,5
+1249,Kátia Abreu,PP,TO,10,6
+2331,Rose de Freitas,PODE,ES,10,14
+3361,José Maranhão,MDB,PB,10,3
+3396,Tasso Jereissati,PSDB,CE,10,6
+3777,Eduardo Gomes,MDB,TO,10,4
+3806,Zequinha Marinho,PSC,PA,10,10
+3830,Davi Alcolumbre,DEM,AP,10,3
+4525,Fernando Collor,PROS,AL,10,5
+4531,Jayme Campos,DEM,MT,10,8
+4545,Jarbas Vasconcelos,MDB,PE,10,13
+4560,Sérgio Petecão,PSD,AC,10,2
+4770,Izalci Lucas,PSDB,DF,10,8
+4981,Acir Gurgacz,PDT,RO,10,16
+4994,Eduardo Braga,MDB,AM,10,13
+5008,Humberto Costa,PT,PE,10,20
+5012,Randolfe Rodrigues,REDE,AP,10,35
+5236,Reguffe,PODE,DF,10,11
+5322,Romário,PODE,RJ,10,14
+5350,Jorginho Mello,PL,SC,10,8
+5352,Rogério Carvalho,PT,SE,10,22
+5376,Mara Gabrilli,PSDB,SP,10,31
+5385,Irajá,PSD,TO,10,1
+5411,Weverton,PDT,MA,10,17
+5422,Marcos Rogério,DEM,RO,10,4
+5502,Plínio Valério,PSDB,AM,10,12
+5523,Otto Alencar,PSD,BA,10,12
+5525,Omar Aziz,PSD,AM,10,5
+5527,Simone Tebet,MDB,MS,10,15
+5529,Antonio Anastasia,PSD,MG,10,9
+5531,Elmano Férrer,PODE,PI,10,1
+5533,Lasier Martins,PODE,RS,10,20
+5535,Telmário Mota,PROS,RR,10,14
+5537,Dário Berger,MDB,SC,10,9
+5540,Fernando Bezerra Coelho,MDB,PE,10,2
+5557,Mailza Gomes,PP,AC,10,4
+5585,Luiz Carlos do Carmo,MDB,GO,10,12
+5627,Jean-Paul Prates,PT,RN,10,25
+5666,Major Olimpio,PSL,SP,10,17
+5718,Eliziane Gama,CIDADANIA,MA,10,14
+5732,Rodrigo Pacheco,DEM,MG,10,3
+5748,Veneziano Vital do Rêgo,PSB,PB,10,13
+5783,Zenaide Maia,PROS,RN,10,16
+5894,Flávio Bolsonaro,S/Partido,RJ,10,1
+5895,Jorge Kajuru,CIDADANIA,GO,10,25
+5899,Vanderlan Cardoso,PSD,GO,10,2
+5905,Rodrigo Cunha,PSDB,AL,10,10
+5924,Oriovisto Guimarães,PODE,PR,10,5
+5926,Lucas Barreto,PSD,AP,10,6
+5942,Marcos do Val,PODE,ES,10,14
+5953,Fabiano Contarato,REDE,ES,10,27
+5959,Styvenson Valentim,PODE,RN,10,16
+5967,Angelo Coronel,PSD,BA,10,8
+5973,Cid Gomes,PDT,CE,10,2
+5976,Eduardo Girão,PODE,CE,10,8
+5979,Leila Barros,PSB,DF,10,18
+5982,Alessandro Vieira,CIDADANIA,SE,10,16
+5985,Nelsinho Trad,PSD,MS,10,15
+5988,Soraya Thronicke,PSL,MS,10,7
+5990,Carlos Viana,PSD,MG,10,8
+5998,Daniella Ribeiro,PP,PB,10,10
+6027,Mecias de Jesus,REPUBLICANOS,RR,10,15
+6295,Carlos Fávaro,PSD,MT,10,6

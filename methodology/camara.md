@@ -271,6 +271,6 @@ every such count.
 
 ## Not included (yet)
 
-- **The Senado**, which publishes its own API. It will be its own source
-  in this repo (`data/senado/`), not part of these tables.
+- **The Senado**: its own source, `data/senado/`
+  ([methodology/senado.md](senado.md)).
 - **Committee and symbolic votes.**

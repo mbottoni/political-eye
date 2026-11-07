@@ -1,0 +1,6 @@
+id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+7096,2026-07-14,569250,DOR,8928227,PEC 14/2021,PEC,0,A,73,1,1,"Votação nominal da Proposta de Emenda à Constituição nº 14, de 2021, nos termos do parecer (1º turno)."
+7097,2026-07-14,569250,DOR,8928227,PEC 14/2021,PEC,0,A,73,1,1,"Votação nominal da Proposta de Emenda à Constituição nº 14, de 2021 (2º turno)."
+7098,2026-07-15,569251,DOR,8957703,PLP 18/2021,PLP,0,A,65,2,0,"Votação nominal do Projeto de Lei Complementar nº 18, de 2021, nos termos dos pareceres, ressalvados os destaques."
+7099,2026-07-15,569251,DOR,8957703,PLP 18/2021,PLP,0,R,25,33,0,"Votação nominal da Emenda nº 2 ao Projeto de Lei Complementar nº 18, de 2021, destacada."
+7100,2026-07-15,569251,DOR,8957703,PLP 18/2021,PLP,0,R,14,37,0,"Votação nominal da Emenda nº 4 ao Projeto de Lei Complementar nº 18, de 2021, destacada."

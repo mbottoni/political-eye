@@ -1,0 +1,82 @@
+senador_id,nome,partido,uf,n_votes,n_authored
+22,Esperidião Amin,PP,SC,8,11
+35,Jader Barbalho,MDB,PA,8,1
+70,Renan Calheiros,MDB,AL,8,0
+90,José Serra,PSDB,SP,8,4
+285,Marcio Bittar,MDB,AC,8,5
+345,Flávio Arns,REDE,PR,8,8
+374,Paulo Rocha,PT,PA,8,5
+470,Chico Rodrigues,DEM,RR,8,8
+475,Confúcio Moura,MDB,RO,8,11
+581,Jaques Wagner,PT,BA,8,9
+677,Roberto Rocha,PSDB,MA,8,6
+739,Ciro Nogueira,PP,PI,8,1
+742,Marcelo Castro,MDB,PI,8,5
+751,Arolde de Oliveira,PSD,RJ,8,5
+825,Paulo Paim,PT,RS,8,11
+945,Alvaro Dias,PODE,PR,8,11
+1023,Maria do Carmo Alves,DEM,SE,8,4
+1173,Wellington Fagundes,PL,MT,8,9
+1186,Luis Carlos Heinze,PP,RS,8,14
+1249,Kátia Abreu,PDT,TO,8,7
+2331,Rose de Freitas,PODE,ES,8,4
+3361,José Maranhão,MDB,PB,8,1
+3396,Tasso Jereissati,PSDB,CE,8,4
+3777,Eduardo Gomes,MDB,TO,8,5
+3806,Zequinha Marinho,PSC,PA,8,7
+3830,Davi Alcolumbre,DEM,AP,8,3
+4531,Jayme Campos,DEM,MT,8,7
+4545,Jarbas Vasconcelos,MDB,PE,8,4
+4560,Sérgio Petecão,PSD,AC,8,4
+4770,Izalci Lucas,PSDB,DF,8,7
+4981,Acir Gurgacz,PDT,RO,8,4
+4994,Eduardo Braga,MDB,AM,8,8
+5008,Humberto Costa,PT,PE,8,14
+5012,Randolfe Rodrigues,REDE,AP,8,33
+5236,Reguffe,S/Partido,DF,8,4
+5322,Romário,PODE,RJ,8,4
+5350,Jorginho Mello,PL,SC,8,6
+5352,Rogério Carvalho,PT,SE,8,15
+5376,Mara Gabrilli,PSDB,SP,8,5
+5385,Irajá,PSD,TO,8,8
+5411,Weverton,PDT,MA,8,9
+5422,Marcos Rogério,DEM,RO,8,6
+5502,Plínio Valério,PSDB,AM,8,2
+5523,Otto Alencar,PSD,BA,8,2
+5525,Omar Aziz,PSD,AM,8,4
+5527,Simone Tebet,MDB,MS,8,8
+5529,Antonio Anastasia,PSDB,MG,8,8
+5531,Elmano Férrer,PODE,PI,8,5
+5533,Lasier Martins,PODE,RS,8,9
+5535,Telmário Mota,PROS,RR,8,7
+5537,Dário Berger,MDB,SC,8,8
+5540,Fernando Bezerra Coelho,MDB,PE,8,5
+5557,Mailza Gomes,PP,AC,8,3
+5561,Renilde Bulhões,PROS,AL,8,5
+5585,Luiz Carlos do Carmo,MDB,GO,8,5
+5627,Jean-Paul Prates,PT,RN,8,12
+5666,Major Olimpio,PSL,SP,8,10
+5718,Eliziane Gama,CIDADANIA,MA,8,12
+5732,Rodrigo Pacheco,DEM,MG,8,6
+5748,Veneziano Vital do Rêgo,PSB,PB,8,7
+5783,Zenaide Maia,PROS,RN,8,8
+5894,Flávio Bolsonaro,PSL,RJ,8,6
+5895,Jorge Kajuru,PSB,GO,8,24
+5899,Vanderlan Cardoso,PP,GO,8,9
+5905,Rodrigo Cunha,PSDB,AL,8,9
+5924,Oriovisto Guimarães,PODE,PR,8,5
+5926,Lucas Barreto,PSD,AP,8,4
+5929,Juíza Selma,PSL,MT,8,6
+5942,Marcos do Val,CIDADANIA,ES,8,2
+5953,Fabiano Contarato,REDE,ES,8,11
+5959,Styvenson Valentim,PODE,RN,8,16
+5967,Angelo Coronel,PSD,BA,8,13
+5973,Cid Gomes,PDT,CE,8,0
+5976,Eduardo Girão,PODE,CE,8,14
+5979,Leila Barros,PSB,DF,8,9
+5982,Alessandro Vieira,CIDADANIA,SE,8,7
+5985,Nelsinho Trad,PSD,MS,8,18
+5988,Soraya Thronicke,PSL,MS,8,13
+5990,Carlos Viana,PSD,MG,8,4
+5998,Daniella Ribeiro,PP,PB,8,0
+6027,Mecias de Jesus,REPUBLICANOS,RR,8,6

@@ -1,0 +1,82 @@
+senador_id,nome,partido,uf,n_votes,n_authored
+22,Esperidião Amin,PP,SC,4,26
+35,Jader Barbalho,MDB,PA,4,5
+70,Renan Calheiros,MDB,AL,4,5
+90,José Serra,PSDB,SP,4,5
+285,Marcio Bittar,MDB,AC,4,5
+345,Flávio Arns,REDE,PR,4,29
+374,Paulo Rocha,PT,PA,4,25
+470,Chico Rodrigues,DEM,RR,4,24
+475,Confúcio Moura,MDB,RO,4,17
+581,Jaques Wagner,PT,BA,4,29
+677,Roberto Rocha,PSDB,MA,4,26
+739,Ciro Nogueira,PP,PI,4,5
+742,Marcelo Castro,MDB,PI,4,13
+751,Arolde de Oliveira,PSD,RJ,4,15
+825,Paulo Paim,PT,RS,4,44
+945,Alvaro Dias,PODE,PR,4,26
+1023,Maria do Carmo Alves,DEM,SE,4,16
+1173,Wellington Fagundes,PL,MT,4,12
+1186,Luis Carlos Heinze,PP,RS,4,13
+1249,Kátia Abreu,PDT,TO,4,13
+2331,Rose de Freitas,PODE,ES,4,28
+3361,José Maranhão,MDB,PB,4,4
+3396,Tasso Jereissati,PSDB,CE,4,16
+3777,Eduardo Gomes,MDB,TO,4,16
+3806,Zequinha Marinho,PSC,PA,4,21
+3830,Davi Alcolumbre,DEM,AP,4,4
+4531,Jayme Campos,DEM,MT,4,8
+4545,Jarbas Vasconcelos,MDB,PE,4,1
+4560,Sérgio Petecão,PSD,AC,4,3
+4770,Izalci Lucas,PSDB,DF,4,20
+4981,Acir Gurgacz,PDT,RO,4,6
+4994,Eduardo Braga,MDB,AM,4,29
+5008,Humberto Costa,PT,PE,4,34
+5012,Randolfe Rodrigues,REDE,AP,4,37
+5236,Reguffe,S/Partido,DF,4,12
+5322,Romário,PODE,RJ,4,25
+5350,Jorginho Mello,PL,SC,4,19
+5352,Rogério Carvalho,PT,SE,4,22
+5376,Mara Gabrilli,PSDB,SP,4,18
+5385,Irajá,PSD,TO,4,16
+5411,Weverton,PDT,MA,4,18
+5422,Marcos Rogério,DEM,RO,4,13
+5502,Plínio Valério,PSDB,AM,4,27
+5523,Otto Alencar,PSD,BA,4,29
+5525,Omar Aziz,PSD,AM,4,16
+5527,Simone Tebet,MDB,MS,4,11
+5529,Antonio Anastasia,PSDB,MG,4,30
+5531,Elmano Férrer,PODE,PI,4,21
+5533,Lasier Martins,PODE,RS,4,29
+5535,Telmário Mota,PROS,RR,4,11
+5537,Dário Berger,MDB,SC,4,4
+5540,Fernando Bezerra Coelho,MDB,PE,4,11
+5557,Mailza Gomes,PP,AC,4,18
+5561,Renilde Bulhões,PROS,AL,4,11
+5585,Luiz Carlos do Carmo,MDB,GO,4,17
+5627,Jean-Paul Prates,PT,RN,4,37
+5666,Major Olimpio,PSL,SP,4,17
+5718,Eliziane Gama,CIDADANIA,MA,4,26
+5732,Rodrigo Pacheco,DEM,MG,4,19
+5748,Veneziano Vital do Rêgo,PSB,PB,4,33
+5783,Zenaide Maia,PROS,RN,4,25
+5894,Flávio Bolsonaro,PSL,RJ,4,10
+5895,Jorge Kajuru,PSB,GO,4,28
+5899,Vanderlan Cardoso,PP,GO,4,11
+5905,Rodrigo Cunha,PSDB,AL,4,10
+5924,Oriovisto Guimarães,PODE,PR,4,8
+5926,Lucas Barreto,PSD,AP,4,21
+5929,Juíza Selma,PSL,MT,4,19
+5942,Marcos do Val,CIDADANIA,ES,4,21
+5953,Fabiano Contarato,REDE,ES,4,34
+5959,Styvenson Valentim,PODE,RN,4,43
+5967,Angelo Coronel,PSD,BA,4,16
+5973,Cid Gomes,PDT,CE,4,11
+5976,Eduardo Girão,PODE,CE,4,40
+5979,Leila Barros,PSB,DF,4,28
+5982,Alessandro Vieira,CIDADANIA,SE,4,31
+5985,Nelsinho Trad,PSD,MS,4,32
+5988,Soraya Thronicke,PSL,MS,4,16
+5990,Carlos Viana,PSD,MG,4,17
+5998,Daniella Ribeiro,PP,PB,4,13
+6027,Mecias de Jesus,REPUBLICANOS,RR,4,13

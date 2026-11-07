@@ -1,0 +1,12 @@
+id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6508,2022-03-08,278276,DOR,608730,PLS 47/2012,PLS,0,A,78,0,0,Votação nominal
+6509,2022-03-09,279138,DOR,7822913,PLP 235/2019,PLP,0,A,74,0,0,"Votação nominal da Emenda nº 28 (Substitutivo) ao Projeto de Lei Complementar nº 235, de 2019, nos termos do Parecer."
+6510,2022-03-10,279470,DEX,8063519,PL 1472/2021,PL,0,A,61,8,0,"Emenda nº 38 (Substitutivo) ao Projeto de Lei nº 1.472, de 2021, nos termos do Parecer."
+6511,2022-03-10,279470,DEX,8151377,PLP 11/2020,PLP,0,A,68,1,1,"Votação nominal da Emenda nº 26 (Substitutivo) ao Projeto de Lei Complementar nº 11, de 2020, nos termos do Parecer."
+6512,2022-03-10,279470,DEX,8151377,PLP 11/2020,PLP,0,A,56,8,0,"Votação nominal dos Arts. 8º e 9º do Substitutivo do Relator ao Projeto de Lei Complementar nº 11, de 2020, destacados."
+6513,2022-03-15,280400,DOR,8208438,PLP 73/2021 (Substitutivo-CD),PLP,0,A,74,0,1,"Votação nominal do Substitutivo da Câmara dos Deputados ao PLP nº 73, de 2021, nos termos do Parecer."
+6514,2022-03-16,280726,DOR,8023963,PL 520/2021,PL,0,A,76,0,0,"Votação nominal do Projeto de Lei nº 520, de 2021, nos termos do Parecer."
+6515,2022-03-22,282237,DOR,8109014,PL 1360/2021,PL,0,A,76,0,0,Votação nominal do PL 1.360/2021.
+6516,2022-03-23,282538,DOR,8207584,PL 1518/2021,PL,0,A,74,0,1,"Votação nominal do PL 1.518, de 2021."
+6517,2022-03-29,283314,DOR,7847339,PL 6554/2019 (Substitutivo-CD),PL,0,A,71,0,0,"Votação nominal do Projeto de Lei nº 6.554, de 2019 (Substitutivo da CD ao PLS nº 374/2014), nos termos do Parecer."
+6518,2022-03-30,283550,DOR,7220558,PLC 115/2017,PLC,0,A,70,0,1,"Votação nominal do Projeto de Lei da Câmara nº 115, de 2017, nos termos do Parecer."

@@ -34,13 +34,14 @@ export function legislatura(month) {
   return Math.floor((y - (m === 1 ? 1 : 0) - 1795) / 4);
 }
 
-/** Deputies x votações matrix of +1/-1/0, lopsided votes and inactive deputies dropped. */
-export function voteMatrix(votes, { lop = DEFAULTS.lop, obstructionAsNo = DEFAULTS.obstructionAsNo } = {}) {
+/** Members x votações matrix of +1/-1/0, lopsided votes and inactive members dropped.
+ *  `member` names the legislator column: deputado_id (Câmara), senador_id (Senado). */
+export function voteMatrix(votes, { lop = DEFAULTS.lop, obstructionAsNo = DEFAULTS.obstructionAsNo, member = "deputado_id" } = {}) {
   const sign = (v) => (v === "Sim" ? 1 : v === "Não" || (obstructionAsNo && v === "Obstrução") ? -1 : 0);
   const rows = [];
   for (const r of votes) {
     const s = sign(r.voto);
-    if (s) rows.push([+r.deputado_id, r.votacao_id, s]);
+    if (s) rows.push([+r[member], r.votacao_id, s]);
   }
   const ids = [...new Set(rows.map((r) => r[0]))].sort((a, b) => a - b);
   const cols = [...new Set(rows.map((r) => r[1]))];
@@ -84,16 +85,19 @@ export function covote(vm, { minShared = DEFAULTS.minShared } = {}) {
   return { nodes, u, v: w, shared, agree };
 }
 
-/** Co-signing pairs: n_items and Newman weight sum(1/(k-1)). */
-export function cosponsor(authorship, { maxAuthors = DEFAULTS.maxAuthors, types = null, exclude = DEFAULTS.exclude } = {}) {
+/** Co-signing pairs: n_items and Newman weight sum(1/(k-1)). `item` names the bill column. */
+export function cosponsor(authorship, {
+  maxAuthors = DEFAULTS.maxAuthors, types = null, exclude = DEFAULTS.exclude,
+  member = "deputado_id", item = "proposicao_id",
+} = {}) {
   const ex = new Set(exclude || []), only = types ? new Set(types) : null;
   const items = new Map(), signers = new Set();
   for (const r of authorship) {
     if ((only && !only.has(r.sigla_tipo)) || ex.has(r.sigla_tipo)) continue;
-    const d = +r.deputado_id;
+    const d = +r[member];
     signers.add(d);
-    let s = items.get(r.proposicao_id);
-    if (!s) items.set(r.proposicao_id, (s = []));
+    let s = items.get(r[item]);
+    if (!s) items.set(r[item], (s = []));
     s.push(d);
   }
   const pairs = new Map();
@@ -186,7 +190,8 @@ export function pca2(vm, nodeIds, partyOf = () => "") {
   return P;
 }
 
-/** The counts data/index.csv records for a month, under default parameters. */
+/** The counts a chamber's index.csv records for a month, under default parameters
+ *  (plus `member` and `item` for a chamber other than the Câmara). */
 export function monthSummary(votes, authorship, p = DEFAULTS) {
   const vm = voteMatrix(votes, p);
   const cv = covote(vm, p);

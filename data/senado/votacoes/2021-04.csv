@@ -1,0 +1,13 @@
+id,data,sessao,tipo_sessao,processo_id,materia,sigla,secreta,resultado,votos_sim,votos_nao,votos_abstencao,descricao
+6299,2021-04-06,220831,SDR,7797281,PL 4815/2019,PL,0,A,75,0,0,Votação nominal
+6300,2021-04-06,220831,SDR,7920890,PL 2981/2020,PL,0,R,24,48,0,"Votação nominal da Emenda nº 1, destacada."
+6301,2021-04-07,221390,SDR,7903055,PL 2083/2020,PL,0,A,73,0,0,Votação nominal.
+6302,2021-04-08,221769,SDR,8053240,PEC 4/2021,PEC,0,A,75,0,0,"Votação da PEC 4/2021, em primeiro turno."
+6303,2021-04-08,221769,SDR,8053240,PEC 4/2021,PEC,0,A,75,0,0,"Votação da PEC 4/2021, em segundo turno."
+6304,2021-04-13,222254,SDR,8056950,PLP 10/2021 (Substitutivo-CD),PLP,0,A,74,0,0,"Votação nominal do Substitutivo da Câmara dos Deputados ao Projeto de Lei Complementar nº 10, de 2021"
+6305,2021-04-14,222759,SDR,8044480,PRS 16/2021,PRS,0,R,25,46,0,"Votação da Emenda nº 1, destacada."
+6306,2021-04-14,222759,SDR,8047804,PLP 30/2021,PLP,0,A,71,3,1,Votação do PLP 30/2021.
+6307,2021-04-15,223329,SDR,7850047,PL 4348/2019,PL,0,A,64,6,0,"Aprovada a Emenda nº 6 - PLEN (Substitutivo) do Relator ao Projeto de Lei nº 4.348, de 2019 (Altera a legislação que regulamenta a regularização fundiária das ocupações incidentes em terras situadas em áreas de domínio da União ou do Instituto Nacional de Colonização e Reforma Agrária, inclusive em áreas rurais fora da Amazônia Legal.)"
+6308,2021-04-27,225089,SDR,8060525,PL 1343/2021,PL,0,A,75,0,0,Votação nominal
+6309,2021-04-28,225524,SDR,7723430,PDL 50/2019,PDL,0,A,76,0,0,Votação nominal do PDL 50/2019.
+6310,2021-04-29,225856,SDR,8017735,PL 12/2021,PL,0,A,55,19,0,"Votação da Emenda nº 3 - PLEN (Substitutivo) ao Projeto de Lei nº 12, de 2021, nos termos do Parecer (Suspende a obrigação do Brasil de cumprir as seções do Acordo sobre os Aspectos dos Direitos de Propriedade Intelectual Relacionados ao Comércio (TRIPS) que dispõem sobre direito do autor, desenhos industriais, patentes e proteção de informação confidencial, para o combate da Covid-19)."

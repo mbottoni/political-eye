@@ -8,6 +8,7 @@
 }
 body { overflow-x: clip; font-family: var(--sans); font-feature-settings: "cv11", "ss01"; -webkit-font-smoothing: antialiased; }
 .wrap, main.hub { max-width: 1180px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.top .wrap { max-width: 1180px; }
 main.hub { padding-top: 0; padding-bottom: 64px; }
 a { text-underline-offset: 2px; }
 :focus-visible { outline: 2px solid var(--line); outline-offset: 2px; border-radius: 6px; }
@@ -15,17 +16,9 @@ a { text-underline-offset: 2px; }
 .skip:focus { left: 8px; }
 
 /* ------------------------------------------------------------ top bar */
-.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--page) 82%, transparent); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--border); }
-.top .wrap { display: flex; align-items: center; gap: 24px; height: 60px; }
-.brand { display: inline-flex; align-items: center; gap: 9px; font-weight: 680; font-size: 16px; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
-.brand svg { width: 26px; height: 26px; }
 .nav { display: flex; gap: 4px; margin-left: auto; }
 .nav a { color: var(--ink2); text-decoration: none; font-size: 14px; padding: 6px 10px; border-radius: 8px; }
 .nav a:hover { color: var(--ink); background: var(--surface); }
-.lang { display: inline-flex; padding: 3px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
-.lang button { all: unset; cursor: pointer; font-size: 12px; font-weight: 650; letter-spacing: 0.04em; padding: 4px 10px; border-radius: 999px; color: var(--muted); }
-.lang button[aria-pressed="true"] { background: var(--ink); color: var(--page); }
-.lang button:focus-visible { outline: 2px solid var(--line); outline-offset: 1px; }
 
 /* ------------------------------------------------------------ hero */
 .hero { position: relative; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: 48px; align-items: center; padding: 64px 0 56px; }

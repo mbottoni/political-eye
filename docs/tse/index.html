@@ -1,27 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Campaign Finance · political-eye</title>
-<meta name="description" content="Where the money of candidates in Brazil's 2018, 2022 and 2026 general elections came from and went to: public funds, parties, women and Black candidates, large donors and suppliers.">
+<title data-en="Campaign finance · political-eye">Financiamento de campanha · political-eye</title>
+<meta name="description" content="De onde veio e para onde foi o dinheiro dos candidatos nas eleições gerais de 2018, 2022 e 2026 no Brasil: fundos públicos, partidos, mulheres e candidatos negros, grandes doadores e fornecedores." data-en-content="Where the money of candidates in Brazil's 2018, 2022 and 2026 general elections came from and went to: public funds, parties, women and Black candidates, large donors and suppliers.">
 <link rel="stylesheet" href="../lib/site.css">
 </head>
 <body>
 <main>
   <header>
-    <p class="crumb"><a href="../">political-eye</a> / Campaign finance</p>
-    <h1>Campaign finance</h1>
-    <p>Companies have not been allowed to fund Brazilian campaigns since 2015. A candidate's money now comes mostly from public funds that party leaderships hand out, plus private individuals and the candidate's own pocket. This page follows that money in the 2018, 2022 and 2026 general elections: what each office raised and from where, how parties split their public money, whether women and Black candidates got their legal share, how money relates to winning, who the large donors are and whom campaigns paid. From the candidates' accounts published by the electoral court (TSE), refreshed weekly.</p>
+    <p class="crumb"><a href="../">political-eye</a> / Financiamento de campanha</p>
+    <h1 data-en="Campaign finance">Financiamento de campanha</h1>
+    <p data-en="Companies have not been allowed to fund Brazilian campaigns since 2015. A candidate's money now comes mostly from public funds that party leaderships hand out, plus private individuals and the candidate's own pocket. This page follows that money in the 2018, 2022 and 2026 general elections: what each office raised and from where, how parties split their public money, whether women and Black candidates got their legal share, how money relates to winning, who the large donors are and whom campaigns paid. From the candidates' accounts published by the electoral court (TSE), refreshed weekly.">Desde 2015, empresas não podem financiar campanhas no Brasil. Hoje o dinheiro de um candidato vem sobretudo de fundos públicos distribuídos pelas direções partidárias, além de doações de pessoas físicas e do próprio bolso. Esta página segue esse dinheiro nas eleições gerais de 2018, 2022 e 2026: quanto cada cargo arrecadou e de onde, como os partidos dividiram o dinheiro público, se mulheres e candidatos negros receberam a parcela que a lei garante, como o dinheiro se relaciona com a vitória, quem são os grandes doadores e a quem as campanhas pagaram. Com base nas prestações de contas dos candidatos publicadas pelo Tribunal Superior Eleitoral (TSE), atualizadas toda semana.</p>
   </header>
   <div class="controls" id="election"></div>
   <nav class="tabs">
-    <button data-tab="overview">Overview</button>
-    <button data-tab="parties">Parties</button>
-    <button data-tab="equity">Women and Black candidates</button>
-    <button data-tab="results">Money and results</button>
-    <button data-tab="donors">Donors</button>
-    <button data-tab="suppliers">Suppliers</button>
+    <button data-tab="overview" data-en="Overview">Visão geral</button>
+    <button data-tab="parties" data-en="Parties">Partidos</button>
+    <button data-tab="equity" data-en="Women and Black candidates">Mulheres e candidatos negros</button>
+    <button data-tab="results" data-en="Money and results">Dinheiro e resultado</button>
+    <button data-tab="donors" data-en="Donors">Doadores</button>
+    <button data-tab="suppliers" data-en="Suppliers">Fornecedores</button>
   </nav>
   <section id="tab-overview" role="tabpanel"></section>
   <section id="tab-parties" role="tabpanel" hidden></section>
@@ -29,11 +29,11 @@
   <section id="tab-results" role="tabpanel" hidden></section>
   <section id="tab-donors" role="tabpanel" hidden></section>
   <section id="tab-suppliers" role="tabpanel" hidden></section>
-  <footer>
-    Money is what candidates declared they received, in reais of the election year. Public money means the Special Campaign Fund (FEFC) plus the Party Fund. "Black" follows the law's usage: candidates who declared themselves preta or parda. Incumbents are federal deputies who sat in the Câmara during the legislature that ends with the election, matched through the politicians crosswalk. The latest election's accounts are still being filed and judged, so its numbers change from week to week. Private donors are named only from R$50,000 in all, with their CPF masked; smaller donors appear only as counts. Rules and gaps: <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/tse.md">methodology/tse.md</a>. Source: Tribunal Superior Eleitoral (TSE).
+  <footer data-en-html="Money is what candidates declared they received, in reais of the election year. Public money means the Special Campaign Fund (FEFC) plus the Party Fund. &quot;Black&quot; follows the law's usage: candidates who declared themselves preta or parda. Incumbents are federal deputies who sat in the Câmara during the legislature that ends with the election, matched through the politicians crosswalk. The latest election's accounts are still being filed and judged, so its numbers change from week to week. Private donors are named only from R$50,000 in all, with their CPF masked; smaller donors appear only as counts. Rules and gaps: <a href=&quot;https://github.com/mbottoni/political-eye/blob/main/methodology/tse.md&quot;>methodology/tse.md</a>. Source: Tribunal Superior Eleitoral (TSE).">
+    Os valores são o que os candidatos declararam ter recebido, em reais do ano da eleição. Dinheiro público é a soma do Fundo Especial de Financiamento de Campanha (FEFC) com o Fundo Partidário. "Negros" segue o uso da lei: candidatos que se declararam pretos ou pardos. Deputados em exercício são os deputados federais que tiveram mandato na Câmara durante a legislatura que termina com a eleição, identificados pela tabela de correspondência de políticos. As contas da eleição mais recente ainda estão sendo entregues e julgadas, por isso os números mudam de uma semana para outra. Doadores pessoas físicas só são nomeados a partir de R$ 50 mil no total, com o CPF mascarado; os demais aparecem apenas em contagens. Regras e lacunas: <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/tse.md">methodology/tse.md</a>. Fonte: Tribunal Superior Eleitoral (TSE).
   </footer>
 </main>
-<noscript>This page needs JavaScript. The data is at <a href="https://github.com/mbottoni/political-eye/tree/main/data/tse">github.com/mbottoni/political-eye</a>.</noscript>
+<noscript>Esta página precisa de JavaScript. Os dados estão em <a href="https://github.com/mbottoni/political-eye/tree/main/data/tse">github.com/mbottoni/political-eye</a>.</noscript>
 <script type="module" src="app.js"></script>
 </body>
 </html>

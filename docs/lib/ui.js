@@ -1,5 +1,6 @@
 // political-eye: shared helpers for every explorer page (no dependencies).
 import { parseCSV } from "../camara/core.js";
+import { L, lang } from "./i18n.js";
 
 export { parseCSV };
 
@@ -34,19 +35,25 @@ export const $$ = (s, root = document) => [...root.querySelectorAll(s)];
 export const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 export const isDark = () => css("--is-dark") === "1";
 
-export const fmt = (x, d = 0) => (x == null || Number.isNaN(+x) ? "–" : (+x).toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: d }));
-export const pct = (x, d = 0) => (x == null || x === "" || Number.isNaN(+x) ? "–" : `${(100 * x).toFixed(d)}%`);
+// Numbers follow the page's language (lib/i18n.js): 1.234,5 in Portuguese, 1,234.5 in English.
+export const fmt = (x, d = 0) => (x == null || Number.isNaN(+x) ? "–"
+  : (Math.abs(+x) < 0.5 * 10 ** -d ? 0 : +x).toLocaleString(lang() === "en" ? "en-US" : "pt-BR", { maximumFractionDigits: d, minimumFractionDigits: d }));   // no "-0,0"
+export const pct = (x, d = 0) => (x == null || x === "" || Number.isNaN(+x) ? "–" : `${fmt(100 * x, d)}%`);
 export const plural = (n, word, many = `${word}s`) => `${fmt(n)} ${n === 1 ? word : many}`;
 
-/** R$ with a scale word: brl(1.23e9) -> "R$ 1.23 bn". */
+/** R$ with a scale word: brl(1.23e9) -> "R$ 1,23 bi" (Portuguese) / "R$ 1.23 bn" (English). */
 export function brl(x, digits = 2) {
   if (x == null || x === "" || Number.isNaN(+x)) return "–";
   const v = +x, a = Math.abs(v), s = v < 0 ? "−" : "";
-  const [d, w] = a >= 1e12 ? [1e12, " tn"] : a >= 1e9 ? [1e9, " bn"] : a >= 1e6 ? [1e6, " M"] : a >= 1e3 ? [1e3, " k"] : [1, ""];
-  const n = a / d, whole = Math.abs(n - Math.round(n)) < 1e-6;
+  const u = lang() === "en" ? [" tn", " bn", " M", " k"] : [" tri", " bi", " mi", " mil"];
+  const scale = (a) => (a >= 1e12 ? [1e12, u[0]] : a >= 1e9 ? [1e9, u[1]] : a >= 1e6 ? [1e6, u[2]] : a >= 1e3 ? [1e3, u[3]] : [1, ""]);
   // digits=0 (axis ticks, rough labels): whole numbers stay whole, R$ 1.5 bn keeps its decimal so ticks never repeat.
-  const dd = d === 1 ? 0 : n >= 100 ? 0 : n >= 10 ? (digits === 0 && whole ? 0 : 1) : digits === 0 ? (whole ? 0 : 1) : digits;
-  return `${s}R$\u00a0${n.toFixed(dd)}${w.replace(" ", "\u00a0")}`;   // non-breaking: "R$ 151 M" never wraps
+  const places = (n, d) => { const whole = Math.abs(n - Math.round(n)) < 1e-6; return d === 1 ? 0 : n >= 100 ? 0 : n >= 10 ? (digits === 0 && whole ? 0 : 1) : digits === 0 ? (whole ? 0 : 1) : digits; };
+  let [d, w] = scale(a), n = a / d, dd = places(n, d);
+  // Rounding can carry over: 99.97 M is "100 M", not "100.0 M"; 999.7 M is "1.0 bn", not "1000 M".
+  const r = +n.toFixed(dd);
+  if (r >= 1000 && d < 1e12) { [d, w] = scale(a * 1.001); n = a / d; dd = places(n, d); } else if (r >= 100 && dd) dd = 0;
+  return `${s}R$\u00a0${fmt(n, dd)}${w.replace(" ", "\u00a0")}`;   // non-breaking: "R$ 151 M" never wraps
 }
 
 export function el(tag, props = {}, ...kids) {
@@ -139,9 +146,9 @@ export function tiles(box, items) {
 export function table(box, rows, cols, { pageSize = 25, search = true, sortBy = null, desc = true, name = "table" } = {}) {
   let q = "", key = sortBy, down = desc, page = 0;
   const wrap = el("div", { className: "tablewrap" }), bar = el("div", { className: "tablebar" });
-  const input = search ? el("input", { type: "search", placeholder: "Filter…", "aria-label": "Filter rows" }) : null;
-  const info = el("span"), prev = el("button", { type: "button", textContent: "Previous" }), next = el("button", { type: "button", textContent: "Next" });
-  const dl = el("button", { type: "button", textContent: "Download CSV" });
+  const input = search ? el("input", { type: "search", placeholder: L("Filtrar…", "Filter…"), "aria-label": L("Filtrar linhas", "Filter rows") }) : null;
+  const info = el("span"), prev = el("button", { type: "button", textContent: L("Anterior", "Previous") }), next = el("button", { type: "button", textContent: L("Próxima", "Next") });
+  const dl = el("button", { type: "button", textContent: L("Baixar CSV", "Download CSV") });
   const value = (r, c) => (c.sort ? c.sort(r) : r[c.key]);
   const filtered = () => {
     let out = rows;
@@ -174,7 +181,7 @@ export function table(box, rows, cols, { pageSize = 25, search = true, sortBy = 
     }
     t.append(body);
     wrap.replaceChildren(t);
-    info.textContent = all.length ? `${fmt(page * pageSize + 1)}–${fmt(Math.min(all.length, (page + 1) * pageSize))} of ${fmt(all.length)}` : "No rows";
+    info.textContent = all.length ? `${fmt(page * pageSize + 1)}–${fmt(Math.min(all.length, (page + 1) * pageSize))} ${L("de", "of")} ${fmt(all.length)}` : L("Nenhuma linha", "No rows");
     prev.disabled = page === 0; next.disabled = page >= pages - 1;
   };
   prev.addEventListener("click", () => { page--; render(); });
@@ -196,7 +203,7 @@ export function table(box, rows, cols, { pageSize = 25, search = true, sortBy = 
 export async function guard(box, f) {
   try { return await f(); } catch (e) {
     console.error(e);
-    box.append(el("p", { className: "error", textContent: `Could not load this section: ${e.message}` }));
+    box.append(el("p", { className: "error", textContent: `${L("Não foi possível carregar esta seção", "Could not load this section")}: ${e.message}` }));
   }
 }
 

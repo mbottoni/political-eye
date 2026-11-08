@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Municipal Finances · political-eye</title>
-<meta name="description" content="Which Brazilian towns break the legal limits on payroll spending, which end the year without free cash, how amendments relate to fiscal stress, and towns compared by their mayor's party.">
+<title data-en="Municipal finances · political-eye">Finanças municipais · political-eye</title>
+<meta name="description" content="Quais municípios brasileiros ultrapassam os limites legais de despesa com pessoal, quais fecham o ano sem caixa livre, como as emendas se relacionam com o aperto fiscal e como os municípios se comparam pelo partido do prefeito." data-en-content="Which Brazilian towns break the legal limits on payroll spending, which end the year without free cash, how amendments relate to fiscal stress, and towns compared by their mayor's party.">
 <link rel="stylesheet" href="../lib/site.css">
 <style>
   .nowrap { white-space: nowrap; }
@@ -21,19 +21,19 @@
 <body>
 <main>
   <header>
-    <p class="crumb"><a href="../">political-eye</a> / Municipal finances</p>
-    <h1>Municipal finances</h1>
-    <p>The Fiscal Responsibility Law caps what a town may spend on payroll at 54% of its net current revenue. Above 51.3% (the prudential limit) it may not hire or give raises, and above 48.6% the audit court sends an alert. These pages show which of Brazil's 5,570 towns break each limit and how many end the year without free cash. They also show whether "Pix" amendments go to towns in trouble, and how towns compare by their mayor's party. The source is each town's own fiscal reports on the Tesouro Nacional's Siconfi, read year by year back to 2015. That history is still being read, so every figure says how many towns it covers.</p>
+    <p class="crumb"><a href="../">political-eye</a> / Finanças municipais</p>
+    <h1 data-en="Municipal finances">Finanças municipais</h1>
+    <p data-en="The Fiscal Responsibility Law caps what a town may spend on payroll at 54% of its net current revenue. Above 51.3% (the prudential limit) it may not hire or give raises, and above 48.6% the audit court sends an alert. These pages show which of Brazil's 5,570 towns break each limit and how many end the year without free cash. They also show whether &quot;Pix&quot; amendments go to towns in trouble, and how towns compare by their mayor's party. The source is each town's own fiscal reports on the Tesouro Nacional's Siconfi, read year by year back to 2015. That history is still being read, so every figure says how many towns it covers.">A Lei de Responsabilidade Fiscal limita a despesa com pessoal de um município a 54% de sua receita corrente líquida (RCL). Acima de 51,3% (o limite prudencial), ele não pode contratar nem dar reajustes, e acima de 48,6% o tribunal de contas emite um alerta. Estas páginas mostram quais dos 5.570 municípios do Brasil ultrapassam cada limite e quantos fecham o ano sem caixa livre. Mostram também se as transferências especiais (as "emendas Pix") vão para municípios em dificuldade e como os municípios se comparam pelo partido do prefeito. A fonte são os relatórios fiscais de cada município no Siconfi, do Tesouro Nacional, lidos ano a ano desde 2015. Esse histórico ainda está sendo lido, por isso cada número informa quantos municípios cobre.</p>
   </header>
   <div id="coverage"></div>
   <nav class="tabs">
-    <button data-tab="overview">Overview</button>
-    <button data-tab="map">Map</button>
-    <button data-tab="dist">Distribution</button>
-    <button data-tab="cash">Cash</button>
-    <button data-tab="parties">Mayors' parties</button>
-    <button data-tab="pix">Amendments</button>
-    <button data-tab="town">A town</button>
+    <button data-tab="overview" data-en="Overview">Visão geral</button>
+    <button data-tab="map" data-en="Map">Mapa</button>
+    <button data-tab="dist" data-en="Distribution">Distribuição</button>
+    <button data-tab="cash" data-en="Cash">Caixa</button>
+    <button data-tab="parties" data-en="Mayors' parties">Partidos dos prefeitos</button>
+    <button data-tab="pix" data-en="Amendments">Emendas</button>
+    <button data-tab="town" data-en="A town">Um município</button>
   </nav>
   <section id="tab-overview" role="tabpanel"></section>
   <section id="tab-map" role="tabpanel" hidden></section>
@@ -42,11 +42,11 @@
   <section id="tab-parties" role="tabpanel" hidden></section>
   <section id="tab-pix" role="tabpanel" hidden></section>
   <section id="tab-town" role="tabpanel" hidden></section>
-  <footer>
-    Values are as each town declared them. Payroll is the twelve months to the year's last report read (RGF Annex 01), over adjusted net current revenue; cash is unrestricted net cash at year end, after commitments carried over (Annex 05). A year's last report may still be the second four-month period for the current year. Mayors are TSE's elected candidates; each year is attributed to the mayor then in office, and merged or renamed parties are counted under today's name. Every rule is in <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/siconfi.md#the-explorer-page">methodology/siconfi.md</a>. Sources: Tesouro Nacional (Siconfi), Portal da Transparência, TSE.
+  <footer data-en-html="Values are as each town declared them. Payroll is the twelve months to the year's last report read (RGF Annex 01), over adjusted net current revenue; cash is unrestricted net cash at year end, after commitments carried over (Annex 05). A year's last report may still be the second four-month period for the current year. Mayors are TSE's elected candidates; each year is attributed to the mayor then in office, and merged or renamed parties are counted under today's name. Every rule is in <a href=&quot;https://github.com/mbottoni/political-eye/blob/main/methodology/siconfi.md#the-explorer-page&quot;>methodology/siconfi.md</a>. Sources: Tesouro Nacional (Siconfi), Portal da Transparência, TSE.">
+    Os valores são os declarados por cada município. A despesa com pessoal é a dos doze meses até o último relatório lido do ano (RGF, Anexo 01), sobre a receita corrente líquida ajustada; o caixa é a disponibilidade de caixa líquida sem vinculação no fim do ano, depois dos restos a pagar (Anexo 05). No ano corrente, o último relatório pode ainda ser o do segundo quadrimestre. Os prefeitos são os candidatos eleitos segundo o TSE; cada ano é atribuído ao prefeito então no cargo, e partidos fundidos ou renomeados contam com o nome atual. Todas as regras estão em <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/siconfi.md#the-explorer-page">methodology/siconfi.md</a>. Fontes: Tesouro Nacional (Siconfi), Portal da Transparência, TSE.
   </footer>
 </main>
-<noscript>This page needs JavaScript. The data is at <a href="https://github.com/mbottoni/political-eye/tree/main/data/siconfi">github.com/mbottoni/political-eye</a>.</noscript>
+<noscript>Esta página precisa de JavaScript. Os dados estão em <a href="https://github.com/mbottoni/political-eye/tree/main/data/siconfi">github.com/mbottoni/political-eye</a>.</noscript>
 <script type="module" src="app.js"></script>
 </body>
 </html>

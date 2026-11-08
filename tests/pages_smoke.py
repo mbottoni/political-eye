@@ -53,7 +53,7 @@ def main() -> int:
         out = subprocess.run([chrome(), "--headless=new", "--disable-gpu", "--no-sandbox", "--virtual-time-budget=60000",
                               "--dump-dom", f"http://localhost:{port}/{page}"], capture_output=True, text=True, timeout=180).stdout
         out = re.sub(r"<script.*?</script>", "", out, flags=re.S)   # the page's code mentions its own error texts
-        problems = [m[:120] for m in re.findall(r"Could not load[^<]*", out)]
+        problems = [m[:120] for m in re.findall(r"(?:Could not load|Não foi possível carregar)[^<]*", out)]
         problems += [f"tile {m}" for m in re.findall(r'class="value"[^>]*>–<', out)]
         if len(out) < 2000:
             problems.append("almost empty page")

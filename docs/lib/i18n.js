@@ -5,8 +5,9 @@ export const LANGS = { pt: { label: "PT", name: "Português", tag: "pt-BR" }, en
 const KEY = "political-eye.lang";
 
 function initial() {
+  if (typeof location === "undefined") return "pt";   // Node (tests/*/parity.mjs import page modules)
   const q = new URLSearchParams(location.search).get("lang");
-  if (q in LANGS) return q;
+  if (q in LANGS) { try { localStorage.setItem(KEY, q); } catch { /* storage blocked */ } return q; }
   try { const s = localStorage.getItem(KEY); if (s in LANGS) return s; } catch { /* storage blocked */ }
   return "pt";
 }
@@ -27,7 +28,10 @@ export function setLang(l) {
   document.documentElement.lang = tag();
   window.dispatchEvent(new CustomEvent("langchange", { detail: l }));
 }
-document.documentElement.lang = tag();
+if (typeof document !== "undefined") document.documentElement.lang = tag();
+
+/** Inline text in both languages: L("Contratos públicos", "Public contracts"). */
+export const L = (pt, en) => (current === "en" ? en : pt);
 
 /** Pick this language's entry: tr({pt: "…", en: "…"}) or tr(dict, key) for dict = {pt: {key: …}, en: {key: …}}. */
 export function tr(x, key) {
@@ -62,7 +66,8 @@ export function month(ym) {
 }
 /** "2026-11-08T04:33:47Z" -> "8 de novembro de 2026" / "8 November 2026". */
 export function date(iso) {
-  const d = new Date(iso);
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);   // a plain day is that day where the reader is, not UTC midnight
+  const d = m ? new Date(+m[1], +m[2] - 1, +m[3]) : new Date(iso);
   return Number.isNaN(+d) ? "" : d.toLocaleDateString(tag(), { day: "numeric", month: "long", year: "numeric" });
 }
 
@@ -85,4 +90,22 @@ export function langSwitch() {
   window.addEventListener("langchange", sync);
   box.append(...buttons);
   return box;
+}
+
+// ------------------------------------------------------------ pages
+
+/**
+ * Static text: the HTML is written in Portuguese and carries the English beside it:
+ *   <h1 data-en="Public contracts">Contratos públicos</h1>          text
+ *   <p data-en-html="See <a href=…>…</a>">Veja <a href=…>…</a></p>    markup
+ *   <input placeholder="Buscar…" data-en-placeholder="Search…">        also data-en-title, data-en-aria-label
+ */
+export function applyStatic(root = document) {
+  if (current !== "en") return;
+  for (const e of root.querySelectorAll("[data-en]")) e.textContent = e.dataset.en;
+  for (const e of root.querySelectorAll("[data-en-html]")) e.innerHTML = e.dataset.enHtml;
+  for (const a of ["placeholder", "title", "aria-label", "content"]) {
+    const k = `en${a.split("-").map((w) => w[0].toUpperCase() + w.slice(1)).join("")}`;
+    for (const e of root.querySelectorAll(`[data-en-${a}]`)) e.setAttribute(a, e.dataset[k]);
+  }
 }

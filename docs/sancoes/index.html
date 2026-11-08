@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sanctions · political-eye</title>
-<meta name="description" content="Brazil's lists of companies barred from public contracts or punished for corruption (CEIS, CNEP, CEPIM, leniency agreements): who sanctions whom, for how long, and the public money sanctioned companies still receive.">
+<title data-en="Sanctions · political-eye">Sanções · political-eye</title>
+<meta name="description" content="As listas de empresas impedidas de contratar com o poder público ou punidas por corrupção no Brasil (CEIS, CNEP, CEPIM, acordos de leniência): quem sanciona quem, por quanto tempo, e o dinheiro público que as empresas sancionadas ainda recebem." data-en-content="Brazil's lists of companies barred from public contracts or punished for corruption (CEIS, CNEP, CEPIM, leniency agreements): who sanctions whom, for how long, and the public money sanctioned companies still receive.">
 <link rel="stylesheet" href="../lib/site.css">
 <style>
   .search-results { list-style: none; margin: 6px 0 0; padding: 0; max-width: 640px; }
@@ -29,21 +29,21 @@
 <body>
 <main>
   <header>
-    <p class="crumb"><a href="../">political-eye</a> / Sanctions</p>
-    <h1>Sanctions</h1>
-    <p>Who is barred from public contracts or punished for corruption in Brazil, by whom, and for how long. These pages also show what sanctioned companies still receive from the State. They cover the federal government's four lists: CEIS (barred and suspended companies and people), CNEP (penalties under the Anti-Corruption Law), CEPIM (non-profits barred from federal agreements) and the leniency agreements companies signed. CGU publishes each list as a daily snapshot and keeps no history, so political-eye records every day's version.</p>
+    <p class="crumb"><a href="../">political-eye</a> / Sanções</p>
+    <h1 data-en="Sanctions">Sanções</h1>
+    <p data-en="Who is barred from public contracts or punished for corruption in Brazil, by whom, and for how long. These pages also show what sanctioned companies still receive from the State. They cover the federal government's four lists: CEIS (barred and suspended companies and people), CNEP (penalties under the Anti-Corruption Law), CEPIM (non-profits barred from federal agreements) and the leniency agreements companies signed. CGU publishes each list as a daily snapshot and keeps no history, so political-eye records every day's version.">Quem está impedido de contratar com o poder público ou foi punido por corrupção no Brasil, por quem e por quanto tempo. Estas páginas mostram também o que as empresas sancionadas ainda recebem do Estado. Elas cobrem as quatro listas do governo federal: o CEIS (empresas e pessoas inidôneas, impedidas ou suspensas), o CNEP (punições pela Lei Anticorrupção), o CEPIM (entidades sem fins lucrativos impedidas de firmar convênios federais) e os acordos de leniência assinados por empresas. A CGU publica cada lista como uma captura diária e não guarda histórico; por isso o political-eye registra a versão de cada dia.</p>
   </header>
   <nav class="tabs">
-    <button data-tab="overview">Overview</button>
-    <button data-tab="who">Who sanctions</button>
-    <button data-tab="time">Duration and delays</button>
-    <button data-tab="repeat">Repeat offenders</button>
-    <button data-tab="fines">Fines</button>
-    <button data-tab="money">Public money</button>
-    <button data-tab="cepim">Non-profits</button>
-    <button data-tab="leniency">Leniency</button>
-    <button data-tab="changes">Changes</button>
-    <button data-tab="company">A company</button>
+    <button data-tab="overview" data-en="Overview">Visão geral</button>
+    <button data-tab="who" data-en="Who sanctions">Quem sanciona</button>
+    <button data-tab="time" data-en="Duration and delays">Duração e atrasos</button>
+    <button data-tab="repeat" data-en="Repeat offenders">Reincidentes</button>
+    <button data-tab="fines" data-en="Fines">Multas</button>
+    <button data-tab="money" data-en="Public money">Dinheiro público</button>
+    <button data-tab="cepim" data-en="Non-profits">Entidades</button>
+    <button data-tab="leniency" data-en="Leniency">Leniência</button>
+    <button data-tab="changes" data-en="Changes">Mudanças</button>
+    <button data-tab="company" data-en="A company">Uma empresa</button>
   </nav>
   <section id="tab-overview" role="tabpanel"></section>
   <section id="tab-who" role="tabpanel" hidden></section>
@@ -55,11 +55,11 @@
   <section id="tab-leniency" role="tabpanel" hidden></section>
   <section id="tab-changes" role="tabpanel" hidden></section>
   <section id="tab-company" role="tabpanel" hidden></section>
-  <footer>
-    The lists hold only sanctions still listed. A sanction that expired or was lifted has gone, so older years look smaller than they were, and a company's past is only what is still listed. Sanctioned people are counted but never named on these pages, and their CPF is masked in the data. Matching to contracts, amendments and campaign suppliers is by CNPJ, so only companies and organisations are matched. A match is not by itself an irregularity: most sanctions bind only part of the State. Every rule is in <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/sancoes.md#the-explorer-page">methodology/sancoes.md</a>. Sources: CGU (Portal da Transparência), PNCP, TSE.
+  <footer data-en-html="The lists hold only sanctions still listed. A sanction that expired or was lifted has gone, so older years look smaller than they were, and a company's past is only what is still listed. Sanctioned people are counted but never named on these pages, and their CPF is masked in the data. Matching to contracts, amendments and campaign suppliers is by CNPJ, so only companies and organisations are matched. A match is not by itself an irregularity: most sanctions bind only part of the State. Every rule is in <a href=&quot;https://github.com/mbottoni/political-eye/blob/main/methodology/sancoes.md#the-explorer-page&quot;>methodology/sancoes.md</a>. Sources: CGU (Portal da Transparência), PNCP, TSE.">
+    As listas trazem só as sanções ainda listadas. Uma sanção que venceu ou foi revogada some, então os anos mais antigos parecem menores do que foram, e o passado de uma empresa é só o que ainda está listado. As pessoas sancionadas são contadas, mas nunca nomeadas nestas páginas, e o CPF delas aparece mascarado nos dados. O cruzamento com contratos, emendas e fornecedores de campanha é feito pelo CNPJ, então só empresas e organizações são cruzadas. Um cruzamento não é, por si só, uma irregularidade: a maioria das sanções vale só para uma parte do Estado. Todas as regras estão em <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/sancoes.md#the-explorer-page">methodology/sancoes.md</a>. Fontes: CGU (Portal da Transparência), PNCP, TSE.
   </footer>
 </main>
-<noscript>This page needs JavaScript. The data is at <a href="https://github.com/mbottoni/political-eye/tree/main/data/sancoes">github.com/mbottoni/political-eye</a>.</noscript>
+<noscript>Esta página precisa de JavaScript. Os dados estão em <a href="https://github.com/mbottoni/political-eye/tree/main/data/sancoes">github.com/mbottoni/political-eye</a>.</noscript>
 <script type="module" src="app.js"></script>
 </body>
 </html>

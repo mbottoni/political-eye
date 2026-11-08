@@ -3,6 +3,10 @@
 // more series, and an optional "Show as table" view. Thin marks, recessive
 // axes, one y axis per chart (never two scales).
 import { $, css, el, fmt, hideTip, isDark, showTip, tipRow, table } from "./ui.js";
+import { L, lang } from "./i18n.js";
+
+// A plain number on an axis, in the page's language: 0,2 / 0.2; grouped only from 10 000 up, so years stay 2018.
+const axisNum = (v) => (+v).toLocaleString(lang() === "en" ? "en-US" : "pt-BR", { maximumFractionDigits: 3, useGrouping: Math.abs(+v) >= 10000 });
 
 const NS = "http://www.w3.org/2000/svg";
 export function svg(tag, attrs = {}) {
@@ -70,7 +74,7 @@ function xAccessor(type) {
     for (; d.getTime() <= hi; d.setUTCMonth(d.getUTCMonth() + every)) if (d.getTime() >= lo) out.push(d.getTime());
     return out;
   }, tick: (v) => new Date(v).toISOString().slice(0, 7) };
-  return { val: (v) => +v, label: (v) => String(v), ticks: (lo, hi, w) => niceTicks(lo, hi, Math.max(2, Math.floor(w / 80))), tick: (v) => String(v) };
+  return { val: (v) => +v, label: axisNum, ticks: (lo, hi, w) => niceTicks(lo, hi, Math.max(2, Math.floor(w / 80))), tick: axisNum };
 }
 
 /** Left margin that fits the widest y label (10px system sans: ~6px a character). */
@@ -85,10 +89,10 @@ function frame(box, height) {
 function addTableToggle(box, tbl) {
   if (!tbl) return;
   const holder = el("div", { hidden: true });
-  const btn = el("button", { className: "toggle", type: "button", textContent: "Show as table", "aria-expanded": "false" });
+  const btn = el("button", { className: "toggle", type: "button", textContent: L("Mostrar como tabela", "Show as table"), "aria-expanded": "false" });
   btn.addEventListener("click", () => {
     holder.hidden = !holder.hidden;
-    btn.textContent = holder.hidden ? "Show as table" : "Hide table";
+    btn.textContent = holder.hidden ? L("Mostrar como tabela", "Show as table") : L("Ocultar tabela", "Hide table");
     btn.setAttribute("aria-expanded", String(!holder.hidden));
     if (!holder.hidden && !holder.firstChild) table(holder, tbl.rows, tbl.cols, { pageSize: 15, name: tbl.name || "chart" });
   });
@@ -115,7 +119,7 @@ export function line(box, o) {
   const pts = o.series.flatMap((s) => [...s.points.filter((p) => p[1] != null),
     ...(s.band || []).filter((p) => p[1] != null).flatMap((p) => [[p[0], p[1]], [p[0], p[2]]])]);
   let ml = 48;
-  if (!pts.length) { box.append(el("p", { className: "empty", textContent: o.empty || "No data." })); return; }
+  if (!pts.length) { box.append(el("p", { className: "empty", textContent: o.empty || L("Sem dados.", "No data.") })); return; }
   const xs = pts.map((p) => X.val(p[0])), ys = pts.map((p) => +p[1]);
   const x0 = Math.min(...xs), x1 = Math.max(...xs);
   let y0 = o.y?.min ?? Math.min(0, ...ys), y1 = o.y?.max ?? Math.max(...ys);
@@ -128,9 +132,12 @@ export function line(box, o) {
   const sy = linear(y0, y1, H - mb, mt);
   const grid = css("--grid"), axis = css("--axis"), muted = css("--muted"), ink2 = css("--ink2");
   for (const b of o.bands || []) {
+    if (X.val(b.to) <= x0 || X.val(b.from) >= x1) continue;   // a band outside the axis draws nothing, label included
     const a = sx(X.val(b.from)), c = sx(X.val(b.to));
     s.append(svg("rect", { x: Math.max(ml, a), y: mt, width: Math.max(0, Math.min(w - mr, c) - Math.max(ml, a)), height: H - mt - mb, fill: grid, opacity: 0.6 }));
-    if (b.label) s.append(text(b.label, { x: Math.max(ml, a) + 4, y: mt + 11, "font-size": 10, fill: muted }));
+    // A label that would run past the right edge is drawn from the band's right end instead.
+    const over = b.label && Math.max(ml, a) + 4 + String(b.label).length * 5.8 > w - mr;
+    if (b.label) s.append(text(b.label, over ? { x: Math.min(w - mr, c) - 4, y: mt + 11, "text-anchor": "end", "font-size": 10, fill: muted } : { x: Math.max(ml, a) + 4, y: mt + 11, "font-size": 10, fill: muted }));
   }
   for (const v of yt) {
     s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(v), y2: sy(v), stroke: v === yt[0] && y0 === 0 ? axis : grid }));
@@ -141,7 +148,8 @@ export function line(box, o) {
     if (X.val(m.x) <= x0 || X.val(m.x) > x1) continue;   // a mark at or past the edge would sit on the axis
     const xv = sx(X.val(m.x));
     s.append(svg("line", { x1: xv, x2: xv, y1: mt, y2: H - mb, stroke: axis, "stroke-dasharray": "3 3" }));
-    if (m.label) s.append(text(m.label, { x: xv + 3, y: H - mb - 4, "font-size": 10, fill: muted }));
+    const over = m.label && xv + 3 + String(m.label).length * 5.8 > w - mr;
+    if (m.label) s.append(text(m.label, { x: over ? xv - 3 : xv + 3, y: H - mb - 4, "text-anchor": over ? "end" : "start", "font-size": 10, fill: muted }));
   }
   for (const r of o.ref || []) {
     s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(r.y), y2: sy(r.y), stroke: r.color || ink2, "stroke-dasharray": "4 3" }));
@@ -195,7 +203,7 @@ export function line(box, o) {
 /** bars(box, {rows: [{label, value, color?, note?, title?}], format, max, onClick, table}) - ranked horizontal bars. */
 export function bars(box, o) {
   box.replaceChildren();
-  if (!o.rows.length) { box.append(el("p", { className: "empty", textContent: o.empty || "No data." })); return; }
+  if (!o.rows.length) { box.append(el("p", { className: "empty", textContent: o.empty || L("Sem dados.", "No data.") })); return; }
   const bh = o.barHeight || 18, gap = 6, lw = Math.min(o.labelWidth || 180, (box.clientWidth || 600) * 0.42), vw = 70;
   const { w, s } = frame(box, o.rows.length * (bh + gap) + 4);
   const max = o.max ?? Math.max(...o.rows.map((r) => Math.abs(r.value)), 1e-9);
@@ -216,7 +224,7 @@ export function bars(box, o) {
     if (o.onClick) hit.addEventListener("click", () => o.onClick(r));
     s.append(hit);
   });
-  s.setAttribute("aria-label", o.title || "Ranked bars");
+  s.setAttribute("aria-label", o.title || L("Barras ordenadas", "Ranked bars"));
   box.append(s);
   legend(box, o.legend || []);
   addTableToggle(box, o.table);
@@ -252,13 +260,13 @@ export function stack(box, o) {
       const yTop = sy(acc + v), yBot = sy(acc);
       const r = svg("rect", { x: cx - bw / 2, y: yTop, width: bw, height: Math.max(0.5, yBot - yTop - (acc ? 2 : 0)), fill: se.color, stroke: surface, "stroke-width": 0 });
       r.addEventListener("pointermove", (ev) => showTip(ev, [el("strong", { textContent: `${lab} · ${se.name}` }),
-        tipRow(se.color, f(v), "", true), el("div", { className: "row", textContent: `${totals[i] ? ((100 * v) / totals[i]).toFixed(0) : 0}% of ${f(totals[i])}` })]));
+        tipRow(se.color, f(v), "", true), el("div", { className: "row", textContent: `${totals[i] ? ((100 * v) / totals[i]).toFixed(0) : 0}% ${L("de", "of")} ${f(totals[i])}` })]));
       r.addEventListener("pointerleave", hideTip);
       s.append(r);
       acc += v;
     });
   });
-  s.setAttribute("aria-label", o.title || "Stacked columns");
+  s.setAttribute("aria-label", o.title || L("Colunas empilhadas", "Stacked columns"));
   box.append(s);
   legend(box, o.series.map((x) => ({ label: x.name, color: x.color })));
   addTableToggle(box, o.table);
@@ -270,13 +278,24 @@ export function stack(box, o) {
 export function histogram(box, o) {
   box.replaceChildren();
   const vals = o.values.filter((v) => v != null && !Number.isNaN(v));
-  if (!vals.length) { box.append(el("p", { className: "empty", textContent: o.empty || "No data." })); return; }
-  const H = o.height || 220, ml = 44, mr = 10, mt = 18, mb = 30;
+  if (!vals.length) { box.append(el("p", { className: "empty", textContent: o.empty || L("Sem dados.", "No data.") })); return; }
+  const H = o.height || 220, ml = 44, mr = 10, mb = 30;
   const [lo, hi] = o.domain || [Math.min(...vals), Math.max(...vals)], nb = o.bins || 30, step = (hi - lo) / nb;
   const counts = new Array(nb).fill(0);
   for (const v of vals) counts[Math.min(nb - 1, Math.max(0, Math.floor((v - lo) / step)))]++;
   const { w, s } = frame(box, H);
-  const sx = linear(lo, hi, ml, w - mr), yt = upTo(Math.max(...counts), 4), sy = linear(0, yt[yt.length - 1], H - mb, mt);
+  const sx = linear(lo, hi, ml, w - mr);
+  // Reference labels go in rows above the plot, a new row only when a label would overlap the one before it.
+  const rows = [], placed = [...(o.refs || [])].sort((a, b) => a.x - b.x).map((r) => {
+    const x = sx(r.x), end = x > w * 0.8, width = String(r.label ?? "").length * 5.8 + 6;
+    const [a, b] = end ? [x - width, x] : [x, x + width];
+    let row = rows.findIndex((right) => a > right);
+    if (row < 0) { row = rows.length; rows.push(-Infinity); }
+    rows[row] = b;
+    return { r, x, end, row };
+  });
+  const mt = 18 + 12 * Math.max(0, rows.length - 1);
+  const yt = upTo(Math.max(...counts), 4), sy = linear(0, yt[yt.length - 1], H - mb, mt);
   const f = o.format || ((v) => fmt(v, 1)), grid = css("--grid"), muted = css("--muted"), col = css("--line"), ink2 = css("--ink2");
   for (const v of yt) { s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(v), y2: sy(v), stroke: grid })); s.append(text(fmt(v), { x: ml - 6, y: sy(v) + 4, "text-anchor": "end", "font-size": 10, fill: muted })); }
   for (const v of niceTicks(lo, hi, Math.max(2, Math.floor((w - ml) / 70)))) s.append(text((o.tickFormat || f)(v), { x: sx(v), y: H - 14, "text-anchor": "middle", "font-size": 10, fill: muted }));
@@ -285,16 +304,16 @@ export function histogram(box, o) {
     if (!c) return;
     const x = sx(lo + i * step) + 1, bw = Math.max(1, sx(lo + (i + 1) * step) - sx(lo + i * step) - 2);
     const r = svg("rect", { x, y: sy(c), width: bw, height: sy(0) - sy(c), rx: 2, fill: o.color ? o.color(lo + (i + 0.5) * step) : col });
-    r.addEventListener("pointermove", (ev) => showTip(ev, [el("strong", { textContent: `${f(lo + i * step)} – ${f(lo + (i + 1) * step)}` }), el("div", { className: "row", textContent: `${fmt(c)} ${o.unit || "items"}` })]));
+    r.addEventListener("pointermove", (ev) => showTip(ev, [el("strong", { textContent: `${f(lo + i * step)} – ${f(lo + (i + 1) * step)}` }), el("div", { className: "row", textContent: `${fmt(c)} ${o.unit || L("itens", "items")}` })]));
     r.addEventListener("pointerleave", hideTip);
     s.append(r);
   });
-  for (const r of o.refs || []) {
-    s.append(svg("line", { x1: sx(r.x), x2: sx(r.x), y1: mt - 6, y2: H - mb, stroke: r.color || ink2, "stroke-width": 1.5, "stroke-dasharray": "4 3" }));
-    const end = sx(r.x) > w * 0.8;
-    s.append(text(r.label, { x: sx(r.x) + (end ? -3 : 3), y: mt - 8, "text-anchor": end ? "end" : "start", "font-size": 10, fill: ink2 }));
+  for (const { r, x, end, row } of placed) {
+    const y = mt - 8 - 12 * row;
+    s.append(svg("line", { x1: x, x2: x, y1: y + 2, y2: H - mb, stroke: r.color || ink2, "stroke-width": 1.5, "stroke-dasharray": "4 3" }));
+    s.append(text(r.label, { x: x + (end ? -3 : 3), y, "text-anchor": end ? "end" : "start", "font-size": 10, fill: ink2 }));
   }
-  s.setAttribute("aria-label", o.title || "Histogram");
+  s.setAttribute("aria-label", o.title || L("Histograma", "Histogram"));
   box.append(s);
   addTableToggle(box, o.table);
 }
@@ -308,7 +327,7 @@ export function histogram(box, o) {
 export function scatter(box, o) {
   box.replaceChildren();
   const P = o.points.filter((p) => p.x != null && p.y != null && !Number.isNaN(+p.x) && !Number.isNaN(+p.y));
-  if (!P.length) { box.append(el("p", { className: "empty", textContent: o.empty || "No data." })); return; }
+  if (!P.length) { box.append(el("p", { className: "empty", textContent: o.empty || L("Sem dados.", "No data.") })); return; }
   const H = o.height || 320, mr = 14, mt = 12, mb = 38;
   const tx = (v) => (o.x?.log ? Math.log10(Math.max(v, 1)) : +v), ty = (v) => (o.y?.log ? Math.log10(Math.max(v, 1)) : +v);
   const xs = P.map((p) => tx(p.x)), ys = P.map((p) => ty(p.y));
@@ -366,7 +385,7 @@ export function scatter(box, o) {
   hit.addEventListener("pointerleave", () => { ring.setAttribute("opacity", 0); hideTip(); cur = null; });
   if (o.onClick) hit.addEventListener("click", () => cur && o.onClick(cur));
   s.append(ring, hit);
-  s.setAttribute("aria-label", o.title || "Scatter plot");
+  s.setAttribute("aria-label", o.title || L("Gráfico de dispersão", "Scatter plot"));
   box.append(s);
   legend(box, o.legend || []);
   addTableToggle(box, o.table);
@@ -378,7 +397,7 @@ export function scatter(box, o) {
 export function heatmap(box, o) {
   box.replaceChildren();
   const nr = o.rows.length, nc = o.cols.length;
-  if (!nr || !nc) { box.append(el("p", { className: "empty", textContent: o.empty || "No data." })); return; }
+  if (!nr || !nc) { box.append(el("p", { className: "empty", textContent: o.empty || L("Sem dados.", "No data.") })); return; }
   const lw = o.labelWidth || 110, th = o.colLabelHeight ?? 70, w0 = box.clientWidth || 600;
   const cw = Math.max(o.minCell || 4, Math.min(o.cell || 32, Math.floor((w0 - lw - 4) / nc))), chh = o.rowHeight || Math.max(14, Math.min(28, cw));
   const s = svg("svg", { width: lw + cw * nc + 4, height: th + chh * nr + 4, role: "img" });
@@ -399,7 +418,7 @@ export function heatmap(box, o) {
       s.append(text(o.cellText(v), { x: lw + j * cw + cw / 2, y: th + i * chh + chh / 2 + 4, "text-anchor": "middle", "font-size": 10, fill: light ? "#ffffff" : "#0b0b0b", "pointer-events": "none" }));
     }
   }
-  s.setAttribute("aria-label", o.title || "Heatmap");
+  s.setAttribute("aria-label", o.title || L("Mapa de calor", "Heatmap"));
   const wrap = el("div", { className: "tablewrap" }, s);
   box.append(wrap);
   if (o.legendItems) legend(box, o.legendItems);
@@ -447,7 +466,7 @@ export function choropleth(box, o) {
   });
   g.addEventListener("pointerleave", () => { hl.setAttribute("d", ""); hideTip(); });
   if (o.onClick) { g.style.cursor = "pointer"; g.addEventListener("click", (ev) => { const c = byPath.get(ev.target); if (c) o.onClick(c); }); }
-  s.setAttribute("aria-label", o.title || "Map");
+  s.setAttribute("aria-label", o.title || L("Mapa", "Map"));
   box.append(s);
   if (o.fit) {   // zoom to the shapes drawn (a state, say) instead of the whole country
     const b = g.getBBox();
@@ -476,14 +495,14 @@ export function gini(values) {
 export function lorenz(box, o) {
   box.replaceChildren();
   const v = o.values.filter((x) => x > 0).sort((a, b) => a - b), n = v.length;
-  if (!n) { box.append(el("p", { className: "empty", textContent: "No data." })); return null; }
+  if (!n) { box.append(el("p", { className: "empty", textContent: L("Sem dados.", "No data.") })); return null; }
   const sum = v.reduce((a, b) => a + b, 0);
   const pts = [[0, 0]]; let acc = 0;
   const step = Math.max(1, Math.floor(n / 200));
   v.forEach((x, i) => { acc += x; if ((i + 1) % step === 0 || i === n - 1) pts.push([(i + 1) / n, acc / sum]); });
   const G = gini(v);
   line(box, {
-    series: [{ name: "Equal shares", color: css("--axis"), points: [[0, 0], [1, 1]], width: 1.5 }, { name: o.name || "Actual", color: css("--line"), points: pts }],
+    series: [{ name: L("Partes iguais", "Equal shares"), color: css("--axis"), points: [[0, 0], [1, 1]], width: 1.5 }, { name: o.name || L("Real", "Actual"), color: css("--line"), points: pts }],
     x: "num", y: { min: 0, max: 1, format: (y) => `${Math.round(y * 100)}%` }, height: o.height || 240, title: o.title,
   });
   return G;
@@ -498,7 +517,7 @@ export function lorenz(box, o) {
 export function strip(box, o) {
   box.replaceChildren();
   const all = o.rows.flatMap((r) => r.points.map((p) => +p.x)).filter((v) => !Number.isNaN(v));
-  if (!all.length) { box.append(el("p", { className: "empty", textContent: o.empty || "No data." })); return; }
+  if (!all.length) { box.append(el("p", { className: "empty", textContent: o.empty || L("Sem dados.", "No data.") })); return; }
   const rh = o.rowHeight || 26, lw = o.labelWidth || 120, mr = 10, mt = 6, mb = 30;
   const H = mt + rh * o.rows.length + mb;
   const { w, s } = frame(box, H);
@@ -540,7 +559,7 @@ export function strip(box, o) {
   hit.addEventListener("pointerleave", () => { ring.setAttribute("opacity", 0); hideTip(); });
   if (o.onClick) { hit.style.cursor = "pointer"; hit.addEventListener("click", () => cur && o.onClick(cur)); }
   s.append(ring, hit);
-  s.setAttribute("aria-label", o.title || "Dot strips");
+  s.setAttribute("aria-label", o.title || L("Faixas de pontos", "Dot strips"));
   box.append(s);
   addTableToggle(box, o.table);
 }
@@ -553,7 +572,7 @@ export function strip(box, o) {
  */
 export function network(box, o) {
   box.replaceChildren();
-  if (!o.nodes.length) { box.append(el("p", { className: "empty", textContent: o.empty || "No data." })); return; }
+  if (!o.nodes.length) { box.append(el("p", { className: "empty", textContent: o.empty || L("Sem dados.", "No data.") })); return; }
   const H = o.height || 520, pad = 12;
   const { w, s } = frame(box, H);
   const xs = o.nodes.map((n) => n.x), ys = o.nodes.map((n) => n.y);
@@ -589,7 +608,7 @@ export function network(box, o) {
   });
   hit.addEventListener("pointerleave", () => { hl.replaceChildren(); hideTip(); });
   s.append(hit);
-  s.setAttribute("aria-label", o.title || "Network");
+  s.setAttribute("aria-label", o.title || L("Rede", "Network"));
   box.append(s);
   legend(box, o.legend || []);
   addTableToggle(box, o.table);

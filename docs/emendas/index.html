@@ -1,26 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Parliamentary Amendments · political-eye</title>
-<meta name="description" content="Every parliamentary amendment to Brazil's federal budget since 2014: who sent money where, what was paid, and who received it.">
+<title data-en="Parliamentary Amendments · political-eye">Emendas parlamentares · political-eye</title>
+<meta name="description" content="Todas as emendas parlamentares ao orçamento federal desde 2014: quem mandou dinheiro para onde, o que foi pago e quem recebeu." data-en-content="Every parliamentary amendment to Brazil's federal budget since 2014: who sent money where, what was paid, and who received it.">
 <link rel="stylesheet" href="../lib/site.css">
 </head>
 <body>
 <main>
   <header>
-    <p class="crumb"><a href="../">political-eye</a> / Parliamentary amendments</p>
-    <h1>Parliamentary amendments</h1>
-    <p>Every year deputies, senators, state benches and committees direct slices of the federal budget to places of their choosing. This page follows that money since 2014: how much was committed and actually paid, where it went, who sent it and who received it, including the "Pix" transfers sent straight to town halls. From the Portal da Transparência (CGU), refreshed daily.</p>
+    <p class="crumb"><a href="../">political-eye</a> / Emendas parlamentares</p>
+    <h1 data-en="Parliamentary amendments">Emendas parlamentares</h1>
+    <p data-en="Every year deputies, senators, state benches and committees direct slices of the federal budget to places of their choosing. This page follows that money since 2014: how much was committed and actually paid, where it went, who sent it and who received it, including the &quot;Pix&quot; transfers sent straight to town halls. From the Portal da Transparência (CGU), refreshed daily.">Todo ano, deputados, senadores, bancadas estaduais e comissões destinam fatias do orçamento federal a lugares de sua escolha. Esta página acompanha esse dinheiro desde 2014: quanto foi empenhado e quanto foi de fato pago, para onde foi, quem enviou e quem recebeu, incluindo as transferências especiais (as “emendas Pix”), que caem direto no caixa das prefeituras. Dados do Portal da Transparência (CGU), atualizados todo dia.</p>
   </header>
   <nav class="tabs">
-    <button data-tab="overview">Overview</button>
-    <button data-tab="map">Map</button>
-    <button data-tab="authors">Authors</button>
-    <button data-tab="flows">Where it goes</button>
-    <button data-tab="recipients">Recipients</button>
-    <button data-tab="timing">Timing</button>
+    <button data-tab="overview" data-en="Overview">Visão geral</button>
+    <button data-tab="map" data-en="Map">Mapa</button>
+    <button data-tab="authors" data-en="Authors">Autores</button>
+    <button data-tab="flows" data-en="Where it goes">Para onde vai</button>
+    <button data-tab="recipients" data-en="Recipients">Favorecidos</button>
+    <button data-tab="timing" data-en="Timing">Calendário</button>
   </nav>
   <section id="tab-overview" role="tabpanel"></section>
   <section id="tab-map" role="tabpanel" hidden></section>
@@ -28,11 +28,11 @@
   <section id="tab-flows" role="tabpanel" hidden></section>
   <section id="tab-recipients" role="tabpanel" hidden></section>
   <section id="tab-timing" role="tabpanel" hidden></section>
-  <footer>
-    Committed (empenhado), settled (liquidado) and paid amounts are as the Portal publishes them, cumulative to today; an amendment's year is its budget year. Rows without an amendment code (all of 2014, and some bench, committee and rapporteur lines up to 2020) count in every total but have no author. Payments to private individuals are summed, never named. Rules and gaps: <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/emendas.md">methodology/emendas.md</a>. Source: Portal da Transparência (CGU).
+  <footer data-en-html="Committed (empenhado), settled (liquidado) and paid amounts are as the Portal publishes them, cumulative to today; an amendment's year is its budget year. Rows without an amendment code (all of 2014, and some bench, committee and rapporteur lines up to 2020) count in every total but have no author. Payments to private individuals are summed, never named. Rules and gaps: <a href=&quot;https://github.com/mbottoni/political-eye/blob/main/methodology/emendas.md&quot;>methodology/emendas.md</a>. Source: Portal da Transparência (CGU).">
+    Os valores empenhados, liquidados e pagos são os que o Portal publica, acumulados até hoje; o ano de uma emenda é o ano do orçamento. Linhas sem código de emenda (todo o ano de 2014 e algumas linhas de bancada, de comissão e de relator até 2020) entram em todos os totais, mas não têm autor. Pagamentos a pessoas físicas são somados, nunca nomeados. Regras e lacunas: <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/emendas.md">methodology/emendas.md</a>. Fonte: Portal da Transparência (CGU).
   </footer>
 </main>
-<noscript>This page needs JavaScript. The data is at <a href="https://github.com/mbottoni/political-eye/tree/main/data/emendas">github.com/mbottoni/political-eye</a>.</noscript>
+<noscript>Esta página precisa de JavaScript. Os dados estão em <a href="https://github.com/mbottoni/political-eye/tree/main/data/emendas">github.com/mbottoni/political-eye</a>.</noscript>
 <script type="module" src="app.js"></script>
 </body>
 </html>

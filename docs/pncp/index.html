@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Public Contracts · political-eye</title>
-<meta name="description" content="Brazil's public contracts from the national procurement portal (PNCP): who buys, who sells, how concentrated it is, where the money goes, contracts with barred companies, and municipal contracts by the mayor's party.">
+<title data-en="Public contracts · political-eye">Contratos públicos · political-eye</title>
+<meta name="description" content="Os contratos públicos do Brasil no Portal Nacional de Contratações Públicas (PNCP): quem compra, quem vende, quão concentradas são as compras, para onde vai o dinheiro, contratos com empresas impedidas e contratos municipais pelo partido do prefeito." data-en-content="Brazil's public contracts from the national procurement portal (PNCP): who buys, who sells, how concentrated it is, where the money goes, contracts with barred companies, and municipal contracts by the mayor's party.">
 <link rel="stylesheet" href="../lib/site.css">
 <style>
   .nowrap { white-space: nowrap; }
@@ -19,18 +19,18 @@
 <body>
 <main>
   <header>
-    <p class="crumb"><a href="../">political-eye</a> / Public contracts</p>
-    <h1>Public contracts</h1>
-    <p>Every federal, state and municipal body must publish its contracts on the PNCP, the national procurement portal created by the 2021 procurement law. These pages count every contract published on the days read so far, and follow the large ones (R$ 1 million or more, about 3% of contracts and most of the money): who buys, who sells, how concentrated the buying is, where it happens, which contracts went to companies barred at the time, and what towns sign under each mayor's party. The history since 2021 is read newest first, so the charts fill in as it is read.</p>
+    <p class="crumb"><a href="../">political-eye</a> / Contratos públicos</p>
+    <h1 data-en="Public contracts">Contratos públicos</h1>
+    <p data-en="Every federal, state and municipal body must publish its contracts on the PNCP, the national procurement portal created by the 2021 procurement law. These pages count every contract published on the days read so far, and follow the large ones (R$ 1 million or more, about 3% of contracts and most of the money): who buys, who sells, how concentrated the buying is, where it happens, which contracts went to companies barred at the time, and what towns sign under each mayor's party. The history since 2021 is read newest first, so the charts fill in as it is read.">Todo órgão federal, estadual e municipal deve publicar seus contratos no PNCP, o Portal Nacional de Contratações Públicas criado pela Lei de Licitações de 2021. Estas páginas contam todos os contratos publicados nos dias lidos até agora e acompanham os grandes (de R$ 1 milhão ou mais, cerca de 3% dos contratos e a maior parte do dinheiro): quem compra, quem vende, quão concentradas são as compras, onde elas acontecem, quais contratos foram para empresas impedidas na época e o que os municípios assinam sob cada partido de prefeito. O histórico desde 2021 é lido do mais recente para o mais antigo, e os gráficos se completam à medida que ele avança.</p>
   </header>
   <div id="coverage"></div>
   <nav class="tabs">
-    <button data-tab="overview">Overview</button>
-    <button data-tab="large">Large contracts</button>
-    <button data-tab="suppliers">Suppliers</button>
-    <button data-tab="buyers">Buyers</button>
-    <button data-tab="map">Map</button>
-    <button data-tab="parties">Mayors' parties</button>
+    <button data-tab="overview" data-en="Overview">Visão geral</button>
+    <button data-tab="large" data-en="Large contracts">Grandes contratos</button>
+    <button data-tab="suppliers" data-en="Suppliers">Fornecedores</button>
+    <button data-tab="buyers" data-en="Buyers">Órgãos compradores</button>
+    <button data-tab="map" data-en="Map">Mapa</button>
+    <button data-tab="parties" data-en="Mayors' parties">Partidos dos prefeitos</button>
   </nav>
   <section id="tab-overview" role="tabpanel"></section>
   <section id="tab-large" role="tabpanel" hidden></section>
@@ -38,11 +38,11 @@
   <section id="tab-buyers" role="tabpanel" hidden></section>
   <section id="tab-map" role="tabpanel" hidden></section>
   <section id="tab-parties" role="tabpanel" hidden></section>
-  <footer>
-    Contracts are counted by the day the PNCP published them, in their latest version read; a contract amended above or below R$ 1 million moves in or out of the large-contract tables. Suppliers who are private individuals have their CPF masked. Mayors are TSE's elected candidates, matched to each town by name; a contract is attributed to the mayor in office in the year it was signed. Every rule is in <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/pncp.md#the-explorer-page">methodology/pncp.md</a>. Sources: PNCP, CGU, TSE, Tesouro Nacional (population).
+  <footer data-en-html="Contracts are counted by the day the PNCP published them, in their latest version read; a contract amended above or below R$ 1 million moves in or out of the large-contract tables. Suppliers who are private individuals have their CPF masked. Mayors are TSE's elected candidates, matched to each town by name; a contract is attributed to the mayor in office in the year it was signed. Every rule is in <a href=&quot;https://github.com/mbottoni/political-eye/blob/main/methodology/pncp.md#the-explorer-page&quot;>methodology/pncp.md</a>. Sources: PNCP, CGU, TSE, Tesouro Nacional (population).">
+    Os contratos são contados pelo dia em que o PNCP os publicou, na versão mais recente lida; um contrato aditado para cima ou para baixo de R$ 1 milhão entra ou sai das tabelas de grandes contratos. Fornecedores que são pessoas físicas têm o CPF mascarado. Os prefeitos são os candidatos eleitos segundo o TSE, ligados a cada município pelo nome; cada contrato é atribuído ao prefeito no cargo no ano em que foi assinado. Todas as regras estão em <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/pncp.md#the-explorer-page">methodology/pncp.md</a>. Fontes: PNCP, CGU, TSE, Tesouro Nacional (população).
   </footer>
 </main>
-<noscript>This page needs JavaScript. The data is at <a href="https://github.com/mbottoni/political-eye/tree/main/data/pncp">github.com/mbottoni/political-eye</a>.</noscript>
+<noscript>Esta página precisa de JavaScript. Os dados estão em <a href="https://github.com/mbottoni/political-eye/tree/main/data/pncp">github.com/mbottoni/political-eye</a>.</noscript>
 <script type="module" src="app.js"></script>
 </body>
 </html>

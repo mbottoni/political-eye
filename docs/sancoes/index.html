@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanctions · political-eye</title>
+<meta name="description" content="Brazil's lists of companies barred from public contracts or punished for corruption (CEIS, CNEP, CEPIM, leniency agreements): who sanctions whom, for how long, and the public money sanctioned companies still receive.">
+<link rel="stylesheet" href="../lib/site.css">
+<style>
+  .search-results { list-style: none; margin: 6px 0 0; padding: 0; max-width: 640px; }
+  .search-results li button {
+    all: unset; box-sizing: border-box; display: flex; justify-content: space-between; gap: 12px; width: 100%;
+    padding: 5px 8px; border-radius: 6px; cursor: pointer; font-size: 13px;
+  }
+  .search-results li button:hover, .search-results li button:focus-visible { background: var(--surface); outline: none; }
+  .search-results .n { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .linkish { all: unset; cursor: pointer; color: var(--ink); text-decoration: underline; text-decoration-color: var(--axis); text-underline-offset: 2px; }
+  .linkish:hover, .linkish:focus-visible { text-decoration-color: var(--ink); }
+  .profile-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; margin: 4px 0 12px; }
+  .profile-head h2 { font-size: 19px; margin: 0; }
+  .profile-head .doc { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .nowrap { white-space: nowrap; }
+  .pill { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--border); color: var(--ink2); margin-right: 4px; }
+  .controls .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .controls .seg button { all: unset; cursor: pointer; padding: 6px 10px; font-size: 13px; color: var(--ink2); }
+  .controls .seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="crumb"><a href="../">political-eye</a> / Sanctions</p>
+    <h1>Sanctions</h1>
+    <p>Who is barred from public contracts or punished for corruption in Brazil, by whom, and for how long. These pages also show what sanctioned companies still receive from the State. They cover the federal government's four lists: CEIS (barred and suspended companies and people), CNEP (penalties under the Anti-Corruption Law), CEPIM (non-profits barred from federal agreements) and the leniency agreements companies signed. CGU publishes each list as a daily snapshot and keeps no history, so political-eye records every day's version.</p>
+  </header>
+  <nav class="tabs">
+    <button data-tab="overview">Overview</button>
+    <button data-tab="who">Who sanctions</button>
+    <button data-tab="time">Duration and delays</button>
+    <button data-tab="repeat">Repeat offenders</button>
+    <button data-tab="fines">Fines</button>
+    <button data-tab="money">Public money</button>
+    <button data-tab="cepim">Non-profits</button>
+    <button data-tab="leniency">Leniency</button>
+    <button data-tab="changes">Changes</button>
+    <button data-tab="company">A company</button>
+  </nav>
+  <section id="tab-overview" role="tabpanel"></section>
+  <section id="tab-who" role="tabpanel" hidden></section>
+  <section id="tab-time" role="tabpanel" hidden></section>
+  <section id="tab-repeat" role="tabpanel" hidden></section>
+  <section id="tab-fines" role="tabpanel" hidden></section>
+  <section id="tab-money" role="tabpanel" hidden></section>
+  <section id="tab-cepim" role="tabpanel" hidden></section>
+  <section id="tab-leniency" role="tabpanel" hidden></section>
+  <section id="tab-changes" role="tabpanel" hidden></section>
+  <section id="tab-company" role="tabpanel" hidden></section>
+  <footer>
+    The lists hold only sanctions still listed. A sanction that expired or was lifted has gone, so older years look smaller than they were, and a company's past is only what is still listed. Sanctioned people are counted but never named on these pages, and their CPF is masked in the data. Matching to contracts, amendments and campaign suppliers is by CNPJ, so only companies and organisations are matched. A match is not by itself an irregularity: most sanctions bind only part of the State. Every rule is in <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/sancoes.md#the-explorer-page">methodology/sancoes.md</a>. Sources: CGU (Portal da Transparência), PNCP, TSE.
+  </footer>
+</main>
+<noscript>This page needs JavaScript. The data is at <a href="https://github.com/mbottoni/political-eye/tree/main/data/sancoes">github.com/mbottoni/political-eye</a>.</noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

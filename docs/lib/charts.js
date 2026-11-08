@@ -42,6 +42,12 @@ export function niceTicks(lo, hi, n = 4) {
   for (let v = Math.ceil(lo / step) * step; v <= hi + step * 1e-9; v += step) out.push(+v.toFixed(10));
   return out;
 }
+/** Ticks from 0 whose last one is at or above hi (so the tallest mark stays inside the plot). */
+function upTo(hi, n = 4) {
+  const t = niceTicks(0, hi, n);
+  if (t.length > 1 && t[t.length - 1] < hi) t.push(+(t[t.length - 1] + t[1] - t[0]).toFixed(10));
+  return t;
+}
 const linear = (d0, d1, r0, r1) => (v) => (d1 === d0 ? (r0 + r1) / 2 : r0 + ((v - d0) / (d1 - d0)) * (r1 - r0));
 export const monthIndex = (m) => +m.slice(0, 4) * 12 + (+m.slice(5, 7) - 1);
 export const monthLabel = (i) => `${Math.floor(i / 12)}-${String((i % 12) + 1).padStart(2, "0")}`;
@@ -124,7 +130,7 @@ export function line(box, o) {
     s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(v), y2: sy(v), stroke: v === yt[0] && y0 === 0 ? axis : grid }));
     s.append(text(yf(v), { x: ml - 6, y: sy(v) + 4, "text-anchor": "end", "font-size": 10, fill: muted }));
   }
-  for (const v of X.ticks(x0, x1, w - ml - mr)) s.append(text(X.tick(v), { x: sx(v), y: H - 8, "text-anchor": "middle", "font-size": 10, fill: muted }));
+  for (const v of o.xTicks ? o.xTicks.map(X.val) : X.ticks(x0, x1, w - ml - mr)) s.append(text(X.tick(v), { x: sx(v), y: H - 8, "text-anchor": "middle", "font-size": 10, fill: muted }));
   for (const m of o.marks || []) {
     const xv = sx(X.val(m.x));
     s.append(svg("line", { x1: xv, x2: xv, y1: mt, y2: H - mb, stroke: axis, "stroke-dasharray": "3 3" }));
@@ -217,7 +223,7 @@ export function stack(box, o) {
   const mb = o.rotate ? Math.min(140, 14 + 6 * Math.max(...o.x.map((x) => String(x).length))) : 24;
   const H = (o.height || 240) + (o.rotate ? mb - 24 : 0), mr = 8, mt = 10;
   const totals = o.x.map((_, i) => o.series.reduce((a, se) => a + Math.max(0, se.values[i] || 0), 0));
-  const yt = niceTicks(0, Math.max(...totals, 1e-9), 4), y1 = yt[yt.length - 1];
+  const yt = upTo(Math.max(...totals, 1e-9), 4), y1 = yt[yt.length - 1];
   const f = o.format || ((v) => fmt(v)), grid = css("--grid"), muted = css("--muted"), surface = css("--surface");
   const ml = marginFor(yt.map(f));
   const { w, s } = frame(box, H);
@@ -263,7 +269,7 @@ export function histogram(box, o) {
   const counts = new Array(nb).fill(0);
   for (const v of vals) counts[Math.min(nb - 1, Math.max(0, Math.floor((v - lo) / step)))]++;
   const { w, s } = frame(box, H);
-  const sx = linear(lo, hi, ml, w - mr), yt = niceTicks(0, Math.max(...counts), 4), sy = linear(0, yt[yt.length - 1], H - mb, mt);
+  const sx = linear(lo, hi, ml, w - mr), yt = upTo(Math.max(...counts), 4), sy = linear(0, yt[yt.length - 1], H - mb, mt);
   const f = o.format || ((v) => fmt(v, 1)), grid = css("--grid"), muted = css("--muted"), col = css("--line"), ink2 = css("--ink2");
   for (const v of yt) { s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(v), y2: sy(v), stroke: grid })); s.append(text(fmt(v), { x: ml - 6, y: sy(v) + 4, "text-anchor": "end", "font-size": 10, fill: muted })); }
   for (const v of niceTicks(lo, hi, Math.max(2, Math.floor((w - ml) / 70)))) s.append(text(f(v), { x: sx(v), y: H - 14, "text-anchor": "middle", "font-size": 10, fill: muted }));
@@ -311,11 +317,20 @@ export function scatter(box, o) {
   for (const v of niceTicks(xd[0], xd[1], Math.max(2, Math.floor((w - ml) / 90)))) { s.append(svg("line", { x1: sx(v), x2: sx(v), y1: mt, y2: H - mb, stroke: grid })); s.append(text(xf(unlog(v, o.x?.log)), { x: sx(v), y: H - mb + 14, "text-anchor": "middle", "font-size": 10, fill: muted })); }
   if (o.x?.label) s.append(text(o.x.label, { x: (ml + w - mr) / 2, y: H - 4, "text-anchor": "middle", "font-size": 11, fill: ink2 }));
   if (o.y?.label) s.append(text(o.y.label, { x: 12, y: (mt + H - mb) / 2, "text-anchor": "middle", "font-size": 11, fill: ink2, transform: `rotate(-90 12 ${(mt + H - mb) / 2})` }));
+  if (o.diagonal) {
+    const lo = Math.max(xd[0], yd[0]), hi = Math.min(xd[1], yd[1]);
+    if (hi > lo) s.append(svg("line", { x1: sx(lo), y1: sy(lo), x2: sx(hi), y2: sy(hi), stroke: ink2, "stroke-dasharray": "4 3" }));
+    if (o.diagonal.label) s.append(text(o.diagonal.label, { x: sx(hi) - 4, y: sy(hi) + 12, "text-anchor": "end", "font-size": 10, fill: ink2 }));
+  }
+  for (const r of o.refs || []) {
+    if (r.y != null) { s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(r.y), y2: sy(r.y), stroke: r.color || ink2, "stroke-dasharray": "3 3" })); s.append(text(r.label || "", { x: w - mr, y: sy(r.y) - 4, "text-anchor": "end", "font-size": 10, fill: r.color || ink2 })); }
+    if (r.x != null) { s.append(svg("line", { x1: sx(r.x), x2: sx(r.x), y1: mt, y2: H - mb, stroke: r.color || ink2, "stroke-dasharray": "3 3" })); s.append(text(r.label || "", { x: sx(r.x) + 4, y: mt + 10, "font-size": 10, fill: r.color || ink2 })); }
+  }
   const order = [...P].sort((a, b) => (a.z || 0) - (b.z || 0));
   for (const p of order) s.append(svg("circle", { cx: sx(tx(p.x)), cy: sy(ty(p.y)), r: p.r || 4, fill: p.color || css("--other"), stroke: surface, "stroke-width": 1.2, opacity: p.opacity ?? 0.9 }));
   if (o.labels) {
     const cx = (xd[0] + xd[1]) / 2, cy = (yd[0] + yd[1]) / 2;
-    const far = [...P].sort((a, b) => ((tx(b.x) - cx) / (xd[1] - xd[0] || 1)) ** 2 + ((ty(b.y) - cy) / (yd[1] - yd[0] || 1)) ** 2
+    const far = o.labelRank ? P.filter((p) => p.label).sort(o.labelRank).slice(0, o.labels) : P.filter((p) => p.label).sort((a, b) => ((tx(b.x) - cx) / (xd[1] - xd[0] || 1)) ** 2 + ((ty(b.y) - cy) / (yd[1] - yd[0] || 1)) ** 2
       - ((tx(a.x) - cx) / (xd[1] - xd[0] || 1)) ** 2 - ((ty(a.y) - cy) / (yd[1] - yd[0] || 1)) ** 2).slice(0, o.labels);
     const placed = [];
     for (const p of far) {
@@ -510,5 +525,55 @@ export function strip(box, o) {
   s.append(ring, hit);
   s.setAttribute("aria-label", o.title || "Dot strips");
   box.append(s);
+  addTableToggle(box, o.table);
+}
+
+// ------------------------------------------------------------ network
+
+/**
+ * network(box, {nodes: [{x, y (any range), r, color, ring, title, rows}], edges: [[i, j, weight]], height})
+ * A laid-out graph in SVG; hovering a node highlights its neighbours.
+ */
+export function network(box, o) {
+  box.replaceChildren();
+  if (!o.nodes.length) { box.append(el("p", { className: "empty", textContent: o.empty || "No data." })); return; }
+  const H = o.height || 520, pad = 12;
+  const { w, s } = frame(box, H);
+  const xs = o.nodes.map((n) => n.x), ys = o.nodes.map((n) => n.y);
+  const sx = linear(Math.min(...xs), Math.max(...xs), pad, w - pad), sy = linear(Math.min(...ys), Math.max(...ys), pad, H - pad);
+  const edge = css("--edge"), surface = css("--surface"), ink = css("--ink");
+  const adj = o.nodes.map(() => []);
+  const eg = svg("g", { stroke: `rgb(${edge})`, "stroke-opacity": Math.max(0.05, Math.min(0.3, 300 / Math.max(o.edges.length, 1))), "stroke-width": 0.7 });
+  for (const [i, j] of o.edges) {
+    adj[i].push(j); adj[j].push(i);
+    eg.append(svg("line", { x1: sx(o.nodes[i].x), y1: sy(o.nodes[i].y), x2: sx(o.nodes[j].x), y2: sy(o.nodes[j].y) }));
+  }
+  s.append(eg);
+  const ng = svg("g");
+  const circles = o.nodes.map((n) => {
+    const c = svg("circle", { cx: sx(n.x), cy: sy(n.y), r: n.r || 3, fill: n.color || css("--line"), stroke: n.ring ? ink : surface, "stroke-width": n.ring ? 1.4 : 0.8 });
+    ng.append(c);
+    return c;
+  });
+  s.append(ng);
+  const hl = svg("g", { "pointer-events": "none" });
+  s.append(hl);
+  const hit = svg("rect", { x: 0, y: 0, width: w, height: H, fill: "transparent" });
+  hit.addEventListener("pointermove", (ev) => {
+    const b = s.getBoundingClientRect(), px = ev.clientX - b.left, py = ev.clientY - b.top;
+    let best = -1, bd = 14 * 14;
+    o.nodes.forEach((n, i) => { const d = (sx(n.x) - px) ** 2 + (sy(n.y) - py) ** 2; if (d < bd) { bd = d; best = i; } });
+    hl.replaceChildren();
+    if (best < 0) { hideTip(); return; }
+    const n = o.nodes[best];
+    for (const j of adj[best]) hl.append(svg("line", { x1: sx(n.x), y1: sy(n.y), x2: sx(o.nodes[j].x), y2: sy(o.nodes[j].y), stroke: ink, "stroke-width": 1.2, opacity: 0.7 }));
+    for (const j of [best, ...adj[best]]) hl.append(svg("circle", { cx: sx(o.nodes[j].x), cy: sy(o.nodes[j].y), r: (o.nodes[j].r || 3) + 1.5, fill: "none", stroke: ink, "stroke-width": 1.5 }));
+    showTip(ev, [el("strong", { textContent: n.title }), ...(n.rows || []).map((t) => el("div", { className: "row", textContent: t })), el("div", { className: "row", textContent: `${adj[best].length} connections` })]);
+  });
+  hit.addEventListener("pointerleave", () => { hl.replaceChildren(); hideTip(); });
+  s.append(hit);
+  s.setAttribute("aria-label", o.title || "Network");
+  box.append(s);
+  legend(box, o.legend || []);
   addTableToggle(box, o.table);
 }

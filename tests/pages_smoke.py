@@ -23,6 +23,8 @@ PAGES = [
     *[f"docs/orientacoes/?tab={t}" for t in ("gov", "cohesion", "rebels", "orient", "deputy", "blocs")],
     *[f"docs/emendas/?tab={t}" for t in ("overview", "map", "authors", "flows", "recipients", "timing")],
     *[f"docs/sancoes/?tab={t}" for t in ("overview", "who", "time", "repeat", "fines", "money", "cepim", "leniency", "changes", "company")],
+    *[f"docs/tse/?tab={t}" for t in ("overview", "parties", "equity", "results", "donors", "suppliers")],
+    "docs/tse/?tab=equity&e=2018",
 ]
 CHROME = ["google-chrome", "google-chrome-stable", "chromium", "chromium-browser",
           "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"]

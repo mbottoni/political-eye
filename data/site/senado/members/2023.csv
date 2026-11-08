@@ -4,7 +4,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2023-01,70,Renan Calheiros,MDB,AL,36,22,0.7738,1,-0.6544
 2023-01,90,José Serra,PSDB,,0,0,0.0,4,-0.0788
 2023-01,285,Marcio Bittar,UNIÃO,AC,15,11,0.3858,2,0.3256
-2023-01,345,Flávio Arns,PODEMOS,PR,15,14,0.2752,1,-1.466
+2023-01,345,Flávio Arns,PODE,PR,15,14,0.2752,1,-1.466
 2023-01,374,Paulo Rocha,PT,PA,24,17,0.4328,1,-1.8631
 2023-01,470,Chico Rodrigues,UNIÃO,RR,37,29,0.8959,2,0.6027
 2023-01,475,Confúcio Moura,MDB,RO,18,9,0.4863,1,-0.6985
@@ -46,7 +46,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2023-01,5525,Omar Aziz,PSD,AM,26,17,0.6189,1,-0.7843
 2023-01,5527,Simone Tebet,MDB,MS,23,14,0.5131,1,-1.0265
 2023-01,5531,Elmano Férrer,PP,PI,23,19,0.5482,2,0.8092
-2023-01,5533,Lasier Martins,PODEMOS,,4,4,0.0299,3,0.8786
+2023-01,5533,Lasier Martins,PODE,,4,3,0.0299,3,0.8786
 2023-01,5535,Telmário Mota,PROS,,31,30,0.7965,2,0.6088
 2023-01,5537,Dário Berger,PSB,SC,27,24,0.5418,1,-1.4439
 2023-01,5540,Fernando Bezerra Coelho,MDB,PE,25,20,0.6615,2,0.5618
@@ -65,14 +65,14 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2023-01,5905,Rodrigo Cunha,UNIÃO,,47,39,0.9914,1,0.0581
 2023-01,5906,Dra. Eudócia,PSB,AL,16,15,0.3015,2,0.2312
 2023-01,5913,Rafael Tenório,MDB,AL,3,2,0.0592,2,0.15
-2023-01,5924,Oriovisto Guimarães,PODE,PR,3,3,0.0043,3,0.4302
+2023-01,5924,Oriovisto Guimarães,PODE,PR,3,1,0.0043,3,0.4302
 2023-01,5926,Lucas Barreto,PSD,AP,22,12,0.5708,2,0.2538
 2023-01,5936,Carlos Portinho,PL,RJ,9,5,0.0644,3,1.5598
-2023-01,5942,Marcos do Val,PODEMOS,ES,10,10,0.1398,3,1.2876
+2023-01,5942,Marcos do Val,PODE,ES,10,10,0.1398,3,1.2876
 2023-01,5953,Fabiano Contarato,,ES,19,0,0.3356,1,-1.9143
 2023-01,5959,Styvenson Valentim,PODE,RN,0,0,0.0,6,0.0948
 2023-01,5967,Angelo Coronel,PSD,BA,36,26,0.8958,2,0.2816
-2023-01,5976,Eduardo Girão,PODEMOS,,9,9,0.054,3,1.6968
+2023-01,5976,Eduardo Girão,PODE,,9,8,0.054,3,1.6968
 2023-01,5979,Leila Barros,PDT,,21,18,0.3555,1,-1.4822
 2023-01,5982,Alessandro Vieira,PSDB,SE,12,10,0.1809,1,-1.3953
 2023-01,5985,Nelsinho Trad,PSD,MS,33,24,0.8398,2,0.353

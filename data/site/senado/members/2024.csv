@@ -14,7 +14,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-01,1173,Wellington Fagundes,PL,MT,19,10,0.0007,2,1.0851
 2024-01,1186,Luis Carlos Heinze,PP,RS,17,15,0.0006,2,1.3888
 2024-01,3777,Eduardo Gomes,PL,TO,12,9,0.0058,2,0.7653
-2024-01,3806,Zequinha Marinho,PODEMOS,PA,9,8,0.0522,3,0.3696
+2024-01,3806,Zequinha Marinho,PODE,PA,9,7,0.0522,3,0.3696
 2024-01,3830,Davi Alcolumbre,UNIÃO,AP,23,20,0.4627,3,-0.3388
 2024-01,4531,Jayme Campos,UNIÃO,MT,20,17,0.4198,3,-0.2634
 2024-01,4560,Sérgio Petecão,PSD,AC,37,29,0.9644,1,-0.7793
@@ -46,14 +46,14 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-01,5894,Flávio Bolsonaro,PL,RJ,18,9,0.0006,2,1.6179
 2024-01,5895,Jorge Kajuru,PSB,GO,31,30,0.8564,1,-1.1267
 2024-01,5899,Vanderlan Cardoso,PSD,GO,4,3,0.0175,3,0.1123
-2024-01,5905,Rodrigo Cunha,PODE,AL,10,9,0.1758,3,-0.021
+2024-01,5905,Rodrigo Cunha,PODE,AL,10,7,0.1758,3,-0.021
 2024-01,5917,Fernando Dueire,MDB,PE,27,20,0.621,3,-0.4414
 2024-01,5924,Oriovisto Guimarães,PODE,PR,1,0,0.0,4,0.4848
 2024-01,5926,Lucas Barreto,PSD,AP,9,7,0.079,3,0.1305
 2024-01,5936,Carlos Portinho,PL,RJ,19,10,0.0007,2,1.2818
-2024-01,5942,Marcos do Val,PODEMOS,ES,19,19,0.0015,2,1.1669
+2024-01,5942,Marcos do Val,PODE,ES,19,19,0.0015,2,1.1669
 2024-01,5953,Fabiano Contarato,PT,ES,29,22,0.8315,1,-1.4396
-2024-01,5959,Styvenson Valentim,PODE,RN,12,11,0.1877,3,0.0469
+2024-01,5959,Styvenson Valentim,PODE,RN,12,10,0.1877,3,0.0469
 2024-01,5967,Angelo Coronel,PSD,BA,37,28,0.9621,1,-0.8394
 2024-01,5973,Cid Gomes,PDT,CE,31,29,0.8332,1,-0.5784
 2024-01,5976,Eduardo Girão,NOVO,,16,16,0.0006,2,1.445
@@ -61,7 +61,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-01,5982,Alessandro Vieira,MDB,SE,14,9,0.3736,3,-0.4621
 2024-01,5985,Nelsinho Trad,PSD,MS,29,21,0.578,3,-0.2675
 2024-01,5988,Soraya Thronicke,PODE,MS,1,0,0.0,4,0.2521
-2024-01,5990,Carlos Viana,PODEMOS,MG,9,8,0.1197,3,0.1489
+2024-01,5990,Carlos Viana,PODE,MG,9,6,0.1197,3,0.1489
 2024-01,5998,Daniella Ribeiro,PSD,PB,39,30,0.8918,3,-0.4973
 2024-01,6008,Giordano,MDB,SP,40,31,0.9157,3,-0.4904
 2024-01,6009,Astronauta Marcos Pontes,PL,SP,19,10,0.0006,2,1.1053

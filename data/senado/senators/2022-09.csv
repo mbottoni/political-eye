@@ -4,14 +4,14 @@ senador_id,nome,partido,uf,n_votes,n_authored
 90,José Serra,PSDB,,0,2
 151,Luiz Pastore,MDB,,0,2
 285,Marcio Bittar,UNIÃO,AC,0,1
-345,Flávio Arns,PODEMOS,PR,0,4
+345,Flávio Arns,PODE,PR,0,4
 374,Paulo Rocha,PT,,0,8
 470,Chico Rodrigues,UNIÃO,RR,0,2
 581,Jaques Wagner,PT,BA,0,2
 677,Roberto Rocha,PTB,,0,2
 742,Marcelo Castro,MDB,PI,0,3
 825,Paulo Paim,PT,RS,0,10
-945,Alvaro Dias,PODEMOS,,0,3
+945,Alvaro Dias,PODE,,0,3
 1023,Maria do Carmo Alves,PP,,0,1
 1173,Wellington Fagundes,PL,MT,0,3
 1186,Luis Carlos Heinze,PP,RS,0,4
@@ -37,7 +37,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5523,Otto Alencar,PSD,BA,0,2
 5525,Omar Aziz,PSD,AM,0,1
 5531,Elmano Férrer,PP,,0,1
-5533,Lasier Martins,PODEMOS,,0,3
+5533,Lasier Martins,PODE,,0,3
 5537,Dário Berger,PSB,,0,1
 5540,Fernando Bezerra Coelho,MDB,,0,3
 5557,Mailza Gomes,PP,,0,3
@@ -48,19 +48,19 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5732,Rodrigo Pacheco,PSD,,0,13
 5783,Zenaide Maia,PROS,RN,0,2
 5892,Roberth Bringel,UNIÃO,,0,1
-5895,Jorge Kajuru,PODEMOS,GO,0,6
+5895,Jorge Kajuru,PODE,GO,0,6
 5898,Eliane Nogueira,PP,,0,4
 5899,Vanderlan Cardoso,PSD,GO,0,2
 5906,Dra. Eudócia,PSB,AL,0,1
-5924,Oriovisto Guimarães,PODEMOS,PR,0,3
+5924,Oriovisto Guimarães,PODE,PR,0,3
 5926,Lucas Barreto,PSD,AP,0,1
 5936,Carlos Portinho,PL,RJ,0,4
-5942,Marcos do Val,PODEMOS,ES,0,3
+5942,Marcos do Val,PODE,ES,0,3
 5953,Fabiano Contarato,PT,ES,0,4
-5959,Styvenson Valentim,PODEMOS,RN,0,1
+5959,Styvenson Valentim,PODE,RN,0,1
 5967,Angelo Coronel,PSD,BA,0,3
 5972,Julio Ventura,PDT,,0,3
-5976,Eduardo Girão,PODEMOS,,0,4
+5976,Eduardo Girão,PODE,,0,4
 5979,Leila Barros,PDT,,0,4
 5982,Alessandro Vieira,PSDB,SE,0,6
 5985,Nelsinho Trad,PSD,MS,0,5

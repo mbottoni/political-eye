@@ -15,7 +15,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2026-01,1173,Wellington Fagundes,PL,MT,21,13,0.2109,3,1.2355
 2026-01,1186,Luis Carlos Heinze,PP,RS,14,11,0.0771,3,1.4206
 2026-01,3777,Eduardo Gomes,PL,TO,30,23,0.8197,2,0.2912
-2026-01,3806,Zequinha Marinho,PODEMOS,PA,30,27,0.901,2,-0.1602
+2026-01,3806,Zequinha Marinho,PODE,PA,30,27,0.901,2,-0.1602
 2026-01,4531,Jayme Campos,UNIÃO,MT,32,29,0.9198,2,-0.3596
 2026-01,4560,Sérgio Petecão,PSD,AC,24,17,0.7006,1,-0.8391
 2026-01,4639,Beto Faro,PT,PA,18,13,0.3875,1,-1.7995
@@ -52,7 +52,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2026-01,5924,Oriovisto Guimarães,PSDB,PR,14,14,0.0668,3,1.3234
 2026-01,5926,Lucas Barreto,PSD,AP,29,23,0.7896,2,-0.0491
 2026-01,5936,Carlos Portinho,PL,RJ,23,12,0.3896,3,0.8113
-2026-01,5942,Marcos do Val,PODEMOS,ES,18,17,0.0994,3,1.0466
+2026-01,5942,Marcos do Val,PODE,ES,18,17,0.0994,3,1.0466
 2026-01,5953,Fabiano Contarato,PT,ES,12,7,0.1163,1,-1.0393
 2026-01,5959,Styvenson Valentim,PSDB,RN,14,14,0.3512,2,0.5511
 2026-01,5967,Angelo Coronel,PSD,BA,29,22,0.823,2,0.0381
@@ -61,8 +61,8 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2026-01,5979,Leila Barros,PDT,,13,13,0.1388,1,-0.8719
 2026-01,5982,Alessandro Vieira,MDB,SE,17,10,0.414,1,-0.8868
 2026-01,5985,Nelsinho Trad,PSD,MS,30,20,0.905,2,-0.145
-2026-01,5988,Soraya Thronicke,PODEMOS,MS,24,24,0.6123,1,-0.5498
-2026-01,5990,Carlos Viana,PODEMOS,MG,30,28,0.8259,2,-0.4541
+2026-01,5988,Soraya Thronicke,PODE,MS,24,24,0.6123,1,-0.5498
+2026-01,5990,Carlos Viana,PODE,MG,30,28,0.8259,2,-0.4541
 2026-01,5998,Daniella Ribeiro,PP,PB,12,12,0.2342,1,-0.1242
 2026-01,6008,Giordano,,SP,32,0,0.9098,1,-0.603
 2026-01,6009,Astronauta Marcos Pontes,PL,SP,21,12,0.1579,3,1.3301

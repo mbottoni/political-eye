@@ -2,7 +2,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 22,Esperidião Amin,PP,SC,0,1
 35,Jader Barbalho,MDB,PA,0,2
 90,José Serra,PSDB,,0,2
-345,Flávio Arns,PODEMOS,PR,0,1
+345,Flávio Arns,PODE,PR,0,1
 470,Chico Rodrigues,UNIÃO,RR,0,4
 581,Jaques Wagner,PT,BA,0,3
 739,Ciro Nogueira,PP,PI,0,1
@@ -27,7 +27,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5411,Weverton,,MA,0,2
 5502,Plínio Valério,PSDB,AM,0,1
 5523,Otto Alencar,PSD,BA,0,2
-5533,Lasier Martins,PODEMOS,,0,1
+5533,Lasier Martins,PODE,,0,1
 5535,Telmário Mota,PROS,,0,1
 5627,Jean-Paul Prates,,,0,1
 5718,Eliziane Gama,CIDADANIA,MA,0,12
@@ -37,9 +37,9 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5899,Vanderlan Cardoso,,GO,0,2
 5905,Rodrigo Cunha,UNIÃO,,0,1
 5936,Carlos Portinho,PL,RJ,0,3
-5942,Marcos do Val,PODEMOS,ES,0,7
+5942,Marcos do Val,PODE,ES,0,7
 5953,Fabiano Contarato,,ES,0,1
-5976,Eduardo Girão,PODEMOS,,0,2
+5976,Eduardo Girão,PODE,,0,2
 5979,Leila Barros,PDT,,0,5
 5982,Alessandro Vieira,PSDB,SE,0,4
 5985,Nelsinho Trad,PSD,MS,0,7

@@ -32,6 +32,8 @@ AUTHORSHIP = ["processo_id", "sigla_tipo", "materia", "data_apresentacao", "sena
 SENATORS = ["senador_id", "nome", "partido", "uf", "n_votes", "n_authored"]
 NO_PARTY = {"", "Sem registro"}
 NOT_SENATE = {"Revisora", "Substitutivo"}   # a Câmara bill under review, or the Câmara's substitute
+# The authors' text spells some parties differently from the votes, whose labels we keep.
+PARTY_IN_TEXT = {"PODEMOS": "PODE"}
 
 
 
@@ -47,7 +49,8 @@ def party_in_text(autoria: str, nome: str) -> tuple[str, bool]:
     for seg in autoria.split(","):
         m = pat.search(seg)
         if m:
-            return m[1].strip(), seg.strip().startswith("Líder")
+            party = m[1].strip()
+            return PARTY_IN_TEXT.get(party, party), seg.strip().startswith("Líder")
     return "", False
 
 

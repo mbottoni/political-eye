@@ -64,6 +64,7 @@ def test_party_in_text():
     assert party_in_text(text, "Teresa Leitão") == ("PT", False)
     assert party_in_text(text, "Omar") == ("PL", False)          # whole names only
     assert party_in_text("Senador Camilo Santana (PT/CE)", "Omar Aziz") == ("", False)
+    assert party_in_text("Senador Oriovisto Guimarães (PODEMOS/PR)", "Oriovisto Guimarães") == ("PODE", False)   # as the votes spell it
 
 
 def test_senators(built):

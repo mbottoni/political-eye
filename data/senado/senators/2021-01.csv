@@ -1,14 +1,14 @@
 senador_id,nome,partido,uf,n_votes,n_authored
 70,Renan Calheiros,MDB,AL,0,1
 90,José Serra,PSDB,,0,1
-345,Flávio Arns,PODEMOS,PR,0,3
+345,Flávio Arns,PODE,PR,0,3
 374,Paulo Rocha,PT,,0,1
 470,Chico Rodrigues,DEM,RR,0,1
 475,Confúcio Moura,MDB,RO,0,1
 581,Jaques Wagner,PT,BA,0,1
 677,Roberto Rocha,PSDB,,0,1
 825,Paulo Paim,PT,RS,0,3
-945,Alvaro Dias,PODEMOS,,0,4
+945,Alvaro Dias,PODE,,0,4
 1173,Wellington Fagundes,PL,MT,0,1
 2331,Rose de Freitas,MDB,,0,1
 3361,José Maranhão,MDB,,0,1
@@ -20,7 +20,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 4994,Eduardo Braga,MDB,AM,0,1
 5008,Humberto Costa,PT,PE,0,4
 5012,Randolfe Rodrigues,REDE,AP,0,5
-5236,Reguffe,PODEMOS,,0,2
+5236,Reguffe,PODE,,0,2
 5350,Jorginho Mello,PL,,0,2
 5352,Rogério Carvalho,PT,SE,0,6
 5376,Mara Gabrilli,PSDB,SP,0,3
@@ -31,21 +31,21 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5525,Omar Aziz,PSD,AM,0,1
 5527,Simone Tebet,MDB,,0,1
 5531,Elmano Férrer,PP,,0,1
-5533,Lasier Martins,PODEMOS,,0,3
+5533,Lasier Martins,PODE,,0,3
 5627,Jean-Paul Prates,,,0,2
 5718,Eliziane Gama,CIDADANIA,MA,0,2
 5783,Zenaide Maia,PROS,RN,0,2
 5895,Jorge Kajuru,CIDADANIA,GO,0,2
 5899,Vanderlan Cardoso,PSD,GO,0,1
 5905,Rodrigo Cunha,PSDB,,0,1
-5924,Oriovisto Guimarães,PODEMOS,PR,0,1
+5924,Oriovisto Guimarães,PODE,PR,0,1
 5936,Carlos Portinho,PL,RJ,0,1
-5942,Marcos do Val,PODEMOS,ES,0,1
+5942,Marcos do Val,PODE,ES,0,1
 5953,Fabiano Contarato,REDE,ES,0,2
-5959,Styvenson Valentim,PODEMOS,RN,0,2
+5959,Styvenson Valentim,PODE,RN,0,2
 5967,Angelo Coronel,PSD,BA,0,1
 5973,Cid Gomes,PDT,CE,0,1
-5976,Eduardo Girão,PODEMOS,,0,1
+5976,Eduardo Girão,PODE,,0,1
 5979,Leila Barros,PSB,,0,3
 5982,Alessandro Vieira,CIDADANIA,SE,0,7
 5985,Nelsinho Trad,PSD,MS,0,7

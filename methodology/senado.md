@@ -128,7 +128,9 @@ for the senator at the time (`Senador Flávio Bolsonaro (PL/RJ)`, `Líder do
 PSD Omar Aziz (PSD/AM)`). It is empty when the text leaves the senator out,
 naming only the first author (`Senador Reguffe (PDT/DF) e outros.`): 63% of
 2015 signatures, 38% of 2016's, under 7% each year since. Who signed is
-unaffected; only this label is missing.
+unaffected; only this label is missing. The text writes Podemos as `PODEMOS`
+and the votes as `PODE`; signatures are stored as `PODE`, so a senator seen
+only through signatures (as in January, without votes) keeps one party label.
 
 **Types.** Requerimentos dominate: plenário (`RQS`) and committee (`REQ`,
 written `REQ n/ano - CAS` and so on; before 2019, one code per committee,

@@ -4,7 +4,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2021-01,70,Renan Calheiros,MDB,AL,39,29,0.7471,3,0.008
 2021-01,90,José Serra,PSDB,,0,0,0.0,5,0.145
 2021-01,285,Marcio Bittar,MDB,AC,32,26,0.7097,2,1.12
-2021-01,345,Flávio Arns,PODEMOS,PR,1,0,0.0,4,-0.9285
+2021-01,345,Flávio Arns,PODE,PR,1,0,0.0,4,-0.9285
 2021-01,374,Paulo Rocha,PT,,10,5,0.0307,3,-1.8648
 2021-01,470,Chico Rodrigues,DEM,RR,33,29,0.7401,2,0.9503
 2021-01,475,Confúcio Moura,MDB,RO,42,30,0.9546,1,1.0576
@@ -14,7 +14,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2021-01,742,Marcelo Castro,MDB,PI,36,26,0.8437,1,0.9149
 2021-01,751,Arolde de Oliveira,PSD,RJ,27,22,0.5597,2,0.6866
 2021-01,825,Paulo Paim,PT,RS,10,5,0.0307,3,-1.8642
-2021-01,945,Alvaro Dias,PODEMOS,,2,0,0.0,4,-1.129
+2021-01,945,Alvaro Dias,PODE,,2,0,0.0,4,-1.129
 2021-01,1023,Maria do Carmo Alves,DEM,SE,39,35,0.9032,1,0.7044
 2021-01,1173,Wellington Fagundes,PL,MT,30,29,0.7378,1,0.2832
 2021-01,1186,Luis Carlos Heinze,PP,RS,21,18,0.4305,2,1.1432
@@ -33,8 +33,8 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2021-01,4994,Eduardo Braga,MDB,AM,34,23,0.8103,1,0.6411
 2021-01,5008,Humberto Costa,PT,PE,8,3,0.0304,3,-1.5874
 2021-01,5012,Randolfe Rodrigues,REDE,AP,10,8,0.0052,3,-2.2835
-2021-01,5236,Reguffe,PODEMOS,,6,6,0.0014,3,-2.2031
-2021-01,5322,Romário,PODE,RJ,14,14,0.3551,1,0.0737
+2021-01,5236,Reguffe,PODE,,6,6,0.0014,3,-2.2031
+2021-01,5322,Romário,PODE,RJ,14,13,0.3551,1,0.0737
 2021-01,5350,Jorginho Mello,PL,,31,30,0.7235,2,0.87
 2021-01,5352,Rogério Carvalho,PT,SE,9,4,0.0306,3,-1.6431
 2021-01,5376,Mara Gabrilli,PSDB,SP,0,0,0.0,6,-0.6217
@@ -47,7 +47,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2021-01,5527,Simone Tebet,MDB,,32,21,0.7904,1,0.7254
 2021-01,5529,Antonio Anastasia,PSD,MG,33,25,0.7759,2,0.6908
 2021-01,5531,Elmano Férrer,PP,,19,15,0.417,2,0.9657
-2021-01,5533,Lasier Martins,PODEMOS,,3,1,0.0001,4,-0.9681
+2021-01,5533,Lasier Martins,PODE,,3,1,0.0001,4,-0.9681
 2021-01,5535,Telmário Mota,PROS,RR,7,7,0.1957,1,0.4939
 2021-01,5537,Dário Berger,MDB,SC,7,6,0.1631,1,0.2941
 2021-01,5540,Fernando Bezerra Coelho,MDB,PE,26,21,0.557,2,1.1119
@@ -63,14 +63,14 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2021-01,5895,Jorge Kajuru,CIDADANIA,GO,6,5,0.0013,3,-1.6721
 2021-01,5899,Vanderlan Cardoso,PSD,GO,14,10,0.314,2,0.6389
 2021-01,5905,Rodrigo Cunha,PSDB,,3,3,0.0446,2,-0.449
-2021-01,5924,Oriovisto Guimarães,PODEMOS,PR,3,2,0.0179,4,0.0254
+2021-01,5924,Oriovisto Guimarães,PODE,PR,3,2,0.0179,4,0.0254
 2021-01,5926,Lucas Barreto,PSD,AP,12,9,0.2522,1,-0.1512
-2021-01,5942,Marcos do Val,PODEMOS,ES,38,38,0.8137,2,0.4462
+2021-01,5942,Marcos do Val,PODE,ES,38,37,0.8137,2,0.4462
 2021-01,5953,Fabiano Contarato,REDE,ES,14,12,0.0071,3,-2.1705
-2021-01,5959,Styvenson Valentim,PODEMOS,RN,1,0,0.0,4,-0.8879
+2021-01,5959,Styvenson Valentim,PODE,RN,1,0,0.0,4,-0.8879
 2021-01,5967,Angelo Coronel,PSD,BA,42,32,0.9303,1,0.7584
 2021-01,5973,Cid Gomes,PDT,CE,5,5,0.0005,3,-1.0932
-2021-01,5976,Eduardo Girão,PODEMOS,,3,0,0.0006,4,-0.4328
+2021-01,5976,Eduardo Girão,PODE,,3,0,0.0006,4,-0.4328
 2021-01,5979,Leila Barros,PSB,,12,11,0.0308,3,-1.4911
 2021-01,5982,Alessandro Vieira,CIDADANIA,SE,4,2,0.0012,3,-1.0749
 2021-01,5985,Nelsinho Trad,PSD,MS,40,30,0.9249,1,0.6761

@@ -11,7 +11,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 1173,Wellington Fagundes,PL,MT,0,1
 1186,Luis Carlos Heinze,PP,RS,0,2
 3777,Eduardo Gomes,PL,TO,0,2
-3806,Zequinha Marinho,PODEMOS,PA,0,1
+3806,Zequinha Marinho,PODE,PA,0,1
 4531,Jayme Campos,UNIÃO,MT,0,1
 4560,Sérgio Petecão,PSD,AC,0,2
 4639,Beto Faro,PT,PA,0,1
@@ -43,7 +43,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5924,Oriovisto Guimarães,PSDB,PR,0,1
 5926,Lucas Barreto,PSD,AP,0,7
 5936,Carlos Portinho,PL,RJ,0,2
-5942,Marcos do Val,PODEMOS,ES,0,2
+5942,Marcos do Val,PODE,ES,0,2
 5953,Fabiano Contarato,PT,ES,0,6
 5959,Styvenson Valentim,PSDB,RN,0,1
 5967,Angelo Coronel,PSD,BA,0,1
@@ -52,8 +52,8 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5979,Leila Barros,PDT,,0,8
 5982,Alessandro Vieira,MDB,SE,0,1
 5985,Nelsinho Trad,PSD,MS,0,4
-5988,Soraya Thronicke,PODEMOS,MS,0,1
-5990,Carlos Viana,PODEMOS,MG,0,1
+5988,Soraya Thronicke,PODE,MS,0,1
+5990,Carlos Viana,PODE,MG,0,1
 5998,Daniella Ribeiro,PP,PB,0,5
 6008,Giordano,,SP,0,1
 6009,Astronauta Marcos Pontes,PL,SP,0,8

@@ -5,7 +5,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 631,Magno Malta,PL,ES,0,1
 1173,Wellington Fagundes,PL,MT,0,1
 1186,Luis Carlos Heinze,PP,RS,0,3
-3806,Zequinha Marinho,PODEMOS,PA,0,1
+3806,Zequinha Marinho,PODE,PA,0,1
 4642,Efraim Filho,UNIÃO,PB,0,2
 4770,Izalci Lucas,PSDB,DF,0,20
 4811,Laércio Oliveira,PP,SE,0,1
@@ -17,10 +17,10 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5748,Veneziano Vital do Rêgo,MDB,PB,0,13
 5793,Dr. Hiran,PP,RR,0,16
 5895,Jorge Kajuru,PSB,GO,0,8
-5942,Marcos do Val,PODEMOS,ES,0,5
+5942,Marcos do Val,PODE,ES,0,5
 5976,Eduardo Girão,NOVO,,0,3
 5985,Nelsinho Trad,PSD,MS,0,4
-5990,Carlos Viana,PODEMOS,MG,0,5
+5990,Carlos Viana,PODE,MG,0,5
 6009,Astronauta Marcos Pontes,PL,SP,0,4
 6331,Sergio Moro,UNIÃO,PR,0,8
 6335,Damares Alves,REPUBLICANOS,DF,0,28

@@ -9,7 +9,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 825,Paulo Paim,PT,RS,0,2
 1173,Wellington Fagundes,PL,MT,0,1
 3777,Eduardo Gomes,PL,TO,0,1
-3806,Zequinha Marinho,PODEMOS,PA,0,2
+3806,Zequinha Marinho,PODE,PA,0,2
 4560,Sérgio Petecão,PSD,AC,0,1
 4639,Beto Faro,PT,PA,0,1
 4642,Efraim Filho,UNIÃO,PB,0,2
@@ -38,18 +38,18 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5899,Vanderlan Cardoso,PSD,GO,0,1
 5906,Dra. Eudócia,PL,AL,0,1
 5917,Fernando Dueire,MDB,PE,0,2
-5924,Oriovisto Guimarães,PODEMOS,PR,0,1
+5924,Oriovisto Guimarães,PODE,PR,0,1
 5926,Lucas Barreto,PSD,AP,0,3
 5936,Carlos Portinho,PL,RJ,0,1
 5953,Fabiano Contarato,PT,ES,0,3
-5959,Styvenson Valentim,PODEMOS,RN,0,3
+5959,Styvenson Valentim,PODE,RN,0,3
 5973,Cid Gomes,PSB,CE,0,1
 5976,Eduardo Girão,NOVO,,0,6
 5979,Leila Barros,PDT,,0,2
 5982,Alessandro Vieira,MDB,SE,0,1
 5985,Nelsinho Trad,PSD,MS,0,8
-5988,Soraya Thronicke,PODEMOS,MS,0,2
-5990,Carlos Viana,PODEMOS,MG,0,1
+5988,Soraya Thronicke,PODE,MS,0,2
+5990,Carlos Viana,PODE,MG,0,1
 5998,Daniella Ribeiro,PSD,PB,0,3
 6008,Giordano,MDB,SP,0,2
 6010,Ivete da Silveira,MDB,SC,0,2

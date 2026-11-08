@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Party Orientations · political-eye</title>
+<meta name="description" content="How Brazil's deputies follow their party, the government and their party's majority, every month since 2015.">
+<link rel="stylesheet" href="../lib/site.css">
+</head>
+<body>
+<main>
+  <header>
+    <p class="crumb"><a href="../">political-eye</a> / Party orientations</p>
+    <h1>Party orientations</h1>
+    <p>Before every roll call in the Câmara, each party's leader, the Government's leader and the blocs tell their deputies how to vote. These pages measure who follows: their party, the Government, and the rest of their party. Every share is over the contested Plenário roll calls (those with at least 2.5% on the losing side), from the Câmara's open data, refreshed weekly.</p>
+  </header>
+  <nav class="tabs">
+    <button data-tab="gov">Government support</button>
+    <button data-tab="cohesion">Party cohesion</button>
+    <button data-tab="rebels">Rebels and loyalists</button>
+    <button data-tab="orient">How parties orient</button>
+    <button data-tab="deputy">A deputy</button>
+    <button data-tab="blocs">Blocs</button>
+  </nav>
+  <section id="tab-gov" role="tabpanel"></section>
+  <section id="tab-cohesion" role="tabpanel" hidden></section>
+  <section id="tab-rebels" role="tabpanel" hidden></section>
+  <section id="tab-orient" role="tabpanel" hidden></section>
+  <section id="tab-deputy" role="tabpanel" hidden></section>
+  <section id="tab-blocs" role="tabpanel" hidden></section>
+  <footer>
+    with_party: of the votes where the deputy's party (or its federation or bloc) oriented Sim, Não or Obstrução, the share they followed. with_gov: the same against the Government leader. with_majority: the share where they voted with most of the other deputies of their party who voted, which needs no orientation. Rice index: the average of |yes − no| / (yes + no) within a party across roll calls (1 = always unanimous). Every rule, and the gaps in the Câmara's data (cut-off bloc names from 2023, a bloc with no orientation from February to October 2025), is in <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/camara.md#party-orientations">methodology/camara.md</a>. Source: Câmara dos Deputados, Dados Abertos.
+  </footer>
+</main>
+<noscript>This page needs JavaScript. The data is at <a href="https://github.com/mbottoni/political-eye/tree/main/data/site/orientacoes">github.com/mbottoni/political-eye</a>.</noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

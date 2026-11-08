@@ -20,6 +20,7 @@ PAGES = [
     "docs/index.html",
     "docs/camara/", "docs/camara/?tab=network", "docs/camara/?tab=ideal",
     "docs/senado/", "docs/senado/?tab=network", "docs/senado/?tab=ideal", "docs/senado/?tab=discipline",
+    *[f"docs/orientacoes/?tab={t}" for t in ("gov", "cohesion", "rebels", "orient", "deputy", "blocs")],
 ]
 CHROME = ["google-chrome", "google-chrome-stable", "chromium", "chromium-browser",
           "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"]

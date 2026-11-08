@@ -56,14 +56,14 @@ jobs:
         run: uv run python -m politicaleye camara figures
 
       - name: Rebuild the explorer's summaries
-        run: uv run python -m politicaleye site build camara
+        run: uv run python -m politicaleye site build camara orientacoes
 
       - name: Commit if the data changed
         run: |
           # Stage first: a new month is an untracked file, invisible to a plain
           # `git diff`. sources.json changes nightly on the server side, so
           # only commit when the tables themselves moved.
-          git add data/camara data/site/camara figures/camara
+          git add data/camara data/site/camara data/site/orientacoes figures/camara
           if git diff --staged --quiet -- . ':!data/camara/sources.json'; then
             echo "No data changes."
             exit 0

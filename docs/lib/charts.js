@@ -214,7 +214,8 @@ export function bars(box, o) {
 /** stack(box, {x: [labels], series: [{name, color, values: []}], format, height, table}) - columns stacked, 2px gaps. */
 export function stack(box, o) {
   box.replaceChildren();
-  const H = o.height || 240, mr = 8, mt = 10, mb = 24;
+  const mb = o.rotate ? Math.min(140, 14 + 6 * Math.max(...o.x.map((x) => String(x).length))) : 24;
+  const H = (o.height || 240) + (o.rotate ? mb - 24 : 0), mr = 8, mt = 10;
   const totals = o.x.map((_, i) => o.series.reduce((a, se) => a + Math.max(0, se.values[i] || 0), 0));
   const yt = niceTicks(0, Math.max(...totals, 1e-9), 4), y1 = yt[yt.length - 1];
   const f = o.format || ((v) => fmt(v)), grid = css("--grid"), muted = css("--muted"), surface = css("--surface");
@@ -225,10 +226,12 @@ export function stack(box, o) {
     s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(v), y2: sy(v), stroke: grid }));
     s.append(text(f(v), { x: ml - 6, y: sy(v) + 4, "text-anchor": "end", "font-size": 10, fill: muted }));
   }
-  const every = Math.ceil(n / Math.max(1, Math.floor((w - ml - mr) / 44)));
+  const every = o.rotate ? 1 : Math.ceil(n / Math.max(1, Math.floor((w - ml - mr) / 44)));
   o.x.forEach((lab, i) => {
     const cx = ml + band * (i + 0.5);
-    if (i % every === 0) s.append(text(String(lab), { x: cx, y: H - 8, "text-anchor": "middle", "font-size": 10, fill: muted }));
+    if (i % every === 0) s.append(o.rotate
+      ? text(String(lab), { x: cx, y: H - mb + 12, "text-anchor": "end", "font-size": 10, fill: muted, transform: `rotate(-40 ${cx} ${H - mb + 12})` })
+      : text(String(lab), { x: cx, y: H - 8, "text-anchor": "middle", "font-size": 10, fill: muted }));
     let acc = 0;
     o.series.forEach((se) => {
       const v = Math.max(0, se.values[i] || 0);

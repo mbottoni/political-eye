@@ -14,6 +14,16 @@
                           names no town that matches IBGE's list): paid so far on the amendments they authored
                           for the legislature's budgets, from the payments table
     doadores_<leg>.csv    person: the donors of R$50,000 or more to their campaign (CPF masked), amount
+    atividade_<leg>.csv   deputy and month: roll calls held, votes they cast, proposals they presented as
+                          first signer (all, and bills) and co-signed
+    propostas_<leg>.csv   deputy and kind of proposal (bills, rapporteur opinions, amendments, oversight,
+                          requests, other): as first signer and as co-signer, over the legislature
+    coautores_<leg>.csv   each deputy's most frequent co-signers (proposals with at most 50 signers)
+    partidos_<leg>.csv    each deputy's parties over the legislature, from the month they first and last
+                          appear under each
+
+Attendance (``presenca``) is the votes a deputy cast over the roll calls held in the months they appear
+in the Câmara's tables (voting or signing). A month they missed entirely does not count against them.
 
 Mayors' parties (data/ref/prefeitos.csv): ``prefeito_mesmo_partido`` is the share of a deputy's
 amendment money paid to a town in a year when that town's mayor was of the deputy's party (their party
@@ -37,6 +47,14 @@ from .common import csv
 from .emendas import UF, town_codes
 
 LEGS = (56, 57)
+# Kinds of proposal, from the Câmara's type codes (siglaTipo). Signing order 1 is the first signer.
+KINDS = {"projetos": {"PL", "PLP", "PEC", "PDL", "PRC"},
+         "relatorias": {"PRL", "PRLP", "PRLE", "PPP", "PEP", "PSS", "SBT", "SBR", "EMR", "CVO", "VTS", "RDF"},
+         "emendas": {"EMC", "EMP", "ESB", "EMS", "EMA", "EML", "EMO", "SOR", "SLD"},
+         "fiscalizacao": {"RIC", "PFC", "SIT"},
+         "requerimentos": {"REQ", "RPD", "RPDR", "DTQ", "INC"}}
+KIND_OF = {t: k for k, ts in KINDS.items() for t in ts}
+COAUTHORS = 8   # co-signers kept per deputy
 RENAMED_PARTIES = {"PTDOB": "AVANTE", "PSDC": "DC", "PRB": "REPUBLICANOS", "PTN": "PODE", "PODEMOS": "PODE", "PEN": "PATRIOTA",
                    "PTC": "AGIR", "SD": "SOLIDARIEDADE", "UNIAO": "UNIÃO"}
 MERGED = {"PHS": ("PODE", 2019), "PRP": ("PATRIOTA", 2019), "PPL": ("PCDOB", 2019), "DEM": ("UNIÃO", 2022), "PSL": ("UNIÃO", 2022),
@@ -154,6 +172,61 @@ def _mayors(data: Path, pg: pd.DataFrame, view: pd.DataFrame) -> pd.DataFrame:
     return out.round(4)
 
 
+def _activity(data: Path, leg: int, ids: list[str]) -> dict[str, pd.DataFrame]:
+    """Attendance, proposals, co-signers and parties over the legislature, from the Câmara's monthly tables."""
+    cam, keep = data / "camara", set(ids)
+    act, signs = [], []
+    for m in g.months(cam):
+        if g.legislatura(m) != leg:
+            continue
+        vp, dp, ap = (cam / sub / f"{m}.csv" for sub in ("votacoes", "deputies", "authorship"))
+        held = len(pd.read_csv(vp, usecols=[0])) if vp.exists() else 0
+        if dp.exists():
+            d = pd.read_csv(dp, dtype={"deputado_id": str, "partido": str}, keep_default_na=False, usecols=["deputado_id", "partido", "n_votes"])
+            act.append(d[d.deputado_id.isin(keep)].assign(month=m, votacoes=held))
+        if ap.exists():
+            a = pd.read_csv(ap, dtype=str, keep_default_na=False, usecols=["proposicao_id", "sigla_tipo", "deputado_id", "ordem_assinatura"])
+            signs.append(a.assign(month=m))
+    act = pd.concat(act, ignore_index=True) if act else pd.DataFrame(columns=["deputado_id", "partido", "n_votes", "month", "votacoes"])
+    s = pd.concat(signs, ignore_index=True) if signs else pd.DataFrame(columns=["proposicao_id", "sigla_tipo", "deputado_id", "ordem_assinatura", "month"])
+    s = s.drop_duplicates(["proposicao_id", "deputado_id"])
+    s["primeiro"] = s.ordem_assinatura == "1"
+    s["tipo"] = s.sigla_tipo.map(KIND_OF).fillna("outros")
+    mine = s[s.deputado_id.isin(keep)]
+
+    # Month by month.
+    sm = mine.assign(projeto=mine.primeiro & (mine.tipo == "projetos"), coassinou=~mine.primeiro).groupby(["deputado_id", "month"]).agg(
+        autor=("primeiro", "sum"), projetos=("projeto", "sum"), coautor=("coassinou", "sum"))
+    mo = act.rename(columns={"n_votes": "votos"}).set_index(["deputado_id", "month"])[["votacoes", "votos"]].join(sm, how="outer").fillna(0)
+    mo = mo.astype(int).reset_index().sort_values(["deputado_id", "month"])
+
+    # Kinds of proposal, and the co-signers they share the most proposals with.
+    kinds = mine.assign(coassinou=~mine.primeiro).groupby(["deputado_id", "tipo"]).agg(autor=("primeiro", "sum"), coautor=("coassinou", "sum"))
+    kinds = kinds.astype(int).reset_index().sort_values(["deputado_id", "tipo"])
+    size = s.groupby("proposicao_id").deputado_id.transform("size")
+    small = s.loc[(size >= 2) & (size <= g.MAX_AUTHORS), ["proposicao_id", "deputado_id"]]
+    pairs = small[small.deputado_id.isin(keep)].merge(small, on="proposicao_id", suffixes=("", "_outro"))
+    pairs = pairs[pairs.deputado_id != pairs.deputado_id_outro].groupby(["deputado_id", "deputado_id_outro"]).size().rename("n").reset_index()
+    co = (pairs.sort_values(["deputado_id", "n", "deputado_id_outro"], ascending=[True, False, True]).groupby("deputado_id").head(COAUTHORS)
+          .rename(columns={"deputado_id_outro": "outro_id"}))
+
+    # Parties: one row per stretch under the same party, its spelling unified (the Câmara writes REPUBLIC and
+    # REPUBLICANOS for the same party) and mergers counted from their year; months with no party are skipped.
+    a = act.assign(partido=[party_in(x, int(m[:4])) if x else "" for x, m in zip(act.partido, act.month)])
+    a = a[a.partido != ""].sort_values(["deputado_id", "month"])
+    run = (a.partido != a.groupby("deputado_id").partido.shift()).cumsum().rename("trecho")
+    parties = (a.groupby(["deputado_id", run]).agg(partido=("partido", "first"), de=("month", "first"), ate=("month", "last"))
+               .reset_index().drop(columns="trecho"))
+
+    tot = mo.groupby("deputado_id")[["votacoes", "votos", "autor", "projetos", "coautor"]].sum()
+    per = pd.DataFrame({
+        "presenca": (tot.votos / tot.votacoes).where(tot.votacoes > 0).round(4), "votacoes_mandato": tot.votacoes,
+        "propostas_autor": tot.autor, "projetos_autor": tot.projetos, "propostas_coautor": tot.coautor,
+        "relatorias": kinds[kinds.tipo == "relatorias"].set_index("deputado_id").autor.reindex(tot.index).fillna(0).astype(int),
+        "partidos": parties.groupby("deputado_id").partido.nunique().reindex(tot.index).fillna(0).astype(int)})
+    return {"per": per.rename_axis("deputado_id").reset_index(), "mo": mo, "kinds": kinds, "co": co, "parties": parties}
+
+
 def build_leg(data: Path, leg: int) -> dict:
     out = data / "site" / "deputados"
     view = pd.read_csv(data / "views" / f"deputados_{leg}.csv", dtype=str, keep_default_na=False)
@@ -218,7 +291,13 @@ def build_leg(data: Path, leg: int) -> dict:
     else:
         sanc = pd.DataFrame(columns=["sancoes_pago_total", "sancoes_pago_sancionadas", "sancoes_empresas"])
 
-    v = view.merge(_network(data, leg), on="deputado_id", how="left")
+    work = _activity(data, leg, view.deputado_id.tolist())
+    csv(work["mo"], out / f"atividade_{leg}.csv")
+    csv(work["kinds"], out / f"propostas_{leg}.csv")
+    csv(work["co"], out / f"coautores_{leg}.csv")
+    csv(work["parties"].sort_values(["deputado_id", "de"]), out / f"partidos_{leg}.csv")
+
+    v = view.merge(_network(data, leg), on="deputado_id", how="left").merge(work["per"], on="deputado_id", how="left")
     v = v.join(shares, on="pessoa").join(donors, on="pessoa").join(sanc, on="pessoa").join(_mayors(data, pg, view), on="pessoa")
     for c in ("grandes_doadores", "grandes_doadores_valor", "sancoes_pago_sancionadas", "sancoes_pago_total", "sancoes_empresas"):
         v[c] = v[c].fillna(0)
@@ -230,6 +309,7 @@ def build_leg(data: Path, leg: int) -> dict:
     nb = _covoting(data, leg, view.deputado_id.tolist())
     csv(nb, out / f"vizinhos_{leg}.csv")
     return {"deputies": len(v), "with_network": int(v.pc1.notna().sum()), "amendment_rows": len(by),
+            "proposals": int(work["kinds"].autor.sum()), "attendance_median": float(work["per"].presenca.median()) if len(work["per"]) else None,
             "places": len(de), "paid_to_a_town": round(float(de.loc[de.municipio_ibge != "", "pago"].sum() / max(de.pago.sum(), 1)), 4), "donations": len(dd), "neighbour_rows": len(nb)}
 
 

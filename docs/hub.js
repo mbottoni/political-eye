@@ -2,6 +2,7 @@
 // the pages' own summaries. Portuguese by default (the HTML's own text), English on request.
 import { css, data, el } from "./lib/ui.js";
 import { brl, date, lang, langSwitch, month, num, pct, tr } from "./lib/i18n.js";
+import { deputies, deputySearch } from "./lib/search.js";
 
 const sum = (xs) => xs.reduce((a, b) => a + b, 0);
 const NS = "http://www.w3.org/2000/svg";
@@ -14,7 +15,9 @@ const EN = {
   eyebrow: "Official open data, updated every day",
   title: "Brazil's politics and public money, <em>in plain sight</em>.",
   lede: "Scheduled jobs download data from Congress, the electoral court, the comptroller general, the National Treasury and the procurement portal, rebuild tidy tables and commit them to git, so the repository's history shows what changed and when. Each page goes from the big picture down to one deputy, party, company or town.",
-  cta_explore: "See what the data shows", cta_how: "How it works",
+  cta_explore: "or see what the data shows ↓", cta_how: "How it works",
+  search_label: "Find a deputy and see how they vote, what they propose, where their amendments go and who paid for their campaign.",
+  search_try: "Try:",
   f_pages: "interactive pages", f_sources: "official sources", f_since: "data since", f_updated: "last update",
   swarm_title: "How the Câmara votes", swarm_others: "others", swarm_left: "← votes like PT", swarm_right: "votes like PL →",
   h_findings: "What the data shows", p_findings: "Four numbers read just now from the pages' tables. Click one to see where it comes from.",
@@ -270,10 +273,31 @@ async function lastUpdate() {
   } catch { /* offline or rate-limited: leave it out */ }
 }
 
+// ------------------------------------------------------------ find a deputy
+
+const profileHref = (d) => `deputados/?tab=profile&leg=${d.leg}&dep=${d.id}`;
+let searchLang = null;
+function searchBox() {
+  if (searchLang === lang()) return;   // a resize redraws the charts, not the box someone may be typing in
+  searchLang = lang();
+  document.querySelector("#deputy-search").replaceChildren(deputySearch({ href: profileHref, large: true }));
+  // Three deputies of the current legislature, at random, so the suggestion favours no one.
+  const go = () => deputies().then((all) => {
+    const now = all.filter((d) => d.leg === 57 && d.votes >= 50);
+    if (!now.length) return;
+    const pickN = [];
+    while (pickN.length < Math.min(3, now.length)) { const d = now[Math.floor(Math.random() * now.length)]; if (!pickN.includes(d)) pickN.push(d); }
+    document.querySelector("#try-list").replaceChildren(...pickN.flatMap((d, i) => [i ? ", " : "", el("a", { href: profileHref(d), textContent: d.nome })]));
+    document.querySelector("#try").hidden = false;
+  }).catch(() => {});
+  if ("requestIdleCallback" in window) requestIdleCallback(go, { timeout: 2500 }); else setTimeout(go, 800);
+}
+
 // ------------------------------------------------------------ render
 
 function render() {
   translate();
+  searchBox();
   for (const [k, f] of Object.entries(CARDS)) f().then((x) => fill(k, x)).catch((e) => console.warn(`hub ${k}:`, e));
   for (const [k, f] of Object.entries(FINDINGS)) f().catch((e) => { console.warn(`hub ${k}:`, e); finding(k, "–", "", null); });
   swarm().catch((e) => console.warn("hub swarm:", e));

@@ -89,3 +89,23 @@ def test_wilson_prefers_the_longer_record():
     lo_short, _ = sd.wilson(np.array(50.0), np.array(52.0))
     lo_long, _ = sd.wilson(np.array(480.0), np.array(500.0))
     assert lo_long > lo_short
+
+
+def test_activity(tmp_path, monkeypatch):
+    d = fixture(tmp_path)
+    monkeypatch.setattr(sd, "MIN_SHARED", 1)
+    sd.build(d)
+    graphs._load.cache_clear()
+    out = d / "site" / "deputados"
+    v = pd.read_csv(out / "deputados_57.csv", dtype={"deputado_id": str}).set_index("deputado_id")
+    # Deputy 10 first-signed a PL, a REQ and a PEC (two bills), voted in all 4 roll calls of the months they appear.
+    assert (v.loc["10", "propostas_autor"], v.loc["10", "projetos_autor"], v.loc["10", "presenca"]) == (3, 2, 1.0)
+    assert (v.loc["20", "propostas_coautor"], v.loc["20", "partidos"]) == (3, 2)
+    k = pd.read_csv(out / "propostas_57.csv", dtype={"deputado_id": str}).set_index(["deputado_id", "tipo"])
+    assert k.loc[("10", "projetos"), "autor"] == 2 and k.loc[("10", "requerimentos"), "autor"] == 1 and k.loc[("20", "projetos"), "coautor"] == 2
+    co = pd.read_csv(out / "coautores_57.csv", dtype=str)
+    assert co[co.deputado_id == "10"].iloc[0][["outro_id", "n"]].tolist() == ["20", "3"]   # proposals 1, 2 and 4
+    pa = pd.read_csv(out / "partidos_57.csv", dtype=str)
+    assert pa[pa.deputado_id == "20"][["partido", "de", "ate"]].values.tolist() == [["B", "2025-03", "2025-03"], ["C", "2025-04", "2025-04"]]
+    mo = pd.read_csv(out / "atividade_57.csv", dtype={"deputado_id": str})
+    assert mo[mo.deputado_id == "10"][["month", "votacoes", "votos", "autor"]].values.tolist() == [["2025-03", 3, 3, 3], ["2025-04", 1, 1, 0]]

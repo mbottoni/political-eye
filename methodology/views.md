@@ -60,6 +60,9 @@ workflow, after the views) for [the deputies page](https://mbottoni.github.io/po
 | `sancoes_pago_total`, `sancoes_pago_sancionadas`, `sancoes_empresas` | from the sanctions page ([sancoes.md](sancoes.md)): amendment money paid, and paid to companies while under a barring sanction, every budget since 2015 |
 | `prefeito_mesmo_partido` | of their amendment money that reached a town (payments table, recipient's town), the share paid in a year when that town's mayor ([ref.md](ref.md), `prefeitos.csv`) was of the deputy's party in the month of the payment |
 | `prefeito_base` | the same share by chance: the share of the deputy's own state's towns that party ran that year, averaged over the same payments |
+| `presenca`, `votacoes_mandato` | roll-call participation: the votes they cast over the roll calls held, in the months they appear in the Câmara's tables (voting or signing), and that number of roll calls |
+| `propostas_autor`, `projetos_autor`, `propostas_coautor` | proposals they presented as first signer (all, and bills: PL, PLP, PEC, PDL, PRC) and proposals they co-signed |
+| `relatorias`, `partidos` | rapporteur opinions and substitutes as first signer; how many parties they were in over the legislature |
 
 Parties are matched under one name per party as it stood in the year of the
 payment: spellings and renamings are unified (PMDB is MDB, PR is PL), and
@@ -76,3 +79,42 @@ furthest), so that 480 agreements out of 500 outrank 50 out of 52.
 `emendas_<leg>.csv`, `destinos_<leg>.csv` and `doadores_<leg>.csv` hold
 each deputy's amendments by year and type, the towns their amendment money
 was paid to, and their campaign's large donors (CPF masked).
+
+**The profile's work record.** `atividade_<leg>.csv` has, per deputy and
+month, the roll calls held, the votes they cast, and the proposals they
+presented as first signer (all, and bills) or co-signed. Every proposal of the
+Câmara's authorship tables counts ([camara.md](camara.md)): the first signer
+is signing order 1, everyone after is a co-signer. `propostas_<leg>.csv`
+groups them by kind, from the type code: bills (PL, PLP, PEC, PDL, PRC);
+rapporteur opinions and substitutes (PRL and its variants, PPP, PEP, PSS, SBT,
+SBR, EMR, CVO, VTS, RDF); amendments to bills (EMC, EMP, ESB, EMS, EMA, EML,
+EMO, SOR, SLD); information requests and oversight (RIC, PFC, SIT);
+procedural requests and suggestions to the executive (REQ, RPD, RPDR, DTQ,
+INC); and everything else. `coautores_<leg>.csv` keeps each deputy's eight
+most frequent co-signers, over proposals with at most 50 signers (the same
+cut that leaves signature drives out of the co-authorship graph).
+`partidos_<leg>.csv` lists the parties a deputy sat under, from the first
+to the last month they appear under each.
+
+Three cautions the page states where they apply:
+
+- **Participation is not attendance.** It counts votes registered in roll
+  calls. The Câmara's official attendance (present at a session) is a
+  different record. A month a deputy missed entirely does not count against
+  them, since they don't appear in that month's tables.
+- **The Speaker votes only to break a tie.** Rodrigo Maia (February 2019 to
+  January 2021), Arthur Lira (February 2021 to January 2025) and Hugo Motta
+  (from February 2025) have low participation for that reason; their profile
+  says so.
+- **Board members sign opinions by the thousand.** Members of the Mesa
+  Diretora sign the board's opinions on information requests as rapporteur
+  (PRL): on 2026-11-08, Altineu Côrtes had 10,969 and Marcos Pereira 7,634.
+  Those counts are real but measure administrative work, not bill
+  rapporteurships, so the page compares deputies on bills filed, not on
+  opinions.
+
+The profile ranks a deputy among the legislature's deputies with six months
+or more in office, so a substitute's few weeks don't set the scale. On
+2026-11-08 the median deputy of the 57th legislature had voted in 80% of roll
+calls and filed 20 bills.
+

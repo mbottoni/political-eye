@@ -32,6 +32,11 @@ a { text-underline-offset: 2px; }
 .hero h1 em { font-style: italic; color: var(--line); }
 .hero .lede { font-size: 17px; line-height: 1.6; color: var(--ink2); margin: 0 0 28px; max-width: 600px; text-wrap: pretty; }
 .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+.hero-search { margin: 0 0 34px; }
+.search-label { margin: 0 0 10px; font-size: 14px; font-weight: 600; color: var(--ink); }
+.search-hint { margin: 10px 0 0; font-size: 13px; color: var(--muted); }
+.search-hint a { color: var(--ink2); }
+.hero .dsearch { max-width: 600px; }
 .btn { display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 18px; border-radius: 10px; font-weight: 600; font-size: 14.5px; text-decoration: none; color: var(--ink); border: 1px solid var(--border); background: var(--surface); transition: transform .15s ease, border-color .15s ease; }
 .btn:hover { border-color: color-mix(in srgb, var(--ink) 30%, transparent); transform: translateY(-1px); }
 .btn.primary { background: var(--ink); color: var(--page); border-color: var(--ink); }

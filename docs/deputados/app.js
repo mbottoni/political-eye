@@ -2,8 +2,9 @@
 import { $, asset, brl, css, data, el, fmt, guard, onResize, params, pct, plural, setParam, table, tabs, tiles } from "../lib/ui.js";
 import { GOVERNMENTS } from "../lib/chamber.js";
 import * as C from "../lib/charts.js";
-import { L } from "../lib/i18n.js";
+import { L, month } from "../lib/i18n.js";
 import { setupPage } from "../lib/page.js";
+import { avatar, deputySearch } from "../lib/search.js";
 
 setupPage();
 
@@ -51,6 +52,9 @@ const METRICS = [
   { key: "eigen", label: L("Centralidade na rede de votos", "Co-voting centrality"), fmt: (v) => fmt(v, 2) },
   { key: "cross_share", label: L("Laços de voto com outros partidos", "Co-voting ties across parties"), fmt: (v) => pct(v) },
   { key: "n_votes", label: L("Votos em votações disputadas", "Contested votes cast"), fmt: (v) => fmt(v) },
+  { key: "presenca", label: L("Participação nas votações nominais", "Roll-call participation"), fmt: (v) => pct(v), min: 0, max: 1 },
+  { key: "projetos_autor", label: L("Projetos apresentados como 1º signatário", "Bills filed as first signer"), fmt: (v) => fmt(v) },
+  { key: "propostas_coautor", label: L("Propostas que coassinou", "Proposals co-signed"), fmt: (v) => fmt(v) },
   { key: "emendas_pago", money: true, label: L("Emendas pagas", "Amendments paid"), fmt: (v) => brl(v, 0) },
   { key: "emendas_pago_estado", label: L("Parcela das emendas paga no próprio estado", "Share of amendment money paid in their state"), fmt: (v) => pct(v), min: 0, max: 1 },
   { key: "prefeito_mesmo_partido", label: L("Parcela para municípios com prefeito do partido", "Share of town money to towns their party runs"), fmt: (v) => pct(v), min: 0, max: 1 },
@@ -64,14 +68,23 @@ const METRICS = [
 ];
 const M = Object.fromEntries(METRICS.map((m) => [m.key, m]));
 const SHORT = { with_party: L("Com o partido", "With party"), with_gov: L("Com o governo", "With government"), with_majority: L("Maioria do partido", "With party majority"),
-  pc1: L("Posição de voto", "Voting position"), eigen: L("Centralidade", "Centrality"), cross_share: L("Laços entre partidos", "Cross-party ties"), n_votes: L("Votos dados", "Votes cast"),
+  pc1: L("Posição de voto", "Voting position"), eigen: L("Centralidade", "Centrality"), cross_share: L("Laços entre partidos", "Cross-party ties"), n_votes: L("Votos dados", "Votes cast"), presenca: L("Participação", "Participation"),
+  projetos_autor: L("Projetos (autor)", "Bills filed"), propostas_coautor: L("Coassinou", "Co-signed"),
   emendas_pago: L("Emendas pagas", "Amendments paid"), emendas_pago_estado: L("Pago no estado", "Paid in own state"), prefeito_mesmo_partido: L("Prefeitos do partido", "Own-party towns"),
   prefeito_excesso: L("Prefeitos vs. acaso", "Own-party, over chance"), campanha_total: L("Arrecadação", "Campaign money"), campanha_partido_share: L("Do partido", "From party"),
   campanha_proprios: L("Recursos próprios", "Own money"), campanha_doadores_pf: L("Doadores privados", "Private donors"), grandes_doadores_valor: L("Grandes doadores", "Large donors"),
   sancoes_pago_sancionadas: L("Empresas impedidas", "To barred firms") };
 const NUMERIC = ["meses", "n_votes", "n_party", "with_party", "n_gov", "with_gov", "n_majority", "with_majority", "emendas", "emendas_empenhado", "emendas_pago", "campanha_total", "campanha_partido",
   "campanha_fefc", "campanha_proprios", "campanha_doadores_pf", "pc1", "eigen", "cross_share", "emendas_pago_estado", "emendas_pago_nacional", "grandes_doadores", "grandes_doadores_valor",
-  "sancoes_pago_total", "sancoes_pago_sancionadas", "sancoes_empresas", "prefeito_mesmo_partido", "prefeito_base"];
+  "sancoes_pago_total", "sancoes_pago_sancionadas", "sancoes_empresas", "prefeito_mesmo_partido", "prefeito_base",
+  "presenca", "votacoes_mandato", "propostas_autor", "projetos_autor", "propostas_coautor", "relatorias", "partidos"];
+// Who presided over the Câmara, and when: the president votes only to break a tie.
+const SPEAKERS = { 74693: [["2019-02", "2021-01"]], 160541: [["2021-02", "2025-01"]], 160674: [["2025-02", null]] };
+const KINDS = [["projetos", L("Projetos de lei, PECs, decretos", "Bills, PECs, decrees")], ["relatorias", L("Pareceres e substitutivos", "Opinions and substitutes")],
+  ["emendas", L("Emendas a proposições", "Amendments to bills")], ["fiscalizacao", L("Pedidos de informação", "Information requests")],
+  ["requerimentos", L("Requerimentos e indicações", "Requests and suggestions")], ["outros", L("Outros documentos", "Other documents")]];
+// Rankings compare deputies who served at least six months, so a substitute's few weeks don't set the scale.
+const RANKED = ["presenca", "projetos_autor", "propostas_coautor", "with_gov", "with_party", "cross_share", "emendas_pago", "emendas_pago_estado", "campanha_total"];
 
 let LEGS = [], leg;
 const LEG_NAME = { 57: L("57ª legislatura (2023–2027)", "57th legislature (2023–2027)"), 56: L("56ª legislatura (2019–2023)", "56th legislature (2019–2023)") };
@@ -107,22 +120,24 @@ function openProfile(id) {
 
 async function profile(root) {
   const D = await load();
-  const input = el("input", { type: "search", placeholder: L("Nome…", "Name…"), list: "deplist", autocomplete: "off" });
-  const list = el("datalist", { id: "deplist" }, ...D.rows.map((r) => el("option", { value: r.label })));
   const out = el("div");
-  root.append(el("div", { className: "controls" }, el("label", {}, L("Encontre um deputado", "Find a deputy"), input), list), out);
+  // Any deputy of either legislature: one of this legislature opens here, another reloads on theirs.
+  const search = deputySearch({ label: L("Encontre um deputado", "Find a deputy"),
+    onPick: (d) => { if (D.byId.has(d.id)) { show(d.id); window.scrollTo({ top: 0 }); } else location.search = `?tab=profile&leg=${d.leg}&dep=${d.id}`; } });
+  root.append(el("div", { className: "controls" }, el("label", { style: "flex:1 1 360px" }, L("Encontre um deputado", "Find a deputy"), search)), out);
   const lc = local();
-  input.addEventListener("change", () => {
-    const q = input.value.trim().toLowerCase();
-    const hit = D.rows.find((r) => r.label.toLowerCase() === q) || D.rows.find((r) => r.nome.toLowerCase() === q) || D.rows.find((r) => r.nome.toLowerCase().includes(q));
-    if (hit) show(hit.deputado_id);
-  });
+  const pool = D.rows.filter((x) => (x.meses || 0) >= 6);
+  const rankOf = (k, v) => {
+    const xs = pool.map((x) => x[k]).filter((x) => x != null && !Number.isNaN(x));
+    if (v == null || Number.isNaN(v) || !xs.length) return null;
+    return (xs.filter((x) => x < v).length + xs.filter((x) => x === v).length / 2) / xs.length;
+  };
+  const sectionHead = (sid, text) => el("h3", { className: "dsec", id: sid, textContent: text });
   const show = async (id) => {
     const r = D.byId.get(id);
     if (!r) return;
     setParam("dep", id);
     lc.reset();
-    input.value = "";
     // Start every download at once; each section awaits only its own.
     const years = LEG_YEARS[leg];
     const got = {
@@ -132,18 +147,63 @@ async function profile(root) {
       ideal: data("site/camara/ideal.csv"), nb: data(`site/deputados/vizinhos_${leg}.csv`),
       em: data(`site/deputados/emendas_${leg}.csv`), dest: data(`site/deputados/destinos_${leg}.csv`), entes: data("siconfi/entes.csv"),
       maps: Promise.all([asset("maps/municipios.json"), asset("maps/ufs.json")]), donors: data(`site/deputados/doadores_${leg}.csv`),
+      act: data(`site/deputados/atividade_${leg}.csv`).catch(() => []), kinds: data(`site/deputados/propostas_${leg}.csv`).catch(() => []),
+      co: data(`site/deputados/coautores_${leg}.csv`).catch(() => []), trail: data(`site/deputados/partidos_${leg}.csv`).catch(() => []),
     };
     const med = (k) => D.partyMedian(r.party, k);
     const vs = (k, f) => { const m = med(k); return m == null ? "" : L(`mediana do partido ${f(m)}`, `party median ${f(m)}`); };
     const votes = (v) => L(`${fmt(v)} votos`, `${fmt(v)} votes`);
     const box = el("div");
     out.replaceChildren(box);
-    box.append(el("h2", { textContent: r.label, style: "margin:6px 0 2px" }),
-      el("p", { className: "note" }, L(`${plural(r.meses || 0, "mês", "meses")} na ${LEG_NAME[leg]} · `, `${plural(r.meses || 0, "month")} in the ${LEG_NAME[leg]} · `),
-        el("a", { href: `../orientacoes/?tab=deputy&dep=${id}`, textContent: L("votos mês a mês", "votes month by month") }), " · ",
-        el("a", { href: `https://www.camara.leg.br/deputados/${id}`, textContent: L("perfil na Câmara", "Câmara profile") })));
+    // Who they are
+    const trail = el("p", { className: "trail", hidden: true });
+    const SECTIONS = [["sec-resumo", L("Resumo", "Summary")], ["sec-votos", L("Votações", "Votes")], ["sec-atividade", L("Atividade legislativa", "Legislative work")],
+      ["sec-emendas", L("Emendas", "Amendments")], ["sec-campanha", L("Campanha", "Campaign")]];
+    const legFrom = `${LEG_YEARS[leg][0]}-02`, legTo = `${LEG_YEARS[leg][4]}-01`;
+    const presided = (SPEAKERS[id] || []).filter(([a, b]) => a <= legTo && (b ?? "9999") >= legFrom);
+    box.append(el("div", { className: "dossier", id: "sec-resumo" }, avatar(id, r.nome, 96),
+      el("div", { className: "dhead" },
+        el("h2", { className: "dname", textContent: r.nome }),
+        el("p", { className: "dmeta" }, el("span", { className: "chip", textContent: `${r.party} · ${r.uf}` }), " ",
+          L(`${LEG_NAME[leg]} · ${plural(r.meses || 0, "mês", "meses")} de mandato`, `${LEG_NAME[leg]} · ${plural(r.meses || 0, "month")} in office`)),
+        trail,
+        el("p", { className: "dlinks" }, el("a", { href: `https://www.camara.leg.br/deputados/${id}`, textContent: L("Perfil na Câmara ↗", "Câmara profile ↗") }), " · ",
+          el("a", { href: `../orientacoes/?tab=deputy&dep=${id}`, textContent: L("Votos mês a mês", "Votes month by month") })))),
+    el("nav", { className: "jump", "aria-label": L("Seções do perfil", "Profile sections") }, ...SECTIONS.map(([k, t]) => el("a", { href: `#${k}`, textContent: t,
+      on: { click: (e) => { e.preventDefault(); document.getElementById(k)?.scrollIntoView({ behavior: "smooth", block: "start" }); } } }))));
+    for (const [a, b] of presided) box.append(el("p", { className: "about", textContent: L(`Presidiu a Câmara de ${month(a)} a ${b ? month(b) : "hoje"}. O presidente só vota para desempatar, por isso a participação nas votações não se compara à dos outros deputados.`,
+      `Presided over the Câmara from ${month(a)} to ${b ? month(b) : "today"}. The president votes only to break a tie, so their roll-call participation does not compare with other deputies'.`) }));
+    got.trail.then((T) => {
+      const mineT = T.filter((x) => x.deputado_id === id);
+      if (mineT.length < 2) return;
+      trail.replaceChildren(L("Partidos na legislatura: ", "Parties in this legislature: "), ...mineT.flatMap((x, i) => [i ? " → " : "",
+        el("span", { className: "chip soft", textContent: x.partido === "S.PART." ? L("sem partido", "no party") : partyKey(x.partido), title: `${month(x.de)} – ${month(x.ate)}` })]));
+      trail.hidden = false;
+    });
+
+    // In short, and against everyone else
+    const above = (k) => { const q = rankOf(k, r[k]); return q == null ? "" : L(`acima de ${pct(q)} dos deputados`, `above ${pct(q)} of deputies`); };
+    tiles(box.appendChild(el("section", { className: "tiles" })), [
+      { label: L("Participação nas votações nominais", "Roll-call participation"), value: pct(r.presenca),
+        sub: [above("presenca"), r.votacoes_mandato ? L(`${fmt(r.votacoes_mandato)} votações no período`, `${fmt(r.votacoes_mandato)} roll calls held`) : ""].filter(Boolean).join(" · ") },
+      { label: L("Projetos apresentados", "Bills filed"), value: fmt(r.projetos_autor), sub: [above("projetos_autor"), L("como 1º signatário", "as first signer")].filter(Boolean).join(" · ") },
+      { label: L("Votos com o governo", "Votes with the government"), value: pct(r.with_gov), sub: [above("with_gov"), vs("with_gov", pct)].filter(Boolean).join(" · ") },
+      { label: L("Emendas pagas", "Amendments paid"), value: brl(r.emendas_pago), sub: above("emendas_pago") || L("nenhuma emenda paga", "no amendment paid") },
+    ]);
+    const ranks = el("div", { className: "ranks" });
+    for (const k of RANKED) {
+      const m = M[k], q = rankOf(k, r[k]), pq = rankOf(k, med(k));
+      ranks.append(el("div", { className: "rank" }, el("span", { className: "rl", textContent: m.label }),
+        el("span", { className: "track" }, pq == null ? null : el("i", { className: "ptick", style: `left:${100 * pq}%`, title: L(`mediana do ${r.party}`, `${r.party} median`) }),
+          q == null ? null : el("b", { className: "dot", style: `left:${100 * q}%`, title: r.nome })),
+        el("span", { className: "rv", textContent: r[k] == null ? "–" : m.fmt(r[k]) })));
+    }
+    box.append(card(L("Como se compara", "How they compare"),
+      L(`A posição entre os ${fmt(pool.length)} deputados da legislatura com seis meses ou mais de mandato: menores valores à esquerda, maiores à direita. O traço marca a mediana do ${r.party}.`,
+        `Where they stand among the legislature's ${fmt(pool.length)} deputies with six months or more in office: lowest values on the left, highest on the right. The tick marks the ${r.party} median.`), ranks));
 
     // Votes
+    box.append(sectionHead("sec-votos", L("Votações", "Votes")));
     tiles(box.appendChild(el("section", { className: "tiles" })), [
       { label: L("Com a orientação do partido", "With their party's orientation"), value: pct(r.with_party), sub: `${vs("with_party", pct)} · ${votes(r.n_party)}` },
       { label: L("Com o governo", "With the government"), value: pct(r.with_gov), sub: `${vs("with_gov", pct)} · ${votes(r.n_gov)}` },
@@ -202,13 +262,50 @@ async function profile(root) {
         `${own} of their ${near.length} closest co-voters ${own === 1 ? "is" : "are"} from their own party${own < near.length / 2 ? ": they vote more like other parties' deputies than like their own" : ""}.`)));
     }
 
+    // Legislative work
+    box.append(sectionHead("sec-atividade", L("Atividade legislativa", "Legislative work")));
+    const [act, kinds, co] = await Promise.all([got.act, got.kinds, got.co]);
+    const mineAct = act.filter((x) => x.deputado_id === id).map((x) => ({ month: x.month, votacoes: +x.votacoes, votos: +x.votos, autor: +x.autor, projetos: +x.projetos }));
+    const chamber = new Map();
+    for (const x of act) { if (+x.votacoes < 3) continue; if (!chamber.has(x.month)) chamber.set(x.month, []); chamber.get(x.month).push(+x.votos / +x.votacoes); }
+    const actMonths = mineAct.map((x) => x.month);
+    const c4 = chart(), c5 = chart(), g4 = el("div", { className: "grid2" });
+    g4.append(card(L("Participação mês a mês", "Participation month by month"),
+      L("A parcela das votações nominais de cada mês em que votou, contra a mediana de todos os deputados (cinza). Meses com menos de três votações ficam de fora.",
+        "The share of each month's roll calls they voted in, against the median of all deputies (grey). Months with fewer than three roll calls are left out."), c4),
+    card(L("Propostas apresentadas", "Proposals filed"), L("Por mês, como primeiro signatário: projetos (de lei, de emenda à Constituição, de decreto) e os demais documentos, como requerimentos e pareceres.",
+      "By month, as first signer: bills (laws, constitutional amendments, decrees) and every other document, such as requests and opinions."), c5));
+    box.append(g4);
+    lc.later(() => C.line(c4, { x: "month", height: 220, y: { min: 0, max: 1, format: (v) => pct(v) }, series: [
+      { name: L("Mediana dos deputados", "All deputies' median"), color: css("--other"), width: 1.5, points: actMonths.map((m) => [m, median(chamber.get(m) || [])]) },
+      { name: r.nome, color: C.slot(1), points: mineAct.map((x) => [x.month, x.votacoes >= 3 ? x.votos / x.votacoes : null]) }],
+      empty: L("Nenhuma votação nominal registrada para este deputado.", "No roll call on record for this deputy.") }));
+    lc.later(() => C.stack(c5, { x: actMonths, height: 220, format: (v) => fmt(v), series: [
+      { name: L("Projetos", "Bills"), color: C.slot(1), values: mineAct.map((x) => x.projetos) },
+      { name: L("Outros documentos", "Other documents"), color: C.slot(3), values: mineAct.map((x) => x.autor - x.projetos) }].filter((x) => x.values.some((v) => v > 0)) }));
+    const kk = new Map(kinds.filter((x) => x.deputado_id === id).map((x) => [x.tipo, x]));
+    const c6 = chart(), t6 = el("div"), g5 = el("div", { className: "grid2" });
+    g5.append(card(L("Que tipo de proposta", "What kind of proposal"),
+      L("Como primeiro signatário, ao longo da legislatura; ao lado, quantas coassinou. Membros da Mesa Diretora assinam milhares de pareceres sobre pedidos de informação, que não são relatorias de projetos.",
+        "As first signer, over the legislature; beside each, how many they co-signed. Members of the Câmara's board sign thousands of opinions on information requests, which are not bill rapporteurships."), c6),
+    card(L("Com quem mais assina", "Who they sign with most"), L("Os deputados com quem mais dividiu propostas. Abaixo-assinados (mais de 50 signatários) ficam de fora.",
+      "The deputies they shared the most proposals with. Signature drives (over 50 signers) are left out."), t6));
+    box.append(g5);
+    lc.later(() => C.bars(c6, { rows: KINDS.map(([k, label]) => ({ label, value: +(kk.get(k)?.autor || 0),
+      note: L(`${fmt(+(kk.get(k)?.coautor || 0))} coassinadas`, `${fmt(+(kk.get(k)?.coautor || 0))} co-signed`), color: k === "projetos" ? C.slot(1) : css("--other") })), format: (v) => fmt(v), labelWidth: 240 }));
+    const coRows = co.filter((x) => x.deputado_id === id).map((x) => { const o = D.byId.get(x.outro_id); return { who: o?.label || x.outro_id, other: o, party: o?.party || "", n: +x.n }; });
+    if (coRows.length) table(t6, coRows, [{ key: "who", label: L("Deputado", "Deputy"), text: true, wrap: true, fmt: (v, x) => (x.other ? profileLink(x.other) : v) },
+      { key: "party", label: L("Partido", "Party"), text: true }, { key: "n", label: L("Propostas em comum", "Shared proposals"), fmt: (v) => fmt(v) }], { search: false, pageSize: 8, name: `cosigners-${id}` });
+    else t6.append(el("p", { className: "empty", textContent: L("Nenhuma proposta coassinada nesta legislatura.", "No co-signed proposal in this legislature.") }));
+
     // Amendments
+    box.append(sectionHead("sec-emendas", L("Emendas", "Amendments")));
     const [E, dest, entes] = await Promise.all([got.em, got.dest, got.entes]);
     const mine = E.filter((x) => x.pessoa === r.pessoa), places = dest.filter((x) => x.pessoa === r.pessoa);
     const ente = new Map(entes.map((x) => [x.cod_ibge, x]));
     const budgetYears = [...new Set(E.map((x) => +x.ano))].sort((a, b) => a - b);
     const am = el("div");
-    box.append(card(L("Emendas", "Amendments"), L(`O que destinou por meio de emendas aos orçamentos de ${budgetYears[0]} a ${budgetYears[budgetYears.length - 1]}, pelo valor pago até agora.`,
+    box.append(card(L("Para onde mandou dinheiro", "Where they sent money"), L(`O que destinou por meio de emendas aos orçamentos de ${budgetYears[0]} a ${budgetYears[budgetYears.length - 1]}, pelo valor pago até agora.`,
       `What they directed through amendments to the ${budgetYears[0]}–${budgetYears[budgetYears.length - 1]} budgets, as paid so far.`), am));
     if (!mine.length) am.append(el("p", { className: "empty", textContent: L("Nenhuma emenda ligada a este deputado nestes orçamentos.", "No amendment linked to this deputy for these budgets.") }));
     else {
@@ -254,6 +351,7 @@ async function profile(root) {
     }
 
     // Campaign
+    box.append(sectionHead("sec-campanha", L("Campanha", "Campaign")));
     const cp = el("div");
     box.append(card(L("A campanha que levou à Câmara", "The campaign that elected them"),
       L(`A campanha a deputado federal em ${leg === 57 ? 2022 : 2018}, como declarada à Justiça Eleitoral.`, `Their federal-deputy campaign in ${leg === 57 ? 2022 : 2018}, as declared to the electoral court.`), cp));

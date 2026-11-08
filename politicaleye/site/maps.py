@@ -53,22 +53,26 @@ def _polygons(geom: dict) -> list[list[list[int]]]:
     return []
 
 
-def build(level: str, topo: dict) -> dict:
+def _rings(topo: dict) -> dict[str, list[list[tuple[float, float]]]]:
     arcs = _arcs(topo)
     obj = next(iter(topo["objects"].values()))
+    return {str(g["properties"]["codarea"]): [_ring(arcs, r) for poly in _polygons(g) for r in poly] for g in obj["geometries"]}
+
+
+def extent(*meshes: dict) -> tuple[float, float, float, float]:
+    """Projected bounds (x0, x1, y0, y1) over every ring of every mesh given."""
+    k = math.cos(math.radians(LAT0))
+    pts = [p for rings_by in meshes for rings in rings_by.values() for r in rings for p in r]
+    xs, ys = [p[0] * k for p in pts], [-p[1] for p in pts]
+    return min(xs), max(xs), min(ys), max(ys)
+
+
+def build(level: str, topo: dict, bounds: tuple[float, float, float, float] | None = None) -> dict:
+    """Paths for one mesh. Pass the same ``bounds`` to several meshes so they overlay exactly."""
+    rings_by = _rings(topo)
     k = math.cos(math.radians(LAT0))
     shapes = {}
-    allpts = []
-    rings_by = {}
-    for g in obj["geometries"]:
-        code = str(g["properties"]["codarea"])
-        rings = [_ring(arcs, r) for poly in _polygons(g) for r in poly]
-        rings_by[code] = rings
-        for r in rings:
-            allpts.extend(r)
-    xs = [p[0] * k for p in allpts]
-    ys = [-p[1] for p in allpts]
-    x0, x1, y0, y1 = min(xs), max(xs), min(ys), max(ys)
+    x0, x1, y0, y1 = bounds or extent(rings_by)
     s = WIDTH / (x1 - x0)
     height = round((y1 - y0) * s, 1)
 
@@ -97,11 +101,14 @@ def build(level: str, topo: dict) -> dict:
 
 def write(out: Path = REPO / "docs" / "lib" / "maps") -> None:
     out.mkdir(parents=True, exist_ok=True)
-    for level, name in (("municipio", "municipios"), ("UF", "ufs")):
-        topo = get_json(MALHA.format(level=level), attempts=6, timeout=180)
-        if not topo:
+    topos = {}
+    for level in ("municipio", "UF"):
+        topos[level] = get_json(MALHA.format(level=level), attempts=6, timeout=180)
+        if not topos[level]:
             raise RuntimeError(f"IBGE mesh {level}: empty")
-        m = build(level, topo)
+    bounds = extent(*(_rings(t) for t in topos.values()))   # one frame for both, so state outlines sit on the towns
+    for level, name in (("municipio", "municipios"), ("UF", "ufs")):
+        m = build(level, topos[level], bounds)
         p = out / f"{name}.json"
         p.write_text(json.dumps(m, separators=(",", ":")))
         log(f"maps: {name}.json, {len(m['shapes'])} shapes, {p.stat().st_size:,} bytes")

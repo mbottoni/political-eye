@@ -44,3 +44,35 @@ Amendments applied to several municipalities, to a whole state or nationally
 are not split among towns, so a town's amendment money here is a lower
 bound. Siconfi columns fill in as its history is read
 ([siconfi.md](siconfi.md#source)).
+
+## The deputies page: `data/site/deputados/`
+
+Built by `python -m politicaleye site build deputados` (in the weekly `ref`
+workflow, after the views) for [the deputies page](https://mbottoni.github.io/political-eye/deputados/).
+`deputados_<leg>.csv` is the view above plus:
+
+| columns | meaning |
+|---|---|
+| `pc1`, `eigen` | mean over the legislature's months of the deputy's position on the first principal component of the roll calls (PT's side negative) and of their eigenvector centrality in the co-voting graph ([camara.md](camara.md)) |
+| `cross_share` | of their co-voting ties over those months, the share to deputies of another party |
+| `emendas_pago_estado`, `emendas_pago_nacional` | of their amendment money paid, the share applied in their own state and the share with no state (national programmes) |
+| `grandes_doadores`, `grandes_doadores_valor` | donors of R$50,000 or more to the campaign that elected them, and what they gave |
+| `sancoes_pago_total`, `sancoes_pago_sancionadas`, `sancoes_empresas` | from the sanctions page ([sancoes.md](sancoes.md)): amendment money paid, and paid to companies while under a barring sanction, every budget since 2015 |
+| `prefeito_mesmo_partido` | of their amendment money that reached a town (payments table, recipient's town), the share paid in a year when that town's mayor ([ref.md](ref.md), `prefeitos.csv`) was of the deputy's party in the month of the payment |
+| `prefeito_base` | the same share by chance: the share of the deputy's own state's towns that party ran that year, averaged over the same payments |
+
+Parties are matched under one name per party as it stood in the year of the
+payment: spellings and renamings are unified (PMDB is MDB, PR is PL), and
+mergers count from the year they happened (DEM and PSL are UNIÃO from 2022,
+PTB and PATRIOTA are PRD from 2024). Sending more than chance to towns run
+by one's party is an association: those mayors may also ask more, or run
+larger towns.
+
+`vizinhos_<leg>.csv` lists each deputy's eight closest and eight furthest
+co-voters over the legislature: pairs that both voted on at least 50
+contested roll calls, ranked by the Wilson score interval of the share they
+voted the same way (the lower bound for the closest, the upper for the
+furthest), so that 480 agreements out of 500 outrank 50 out of 52.
+`emendas_<leg>.csv`, `destinos_<leg>.csv` and `doadores_<leg>.csv` hold
+each deputy's amendments by year and type, the towns their amendment money
+was paid to, and their campaign's large donors (CPF masked).

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deputies Across Sources · political-eye</title>
+<meta name="description" content="Every federal deputy in one place: how they vote, whom they vote with, the amendment money they sent and where, and the campaign that elected them.">
+<link rel="stylesheet" href="../lib/site.css">
+</head>
+<body>
+<main>
+  <header>
+    <p class="crumb"><a href="../">political-eye</a> / Deputies across sources</p>
+    <h1>Deputies across sources</h1>
+    <p>Each of Brazil's 513 federal deputies leaves traces in several public records: the Câmara's roll calls, the federal budget's amendments, and the electoral court's campaign accounts. This page joins them for each deputy of the current and the previous legislature: how they vote and whom they vote with, the amendment money they sent and where it landed, and who paid for the campaign that elected them. Then it compares all deputies at once.</p>
+  </header>
+  <div class="controls" id="legislature"></div>
+  <nav class="tabs">
+    <button data-tab="profile">One deputy</button>
+    <button data-tab="compare">Compare deputies</button>
+    <button data-tab="parties">Parties</button>
+    <button data-tab="outliers">Stand-outs</button>
+  </nav>
+  <section id="tab-profile" role="tabpanel"></section>
+  <section id="tab-compare" role="tabpanel" hidden></section>
+  <section id="tab-parties" role="tabpanel" hidden></section>
+  <section id="tab-outliers" role="tabpanel" hidden></section>
+  <footer>
+    Votes: contested Plenário roll calls (at least 2.5% of votes on the losing side), pooled over the legislature. "With their party" is how often a deputy followed their party leader's orientation; "with the government", the government leader's. Voting position is the first principal component of each month's votes, with PT's side negative. Amendments: those the deputy authored for the budgets their legislature approved (2024–2027 for the 57th, 2020–2023 for the 56th), as paid so far. Campaign: their federal-deputy campaign in the election that chose the legislature. People are linked across sources through the politicians crosswalk; a deputy missing from a source has nothing there or could not be linked. Rules and gaps: <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/views.md">methodology/views.md</a>. Sources: Câmara dos Deputados, Portal da Transparência (CGU), TSE.
+  </footer>
+</main>
+<noscript>This page needs JavaScript. The data is at <a href="https://github.com/mbottoni/political-eye/tree/main/data/views">github.com/mbottoni/political-eye</a>.</noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

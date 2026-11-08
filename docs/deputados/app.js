@@ -1,0 +1,408 @@
+// Deputies across sources: votes, co-voters, amendments and campaign money, per deputy and compared.
+import { $, asset, brl, css, data, el, fmt, guard, onResize, params, pct, plural, setParam, table, tabs, tiles } from "../lib/ui.js";
+import { GOVERNMENTS } from "../lib/chamber.js";
+import * as C from "../lib/charts.js";
+
+const TYPES = [["individual", "Individual"], ["especial", "Individual “Pix”"], ["bancada", "State bench"], ["comissao", "Committee"], ["relator", "Rapporteur"]];
+const UF_CODE = { RO: "11", AC: "12", AM: "13", RR: "14", PA: "15", AP: "16", TO: "17", MA: "21", PI: "22", CE: "23", RN: "24", PB: "25", PE: "26", AL: "27", SE: "28", BA: "29",
+  MG: "31", ES: "32", RJ: "33", SP: "35", PR: "41", SC: "42", RS: "43", MS: "50", MT: "51", GO: "52", DF: "53" };
+const typeColor = (t) => C.slot(TYPES.findIndex(([k]) => k === t) + 1);
+const GAP = [{ from: "2025-02", to: "2025-10", label: "one bloc gave no orientation" }];
+const ALIASES = { SOLIDARIED: "SOLIDARIEDADE", SOLIDARI: "SOLIDARIEDADE", SD: "SOLIDARIEDADE", SDD: "SOLIDARIEDADE", REPUBLICAN: "REPUBLICANOS",
+  REPUBLIC: "REPUBLICANOS", PODEMOS: "PODE", PATRI: "PATRIOTA", "PP**": "PP", PMDB: "MDB", PR: "PL", PPS: "CIDADANIA", PTN: "PODE",
+  PEN: "PATRIOTA", PTDOB: "AVANTE", PSDC: "DC", PRB: "REPUBLICANOS" };
+const partyKey = (label) => { const k = String(label || "").trim().toUpperCase(); return ALIASES[k] || k; };
+const partyColor = (p) => (partyKey(p) === "PT" ? css("--a") : partyKey(p) === "PL" ? css("--b") : css("--other"));
+const PARTY_LEGEND = () => [{ label: "PT", color: css("--a"), shape: "dot" }, { label: "PL", color: css("--b"), shape: "dot" }, { label: "Other parties", color: css("--other"), shape: "dot" }];
+
+const card = (title, note, ...kids) => el("div", { className: "card wide" }, el("h2", { textContent: title }), note ? el("p", { className: "note", textContent: note }) : null, ...kids);
+const chart = () => el("div", { className: "chart" });
+const finding = (text) => el("p", { className: "finding", textContent: text });
+const select = (label, options, value, onChange) => {
+  const s = el("select", {}, ...options.map((o) => el("option", { value: o.value ?? o, textContent: o.label ?? o, selected: String(o.value ?? o) === String(value) })));
+  s.addEventListener("change", () => onChange(s.value));
+  return el("label", {}, label, s);
+};
+const sum = (xs) => xs.reduce((a, b) => a + b, 0);
+const median = (xs) => { const v = xs.filter((x) => x != null && !Number.isNaN(x)).sort((a, b) => a - b); return v.length ? (v[Math.floor((v.length - 1) / 2)] + v[Math.ceil((v.length - 1) / 2)]) / 2 : null; };
+const n = (v) => (v === "" || v == null ? null : +v);
+const redraws = [];
+const later = (f) => { redraws.push(f); f(); };
+function local() {
+  const mine = [];
+  redraws.push(() => mine.forEach((f) => f()));
+  return { later: (f) => { mine.push(f); f(); }, reset: () => { mine.length = 0; } };
+}
+
+// The measures a deputy can be compared on; derived ones are computed in load().
+const METRICS = [
+  { key: "with_party", label: "With their party's orientation", fmt: (v) => pct(v), min: 0, max: 1 },
+  { key: "with_gov", label: "With the government", fmt: (v) => pct(v), min: 0, max: 1 },
+  { key: "with_majority", label: "With their party's majority", fmt: (v) => pct(v), min: 0, max: 1 },
+  { key: "pc1", label: "Voting position (PT's side negative)", fmt: (v) => fmt(v, 2) },
+  { key: "eigen", label: "Co-voting centrality", fmt: (v) => fmt(v, 2) },
+  { key: "cross_share", label: "Co-voting ties across parties", fmt: (v) => pct(v) },
+  { key: "n_votes", label: "Contested votes cast", fmt: (v) => fmt(v) },
+  { key: "emendas_pago", money: true, label: "Amendments paid", fmt: (v) => brl(v, 0) },
+  { key: "emendas_pago_estado", label: "Share of amendment money paid in their state", fmt: (v) => pct(v), min: 0, max: 1 },
+  { key: "prefeito_mesmo_partido", label: "Share of town money to towns their party runs", fmt: (v) => pct(v), min: 0, max: 1 },
+  { key: "prefeito_excesso", label: "…above chance (points)", fmt: (v) => fmt(100 * v, 0) },
+  { key: "campanha_total", money: true, label: "Campaign money", fmt: (v) => brl(v, 0) },
+  { key: "campanha_partido_share", label: "Share of campaign money from their party", fmt: (v) => pct(v), min: 0, max: 1 },
+  { key: "campanha_proprios", money: true, label: "Own money in their campaign", fmt: (v) => brl(v, 0) },
+  { key: "campanha_doadores_pf", label: "Private donors to their campaign", fmt: (v) => fmt(v) },
+  { key: "grandes_doadores_valor", money: true, label: "Campaign money from donors of R$50k+", fmt: (v) => brl(v, 0) },
+  { key: "sancoes_pago_sancionadas", money: true, label: "Amendment money paid to barred companies (since 2015)", fmt: (v) => brl(v, 0) },
+];
+const M = Object.fromEntries(METRICS.map((m) => [m.key, m]));
+const SHORT = { with_party: "With party", with_gov: "With government", with_majority: "With party majority", pc1: "Voting position", eigen: "Centrality", cross_share: "Cross-party ties", n_votes: "Votes cast",
+  emendas_pago: "Amendments paid", emendas_pago_estado: "Paid in own state", prefeito_mesmo_partido: "Own-party towns", prefeito_excesso: "Own-party, over chance", campanha_total: "Campaign money", campanha_partido_share: "From party", campanha_proprios: "Own money",
+  campanha_doadores_pf: "Private donors", grandes_doadores_valor: "Large donors", sancoes_pago_sancionadas: "To barred firms" };
+const NUMERIC = ["meses", "n_votes", "n_party", "with_party", "n_gov", "with_gov", "n_majority", "with_majority", "emendas", "emendas_empenhado", "emendas_pago", "campanha_total", "campanha_partido",
+  "campanha_fefc", "campanha_proprios", "campanha_doadores_pf", "pc1", "eigen", "cross_share", "emendas_pago_estado", "emendas_pago_nacional", "grandes_doadores", "grandes_doadores_valor",
+  "sancoes_pago_total", "sancoes_pago_sancionadas", "sancoes_empresas", "prefeito_mesmo_partido", "prefeito_base"];
+
+let LEGS = [], leg;
+const LEG_NAME = { 57: "57th legislature (2023–2027)", 56: "56th legislature (2019–2023)" };
+const LEG_YEARS = { 57: [2023, 2024, 2025, 2026, 2027], 56: [2019, 2020, 2021, 2022, 2023] };
+const cache = new Map();
+async function load(l = leg) {
+  if (!cache.has(l)) {
+    const rows = await data(`site/deputados/deputados_${l}.csv`);
+    for (const r of rows) {
+      for (const k of NUMERIC) r[k] = n(r[k]);
+      r.campanha_partido_share = r.campanha_total ? r.campanha_partido / r.campanha_total : null;
+      r.prefeito_excesso = r.prefeito_mesmo_partido == null ? null : r.prefeito_mesmo_partido - r.prefeito_base;
+      r.party = partyKey(r.partido);
+      r.label = `${r.nome} (${r.party}-${r.uf})`;
+    }
+    const byId = new Map(rows.map((r) => [r.deputado_id, r]));
+    const parties = new Map();
+    for (const r of rows) { if (!parties.has(r.party)) parties.set(r.party, []); parties.get(r.party).push(r); }
+    cache.set(l, { rows, byId, parties, partyMedian: (p, k) => median((parties.get(p) || []).map((r) => r[k])) });
+  }
+  return cache.get(l);
+}
+const profileLink = (r) => el("a", { href: `?leg=${leg}&dep=${r.deputado_id}`, textContent: r.label, on: { click: (ev) => { ev.preventDefault(); openProfile(r.deputado_id); } } });
+let showDeputy = null;   // set by the profile tab once it is drawn
+function openProfile(id) {
+  setParam("dep", id);
+  if (showDeputy) showDeputy(id);
+  $("nav.tabs button[data-tab=profile]").click();
+  window.scrollTo({ top: 0 });
+}
+
+// ------------------------------------------------------------ one deputy
+
+async function profile(root) {
+  const D = await load();
+  const input = el("input", { type: "search", placeholder: "Name…", list: "deplist", autocomplete: "off" });
+  const list = el("datalist", { id: "deplist" }, ...D.rows.map((r) => el("option", { value: r.label })));
+  const out = el("div");
+  root.append(el("div", { className: "controls" }, el("label", {}, "Find a deputy", input), list), out);
+  const L = local();
+  input.addEventListener("change", () => {
+    const q = input.value.trim().toLowerCase();
+    const hit = D.rows.find((r) => r.label.toLowerCase() === q) || D.rows.find((r) => r.nome.toLowerCase() === q) || D.rows.find((r) => r.nome.toLowerCase().includes(q));
+    if (hit) show(hit.deputado_id);
+  });
+  const show = async (id) => {
+    const r = D.byId.get(id);
+    if (!r) return;
+    setParam("dep", id);
+    L.reset();
+    input.value = "";
+    // Start every download at once; each section awaits only its own.
+    const years = LEG_YEARS[leg];
+    const got = {
+      parties: data("site/orientacoes/partidos.csv"),
+      monthly: Promise.all(years.map((y) => data(`site/orientacoes/deputados_mes/${y}.csv`).catch(() => []))),
+      members: Promise.all(years.map((y) => data(`site/camara/members/${y}.csv`).catch(() => []))),
+      ideal: data("site/camara/ideal.csv"), nb: data(`site/deputados/vizinhos_${leg}.csv`),
+      em: data(`site/deputados/emendas_${leg}.csv`), dest: data(`site/deputados/destinos_${leg}.csv`), entes: data("siconfi/entes.csv"),
+      maps: Promise.all([asset("maps/municipios.json"), asset("maps/ufs.json")]), donors: data(`site/deputados/doadores_${leg}.csv`),
+    };
+    const med = (k) => D.partyMedian(r.party, k);
+    const vs = (k, f) => { const m = med(k); return m == null ? "" : `party median ${f(m)}`; };
+    const box = el("div");
+    out.replaceChildren(box);
+    box.append(el("h2", { textContent: r.label, style: "margin:6px 0 2px" }),
+      el("p", { className: "note" }, `${plural(r.meses || 0, "month")} in the ${LEG_NAME[leg]} · `,
+        el("a", { href: `../orientacoes/?tab=deputy&dep=${id}`, textContent: "votes month by month" }), " · ",
+        el("a", { href: `https://www.camara.leg.br/deputados/${id}`, textContent: "Câmara profile" })));
+
+    // Votes
+    tiles(box.appendChild(el("section", { className: "tiles" })), [
+      { label: "With their party's orientation", value: pct(r.with_party), sub: `${vs("with_party", pct)} · ${fmt(r.n_party)} votes` },
+      { label: "With the government", value: pct(r.with_gov), sub: `${vs("with_gov", pct)} · ${fmt(r.n_gov)} votes` },
+      { label: "Voting position", value: r.pc1 == null ? "–" : fmt(r.pc1, 2), sub: `${vs("pc1", (v) => fmt(v, 2))}; PT's side is negative` },
+      { label: "Co-voting ties across parties", value: pct(r.cross_share), sub: `${vs("cross_share", pct)} · centrality ${fmt(r.eigen, 2)}` },
+    ]);
+    const [P, monthly, members, ideal] = await Promise.all([got.parties, got.monthly.then((xs) => xs.flat().filter((x) => x.deputado_id === id)),
+      got.members.then((xs) => xs.flat().filter((x) => x.id === id)), got.ideal]);
+    const pg = new Map(P.map((x) => [`${partyKey(x.partido)}|${x.month}`, x]));
+    const c1 = chart(), c2 = chart(), g = el("div", { className: "grid2" });
+    g.append(card("Month by month", "Their share of votes with the government and with their party's orientation; in grey, the government support of the party they were in that month.", c1),
+      card("Where they sit on the main voting divide", "Their position each month on the first dimension of the roll calls (PT's side negative), against the middle half (shaded) and the median of the party they were in that month.", c2));
+    box.append(g);
+    L.later(() => C.line(c1, {
+      x: "month", y: { min: 0, max: 1, format: (v) => pct(v) }, marks: GOVERNMENTS, bands: GAP, height: 240,
+      series: [
+        { name: "Their party with the government", color: css("--other"), width: 1.5, points: monthly.map((x) => [x.month, n(pg.get(`${partyKey(x.partido)}|${x.month}`)?.with_gov)]) },
+        { name: "With the government", color: C.slot(1), points: monthly.map((x) => [x.month, n(x.with_gov)]) },
+        { name: "With their party", color: C.slot(2), points: monthly.map((x) => [x.month, n(x.with_party)]) },
+      ],
+      empty: "No contested votes in this legislature.",
+    }));
+    const band = new Map(ideal.map((x) => [`${x.partido}|${x.month}`, x]));
+    L.later(() => C.line(c2, {
+      x: "month", height: 240, y: { format: (v) => fmt(v, 1) }, marks: GOVERNMENTS,
+      series: [
+        { name: "Their party's median", color: css("--other"), width: 1.5, band: members.map((x) => { const b = band.get(`${x.partido}|${x.month}`); return b ? [x.month, +b.q25, +b.q75] : [x.month, null, null]; }),
+          points: members.map((x) => [x.month, n(band.get(`${x.partido}|${x.month}`)?.median)]) },
+        { name: r.nome, color: C.slot(1), points: members.map((x) => [x.month, n(x.pc1)]) },
+      ],
+      empty: "Not in the co-voting graph in this legislature.",
+    }));
+
+    // Co-voters
+    const nb = (await got.nb).filter((x) => x.deputado_id === id);
+    const t1 = el("div"), t2 = el("div"), g2 = el("div", { className: "grid2" });
+    g2.append(card("Votes most like theirs", "Deputies who voted the same way most often, over the contested roll calls both voted on (at least 50); ranked so a long record outweighs a short one.", t1),
+      card("Votes least like theirs", "Deputies who voted the other way most often.", t2));
+    box.append(g2);
+    const nbCols = [{ key: "who", label: "Deputy", text: true, wrap: true, fmt: (v, x) => (x.other ? profileLink(x.other) : v) }, { key: "party", label: "Party", text: true }, { key: "n", label: "Votes" }, { key: "concordancia", label: "Same way", fmt: (v) => pct(v) }];
+    const nbRows = (kind) => nb.filter((x) => x.tipo === kind).map((x) => { const o = D.byId.get(x.outro_id); return { who: o?.label || x.outro_id, party: o?.party || "", other: o, n: +x.n, concordancia: +x.concordancia }; });
+    const near = nbRows("perto"), far = nbRows("longe");
+    table(t1, near, nbCols, { search: false, pageSize: 8, name: `closest-${id}` });
+    table(t2, far, nbCols, { search: false, pageSize: 8, name: `furthest-${id}` });
+    if (near.length) {
+      const own = near.filter((x) => x.other && x.other.party === r.party).length;
+      g2.after(finding(`${own} of their ${near.length} closest co-voters ${own === 1 ? "is" : "are"} from their own party${own < near.length / 2 ? ": they vote more like other parties' deputies than like their own" : ""}.`));
+    }
+
+    // Amendments
+    const [E, dest, entes] = await Promise.all([got.em, got.dest, got.entes]);
+    const mine = E.filter((x) => x.pessoa === r.pessoa), places = dest.filter((x) => x.pessoa === r.pessoa);
+    const ente = new Map(entes.map((x) => [x.cod_ibge, x]));
+    const budgetYears = [...new Set(E.map((x) => +x.ano))].sort((a, b) => a - b);
+    const am = el("div");
+    box.append(card("Amendments", `What they directed through amendments to the ${budgetYears[0]}–${budgetYears[budgetYears.length - 1]} budgets, as paid so far.`, am));
+    if (!mine.length) am.append(el("p", { className: "empty", textContent: "No amendment linked to this deputy for these budgets." }));
+    else {
+      const sanc = r.sancoes_pago_sancionadas;
+      tiles(am.appendChild(el("section", { className: "tiles" })), [
+        { label: "Amendments", value: fmt(r.emendas), sub: `${brl(r.emendas_empenhado)} committed` },
+        { label: "Paid so far", value: brl(r.emendas_pago), sub: `party median ${brl(med("emendas_pago"))}` },
+        { label: `Paid in ${r.uf}`, value: pct(r.emendas_pago_estado), sub: `${pct(r.emendas_pago_nacional)} to national programmes` },
+        { label: "Paid to barred companies", value: brl(sanc), sub: sanc ? `${plural(r.sancoes_empresas, "company", "companies")} under a CEIS or CNEP sanction, every budget since 2015` : "every budget since 2015" },
+      ]);
+      if (r.prefeito_mesmo_partido != null) am.append(finding(`${pct(r.prefeito_mesmo_partido)} of the money that reached a town went to towns whose mayor was from their party that year. By chance it would be ${pct(r.prefeito_base)}: the share of ${r.uf}'s towns their party ran.`));
+      const c3 = chart(), mbox = chart(), side = el("div"), g3 = el("div", { className: "grid2" });
+      const home = UF_CODE[r.uf] || "";
+      const paidAll = sum(places.map((x) => +x.pago)), outside = sum(places.filter((x) => x.uf !== r.uf).map((x) => +x.pago));
+      const towns = places.filter((x) => x.municipio_ibge && x.municipio_ibge.startsWith(home));
+      am.append(c3, g3);
+      if (towns.length) g3.append(el("div", {}, el("h2", { textContent: `Where the money landed in ${r.uf}`, style: "font-size:14px" }), el("p", { className: "note", textContent: `Payments on these amendments, by the recipient's town. ${pct(outside / Math.max(paidAll, 1))} went to recipients outside ${r.uf} (Brasília's federal bodies among them): see the table.` }), mbox), side);
+      else g3.append(side, el("p", { className: "note", textContent: `No payment on these amendments went to a town in ${r.uf}, so there is no map.` }));
+      L.later(() => C.stack(c3, { x: budgetYears, height: 200, format: (v) => brl(v, 0),
+        series: TYPES.map(([t, name]) => ({ name, color: typeColor(t), values: budgetYears.map((y) => sum(mine.filter((x) => +x.ano === y && x.tipo === t).map((x) => +x.pago))) })).filter((s) => s.values.some((v) => v > 0)) }));
+      const [mun, ufs] = await got.maps;
+      const val = new Map(towns.map((x) => [x.municipio_ibge, +x.pago]));
+      const vmax = Math.max(...val.values(), 1);
+      if (towns.length) L.later(() => {
+        const shapes = Object.fromEntries(Object.entries(mun.shapes).filter(([c]) => c.startsWith(home)));
+        C.choropleth(mbox, { shapes, viewBox: mun.viewBox, outline: { [home]: ufs.shapes[home] }, outlineWidth: 1.2, fit: true, maxHeight: 440, value: (c) => val.get(c) ?? null, color: (v) => C.seq(0.1 + 0.9 * Math.sqrt(v / vmax)),
+          tip: (c, v) => { const e = ente.get(c); return [el("strong", { textContent: e ? `${e.ente} (${e.uf})` : c }), el("div", { className: "row", textContent: v == null ? "nothing from their amendments" : `${brl(v)} paid to recipients here` })]; },
+          title: "Where their amendment money landed" });
+        C.colorKey(mbox, { color: (t) => C.seq(0.1 + 0.9 * t), from: "less", to: brl(vmax), label: "paid, by town" });
+      });
+      const placeName = (x) => (x.municipio_ibge ? `${ente.get(x.municipio_ibge)?.ente || x.municipio_ibge} (${x.uf})` : x.uf ? `Somewhere in ${x.uf} (town not matched)` : "No place given");
+      const ts = el("div");
+      side.append(el("h2", { textContent: "Every place", style: "font-size:14px" }), ts);
+      table(ts, places.map((x) => ({ place: placeName(x), pago: +x.pago })), [{ key: "place", label: "Place", text: true, wrap: true }, { key: "pago", label: "Paid", fmt: (v) => brl(v) }], { pageSize: 10, sortBy: "pago", name: `places-${id}` });
+    }
+
+    // Campaign
+    const cp = el("div");
+    box.append(card("The campaign that elected them", `Their federal-deputy campaign in ${leg === 57 ? 2022 : 2018}, as declared to the electoral court.`, cp));
+    if (r.campanha_total == null) cp.append(el("p", { className: "empty", textContent: "No federal-deputy campaign linked to this deputy." }));
+    else {
+      tiles(cp.appendChild(el("section", { className: "tiles" })), [
+        { label: "Raised", value: brl(r.campanha_total), sub: `party median ${brl(med("campanha_total"))} · ${r.campanha_resultado.toLowerCase()}` },
+        { label: "From their party", value: pct(r.campanha_partido_share), sub: `${brl(r.campanha_fefc)} from the public campaign fund (FEFC)` },
+        { label: "Own money", value: brl(r.campanha_proprios), sub: pct(r.campanha_proprios / r.campanha_total, 1) },
+        { label: "Private donors", value: fmt(r.campanha_doadores_pf), sub: r.grandes_doadores ? `${plural(r.grandes_doadores, "donor")} of R$50k+ gave ${brl(r.grandes_doadores_valor)}` : "none gave R$50k or more" },
+      ]);
+      const donors = (await got.donors).filter((x) => x.pessoa === r.pessoa);
+      if (donors.length) {
+        const td = el("div");
+        cp.append(el("h2", { textContent: "Donors of R$50,000 or more", style: "font-size:14px" }), td);
+        table(td, donors.map((x) => ({ ...x, valor: +x.valor })), [{ key: "nome", label: "Donor", text: true, wrap: true }, { key: "doador", label: "CPF (masked)", text: true }, { key: "valor", label: "Gave", fmt: (v) => brl(v) }], { search: false, pageSize: 10, sortBy: "valor", name: `donors-${id}` });
+      }
+    }
+  };
+  showDeputy = show;
+  const start = D.byId.has(params.get("dep")) ? params.get("dep") : [...D.rows].sort((a, b) => (b.n_votes || 0) - (a.n_votes || 0))[0].deputado_id;
+  await show(start);
+}
+
+// ------------------------------------------------------------ compare
+
+function spearman(xs, ys) {
+  const rank = (v) => { const s = v.map((x, i) => [x, i]).sort((a, b) => a[0] - b[0]), r = new Array(v.length); let i = 0;
+    while (i < s.length) { let j = i; while (j + 1 < s.length && s[j + 1][0] === s[i][0]) j++; for (let k = i; k <= j; k++) r[s[k][1]] = (i + j) / 2; i = j + 1; } return r; };
+  const rx = rank(xs), ry = rank(ys), N = xs.length, m = (N - 1) / 2;
+  const num_ = sum(rx.map((v, i) => (v - m) * (ry[i] - m))), den = Math.sqrt(sum(rx.map((v) => (v - m) ** 2)) * sum(ry.map((v) => (v - m) ** 2)));
+  return den ? num_ / den : null;
+}
+const complete = (rows, a, b) => rows.filter((r) => r[a] != null && r[b] != null && !Number.isNaN(r[a]) && !Number.isNaN(r[b]) && (r.n_votes || 0) >= 50);
+
+async function compare(root) {
+  const D = await load(), L = local();
+  const may = D.rows.filter((r) => r.prefeito_mesmo_partido != null && r.emendas_pago >= 1e6);
+  if (may.length) {
+    const w = (k) => sum(may.map((r) => r[k] * r.emendas_pago)) / sum(may.map((r) => r.emendas_pago));
+    const above = may.filter((r) => r.prefeito_mesmo_partido > r.prefeito_base).length;
+    const cm = chart(), hi = Math.min(1, Math.ceil(10 * Math.max(...may.map((r) => r.prefeito_base), 0.2) + 0.5) / 10);
+    root.append(card("Do deputies send money to towns their own party runs?", "Each dot is a deputy with R$1 million or more paid. Across: the share of their state's towns whose mayor was from their party (what they would send there by chance). Up: the share of their amendment money that reached a town and went to one of those towns. Above the dashed line, a deputy favoured their party's mayors. Parties are matched by their name in the year of each payment.", cm,
+      finding(`Weighted by money, ${pct(w("prefeito_mesmo_partido"))} of the money went to towns run by the author's party, against ${pct(w("prefeito_base"))} by chance; ${fmt(above)} of ${fmt(may.length)} deputies sit above the line. Mayors from the deputy's party may also ask more, or run larger towns: this measures association, not intent.`)));
+    later(() => C.scatter(cm, {
+      points: may.map((r) => ({ x: r.prefeito_base, y: r.prefeito_mesmo_partido, label: r.nome, title: r.label, color: partyColor(r.partido), z: partyColor(r.partido) === css("--other") ? 0 : 1, id: r.deputado_id,
+        rows: [`${brl(r.emendas_pago)} paid`] })),
+      x: { label: "Their party's share of their state's towns", format: (v) => pct(v), min: 0, max: hi }, y: { label: "Share of their money to those towns", format: (v) => pct(v), min: 0, max: 1 },
+      diagonal: { label: "chance" }, labels: 6, height: 380, legend: PARTY_LEGEND(), onClick: (p) => openProfile(p.id),
+      table: { rows: may, cols: [{ key: "label", label: "Deputy", text: true }, { key: "prefeito_base", label: "By chance", fmt: (v) => pct(v, 1) }, { key: "prefeito_mesmo_partido", label: "Actual", fmt: (v) => pct(v, 1) }, { key: "emendas_pago", label: "Paid", fmt: (v) => brl(v) }], name: "own-party-mayors" },
+    }));
+  }
+  let xk = params.get("x") || "with_gov", yk = params.get("y") || "emendas_pago";
+  if (!M[xk]) xk = "with_gov";
+  if (!M[yk]) yk = "emendas_pago";
+  const controls = el("div", { className: "controls" }), c1 = chart(), note = el("p", { className: "finding" });
+  root.append(controls, card("Any measure against any other", "One dot per deputy with 50 or more contested votes in the legislature; PT and PL in colour. Click a dot to open that deputy. Rank correlation (Spearman) below: from −1 to 1, 0 when the two are unrelated. It measures association, not cause.", c1, note));
+  const draw = () => {
+    L.reset();
+    controls.replaceChildren(
+      select("Across", METRICS.map((m) => ({ value: m.key, label: m.label })), xk, (v) => { xk = v; setParam("x", v, "with_gov"); draw(); }),
+      select("Up", METRICS.map((m) => ({ value: m.key, label: m.label })), yk, (v) => { yk = v; setParam("y", v, "emendas_pago"); draw(); }));
+    const rows = complete(D.rows, xk, yk), X = M[xk], Y = M[yk];
+    L.later(() => C.scatter(c1, {
+      points: rows.map((r) => ({ x: r[xk], y: r[yk], label: r.nome, title: r.label, color: partyColor(r.partido), z: partyColor(r.partido) === css("--other") ? 0 : 1, id: r.deputado_id })),
+      x: { label: X.label, format: X.fmt, min: X.min, max: X.max }, y: { label: Y.label, format: Y.fmt, min: Y.min, max: Y.max }, labels: 8, height: 400, legend: PARTY_LEGEND(),
+      onClick: (p) => openProfile(p.id),
+      table: { rows, cols: [{ key: "label", label: "Deputy", text: true }, { key: xk, label: X.label, fmt: X.fmt }, { key: yk, label: Y.label, fmt: Y.fmt }], name: `${xk}-vs-${yk}` },
+    }));
+    const rho = spearman(rows.map((r) => r[xk]), rows.map((r) => r[yk]));
+    const within = [...D.parties.entries()].filter(([, ps]) => complete(ps, xk, yk).length >= 20).map(([p, ps]) => { const c = complete(ps, xk, yk); return `${p} ${fmt(spearman(c.map((r) => r[xk]), c.map((r) => r[yk])), 2)}`; });
+    note.textContent = `Spearman rank correlation over ${fmt(rows.length)} deputies: ${fmt(rho, 2)}.${within.length ? ` Within the larger parties: ${within.join(", ")}.` : ""}`;
+  };
+  draw();
+
+  const c2 = chart();
+  root.append(card("How the measures move together", "Spearman rank correlation between every pair of measures, over deputies with 50 or more contested votes. Blue: one rises as the other falls; red: they rise together.", c2));
+  const keys = METRICS.map((m) => m.key);
+  const corr = keys.map((a) => keys.map((b) => { const rows = complete(D.rows, a, b); return rows.length >= 30 ? spearman(rows.map((r) => r[a]), rows.map((r) => r[b])) : null; }));
+  const short = SHORT;
+  later(() => {
+    C.heatmap(c2, { rows: keys.map((k) => short[k]), cols: keys.map((k) => short[k]), value: (i, j) => (i === j ? null : corr[i][j]), color: (v) => C.div(v), cell: 40, labelWidth: 130, colLabelHeight: 110, allColLabels: true,
+      cellText: (v) => fmt(v, 1).replace("-0.0", "0.0"), dark: (v) => Math.abs(v) > 0.55, format: (v) => fmt(v, 2),
+      tip: (i, j, v) => [el("strong", { textContent: `${METRICS[i].label} × ${METRICS[j].label}` }), el("div", { className: "row", textContent: `Spearman ${fmt(v, 2)}` })],
+      table: { rows: keys.flatMap((a, i) => keys.slice(i + 1).map((b, k) => ({ a: M[a].label, b: M[b].label, rho: corr[i][i + 1 + k] }))), cols: [{ key: "a", label: "Measure", text: true }, { key: "b", label: "Measure", text: true }, { key: "rho", label: "Spearman", fmt: (v) => fmt(v, 2) }], name: "correlations" } });
+    C.colorKey(c2, { color: (t) => C.div(2 * t - 1), from: "−1", to: "+1", label: "rank correlation" });
+  });
+}
+
+// ------------------------------------------------------------ parties
+
+/** Mean of k over deputies, weighted by the amendment money they had paid. */
+function wmean(rows, k) {
+  const ok = rows.filter((r) => r[k] != null && r.emendas_pago > 0), W = sum(ok.map((r) => r.emendas_pago));
+  return W ? sum(ok.map((r) => r[k] * r.emendas_pago)) / W : null;
+}
+
+async function parties(root) {
+  const D = await load(), L = local();
+  let mk = params.get("pm") || "with_gov";
+  if (!M[mk]) mk = "with_gov";
+  const big = [...D.parties.entries()].filter(([, ps]) => ps.length >= 5).sort((a, b) => b[1].length - a[1].length);
+  const controls = el("div", { className: "controls" }), c1 = chart();
+  root.append(controls, card("Every deputy, by party", "One dot per deputy, one row per party with five or more deputies in the legislature; the dark tick is the party's median. Click a dot to open that deputy.", c1));
+  const draw = () => {
+    L.reset();
+    controls.replaceChildren(select("Measure", METRICS.map((m) => ({ value: m.key, label: m.label })), mk, (v) => { mk = v; setParam("pm", v, "with_gov"); draw(); }));
+    const m = M[mk];
+    const rows = big.map(([p, ps]) => ({ label: `${p} (${ps.length})`, med: median(ps.map((r) => r[mk])), points: ps.filter((r) => r[mk] != null).map((r) => ({ x: r[mk], title: r.label, rows: [m.fmt(r[mk])], color: partyColor(p), id: r.deputado_id })) }))
+      .sort((a, b) => (b.med ?? -Infinity) - (a.med ?? -Infinity));
+    L.later(() => C.strip(c1, { rows, x: { label: m.label, format: m.fmt, min: m.min, max: m.max }, labelWidth: 130, onClick: (p) => openProfile(p.id) }));
+  };
+  draw();
+  const t = el("div");
+  root.append(card("Party by party", "Medians over the party's deputies (their latest party in the legislature), totals where noted; own-party towns and chance are weighted by money paid.", t));
+  table(t, big.concat([...D.parties.entries()].filter(([, ps]) => ps.length < 5)).map(([p, ps]) => ({
+    party: p, deputies: ps.length, with_party: median(ps.map((r) => r.with_party)), with_gov: median(ps.map((r) => r.with_gov)), pc1: median(ps.map((r) => r.pc1)), cross: median(ps.map((r) => r.cross_share)),
+    paid: sum(ps.map((r) => r.emendas_pago || 0)), paid_med: median(ps.map((r) => r.emendas_pago)), camp: median(ps.map((r) => r.campanha_total)), from_party: median(ps.map((r) => r.campanha_partido_share)),
+    own: sum(ps.map((r) => r.campanha_proprios || 0)), barred: sum(ps.map((r) => r.sancoes_pago_sancionadas || 0)),
+    may: wmean(ps, "prefeito_mesmo_partido"), may0: wmean(ps, "prefeito_base"),
+  })), [
+    { key: "party", label: "Party", text: true }, { key: "deputies", label: "Deputies" }, { key: "with_party", label: "With party", fmt: (v) => pct(v) }, { key: "with_gov", label: "With government", fmt: (v) => pct(v) },
+    { key: "pc1", label: "Position", fmt: (v) => fmt(v, 2) }, { key: "cross", label: "Cross-party ties", fmt: (v) => pct(v) }, { key: "paid_med", label: "Amendments paid, median", fmt: (v) => brl(v) },
+    { key: "paid", label: "Amendments paid, total", fmt: (v) => brl(v) }, { key: "camp", label: "Campaign, median", fmt: (v) => brl(v) }, { key: "from_party", label: "From party", fmt: (v) => pct(v) },
+    { key: "may", label: "To own-party towns", fmt: (v) => pct(v) }, { key: "may0", label: "By chance", fmt: (v) => pct(v) },
+    { key: "own", label: "Own money, total", fmt: (v) => brl(v) }, { key: "barred", label: "To barred firms, total", fmt: (v) => brl(v) },
+  ], { sortBy: "deputies", pageSize: 40, name: `parties-${leg}` });
+}
+
+// ------------------------------------------------------------ stand-outs
+
+async function outliers(root) {
+  const D = await load();
+  const active = D.rows.filter((r) => (r.n_votes || 0) >= 100);
+  const total = D.rows.length;
+  const excess = (r) => r.cross_share - (1 - ((D.parties.get(r.party)?.length || 1) - 1) / (total - 1));   // against the share of other parties' deputies
+  const off = (r, k) => (r[k] == null || D.partyMedian(r.party, k) == null ? null : r[k] - D.partyMedian(r.party, k));
+  const lists = [
+    { title: "Least loyal to their party's orientation", note: "Lowest share of votes following their party leader, among deputies with 100 or more contested votes.", rows: active.filter((r) => (r.n_party || 0) >= 100).sort((a, b) => a.with_party - b.with_party), k: "with_party" },
+    { title: "Most out of step with their party on the government", note: "Furthest from their party's median government support, either way.", rows: active.filter((r) => off(r, "with_gov") != null).sort((a, b) => Math.abs(off(b, "with_gov")) - Math.abs(off(a, "with_gov"))), k: "with_gov", extra: (r) => `${off(r, "with_gov") > 0 ? "+" : "−"}${fmt(100 * Math.abs(off(r, "with_gov")), 0)} pts vs party` },
+    { title: "Bridges", note: "Co-voting ties to other parties' deputies, above what their party's size alone would give (a deputy of a three-member party has almost only cross-party ties by construction).", rows: active.filter((r) => r.cross_share != null).sort((a, b) => excess(b) - excess(a)), k: "cross_share", extra: (r) => `+${fmt(100 * excess(r), 0)} pts over expected` },
+    { title: "Most amendment money paid", note: "Paid so far on the amendments they authored for the legislature's budgets.", rows: D.rows.filter((r) => r.emendas_pago).sort((a, b) => b.emendas_pago - a.emendas_pago), k: "emendas_pago" },
+    { title: "Most amendment money sent outside their state", note: "Share paid to other states (national programmes excluded), deputies with R$1 million or more paid.", rows: D.rows.filter((r) => r.emendas_pago >= 1e6 && r.emendas_pago_estado != null).sort((a, b) => (1 - b.emendas_pago_estado - b.emendas_pago_nacional) - (1 - a.emendas_pago_estado - a.emendas_pago_nacional)), k: "emendas_pago", extra: (r) => `${pct(1 - r.emendas_pago_estado - r.emendas_pago_nacional)} outside ${r.uf}` },
+    { title: "Most money to towns their party runs, above chance", note: "Share of their town money to towns whose mayor was from their party that year, minus the share of their state's towns their party ran. Deputies with R$5 million or more paid.", rows: D.rows.filter((r) => r.prefeito_excesso != null && r.emendas_pago >= 5e6).sort((a, b) => b.prefeito_excesso - a.prefeito_excesso), k: "prefeito_mesmo_partido", extra: (r) => `chance ${pct(r.prefeito_base)}` },
+    { title: "Amendment money paid to barred companies", note: "Paid to companies while under a CEIS or CNEP sanction, every budget since 2015 (see the Sanctions page).", rows: D.rows.filter((r) => r.sancoes_pago_sancionadas > 0).sort((a, b) => b.sancoes_pago_sancionadas - a.sancoes_pago_sancionadas), k: "sancoes_pago_sancionadas", extra: (r) => plural(r.sancoes_empresas, "firm") },
+    { title: "Most of their own money in their campaign", note: "Self-funding of the campaign that elected them. The law caps it at 10% of the office's spending limit, which is why several sit at the same amount.", rows: D.rows.filter((r) => r.campanha_proprios > 0).sort((a, b) => b.campanha_proprios - a.campanha_proprios), k: "campanha_proprios", extra: (r) => `${pct(r.campanha_proprios / r.campanha_total)} of ${brl(r.campanha_total)}` },
+    { title: "Most money from large donors", note: "From private donors who gave their campaign R$50,000 or more.", rows: D.rows.filter((r) => r.grandes_doadores_valor > 0).sort((a, b) => b.grandes_doadores_valor - a.grandes_doadores_valor), k: "grandes_doadores_valor", extra: (r) => plural(r.grandes_doadores, "donor") },
+  ];
+  const g = el("div", { className: "grid2" });
+  for (const L of lists) {
+    const t = el("div");
+    g.append(el("div", { className: "card" }, el("h2", { textContent: L.title }), el("p", { className: "note", textContent: L.note }), t));
+    table(t, L.rows.slice(0, 10).map((r, i) => ({ i: i + 1, r, who: r.label, v: r[L.k], extra: L.extra ? L.extra(r) : "" })), [
+      { key: "i", label: "#" }, { key: "who", label: "Deputy", text: true, wrap: true, fmt: (v, x) => profileLink(x.r) }, { key: "v", label: SHORT[L.k], fmt: M[L.k].money ? (v) => brl(v) : M[L.k].fmt },
+      ...(L.extra ? [{ key: "extra", label: "", text: true }] : []),
+    ], { search: false, pageSize: 10, name: L.title.toLowerCase().replace(/[^a-z]+/g, "-") });
+  }
+  root.append(g);
+}
+
+// ------------------------------------------------------------ page
+
+const SECTIONS = { profile, compare, parties, outliers };
+const shown = new Set();
+function render(name) {
+  const inner = el("div");
+  $(`#tab-${name}`).replaceChildren(inner);
+  return guard(inner, () => SECTIONS[name](inner));
+}
+function legControl() {
+  const latest = LEGS[LEGS.length - 1];
+  $("#legislature").replaceChildren(select("Legislature", [...LEGS].reverse().map((l) => ({ value: l, label: LEG_NAME[l] || `${l}th legislature` })), leg, (v) => {
+    leg = +v; setParam("leg", v, String(latest)); setParam("dep", null); showDeputy = null; redraws.length = 0; legControl(); shown.forEach(render);
+  }));
+}
+
+(async () => {
+  LEGS = (await data("site/deputados/legislaturas.csv")).map((r) => +r.legislatura).sort((a, b) => a - b);
+  leg = LEGS.includes(+params.get("leg")) ? +params.get("leg") : LEGS[LEGS.length - 1];
+  legControl();
+  tabs((name) => { shown.add(name); render(name); });
+  onResize(() => redraws.forEach((f) => f()));
+})();

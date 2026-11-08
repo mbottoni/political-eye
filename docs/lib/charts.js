@@ -132,6 +132,7 @@ export function line(box, o) {
   }
   for (const v of o.xTicks ? o.xTicks.map(X.val) : X.ticks(x0, x1, w - ml - mr)) s.append(text(X.tick(v), { x: sx(v), y: H - 8, "text-anchor": "middle", "font-size": 10, fill: muted }));
   for (const m of o.marks || []) {
+    if (X.val(m.x) <= x0 || X.val(m.x) > x1) continue;   // a mark at or past the edge would sit on the axis
     const xv = sx(X.val(m.x));
     s.append(svg("line", { x1: xv, x2: xv, y1: mt, y2: H - mb, stroke: axis, "stroke-dasharray": "3 3" }));
     if (m.label) s.append(text(m.label, { x: xv + 3, y: H - mb - 4, "font-size": 10, fill: muted }));
@@ -428,8 +429,8 @@ export function choropleth(box, o) {
     g.append(p);
   }
   s.append(g);
-  if (o.outline) for (const d of Object.values(o.outline)) s.append(svg("path", { d, fill: "none", stroke: axis, "stroke-width": o.outlineWidth || 0.8, "pointer-events": "none" }));
-  const hl = svg("path", { fill: "none", stroke: css("--ink"), "stroke-width": o.highlightWidth || 1.5, "pointer-events": "none" });
+  if (o.outline) for (const d of Object.values(o.outline)) s.append(svg("path", { d, fill: "none", stroke: axis, "stroke-width": o.outlineWidth || 0.8, "pointer-events": "none", "vector-effect": "non-scaling-stroke" }));
+  const hl = svg("path", { fill: "none", stroke: css("--ink"), "stroke-width": o.highlightWidth || 1.5, "pointer-events": "none", "vector-effect": "non-scaling-stroke" });
   s.append(hl);
   g.addEventListener("pointermove", (ev) => {
     const code = byPath.get(ev.target);
@@ -441,6 +442,15 @@ export function choropleth(box, o) {
   if (o.onClick) { g.style.cursor = "pointer"; g.addEventListener("click", (ev) => { const c = byPath.get(ev.target); if (c) o.onClick(c); }); }
   s.setAttribute("aria-label", o.title || "Map");
   box.append(s);
+  if (o.fit) {   // zoom to the shapes drawn (a state, say) instead of the whole country
+    const b = g.getBBox();
+    if (b.width > 0 && b.height > 0) {
+      const pad = 0.04 * Math.max(b.width, b.height), bw = b.width + 2 * pad, bh = b.height + 2 * pad;
+      const maxH = o.maxHeight || 480, ww = Math.min(w, (maxH * bw) / bh);
+      s.setAttribute("viewBox", `${b.x - pad} ${b.y - pad} ${bw} ${bh}`);
+      s.setAttribute("width", ww); s.setAttribute("height", (ww * bh) / bw);
+    }
+  }
   if (o.legend) box.append(o.legend);
   addTableToggle(box, o.table);
 }

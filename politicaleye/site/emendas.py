@@ -72,6 +72,17 @@ def _people(data: Path) -> pd.DataFrame:
     return out.fillna("")
 
 
+def town_codes(data: Path, pg: pd.DataFrame) -> list[str]:
+    """IBGE code of each payment's recipient municipality, matched on name and state ("" if none matches)."""
+    from ..ref.politicians import norm
+    ref = pd.read_csv(data / "siconfi" / "entes.csv", dtype=str, keep_default_na=False)   # state as a two-letter code
+    code = {(norm(r.ente), r.uf): r.cod_ibge for r in ref.itertuples()}
+    for (old_name, uf), new_name in RENAMED.items():   # towns renamed since: the payment file keeps the old name
+        if (norm(new_name), uf) in code:
+            code[(norm(old_name), uf)] = code[(norm(new_name), uf)]
+    return [code.get((norm(m), u), "") for m, u in zip(pg.municipio, pg.uf)]
+
+
 def build(data: Path) -> dict:
     out = data / "site" / "emendas"
     em = _years(data / "emendas" / "emendas")
@@ -106,13 +117,7 @@ def build(data: Path) -> dict:
     csv(_reais(meses, ["valor"]), out / "meses.csv")
 
     # Where the money landed: the recipient's municipality, matched by name and state to its IBGE code.
-    from ..ref.politicians import norm
-    ref = pd.read_csv(data / "siconfi" / "entes.csv", dtype=str, keep_default_na=False)   # state as a two-letter code
-    code = {(norm(r.ente), r.uf): r.cod_ibge for r in ref.itertuples()}
-    for (old_name, uf), new_name in RENAMED.items():   # towns renamed since: the payment file keeps the old name
-        if (norm(new_name), uf) in code:
-            code[(norm(old_name), uf)] = code[(norm(new_name), uf)]
-    pg["ibge"] = [code.get((norm(m), u), "") for m, u in zip(pg.municipio, pg.uf)]
+    pg["ibge"] = town_codes(data, pg)
     mun = pg[pg.ibge != ""].assign(ano=lambda t: t.ano_mes.str[:4], pix=lambda t: t.valor.where(t.tipo == "especial", 0))
     mun = mun.groupby(["ano", "ibge"]).agg(valor=("valor", "sum"), pix=("pix", "sum")).reset_index().rename(columns={"ibge": "municipio_ibge"})
     csv(_reais(mun[mun.valor != 0], ["valor", "pix"]), out / "municipios.csv")

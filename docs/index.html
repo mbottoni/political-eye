@@ -1,135 +1,220 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>political-eye</title>
-<meta name="description" content="Brazilian politics and public money from official open data, committed to git as it changes: Congress votes and networks, party discipline, campaign finance, amendments, public contracts, municipal finances and sanctions.">
+<meta name="description" content="A política e o dinheiro público do Brasil a partir de dados oficiais abertos, registrados no git à medida que mudam: votações e redes no Congresso, disciplina partidária, financiamento de campanha, emendas, contratos públicos, finanças municipais e sanções.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0b0b'/%3E%3Cpath d='M5 16s4-7 11-7 11 7 11 7-4 7-11 7S5 16 5 16Z' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%233987e5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..750&family=Newsreader:ital,opsz,wght@0,6..72,500..600;1,6..72,500..600&display=swap">
 <link rel="stylesheet" href="lib/site.css">
-<style>
-  main { max-width: 1120px; padding-top: 40px; }
-  h1 { font-size: 30px; margin: 0 0 6px; font-weight: 680; letter-spacing: -0.01em; }
-  .lede { margin: 0; color: var(--ink2); max-width: 720px; font-size: 15px; }
-  .meta { margin: 10px 0 0; font-size: 13px; color: var(--muted); }
-  .meta a { color: var(--ink2); }
-  h2.section { font-size: 12px; font-weight: 650; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; margin: 30px 0 10px; }
-  .hl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-  .hl a { display: block; text-decoration: none; color: inherit; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
-  .hl a:hover, .hl a:focus-visible { border-color: var(--line); outline: none; }
-  .hl .num { display: block; font-size: 26px; font-weight: 650; font-variant-numeric: tabular-nums; min-height: 34px; }
-  .hl .txt { display: block; font-size: 13px; color: var(--ink2); margin-top: 2px; min-height: 36px; }
-  .hl .go { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; }
-  .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-  a.card { display: flex; flex-direction: column; color: inherit; text-decoration: none; }
-  a.card:hover, a.card:focus-visible { border-color: var(--line); outline: none; }
-  .card h3 { font-size: 16px; margin: 0 0 6px; font-weight: 640; display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
-  .card .headline { min-height: 44px; }
-  .card .headline .num { font-size: 22px; font-weight: 650; font-variant-numeric: tabular-nums; margin-right: 6px; }
-  .card .headline .what { font-size: 12px; color: var(--muted); }
-  .card .spark { min-height: 34px; margin: 4px 0 8px; }
-  .card .spark svg { display: block; width: 100%; }
-  .card .spark .span { font-size: 10px; color: var(--muted); }
-  .card p { margin: 0; color: var(--ink2); font-size: 13.5px; flex: 1; }
-  .card .src { margin-top: 10px; font-size: 12px; color: var(--muted); }
-  .badge { font-size: 11px; font-weight: 600; border-radius: 999px; padding: 2px 8px; white-space: nowrap; color: var(--muted); border: 1px solid var(--border); }
-  .badge.live { color: var(--ink2); }
-  .planned { opacity: 0.8; }
-  footer { margin-top: 36px; max-width: 760px; }
-  @media (max-width: 980px) { .hl, .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 520px) { .hl { grid-template-columns: 1fr; } .cards { grid-template-columns: 1fr; } }
-</style>
+<link rel="stylesheet" href="hub.css">
 </head>
 <body>
-<main>
-  <header>
-    <h1>political-eye</h1>
-    <p class="lede">Brazilian politics and public money from official open data. Scheduled jobs download each source, rebuild tidy tables and commit them, so the repository's history is a record of what changed and when. Each page below goes from the big picture down to one deputy, party, company or town.</p>
-    <p class="meta">Every rule and data quirk: <a href="https://github.com/mbottoni/political-eye/blob/main/METHODOLOGY.md">methodology</a> · data and code: <a href="https://github.com/mbottoni/political-eye">github.com/mbottoni/political-eye</a></p>
-  </header>
+<a class="skip" href="#achados" data-i="skip">Pular para o conteúdo</a>
 
-  <h2 class="section">What the data shows</h2>
-  <div class="hl">
-    <a href="orientacoes/?tab=gov" data-hl="gov"><span class="num">…</span><span class="txt">of the Câmara's votes followed the government's orientation</span><span class="go">Party orientations →</span></a>
-    <a href="deputados/" data-hl="mayors"><span class="num">…</span><span class="txt">of deputies' amendment money for towns went to mayors of their own party</span><span class="go">Deputies across sources →</span></a>
-    <a href="sancoes/?tab=money" data-hl="barred"><span class="num">…</span><span class="txt">in amendments paid to companies while they were barred from public contracts</span><span class="go">Sanctions →</span></a>
-    <a href="tse/" data-hl="public"><span class="num">…</span><span class="txt">of the money candidates raised was public</span><span class="go">Campaign finance →</span></a>
+<!-- Icons: Lucide (ISC license, lucide.dev). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="i-network" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></g>
+    <g id="i-landmark" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></g>
+    <g id="i-flag" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></g>
+    <g id="i-users" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></g>
+    <g id="i-vote" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><path d="M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z"/><path d="M22 19H2"/></g>
+    <g id="i-banknote" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></g>
+    <g id="i-file" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></g>
+    <g id="i-building" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></g>
+    <g id="i-gavel" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></g>
+    <g id="i-scale" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></g>
+    <g id="i-shield" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></g>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="political-eye">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M5 16s4-7 11-7 11 7 11 7-4 7-11 7S5 16 5 16Z" fill="none" stroke="var(--page)" stroke-width="2"/><circle cx="16" cy="16" r="4" fill="var(--line)"/></svg>
+      political-eye
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#congresso" data-i="nav_congress">Congresso</a>
+      <a href="#dinheiro" data-i="nav_money">Dinheiro</a>
+      <a href="#controle" data-i="nav_control">Controle</a>
+      <a href="#como-funciona" data-i="nav_how">Como funciona</a>
+      <a href="https://github.com/mbottoni/political-eye">GitHub</a>
+    </nav>
+    <span id="lang-slot"></span>
   </div>
+</header>
 
-  <h2 class="section">Congress</h2>
-  <div class="cards">
-    <a class="card" href="camara/" data-key="camara">
-      <h3>Câmara dos Deputados <span class="badge live">weekly</span></h3>
-      <div class="headline"></div><div class="spark"></div>
-      <p>Every month since 2015 as two graphs on the same deputies, who votes together and who signs bills together, with their network analysis and each deputy's ideal point.</p>
-      <div class="src">Câmara, Dados Abertos</div>
-    </a>
-    <a class="card" href="senado/" data-key="senado">
-      <h3>Senado Federal <span class="badge live">weekly</span></h3>
-      <div class="headline"></div><div class="spark"></div>
-      <p>The same two graphs for the Senate, each over the twelve months to date, and how often each senator votes with their party and the government.</p>
-      <div class="src">Senado, Dados Abertos</div>
-    </a>
-    <a class="card" href="orientacoes/" data-key="orientacoes">
-      <h3>Party orientations <span class="badge live">weekly</span></h3>
-      <div class="headline"></div><div class="spark"></div>
-      <p>How often each deputy votes the way their party and the government told them to, and with their party's majority: government support by party, cohesion, rebels, how parties orient.</p>
-      <div class="src">Câmara, Dados Abertos</div>
-    </a>
-    <a class="card" href="deputados/" data-key="deputados">
-      <h3>Deputies across sources <span class="badge live">weekly</span></h3>
-      <div class="headline"></div><div class="spark"></div>
-      <p>Every deputy in one place: how they vote and whom they vote with, the amendment money they sent and where it landed, whether it favoured towns their party runs, and who paid for their campaign; then all of them compared.</p>
-      <div class="src">All of the above, joined</div>
-    </a>
-  </div>
-
-  <h2 class="section">Money: campaigns, amendments, contracts, towns</h2>
-  <div class="cards">
-    <a class="card" href="tse/" data-key="tse">
-      <h3>Campaign finance <span class="badge live">weekly</span></h3>
-      <div class="headline"></div><div class="spark"></div>
-      <p>Where candidates' money came from in 2018, 2022 and 2026: how party leaderships split public funds, whether women and Black candidates got their legal share, how money relates to winning, the large donors and the companies campaigns paid.</p>
-      <div class="src">TSE</div>
-    </a>
-    <a class="card" href="emendas/" data-key="emendas">
-      <h3>Parliamentary amendments <span class="badge live">daily</span></h3>
-      <div class="headline"></div><div class="spark"></div>
-      <p>Every amendment since 2014: who sent it, where the money landed, how much was committed and paid, and which organisations received it, "Pix" transfers included.</p>
-      <div class="src">Portal da Transparência (CGU)</div>
-    </a>
-    <a class="card" href="pncp/" data-key="pncp">
-      <h3>Public contracts <span class="badge live">daily</span></h3>
-      <div class="headline"></div><div class="spark"></div>
-      <p>Who buys and who sells in contracts of R$1 million or more: supplier and buyer concentration, contracts with barred companies, money per inhabitant by state and town, and towns compared by their mayor's party. The history since 2021 is still being read.</p>
-      <div class="src">PNCP</div>
-    </a>
-    <a class="card" href="siconfi/" data-key="siconfi">
-      <h3>Municipal finances <span class="badge live">monthly</span></h3>
-      <div class="headline"></div><div class="spark"></div>
-      <p>Which towns break the legal caps on payroll and which end the year without free cash, whether "Pix" amendments go to towns in trouble, each town's mayors, and towns compared by the mayor's party. The history since 2015 is still being read.</p>
-      <div class="src">Tesouro Nacional: Siconfi</div>
-    </a>
-  </div>
-
-  <h2 class="section">Accountability and justice</h2>
-  <div class="cards">
-    <a class="card" href="sancoes/" data-key="sancoes">
-      <h3>Sanctions <span class="badge live">daily</span></h3>
-      <div class="headline"></div><div class="spark"></div>
-      <p>Who is barred from public contracts or fined for corruption, by whom and for how long: repeat offenders, fines, leniency deals, and the amendments and contracts barred companies still get, by member and party.</p>
-      <div class="src">CGU: CEIS, CNEP, CEPIM, leniency agreements</div>
-    </a>
-    <div class="card planned">
-      <h3>STF case reviews <span class="badge">on hold</span></h3>
-      <p>How long each justice holds a case after asking for more time to review it. On hold: the STF's server turns away clients that do not present themselves as a web browser.</p>
-      <div class="src">STF: Corte Aberta</div>
+<main class="hub">
+  <section class="hero">
+    <div>
+      <p class="eyebrow"><span class="pulse" aria-hidden="true"></span><span data-i="eyebrow">Dados oficiais abertos, atualizados todos os dias</span></p>
+      <h1 data-i-html="title">A política e o dinheiro público do Brasil, <em>à vista de todos</em>.</h1>
+      <p class="lede" data-i="lede">Robôs agendados baixam os dados do Congresso, do TSE, da CGU, do Tesouro Nacional e do Portal de Contratações, refazem tabelas organizadas e as registram no git: o histórico do repositório mostra o que mudou e quando. Cada painel vai do quadro geral até um deputado, partido, empresa ou município.</p>
+      <div class="cta">
+        <a class="btn primary" href="#achados" data-i="cta_explore">Ver o que os dados mostram</a>
+        <a class="btn" href="#como-funciona" data-i="cta_how">Como funciona</a>
+      </div>
+      <dl class="facts">
+        <div><dt data-i="f_pages">painéis interativos</dt><dd>9</dd></div>
+        <div><dt data-i="f_sources">fontes oficiais</dt><dd>6</dd></div>
+        <div><dt data-i="f_since">dados desde</dt><dd>2014</dd></div>
+        <div id="updated" hidden><dt data-i="f_updated">última atualização</dt><dd></dd></div>
+      </dl>
     </div>
-  </div>
+    <figure class="hero-viz">
+      <div class="viz-head">
+        <span class="viz-title" id="swarm-title" data-i="swarm_title">Como a Câmara vota</span>
+        <span class="viz-legend"><span><i style="background:var(--a)"></i>PT</span><span><i style="background:var(--b)"></i>PL</span><span><i style="background:var(--other)"></i><span data-i="swarm_others">outros</span></span></span>
+      </div>
+      <div id="swarm" role="img" aria-labelledby="swarm-title"></div>
+      <div class="axis-note" aria-hidden="true"><span data-i="swarm_left">← vota como o PT</span><span data-i="swarm_right">vota como o PL →</span></div>
+      <figcaption id="swarm-cap"></figcaption>
+    </figure>
+  </section>
 
-  <footer>
-    Each number above is read live from the tables the pages use, and changes when a scheduled job commits new data. Data, code and every rule behind the numbers: <a href="https://github.com/mbottoni/political-eye">github.com/mbottoni/political-eye</a> (<a href="https://github.com/mbottoni/political-eye/blob/main/METHODOLOGY.md">methodology</a>). Code: MIT.
-  </footer>
+  <section class="block" id="achados">
+    <div class="sec-head">
+      <div><h2 data-i="h_findings">O que os dados mostram</h2><p data-i="p_findings">Quatro números lidos agora das tabelas dos painéis. Clique para ver de onde vêm.</p></div>
+    </div>
+    <div class="findings">
+      <a class="finding" href="orientacoes/?tab=gov" data-hl="gov" style="--accent: var(--c-congress)"><span class="kicker" data-i="nav_congress">Congresso</span><span class="num"></span><span class="viz"></span><span class="txt"></span><span class="go" data-i="t_orientacoes">Orientação partidária</span></a>
+      <a class="finding" href="deputados/" data-hl="mayors" style="--accent: var(--c-congress)"><span class="kicker" data-i="k_amend">Emendas</span><span class="num"></span><span class="viz"></span><span class="txt"></span><span class="go" data-i="t_deputados">Deputados em todas as fontes</span></a>
+      <a class="finding" href="sancoes/?tab=money" data-hl="barred" style="--accent: var(--c-control)"><span class="kicker" data-i="nav_control">Controle</span><span class="num"></span><span class="viz"></span><span class="txt"></span><span class="go" data-i="t_sancoes">Sanções</span></a>
+      <a class="finding" href="tse/" data-hl="public" style="--accent: var(--c-money)"><span class="kicker" data-i="k_campaigns">Campanhas</span><span class="num"></span><span class="viz"></span><span class="txt"></span><span class="go" data-i="t_tse">Financiamento de campanha</span></a>
+    </div>
+  </section>
+
+  <section class="block" id="congresso" style="--accent: var(--c-congress)">
+    <div class="sec-head">
+      <div><h2><span class="sec-icon"><svg viewBox="0 0 24 24"><use href="#i-landmark"/></svg></span><span data-i="nav_congress">Congresso</span></h2>
+        <p data-i="p_congress">Como deputados e senadores votam, com quem, e o quanto seguem o partido e o governo.</p></div>
+    </div>
+    <div class="cards">
+      <a class="card" href="camara/" data-key="camara">
+        <div class="c-top"><span class="c-icon"><svg viewBox="0 0 24 24"><use href="#i-network"/></svg></span><span class="cadence"><i></i><span data-i="weekly">semanal</span></span></div>
+        <h3>Câmara dos Deputados</h3>
+        <div class="headline"></div><div class="spark"></div>
+        <p class="desc" data-i="d_camara">Cada mês desde 2015 em dois grafos dos mesmos deputados, quem vota junto e quem assina projetos junto, com a análise das redes e o ponto ideal de cada um.</p>
+        <div class="c-foot"><span class="src">Câmara · Dados Abertos</span><span class="go" data-i="explore">Explorar</span></div>
+      </a>
+      <a class="card" href="senado/" data-key="senado">
+        <div class="c-top"><span class="c-icon"><svg viewBox="0 0 24 24"><use href="#i-landmark"/></svg></span><span class="cadence"><i></i><span data-i="weekly">semanal</span></span></div>
+        <h3>Senado Federal</h3>
+        <div class="headline"></div><div class="spark"></div>
+        <p class="desc" data-i="d_senado">Os mesmos dois grafos para o Senado, cada um nos doze meses até a data, e o quanto cada senador vota com o partido e com o governo.</p>
+        <div class="c-foot"><span class="src">Senado · Dados Abertos</span><span class="go" data-i="explore">Explorar</span></div>
+      </a>
+      <a class="card" href="orientacoes/" data-key="orientacoes">
+        <div class="c-top"><span class="c-icon"><svg viewBox="0 0 24 24"><use href="#i-flag"/></svg></span><span class="cadence"><i></i><span data-i="weekly">semanal</span></span></div>
+        <h3 data-i="t_orientacoes">Orientação partidária</h3>
+        <div class="headline"></div><div class="spark"></div>
+        <p class="desc" data-i="d_orientacoes">O quanto cada deputado segue a orientação do partido e do governo e vota com a maioria da bancada: apoio ao governo por partido, coesão, rebeldes.</p>
+        <div class="c-foot"><span class="src">Câmara · Dados Abertos</span><span class="go" data-i="explore">Explorar</span></div>
+      </a>
+      <a class="card" href="deputados/" data-key="deputados">
+        <div class="c-top"><span class="c-icon"><svg viewBox="0 0 24 24"><use href="#i-users"/></svg></span><span class="cadence"><i></i><span data-i="weekly">semanal</span></span></div>
+        <h3 data-i="t_deputados">Deputados em todas as fontes</h3>
+        <div class="headline"></div><div class="spark"></div>
+        <p class="desc" data-i="d_deputados">Cada deputado num só lugar: como vota e com quem, as emendas que enviou e onde caíram, se favoreceram prefeitos do partido e quem pagou a campanha.</p>
+        <div class="c-foot"><span class="src" data-i="s_joined">Todas as fontes, cruzadas</span><span class="go" data-i="explore">Explorar</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="block" id="dinheiro" style="--accent: var(--c-money)">
+    <div class="sec-head">
+      <div><h2><span class="sec-icon"><svg viewBox="0 0 24 24"><use href="#i-banknote"/></svg></span><span data-i="nav_money_long">Dinheiro público</span></h2>
+        <p data-i="p_money">Do financiamento das campanhas às emendas, aos contratos e às contas de cada município.</p></div>
+    </div>
+    <div class="cards">
+      <a class="card" href="tse/" data-key="tse">
+        <div class="c-top"><span class="c-icon"><svg viewBox="0 0 24 24"><use href="#i-vote"/></svg></span><span class="cadence"><i></i><span data-i="weekly">semanal</span></span></div>
+        <h3 data-i="t_tse">Financiamento de campanha</h3>
+        <div class="headline"></div><div class="spark"></div>
+        <p class="desc" data-i="d_tse">De onde veio o dinheiro dos candidatos em 2018, 2022 e 2026: como os partidos dividem os fundos públicos, as cotas de mulheres e negros, grandes doadores e fornecedores.</p>
+        <div class="c-foot"><span class="src">TSE</span><span class="go" data-i="explore">Explorar</span></div>
+      </a>
+      <a class="card" href="emendas/" data-key="emendas">
+        <div class="c-top"><span class="c-icon"><svg viewBox="0 0 24 24"><use href="#i-banknote"/></svg></span><span class="cadence"><i></i><span data-i="daily">diário</span></span></div>
+        <h3 data-i="t_emendas">Emendas parlamentares</h3>
+        <div class="headline"></div><div class="spark"></div>
+        <p class="desc" data-i="d_emendas">Todas as emendas desde 2014: quem enviou, onde o dinheiro caiu, quanto foi empenhado e pago e quem recebeu, incluindo as transferências "Pix".</p>
+        <div class="c-foot"><span class="src">Portal da Transparência</span><span class="go" data-i="explore">Explorar</span></div>
+      </a>
+      <a class="card" href="pncp/" data-key="pncp">
+        <div class="c-top"><span class="c-icon"><svg viewBox="0 0 24 24"><use href="#i-file"/></svg></span><span class="cadence"><i></i><span data-i="daily">diário</span></span></div>
+        <h3 data-i="t_pncp">Contratos públicos</h3>
+        <div class="headline"></div><div class="spark"></div>
+        <p class="desc" data-i="d_pncp">Quem compra e quem vende em contratos de R$ 1 milhão ou mais: concentração, empresas punidas, valor por habitante e municípios pelo partido do prefeito.</p>
+        <div class="c-foot"><span class="src">PNCP</span><span class="go" data-i="explore">Explorar</span></div>
+      </a>
+      <a class="card" href="siconfi/" data-key="siconfi">
+        <div class="c-top"><span class="c-icon"><svg viewBox="0 0 24 24"><use href="#i-building"/></svg></span><span class="cadence"><i></i><span data-i="monthly">mensal</span></span></div>
+        <h3 data-i="t_siconfi">Finanças municipais</h3>
+        <div class="headline"></div><div class="spark"></div>
+        <p class="desc" data-i="d_siconfi">Quais municípios estouram o limite de gasto com pessoal ou fecham o ano sem caixa, se as emendas "Pix" vão a quem está em apuros, e o partido de cada prefeito.</p>
+        <div class="c-foot"><span class="src">Tesouro Nacional · Siconfi</span><span class="go" data-i="explore">Explorar</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="block" id="controle" style="--accent: var(--c-control)">
+    <div class="sec-head">
+      <div><h2><span class="sec-icon"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></span><span data-i="nav_control_long">Controle e justiça</span></h2>
+        <p data-i="p_control">Quem está proibido de contratar com o poder público, e o que ainda recebe.</p></div>
+    </div>
+    <div class="cards">
+      <a class="card wide" href="sancoes/" data-key="sancoes">
+        <div class="c-top"><span class="c-icon"><svg viewBox="0 0 24 24"><use href="#i-gavel"/></svg></span><span class="cadence"><i></i><span data-i="daily">diário</span></span></div>
+        <h3 data-i="t_sancoes">Sanções</h3>
+        <div class="headline"></div><div class="spark"></div>
+        <p class="desc" data-i="d_sancoes">Quem está impedido de contratar ou foi multado por corrupção, por quem e por quanto tempo: reincidentes, multas, acordos de leniência, e as emendas e contratos que empresas punidas ainda recebem, por parlamentar e por partido.</p>
+        <div class="c-foot"><span class="src">CGU · CEIS, CNEP, CEPIM, leniência</span><span class="go" data-i="explore">Explorar</span></div>
+      </a>
+      <div class="card planned">
+        <div class="c-top"><span class="c-icon"><svg viewBox="0 0 24 24"><use href="#i-scale"/></svg></span><span class="cadence hold"><i></i><span data-i="on_hold">em espera</span></span></div>
+        <h3 data-i="t_stf">Pedidos de vista no STF</h3>
+        <p class="desc" data-i="d_stf">Por quanto tempo cada ministro segura um processo depois de pedir vista. Em espera: o servidor do STF recusa clientes que não se apresentam como navegador.</p>
+        <div class="c-foot"><span class="src">STF · Corte Aberta</span></div>
+      </div>
+      <div class="card principles">
+        <div class="c-top"><span class="c-icon"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></span></div>
+        <h3 data-i="t_rules">Regras da casa</h3>
+        <ul>
+          <li data-i="r1">Só dados oficiais, com a fonte em cada número.</li>
+          <li data-i="r2">Nenhum CPF completo é publicado.</li>
+          <li data-i="r3">Pessoas punidas são contadas, nunca nomeadas.</li>
+          <li data-i="r4">Cada regra e problema dos dados está na metodologia.</li>
+        </ul>
+        <div class="c-foot"><a class="go" href="https://github.com/mbottoni/political-eye/blob/main/METHODOLOGY.md" data-i="methodology">Metodologia</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="como-funciona">
+    <div class="sec-head">
+      <div><h2 data-i="h_how">Como funciona</h2><p data-i="p_how">Um projeto de "git scraping": os dados vivem no próprio repositório, versionados.</p></div>
+    </div>
+    <div class="steps">
+      <div class="step"><h3 data-i="s1_t">Coleta</h3><p data-i="s1_p">Jobs agendados no GitHub Actions baixam cada fonte oficial: as APIs da Câmara e do Senado, o TSE, o Portal da Transparência, o Tesouro Nacional e o PNCP.</p></div>
+      <div class="step"><h3 data-i="s2_t">Tabelas</h3><p data-i="s2_p">Cada execução refaz tabelas CSV ordenadas e só faz commit quando algo mudou, então o histórico do git registra o que mudou e quando.</p></div>
+      <div class="step"><h3 data-i="s3_t">Painéis</h3><p data-i="s3_p">Os painéis leem essas tabelas direto do repositório, no seu navegador. Os números desta página são lidos agora e mudam quando chegam dados novos.</p></div>
+    </div>
+    <div class="sources"><span data-i="sources">Fontes:</span><span class="chip">Câmara dos Deputados</span><span class="chip">Senado Federal</span><span class="chip">TSE</span><span class="chip">CGU · Portal da Transparência</span><span class="chip">Tesouro Nacional · Siconfi</span><span class="chip">PNCP</span></div>
+  </section>
 </main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p data-i-html="foot">Dados, código e cada regra por trás dos números: <a href="https://github.com/mbottoni/political-eye">github.com/mbottoni/political-eye</a> (<a href="https://github.com/mbottoni/political-eye/blob/main/METHODOLOGY.md">metodologia</a>). Os painéis detalhados estão em inglês. Código sob licença MIT.</p>
+    <p>political-eye</p>
+  </div>
+</footer>
 <script type="module" src="hub.js"></script>
 </body>
 </html>

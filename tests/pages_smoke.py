@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES = [
-    "docs/index.html",
+    "docs/index.html", "docs/index.html?lang=en",
     "docs/camara/", "docs/camara/?tab=network", "docs/camara/?tab=ideal",
     "docs/senado/", "docs/senado/?tab=network", "docs/senado/?tab=ideal", "docs/senado/?tab=discipline",
     *[f"docs/orientacoes/?tab={t}" for t in ("gov", "cohesion", "rebels", "orient", "deputy", "blocs")],

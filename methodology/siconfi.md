@@ -75,3 +75,42 @@ municipalities, 10 had a report for 2015, all 15 for 2018). Some
 municipalities never file a given year: they appear in `consultas.csv` with
 `linhas = 0`. Values are as the municipality declared them; the API flags
 none as wrong (Pinhão, PR, declared payroll at 87% of revenue in 2025).
+
+## The explorer page
+
+[`docs/siconfi/`](https://mbottoni.github.io/political-eye/siconfi/) draws
+on summaries that `python -m politicaleye site build siconfi`
+(`politicaleye/site/siconfi.py`) writes to `data/site/siconfi/`. The job
+rebuilds them after each run.
+
+**Status.** A town-year's status is the `situacao` its last report read
+gives (`acima_alerta`, `acima_prudencial`, `acima_maximo`), or "below the
+limits" when it has a payroll share and no status. Shares of towns are over
+the towns read for that year, which the page states each time.
+
+**Payroll growth** compares the same town's payroll (`dtp`, in reais, not
+adjusted for inflation) with the year before, for towns read in both years.
+The page shows the median of those changes. Election years (2016, 2020,
+2024) are marked: the Fiscal Responsibility Law bars raises in a mayor's
+last 180 days.
+
+**Cash** is unrestricted net cash at year end (`liquida_livre`), per
+inhabitant. Below zero, the town's commitments carried over to next year
+exceed its free cash.
+
+**Amendments paid to a town** are payments (`data/emendas/pagamentos/`)
+whose recipient is the municipality's own CNPJ (`entes.csv`), by payment
+year, and "Pix" are those whose amendment is a special transfer (`tipo`
+`especial`). `data/emendas/por_municipio.csv` would miss most of them: it
+counts only amendments applied to one municipality, and most Pix transfers
+are recorded as `MÚLTIPLO`. Pix paid in 2025 come to R$ 0.24 billion there,
+and to R$ 6.4 billion to 4,143 towns by recipient CNPJ (of R$ 6.9 billion of
+Pix paid in all). Money sent to a town's separate funds (health, education),
+which have CNPJs of their own, is not included.
+
+**Mayors' parties.** Each town-year is attributed to the mayor in office
+that year ([`data/ref/prefeitos.csv`](ref.md#mayors-prefeitoscsv)), with
+merged and renamed parties under today's name. A party's shares are shown
+when at least 30 of its towns were read that year. These are associations:
+parties govern different kinds of towns, and a payroll share reflects years
+of decisions, often by earlier mayors.

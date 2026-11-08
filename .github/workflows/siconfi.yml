@@ -50,11 +50,14 @@ jobs:
           fi
           uv run python -m politicaleye siconfi update --hours "$HOURS"
 
+      - name: Rebuild the explorer's summaries
+        run: uv run python -m politicaleye site build siconfi
+
       - name: Commit what was read
         run: |
           # consultas.csv only records when each report was read: commit it
           # with data, but not on its own.
-          git add data/siconfi
+          git add data/siconfi data/site/siconfi
           if git diff --staged --quiet -- . ':!data/siconfi/consultas.csv'; then
             echo "No data changes."
             exit 0

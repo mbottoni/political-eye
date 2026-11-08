@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Municipal Finances · political-eye</title>
+<meta name="description" content="Which Brazilian towns break the legal limits on payroll spending, which end the year without free cash, how amendments relate to fiscal stress, and towns compared by their mayor's party.">
+<link rel="stylesheet" href="../lib/site.css">
+<style>
+  .nowrap { white-space: nowrap; }
+  .meter { height: 8px; border-radius: 4px; background: var(--grid); overflow: hidden; margin: 8px 0 4px; max-width: 520px; }
+  .meter i { display: block; height: 100%; background: var(--line); }
+  .search-results { list-style: none; margin: 6px 0 0; padding: 0; max-width: 520px; }
+  .search-results li button { all: unset; box-sizing: border-box; display: flex; justify-content: space-between; gap: 12px; width: 100%; padding: 5px 8px; border-radius: 6px; cursor: pointer; font-size: 13px; }
+  .search-results li button:hover, .search-results li button:focus-visible { background: var(--surface); outline: none; }
+  .search-results .n { color: var(--muted); white-space: nowrap; }
+  .st { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+  .st::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="crumb"><a href="../">political-eye</a> / Municipal finances</p>
+    <h1>Municipal finances</h1>
+    <p>The Fiscal Responsibility Law caps what a town may spend on payroll at 54% of its net current revenue. Above 51.3% (the prudential limit) it may not hire or give raises, and above 48.6% the audit court sends an alert. These pages show which of Brazil's 5,570 towns break each limit and how many end the year without free cash. They also show whether "Pix" amendments go to towns in trouble, and how towns compare by their mayor's party. The source is each town's own fiscal reports on the Tesouro Nacional's Siconfi, read year by year back to 2015. That history is still being read, so every figure says how many towns it covers.</p>
+  </header>
+  <div id="coverage"></div>
+  <nav class="tabs">
+    <button data-tab="overview">Overview</button>
+    <button data-tab="map">Map</button>
+    <button data-tab="dist">Distribution</button>
+    <button data-tab="cash">Cash</button>
+    <button data-tab="parties">Mayors' parties</button>
+    <button data-tab="pix">Amendments</button>
+    <button data-tab="town">A town</button>
+  </nav>
+  <section id="tab-overview" role="tabpanel"></section>
+  <section id="tab-map" role="tabpanel" hidden></section>
+  <section id="tab-dist" role="tabpanel" hidden></section>
+  <section id="tab-cash" role="tabpanel" hidden></section>
+  <section id="tab-parties" role="tabpanel" hidden></section>
+  <section id="tab-pix" role="tabpanel" hidden></section>
+  <section id="tab-town" role="tabpanel" hidden></section>
+  <footer>
+    Values are as each town declared them. Payroll is the twelve months to the year's last report read (RGF Annex 01), over adjusted net current revenue; cash is unrestricted net cash at year end, after commitments carried over (Annex 05). A year's last report may still be the second four-month period for the current year. Mayors are TSE's elected candidates; each year is attributed to the mayor then in office, and merged or renamed parties are counted under today's name. Every rule is in <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/siconfi.md#the-explorer-page">methodology/siconfi.md</a>. Sources: Tesouro Nacional (Siconfi), Portal da Transparência, TSE.
+  </footer>
+</main>
+<noscript>This page needs JavaScript. The data is at <a href="https://github.com/mbottoni/political-eye/tree/main/data/siconfi">github.com/mbottoni/political-eye</a>.</noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

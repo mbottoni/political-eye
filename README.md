@@ -12,7 +12,7 @@ Brazilian politics and public money from official open data, committed as it cha
 | [Sanctions](https://mbottoni.github.io/political-eye/sancoes/) (CEIS, CNEP, CEPIM, leniency): who is barred, by whom and for how long, and the amendment money and contracts barred companies still get, by member and party | daily |
 | [Campaign finance](https://mbottoni.github.io/political-eye/tse/) (TSE, 2018, 2022, 2026): where each candidate's money came from, how parties split public funds, women's and Black candidates' share, money against winning, large donors and suppliers | weekly |
 | [Deputies across sources](https://github.com/mbottoni/political-eye/blob/main/methodology/views.md): each deputy's discipline, amendments and campaign money in one row | weekly |
-| [Municipal finances](https://github.com/mbottoni/political-eye/blob/main/methodology/siconfi.md) (Siconfi): each town's payroll against the legal limits, and its cash; history being read | monthly |
+| [Municipal finances](https://mbottoni.github.io/political-eye/siconfi/) (Siconfi): each town's payroll against the legal limits and its cash, "Pix" amendments against fiscal stress, towns by their mayor's party; history being read | monthly |
 | STF: how long justices hold cases | on hold (the server only answers browsers) |
 | [Public contracts](https://mbottoni.github.io/political-eye/pncp/) (PNCP): who buys and who sells in contracts of R$1M+, concentration, contracts with barred companies, towns by their mayor's party; history being read | daily |
 

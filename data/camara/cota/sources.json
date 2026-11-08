@@ -1,0 +1,50 @@
+{
+  "cota-2019": {
+    "url": "https://www.camara.leg.br/cotas/Ano-2019.csv.zip",
+    "size": 9086185,
+    "etag": "\"6af01740-8aa4e9\"",
+    "last_modified": "Sun, 08 Nov 2026 06:31:28 GMT"
+  },
+  "cota-2020": {
+    "url": "https://www.camara.leg.br/cotas/Ano-2020.csv.zip",
+    "size": 5373222,
+    "etag": "\"6af0174d-51fd26\"",
+    "last_modified": "Sun, 08 Nov 2026 06:31:41 GMT"
+  },
+  "cota-2021": {
+    "url": "https://www.camara.leg.br/cotas/Ano-2021.csv.zip",
+    "size": 6850985,
+    "etag": "\"6af01742-6889a9\"",
+    "last_modified": "Sun, 08 Nov 2026 06:31:30 GMT"
+  },
+  "cota-2022": {
+    "url": "https://www.camara.leg.br/cotas/Ano-2022.csv.zip",
+    "size": 6636109,
+    "etag": "\"6af0173c-65424d\"",
+    "last_modified": "Sun, 08 Nov 2026 06:31:24 GMT"
+  },
+  "cota-2023": {
+    "url": "https://www.camara.leg.br/cotas/Ano-2023.csv.zip",
+    "size": 7518159,
+    "etag": "\"6af0174f-72b7cf\"",
+    "last_modified": "Sun, 08 Nov 2026 06:31:43 GMT"
+  },
+  "cota-2024": {
+    "url": "https://www.camara.leg.br/cotas/Ano-2024.csv.zip",
+    "size": 7501822,
+    "etag": "\"6af01746-7277fe\"",
+    "last_modified": "Sun, 08 Nov 2026 06:31:34 GMT"
+  },
+  "cota-2025": {
+    "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+    "size": 6901269,
+    "etag": "\"6af0174b-694e15\"",
+    "last_modified": "Sun, 08 Nov 2026 06:31:39 GMT"
+  },
+  "cota-2026": {
+    "url": "https://www.camara.leg.br/cotas/Ano-2026.csv.zip",
+    "size": 4579100,
+    "etag": "\"6af0174a-45df1c\"",
+    "last_modified": "Sun, 08 Nov 2026 06:31:38 GMT"
+  }
+}

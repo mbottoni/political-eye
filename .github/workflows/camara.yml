@@ -52,6 +52,9 @@ jobs:
           read -ra years <<< "$YEARS"
           uv run python -m politicaleye camara update "${years[@]}"
 
+      - name: Office allowance (CEAP)
+        run: uv run python -m politicaleye camara cota
+
       - name: Render the README chart
         run: uv run python -m politicaleye camara figures
 

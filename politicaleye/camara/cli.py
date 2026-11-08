@@ -1,4 +1,4 @@
-"""``python -m politicaleye camara {update,blocos,summarize,figures,export,discipline}``."""
+"""``python -m politicaleye camara {update,blocos,cota,summarize,figures,export,discipline}``."""
 
 from __future__ import annotations
 
@@ -35,6 +35,14 @@ def cmd_update(a) -> int:
     graphs._load.cache_clear()
     df = summary.build_index(a.data)
     print(f"built {built}; index has {len(df)} months ({df.month.min()} → {df.month.max()})", file=sys.stderr)
+    return 0
+
+
+def cmd_cota(a) -> int:
+    from . import cota
+    years = sorted(set(a.years or cota.default_years()))
+    built = cota.update(years, a.raw / "cota", a.data, skip_fetch=a.skip_fetch)
+    print(f"office allowance: built {[b['year'] for b in built]}", file=sys.stderr)
     return 0
 
 
@@ -88,6 +96,12 @@ def register(sources: argparse._SubParsersAction) -> None:
     u.add_argument("--raw", type=Path, default=REPO / ".cache" / "raw" / "camara")
     u.add_argument("--skip-fetch", action="store_true", help="build from files already in --raw")
     u.set_defaults(fn=cmd_update)
+
+    c = sub.add_parser("cota", help="the deputies' office allowance (CEAP): spending by deputy, month and kind")
+    c.add_argument("years", nargs="*", type=int, help="default: previous and current year")
+    c.add_argument("--raw", type=Path, default=REPO / ".cache" / "raw" / "camara")
+    c.add_argument("--skip-fetch", action="store_true", help="build from the zips already in --raw/cota")
+    c.set_defaults(fn=cmd_cota)
 
     b = sub.add_parser("blocos", help="record today's blocs and federations from the Câmara's API")
     b.set_defaults(fn=cmd_blocos)

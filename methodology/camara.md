@@ -274,3 +274,29 @@ every such count.
 - **The Senado**: its own source, `data/senado/`
   ([methodology/senado.md](senado.md)).
 - **Committee and symbolic votes.**
+
+## Office allowance (CEAP): `data/camara/cota/`
+
+Built by `python -m politicaleye camara cota [years]` (in the weekly `camara` workflow, the previous and the
+current year; `2019`…`2026` were built once by hand) from the Câmara's bulk file
+`https://www.camara.leg.br/cotas/Ano-<year>.csv.zip`, refreshed daily. The *Cota para o Exercício da
+Atividade Parlamentar* reimburses each deputy's office, travel, fuel, publicity and similar costs, up to a
+monthly ceiling that depends on the state (it covers flights to Brasília, so Roraima's is the highest and the
+Federal District's the lowest).
+
+| file | contents |
+|---|---|
+| `<year>.csv` | `deputado_id` (`ideCadastro`), `mes`, `subcota` (kind of expense), `valor` (net value, `vlrLiquido`: after the Câmara's disallowances), `documentos` (receipts) |
+| `subcotas.csv` | each kind's code and description, as published (`numSubCota`, `txtDescricao`) |
+| `sources.json` | provenance of each year's zip |
+
+- **Only sums are kept.** The file carries the deputy's CPF, each supplier's CNPJ or CPF and the names of
+  passengers on tickets bought with the allowance; none of them is committed.
+- **Leadership offices are dropped.** Rows of party and government leaderships have no deputy id.
+- **Receipts land late.** A receipt is filed under the month it was issued, often weeks after; the latest
+  months grow for a while, which is why each run rebuilds the previous year too.
+- **The ceiling is not in the data.** Spending is compared with deputies of the same state (see
+  [ranking.md](ranking.md)) rather than with a ceiling table.
+
+On 2026-11-08 the deputies spent R$ 210 million in 2019, R$ 249 million in 2024 and R$ 148 million in
+2026 so far.

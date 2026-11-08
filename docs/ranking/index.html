@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Deputies ranked · political-eye">Ranking dos deputados · political-eye</title>
+<meta name="description" content="Os deputados federais ordenados por um índice de atuação feito com dados abertos: participação nas votações, projetos apresentados, pareceres de relator e economia na cota parlamentar. Você escolhe o peso de cada critério." data-en-content="Brazil's federal deputies ordered by an index of their work built from open data: roll-call participation, bills filed, rapporteur opinions and thrift with the office allowance. You choose how much each counts.">
+<link rel="stylesheet" href="../lib/site.css">
+<style>
+  .info { margin: 20px 0 4px; padding: 14px 18px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--surface); font-size: 14px; line-height: 1.55; color: var(--ink2); }
+  .info b { color: var(--ink); }
+  .weights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 26px; margin-top: 4px; }
+  .weight { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; font-size: 13px; }
+  .weight span { color: var(--ink2); font-weight: 550; }
+  .weight output { font-variant-numeric: tabular-nums; font-weight: 650; min-width: 18px; text-align: right; }
+  .weight input { grid-column: 1 / -1; width: 100%; accent-color: var(--accent); }
+  .weight small { grid-column: 1 / -1; color: var(--muted); font-size: 12px; line-height: 1.4; }
+  .presets { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 16px; }
+  .presets button { all: unset; cursor: pointer; font-size: 13px; font-weight: 550; padding: 6px 13px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--ink2); }
+  .presets button[aria-pressed="true"] { background: var(--ink); color: var(--page); border-color: var(--ink); }
+  .who { display: flex; align-items: center; gap: 10px; min-width: 200px; }
+  .who a { font-weight: 600; color: var(--ink); text-decoration: none; }
+  .who a:hover { text-decoration: underline; }
+  .who small { display: block; color: var(--muted); font-size: 11.5px; }
+  .score { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+  .score b { font-size: 15px; font-variant-numeric: tabular-nums; min-width: 34px; text-align: right; }
+  .score i { display: block; width: 70px; height: 7px; border-radius: 99px; background: var(--grid); overflow: hidden; }
+  .score i::after { content: ""; display: block; height: 100%; width: var(--w); background: var(--accent); border-radius: 99px; }
+  .dims { display: inline-flex; gap: 3px; align-items: flex-end; height: 22px; }
+  .dims i { display: block; width: 7px; border-radius: 2px; background: var(--c); min-height: 2px; }
+  .dims i.na { background: transparent; border: 1px dashed var(--axis); height: 100% !important; }
+  .rank-n { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 600; }
+  .flagb { display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px; color: var(--critical); border: 1px solid color-mix(in srgb, var(--critical) 45%, transparent); text-decoration: none; white-space: nowrap; }
+  .keyline { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--ink2); margin: 6px 0 0; }
+  .keyline i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  @media (max-width: 900px) { .weights { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .weights { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="crumb"><a href="../">political-eye</a></p>
+    <h1 data-en="Deputies ranked">Ranking dos deputados</h1>
+    <p data-en="Brazil's federal deputies ordered by an index of their work built from open data: how often they vote in roll calls, how many bills they file, how much rapporteur work they sign, and how thrifty they are with the office allowance, against deputies of their own state. You choose how much each criterion counts; red flags appear beside each name, never inside the score.">Os deputados federais ordenados por um índice de atuação feito com dados abertos: o quanto votam nas votações nominais, quantos projetos apresentam, quantos pareceres de relator assinam e o quanto economizam na cota parlamentar, comparados aos deputados do mesmo estado. Você escolhe o peso de cada critério; os sinais de alerta aparecem ao lado de cada nome, nunca dentro da nota.</p>
+    <div class="info" data-en-html="&lt;b&gt;What this ranking measures, and what it doesn't.&lt;/b&gt; It measures work the open data records. It does not measure the quality or impact of a deputy's bills, their ideology, their honesty, committee and constituency work that leaves no record, or how they vote on any issue. A deputy who files many bills is not for that reason a better one: change the weights to see how much the order depends on them. The president of the Câmara votes only to break ties, so his participation is left out; deputies with under 12 months in office are not ranked."><b>O que este ranking mede, e o que não mede.</b> Ele mede o trabalho que os dados abertos registram. Não mede a qualidade ou o impacto dos projetos, a ideologia, a honestidade, o trabalho em comissões e com eleitores que não deixa registro, nem como o deputado vota em cada tema. Apresentar muitos projetos não torna ninguém melhor por si só: mude os pesos para ver o quanto a ordem depende deles. O presidente da Câmara só vota para desempatar, por isso sua participação fica de fora; deputados com menos de 12 meses de mandato não são ranqueados.</div>
+  </header>
+  <section id="app"></section>
+  <footer data-en-html="Sources: the Câmara's roll calls and proposal authorship (Dados Abertos) and its office-allowance files (CEAP), with the red flags of this site's &lt;a href=&quot;../alertas/&quot;&gt;red-flags page&lt;/a&gt;. Every rule is in &lt;a href=&quot;https://github.com/mbottoni/political-eye/blob/main/methodology/ranking.md&quot;&gt;methodology/ranking.md&lt;/a&gt;.">Fontes: as votações nominais e a autoria de proposições da Câmara (Dados Abertos) e os arquivos da cota parlamentar (CEAP), com os sinais da página de <a href="../alertas/">sinais de alerta</a> deste site. Cada regra está em <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/ranking.md">methodology/ranking.md</a>.</footer>
+</main>
+<noscript>Esta página precisa de JavaScript. Os dados estão em <a href="https://github.com/mbottoni/political-eye/tree/main/data/site/ranking">github.com/mbottoni/political-eye</a>.</noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

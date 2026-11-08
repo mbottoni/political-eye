@@ -21,6 +21,9 @@ const EN = {
   ab_kicker: "Red flags", ab_title: "Patterns across the open data that deserve a closer look",
   ab_text: "Amendments and contracts for companies barred from public contracts, campaign suppliers later paid from the same member's amendments, amendment money concentrated on one private recipient. Each flag gives its rule, what it is measured against and the innocent explanations. A flag is not evidence of an irregularity.",
   ab_go: "See the red flags",
+  rb_kicker: "Deputies ranked", rb_title: "Who works most, by what the data records, with the weights you choose",
+  rb_text: "Roll-call participation, bills filed, rapporteur opinions and thrift with the office allowance, against deputies of the same state. Each criterion becomes a 0–100 score; you decide how much each counts. The ranking does not measure ideology, the quality of laws or honesty.",
+  rb_go: "Build the ranking",
   f_pages: "interactive pages", f_sources: "official sources", f_since: "data since", f_updated: "last update",
   swarm_title: "How the Câmara votes", swarm_others: "others", swarm_left: "← votes like PT", swarm_right: "votes like PL →",
   h_findings: "What the data shows", p_findings: "Four numbers read just now from the pages' tables. Click one to see where it comes from.",
@@ -231,6 +234,19 @@ async function redFlags() {
     stat(num(r.cruzamentos.entidades), tr({ pt: "empresas e entidades em duas listas ou mais", en: "companies and bodies on two lists or more" })));
 }
 
+// ------------------------------------------------------------ ranking banner
+
+async function ranking() {
+  const r = await data("site/ranking/resumo.json"), b = r.builds?.["57"] || r.builds?.[String(r.legislaturas?.[0])], box = document.querySelector("#rb-stats");
+  if (!b || !box) return;
+  const stat = (n, label) => el("div", {}, el("b", { textContent: n }), el("span", { textContent: label }));
+  box.replaceChildren(
+    stat(num(b.ranked), tr({ pt: "deputados ranqueados, com 12 meses ou mais de mandato", en: "deputies ranked, with 12 months or more in office" })),
+    stat(pct(b.participation_median), tr({ pt: "das votações nominais, na mediana", en: "of roll calls voted in, at the median" })),
+    stat(brl(b.allowance_median_month, 0), tr({ pt: "por mês de cota parlamentar, na mediana", en: "a month of office allowance, at the median" })),
+    stat(num(b.bills_median), tr({ pt: "projetos apresentados, na mediana", en: "bills filed, at the median" })));
+}
+
 // ------------------------------------------------------------ hero: every deputy by how they vote
 
 let swarmRows = null;
@@ -318,6 +334,7 @@ function render() {
   for (const [k, f] of Object.entries(FINDINGS)) f().catch((e) => { console.warn(`hub ${k}:`, e); finding(k, "–", "", null); });
   swarm().catch((e) => console.warn("hub swarm:", e));
   redFlags().catch((e) => console.warn("hub red flags:", e));
+  ranking().catch((e) => console.warn("hub ranking:", e));
   lastUpdate();
 }
 

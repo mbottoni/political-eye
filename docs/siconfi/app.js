@@ -68,7 +68,7 @@ async function overview(root) {
   if (sy.length < 2) { few(c1); few(c2); } else later(() => C.stack(c1, { x: sy.map((x) => x.ano), height: 240, format: (v) => pct(v),
     series: r.status.slice(1).map((s) => ({ name: ST[s], color: stColor(s), values: sy.map((x) => x[s] / x.n) })),
     table: { rows: sy, cols: [{ key: "ano", label: L("Ano", "Year") }, { key: "n", label: L("Municípios lidos", "Towns read") }, ...r.status.map((s) => ({ key: s, label: ST[s] }))], name: "status-by-year" } }));
-  if (sy.length >= 2) later(() => C.line(c2, { x: "num", height: 240, y: { min: 30, max: 60, format: (v) => `${fmt(v)}%` }, ref: LIMITS.map((l) => ({ y: l.x, label: l.label })),
+  if (sy.length >= 2) later(() => C.line(c2, { x: "num", xTicks: sy.map((x) => +x.ano), height: 240, y: { min: 30, max: 60, format: (v) => `${fmt(v)}%` }, ref: LIMITS.map((l) => ({ y: l.x, label: l.label })),
     series: [{ name: L("Município mediano", "Median town"), color: css("--line"), points: sy.map((x) => [x.ano, x.p50]), band: sy.map((x) => [x.ano, x.p25, x.p75]) }] }));
   const g = r.growth;
   if (g.length) {
@@ -248,7 +248,7 @@ async function town(root) {
       if (pts.length < 2) c1.replaceChildren(el("p", { className: "empty", textContent: pts.length
         ? L(`Só ${pts[0].ano} foi lido até agora: ${fmt(pts[0].dtp_pct, 1)}% da receita com pessoal. A série aparece quando mais anos forem lidos.`, `Only ${pts[0].ano} read so far: ${fmt(pts[0].dtp_pct, 1)}% of revenue on payroll. The series appears once more years are read.`)
         : L("Nenhum relatório de pessoal lido ainda para este município.", "No payroll report read yet for this town.") }));
-      else C.line(c1, { x: "num", height: 220, y: { min: Math.min(30, ...Y.map((x) => x.dtp_pct ?? 99)), max: Math.max(60, ...Y.map((x) => x.dtp_pct ?? 0)), format: (v) => `${fmt(v)}%` }, ref: LIMITS.map((l) => ({ y: l.x, label: l.label })), empty: L("Nenhum relatório de pessoal lido ainda para este município.", "No payroll report read yet for this town."),
+      else C.line(c1, { x: "num", xTicks: Y.map((x) => +x.ano), height: 220, y: { min: Math.min(30, ...Y.map((x) => x.dtp_pct ?? 99)), max: Math.max(60, ...Y.map((x) => x.dtp_pct ?? 0)), format: (v) => `${fmt(v)}%` }, ref: LIMITS.map((l) => ({ y: l.x, label: l.label })), empty: L("Nenhum relatório de pessoal lido ainda para este município.", "No payroll report read yet for this town."),
         series: [{ name: L("Despesa com pessoal", "Payroll share"), color: css("--line"), points: Y.filter((x) => x.dtp_pct != null).map((x) => [x.ano, x.dtp_pct]) }] });
       C.stack(c2, { x: A.map((x) => x.ano), height: 220, format: (v) => brl(v, 0), series: [{ name: "Pix", color: C.slot(2), values: A.map((x) => x.pix) }, { name: L("Outras emendas", "Other amendments"), color: css("--line"), values: A.map((x) => x.total - x.pix) }] });
     };

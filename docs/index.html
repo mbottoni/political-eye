@@ -4,100 +4,121 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>political-eye</title>
-<meta name="description" content="Brazilian politics and public money from official open data, committed to git as it changes.">
+<meta name="description" content="Brazilian politics and public money from official open data, committed to git as it changes: Congress votes and networks, party discipline, campaign finance, amendments, public contracts, municipal finances and sanctions.">
+<link rel="stylesheet" href="lib/site.css">
 <style>
-  :root {
-    color-scheme: light;
-    --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781;
-    --border: rgba(11, 11, 11, 0.10); --accent: #2a78d6; --live: #1f7a4d; --live-bg: rgba(31, 122, 77, 0.10);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      color-scheme: dark;
-      --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781;
-      --border: rgba(255, 255, 255, 0.10); --accent: #3987e5; --live: #5cc28d; --live-bg: rgba(92, 194, 141, 0.12);
-    }
-  }
-  :root[data-theme="dark"] {
-    color-scheme: dark;
-    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781;
-    --border: rgba(255, 255, 255, 0.10); --accent: #3987e5; --live: #5cc28d; --live-bg: rgba(92, 194, 141, 0.12);
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--page); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  main { max-width: 1040px; margin: 0 auto; padding: 40px 16px 56px; }
-  h1 { font-size: 28px; margin: 0 0 6px; font-weight: 650; letter-spacing: -0.01em; }
-  .lede { margin: 0 0 28px; color: var(--ink2); max-width: 680px; }
-  h2 { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 28px 0 10px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
-  .card { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; color: inherit; text-decoration: none; }
-  a.card:hover { border-color: var(--accent); }
-  .card h3 { font-size: 16px; margin: 0 0 4px; font-weight: 620; display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
-  .card p { margin: 0; color: var(--ink2); font-size: 14px; }
+  main { max-width: 1120px; padding-top: 40px; }
+  h1 { font-size: 30px; margin: 0 0 6px; font-weight: 680; letter-spacing: -0.01em; }
+  .lede { margin: 0; color: var(--ink2); max-width: 720px; font-size: 15px; }
+  .meta { margin: 10px 0 0; font-size: 13px; color: var(--muted); }
+  .meta a { color: var(--ink2); }
+  h2.section { font-size: 12px; font-weight: 650; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; margin: 30px 0 10px; }
+  .hl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .hl a { display: block; text-decoration: none; color: inherit; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+  .hl a:hover, .hl a:focus-visible { border-color: var(--line); outline: none; }
+  .hl .num { display: block; font-size: 26px; font-weight: 650; font-variant-numeric: tabular-nums; min-height: 34px; }
+  .hl .txt { display: block; font-size: 13px; color: var(--ink2); margin-top: 2px; min-height: 36px; }
+  .hl .go { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; }
+  .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  a.card { display: flex; flex-direction: column; color: inherit; text-decoration: none; }
+  a.card:hover, a.card:focus-visible { border-color: var(--line); outline: none; }
+  .card h3 { font-size: 16px; margin: 0 0 6px; font-weight: 640; display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .card .headline { min-height: 44px; }
+  .card .headline .num { font-size: 22px; font-weight: 650; font-variant-numeric: tabular-nums; margin-right: 6px; }
+  .card .headline .what { font-size: 12px; color: var(--muted); }
+  .card .spark { min-height: 34px; margin: 4px 0 8px; }
+  .card .spark svg { display: block; width: 100%; }
+  .card .spark .span { font-size: 10px; color: var(--muted); }
+  .card p { margin: 0; color: var(--ink2); font-size: 13.5px; flex: 1; }
   .card .src { margin-top: 10px; font-size: 12px; color: var(--muted); }
   .badge { font-size: 11px; font-weight: 600; border-radius: 999px; padding: 2px 8px; white-space: nowrap; color: var(--muted); border: 1px solid var(--border); }
-  .badge.live { color: var(--live); background: var(--live-bg); border-color: transparent; }
-  .planned { opacity: 0.85; }
-  footer { margin-top: 36px; color: var(--muted); font-size: 13px; max-width: 680px; }
-  footer a { color: var(--ink2); }
+  .badge.live { color: var(--up); background: color-mix(in srgb, var(--up) 12%, transparent); border-color: transparent; }
+  .planned { opacity: 0.8; }
+  footer { margin-top: 36px; max-width: 760px; }
+  @media (max-width: 980px) { .hl, .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 520px) { .hl { grid-template-columns: 1fr; } .cards { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 <main>
-  <h1>political-eye</h1>
-  <p class="lede">Brazilian politics and public money from official open data. Scheduled jobs download each source, rebuild tidy tables and commit them, so the repository's history is a record of what changed and when.</p>
+  <header>
+    <h1>political-eye</h1>
+    <p class="lede">Brazilian politics and public money from official open data. Scheduled jobs download each source, rebuild tidy tables and commit them, so the repository's history is a record of what changed and when. Each page below goes from the big picture down to one deputy, party, company or town.</p>
+    <p class="meta">Every rule and data quirk: <a href="https://github.com/mbottoni/political-eye/blob/main/METHODOLOGY.md">methodology</a> · data and code: <a href="https://github.com/mbottoni/political-eye">github.com/mbottoni/political-eye</a></p>
+  </header>
 
-  <h2>Live</h2>
-  <div class="grid">
-    <a class="card" href="camara/">
+  <h2 class="section">What the data shows</h2>
+  <div class="hl">
+    <a href="orientacoes/?tab=gov" data-hl="gov"><span class="num">…</span><span class="txt">of the Câmara's votes followed the government's orientation</span><span class="go">Party orientations →</span></a>
+    <a href="deputados/" data-hl="mayors"><span class="num">…</span><span class="txt">of deputies' amendment money for towns went to mayors of their own party</span><span class="go">Deputies across sources →</span></a>
+    <a href="sancoes/?tab=money" data-hl="barred"><span class="num">…</span><span class="txt">in amendments paid to companies while they were barred from public contracts</span><span class="go">Sanctions →</span></a>
+    <a href="tse/" data-hl="public"><span class="num">…</span><span class="txt">of the money candidates raised was public</span><span class="go">Campaign finance →</span></a>
+  </div>
+
+  <h2 class="section">Congress</h2>
+  <div class="cards">
+    <a class="card" href="camara/" data-key="camara">
       <h3>Câmara dos Deputados <span class="badge live">weekly</span></h3>
-      <p>Every month since 2015 as two graphs on the same deputies: who votes together and who signs bills together.</p>
+      <div class="headline"></div><div class="spark"></div>
+      <p>Every month since 2015 as two graphs on the same deputies, who votes together and who signs bills together, with their network analysis and each deputy's ideal point.</p>
       <div class="src">Câmara, Dados Abertos</div>
     </a>
-    <a class="card" href="orientacoes/">
+    <a class="card" href="senado/" data-key="senado">
+      <h3>Senado Federal <span class="badge live">weekly</span></h3>
+      <div class="headline"></div><div class="spark"></div>
+      <p>The same two graphs for the Senate, each over the twelve months to date, and how often each senator votes with their party and the government.</p>
+      <div class="src">Senado, Dados Abertos</div>
+    </a>
+    <a class="card" href="orientacoes/" data-key="orientacoes">
       <h3>Party orientations <span class="badge live">weekly</span></h3>
+      <div class="headline"></div><div class="spark"></div>
       <p>How often each deputy votes the way their party and the government told them to, and with their party's majority: government support by party, cohesion, rebels, how parties orient.</p>
       <div class="src">Câmara, Dados Abertos</div>
     </a>
-    <a class="card" href="senado/">
-      <h3>Senado Federal <span class="badge live">weekly</span></h3>
-      <p>The same two graphs for the Senate, who votes together and who signs together, each over the twelve months to date, and how often each senator votes with their party and the government.</p>
-      <div class="src">Senado, Dados Abertos</div>
-    </a>
-    <a class="card" href="emendas/">
-      <h3>Parliamentary amendments <span class="badge live">daily</span></h3>
-      <p>Every amendment since 2014: who sent it, where the money landed, how much was committed and paid, and which organisations received it, "Pix" transfers included.</p>
-      <div class="src">Portal da Transparência (CGU)</div>
-    </a>
-    <a class="card" href="sancoes/">
-      <h3>Sanctions <span class="badge live">daily</span></h3>
-      <p>Who is barred from public contracts or fined for corruption, by whom and for how long: repeat offenders, fines, leniency deals, and the amendments and contracts barred companies still get, by member and party.</p>
-      <div class="src">CGU: CEIS, CNEP, CEPIM, leniency agreements</div>
-    </a>
-    <a class="card" href="tse/">
-      <h3>Campaign finance <span class="badge live">weekly</span></h3>
-      <p>Where candidates' money came from in 2018, 2022 and 2026: how party leaderships split public funds, whether women and Black candidates got their legal share, how money relates to winning, the large donors and the companies campaigns paid.</p>
-      <div class="src">TSE</div>
-    </a>
-    <a class="card" href="siconfi/">
-      <h3>Municipal finances <span class="badge live">monthly</span></h3>
-      <p>Which towns break the legal caps on payroll and which end the year without free cash, whether "Pix" amendments go to towns in trouble, each town's mayors, and towns compared by the mayor's party. The history since 2015 is still being read.</p>
-      <div class="src">Tesouro Nacional: Siconfi</div>
-    </a>
-    <a class="card" href="pncp/">
-      <h3>Public contracts <span class="badge live">daily</span></h3>
-      <p>Who buys and who sells in contracts of R$1 million or more: supplier and buyer concentration, contracts with barred companies, money per inhabitant by state and town, and towns compared by their mayor's party. The history since 2021 is still being read.</p>
-      <div class="src">PNCP</div>
-    </a>
-    <a class="card" href="deputados/">
+    <a class="card" href="deputados/" data-key="deputados">
       <h3>Deputies across sources <span class="badge live">weekly</span></h3>
+      <div class="headline"></div><div class="spark"></div>
       <p>Every deputy in one place: how they vote and whom they vote with, the amendment money they sent and where it landed, whether it favoured towns their party runs, and who paid for their campaign; then all of them compared.</p>
       <div class="src">All of the above, joined</div>
     </a>
   </div>
 
-  <h2>Planned</h2>
-  <div class="grid">
+  <h2 class="section">Money: campaigns, amendments, contracts, towns</h2>
+  <div class="cards">
+    <a class="card" href="tse/" data-key="tse">
+      <h3>Campaign finance <span class="badge live">weekly</span></h3>
+      <div class="headline"></div><div class="spark"></div>
+      <p>Where candidates' money came from in 2018, 2022 and 2026: how party leaderships split public funds, whether women and Black candidates got their legal share, how money relates to winning, the large donors and the companies campaigns paid.</p>
+      <div class="src">TSE</div>
+    </a>
+    <a class="card" href="emendas/" data-key="emendas">
+      <h3>Parliamentary amendments <span class="badge live">daily</span></h3>
+      <div class="headline"></div><div class="spark"></div>
+      <p>Every amendment since 2014: who sent it, where the money landed, how much was committed and paid, and which organisations received it, "Pix" transfers included.</p>
+      <div class="src">Portal da Transparência (CGU)</div>
+    </a>
+    <a class="card" href="pncp/" data-key="pncp">
+      <h3>Public contracts <span class="badge live">daily</span></h3>
+      <div class="headline"></div><div class="spark"></div>
+      <p>Who buys and who sells in contracts of R$1 million or more: supplier and buyer concentration, contracts with barred companies, money per inhabitant by state and town, and towns compared by their mayor's party. The history since 2021 is still being read.</p>
+      <div class="src">PNCP</div>
+    </a>
+    <a class="card" href="siconfi/" data-key="siconfi">
+      <h3>Municipal finances <span class="badge live">monthly</span></h3>
+      <div class="headline"></div><div class="spark"></div>
+      <p>Which towns break the legal caps on payroll and which end the year without free cash, whether "Pix" amendments go to towns in trouble, each town's mayors, and towns compared by the mayor's party. The history since 2015 is still being read.</p>
+      <div class="src">Tesouro Nacional: Siconfi</div>
+    </a>
+  </div>
+
+  <h2 class="section">Accountability and justice</h2>
+  <div class="cards">
+    <a class="card" href="sancoes/" data-key="sancoes">
+      <h3>Sanctions <span class="badge live">daily</span></h3>
+      <div class="headline"></div><div class="spark"></div>
+      <p>Who is barred from public contracts or fined for corruption, by whom and for how long: repeat offenders, fines, leniency deals, and the amendments and contracts barred companies still get, by member and party.</p>
+      <div class="src">CGU: CEIS, CNEP, CEPIM, leniency agreements</div>
+    </a>
     <div class="card planned">
       <h3>STF case reviews <span class="badge">on hold</span></h3>
       <p>How long each justice holds a case after asking for more time to review it. On hold: the STF's server turns away clients that do not present themselves as a web browser.</p>
@@ -106,8 +127,9 @@
   </div>
 
   <footer>
-    Data, code and every rule behind the numbers: <a href="https://github.com/mbottoni/political-eye">github.com/mbottoni/political-eye</a> (<a href="https://github.com/mbottoni/political-eye/blob/main/METHODOLOGY.md">methodology</a>). Code: MIT.
+    Each number above is read live from the tables the pages use, and changes when a scheduled job commits new data. Data, code and every rule behind the numbers: <a href="https://github.com/mbottoni/political-eye">github.com/mbottoni/political-eye</a> (<a href="https://github.com/mbottoni/political-eye/blob/main/METHODOLOGY.md">methodology</a>). Code: MIT.
   </footer>
 </main>
+<script type="module" src="hub.js"></script>
 </body>
 </html>

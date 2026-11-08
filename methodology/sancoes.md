@@ -90,7 +90,15 @@ at most a day behind the other sources.
 
 **People are counted, never named.** Every table on the page that names
 someone holds only companies and organisations (a 14-digit CNPJ or a foreign
-code). Sanctions on people enter the counts and charts only.
+code). Sanctions on people enter the counts and charts only. An individual
+firm (*empresário individual*, MEI) has a CNPJ but carries its owner's name,
+so its name is withheld too ("Individual firm (name withheld)"). A company
+name counts as a person's when it is an MEI name (`12.345.678 JOAO SILVA`),
+carries a CPF, or is two or more words that all occur in real people's names
+(the TSE candidate files and the politician crosswalk), leaving out `ME`,
+`EPP`, `EIRELI` and connectors (`VAGNER BORGES DIAS`, `JOAO DA SILVA ME`). A
+name with `LTDA` never counts. On 2026-11-06 this withheld 700 of 12,471
+names.
 
 **In force.** A sanction is in force on a day when it started on or before
 that day and has no end date or ends on or after it. The page's "in force"
@@ -120,7 +128,11 @@ expired and left the list before November 2026 leaves no trace.
 (`data/emendas/emendas/`). Individual authors are linked to a deputy or
 senator through the crosswalk ([ref](../METHODOLOGY.md)), and their party is
 the one the chamber tables record for the month nearest to July of the
-amendment's year (the latest month on or before it, else the first after).
+amendment's year (the latest month on or before it, else the first after),
+under one name per party as it stood that year: renamed parties under their
+new name (PMDB is MDB, PR is PL, PRB is Republicanos), merged ones under the
+successor from the year of the merger (DEM is União from 2022). "No party"
+is not a party, and is left out of the party table.
 Benches, committees and the rapporteur-general have no party. A party's share
 is the money its members' individual amendments paid to companies while
 barred, over everything those amendments paid to anyone. Payments with no

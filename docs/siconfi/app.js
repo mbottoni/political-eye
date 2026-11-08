@@ -17,7 +17,7 @@ const redraws = [];
 const later = (f) => { redraws.push(f); f(); };
 
 const LIMITS = [{ x: 48.6, label: "alert 48.6%" }, { x: 51.3, label: "prudential 51.3%" }, { x: 54, label: "maximum 54%" }];
-const ST = { abaixo: "Below the limits", acima_alerta: "Above the alert (48.6%)", acima_prudencial: "Above the prudential (51.3%)", acima_maximo: "Above the maximum (54%)" };
+const ST = { abaixo: "Below 48.6%", acima_alerta: "Alert band, 48.6–51.3%", acima_prudencial: "Prudential band, 51.3–54%", acima_maximo: "Over the maximum, 54%+" };
 const stColor = (s) => ({ abaixo: css("--other"), acima_alerta: css("--warning"), acima_prudencial: css("--serious"), acima_maximo: css("--critical") })[s] || css("--grid");
 const stTag = (s) => el("span", { className: "st", style: `--c:${stColor(s)}`, textContent: ST[s] || "Not read" });
 const R = () => data("site/siconfi/resumo.json");
@@ -50,10 +50,11 @@ async function overview(root) {
   root.append(grid(
     card("How many towns break each limit", "Share of the towns read each year, by payroll status.", c1),
     card("The median town's payroll share", "Median, with the middle half (25th to 75th percentile) shaded, against the three limits.", c2)));
-  later(() => C.stack(c1, { x: sy.map((x) => x.ano), height: 240, format: (v) => pct(v),
+  const few = (box) => { box.replaceChildren(el("p", { className: "empty", textContent: `The series appears once two or more years are read (${sy.length ? `only ${sy[0].ano} so far` : "none yet"}).` })); };
+  if (sy.length < 2) { few(c1); few(c2); } else later(() => C.stack(c1, { x: sy.map((x) => x.ano), height: 240, format: (v) => pct(v),
     series: r.status.slice(1).map((s) => ({ name: ST[s], color: stColor(s), values: sy.map((x) => x[s] / x.n) })),
     table: { rows: sy, cols: [{ key: "ano", label: "Year" }, { key: "n", label: "Towns read" }, ...r.status.map((s) => ({ key: s, label: ST[s] }))], name: "status-by-year" } }));
-  later(() => C.line(c2, { x: "num", height: 240, y: { min: 30, max: 60, format: (v) => `${fmt(v)}%` }, ref: LIMITS.map((l) => ({ y: l.x, label: l.label })),
+  if (sy.length >= 2) later(() => C.line(c2, { x: "num", height: 240, y: { min: 30, max: 60, format: (v) => `${fmt(v)}%` }, ref: LIMITS.map((l) => ({ y: l.x, label: l.label })),
     series: [{ name: "Median town", color: css("--line"), points: sy.map((x) => [x.ano, x.p50]), band: sy.map((x) => [x.ano, x.p25, x.p75]) }] }));
   const g = r.growth;
   if (g.length) {
@@ -99,7 +100,7 @@ async function dist(root) {
     f1.replaceChildren(s ? finding(`${fmt(s.n)} towns read for ${y}: the median spends ${fmt(s.p50, 1)}% of its revenue on payroll; one in ten spends more than ${fmt(s.p90, 1)}%.`) : "");
     const z = r.sizes.map((k) => r.by_size.find((x) => x.ano === y && x.porte === k)).filter(Boolean);
     C.stack(c2, { x: z.map((x) => `${x.porte} (${fmt(x.n)})`), height: 220, format: (v) => pct(v),
-      series: [{ name: "Above the alert, below the maximum", color: css("--warning"), values: z.map((x) => (x.alerta - x.maximo) / x.n) }, { name: "Above the maximum", color: css("--critical"), values: z.map((x) => x.maximo / x.n) }] });
+      series: [{ name: "Alert or prudential band, 48.6–54%", color: css("--warning"), values: z.map((x) => (x.alerta - x.maximo) / x.n) }, { name: "Over the maximum, 54%+", color: css("--critical"), values: z.map((x) => x.maximo / x.n) }] });
   };
   later(draw);
 }
@@ -216,14 +217,16 @@ async function town(root) {
     tiles(tl, [
       { label: "Inhabitants", value: fmt(+e.populacao), sub: e.capital === "1" ? "state capital" : e.regiao },
       { label: "Payroll share", value: last ? `${fmt(last.dtp_pct, 1)}%` : "not read", sub: last ? `${last.ano}: ${ST[last.situacao] || ""}` : "no payroll report read yet" },
-      { label: "Amendments paid to it", value: brl(sum(A.map((x) => x.total))), sub: `since 2014; ${brl(sum(A.map((x) => x.pix)))} as Pix` },
+      { label: "Amendments paid to its own accounts", value: brl(sum(A.map((x) => x.total))), sub: `to the town's CNPJ since 2014; ${brl(sum(A.map((x) => x.pix)))} as Pix` },
       { label: "Mayor now", value: Mm.length ? Mm[Mm.length - 1].partido : "–", sub: Mm.length ? Mm[Mm.length - 1].nome : "" },
     ]);
     const c1 = chart(), c2 = chart();
-    box.append(grid(card("Payroll share over time", "Against the three limits.", c1), card("Amendments paid to it, by year", "Pix (special transfers) and the rest.", c2)));
+    box.append(grid(card("Payroll share over time", "Against the three limits.", c1), card("Amendments paid to its own accounts, by year", "Payments to the town's own CNPJ (the prefeitura): Pix (special transfers) and the rest. Money to its separate funds, or to companies and organisations located in the town, is not included; the amendments page counts those by place.", c2)));
     out.replaceChildren(box);
     const draw = () => {
-      C.line(c1, { x: "num", height: 220, y: { min: Math.min(30, ...Y.map((x) => x.dtp_pct ?? 99)), max: Math.max(60, ...Y.map((x) => x.dtp_pct ?? 0)), format: (v) => `${fmt(v)}%` }, ref: LIMITS.map((l) => ({ y: l.x, label: l.label })), empty: "No payroll report read yet for this town.",
+      const pts = Y.filter((x) => x.dtp_pct != null);
+      if (pts.length < 2) c1.replaceChildren(el("p", { className: "empty", textContent: pts.length ? `Only ${pts[0].ano} read so far: ${fmt(pts[0].dtp_pct, 1)}% of revenue on payroll. The series appears once more years are read.` : "No payroll report read yet for this town." }));
+      else C.line(c1, { x: "num", height: 220, y: { min: Math.min(30, ...Y.map((x) => x.dtp_pct ?? 99)), max: Math.max(60, ...Y.map((x) => x.dtp_pct ?? 0)), format: (v) => `${fmt(v)}%` }, ref: LIMITS.map((l) => ({ y: l.x, label: l.label })), empty: "No payroll report read yet for this town.",
         series: [{ name: "Payroll share", color: css("--line"), points: Y.filter((x) => x.dtp_pct != null).map((x) => [x.ano, x.dtp_pct]) }] });
       C.stack(c2, { x: A.map((x) => x.ano), height: 220, format: (v) => brl(v, 0), series: [{ name: "Pix", color: C.slot(2), values: A.map((x) => x.pix) }, { name: "Other amendments", color: css("--line"), values: A.map((x) => x.total - x.pix) }] });
     };

@@ -81,7 +81,8 @@ function openCompany(cnpj) {
   if (companyView) companyView(cnpj);
   window.scrollTo({ top: $("nav.tabs").offsetTop - 8, behavior: "smooth" });
 }
-const companyLink = (name, cnpj) => el("button", { className: "linkish", type: "button", textContent: name || cnpjFmt(cnpj), title: cnpjFmt(cnpj), on: { click: () => openCompany(cnpj) } });
+const WITHHELD = "Individual firm (name withheld)";
+const companyLink = (name, cnpj) => el("button", { className: "linkish", type: "button", textContent: name || WITHHELD, title: cnpjFmt(cnpj), on: { click: () => openCompany(cnpj) } });
 const companyCol = (key = "nome", label = "Company") => ({ key, label, text: true, wrap: true, fmt: (v, r) => companyLink(v, r.cnpj) });
 
 // ------------------------------------------------------------ overview
@@ -134,7 +135,7 @@ async function overview(root) {
 
   const map = chart(), rank = chart();
   root.append(grid(
-    card("Where: state and municipal sanctions per million inhabitants", "By the state of the sanctioning body; federal sanctions, which have no state of their own, are left out. A stronger colour: more sanctions for the population.", map),
+    card("Where: state and municipal sanctions per million inhabitants", "By the state of the sanctioning body; federal sanctions, which have no state of their own, are left out. See the key for the scale.", map),
     card("States ranked", "The same rate; the count of state and municipal sanctions in the tooltip.", rank)));
   const shapes = await asset("maps/ufs.json");
   const byIbge = new Map(r.by_uf.map((x) => [String(x.ibge), x]));
@@ -267,7 +268,7 @@ async function repeat(root) {
   const dist = r.repeat.map((x) => ({ label: x.n >= 10 ? "10 or more" : `${x.n} sanction${x.n > 1 ? "s" : ""}`, value: x.empresas, color: css("--line") }));
   later(() => C.bars(c1, { rows: dist, labelWidth: 110 }));
   const top = [...rows].sort((a, b) => n(b.orgaos) - n(a.orgaos) || b.n - a.n).slice(0, 15);
-  later(() => C.bars(c2, { rows: top.map((x) => ({ label: short(x.nome || cnpjFmt(x.cnpj), 36), title: x.nome, value: n(x.orgaos), note: `${x.n} sanctions in ${x.ufs} states`, color: C.slot(8), cnpj: x.cnpj })), labelWidth: 260, onClick: (x) => openCompany(x.cnpj) }));
+  later(() => C.bars(c2, { rows: top.map((x) => ({ label: short(x.nome || WITHHELD, 36), title: x.nome || WITHHELD, value: n(x.orgaos), note: `${x.n} sanctions in ${x.ufs} states`, color: css("--line"), cnpj: x.cnpj })), labelWidth: 260, onClick: (x) => openCompany(x.cnpj) }));
   const tb = el("div");
   root.append(card("Every company with two or more sanctions", "Click a name for the company's profile: its sanctions over time, and the contracts, amendments and campaign sales it had.", tb));
   table(tb, multi, [companyCol(), { key: "cnpj", label: "CNPJ", text: true, fmt: (v) => day(cnpjFmt(v)) }, { key: "n", label: "Sanctions" }, { key: "vigentes", label: "In force" },
@@ -289,7 +290,7 @@ async function fines(root) {
   ]);
   const c1 = chart();
   root.append(card("How large the fines are", "Every CNEP fine above zero on a logarithmic scale: each step is ten times the last. Dashed: the median.", c1));
-  later(() => C.histogram(c1, { values: expand(f.log_hist, f.log_edges, 2, 10), domain: [2, 10], bins: 16, format: (v) => brl(10 ** v, 0), xLabel: "fine (R$, log scale)", unit: "fines", height: 220, refs: [{ x: Math.log10(f.p50), label: `median ${brl(f.p50)}` }] }));
+  later(() => C.histogram(c1, { values: expand(f.log_hist, f.log_edges, 2, 10), domain: [2, 10], bins: 16, format: (v) => brl(10 ** v, 0), tickFormat: (v) => (Math.abs(v - Math.round(v)) < 1e-9 ? brl(10 ** v, 0) : ""), xLabel: "fine (R$, log scale)", unit: "fines", height: 220, refs: [{ x: Math.log10(f.p50), label: `median ${brl(f.p50)}` }] }));
   const c2 = chart(), c3 = chart();
   root.append(grid(card("Fines by the year the sanction began", "Total value of the fines still listed.", c2), card("Who fines", "The 15 bodies with the largest total, and how many fines each imposed.", c3)));
   const by = f.by_year.filter((x) => x.ano);
@@ -348,7 +349,7 @@ async function money(root) {
   root.append(grid(
     card("Members whose amendments paid barred companies most", "Deputies and senators, by the amendment money paid to companies while those were barred; their party in their latest amendment year.", c3),
     card("Who else sends it", "Collective amendments: state benches, committees and the budget rapporteur (the 2020–2022 \"secret budget\").", el("div", { id: "coll" }))));
-  later(() => C.bars(c3, { rows: ind.slice(0, 15).map((x) => ({ label: `${title(x.autor)} (${x.partido || "?"}-${x.uf || "?"})`, value: +x.pago_sancionadas, note: `${pct(+x.share, 1)} of the ${brl(x.pago_total)} their amendments paid · ${x.empresas_sancionadas} companies`, color: C.slot(8) })), labelWidth: 250, format: (v) => brl(v, 1) }));
+  later(() => C.bars(c3, { rows: ind.slice(0, 15).map((x) => ({ label: `${title(x.autor)} (${x.partido || "?"}-${x.uf || "?"})`, value: +x.pago_sancionadas, note: `${pct(+x.share, 1)} of the ${brl(x.pago_total)} their amendments paid · ${x.empresas_sancionadas} companies`, color: css("--line") })), labelWidth: 250, format: (v) => brl(v, 1) }));
   const coll = authors.filter((x) => ["bancada", "comissao", "relator"].includes(x.kind)).sort((a, b) => +b.pago_sancionadas - +a.pago_sancionadas);
   later(() => C.bars($("#coll", root), { rows: coll.slice(0, 15).map((x) => ({ label: short(title(x.autor), 30), title: x.autor, value: +x.pago_sancionadas, note: `${KIND[x.kind]} · ${pct(+x.share, 2)} of ${brl(x.pago_total)}`, color: css("--other") })), labelWidth: 250, format: (v) => brl(v, 1) }));
   root.append(card("Every author whose amendments paid a barred company", "Share: the part of everything their amendments paid that went to companies while barred.", tb));
@@ -466,7 +467,7 @@ function timeline(box, o) {
   box.replaceChildren();
   const rows = o.rows;
   if (!rows.length) { box.append(el("p", { className: "empty", textContent: "No dated sanction." })); return; }
-  const w = Math.max(300, box.clientWidth || 600), lw = Math.round(Math.min(170, w * 0.3)), mr = 12, rh = 18, mt = 4, mb = 24, H = mt + rh * (rows.length + o.lanes.length) + mb;
+  const w = Math.max(300, box.clientWidth || 600), lw = Math.round(Math.min(210, w * 0.3)), mr = 12, rh = 18, mt = 4, mb = 24, H = mt + rh * (rows.length + o.lanes.length) + mb;
   const s = C.svg("svg", { width: w, height: H, role: "img" });
   const t = (d) => Date.parse(`${d}T00:00:00Z`);
   const all = [...rows.flatMap((x) => [x.from, x.to]), ...o.lanes.flatMap((l) => l.points.map((p) => p.date))].filter(Boolean).map(t);
@@ -516,7 +517,7 @@ async function company(root) {
     if (q.length < 3 && digits.length < 4) { results.replaceChildren(); return; }
     const hits = (digits.length >= 4 && digits.length === input.value.replace(/[\s./-]/g, "").length ? all.filter((x) => x.cnpj.startsWith(digits)) : index.filter(([k]) => k.includes(q)).map(([, x]) => x)).slice(0, 12);
     results.replaceChildren(...(hits.length ? hits.map((x) => el("li", {}, el("button", { type: "button", on: { click: () => { results.replaceChildren(); input.value = ""; openCompany(x.cnpj); } } },
-      el("span", { textContent: x.nome || cnpjFmt(x.cnpj) }), el("span", { className: "n", textContent: `${cnpjFmt(x.cnpj)} · ${n(x.ceis) + n(x.cnep)} sanctions${n(x.cepim) ? ` · CEPIM ${x.cepim}` : ""}` })))) : [el("li", { className: "hint", textContent: "No sanctioned company matches." })]));
+      el("span", { textContent: x.nome || WITHHELD }), el("span", { className: "n", textContent: `${cnpjFmt(x.cnpj)} · ${n(x.ceis) + n(x.cnep)} sanctions${n(x.cepim) ? ` · CEPIM ${x.cepim}` : ""}` })))) : [el("li", { className: "hint", textContent: "No sanctioned company matches." })]));
   });
 
   const leni = await data("site/sancoes/leniencia.csv");
@@ -526,15 +527,17 @@ async function company(root) {
     const shard = await data(`site/sancoes/empresas/${cnpj.slice(0, 2)}.json`), d = shard[cnpj] || {};
     const S = (d.s || []).map(([lista, codigo, categoria, inicio, fim, orgao, esfera, uf, abrangencia, multa, processo, artigo]) => ({ lista, codigo, categoria, inicio, fim, orgao, esfera, uf, abrangencia, multa, processo, artigo }));
     const Cn = (d.c || []).map(([assinatura, orgao, esfera, uf, objeto, valor, cobre, controle]) => ({ assinatura, orgao, esfera, uf, objeto, valor, cobre, controle }));
-    const Em = (d.e || []).map(([ano, total, sancionada, sim]) => ({ ano, total, sancionada, sim }));
+    const Em0 = new Map((d.e || []).map(([ano, total, sancionada, sim]) => [+ano, { ano: String(ano), total, sancionada, sim }]));
+    const ys = [...Em0.keys()], Em = ys.length ? Array.from({ length: Math.max(...ys) - Math.min(...ys) + 1 }, (_, i) => Em0.get(Math.min(...ys) + i) || { ano: String(Math.min(...ys) + i), total: 0, sancionada: 0, sim: 0 }) : [];
     const Au = (d.a || []).map(([autor, partido, uf, valor, sanc]) => ({ autor, partido, uf, valor, sanc }));
     const T = (d.t || []).map(([ano, total, n_candidatos, barrado]) => ({ ano, total, n_candidatos, barrado }));
     const P = (d.p || []).map(([convenio, orgao, motivo]) => ({ convenio, orgao, motivo }));
     const Ls = leni.filter((l) => (d.l || []).includes(l.id));
     const lists = [n(x.ceis) && "CEIS", n(x.cnep) && "CNEP", n(x.cepim) && "CEPIM", n(x.leniencia) && "Leniency"].filter(Boolean);
     const box = el("div");
-    box.append(el("div", { className: "profile-head" }, el("h2", { textContent: x.nome || cnpjFmt(cnpj) }),
+    box.append(el("div", { className: "profile-head" }, el("h2", { textContent: x.nome || WITHHELD }),
       el("span", { className: "doc" }, cnpjFmt(cnpj), " ", ...lists.map((l) => el("span", { className: "pill", textContent: l })))));
+    if (!x.nome) box.append(el("p", { className: "about", textContent: "An individual firm (empresário individual or MEI) carries its owner's name, so this page shows its CNPJ and sanctions but not the name." }));
     const tl = el("section", { className: "tiles" });
     box.append(tl);
     tiles(tl, [
@@ -549,13 +552,13 @@ async function company(root) {
     const maxPay = Math.max(1, ...pays.map((e) => e.total));
     const drawTl = () => timeline(tlc, {
       today: r.snapshot,
-      rows: S.filter((s0) => s0.inicio).map((s0) => ({ label: `${s0.lista} ${cat(s0.categoria)}`, from: s0.inicio, to: s0.fim, color: /^(Impedimento|Declaração de Inidoneidade|Suspensão$)/.test(s0.categoria) ? css("--critical") : css("--other"),
-        title: cat(s0.categoria), tip: [`${s0.inicio} to ${s0.fim || "no end date"}`, s0.orgao, SCOPE[s0.abrangencia] || s0.abrangencia, s0.multa ? `fine ${brl(s0.multa)}` : ""].filter(Boolean) })),
+      rows: S.filter((s0) => s0.inicio).map((s0) => ({ label: cat(s0.categoria), from: s0.inicio, to: s0.fim, color: /^(Impedimento|Declaração de Inidoneidade|Suspensão$)/.test(s0.categoria) ? css("--critical") : css("--other"),
+        title: `${s0.lista}: ${cat(s0.categoria)}`, tip: [`${s0.inicio} to ${s0.fim || "no end date"}`, s0.orgao, SCOPE[s0.abrangencia] || s0.abrangencia, s0.multa ? `fine ${brl(s0.multa)}` : ""].filter(Boolean) })),
       lanes: [
         { label: "Amendments paid", points: pays.map((e) => ({ date: `${e.ano}-07-01`, r: 3 + 6 * Math.sqrt(e.total / maxPay), color: e.sancionada > 0 ? css("--critical") : css("--line"), title: `${e.ano}: ${brl(e.total)}`, tip: e.sancionada ? [`${brl(e.sancionada)} while barred`] : [] })) },
         { label: "Contracts signed", points: Cn.filter((c0) => c0.assinatura).map((c0) => ({ date: c0.assinatura, color: c0.cobre ? scopeColor(c0.cobre) : css("--line"), title: `${c0.assinatura}: ${brl(c0.valor)}`, tip: [c0.orgao, c0.objeto, c0.cobre ? `while barred: ${COBRE[c0.cobre]}` : ""].filter(Boolean) })) },
       ],
-      legend: [{ label: "Bars contracts", color: css("--critical") }, { label: "Other sanction", color: css("--other") }, { label: "Payment or contract", color: css("--line") }],
+      legend: [{ label: "Barred from contracting", color: css("--critical") }, { label: "Other sanction", color: css("--other") }, { label: "Payment or contract", color: css("--line") }],
     });
     out.replaceChildren(box);
     drawTl();

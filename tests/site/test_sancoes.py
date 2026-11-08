@@ -133,3 +133,10 @@ def test_build_is_deterministic(tmp_path):
     first = {p: p.read_bytes() for p in (d / "site").rglob("*") if p.is_file()}
     s.build(d)
     assert first == {p: p.read_bytes() for p in (d / "site").rglob("*") if p.is_file()}
+
+
+def test_individual_firm():
+    people = {"VAGNER", "BORGES", "DIAS", "JOAO", "SILVA", "CARLOS"}
+    names = pd.Series(["VAGNER BORGES DIAS", "JOAO DA SILVA ME", "63.465.879 BRUNA BUZZO", "MARIA LIMA ***.462.240-**",
+                       "SILVA LTDA", "CONSTRUTORA SILVA", "CARLOS", ""])
+    assert s.individual_firm(names, people).tolist() == [True, True, True, True, False, False, False, False]

@@ -26,6 +26,7 @@ import numpy as np
 import pandas as pd
 
 from .common import csv, write_json
+from .deputados import party_in
 from .pncp import IMPLAUSIBLE
 
 # Sanctions that bar contracting: the same rule as politicaleye.pncp.build.BARS.
@@ -44,6 +45,42 @@ LAWS = {
     "CÓDIGO DE PROCESSO PENAL": "Criminal procedure code",
 }
 COMPANY = r"\d{14}|EX.*"
+
+
+# Individual firms (empresário individual, MEI) carry their owner's name: the page counts them but shows no name.
+_MEI = re.compile(r"^\d{2}\.\d{3}\.\d{3}\b|\*\*\*\.\d{3}\.\d{3}-\*\*|(?<!\d)\d{11}(?!\d)")
+_SUFFIX = {"ME", "EPP", "EIRELI", "EI", "MEI"}
+_CONNECTORS = {"DA", "DE", "DO", "DAS", "DOS", "E"}
+
+
+def name_tokens(data: Path) -> set[str]:
+    """Words of real people's names: every candidate in the TSE files and every politician in the crosswalk."""
+    from ..ref.politicians import norm
+    out: set[str] = set()
+    for f in sorted((data / "tse").glob("*/candidatos.csv")):
+        for n in pd.read_csv(f, dtype=str, usecols=["nome"]).nome.dropna():
+            out.update(norm(n).split())
+    p = data / "ref" / "politicians.csv"
+    if p.exists():
+        for n in pd.read_csv(p, dtype=str, usecols=["nome"]).nome.dropna():
+            out.update(norm(n).split())
+    return out
+
+
+def individual_firm(names: pd.Series, people: set[str]) -> pd.Series:
+    """Whether a company name is a person's: an MEI name (``"12.345.678 JOAO SILVA"``), a name carrying a CPF, or
+    two or more words that are all words of people's names (``"VAGNER BORGES DIAS"``, ``"JOAO DA SILVA ME"``)."""
+    from ..ref.politicians import norm
+
+    def one(n: str) -> bool:
+        if _MEI.search(n or ""):
+            return True
+        t = [x for x in norm(n).split() if x not in _SUFFIX]
+        if "LTDA" in t:
+            return False
+        core = [x for x in t if x not in _CONNECTORS]
+        return len(core) >= 2 and all(x in people for x in core)
+    return names.fillna("").map(one)
 
 
 def _read(p: Path, **kw) -> pd.DataFrame:
@@ -285,6 +322,9 @@ def build(data: Path) -> dict:
     known = em[em.pessoa.notna()]
     em = em.join(party_at(pd.DataFrame({"pessoa": known.pessoa, "month": known.ano + "-07"}), party_timeline(data)))
     em[["pessoa", "casa", "partido", "uf"]] = em[["pessoa", "casa", "partido", "uf"]].fillna("")
+    # One name per party as it stood that year: renames always, mergers from the year they happened.
+    em["partido"] = [party_in(p_, int(a)) if p_ else "" for p_, a in zip(em.partido, em.ano)]
+    em.loc[em.partido.isin(["S.PART.", "S/PARTIDO", "SEMPARTIDO", "SPART"]), "partido"] = ""   # no party is not a party
     barred_pay = pay[pay.barrado != ""]
     em["pago"] = em.codigo.map(paid_by_code).fillna(0.0)
     em["pago_sancionadas"] = em.codigo.map(barred_pay.groupby("codigo_emenda").valor.sum()).fillna(0.0)
@@ -485,6 +525,9 @@ def build(data: Path) -> dict:
     idx = pd.DataFrame(index=sorted(cnpjs))
     idx.index.name = "cnpj"
     idx["nome"] = names.reindex(idx.index).fillna("")
+    idx["pf"] = individual_firm(idx.nome, name_tokens(data)).astype(int)
+    hidden = set(idx.index[idx.pf == 1])
+    idx.loc[idx.pf == 1, "nome"] = ""
     g = comp.groupby("doc")
     by_list = comp.groupby(["doc", "lista"]).size().unstack(fill_value=0).reindex(columns=["CEIS", "CNEP"], fill_value=0)
     idx["ceis"] = by_list.CEIS.reindex(idx.index).fillna(0).astype(int)
@@ -547,13 +590,20 @@ def build(data: Path) -> dict:
 
     # ---------------------------------------------------------- tables
 
+    def hide(t: pd.DataFrame, key: str = "cnpj", name: str = "nome") -> pd.DataFrame:
+        """Blank the name of individual firms, and flag them."""
+        t = t.copy()
+        t["pf"] = t[key].isin(hidden).astype(int)
+        t.loc[t.pf == 1, name] = ""
+        return t
+
     fcols = ["inicio", "doc", "nome", "categoria", "multa", "orgao", "esfera", "uf", "processo"]
-    csv(fines[fines.empresa][fcols].rename(columns={"doc": "cnpj"}).sort_values(["multa", "cnpj", "inicio"], ascending=[False, True, True]),
+    csv(hide(fines[fines.empresa][fcols].rename(columns={"doc": "cnpj"})).sort_values(["multa", "cnpj", "inicio"], ascending=[False, True, True]),
         out / "multas.csv")
     csv(le.sort_values("id"), out / "leniencia.csv")
     end = (pd.Timestamp(day) + pd.Timedelta(days=SOON)).strftime("%Y-%m-%d") if day else ""
     soon = comp[(comp.fim > day) & (comp.fim <= end)] if day else comp.iloc[:0]
-    csv(soon[["fim", "doc", "nome", "lista", "categoria", "orgao", "esfera", "uf"]].rename(columns={"doc": "cnpj"})
+    csv(hide(soon[["fim", "doc", "nome", "lista", "categoria", "orgao", "esfera", "uf"]].rename(columns={"doc": "cnpj"}))
         .sort_values(["fim", "cnpj", "lista"]), out / "expirando.csv")
     resumo["tiles"]["expirando"] = int(len(soon))
     resumo["tiles"]["expirando_pessoas"] = int(((s.tipo == "F") & (s.fim > day) & (s.fim <= end)).sum()) if day else 0
@@ -563,10 +613,21 @@ def build(data: Path) -> dict:
         csv(m.groupby(["data", "lista", "mudanca", "kind"]).size().rename("n").reset_index().sort_values(["data", "lista", "mudanca", "kind"]),
             out / "mudancas.csv")
         recent = m[m.kind == "empresa"].sort_values(["data", "lista", "codigo"], ascending=[False, True, True]).head(RECENT)
-        csv(recent[["data", "lista", "codigo", "mudanca", "documento", "nome"]].rename(columns={"documento": "cnpj"}), out / "recentes.csv")
+        csv(hide(recent[["data", "lista", "codigo", "mudanca", "documento", "nome"]].rename(columns={"documento": "cnpj"})), out / "recentes.csv")
     else:
         csv(pd.DataFrame(columns=["data", "lista", "mudanca", "kind", "n"]), out / "mudancas.csv")
-        csv(pd.DataFrame(columns=["data", "lista", "codigo", "mudanca", "cnpj", "nome"]), out / "recentes.csv")
+        csv(pd.DataFrame(columns=["data", "lista", "codigo", "mudanca", "cnpj", "nome", "pf"]), out / "recentes.csv")
+    for k, key, name in (("flagged", "fornecedor", "fornecedor_nome"),):
+        rows = resumo["money"]["pncp"][k]
+        for r_ in rows:
+            r_["pf"] = int(r_[key] in hidden)
+            if r_["pf"]:
+                r_[name] = ""
+    for r_ in resumo["money"]["tse_list"]:
+        r_["pf"] = int(r_["cnpj"] in hidden)
+        if r_["pf"]:
+            r_["nome"] = ""
+    resumo["tiles"]["firmas_individuais"] = len(hidden)
 
     csv(au[["autor_codigo", "autor", "kind", "pessoa", "partido", "uf", "primeiro", "ultimo", "emendas", "pago_total",
             "pago_sancionadas", "pago_sim", "share", "empresas_sancionadas"]].sort_values("autor_codigo"), out / "autores.csv")

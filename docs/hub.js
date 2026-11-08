@@ -8,7 +8,7 @@ const NS = "http://www.w3.org/2000/svg";
 const svg = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); return e; };
 
 /** A sparkline: a line for long series, columns for short ones; the last value marked. */
-function spark(box, values, { bars = values.length <= 12, color = css("--line"), labels = [] } = {}) {
+function spark(box, values, { bars = values.length <= 12, color = css("--line"), labels = [], mark = values.length - 1 } = {}) {
   const v = values.map((x) => (x == null || Number.isNaN(x) ? null : +x));
   const ok = v.filter((x) => x != null);
   if (ok.length < 2) return;
@@ -17,7 +17,7 @@ function spark(box, values, { bars = values.length <= 12, color = css("--line"),
   const s = svg("svg", { width: w, height: h, role: "img", "aria-label": labels.length ? `${labels[0]} to ${labels[labels.length - 1]}` : "trend" });
   if (bars) {
     const bw = w / v.length;
-    v.forEach((x, i) => { if (x == null) return; s.append(svg("rect", { x: i * bw + 1, y: sy(x), width: Math.max(2, bw - 3), height: h - 3 - sy(x), rx: 1.5, fill: i === v.length - 1 ? color : css("--axis") })); });
+    v.forEach((x, i) => { if (x == null) return; s.append(svg("rect", { x: i * bw + 1, y: sy(x), width: Math.max(2, bw - 3), height: h - 3 - sy(x), rx: 1.5, fill: i === mark ? color : css("--axis") })); });
   } else {
     const sx = (i) => 2 + (i / (v.length - 1)) * (w - 6);
     let d = "", pen = false;
@@ -44,12 +44,12 @@ const CARDS = {
   async camara() {
     const net = (await data("site/camara/networks.csv")).filter((r) => r.modularity_party !== "");
     const rows = lastMonths(net, 60), last = rows[rows.length - 1];
-    return { value: fmt(+last.modularity_party, 2), sub: `party polarisation of the co-voting graph, ${month(last.month)}`, series: rows.map((r) => +r.modularity_party), opts: { labels: [rows[0].month.slice(0, 4), last.month.slice(0, 4)] } };
+    return { value: fmt(+last.modularity_party, 2), sub: `how far votes split along party lines (graph modularity: 0 = parties mixed), ${month(last.month)}, the latest month with enough votes for a graph`, series: rows.map((r) => +r.modularity_party), opts: { labels: [rows[0].month.slice(0, 4), last.month.slice(0, 4)] } };
   },
   async orientacoes() {
-    const idx = (await data("camara/index.csv")).filter((r) => r.with_gov !== "");
+    const idx = (await data("camara/index.csv")).filter((r) => r.with_gov !== "" && +r.votacoes_contested >= 10);
     const rows = lastMonths(idx, 60), last = rows[rows.length - 1];
-    return { value: pct(+last.with_gov), sub: `of deputies' votes followed the government in ${month(last.month)}`, series: rows.map((r) => +r.with_gov), opts: { labels: [rows[0].month.slice(0, 4), last.month.slice(0, 4)] } };
+    return { value: pct(+last.with_gov), sub: `of deputies' votes followed the government in ${month(last.month)} (${last.votacoes_contested} contested roll calls)`, series: rows.map((r) => +r.with_gov), opts: { labels: [rows[0].month.slice(0, 4), last.month.slice(0, 4)] } };
   },
   async senado() {
     const idx = (await data("senado/index.csv")).filter((r) => r.with_gov !== "");
@@ -67,7 +67,7 @@ const CARDS = {
     const ys = (await data("site/tse/anos.csv")).map((r) => r.ano).sort();
     const tot = await Promise.all(ys.map(async (y) => { const t = await data(`site/tse/${y}/resumo.csv`); return { y, total: sum(t.map((r) => +r.total)), pub: sum(t.map((r) => +r.publico)) }; }));
     const full = tot.filter((x) => x.total > 0), last = full.filter((x) => x.y !== "2026").pop() || full[full.length - 1];
-    return { value: pct(last.pub / last.total), sub: `of the ${brl(last.total)} raised by ${last.y} candidates was public money`, series: full.map((x) => x.pub / x.total), opts: { bars: true, labels: [full[0].y, full[full.length - 1].y] } };
+    return { value: pct(last.pub / last.total), sub: `of the ${brl(last.total)} raised by ${last.y} candidates was public money`, series: full.map((x) => x.pub / x.total), opts: { bars: true, mark: full.indexOf(last), labels: [full[0].y, full[full.length - 1].y] } };
   },
   async emendas() {
     const a = await data("site/emendas/anos.csv");
@@ -105,8 +105,8 @@ function hl(key, num, txt) {
 }
 const HIGHLIGHTS = {
   async gov() {
-    const idx = (await data("camara/index.csv")).filter((r) => r.with_gov !== ""), last = idx[idx.length - 1];
-    hl("gov", pct(+last.with_gov), `of the Câmara's votes followed the government's orientation in ${month(last.month)}`);
+    const idx = (await data("camara/index.csv")).filter((r) => r.with_gov !== "" && +r.votacoes_contested >= 10), last = idx[idx.length - 1];
+    hl("gov", pct(+last.with_gov), `of the Câmara's votes followed the government's orientation in ${month(last.month)}, the latest month with 10 or more contested roll calls`);
   },
   async mayors() {
     const d = await data("site/deputados/deputados_57.csv"), m = (r) => +r.emendas_pago || 0, w = d.filter((r) => r.prefeito_mesmo_partido !== "" && m(r) > 0);

@@ -52,6 +52,7 @@ async function overview(root) {
   const draw = () => {
     ctl.replaceChildren(select("Measure", [{ value: "valor", label: "Value" }, { value: "contratos", label: "Number of contracts" }], metric, (v) => { metric = v; setParam("m", v, "valor"); draw(); }));
     const f = metric === "valor" ? (v) => brl(v, 0) : (v) => fmt(v);
+    if (daysAll.length < 7) { c1.replaceChildren(el("p", { className: "empty", textContent: `The daily series appears once a week of history is read (${plural(daysAll.length, "day")} so far). The totals beside it cover what is read.` })); return; }
     C.line(c1, { x: "day", height: 240, y: { format: f, min: 0 }, empty: "No day read yet.",
       series: ["M", "E", "F", "D", "N"].map((k) => ({ name: SPH[k], color: sphColor(k), points: daysAll.map((dd) => { const x = d.find((y) => y.dia === dd && y.esfera === k); return [dd, x ? +x[metric] : 0]; }) }))
         .filter((s) => s.points.some((p) => p[1] > 0)) });
@@ -82,7 +83,7 @@ async function large(root) {
   root.append(grid(
     card("How large", "Every contract of R$ 1 million or more on a log scale: each step is ten times the last.", c1),
     card("What is bought", "Large contracts by category, by value.", c2)));
-  later(() => C.histogram(c1, { values: L.log_hist.flatMap((n0, i) => Array(n0).fill((L.log_edges[i] + L.log_edges[i + 1]) / 2)), domain: [6, 11], bins: 20, format: (v) => brl(10 ** v, 0), xLabel: "contract value (log scale)", unit: "contracts", height: 220, refs: L.median ? [{ x: Math.log10(L.median), label: `median ${brl(L.median)}` }] : [] }));
+  later(() => C.histogram(c1, { values: L.log_hist.flatMap((n0, i) => Array(n0).fill((L.log_edges[i] + L.log_edges[i + 1]) / 2)), domain: [6, 11], bins: 20, format: (v) => brl(10 ** v, 0), tickFormat: (v) => (Math.abs(v - Math.round(v)) < 1e-9 ? brl(10 ** v, 0) : ""), xLabel: "contract value (log scale)", unit: "contracts", height: 220, refs: L.median ? [{ x: Math.log10(L.median), label: `median ${brl(L.median)}` }] : [] }));
   later(() => C.bars(c2, { rows: L.by_category.map((x) => ({ label: cat(x.categoria), value: x.valor, note: `${fmt(x.contratos)} contracts`, color: css("--line") })), format: (v) => brl(v, 1), labelWidth: 170 }));
   root.append(card("Large contracts by month of publication", "Value, by the buyer's sphere. Months before the history read so far hold only contracts amended on the days read.", c3));
   const months = [...new Set(L.by_month.map((x) => x.mes))].sort();
@@ -183,12 +184,15 @@ async function map(root) {
     C.colorKey(c1, { color: (t) => C.seq(Math.sqrt(t)), from: "R$ 0", to: `R$ ${fmt(mx, 0)} per inhabitant` }); });
   const ranked = [...r.by_uf].sort((a, b) => b.por_habitante - a.por_habitante);
   later(() => C.bars(c2, { rows: ranked.map((x) => ({ label: x.uf, value: x.por_habitante, note: brl(x.valor), color: css("--line") })), barHeight: 12, format: (v) => `R$ ${fmt(v, 0)}` }));
-  const c3 = chart();
-  root.append(card("Municipal bodies' large contracts per inhabitant", "Contracts of R$ 1 million or more signed by each town's own bodies (prefeitura, funds, municipal companies), per inhabitant. Grey: none on the days read.", c3));
+  const c3 = chart(), c4 = chart();
+  root.append(grid(card("Municipal bodies' large contracts per inhabitant", "Contracts of R$ 1 million or more signed by each town's own bodies (prefeitura, funds, municipal companies), per inhabitant. Grey: none on the days read.", c3),
+    card("Towns with the most", "By value of their municipal bodies' large contracts; per inhabitant in the tooltip.", c4)));
+  const topTowns = [...mun].sort((a, b) => +b.valor - +a.valor).slice(0, 25);
+  later(() => C.bars(c4, { rows: topTowns.map((x) => ({ label: `${x.municipio} (${x.uf})`, value: +x.valor, note: `R$ ${fmt(+x.por_habitante, 0)} per inhabitant · ${fmt(x.contratos)} contracts`, color: css("--line") })), format: (v) => brl(v, 1), labelWidth: 190, barHeight: 13 }));
   const mm = new Map(mun.map((x) => [x.cod_ibge, x]));
   const vals = mun.map((x) => +x.por_habitante).filter((v) => v > 0).sort((a, b) => a - b);
   const cap = vals[Math.floor(vals.length * 0.95)] || 1;
-  later(() => { C.choropleth(c3, { shapes: muns.shapes, viewBox: muns.viewBox, maxWidth: 760, outline: ufs.shapes, outlineWidth: 0.6,
+  later(() => { C.choropleth(c3, { shapes: muns.shapes, viewBox: muns.viewBox, maxWidth: 560, outline: ufs.shapes, outlineWidth: 0.6,
     value: (k) => (mm.get(k) ? +mm.get(k).por_habitante : null), color: (v) => C.seq(Math.sqrt(Math.min(1, v / cap))),
     tip: (k, v) => { const x = mm.get(k); return x ? [el("strong", { textContent: `${x.municipio} (${x.uf})` }), el("div", { className: "row", textContent: `R$ ${fmt(v, 2)} per inhabitant · ${brl(x.valor)} in ${fmt(x.contratos)} contracts, ${fmt(x.fornecedores)} suppliers` })] : [el("strong", { textContent: "No large municipal contract on the days read" })]; } });
     C.colorKey(c3, { color: (t) => C.seq(Math.sqrt(t)), from: "R$ 0", to: `R$ ${fmt(cap, 0)}+ per inhabitant` }); });
@@ -226,7 +230,7 @@ async function parties(root) {
   const c2 = chart();
   root.append(card("Contracts with barred suppliers, by the mayor's party", "Municipal contracts of any value signed with a supplier under a sanction whose scope reaches or may reach the town, per million inhabitant-years governed.", c2));
   const sb = big.map((x) => ({ ...x, rate: x.pop_anos ? (x.sancionadas / x.pop_anos) * 1e6 : 0 })).sort((a, b) => b.rate - a.rate);
-  later(() => C.bars(c2, { rows: sb.map((x) => ({ label: x.partido, value: x.rate, note: `${fmt(x.sancionadas)} contracts`, color: x.sancionadas ? css("--critical") : css("--other") })), format: (v) => fmt(v, 2), labelWidth: 120 }));
+  later(() => C.bars(c2, { rows: sb.map((x) => ({ label: x.partido, value: x.rate, note: `${fmt(x.sancionadas)} contracts`, color: css("--line") })), format: (v) => fmt(v, 2), labelWidth: 120 }));
   root.append(el("p", { className: "about", textContent: "These are associations, not causes: parties govern different kinds of towns (big and small, rich and poor, in different states), and a town's spending reflects its size and needs more than its mayor's party." }));
 }
 

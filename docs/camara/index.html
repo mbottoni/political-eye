@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Câmara Explorer · political-eye</title>
+<link rel="stylesheet" href="../lib/site.css">
 <meta name="description" content="Explore Brazil's Chamber of Deputies month by month as two graphs on the same deputies: who votes together and who signs together.">
 <style>
   :root {
@@ -110,6 +111,8 @@
     <p>Brazil's Chamber of Deputies, one month at a time, as two graphs on the same deputies: who <b>votes</b> together and who <b>signs</b> together. Computed in your browser from the open data in <a href="https://github.com/mbottoni/political-eye/tree/main/data/camara">mbottoni/political-eye</a>, which CI refreshes every week.</p>
   </header>
 
+<nav class="tabs"><button data-tab="graphs">Graphs</button><button data-tab="network">Network analysis</button><button data-tab="ideal">Ideal points</button></nav>
+  <section id="tab-graphs">
   <div class="controls" role="group" aria-label="Filters">
     <label>Month <select id="month"></select></label>
     <label>Vote-together threshold
@@ -157,6 +160,9 @@
       <div id="timeline"></div>
     </div>
   </section>
+  </section>
+  <section id="tab-network" hidden></section>
+  <section id="tab-ideal" hidden></section>
 
   <footer>
     Each dot is a deputy with at least 10 contested Plenário votes that month, placed by the first two principal components of those votes. Edges and every default are defined in <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/camara.md">methodology/camara.md</a>; this page reproduces the Python package's counts exactly (checked in CI). Source: Câmara dos Deputados, Dados Abertos.
@@ -167,6 +173,8 @@
 
 <script type="module">
 import * as core from "./core.js";
+import { tabs } from "../lib/ui.js";
+import { networkTab, idealTab, disciplineTab } from "../lib/chamber.js";
 
 const LOCAL = ["localhost", "127.0.0.1"].includes(location.hostname);
 const DATA = LOCAL ? "../../data/camara/" : "https://raw.githubusercontent.com/mbottoni/political-eye/main/data/camara/";
@@ -632,7 +640,8 @@ function hideTip() { $("#tip").style.display = "none"; }
 // ---------------------------------------------------------- controls
 
 function syncURL() {
-  const p = new URLSearchParams();
+  const p = new URLSearchParams(location.search);
+  for (const k of ["month", "w", "tau", "max", "a", "b", "dep", "sen"]) p.delete(k);
   p.set("month", state.month);
   if (state.tau !== 0.8) p.set("tau", state.tau);
   if (state.maxAuthors !== 50) p.set("max", state.maxAuthors);
@@ -726,6 +735,14 @@ new ResizeObserver(([entry]) => {
   const m = months.has(q.get("month")) ? q.get("month") : full[full.length - 1] ?? index[index.length - 1].month;
   const dep = q.has("dep") ? +q.get("dep") : null;
   await setMonth(m, Number.isFinite(dep) ? dep : null);
+  const opts = () => ({ chamber: "camara", partyA: state.partyA, partyB: state.partyB });
+  tabs((name) => {
+    if (name === "network") networkTab($("#tab-network"), opts());
+    if (name === "ideal") idealTab($("#tab-ideal"), opts());
+    if (name === "discipline") disciplineTab($("#tab-discipline"), opts());
+  });
+  // A hidden graph has no width: redraw when its tab comes back.
+  window.addEventListener("tabshow", () => { if (!$("#tab-graphs").hidden && view) { drawNetwork(); renderHeat(); renderTimeline(); } });
 })();
 </script>
 </body>

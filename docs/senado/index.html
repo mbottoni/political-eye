@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Senado Explorer · political-eye</title>
+<link rel="stylesheet" href="../lib/site.css">
 <meta name="description" content="Explore Brazil's Federal Senate as two graphs on the same senators, each over the twelve months to date: who votes together and who signs together.">
 <style>
   :root {
@@ -110,6 +111,8 @@
     <p>Brazil's Federal Senate as two graphs on the same senators: who <b>votes</b> together and who <b>signs</b> together. The Senate rarely splits, so each view pools the twelve months up to the month you pick, within one legislature. Computed in your browser from the open data in <a href="https://github.com/mbottoni/political-eye/tree/main/data/senado">mbottoni/political-eye</a>, which CI refreshes every week.</p>
   </header>
 
+<nav class="tabs"><button data-tab="graphs">Graphs</button><button data-tab="network">Network analysis</button><button data-tab="ideal">Ideal points</button><button data-tab="discipline">Party discipline</button></nav>
+  <section id="tab-graphs">
   <div class="controls" role="group" aria-label="Filters">
     <label>Up to <select id="month"></select></label>
     <label>Window <select id="window"><option value="12" selected>12 months</option><option value="6">6 months</option><option value="3">3 months</option><option value="1">1 month</option></select></label>
@@ -158,6 +161,10 @@
       <div id="timeline"></div>
     </div>
   </section>
+  </section>
+  <section id="tab-network" hidden></section>
+  <section id="tab-ideal" hidden></section>
+  <section id="tab-discipline" hidden></section>
 
   <footer>
     Each dot is a senator with at least 10 contested Plenário votes in the window, placed by the first two principal components of those votes. Secret votes, and votes that pass with under 2.5% against, are left out. Edges and every default are defined in <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/senado.md">methodology/senado.md</a>; with the default twelve-month window this page reproduces the Python package's counts exactly (checked in CI). Source: Senado Federal, Dados Abertos.
@@ -168,6 +175,8 @@
 
 <script type="module">
 import * as core from "../camara/core.js";
+import { tabs } from "../lib/ui.js";
+import { networkTab, idealTab, disciplineTab } from "../lib/chamber.js";
 import { SENADO, WINDOW, windowMonths } from "./window.js";
 
 const LOCAL = ["localhost", "127.0.0.1"].includes(location.hostname);
@@ -658,7 +667,8 @@ function hideTip() { $("#tip").style.display = "none"; }
 // ---------------------------------------------------------- controls
 
 function syncURL() {
-  const p = new URLSearchParams();
+  const p = new URLSearchParams(location.search);
+  for (const k of ["month", "w", "tau", "max", "a", "b", "dep", "sen"]) p.delete(k);
   p.set("month", state.month);
   if (state.window !== WINDOW) p.set("w", state.window);
   if (state.tau !== 0.8) p.set("tau", state.tau);
@@ -756,6 +766,14 @@ new ResizeObserver(([entry]) => {
   const m = months.has(q.get("month")) ? q.get("month") : full[full.length - 1] ?? index[index.length - 1].month;
   const dep = q.has("sen") ? +q.get("sen") : null;
   await setMonth(m, Number.isFinite(dep) ? dep : null);
+  const opts = () => ({ chamber: "senado", partyA: state.partyA, partyB: state.partyB });
+  tabs((name) => {
+    if (name === "network") networkTab($("#tab-network"), opts());
+    if (name === "ideal") idealTab($("#tab-ideal"), opts());
+    if (name === "discipline") disciplineTab($("#tab-discipline"), opts());
+  });
+  // A hidden graph has no width: redraw when its tab comes back.
+  window.addEventListener("tabshow", () => { if (!$("#tab-graphs").hidden && view) { drawNetwork(); renderHeat(); renderTimeline(); } });
 })();
 </script>
 </body>

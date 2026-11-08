@@ -100,7 +100,8 @@ export function line(box, o) {
   box.replaceChildren();
   const H = o.height || 240, mr = 12, mt = 12, mb = 26;
   const X = xAccessor(o.x || "num"), yf = o.y?.format || ((v) => fmt(v, 2));
-  const pts = o.series.flatMap((s) => s.points.filter((p) => p[1] != null));
+  const pts = o.series.flatMap((s) => [...s.points.filter((p) => p[1] != null),
+    ...(s.band || []).filter((p) => p[1] != null).flatMap((p) => [[p[0], p[1]], [p[0], p[2]]])]);
   let ml = 48;
   if (!pts.length) { box.append(el("p", { className: "empty", textContent: o.empty || "No data." })); return; }
   const xs = pts.map((p) => X.val(p[0])), ys = pts.map((p) => +p[1]);
@@ -132,6 +133,19 @@ export function line(box, o) {
   for (const r of o.ref || []) {
     s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(r.y), y2: sy(r.y), stroke: r.color || ink2, "stroke-dasharray": "4 3" }));
     if (r.label) s.append(text(r.label, { x: w - mr, y: sy(r.y) - 4, "text-anchor": "end", "font-size": 10, fill: ink2 }));
+  }
+  for (const se of o.series) {
+    if (!se.band) continue;
+    let seg = [];
+    const flush = () => {
+      if (seg.length > 1) {
+        const top = seg.map((p) => `${sx(X.val(p[0])).toFixed(1)},${sy(+p[2]).toFixed(1)}`), bot = seg.map((p) => `${sx(X.val(p[0])).toFixed(1)},${sy(+p[1]).toFixed(1)}`).reverse();
+        s.append(svg("path", { d: `M${top.join("L")}L${bot.join("L")}Z`, fill: se.color, opacity: 0.16 }));
+      }
+      seg = [];
+    };
+    for (const p of se.band) { if (p[1] == null || p[2] == null) flush(); else seg.push(p); }
+    flush();
   }
   for (const se of o.series) {
     let d = "", pen = false;
@@ -435,4 +449,60 @@ export function lorenz(box, o) {
     x: "num", y: { min: 0, max: 1, format: (y) => `${Math.round(y * 100)}%` }, height: o.height || 240, title: o.title,
   });
   return G;
+}
+
+// ------------------------------------------------------------ strip
+
+/**
+ * strip(box, {rows: [{label, points: [{x, title, rows, color}]}], x: {format, label, min, max}, onClick})
+ * One row per category, every point along x, jittered vertically; the median marked.
+ */
+export function strip(box, o) {
+  box.replaceChildren();
+  const all = o.rows.flatMap((r) => r.points.map((p) => +p.x)).filter((v) => !Number.isNaN(v));
+  if (!all.length) { box.append(el("p", { className: "empty", textContent: o.empty || "No data." })); return; }
+  const rh = o.rowHeight || 26, lw = o.labelWidth || 120, mr = 10, mt = 6, mb = 30;
+  const H = mt + rh * o.rows.length + mb;
+  const { w, s } = frame(box, H);
+  const lo = o.x?.min ?? Math.min(...all), hi = o.x?.max ?? Math.max(...all);
+  const sx = linear(lo, hi === lo ? lo + 1 : hi, lw, w - mr), xf = o.x?.format || ((v) => fmt(v, 1));
+  const grid = css("--grid"), muted = css("--muted"), ink2 = css("--ink2"), ink = css("--ink"), surface = css("--surface");
+  for (const v of niceTicks(lo, hi, Math.max(2, Math.floor((w - lw) / 90)))) {
+    s.append(svg("line", { x1: sx(v), x2: sx(v), y1: mt, y2: H - mb, stroke: grid }));
+    s.append(text(xf(v), { x: sx(v), y: H - mb + 14, "text-anchor": "middle", "font-size": 10, fill: muted }));
+  }
+  if (o.x?.label) s.append(text(o.x.label, { x: (lw + w - mr) / 2, y: H - 3, "text-anchor": "middle", "font-size": 11, fill: ink2 }));
+  const hits = [];
+  o.rows.forEach((r, i) => {
+    const cy = mt + rh * i + rh / 2;
+    s.append(text(r.label, { x: lw - 8, y: cy + 4, "text-anchor": "end", "font-size": 11, fill: ink2 }));
+    r.points.forEach((p, k) => {
+      const jit = ((k * 7919) % 11) / 10 - 0.5, x = sx(+p.x), y = cy + jit * (rh * 0.55);
+      s.append(svg("circle", { cx: x, cy: y, r: 3.2, fill: p.color || css("--line"), stroke: surface, "stroke-width": 0.8, opacity: 0.85 }));
+      hits.push([x, y, p]);
+    });
+    const xs = r.points.map((p) => +p.x).sort((a, b) => a - b);
+    if (xs.length) {
+      const med = xs[Math.floor((xs.length - 1) / 2)] / 2 + xs[Math.ceil((xs.length - 1) / 2)] / 2;
+      s.append(svg("line", { x1: sx(med), x2: sx(med), y1: cy - rh * 0.42, y2: cy + rh * 0.42, stroke: ink, "stroke-width": 2 }));
+    }
+  });
+  const ring = svg("circle", { r: 6, fill: "none", stroke: ink, "stroke-width": 1.5, opacity: 0 });
+  const hit = svg("rect", { x: lw, y: mt, width: w - lw - mr, height: H - mt - mb, fill: "transparent" });
+  let cur = null;
+  hit.addEventListener("pointermove", (ev) => {
+    const b = s.getBoundingClientRect(), px = ev.clientX - b.left, py = ev.clientY - b.top;
+    let best = null, bd = 12 * 12;
+    for (const h of hits) { const d = (h[0] - px) ** 2 + (h[1] - py) ** 2; if (d < bd) { bd = d; best = h; } }
+    cur = best && best[2];
+    if (!best) { ring.setAttribute("opacity", 0); hideTip(); return; }
+    ring.setAttribute("cx", best[0]); ring.setAttribute("cy", best[1]); ring.setAttribute("opacity", 1);
+    showTip(ev, [el("strong", { textContent: best[2].title }), ...(best[2].rows || []).map((t) => el("div", { className: "row", textContent: t }))]);
+  });
+  hit.addEventListener("pointerleave", () => { ring.setAttribute("opacity", 0); hideTip(); });
+  if (o.onClick) { hit.style.cursor = "pointer"; hit.addEventListener("click", () => cur && o.onClick(cur)); }
+  s.append(ring, hit);
+  s.setAttribute("aria-label", o.title || "Dot strips");
+  box.append(s);
+  addTableToggle(box, o.table);
 }

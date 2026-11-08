@@ -61,10 +61,12 @@ export function el(tag, props = {}, ...kids) {
 
 // ------------------------------------------------------------ url state
 
-export const params = new URLSearchParams(location.search);
+export const params = { get: (k) => new URLSearchParams(location.search).get(k) };
 export function setParam(k, v, dflt) {
-  if (v == null || v === "" || v === dflt) params.delete(k); else params.set(k, v);
-  history.replaceState(null, "", `?${params}`.replace(/\?$/, location.pathname));
+  const p = new URLSearchParams(location.search);
+  if (v == null || v === "" || v === dflt) p.delete(k); else p.set(k, v);
+  const q = p.toString();
+  history.replaceState(null, "", q ? `?${q}` : location.pathname);
 }
 
 /** Tabs: buttons in `nav.tabs` with data-tab, panels with id `tab-<name>`. Calls onShow(name) the first time a tab opens. */
@@ -144,10 +146,12 @@ export function table(box, rows, cols, { pageSize = 25, search = true, sortBy = 
     if (q) out = out.filter((r) => cols.some((c) => String(r[c.key] ?? "").toLowerCase().includes(q)));
     if (key) {
       const c = cols.find((x) => x.key === key);
+      const blank = (v) => v === "" || v == null || (typeof v === "number" && Number.isNaN(v));
       out = [...out].sort((a, b) => {
-        const x = value(a, c), y = value(b, c), nx = +x, ny = +y;
-        const cmp = x === y ? 0 : (x === "" || x == null) ? 1 : (y === "" || y == null) ? -1
-          : !Number.isNaN(nx) && !Number.isNaN(ny) && x !== "" && y !== "" ? nx - ny : String(x).localeCompare(String(y), "pt");
+        const x = value(a, c), y = value(b, c);
+        if (blank(x) || blank(y)) return blank(x) === blank(y) ? 0 : blank(x) ? 1 : -1;   // blanks last, both ways
+        const nx = +x, ny = +y;
+        const cmp = x === y ? 0 : !Number.isNaN(nx) && !Number.isNaN(ny) ? nx - ny : String(x).localeCompare(String(y), "pt");
         return down ? -cmp : cmp;
       });
     }

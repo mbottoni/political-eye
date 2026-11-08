@@ -33,6 +33,11 @@ jobs:
       - name: Browser graph code parity with the Python package (senado)
         run: node tests/senado/parity.mjs
 
+      # Every explorer page and tab, in headless Chrome against this checkout:
+      # no error box, no unfilled tile.
+      - name: Explorer pages load
+        run: uv run python tests/pages_smoke.py
+
       # The committed data must load and produce graphs with the current code.
       # (Latest month with votes: January and July recesses have none.)
       - name: Smoke-test the latest Câmara voting month

@@ -18,6 +18,9 @@ const EN = {
   cta_explore: "or see what the data shows ↓", cta_how: "How it works",
   search_label: "Find a deputy and see how they vote, what they propose, where their amendments go and who paid for their campaign.",
   search_try: "Try:",
+  ab_kicker: "Red flags", ab_title: "Patterns across the open data that deserve a closer look",
+  ab_text: "Amendments and contracts for companies barred from public contracts, campaign suppliers later paid from the same member's amendments, amendment money concentrated on one private recipient. Each flag gives its rule, what it is measured against and the innocent explanations. A flag is not evidence of an irregularity.",
+  ab_go: "See the red flags",
   f_pages: "interactive pages", f_sources: "official sources", f_since: "data since", f_updated: "last update",
   swarm_title: "How the Câmara votes", swarm_others: "others", swarm_left: "← votes like PT", swarm_right: "votes like PL →",
   h_findings: "What the data shows", p_findings: "Four numbers read just now from the pages' tables. Click one to see where it comes from.",
@@ -36,7 +39,7 @@ const EN = {
   d_emendas: "Every amendment since 2014: who sent it, where the money landed, how much was committed and paid, and who received it, \"Pix\" transfers included.",
   d_pncp: "Who buys and who sells in contracts of R$ 1 million or more: concentration, barred companies, value per inhabitant, and towns by their mayor's party.",
   d_siconfi: "Which towns break the payroll cap or end the year without cash, whether \"Pix\" amendments go to towns in trouble, and each mayor's party.",
-  nav_control_long: "Accountability and justice", p_control: "Who is barred from public contracts, and what they still receive.",
+  nav_control_long: "Accountability and justice", p_control: "Who is barred from public contracts, what they still receive, and the patterns that deserve a closer look.",
   d_sancoes: "Who is barred from public contracts or fined for corruption, by whom and for how long: repeat offenders, fines, leniency deals, and the amendments and contracts barred companies still get, by member of Congress and by party.",
   d_stf: "How long each justice holds a case after asking for more time to review it. On hold: the STF's server turns away clients that do not present themselves as a web browser.",
   r1: "Official data only, with the source on every number.", r2: "No full CPF is ever published.", r3: "Sanctioned people are counted, never named.",
@@ -215,6 +218,19 @@ const FINDINGS = {
   },
 };
 
+// ------------------------------------------------------------ red flags banner
+
+async function redFlags() {
+  const r = await data("site/alertas/resumo.json"), box = document.querySelector("#ab-stats");
+  if (!box) return;
+  const stat = (n, label) => el("div", {}, el("b", { textContent: n }), el("span", { textContent: label }));
+  box.replaceChildren(
+    stat(brl(r.emendas_impedidas.valor, 0), tr({ pt: "em emendas pagas a empresas sob sanção que alcança verba federal", en: "in amendments paid to companies under a bar that reaches federal money" })),
+    stat(num(r.contratos_impedidas.casos), tr({ pt: "contratos com empresas impedidas na data", en: "contracts with companies barred on the day" })),
+    stat(num(r.campanha_emendas.casos), tr({ pt: "fornecedores de campanha pagos com emendas do mesmo deputado", en: "campaign suppliers paid from the same deputy's amendments" })),
+    stat(num(r.cruzamentos.entidades), tr({ pt: "empresas e entidades em duas listas ou mais", en: "companies and bodies on two lists or more" })));
+}
+
 // ------------------------------------------------------------ hero: every deputy by how they vote
 
 let swarmRows = null;
@@ -301,6 +317,7 @@ function render() {
   for (const [k, f] of Object.entries(CARDS)) f().then((x) => fill(k, x)).catch((e) => console.warn(`hub ${k}:`, e));
   for (const [k, f] of Object.entries(FINDINGS)) f().catch((e) => { console.warn(`hub ${k}:`, e); finding(k, "–", "", null); });
   swarm().catch((e) => console.warn("hub swarm:", e));
+  redFlags().catch((e) => console.warn("hub red flags:", e));
   lastUpdate();
 }
 

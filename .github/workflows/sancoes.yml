@@ -39,11 +39,11 @@ jobs:
 
       - name: Rebuild the explorer's summaries
         # Also reads the amendments, PNCP and TSE tables as committed, so its cross-source numbers are at most a day behind.
-        run: uv run python -m politicaleye site build sancoes
+        run: uv run python -m politicaleye site build sancoes alertas
 
       - name: Commit if a list changed
         run: |
-          git add data/sancoes data/site/sancoes
+          git add data/sancoes data/site/sancoes data/site/alertas
           if git diff --staged --quiet -- . ':!data/sancoes/sources.json'; then
             echo "No data changes."
             exit 0

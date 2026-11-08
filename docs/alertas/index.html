@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Red flags · political-eye">Sinais de alerta · political-eye</title>
+<meta name="description" content="Padrões nos dados abertos que merecem um olhar mais atento: emendas e contratos para empresas impedidas, fornecedores de campanha pagos com emendas do próprio parlamentar, concentração de emendas, fornecedores dominantes e empresas com acordo de leniência." data-en-content="Patterns across the open data that deserve a closer look: amendments and contracts for barred companies, campaign suppliers paid from the same member's amendments, concentrated amendments, dominant suppliers and companies with a leniency agreement.">
+<link rel="stylesheet" href="../lib/site.css">
+<style>
+  .warn { display: flex; gap: 14px; align-items: flex-start; margin: 22px 0 6px; padding: 14px 18px; border-radius: var(--radius); border: 1px solid color-mix(in srgb, var(--warning) 45%, transparent);
+    background: color-mix(in srgb, var(--warning) 9%, var(--surface)); font-size: 14px; line-height: 1.55; color: var(--ink2); }
+  .warn b { color: var(--ink); }
+  .warn .sign { flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; color: #1b1300; background: var(--warning); }
+  .flags { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .flag-card { all: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; gap: 8px; padding: 20px; border-radius: var(--radius); border: 1px solid var(--border);
+    background: var(--surface); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; position: relative; overflow: hidden; }
+  .flag-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--accent); }
+  .flag-card:hover, .flag-card:focus-visible { transform: translateY(-2px); box-shadow: var(--shadow); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+  .flag-card h3 { margin: 0; font-size: 16px; font-weight: 660; }
+  .flag-card .big { font-size: 30px; font-weight: 720; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+  .flag-card .big small { font-size: 14px; font-weight: 550; color: var(--muted); letter-spacing: 0; margin-left: 6px; }
+  .flag-card p { margin: 0; font-size: 13.5px; color: var(--ink2); line-height: 1.5; }
+  .flag-card .go { margin-top: auto; font-size: 13px; font-weight: 600; color: var(--ink); }
+  .rule { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 16px; }
+  .rule .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 650; }
+  .rule .card p, .rule .card li { font-size: 13.5px; color: var(--ink2); line-height: 1.55; margin: 0; }
+  .rule .card ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+  .tag { display: inline-block; font-size: 11.5px; font-weight: 600; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--ink2); white-space: nowrap; }
+  .tag.hot { color: var(--critical); border-color: color-mix(in srgb, var(--critical) 50%, transparent); }
+  .withheld { color: var(--muted); font-style: italic; }
+  @media (max-width: 900px) { .flags, .rule { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="crumb"><a href="../">political-eye</a></p>
+    <h1 data-en="Red flags">Sinais de alerta</h1>
+    <p data-en="Patterns across the open data that deserve a closer look: public money paid to companies while they were barred from public contracts, campaign suppliers later paid from the same member's amendments, amendment money concentrated on one private recipient, buyers dominated by one supplier, and companies that admitted wrongdoing in a leniency agreement and kept signing contracts. Each list gives the rule that raised it, what it is measured against, and the usual innocent explanations.">Padrões nos dados abertos que merecem um olhar mais atento: dinheiro público pago a empresas enquanto estavam impedidas de contratar, fornecedores de campanha pagos depois com emendas do próprio parlamentar, emendas concentradas em uma só entidade privada, órgãos dominados por um fornecedor e empresas que admitiram irregularidades em acordo de leniência e seguiram contratando. Cada lista traz a regra que a gerou, a base de comparação e as explicações inocentes mais comuns.</p>
+    <div class="warn" role="note"><span class="sign" aria-hidden="true">!</span>
+      <span data-en-html="&lt;b&gt;A flag is not evidence of an irregularity.&lt;/b&gt; It is a pattern in official data that a journalist, auditor or citizen may want to check. Many have legitimate explanations; the data can be wrong; and none of it says anyone broke the law. Private individuals are never named, and individual firms named after a person have their name withheld."><b>Um sinal não é prova de irregularidade.</b> É um padrão nos dados oficiais que um jornalista, auditor ou cidadão pode querer verificar. Muitos têm explicação legítima, os dados podem conter erros, e nada aqui afirma que alguém violou a lei. Pessoas físicas nunca são nomeadas, e empresas individuais com nome de pessoa têm o nome omitido.</span></div>
+  </header>
+  <nav class="tabs">
+    <button data-tab="overview" data-en="Overview">Visão geral</button>
+    <button data-tab="barred" data-en="Amendments to barred firms">Emendas a impedidas</button>
+    <button data-tab="contracts" data-en="Contracts with barred firms">Contratos com impedidas</button>
+    <button data-tab="campaign" data-en="Campaign supplier">Fornecedor de campanha</button>
+    <button data-tab="concentration" data-en="Concentrated amendments">Emendas concentradas</button>
+    <button data-tab="dominant" data-en="Dominant supplier">Fornecedor dominante</button>
+    <button data-tab="leniency" data-en="After leniency">Após leniência</button>
+    <button data-tab="cross" data-en="On several lists">Em várias listas</button>
+  </nav>
+  <section id="tab-overview" role="tabpanel"></section>
+  <section id="tab-barred" role="tabpanel" hidden></section>
+  <section id="tab-contracts" role="tabpanel" hidden></section>
+  <section id="tab-campaign" role="tabpanel" hidden></section>
+  <section id="tab-concentration" role="tabpanel" hidden></section>
+  <section id="tab-dominant" role="tabpanel" hidden></section>
+  <section id="tab-leniency" role="tabpanel" hidden></section>
+  <section id="tab-cross" role="tabpanel" hidden></section>
+  <footer data-en-html="Built from the CGU's sanctions lists (CEIS, CNEP, leniency agreements), the Transparency Portal's amendment payments, the electoral court's campaign accounts and the PNCP's contracts, as committed to this repository. Every rule and threshold is in &lt;a href=&quot;https://github.com/mbottoni/political-eye/blob/main/methodology/alertas.md&quot;&gt;methodology/alertas.md&lt;/a&gt;. If you find an error, open an issue on GitHub.">Construído a partir das listas de sanções da CGU (CEIS, CNEP, acordos de leniência), dos pagamentos de emendas do Portal da Transparência, das prestações de contas de campanha do TSE e dos contratos do PNCP, como registrados neste repositório. Cada regra e limite está em <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/alertas.md">methodology/alertas.md</a>. Se encontrar um erro, abra uma issue no GitHub.</footer>
+</main>
+<noscript>Esta página precisa de JavaScript. Os dados estão em <a href="https://github.com/mbottoni/political-eye/tree/main/data/site/alertas">github.com/mbottoni/political-eye</a>.</noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

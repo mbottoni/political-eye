@@ -182,7 +182,8 @@ async function profile(root) {
     });
 
     // In short, and against everyone else
-    const above = (k) => { const q = rankOf(k, r[k]); return q == null ? "" : L(`acima de ${pct(q)} dos deputados`, `above ${pct(q)} of deputies`); };
+    // Rounded down, so the very top reads "above 99%", never "above 100%".
+    const above = (k) => { const q = rankOf(k, r[k]); if (q == null) return ""; const d = Math.floor(q * 100) / 100; return L(`acima de ${pct(d)} dos deputados`, `above ${pct(d)} of deputies`); };
     tiles(box.appendChild(el("section", { className: "tiles" })), [
       { label: L("Participação nas votações nominais", "Roll-call participation"), value: pct(r.presenca),
         sub: [above("presenca"), r.votacoes_mandato ? L(`${fmt(r.votacoes_mandato)} votações no período`, `${fmt(r.votacoes_mandato)} roll calls held`) : ""].filter(Boolean).join(" · ") },

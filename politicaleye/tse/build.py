@@ -7,6 +7,8 @@
     doacoes_grandes_doadores.csv  what each of them gave to each candidate
     despesas_por_candidato.csv  each candidate's contracted and paid expenses
     fornecedores.csv            companies paid at least SUPPLIER_MIN in all, by CNPJ
+    fornecedores_candidatos.csv each federal deputy and senator candidate's companies (CNPJ): what they contracted
+                                with each, so a campaign supplier can be followed into public money
 
 The raw files (hundreds of MB to over a GB per election) stay in the cache;
 only these tables are committed. Money is in reais with two decimals, summed
@@ -25,6 +27,7 @@ import pandas as pd
 from ..io import write_csv
 
 DONOR_MIN = 50_000_00      # centavos: private donors listed by name
+FEDERAL = {"Deputado Federal", "Senador"}   # candidates whose suppliers are kept one by one
 SUPPLIER_MIN = 50_000_00   # centavos: companies listed among suppliers
 NULL = {"#NULO", "#NULO#", "-1", "-4", "#NE", "NÃO DIVULGÁVEL"}
 
@@ -179,7 +182,8 @@ def build_year(year: int, raw: Path, data: Path) -> dict:
                       grandes_share=round(float(big.total.sum() / max(donor.total.sum(), 1)), 4))
 
         # --- expenses: contracted (with the candidate), paid (by account, joined through it)
-        contracted, suppliers, accounts = [], [], set()
+        contracted, suppliers, accounts, per_cand = [], [], set(), []
+        federal = set(cand.loc[cand.cargo.isin(FEDERAL), "sq_candidato"])
         for ch in _csv(z, _member(z, "despesas_contratadas_candidatos_"), [
                 "SQ_PRESTADOR_CONTAS", "SQ_CANDIDATO", "DS_TIPO_FORNECEDOR", "NR_CPF_CNPJ_FORNECEDOR",
                 "NM_FORNECEDOR", "DS_CNAE_FORNECEDOR", "VR_DESPESA_CONTRATADA"], chunksize=500_000):
@@ -189,6 +193,8 @@ def build_year(year: int, raw: Path, data: Path) -> dict:
             co = ch[ch.NR_CPF_CNPJ_FORNECEDOR.str.fullmatch(r"\d{14}")]
             suppliers.append(co.groupby(["NR_CPF_CNPJ_FORNECEDOR", "NM_FORNECEDOR", "DS_CNAE_FORNECEDOR"]).agg(
                 v=("v", "sum"), c=("SQ_CANDIDATO", lambda s: set(s))))
+            fc = co[co.SQ_CANDIDATO.isin(federal)]
+            per_cand.append(fc.groupby(["SQ_CANDIDATO", "NR_CPF_CNPJ_FORNECEDOR"]).v.sum())
         accounts |= set(zip(r.SQ_PRESTADOR_CONTAS, r.SQ_CANDIDATO))
         acct = pd.DataFrame(sorted(accounts), columns=["SQ_PRESTADOR_CONTAS", "SQ_CANDIDATO"])
         acct = acct.drop_duplicates("SQ_PRESTADOR_CONTAS")
@@ -216,7 +222,11 @@ def build_year(year: int, raw: Path, data: Path) -> dict:
     sup = sup.sort_values(["total", "NR_CPF_CNPJ_FORNECEDOR"], ascending=[False, True])
     write_csv(pd.DataFrame({"cnpj": sup.NR_CPF_CNPJ_FORNECEDOR, "nome": _clean(sup.nome), "cnae": _clean(sup.cnae),
                             "total": reais(sup.total), "n_candidatos": sup.n_candidatos}), out / "fornecedores.csv")
+    pc = (pd.concat(per_cand).groupby(level=[0, 1]).sum() if per_cand else pd.Series(dtype="int64")).rename("v").reset_index()
+    pc.columns = ["sq_candidato", "cnpj", "v"]
+    pc = pc[pc.v > 0].assign(_k=lambda t: pd.to_numeric(t.sq_candidato, errors="coerce")).sort_values(["_k", "sq_candidato", "cnpj"])
+    write_csv(pd.DataFrame({"sq_candidato": pc.sq_candidato, "cnpj": pc.cnpj, "valor": reais(pc.v)}), out / "fornecedores_candidatos.csv")
     write_csv(cand, out / "candidatos.csv")
-    report.update(fornecedores=len(sup), candidatos_com_receita=int(len(by)))
+    report.update(fornecedores=len(sup), candidatos_com_receita=int(len(by)), fornecedores_candidatos=len(pc))
     _log(" ".join(f"{k}={v}" for k, v in report.items()))
     return report

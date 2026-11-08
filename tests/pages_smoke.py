@@ -22,6 +22,7 @@ PAGES = [
     "docs/senado/", "docs/senado/?tab=network", "docs/senado/?tab=ideal", "docs/senado/?tab=discipline",
     *[f"docs/orientacoes/?tab={t}" for t in ("gov", "cohesion", "rebels", "orient", "deputy", "blocs")],
     *[f"docs/emendas/?tab={t}" for t in ("overview", "map", "authors", "flows", "recipients", "timing")],
+    *[f"docs/alertas/?tab={t}" for t in ("overview", "barred", "contracts", "campaign", "concentration", "dominant", "leniency", "cross")],
     *[f"docs/sancoes/?tab={t}" for t in ("overview", "who", "time", "repeat", "fines", "money", "cepim", "leniency", "changes", "company")],
     *[f"docs/pncp/?tab={t}" for t in ("overview", "large", "suppliers", "buyers", "map", "parties")],
     *[f"docs/siconfi/?tab={t}" for t in ("overview", "map", "dist", "cash", "parties", "pix", "town")],

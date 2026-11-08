@@ -10,6 +10,8 @@
     expirando.csv        company sanctions that end within 90 days of the snapshot
     mudancas.csv         entries and exits per day, list and kind of person
     recentes.csv         the latest 500 changes about companies
+    emendas_impedidas.csv  amendment payments to a company while it was barred: company, author, the bar's
+                         reach (sim / possivel / nao), value, payments, first and last month (for the red flags)
 
 People are counted, never named: every table that names someone holds only
 companies and organisations (14-digit CNPJs or foreign codes). Every rule is
@@ -328,6 +330,11 @@ def build(data: Path) -> dict:
     barred_pay = pay[pay.barrado != ""]
     em["pago"] = em.codigo.map(paid_by_code).fillna(0.0)
     em["pago_sancionadas"] = em.codigo.map(barred_pay.groupby("codigo_emenda").valor.sum()).fillna(0.0)
+    # For the red-flags page: the payments made while the company was barred, by author and the bar's reach.
+    bp = barred_pay.merge(em[["codigo", "autor_codigo", "autor", "pessoa", "tipo", "partido", "uf"]], left_on="codigo_emenda", right_on="codigo")
+    bp = bp.groupby(["favorecido", "autor_codigo", "autor", "pessoa", "tipo", "partido", "uf", "barrado"], as_index=False).agg(
+        valor=("valor", "sum"), pagamentos=("valor", "size"), primeiro=("ano_mes", "min"), ultimo=("ano_mes", "max"))
+    csv(bp.round(2).sort_values(["favorecido", "autor_codigo", "barrado"]), out / "emendas_impedidas.csv")
     em["pago_sim"] = em.codigo.map(pay[pay.barrado == "sim"].groupby("codigo_emenda").valor.sum()).fillna(0.0)
     paid = em[em.pago > 0]
     bp = barred_pay.merge(em[["codigo", "autor_codigo", "autor", "partido"]], left_on="codigo_emenda", right_on="codigo")

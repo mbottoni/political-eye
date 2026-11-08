@@ -25,7 +25,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 4531,Jayme Campos,DEM,MT,32,9
 4545,Jarbas Vasconcelos,MDB,PE,32,2
 4560,Sérgio Petecão,PSD,AC,32,6
-4610,Alexandre Silveira,PSD,,0,1
+4610,Alexandre Silveira,PSD,MG,0,1
 4770,Izalci Lucas,PSDB,DF,32,22
 4981,Acir Gurgacz,PDT,RO,32,5
 4994,Eduardo Braga,MDB,AM,32,8

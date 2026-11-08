@@ -2,7 +2,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2023-01,22,Esperidião Amin,PP,SC,17,14,0.2585,3,1.4209
 2023-01,35,Jader Barbalho,MDB,PA,39,26,0.7801,1,-0.402
 2023-01,70,Renan Calheiros,MDB,AL,36,22,0.7738,1,-0.6544
-2023-01,90,José Serra,PSDB,,0,0,0.0,4,-0.0788
+2023-01,90,José Serra,PSDB,SP,0,0,0.0,4,-0.0788
 2023-01,285,Marcio Bittar,UNIÃO,AC,15,11,0.3858,2,0.3256
 2023-01,345,Flávio Arns,PODE,PR,15,14,0.2752,1,-1.466
 2023-01,374,Paulo Rocha,PT,PA,24,17,0.4328,1,-1.8631
@@ -13,11 +13,11 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2023-01,742,Marcelo Castro,MDB,PI,24,13,0.5555,1,-0.8627
 2023-01,825,Paulo Paim,PT,RS,27,20,0.5134,1,-1.6235
 2023-01,945,Alvaro Dias,PODE,PR,2,2,0.0614,1,-0.2501
-2023-01,1023,Maria do Carmo Alves,PP,,25,21,0.3745,3,0.313
+2023-01,1023,Maria do Carmo Alves,PP,SE,25,21,0.3745,3,0.313
 2023-01,1173,Wellington Fagundes,PL,MT,18,13,0.3769,3,1.2219
 2023-01,1186,Luis Carlos Heinze,PP,RS,11,10,0.0753,3,1.7429
 2023-01,1249,Kátia Abreu,PP,TO,39,36,0.9194,1,-0.2648
-2023-01,2331,Rose de Freitas,MDB,,26,16,0.678,1,-0.5205
+2023-01,2331,Rose de Freitas,MDB,ES,26,16,0.678,1,-0.5205
 2023-01,3396,Tasso Jereissati,PSDB,CE,0,0,0.0,5,-0.0295
 2023-01,3777,Eduardo Gomes,PL,TO,25,19,0.5655,2,0.9746
 2023-01,3806,Zequinha Marinho,PL,PA,33,26,0.7565,2,1.0115
@@ -26,14 +26,14 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2023-01,4531,Jayme Campos,UNIÃO,MT,42,35,1.0,2,0.0469
 2023-01,4545,Jarbas Vasconcelos,MDB,PE,6,5,0.1177,1,-0.4661
 2023-01,4560,Sérgio Petecão,PSD,AC,35,26,0.9074,2,0.2112
-2023-01,4610,Alexandre Silveira,PSD,,33,22,0.8391,2,-0.1721
+2023-01,4610,Alexandre Silveira,PSD,MG,33,22,0.8391,2,-0.1721
 2023-01,4770,Izalci Lucas,PSDB,DF,7,7,0.1727,2,0.0763
-2023-01,4981,Acir Gurgacz,PDT,,28,25,0.646,1,-0.5351
+2023-01,4981,Acir Gurgacz,PDT,RO,28,25,0.646,1,-0.5351
 2023-01,4994,Eduardo Braga,MDB,AM,38,26,0.948,2,-0.1995
 2023-01,5008,Humberto Costa,PT,PE,26,19,0.4871,1,-1.705
 2023-01,5012,Randolfe Rodrigues,REDE,AP,18,16,0.3069,1,-1.3476
-2023-01,5236,Reguffe,,,2,0,0.016,3,-0.1831
-2023-01,5281,Nilda Gondim,MDB,,24,13,0.461,1,-1.5644
+2023-01,5236,Reguffe,,DF,2,0,0.016,3,-0.1831
+2023-01,5281,Nilda Gondim,MDB,PB,24,13,0.461,1,-1.5644
 2023-01,5322,Romário,PL,RJ,30,23,0.6589,2,1.2302
 2023-01,5350,Jorginho Mello,PL,SC,18,11,0.3147,3,1.1899
 2023-01,5352,Rogério Carvalho,PT,SE,27,20,0.5188,1,-1.6984
@@ -46,13 +46,13 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2023-01,5525,Omar Aziz,PSD,AM,26,17,0.6189,1,-0.7843
 2023-01,5527,Simone Tebet,MDB,MS,23,14,0.5131,1,-1.0265
 2023-01,5531,Elmano Férrer,PP,PI,23,19,0.5482,2,0.8092
-2023-01,5533,Lasier Martins,PODE,,4,3,0.0299,3,0.8786
-2023-01,5535,Telmário Mota,PROS,,31,30,0.7965,2,0.6088
+2023-01,5533,Lasier Martins,PODE,RS,4,3,0.0299,3,0.8786
+2023-01,5535,Telmário Mota,PROS,RR,31,30,0.7965,2,0.6088
 2023-01,5537,Dário Berger,PSB,SC,27,24,0.5418,1,-1.4439
 2023-01,5540,Fernando Bezerra Coelho,MDB,PE,25,20,0.6615,2,0.5618
 2023-01,5557,Mailza Gomes,PP,AC,32,28,0.7467,2,0.6837
 2023-01,5585,Luiz Carlos do Carmo,PSC,GO,26,25,0.7147,2,0.5041
-2023-01,5627,Jean-Paul Prates,,,25,0,0.4919,1,-1.5637
+2023-01,5627,Jean-Paul Prates,,RN,25,0,0.4919,1,-1.5637
 2023-01,5718,Eliziane Gama,CIDADANIA,MA,23,20,0.4115,1,-0.9076
 2023-01,5740,Fabio Garcia,UNIÃO,MT,19,15,0.4448,2,0.4164
 2023-01,5748,Veneziano Vital do Rêgo,MDB,PB,27,17,0.5479,1,-1.2932
@@ -62,7 +62,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2023-01,5898,Eliane Nogueira,PP,PI,6,5,0.0692,3,1.833
 2023-01,5899,Vanderlan Cardoso,,GO,37,0,0.8877,2,0.7051
 2023-01,5902,Eduardo Velloso,UNIÃO,AC,20,17,0.3287,3,0.5252
-2023-01,5905,Rodrigo Cunha,UNIÃO,,47,39,0.9914,1,0.0581
+2023-01,5905,Rodrigo Cunha,UNIÃO,AL,47,39,0.9914,1,0.0581
 2023-01,5906,Dra. Eudócia,PSB,AL,16,15,0.3015,2,0.2312
 2023-01,5913,Rafael Tenório,MDB,AL,3,2,0.0592,2,0.15
 2023-01,5924,Oriovisto Guimarães,PODE,PR,3,1,0.0043,3,0.4302
@@ -72,17 +72,17 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2023-01,5953,Fabiano Contarato,,ES,19,0,0.3356,1,-1.9143
 2023-01,5959,Styvenson Valentim,PODE,RN,0,0,0.0,6,0.0948
 2023-01,5967,Angelo Coronel,PSD,BA,36,26,0.8958,2,0.2816
-2023-01,5976,Eduardo Girão,PODE,,9,8,0.054,3,1.6968
-2023-01,5979,Leila Barros,PDT,,21,18,0.3555,1,-1.4822
+2023-01,5976,Eduardo Girão,PODE,CE,9,8,0.054,3,1.6968
+2023-01,5979,Leila Barros,PDT,DF,21,18,0.3555,1,-1.4822
 2023-01,5982,Alessandro Vieira,PSDB,SE,12,10,0.1809,1,-1.3953
 2023-01,5985,Nelsinho Trad,PSD,MS,33,24,0.8398,2,0.353
 2023-01,5988,Soraya Thronicke,UNIÃO,MS,20,13,0.5136,2,0.5249
 2023-01,5990,Carlos Viana,PL,MG,15,8,0.159,3,1.708
 2023-01,5998,Daniella Ribeiro,PSD,PB,28,20,0.7371,2,0.1634
 2023-01,6008,Giordano,MDB,SP,33,22,0.8342,2,0.1097
-2023-01,6027,Mecias de Jesus,REPUBLICANOS,,35,34,0.8505,2,0.8815
+2023-01,6027,Mecias de Jesus,REPUBLICANOS,RR,35,34,0.8505,2,0.8815
 2023-01,6295,Carlos Fávaro,PSD,MT,35,26,0.8698,2,0.2132
-2023-01,6304,Margareth Buzetti,PSD,,16,14,0.1753,3,0.4722
+2023-01,6304,Margareth Buzetti,PSD,MT,16,14,0.1753,3,0.4722
 2023-09,22,Esperidião Amin,PP,SC,5,4,0.0002,2,0.9397
 2023-09,70,Renan Calheiros,MDB,AL,14,11,0.6099,1,-0.3723
 2023-09,285,Marcio Bittar,UNIÃO,AC,6,5,0.0071,2,0.6963

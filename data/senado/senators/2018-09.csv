@@ -16,7 +16,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 615,José Pimentel,PT,CE,4,2
 631,Magno Malta,PL,ES,4,2
 635,Ricardo Ferraço,PSDB,ES,4,0
-643,Lúcia Vânia,PSB,,0,2
+643,Lúcia Vânia,PSB,GO,0,2
 677,Roberto Rocha,PSDB,MA,4,0
 715,Armando Monteiro,PTB,PE,4,1
 739,Ciro Nogueira,PP,PI,4,2
@@ -57,7 +57,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5012,Randolfe Rodrigues,REDE,AP,4,3
 5030,Givago Tenório,PP,AL,4,1
 5052,Roberto Muniz,PP,BA,4,2
-5070,Wilder Morais,DEM,,4,0
+5070,Wilder Morais,DEM,GO,4,0
 5072,Reditario Cassol,PP,RO,4,0
 5076,Ione Guimarães,PTB,GO,4,0
 5100,Hélio José,PROS,DF,4,1

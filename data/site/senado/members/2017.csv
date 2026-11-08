@@ -49,7 +49,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2017-05,5008,Humberto Costa,PT,PE,9,5,0.0,2,-1.4647
 2017-05,5012,Randolfe Rodrigues,REDE,AP,11,11,0.0,2,-2.078
 2017-05,5052,Roberto Muniz,PP,BA,7,7,0.0,2,-1.0484
-2017-05,5070,Wilder Morais,PP,,26,21,0.6213,1,0.6756
+2017-05,5070,Wilder Morais,PP,GO,26,21,0.6213,1,0.6756
 2017-05,5100,Hélio José,MDB,DF,36,26,0.8173,1,0.4573
 2017-05,5108,Cidinho Santos,PL,MT,42,39,0.9654,1,0.6758
 2017-05,5112,José Medeiros,PSD,MT,39,36,0.8816,1,0.6674
@@ -119,7 +119,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2017-06,5008,Humberto Costa,PT,PE,9,5,0.0,2,-1.4647
 2017-06,5012,Randolfe Rodrigues,REDE,AP,11,11,0.0,2,-2.078
 2017-06,5052,Roberto Muniz,PP,BA,7,7,0.0,2,-1.0484
-2017-06,5070,Wilder Morais,PP,,26,21,0.6213,1,0.6756
+2017-06,5070,Wilder Morais,PP,GO,26,21,0.6213,1,0.6756
 2017-06,5100,Hélio José,MDB,DF,36,26,0.8173,1,0.4573
 2017-06,5108,Cidinho Santos,PL,MT,42,39,0.9654,1,0.6758
 2017-06,5112,José Medeiros,PSD,MT,39,36,0.8816,1,0.6674
@@ -196,7 +196,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2017-07,5008,Humberto Costa,PT,PE,16,8,0.0,2,-1.5978
 2017-07,5012,Randolfe Rodrigues,REDE,AP,12,12,0.0,2,-2.0841
 2017-07,5052,Roberto Muniz,PP,BA,5,5,0.0003,2,-0.878
-2017-07,5070,Wilder Morais,PP,,44,39,0.9757,1,0.7846
+2017-07,5070,Wilder Morais,PP,GO,44,39,0.9757,1,0.7846
 2017-07,5100,Hélio José,MDB,DF,38,27,0.8237,1,0.3898
 2017-07,5108,Cidinho Santos,PL,MT,46,43,0.988,1,0.7834
 2017-07,5112,José Medeiros,PSD,MT,40,38,0.9024,1,0.762
@@ -263,7 +263,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2017-08,5008,Humberto Costa,PT,PE,10,4,0.0004,3,-1.2814
 2017-08,5012,Randolfe Rodrigues,REDE,AP,10,10,0.0001,3,-2.239
 2017-08,5052,Roberto Muniz,PP,BA,15,14,0.341,4,-0.1432
-2017-08,5070,Wilder Morais,PP,,31,27,0.8115,1,0.7102
+2017-08,5070,Wilder Morais,PP,GO,31,27,0.8115,1,0.7102
 2017-08,5100,Hélio José,MDB,DF,15,10,0.3692,4,0.1378
 2017-08,5108,Cidinho Santos,PL,MT,35,32,0.8728,2,0.7363
 2017-08,5112,José Medeiros,PODE,MT,29,29,0.7663,1,0.629
@@ -336,7 +336,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2017-09,5008,Humberto Costa,PT,PE,11,5,0.0,3,-1.1907
 2017-09,5012,Randolfe Rodrigues,REDE,AP,11,11,0.0,3,-2.2149
 2017-09,5052,Roberto Muniz,PP,BA,11,10,0.2349,2,-0.1152
-2017-09,5070,Wilder Morais,PP,,35,30,0.873,1,0.7931
+2017-09,5070,Wilder Morais,PP,GO,35,30,0.873,1,0.7931
 2017-09,5100,Hélio José,MDB,DF,15,12,0.3503,2,0.1297
 2017-09,5108,Cidinho Santos,PL,MT,38,36,0.9214,1,0.737
 2017-09,5112,José Medeiros,PODE,MT,34,34,0.854,1,0.5631
@@ -414,7 +414,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2017-10,5008,Humberto Costa,PT,PE,18,10,0.0004,2,-1.3883
 2017-10,5012,Randolfe Rodrigues,REDE,AP,15,15,0.0,2,-2.2699
 2017-10,5052,Roberto Muniz,PP,BA,19,16,0.4424,1,0.1069
-2017-10,5070,Wilder Morais,PP,,38,33,0.8933,1,0.816
+2017-10,5070,Wilder Morais,PP,GO,38,33,0.8933,1,0.816
 2017-10,5100,Hélio José,PROS,DF,16,16,0.3946,1,0.0162
 2017-10,5108,Cidinho Santos,PL,MT,40,38,0.9541,1,0.8346
 2017-10,5112,José Medeiros,PODE,MT,15,15,0.3046,4,0.2712
@@ -492,7 +492,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2017-11,5008,Humberto Costa,PT,PE,14,6,0.0001,2,-1.5791
 2017-11,5012,Randolfe Rodrigues,REDE,AP,12,12,0.0001,2,-2.1109
 2017-11,5052,Roberto Muniz,PP,BA,14,12,0.2794,1,0.0377
-2017-11,5070,Wilder Morais,PP,,40,35,0.9348,1,0.7849
+2017-11,5070,Wilder Morais,PP,GO,40,35,0.9348,1,0.7849
 2017-11,5100,Hélio José,PROS,DF,16,16,0.367,1,0.0034
 2017-11,5108,Cidinho Santos,PL,MT,43,41,0.9735,1,0.8491
 2017-11,5112,José Medeiros,PODE,MT,25,25,0.5234,1,0.373
@@ -570,7 +570,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2017-12,5008,Humberto Costa,PT,PE,16,8,0.0006,2,-1.5422
 2017-12,5012,Randolfe Rodrigues,REDE,AP,13,13,0.0001,2,-2.0666
 2017-12,5052,Roberto Muniz,PP,BA,14,12,0.2804,3,0.0563
-2017-12,5070,Wilder Morais,PP,,40,35,0.9174,1,0.7378
+2017-12,5070,Wilder Morais,PP,GO,40,35,0.9174,1,0.7378
 2017-12,5100,Hélio José,PROS,DF,15,15,0.3503,1,0.0257
 2017-12,5108,Cidinho Santos,PL,MT,41,39,0.9419,1,0.8834
 2017-12,5112,José Medeiros,PODE,MT,20,20,0.4308,4,0.3554

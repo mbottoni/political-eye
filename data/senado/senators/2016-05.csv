@@ -24,13 +24,13 @@ senador_id,nome,partido,uf,n_votes,n_authored
 739,Ciro Nogueira,PP,PI,1,3
 825,Paulo Paim,PT,RS,1,30
 846,Aloysio Nunes Ferreira,PSDB,SP,1,3
-878,José Aníbal,PSDB,,0,2
+878,José Aníbal,PSDB,SP,0,2
 945,Alvaro Dias,PV,PR,1,8
 950,João Alberto Souza,MDB,MA,1,0
 1023,Maria do Carmo Alves,DEM,SE,1,3
 1173,Wellington Fagundes,PL,MT,1,3
 1176,Waldemir Moka,MDB,MS,1,7
-1249,Kátia Abreu,,,0,1
+1249,Kátia Abreu,,TO,0,1
 2207,Raimundo Lira,MDB,PB,1,4
 2331,Rose de Freitas,MDB,ES,1,0
 3361,José Maranhão,MDB,PB,1,6
@@ -61,15 +61,15 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5006,Gleisi Hoffmann,PT,PR,1,3
 5008,Humberto Costa,PT,PE,1,6
 5012,Randolfe Rodrigues,REDE,AP,1,17
-5070,Wilder Morais,PP,,1,0
+5070,Wilder Morais,PP,GO,1,0
 5100,Hélio José,MDB,DF,1,11
-5108,Cidinho Santos,PL,,0,1
+5108,Cidinho Santos,PL,MT,0,1
 5112,José Medeiros,PSD,MT,1,6
-5116,Pedro Chaves,PSC,,0,1
+5116,Pedro Chaves,PSC,MS,0,1
 5132,Dalirio Beber,PSDB,SC,1,5
 5144,Zeze Perrella,PTB,MG,1,5
 5164,Ataídes Oliveira,PSDB,TO,1,7
-5178,Douglas Cintra,PTB,,0,6
+5178,Douglas Cintra,PTB,PE,0,6
 5182,Regina Sousa,PT,PI,1,8
 5197,Cássio Cunha Lima,PSDB,PB,1,1
 5236,Reguffe,S/Partido,DF,1,5

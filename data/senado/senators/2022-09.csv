@@ -1,33 +1,33 @@
 senador_id,nome,partido,uf,n_votes,n_authored
 22,Esperidião Amin,PP,SC,0,3
 35,Jader Barbalho,MDB,PA,0,4
-90,José Serra,PSDB,,0,2
-151,Luiz Pastore,MDB,,0,2
+90,José Serra,PSDB,SP,0,2
+151,Luiz Pastore,MDB,ES,0,2
 285,Marcio Bittar,UNIÃO,AC,0,1
 345,Flávio Arns,PODE,PR,0,4
-374,Paulo Rocha,PT,,0,8
+374,Paulo Rocha,PT,PA,0,8
 470,Chico Rodrigues,UNIÃO,RR,0,2
 581,Jaques Wagner,PT,BA,0,2
-677,Roberto Rocha,PTB,,0,2
+677,Roberto Rocha,PTB,MA,0,2
 742,Marcelo Castro,MDB,PI,0,3
 825,Paulo Paim,PT,RS,0,10
-945,Alvaro Dias,PODE,,0,3
-1023,Maria do Carmo Alves,PP,,0,1
+945,Alvaro Dias,PODE,PR,0,3
+1023,Maria do Carmo Alves,PP,SE,0,1
 1173,Wellington Fagundes,PL,MT,0,3
 1186,Luis Carlos Heinze,PP,RS,0,4
-3396,Tasso Jereissati,PSDB,,0,2
+3396,Tasso Jereissati,PSDB,CE,0,2
 3777,Eduardo Gomes,PL,TO,0,1
 3806,Zequinha Marinho,PL,PA,0,4
-4525,Fernando Collor,PTB,,0,2
+4525,Fernando Collor,PTB,AL,0,2
 4531,Jayme Campos,UNIÃO,MT,0,5
-4610,Alexandre Silveira,PSD,,0,2
+4610,Alexandre Silveira,PSD,MG,0,2
 4770,Izalci Lucas,PSDB,DF,0,4
-4981,Acir Gurgacz,PDT,,0,1
+4981,Acir Gurgacz,PDT,RO,0,1
 4994,Eduardo Braga,MDB,AM,0,2
 5008,Humberto Costa,PT,PE,0,5
 5012,Randolfe Rodrigues,REDE,AP,0,2
-5236,Reguffe,,,0,1
-5281,Nilda Gondim,MDB,,0,1
+5236,Reguffe,,DF,0,1
+5281,Nilda Gondim,MDB,PB,0,1
 5322,Romário,PL,RJ,0,5
 5352,Rogério Carvalho,PT,SE,0,2
 5376,Mara Gabrilli,PSDB,SP,0,4
@@ -36,20 +36,20 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5502,Plínio Valério,PSDB,AM,0,3
 5523,Otto Alencar,PSD,BA,0,2
 5525,Omar Aziz,PSD,AM,0,1
-5531,Elmano Férrer,PP,,0,1
-5533,Lasier Martins,PODE,,0,3
-5537,Dário Berger,PSB,,0,1
-5540,Fernando Bezerra Coelho,MDB,,0,3
-5557,Mailza Gomes,PP,,0,3
-5585,Luiz Carlos do Carmo,PSC,,0,3
-5627,Jean-Paul Prates,,,0,8
-5639,Guaracy Silveira,PP,,0,4
+5531,Elmano Férrer,PP,PI,0,1
+5533,Lasier Martins,PODE,RS,0,3
+5537,Dário Berger,PSB,SC,0,1
+5540,Fernando Bezerra Coelho,MDB,PE,0,3
+5557,Mailza Gomes,PP,AC,0,3
+5585,Luiz Carlos do Carmo,PSC,GO,0,3
+5627,Jean-Paul Prates,,RN,0,8
+5639,Guaracy Silveira,PP,TO,0,4
 5718,Eliziane Gama,CIDADANIA,MA,0,6
-5732,Rodrigo Pacheco,PSD,,0,13
+5732,Rodrigo Pacheco,PSD,MG,0,13
 5783,Zenaide Maia,PROS,RN,0,2
-5892,Roberth Bringel,UNIÃO,,0,1
+5892,Roberth Bringel,UNIÃO,MA,0,1
 5895,Jorge Kajuru,PODE,GO,0,6
-5898,Eliane Nogueira,PP,,0,4
+5898,Eliane Nogueira,PP,PI,0,4
 5899,Vanderlan Cardoso,PSD,GO,0,2
 5906,Dra. Eudócia,PSB,AL,0,1
 5924,Oriovisto Guimarães,PODE,PR,0,3
@@ -59,14 +59,14 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5953,Fabiano Contarato,PT,ES,0,4
 5959,Styvenson Valentim,PODE,RN,0,1
 5967,Angelo Coronel,PSD,BA,0,3
-5972,Julio Ventura,PDT,,0,3
-5976,Eduardo Girão,PODE,,0,4
-5979,Leila Barros,PDT,,0,4
+5972,Julio Ventura,PDT,CE,0,3
+5976,Eduardo Girão,PODE,CE,0,4
+5979,Leila Barros,PDT,DF,0,4
 5982,Alessandro Vieira,PSDB,SE,0,6
 5985,Nelsinho Trad,PSD,MS,0,5
 5988,Soraya Thronicke,UNIÃO,MS,0,2
 5998,Daniella Ribeiro,PSD,PB,0,2
 6008,Giordano,MDB,SP,0,1
 6010,Ivete da Silveira,MDB,SC,0,4
-6027,Mecias de Jesus,REPUBLICANOS,,0,2
-6304,Margareth Buzetti,PP,,0,4
+6027,Mecias de Jesus,REPUBLICANOS,RR,0,2
+6304,Margareth Buzetti,PP,MT,0,4

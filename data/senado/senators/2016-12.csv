@@ -1,70 +1,70 @@
 senador_id,nome,partido,uf,n_votes,n_authored
-3,Antonio Carlos Valadares,PSB,,0,5
-16,Edison Lobão,,,0,2
-40,José Agripino,DEM,,0,2
-72,Roberto Requião,MDB,,0,3
-73,Romero Jucá,MDB,,0,2
-87,Garibaldi Alves Filho,,,0,2
-374,Paulo Rocha,PT,,0,3
+3,Antonio Carlos Valadares,PSB,SE,0,5
+16,Edison Lobão,,MA,0,2
+40,José Agripino,DEM,RN,0,2
+72,Roberto Requião,MDB,PR,0,3
+73,Romero Jucá,MDB,RR,0,2
+87,Garibaldi Alves Filho,,RN,0,2
+374,Paulo Rocha,PT,PA,0,3
 391,Aécio Neves,PSDB,MG,0,2
-456,Ronaldo Caiado,DEM,,0,6
-558,Vanessa Grazziotin,PCdoB,,0,7
+456,Ronaldo Caiado,DEM,GO,0,6
+558,Vanessa Grazziotin,PCdoB,AM,0,7
 612,Eunício Oliveira,MDB,CE,0,1
-615,José Pimentel,PT,,0,2
+615,José Pimentel,PT,CE,0,2
 631,Magno Malta,PL,ES,0,8
-635,Ricardo Ferraço,PSDB,,0,5
-643,Lúcia Vânia,PSB,,0,2
-715,Armando Monteiro,PTB,,0,6
+635,Ricardo Ferraço,PSDB,ES,0,5
+643,Lúcia Vânia,PSB,GO,0,2
+715,Armando Monteiro,PTB,PE,0,6
 825,Paulo Paim,PT,RS,0,14
-846,Aloysio Nunes Ferreira,PSDB,,0,3
-878,José Aníbal,PSDB,,0,3
-945,Alvaro Dias,PV,,0,5
+846,Aloysio Nunes Ferreira,PSDB,SP,0,3
+878,José Aníbal,PSDB,SP,0,3
+945,Alvaro Dias,PV,PR,0,5
 1173,Wellington Fagundes,PL,MT,0,3
-1176,Waldemir Moka,MDB,,0,7
-1249,Kátia Abreu,MDB,,0,3
-2331,Rose de Freitas,MDB,,0,1
-3361,José Maranhão,MDB,,0,2
-3394,João Capiberibe,PSB,,0,5
-3396,Tasso Jereissati,PSDB,,0,3
-3398,Cristovam Buarque,CIDADANIA,,0,6
-3634,Flexa Ribeiro,PSDB,,0,1
+1176,Waldemir Moka,MDB,MS,0,7
+1249,Kátia Abreu,MDB,TO,0,3
+2331,Rose de Freitas,MDB,ES,0,1
+3361,José Maranhão,MDB,PB,0,2
+3394,João Capiberibe,PSB,AP,0,5
+3396,Tasso Jereissati,PSDB,CE,0,3
+3398,Cristovam Buarque,CIDADANIA,DF,0,6
+3634,Flexa Ribeiro,PSDB,PA,0,1
 3695,Lindbergh Farias,PT,RJ,0,5
-3713,Fátima Bezerra,PT,,0,3
-3741,Paulo Bauer,PSDB,,0,4
+3713,Fátima Bezerra,PT,RN,0,3
+3741,Paulo Bauer,PSDB,SC,0,4
 3830,Davi Alcolumbre,DEM,AP,0,2
 4575,Lídice da Mata,,BA,0,1
-4606,Pinto Itamaraty,,,0,1
-4697,Ângela Portela,PT,,0,3
-4721,Eduardo Amorim,PSC,,0,4
-4763,Vicentinho Alves,PL,,0,2
-4786,Virginio de Carvalho,PSC,,0,2
-4988,Ana Amélia,PP,,0,10
-4990,Jorge Viana,PT,,0,4
+4606,Pinto Itamaraty,,MA,0,1
+4697,Ângela Portela,PT,RR,0,3
+4721,Eduardo Amorim,PSC,SE,0,4
+4763,Vicentinho Alves,PL,TO,0,2
+4786,Virginio de Carvalho,PSC,SE,0,2
+4988,Ana Amélia,PP,RS,0,10
+4990,Jorge Viana,PT,AC,0,4
 4994,Eduardo Braga,MDB,AM,0,1
-5000,Marta Suplicy,MDB,,0,2
-5004,Ivo Cassol,PP,,0,2
+5000,Marta Suplicy,MDB,SP,0,2
+5004,Ivo Cassol,PP,RO,0,2
 5006,Gleisi Hoffmann,PT,PR,0,2
 5008,Humberto Costa,PT,PE,0,7
 5012,Randolfe Rodrigues,REDE,AP,0,7
-5052,Roberto Muniz,PP,,0,3
-5100,Hélio José,,,0,2
-5108,Cidinho Santos,PL,,0,5
-5112,José Medeiros,PSD,,0,4
-5116,Pedro Chaves,PSC,,0,4
-5132,Dalirio Beber,PSDB,,0,5
-5144,Zeze Perrella,PTB,,0,1
-5164,Ataídes Oliveira,PSDB,,0,5
-5182,Regina Sousa,PT,,0,3
-5199,Deca,PSDB,,0,5
-5236,Reguffe,,,0,5
+5052,Roberto Muniz,PP,BA,0,3
+5100,Hélio José,,DF,0,2
+5108,Cidinho Santos,PL,MT,0,5
+5112,José Medeiros,PSD,MT,0,4
+5116,Pedro Chaves,PSC,MS,0,4
+5132,Dalirio Beber,PSDB,SC,0,5
+5144,Zeze Perrella,PTB,MG,0,1
+5164,Ataídes Oliveira,PSDB,TO,0,5
+5182,Regina Sousa,PT,PI,0,3
+5199,Deca,PSDB,PB,0,5
+5236,Reguffe,,DF,0,5
 5322,Romário,PSB,RJ,0,6
 5523,Otto Alencar,PSD,BA,0,4
 5525,Omar Aziz,PSD,AM,0,2
-5527,Simone Tebet,MDB,,0,6
-5529,Antonio Anastasia,PSDB,,0,9
-5531,Elmano Férrer,PTB,,0,5
-5533,Lasier Martins,PDT,,0,8
-5535,Telmário Mota,PDT,,0,4
-5537,Dário Berger,MDB,,0,5
-5540,Fernando Bezerra Coelho,PSB,,0,1
-5617,Pastor Valadares,PDT,,0,6
+5527,Simone Tebet,MDB,MS,0,6
+5529,Antonio Anastasia,PSDB,MG,0,9
+5531,Elmano Férrer,PTB,PI,0,5
+5533,Lasier Martins,PDT,RS,0,8
+5535,Telmário Mota,PDT,RR,0,4
+5537,Dário Berger,MDB,SC,0,5
+5540,Fernando Bezerra Coelho,PSB,PE,0,1
+5617,Pastor Valadares,PDT,RO,0,6

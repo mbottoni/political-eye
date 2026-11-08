@@ -209,6 +209,13 @@ def build_year(year: int, raw: Path, data_dir: Path) -> dict:
     au, r2 = load_authorship(raw, year)
     vo, r3 = load_orientations(raw, year, vt)
     listed = pd.DataFrame(senators_listed(raw, legislaturas(year)), columns=["codigo", "nome", "uf"])
+    # A few senators are missing from their own legislature's list (Wilder Morais, 2016-2018, is only in the
+    # 57th's), so a UF still missing comes from any other cached list.
+    cached = sorted(int(f.stem.split("-")[1]) for f in raw.glob("senadores-*.json"))
+    anywhere = pd.DataFrame(senators_listed(raw, cached), columns=["codigo", "nome", "uf"])
+    listed = listed.merge(anywhere[["codigo", "uf"]].rename(columns={"uf": "uf_any"}), on="codigo", how="outer")
+    listed["uf"] = listed.uf.where(listed.uf.fillna("") != "", listed.uf_any).fillna("")
+    listed = listed.drop(columns="uf_any")
     report = {"year": year, **r1, **r3, **r2}
 
     vt = vt.assign(month=vt.data.str[:7], _s=_num(vt.sessao), _i=_num(vt.id)).sort_values(["data", "_s", "_i"])

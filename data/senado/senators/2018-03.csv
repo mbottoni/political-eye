@@ -1,5 +1,5 @@
 senador_id,nome,partido,uf,n_votes,n_authored
-3,Antonio Carlos Valadares,PSB,,0,1
+3,Antonio Carlos Valadares,PSB,SE,0,1
 35,Jader Barbalho,MDB,PA,3,0
 40,José Agripino,DEM,RN,3,0
 70,Renan Calheiros,MDB,AL,3,0
@@ -59,9 +59,9 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5012,Randolfe Rodrigues,REDE,AP,3,10
 5018,Pastor Bel,PRTB,MA,3,3
 5052,Roberto Muniz,PP,BA,3,1
-5070,Wilder Morais,PP,,3,0
+5070,Wilder Morais,PP,GO,3,0
 5100,Hélio José,PROS,DF,3,13
-5106,Sérgio de Castro,PDT,,0,4
+5106,Sérgio de Castro,PDT,ES,0,4
 5108,Cidinho Santos,PL,MT,3,2
 5112,José Medeiros,PODE,MT,3,7
 5116,Pedro Chaves,REPUBLICANOS,MS,3,6

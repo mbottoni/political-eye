@@ -16,7 +16,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 3806,Zequinha Marinho,PODE,PA,14,13
 3830,Davi Alcolumbre,UNIÃO,AP,14,2
 4531,Jayme Campos,UNIÃO,MT,14,6
-4545,Jarbas Vasconcelos,MDB,,0,1
+4545,Jarbas Vasconcelos,MDB,PE,0,1
 4560,Sérgio Petecão,PSD,AC,14,2
 4639,Beto Faro,PT,PA,14,10
 4642,Efraim Filho,UNIÃO,PB,14,13
@@ -37,7 +37,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5502,Plínio Valério,PSDB,AM,14,10
 5523,Otto Alencar,PSD,BA,14,6
 5525,Omar Aziz,PSD,AM,14,2
-5527,Simone Tebet,,,0,1
+5527,Simone Tebet,,MS,0,1
 5672,Alan Rick,UNIÃO,AC,14,16
 5718,Eliziane Gama,PSD,MA,14,6
 5732,Rodrigo Pacheco,PSD,MG,14,2

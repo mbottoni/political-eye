@@ -1,81 +1,81 @@
 senador_id,nome,partido,uf,n_votes,n_authored
-3,Antonio Carlos Valadares,PSB,,0,21
-16,Edison Lobão,,,0,7
+3,Antonio Carlos Valadares,PSB,SE,0,21
+16,Edison Lobão,,MA,0,7
 35,Jader Barbalho,,PA,0,16
-40,José Agripino,,,0,13
+40,José Agripino,,RN,0,13
 70,Renan Calheiros,MDB,AL,0,1
-72,Roberto Requião,,,0,7
-73,Romero Jucá,,,0,7
-87,Garibaldi Alves Filho,,,0,21
-90,José Serra,,,0,10
-111,Blairo Maggi,,,0,16
-374,Paulo Rocha,,,0,10
+72,Roberto Requião,,PR,0,7
+73,Romero Jucá,,RR,0,7
+87,Garibaldi Alves Filho,,RN,0,21
+90,José Serra,,SP,0,10
+111,Blairo Maggi,,MT,0,16
+374,Paulo Rocha,,PA,0,10
 391,Aécio Neves,PSDB,MG,0,18
-456,Ronaldo Caiado,,,0,10
-558,Vanessa Grazziotin,,,0,25
-604,Walter Pinheiro,,,0,14
+456,Ronaldo Caiado,,GO,0,10
+558,Vanessa Grazziotin,,AM,0,25
+604,Walter Pinheiro,,BA,0,14
 612,Eunício Oliveira,,CE,0,5
-615,José Pimentel,,,0,14
+615,José Pimentel,,CE,0,14
 631,Magno Malta,PL,ES,0,7
-635,Ricardo Ferraço,,,0,26
-643,Lúcia Vânia,,,0,7
-677,Roberto Rocha,,,0,9
+635,Ricardo Ferraço,,ES,0,26
+643,Lúcia Vânia,,GO,0,7
+677,Roberto Rocha,,MA,0,9
 739,Ciro Nogueira,,PI,0,11
 825,Paulo Paim,,RS,0,28
-846,Aloysio Nunes Ferreira,,,0,20
-945,Alvaro Dias,,,0,11
-950,João Alberto Souza,,,0,3
-1023,Maria do Carmo Alves,,,0,10
+846,Aloysio Nunes Ferreira,,SP,0,20
+945,Alvaro Dias,,PR,0,11
+950,João Alberto Souza,,MA,0,3
+1023,Maria do Carmo Alves,,SE,0,10
 1173,Wellington Fagundes,,MT,0,8
-1176,Waldemir Moka,,,0,12
-2207,Raimundo Lira,MDB,,0,12
-2331,Rose de Freitas,,,0,8
-3360,Delcídio do Amaral,,,0,11
-3361,José Maranhão,MDB,,0,7
+1176,Waldemir Moka,,MS,0,12
+2207,Raimundo Lira,MDB,PB,0,12
+2331,Rose de Freitas,,ES,0,8
+3360,Delcídio do Amaral,,MS,0,11
+3361,José Maranhão,MDB,PB,0,7
 3366,Marcelo Crivella,,RJ,0,8
-3372,Valdir Raupp,,,0,10
-3394,João Capiberibe,,,0,7
-3396,Tasso Jereissati,,,0,15
-3398,Cristovam Buarque,,,0,20
-3634,Flexa Ribeiro,,,0,15
+3372,Valdir Raupp,,RO,0,10
+3394,João Capiberibe,,AP,0,7
+3396,Tasso Jereissati,,CE,0,15
+3398,Cristovam Buarque,,DF,0,20
+3634,Flexa Ribeiro,,PA,0,15
 3695,Lindbergh Farias,,RJ,0,16
-3713,Fátima Bezerra,,,0,8
-3741,Paulo Bauer,,,0,8
-3823,Benedito de Lira,,,0,15
+3713,Fátima Bezerra,,RN,0,8
+3741,Paulo Bauer,,SC,0,8
+3823,Benedito de Lira,,AL,0,15
 3830,Davi Alcolumbre,DEM,AP,0,18
-4525,Fernando Collor,,,0,4
-4558,Gladson Cameli,,,0,9
+4525,Fernando Collor,,AL,0,4
+4558,Gladson Cameli,,AC,0,9
 4560,Sérgio Petecão,,AC,0,10
 4575,Lídice da Mata,,BA,0,18
-4697,Ângela Portela,,,0,11
-4721,Eduardo Amorim,,,0,12
-4763,Vicentinho Alves,,,0,7
-4981,Acir Gurgacz,,,0,10
-4988,Ana Amélia,,,0,21
-4990,Jorge Viana,,,0,18
-5000,Marta Suplicy,,,0,8
-5004,Ivo Cassol,,,0,13
+4697,Ângela Portela,,RR,0,11
+4721,Eduardo Amorim,,SE,0,12
+4763,Vicentinho Alves,,TO,0,7
+4981,Acir Gurgacz,,RO,0,10
+4988,Ana Amélia,,RS,0,21
+4990,Jorge Viana,,AC,0,18
+5000,Marta Suplicy,,SP,0,8
+5004,Ivo Cassol,,RO,0,13
 5006,Gleisi Hoffmann,,PR,0,11
 5008,Humberto Costa,,PE,0,16
 5012,Randolfe Rodrigues,,AP,0,24
-5038,Sandra Braga,,,0,5
-5100,Hélio José,,,0,25
-5112,José Medeiros,,,0,23
-5132,Dalirio Beber,,,0,15
-5144,Zeze Perrella,,,0,13
-5164,Ataídes Oliveira,PSDB,,0,7
-5178,Douglas Cintra,,,0,7
-5182,Regina Sousa,,,0,17
-5197,Cássio Cunha Lima,,,0,18
-5236,Reguffe,,,0,21
+5038,Sandra Braga,,AM,0,5
+5100,Hélio José,,DF,0,25
+5112,José Medeiros,,MT,0,23
+5132,Dalirio Beber,,SC,0,15
+5144,Zeze Perrella,,MG,0,13
+5164,Ataídes Oliveira,PSDB,TO,0,7
+5178,Douglas Cintra,,PE,0,7
+5182,Regina Sousa,,PI,0,17
+5197,Cássio Cunha Lima,,PB,0,18
+5236,Reguffe,,DF,0,21
 5322,Romário,PSB,RJ,0,13
 5523,Otto Alencar,PSD,BA,0,19
 5525,Omar Aziz,,AM,0,16
-5527,Simone Tebet,MDB,,0,20
-5529,Antonio Anastasia,,,0,18
-5531,Elmano Férrer,,,0,18
-5533,Lasier Martins,PDT,,0,24
-5535,Telmário Mota,,,0,12
-5537,Dário Berger,,,0,12
-5540,Fernando Bezerra Coelho,,,0,15
-5637,Donizeti Nogueira,,,0,13
+5527,Simone Tebet,MDB,MS,0,20
+5529,Antonio Anastasia,,MG,0,18
+5531,Elmano Férrer,,PI,0,18
+5533,Lasier Martins,PDT,RS,0,24
+5535,Telmário Mota,,RR,0,12
+5537,Dário Berger,,SC,0,12
+5540,Fernando Bezerra Coelho,,PE,0,15
+5637,Donizeti Nogueira,,TO,0,13

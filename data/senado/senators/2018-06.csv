@@ -58,7 +58,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5008,Humberto Costa,PT,PE,18,7
 5012,Randolfe Rodrigues,REDE,AP,18,8
 5052,Roberto Muniz,PP,BA,18,0
-5070,Wilder Morais,DEM,,18,0
+5070,Wilder Morais,DEM,GO,18,0
 5072,Reditario Cassol,PP,RO,7,0
 5100,Hélio José,PROS,DF,18,9
 5110,Rodrigues Palma,PL,MT,18,5
@@ -80,5 +80,5 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5533,Lasier Martins,PSD,RS,18,11
 5537,Dário Berger,MDB,SC,18,3
 5540,Fernando Bezerra Coelho,MDB,PE,18,6
-5619,Thieres Pinto,PTB,,0,3
+5619,Thieres Pinto,PTB,RR,0,3
 5621,Rudson Leite,PV,RR,18,5

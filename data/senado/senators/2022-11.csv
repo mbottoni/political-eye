@@ -16,7 +16,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 1023,Maria do Carmo Alves,PP,SE,25,4
 1173,Wellington Fagundes,PL,MT,25,9
 1186,Luis Carlos Heinze,PP,RS,25,9
-1249,Kátia Abreu,,,0,1
+1249,Kátia Abreu,,TO,0,1
 2331,Rose de Freitas,MDB,ES,25,7
 3396,Tasso Jereissati,PSDB,CE,25,6
 3777,Eduardo Gomes,PL,TO,25,4
@@ -77,9 +77,9 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5988,Soraya Thronicke,UNIÃO,MS,25,6
 5990,Carlos Viana,PL,MG,25,4
 5998,Daniella Ribeiro,PSD,PB,25,12
-6006,Ogari Pacheco,UNIÃO,,0,2
+6006,Ogari Pacheco,UNIÃO,TO,0,2
 6008,Giordano,MDB,SP,25,2
 6010,Ivete da Silveira,MDB,SC,25,1
 6027,Mecias de Jesus,REPUBLICANOS,RR,25,12
 6295,Carlos Fávaro,PSD,MT,25,5
-6304,Margareth Buzetti,PP,,0,1
+6304,Margareth Buzetti,PP,MT,0,1

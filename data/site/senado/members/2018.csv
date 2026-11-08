@@ -56,11 +56,11 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2018-01,5008,Humberto Costa,PT,PE,16,8,0.0006,2,-1.5422
 2018-01,5012,Randolfe Rodrigues,REDE,AP,13,13,0.0001,2,-2.0666
 2018-01,5052,Roberto Muniz,PP,BA,14,12,0.2804,3,0.0563
-2018-01,5070,Wilder Morais,PP,,40,35,0.9174,1,0.7378
+2018-01,5070,Wilder Morais,PP,GO,40,35,0.9174,1,0.7378
 2018-01,5100,Hélio José,PROS,DF,15,15,0.3503,1,0.0257
 2018-01,5108,Cidinho Santos,PL,MT,41,39,0.9419,1,0.8834
 2018-01,5112,José Medeiros,PODE,MT,20,20,0.4308,4,0.3554
-2018-01,5116,Pedro Chaves,PSC,,13,13,0.3225,1,0.5517
+2018-01,5116,Pedro Chaves,PSC,MS,13,13,0.3225,1,0.5517
 2018-01,5132,Dalirio Beber,PSDB,SC,41,32,0.9219,1,0.9586
 2018-01,5140,Airton Sandoval,MDB,SP,28,19,0.6843,1,0.9729
 2018-01,5164,Ataídes Oliveira,PSDB,TO,39,31,0.9018,1,0.6556
@@ -134,7 +134,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2018-02,5008,Humberto Costa,PT,PE,15,7,0.0,2,-1.5884
 2018-02,5012,Randolfe Rodrigues,REDE,AP,13,13,0.0,2,-2.0932
 2018-02,5052,Roberto Muniz,PP,BA,16,14,0.3386,3,0.079
-2018-02,5070,Wilder Morais,PP,,40,35,0.9152,1,0.7108
+2018-02,5070,Wilder Morais,PP,GO,40,35,0.9152,1,0.7108
 2018-02,5100,Hélio José,PROS,DF,19,19,0.4115,3,0.0482
 2018-02,5108,Cidinho Santos,PL,MT,41,39,0.9374,1,0.8761
 2018-02,5112,José Medeiros,PODE,MT,21,21,0.4478,4,0.3698
@@ -155,7 +155,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2018-02,5535,Telmário Mota,PTB,RR,0,0,0.0,6,-0.2611
 2018-02,5537,Dário Berger,MDB,SC,43,29,0.964,1,0.7967
 2018-02,5540,Fernando Bezerra Coelho,MDB,PE,44,31,0.9685,1,0.7443
-2018-03,3,Antonio Carlos Valadares,PSB,,8,7,0.0,3,-0.7877
+2018-03,3,Antonio Carlos Valadares,PSB,SE,8,7,0.0,3,-0.7877
 2018-03,16,Edison Lobão,MDB,MA,35,25,0.8175,1,0.6102
 2018-03,35,Jader Barbalho,MDB,PA,19,12,0.4384,2,0.1297
 2018-03,40,José Agripino,DEM,RN,40,38,0.9261,1,0.7634
@@ -212,7 +212,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2018-03,5008,Humberto Costa,PT,PE,15,7,0.0,3,-1.6145
 2018-03,5012,Randolfe Rodrigues,REDE,AP,13,13,0.0,3,-2.1035
 2018-03,5052,Roberto Muniz,PP,BA,16,14,0.3388,2,0.0792
-2018-03,5070,Wilder Morais,PP,,40,35,0.905,1,0.7277
+2018-03,5070,Wilder Morais,PP,GO,40,35,0.905,1,0.7277
 2018-03,5100,Hélio José,PROS,DF,19,19,0.4147,2,0.0892
 2018-03,5108,Cidinho Santos,PL,MT,42,40,0.947,1,0.8869
 2018-03,5112,José Medeiros,PODE,MT,21,21,0.4537,1,0.3959
@@ -290,7 +290,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2018-04,5008,Humberto Costa,PT,PE,16,8,0.0001,2,-1.6257
 2018-04,5012,Randolfe Rodrigues,REDE,AP,15,15,0.0001,2,-2.0825
 2018-04,5052,Roberto Muniz,PP,BA,13,11,0.2608,3,0.0719
-2018-04,5070,Wilder Morais,DEM,,42,39,0.9264,1,0.73
+2018-04,5070,Wilder Morais,DEM,GO,42,39,0.9264,1,0.73
 2018-04,5100,Hélio José,PROS,DF,18,18,0.3856,3,0.0814
 2018-04,5108,Cidinho Santos,PL,MT,45,42,0.9711,1,0.8813
 2018-04,5112,José Medeiros,PODE,MT,29,28,0.6299,1,0.3892
@@ -367,7 +367,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2018-05,5008,Humberto Costa,PT,PE,15,7,0.0,2,-1.8789
 2018-05,5012,Randolfe Rodrigues,REDE,AP,16,16,0.0001,2,-1.8623
 2018-05,5052,Roberto Muniz,PP,BA,9,8,0.1242,3,0.0174
-2018-05,5070,Wilder Morais,DEM,,37,34,0.8767,1,0.6389
+2018-05,5070,Wilder Morais,DEM,GO,37,34,0.8767,1,0.6389
 2018-05,5100,Hélio José,PROS,DF,8,8,0.1751,3,-0.123
 2018-05,5108,Cidinho Santos,PL,MT,43,40,0.9821,1,0.7663
 2018-05,5112,José Medeiros,PODE,MT,34,33,0.797,1,0.439
@@ -444,7 +444,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2018-06,5008,Humberto Costa,PT,PE,15,7,0.0,2,-1.8788
 2018-06,5012,Randolfe Rodrigues,REDE,AP,16,16,0.0003,2,-1.8621
 2018-06,5052,Roberto Muniz,PP,BA,12,11,0.2017,3,0.0168
-2018-06,5070,Wilder Morais,DEM,,39,36,0.9018,1,0.6381
+2018-06,5070,Wilder Morais,DEM,GO,39,36,0.9018,1,0.6381
 2018-06,5100,Hélio José,PROS,DF,9,9,0.1766,3,-0.1235
 2018-06,5108,Cidinho Santos,PL,MT,43,40,0.9804,1,0.7661
 2018-06,5112,José Medeiros,PODE,MT,35,34,0.8223,1,0.4383
@@ -520,7 +520,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2018-07,5008,Humberto Costa,PT,PE,14,7,0.0,3,-1.9573
 2018-07,5012,Randolfe Rodrigues,REDE,AP,13,13,0.0,3,-1.8926
 2018-07,5052,Roberto Muniz,PP,BA,22,20,0.5018,1,0.1622
-2018-07,5070,Wilder Morais,DEM,,30,28,0.7254,1,0.5212
+2018-07,5070,Wilder Morais,DEM,GO,30,28,0.7254,1,0.5212
 2018-07,5100,Hélio José,PROS,DF,6,6,0.1213,1,-0.2294
 2018-07,5108,Cidinho Santos,PL,MT,37,35,0.8771,1,0.6931
 2018-07,5112,José Medeiros,PODE,MT,21,19,0.4416,1,0.2129
@@ -596,7 +596,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2018-08,5008,Humberto Costa,PT,PE,14,7,0.0,3,-2.0106
 2018-08,5012,Randolfe Rodrigues,REDE,AP,13,13,0.0,3,-1.8497
 2018-08,5052,Roberto Muniz,PP,BA,20,18,0.4558,2,0.1287
-2018-08,5070,Wilder Morais,DEM,,30,29,0.7152,2,0.5014
+2018-08,5070,Wilder Morais,DEM,GO,30,29,0.7152,2,0.5014
 2018-08,5100,Hélio José,PROS,DF,4,4,0.0731,2,-0.2752
 2018-08,5108,Cidinho Santos,PL,MT,37,35,0.8728,2,0.6775
 2018-08,5112,José Medeiros,PODE,MT,21,19,0.4477,2,0.222
@@ -631,7 +631,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2018-09,615,José Pimentel,PT,CE,4,2,0.0,3,-1.4167
 2018-09,631,Magno Malta,PL,ES,18,17,0.4378,2,0.2502
 2018-09,635,Ricardo Ferraço,PSDB,ES,2,2,0.0023,4,0.0301
-2018-09,643,Lúcia Vânia,PSB,,30,30,0.73,2,0.2996
+2018-09,643,Lúcia Vânia,PSB,GO,30,30,0.73,2,0.2996
 2018-09,677,Roberto Rocha,PSDB,MA,17,12,0.441,1,0.3508
 2018-09,715,Armando Monteiro,PTB,PE,35,35,0.8012,1,0.5376
 2018-09,739,Ciro Nogueira,PP,PI,16,14,0.4392,1,0.3551
@@ -671,7 +671,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2018-09,5008,Humberto Costa,PT,PE,14,7,0.0,3,-2.1598
 2018-09,5012,Randolfe Rodrigues,REDE,AP,12,12,0.0,3,-1.794
 2018-09,5052,Roberto Muniz,PP,BA,22,20,0.5006,2,0.1812
-2018-09,5070,Wilder Morais,DEM,,22,21,0.5775,2,0.4511
+2018-09,5070,Wilder Morais,DEM,GO,22,21,0.5775,2,0.4511
 2018-09,5100,Hélio José,PROS,DF,4,4,0.0865,2,-0.2612
 2018-09,5108,Cidinho Santos,PL,MT,36,34,0.8521,2,0.7101
 2018-09,5112,José Medeiros,PODE,MT,26,25,0.5944,2,0.2664

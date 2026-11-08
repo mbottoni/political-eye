@@ -42,7 +42,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 4558,Gladson Cameli,PP,AC,20,2
 4560,Sérgio Petecão,PSD,AC,20,8
 4575,Lídice da Mata,PSB,BA,20,11
-4645,Vital do Rêgo,,,0,1
+4645,Vital do Rêgo,,PB,0,1
 4697,Ângela Portela,PDT,RR,20,6
 4721,Eduardo Amorim,PSDB,SE,20,10
 4763,Vicentinho Alves,PL,TO,20,5
@@ -58,7 +58,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5008,Humberto Costa,PT,PE,20,7
 5012,Randolfe Rodrigues,REDE,AP,20,13
 5052,Roberto Muniz,PP,BA,20,6
-5070,Wilder Morais,PP,,20,0
+5070,Wilder Morais,PP,GO,20,0
 5100,Hélio José,PROS,DF,20,16
 5106,Sérgio de Castro,PDT,ES,20,7
 5108,Cidinho Santos,PL,MT,20,10

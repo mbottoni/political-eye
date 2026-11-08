@@ -4,7 +4,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2019-01,72,Roberto Requião,MDB,PR,1,1,0.0,3,-1.4838
 2019-01,73,Romero Jucá,MDB,RR,6,4,0.3113,1,0.8271
 2019-01,90,José Serra,PSDB,SP,10,7,0.5454,1,0.9353
-2019-01,374,Paulo Rocha,PT,,8,4,0.0,3,-1.4331
+2019-01,374,Paulo Rocha,PT,PA,8,4,0.0,3,-1.4331
 2019-01,391,Aécio Neves,PSDB,MG,14,10,0.6501,2,0.6802
 2019-01,558,Vanessa Grazziotin,PCdoB,AM,11,11,0.0,3,-1.919
 2019-01,615,José Pimentel,PT,CE,6,4,0.0,3,-1.6793

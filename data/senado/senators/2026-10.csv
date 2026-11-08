@@ -60,7 +60,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5973,Cid Gomes,PSB,CE,3,0
 5974,Sargento Reginauro,PSDB,CE,3,1
 5977,Leany Lemos,PSB,DF,3,4
-5979,Leila Barros,PDT,,0,2
+5979,Leila Barros,PDT,DF,0,2
 5982,Alessandro Vieira,MDB,SE,3,3
 5985,Nelsinho Trad,PSD,MS,3,4
 5988,Soraya Thronicke,PSB,MS,3,2
@@ -80,5 +80,5 @@ senador_id,nome,partido,uf,n_votes,n_authored
 6341,Hamilton Mourão,REPUBLICANOS,RS,3,2
 6342,Jorge Seif,PL,SC,3,9
 6358,Ana Paula Lobato,PSB,MA,3,1
-6359,Lourdinha Pereira,PSB,,0,6
+6359,Lourdinha Pereira,PSB,MA,0,6
 6369,Jussara Lima,PSD,PI,3,0

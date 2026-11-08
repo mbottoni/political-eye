@@ -15,7 +15,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 1023,Maria do Carmo Alves,PP,SE,7,4
 1173,Wellington Fagundes,PL,MT,7,2
 1186,Luis Carlos Heinze,PP,RS,7,3
-1249,Kátia Abreu,PP,,0,2
+1249,Kátia Abreu,PP,TO,0,2
 3396,Tasso Jereissati,PSDB,CE,7,1
 3806,Zequinha Marinho,PL,PA,7,2
 3830,Davi Alcolumbre,UNIÃO,AP,7,2
@@ -71,7 +71,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5953,Fabiano Contarato,PT,ES,7,10
 5959,Styvenson Valentim,PODE,RN,7,5
 5967,Angelo Coronel,PSD,BA,7,5
-5972,Julio Ventura,PDT,,0,1
+5972,Julio Ventura,PDT,CE,0,1
 5973,Cid Gomes,PDT,CE,7,4
 5976,Eduardo Girão,PODE,CE,7,16
 5979,Leila Barros,PDT,DF,7,8

@@ -81,4 +81,4 @@ senador_id,nome,partido,uf,n_votes,n_authored
 6008,Giordano,MDB,SP,41,0
 6027,Mecias de Jesus,REPUBLICANOS,RR,41,6
 6295,Carlos Fávaro,PSD,MT,41,4
-6304,Margareth Buzetti,PP,,0,1
+6304,Margareth Buzetti,PP,MT,0,1

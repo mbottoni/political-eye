@@ -1,77 +1,77 @@
 senador_id,nome,partido,uf,n_votes,n_authored
-3,Antonio Carlos Valadares,PSB,,0,9
-16,Edison Lobão,MDB,,0,7
+3,Antonio Carlos Valadares,PSB,SE,0,9
+16,Edison Lobão,MDB,MA,0,7
 35,Jader Barbalho,,PA,0,4
-40,José Agripino,DEM,,0,6
-72,Roberto Requião,,,0,11
-73,Romero Jucá,,,0,2
-87,Garibaldi Alves Filho,,,0,7
-90,José Serra,,,0,6
-111,Blairo Maggi,PL,,0,5
-374,Paulo Rocha,,,0,4
+40,José Agripino,DEM,RN,0,6
+72,Roberto Requião,,PR,0,11
+73,Romero Jucá,,RR,0,2
+87,Garibaldi Alves Filho,,RN,0,7
+90,José Serra,,SP,0,6
+111,Blairo Maggi,PL,MT,0,5
+374,Paulo Rocha,,PA,0,4
 391,Aécio Neves,,MG,0,1
-456,Ronaldo Caiado,DEM,,0,16
-558,Vanessa Grazziotin,,,0,27
-604,Walter Pinheiro,,,0,7
+456,Ronaldo Caiado,DEM,GO,0,16
+558,Vanessa Grazziotin,,AM,0,27
+604,Walter Pinheiro,,BA,0,7
 612,Eunício Oliveira,,CE,0,4
-615,José Pimentel,,,0,6
+615,José Pimentel,,CE,0,6
 631,Magno Malta,,ES,0,6
-635,Ricardo Ferraço,,,0,7
-643,Lúcia Vânia,,,0,5
-677,Roberto Rocha,,,0,9
+635,Ricardo Ferraço,,ES,0,7
+643,Lúcia Vânia,,GO,0,5
+677,Roberto Rocha,,MA,0,9
 739,Ciro Nogueira,PP,PI,0,4
 825,Paulo Paim,PT,RS,0,34
-846,Aloysio Nunes Ferreira,PSDB,,0,8
-945,Alvaro Dias,,,0,10
+846,Aloysio Nunes Ferreira,PSDB,SP,0,8
+945,Alvaro Dias,,PR,0,10
 1173,Wellington Fagundes,,MT,0,11
-1176,Waldemir Moka,,,0,5
-2207,Raimundo Lira,,,0,4
-2331,Rose de Freitas,,,0,4
-3361,José Maranhão,,,0,4
+1176,Waldemir Moka,,MS,0,5
+2207,Raimundo Lira,,PB,0,4
+2331,Rose de Freitas,,ES,0,4
+3361,José Maranhão,,PB,0,4
 3366,Marcelo Crivella,,RJ,0,9
-3372,Valdir Raupp,MDB,,0,10
-3394,João Capiberibe,,,0,10
-3396,Tasso Jereissati,,,0,6
-3398,Cristovam Buarque,CIDADANIA,,0,22
-3634,Flexa Ribeiro,,,0,10
+3372,Valdir Raupp,MDB,RO,0,10
+3394,João Capiberibe,,AP,0,10
+3396,Tasso Jereissati,,CE,0,6
+3398,Cristovam Buarque,CIDADANIA,DF,0,22
+3634,Flexa Ribeiro,,PA,0,10
 3695,Lindbergh Farias,PT,RJ,0,7
-3713,Fátima Bezerra,,,0,15
-3741,Paulo Bauer,PSDB,,0,10
-3823,Benedito de Lira,,,0,3
+3713,Fátima Bezerra,,RN,0,15
+3741,Paulo Bauer,PSDB,SC,0,10
+3823,Benedito de Lira,,AL,0,3
 3830,Davi Alcolumbre,DEM,AP,0,5
-4558,Gladson Cameli,,,0,4
+4558,Gladson Cameli,,AC,0,4
 4560,Sérgio Petecão,,AC,0,2
 4575,Lídice da Mata,PSB,BA,0,11
-4697,Ângela Portela,,,0,5
-4721,Eduardo Amorim,PSC,,0,7
-4763,Vicentinho Alves,,,0,1
-4981,Acir Gurgacz,PDT,,0,5
-4988,Ana Amélia,,,0,22
-4990,Jorge Viana,PT,,0,4
-5000,Marta Suplicy,,,0,5
-5004,Ivo Cassol,,,0,6
+4697,Ângela Portela,,RR,0,5
+4721,Eduardo Amorim,PSC,SE,0,7
+4763,Vicentinho Alves,,TO,0,1
+4981,Acir Gurgacz,PDT,RO,0,5
+4988,Ana Amélia,,RS,0,22
+4990,Jorge Viana,PT,AC,0,4
+5000,Marta Suplicy,,SP,0,5
+5004,Ivo Cassol,,RO,0,6
 5006,Gleisi Hoffmann,PT,PR,0,8
 5008,Humberto Costa,,PE,0,17
 5012,Randolfe Rodrigues,,AP,0,19
-5038,Sandra Braga,MDB,,0,3
-5100,Hélio José,,,0,10
-5112,José Medeiros,,,0,16
-5132,Dalirio Beber,,,0,9
-5144,Zeze Perrella,,,0,1
-5164,Ataídes Oliveira,,,0,7
-5178,Douglas Cintra,,,0,5
-5182,Regina Sousa,,,0,10
-5197,Cássio Cunha Lima,PSDB,,0,3
-5236,Reguffe,,,0,5
+5038,Sandra Braga,MDB,AM,0,3
+5100,Hélio José,,DF,0,10
+5112,José Medeiros,,MT,0,16
+5132,Dalirio Beber,,SC,0,9
+5144,Zeze Perrella,,MG,0,1
+5164,Ataídes Oliveira,,TO,0,7
+5178,Douglas Cintra,,PE,0,5
+5182,Regina Sousa,,PI,0,10
+5197,Cássio Cunha Lima,PSDB,PB,0,3
+5236,Reguffe,,DF,0,5
 5322,Romário,,RJ,0,7
 5523,Otto Alencar,,BA,0,4
 5525,Omar Aziz,,AM,0,1
-5527,Simone Tebet,,,0,8
-5529,Antonio Anastasia,,,0,12
-5531,Elmano Férrer,,,0,8
-5533,Lasier Martins,,,0,24
-5535,Telmário Mota,,,0,10
-5537,Dário Berger,MDB,,0,12
-5540,Fernando Bezerra Coelho,PSB,,0,23
-5635,Ricardo Franco,,,0,7
-5637,Donizeti Nogueira,PT,,0,8
+5527,Simone Tebet,,MS,0,8
+5529,Antonio Anastasia,,MG,0,12
+5531,Elmano Férrer,,PI,0,8
+5533,Lasier Martins,,RS,0,24
+5535,Telmário Mota,,RR,0,10
+5537,Dário Berger,MDB,SC,0,12
+5540,Fernando Bezerra Coelho,PSB,PE,0,23
+5635,Ricardo Franco,,SE,0,7
+5637,Donizeti Nogueira,PT,TO,0,8

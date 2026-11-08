@@ -31,7 +31,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5502,Plínio Valério,PSDB,AM,0,1
 5672,Alan Rick,,AC,0,1
 5718,Eliziane Gama,PSD,MA,0,1
-5732,Rodrigo Pacheco,PSD,,0,1
+5732,Rodrigo Pacheco,PSD,MG,0,1
 5736,Tereza Cristina,PP,MS,0,2
 5748,Veneziano Vital do Rêgo,MDB,PB,0,1
 5793,Dr. Hiran,PP,RR,0,5
@@ -48,8 +48,8 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5959,Styvenson Valentim,PSDB,RN,0,1
 5967,Angelo Coronel,PSD,BA,0,1
 5973,Cid Gomes,PSB,CE,0,2
-5976,Eduardo Girão,NOVO,,0,15
-5979,Leila Barros,PDT,,0,8
+5976,Eduardo Girão,NOVO,CE,0,15
+5979,Leila Barros,PDT,DF,0,8
 5982,Alessandro Vieira,MDB,SE,0,1
 5985,Nelsinho Trad,PSD,MS,0,4
 5988,Soraya Thronicke,PODE,MS,0,1
@@ -58,8 +58,8 @@ senador_id,nome,partido,uf,n_votes,n_authored
 6008,Giordano,,SP,0,1
 6009,Astronauta Marcos Pontes,PL,SP,0,8
 6010,Ivete da Silveira,MDB,SC,0,2
-6027,Mecias de Jesus,REPUBLICANOS,,0,4
-6305,José Lacerda,PSD,,0,1
+6027,Mecias de Jesus,REPUBLICANOS,RR,0,4
+6305,José Lacerda,PSD,MT,0,1
 6331,Sergio Moro,UNIÃO,PR,0,2
 6335,Damares Alves,REPUBLICANOS,DF,0,41
 6337,Cleitinho,REPUBLICANOS,MG,0,1
@@ -67,7 +67,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 6340,Jaime Bagattoli,PL,RO,0,1
 6341,Hamilton Mourão,REPUBLICANOS,RS,0,7
 6342,Jorge Seif,PL,SC,0,7
-6345,Fernando Farias,MDB,,0,1
-6350,Augusta Brito,PT,,0,2
+6345,Fernando Farias,MDB,AL,0,1
+6350,Augusta Brito,PT,CE,0,2
 6358,Ana Paula Lobato,PDT,MA,0,2
 6369,Jussara Lima,PSD,PI,0,2

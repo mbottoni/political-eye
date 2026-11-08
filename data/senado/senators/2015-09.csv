@@ -1,81 +1,81 @@
 senador_id,nome,partido,uf,n_votes,n_authored
-3,Antonio Carlos Valadares,PSB,,0,13
-16,Edison Lobão,MDB,,0,5
+3,Antonio Carlos Valadares,PSB,SE,0,13
+16,Edison Lobão,MDB,MA,0,5
 35,Jader Barbalho,MDB,PA,0,5
-40,José Agripino,DEM,,0,12
+40,José Agripino,DEM,RN,0,12
 70,Renan Calheiros,MDB,AL,0,1
-72,Roberto Requião,MDB,,0,6
-73,Romero Jucá,MDB,,0,9
-87,Garibaldi Alves Filho,MDB,,0,4
-90,José Serra,,,0,8
-111,Blairo Maggi,PL,,0,13
-374,Paulo Rocha,PT,,0,15
+72,Roberto Requião,MDB,PR,0,6
+73,Romero Jucá,MDB,RR,0,9
+87,Garibaldi Alves Filho,MDB,RN,0,4
+90,José Serra,,SP,0,8
+111,Blairo Maggi,PL,MT,0,13
+374,Paulo Rocha,PT,PA,0,15
 391,Aécio Neves,PSDB,MG,0,6
-456,Ronaldo Caiado,DEM,,0,13
-558,Vanessa Grazziotin,PCdoB,,0,29
-604,Walter Pinheiro,PT,,0,11
+456,Ronaldo Caiado,DEM,GO,0,13
+558,Vanessa Grazziotin,PCdoB,AM,0,29
+604,Walter Pinheiro,PT,BA,0,11
 612,Eunício Oliveira,MDB,CE,0,5
-615,José Pimentel,PT,,0,13
+615,José Pimentel,PT,CE,0,13
 631,Magno Malta,PL,ES,0,10
-635,Ricardo Ferraço,MDB,,0,17
-643,Lúcia Vânia,,,0,9
-677,Roberto Rocha,,,0,10
+635,Ricardo Ferraço,MDB,ES,0,17
+643,Lúcia Vânia,,GO,0,9
+677,Roberto Rocha,,MA,0,10
 739,Ciro Nogueira,PP,PI,0,8
 825,Paulo Paim,,RS,0,37
-846,Aloysio Nunes Ferreira,PSDB,,0,9
-945,Alvaro Dias,PSDB,,0,16
-950,João Alberto Souza,MDB,,0,6
-1023,Maria do Carmo Alves,DEM,,0,12
+846,Aloysio Nunes Ferreira,PSDB,SP,0,9
+945,Alvaro Dias,PSDB,PR,0,16
+950,João Alberto Souza,MDB,MA,0,6
+1023,Maria do Carmo Alves,DEM,SE,0,12
 1173,Wellington Fagundes,PL,MT,0,13
-1176,Waldemir Moka,MDB,,0,10
-2207,Raimundo Lira,MDB,,0,10
-2331,Rose de Freitas,MDB,,0,9
-3360,Delcídio do Amaral,PT,,0,12
-3361,José Maranhão,,,0,4
+1176,Waldemir Moka,MDB,MS,0,10
+2207,Raimundo Lira,MDB,PB,0,10
+2331,Rose de Freitas,MDB,ES,0,9
+3360,Delcídio do Amaral,PT,MS,0,12
+3361,José Maranhão,,PB,0,4
 3366,Marcelo Crivella,REPUBLICANOS,RJ,0,10
-3372,Valdir Raupp,MDB,,0,15
-3394,João Capiberibe,PSB,,0,13
-3396,Tasso Jereissati,PSDB,,0,12
-3398,Cristovam Buarque,PDT,,0,23
-3634,Flexa Ribeiro,PSDB,,0,19
+3372,Valdir Raupp,MDB,RO,0,15
+3394,João Capiberibe,PSB,AP,0,13
+3396,Tasso Jereissati,PSDB,CE,0,12
+3398,Cristovam Buarque,PDT,DF,0,23
+3634,Flexa Ribeiro,PSDB,PA,0,19
 3695,Lindbergh Farias,PT,RJ,0,19
-3713,Fátima Bezerra,PT,,0,15
-3741,Paulo Bauer,PSDB,,0,8
-3823,Benedito de Lira,PP,,0,9
+3713,Fátima Bezerra,PT,RN,0,15
+3741,Paulo Bauer,PSDB,SC,0,8
+3823,Benedito de Lira,PP,AL,0,9
 3830,Davi Alcolumbre,DEM,AP,0,17
-4525,Fernando Collor,PTB,,0,3
-4558,Gladson Cameli,PP,,0,4
+4525,Fernando Collor,PTB,AL,0,3
+4558,Gladson Cameli,PP,AC,0,4
 4560,Sérgio Petecão,PSD,AC,0,6
 4575,Lídice da Mata,,BA,0,11
-4697,Ângela Portela,PT,,0,11
-4721,Eduardo Amorim,PSC,,0,9
-4763,Vicentinho Alves,PL,,0,4
-4981,Acir Gurgacz,PDT,,0,11
-4988,Ana Amélia,PP,,0,16
-4990,Jorge Viana,PT,,0,7
-5000,Marta Suplicy,MDB,,0,10
-5004,Ivo Cassol,PP,,0,7
+4697,Ângela Portela,PT,RR,0,11
+4721,Eduardo Amorim,PSC,SE,0,9
+4763,Vicentinho Alves,PL,TO,0,4
+4981,Acir Gurgacz,PDT,RO,0,11
+4988,Ana Amélia,PP,RS,0,16
+4990,Jorge Viana,PT,AC,0,7
+5000,Marta Suplicy,MDB,SP,0,10
+5004,Ivo Cassol,PP,RO,0,7
 5006,Gleisi Hoffmann,PT,PR,0,10
 5008,Humberto Costa,,PE,0,10
 5012,Randolfe Rodrigues,REDE,AP,0,21
-5038,Sandra Braga,MDB,,0,7
-5100,Hélio José,PSD,,0,17
-5112,José Medeiros,CIDADANIA,,0,23
-5132,Dalirio Beber,,,0,6
-5144,Zeze Perrella,PDT,,0,4
-5164,Ataídes Oliveira,PSDB,,0,16
-5178,Douglas Cintra,PTB,,0,8
-5182,Regina Sousa,PT,,0,14
-5197,Cássio Cunha Lima,PSDB,,0,16
-5236,Reguffe,,,0,8
+5038,Sandra Braga,MDB,AM,0,7
+5100,Hélio José,PSD,DF,0,17
+5112,José Medeiros,CIDADANIA,MT,0,23
+5132,Dalirio Beber,,SC,0,6
+5144,Zeze Perrella,PDT,MG,0,4
+5164,Ataídes Oliveira,PSDB,TO,0,16
+5178,Douglas Cintra,PTB,PE,0,8
+5182,Regina Sousa,PT,PI,0,14
+5197,Cássio Cunha Lima,PSDB,PB,0,16
+5236,Reguffe,,DF,0,8
 5322,Romário,PSB,RJ,0,17
 5523,Otto Alencar,,BA,0,11
 5525,Omar Aziz,PSD,AM,0,12
-5527,Simone Tebet,MDB,,0,10
-5529,Antonio Anastasia,PSDB,,0,16
-5531,Elmano Férrer,PTB,,0,16
-5533,Lasier Martins,PDT,,0,21
-5535,Telmário Mota,PDT,,0,16
-5537,Dário Berger,MDB,,0,14
-5540,Fernando Bezerra Coelho,PSB,,0,13
-5637,Donizeti Nogueira,PT,,0,28
+5527,Simone Tebet,MDB,MS,0,10
+5529,Antonio Anastasia,PSDB,MG,0,16
+5531,Elmano Férrer,PTB,PI,0,16
+5533,Lasier Martins,PDT,RS,0,21
+5535,Telmário Mota,PDT,RR,0,16
+5537,Dário Berger,MDB,SC,0,14
+5540,Fernando Bezerra Coelho,PSB,PE,0,13
+5637,Donizeti Nogueira,PT,TO,0,28

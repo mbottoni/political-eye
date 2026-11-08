@@ -66,6 +66,13 @@ Câmara: most Senate roll calls pass with one or two votes against.
 parties appears under the right one on each date. `S/Partido` (no party) is
 kept as published; an empty party or `Sem registro` is left empty.
 
+**UF.** Vote records before 2017 mostly leave the senator's UF empty, so it
+comes from the legislature list. That list gives the UF in the identification
+block only for senators in office today, so it is read from the mandate that
+covers the legislature. One senator missing from his own legislature's list
+(Wilder Morais, absent from the 55th's and the 56th's) takes it from any other
+cached list. Every senator-month has a UF.
+
 ## Twelve-month windows
 
 The Senate rarely splits. Contested roll calls per year (open votes with

@@ -115,3 +115,16 @@ def test_fetch_year(monkeypatch, tmp_path):
     assert sorted(rec) == ["autoria-2026", "orientacao-2026", "senadores-57", "votacao-2026"]
     assert rec["autoria-2026"]["files"] == 2
     assert (tmp_path / "autoria" / "2026" / "2.json").read_text() == "[]"
+
+
+def test_listed_uf_comes_from_the_mandate():
+    from politicaleye.senado.fetch import _listed_uf
+
+    def mandate(uf, first, second):
+        return {"UfParlamentar": uf, "PrimeiraLegislaturaDoMandato": {"NumeroLegislatura": first}, "SegundaLegislaturaDoMandato": {"NumeroLegislatura": second}}
+
+    gone = {"IdentificacaoParlamentar": {"CodigoParlamentar": "1"}, "Mandatos": {"Mandato": [mandate("RO", "53", "54"), mandate("SP", "55", "56")]}}
+    assert _listed_uf(gone, 55) == "SP" and _listed_uf(gone, 54) == "RO"   # no UF in the identification: the mandate's
+    assert _listed_uf(gone, 57) == "RO"                                    # no mandate covers it: the first one given
+    now = {"IdentificacaoParlamentar": {"CodigoParlamentar": "2", "UfParlamentar": "DF"}}
+    assert _listed_uf(now, 57) == "DF"

@@ -56,8 +56,8 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2025-01,5959,Styvenson Valentim,PODE,RN,5,3,0.0125,3,0.4481
 2025-01,5967,Angelo Coronel,PSD,BA,31,22,0.826,1,-0.8596
 2025-01,5973,Cid Gomes,PSB,CE,20,19,0.5418,1,-0.4015
-2025-01,5976,Eduardo Girão,NOVO,,12,12,0.0077,2,1.5874
-2025-01,5979,Leila Barros,PDT,,36,34,0.9265,1,-1.1671
+2025-01,5976,Eduardo Girão,NOVO,CE,12,12,0.0077,2,1.5874
+2025-01,5979,Leila Barros,PDT,DF,36,34,0.9265,1,-1.1671
 2025-01,5982,Alessandro Vieira,MDB,SE,18,12,0.4463,1,-0.569
 2025-01,5985,Nelsinho Trad,PSD,MS,39,29,0.8869,1,-0.5496
 2025-01,5988,Soraya Thronicke,PODE,MS,9,9,0.2219,1,-0.3414
@@ -67,9 +67,9 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2025-01,6009,Astronauta Marcos Pontes,PL,SP,24,13,0.032,2,1.4915
 2025-01,6010,Ivete da Silveira,MDB,SC,35,29,0.8271,1,-0.5057
 2025-01,6011,Beto Martins,PL,SC,25,17,0.1538,2,0.1395
-2025-01,6015,Ireneu Orth,PP,,15,14,0.0102,2,0.5936
-2025-01,6027,Mecias de Jesus,REPUBLICANOS,,22,21,0.0746,2,0.5352
-2025-01,6304,Margareth Buzetti,PSD,,29,22,0.6523,1,-0.1226
+2025-01,6015,Ireneu Orth,PP,RS,15,14,0.0102,2,0.5936
+2025-01,6027,Mecias de Jesus,REPUBLICANOS,RR,22,21,0.0746,2,0.5352
+2025-01,6304,Margareth Buzetti,PSD,MT,29,22,0.6523,1,-0.1226
 2025-01,6331,Sergio Moro,UNIÃO,PR,8,8,0.007,2,1.1522
 2025-01,6335,Damares Alves,REPUBLICANOS,DF,24,21,0.0223,2,1.3748
 2025-01,6337,Cleitinho,REPUBLICANOS,MG,22,20,0.0217,2,1.6573
@@ -78,7 +78,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2025-01,6341,Hamilton Mourão,REPUBLICANOS,RS,15,13,0.0108,2,1.5784
 2025-01,6342,Jorge Seif,PL,SC,27,15,0.0236,2,1.5489
 2025-01,6345,Fernando Farias,MDB,AL,28,19,0.7273,1,-1.0622
-2025-01,6350,Augusta Brito,PT,,27,19,0.7115,1,-0.8082
+2025-01,6350,Augusta Brito,PT,CE,27,19,0.7115,1,-0.8082
 2025-01,6351,Janaína Farias,PT,CE,23,15,0.6026,1,-0.5105
 2025-01,6358,Ana Paula Lobato,PDT,MA,26,25,0.673,1,-0.7218
 2025-01,6369,Jussara Lima,PSD,PI,35,25,0.915,1,-1.1356
@@ -150,7 +150,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2025-02,6009,Astronauta Marcos Pontes,PL,SP,22,11,0.0205,2,1.4967
 2025-02,6010,Ivete da Silveira,MDB,SC,37,30,0.8845,1,-0.5804
 2025-02,6011,Beto Martins,PL,SC,25,17,0.1465,2,0.1439
-2025-02,6015,Ireneu Orth,PP,,15,14,0.0072,2,0.6157
+2025-02,6015,Ireneu Orth,PP,RS,15,14,0.0072,2,0.6157
 2025-02,6027,Mecias de Jesus,REPUBLICANOS,RR,20,19,0.0663,2,0.5011
 2025-02,6304,Margareth Buzetti,PSD,MT,26,20,0.5837,1,-0.1276
 2025-02,6331,Sergio Moro,UNIÃO,PR,7,7,0.0047,2,1.144
@@ -233,7 +233,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2025-03,6009,Astronauta Marcos Pontes,PL,SP,22,11,0.0203,2,1.4923
 2025-03,6010,Ivete da Silveira,MDB,SC,35,28,0.8871,1,-0.5793
 2025-03,6011,Beto Martins,PL,SC,25,17,0.1591,2,0.1435
-2025-03,6015,Ireneu Orth,PP,,15,14,0.007,2,0.6137
+2025-03,6015,Ireneu Orth,PP,RS,15,14,0.007,2,0.6137
 2025-03,6027,Mecias de Jesus,REPUBLICANOS,RR,18,17,0.0594,2,0.4996
 2025-03,6304,Margareth Buzetti,PSD,MT,21,15,0.5167,1,-0.1475
 2025-03,6331,Sergio Moro,UNIÃO,PR,7,7,0.0043,2,1.1535
@@ -805,7 +805,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2025-10,6009,Astronauta Marcos Pontes,PL,SP,16,6,0.0105,1,1.3757
 2025-10,6010,Ivete da Silveira,MDB,SC,19,16,0.3914,3,-0.3568
 2025-10,6027,Mecias de Jesus,REPUBLICANOS,RR,12,12,0.2825,2,0.0007
-2025-10,6304,Margareth Buzetti,PP,,9,6,0.0667,1,0.2559
+2025-10,6304,Margareth Buzetti,PP,MT,9,6,0.0667,1,0.2559
 2025-10,6331,Sergio Moro,UNIÃO,PR,6,5,0.0042,1,1.2171
 2025-10,6335,Damares Alves,REPUBLICANOS,DF,14,13,0.0067,1,1.5309
 2025-10,6337,Cleitinho,REPUBLICANOS,MG,3,3,0.0004,1,1.6204
@@ -888,7 +888,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2025-11,6009,Astronauta Marcos Pontes,PL,SP,16,7,0.0068,2,1.339
 2025-11,6010,Ivete da Silveira,MDB,SC,19,16,0.356,3,-0.3848
 2025-11,6027,Mecias de Jesus,REPUBLICANOS,RR,14,14,0.2995,3,-0.0925
-2025-11,6304,Margareth Buzetti,PP,,9,7,0.0437,2,0.2844
+2025-11,6304,Margareth Buzetti,PP,MT,9,7,0.0437,2,0.2844
 2025-11,6331,Sergio Moro,UNIÃO,PR,4,4,0.001,2,1.2631
 2025-11,6335,Damares Alves,REPUBLICANOS,DF,14,13,0.0038,2,1.5823
 2025-11,6337,Cleitinho,REPUBLICANOS,MG,3,3,0.0002,2,1.6163
@@ -969,7 +969,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2025-12,6009,Astronauta Marcos Pontes,PL,SP,21,13,0.1579,3,1.3301
 2025-12,6010,Ivete da Silveira,MDB,SC,20,19,0.5253,2,0.3839
 2025-12,6027,Mecias de Jesus,REPUBLICANOS,RR,36,36,1.0,2,-0.4058
-2025-12,6304,Margareth Buzetti,PP,,14,10,0.1197,3,0.6313
+2025-12,6304,Margareth Buzetti,PP,MT,14,10,0.1197,3,0.6313
 2025-12,6305,José Lacerda,PSD,MT,15,11,0.4551,2,-0.2732
 2025-12,6331,Sergio Moro,UNIÃO,PR,16,16,0.0838,3,1.4695
 2025-12,6335,Damares Alves,REPUBLICANOS,DF,17,16,0.0766,3,1.7098

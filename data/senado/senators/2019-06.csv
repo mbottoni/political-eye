@@ -6,11 +6,11 @@ senador_id,nome,partido,uf,n_votes,n_authored
 285,Marcio Bittar,MDB,AC,19,3
 345,Flávio Arns,REDE,PR,19,13
 374,Paulo Rocha,PT,PA,19,6
-456,Ronaldo Caiado,,,0,1
+456,Ronaldo Caiado,,GO,0,1
 470,Chico Rodrigues,DEM,RR,19,3
 475,Confúcio Moura,MDB,RO,19,3
 581,Jaques Wagner,PT,BA,19,5
-635,Ricardo Ferraço,,,0,1
+635,Ricardo Ferraço,,ES,0,1
 677,Roberto Rocha,PSDB,MA,19,4
 739,Ciro Nogueira,PP,PI,19,3
 742,Marcelo Castro,MDB,PI,19,7

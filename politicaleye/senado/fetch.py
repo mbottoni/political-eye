@@ -72,6 +72,21 @@ def orientacao_url(year: int, api: str = API) -> str:
     return f"{api}/plenario/votacao/orientacaoBancada/{year}0101/{year}1231"
 
 
+def _listed_uf(p: dict, leg: int) -> str:
+    """A listed senator's UF: from the mandate covering ``leg``, else the identification, else any mandate.
+
+    The identification block carries ``UfParlamentar`` only for senators in
+    office now (21 of 145 in the 54th legislature's list); every mandate has it.
+    """
+    ms = (p.get("Mandatos") or {}).get("Mandato") or []
+    ms = ms if isinstance(ms, list) else [ms]
+    covers = lambda m: str(leg) in {str((m.get(k) or {}).get("NumeroLegislatura", "")) for k in ("PrimeiraLegislaturaDoMandato", "SegundaLegislaturaDoMandato")}
+    for uf in [m.get("UfParlamentar") for m in ms if covers(m)] + [p["IdentificacaoParlamentar"].get("UfParlamentar")] + [m.get("UfParlamentar") for m in ms]:
+        if (uf or "").strip():
+            return uf.strip()
+    return ""
+
+
 def senators_listed(raw: Path, legs: list[int]) -> list[dict]:
     """Everyone in the cached legislature lists: ``{codigo, nome, uf}``, by code."""
     out = {}
@@ -80,8 +95,7 @@ def senators_listed(raw: Path, legs: list[int]) -> list[dict]:
         rows = doc["ListaParlamentarLegislatura"]["Parlamentares"]["Parlamentar"]
         for p in rows if isinstance(rows, list) else [rows]:
             i = p["IdentificacaoParlamentar"]
-            out[i["CodigoParlamentar"]] = {"codigo": i["CodigoParlamentar"], "nome": i["NomeParlamentar"].strip(),
-                                           "uf": (i.get("UfParlamentar") or "").strip()}
+            out[i["CodigoParlamentar"]] = {"codigo": i["CodigoParlamentar"], "nome": i["NomeParlamentar"].strip(), "uf": _listed_uf(p, leg)}
     return [out[k] for k in sorted(out, key=int)]
 
 

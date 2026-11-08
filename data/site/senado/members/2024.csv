@@ -56,7 +56,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-01,5959,Styvenson Valentim,PODE,RN,12,10,0.1877,3,0.0469
 2024-01,5967,Angelo Coronel,PSD,BA,37,28,0.9621,1,-0.8394
 2024-01,5973,Cid Gomes,PDT,CE,31,29,0.8332,1,-0.5784
-2024-01,5976,Eduardo Girão,NOVO,,16,16,0.0006,2,1.445
+2024-01,5976,Eduardo Girão,NOVO,CE,16,16,0.0006,2,1.445
 2024-01,5979,Leila Barros,PDT,DF,28,27,0.7897,1,-1.155
 2024-01,5982,Alessandro Vieira,MDB,SE,14,9,0.3736,3,-0.4621
 2024-01,5985,Nelsinho Trad,PSD,MS,29,21,0.578,3,-0.2675
@@ -319,7 +319,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-04,6341,Hamilton Mourão,REPUBLICANOS,RS,23,20,0.0145,2,1.6619
 2024-04,6342,Jorge Seif,PL,SC,19,9,0.0101,2,1.4131
 2024-04,6345,Fernando Farias,MDB,AL,25,19,0.7115,1,-1.0004
-2024-04,6350,Augusta Brito,PT,,28,21,0.8067,1,-1.3784
+2024-04,6350,Augusta Brito,PT,CE,28,21,0.8067,1,-1.3784
 2024-04,6358,Ana Paula Lobato,PSB,MA,37,34,0.9631,1,-1.0188
 2024-04,6362,Mauro Carvalho Junior,UNIÃO,MT,9,8,0.0164,2,0.2721
 2024-04,6369,Jussara Lima,PSD,PI,28,21,0.8067,1,-1.3734
@@ -401,7 +401,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-05,6341,Hamilton Mourão,REPUBLICANOS,RS,21,19,0.0038,2,1.5313
 2024-05,6342,Jorge Seif,PL,SC,23,12,0.004,2,1.4016
 2024-05,6345,Fernando Farias,MDB,AL,25,19,0.7001,1,-0.9283
-2024-05,6350,Augusta Brito,PT,,29,22,0.8267,1,-1.1198
+2024-05,6350,Augusta Brito,PT,CE,29,22,0.8267,1,-1.1198
 2024-05,6351,Janaína Farias,PT,CE,12,8,0.3258,1,-0.3472
 2024-05,6358,Ana Paula Lobato,PDT,MA,36,34,0.9577,1,-1.0521
 2024-05,6362,Mauro Carvalho Junior,UNIÃO,MT,9,8,0.0097,3,0.2317
@@ -483,7 +483,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-06,6341,Hamilton Mourão,REPUBLICANOS,RS,23,21,0.0102,1,1.5243
 2024-06,6342,Jorge Seif,PL,SC,26,15,0.0116,1,1.3812
 2024-06,6345,Fernando Farias,MDB,AL,24,18,0.6774,2,-0.9137
-2024-06,6350,Augusta Brito,PT,,28,21,0.7978,2,-1.0779
+2024-06,6350,Augusta Brito,PT,CE,28,21,0.7978,2,-1.0779
 2024-06,6351,Janaína Farias,PT,CE,17,12,0.4478,2,-0.4113
 2024-06,6358,Ana Paula Lobato,PDT,MA,35,33,0.9291,2,-1.0397
 2024-06,6362,Mauro Carvalho Junior,UNIÃO,MT,9,8,0.0261,1,0.2506
@@ -566,7 +566,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-07,6341,Hamilton Mourão,REPUBLICANOS,RS,23,21,0.0124,1,1.5367
 2024-07,6342,Jorge Seif,PL,SC,25,14,0.0139,1,1.3838
 2024-07,6345,Fernando Farias,MDB,AL,24,18,0.6779,2,-0.921
-2024-07,6350,Augusta Brito,PT,,28,21,0.7941,2,-1.0837
+2024-07,6350,Augusta Brito,PT,CE,28,21,0.7941,2,-1.0837
 2024-07,6351,Janaína Farias,PT,CE,23,16,0.6214,2,-0.4179
 2024-07,6358,Ana Paula Lobato,PDT,MA,36,34,0.9413,2,-1.0495
 2024-07,6362,Mauro Carvalho Junior,UNIÃO,MT,9,8,0.0267,1,0.2491
@@ -638,7 +638,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-08,6008,Giordano,MDB,SP,26,19,0.5126,3,-0.2493
 2024-08,6009,Astronauta Marcos Pontes,PL,SP,25,14,0.0355,1,1.2804
 2024-08,6010,Ivete da Silveira,MDB,SC,23,17,0.5048,3,-0.3205
-2024-08,6015,Ireneu Orth,PP,,15,14,0.0132,1,0.4869
+2024-08,6015,Ireneu Orth,PP,RS,15,14,0.0132,1,0.4869
 2024-08,6027,Mecias de Jesus,REPUBLICANOS,RR,9,9,0.015,1,0.683
 2024-08,6304,Margareth Buzetti,PSD,MT,26,20,0.4334,3,-0.0133
 2024-08,6331,Sergio Moro,UNIÃO,PR,19,19,0.0228,1,1.2771
@@ -720,7 +720,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-09,6008,Giordano,MDB,SP,26,19,0.5387,3,-0.2814
 2024-09,6009,Astronauta Marcos Pontes,PL,SP,25,14,0.0239,1,1.4325
 2024-09,6010,Ivete da Silveira,MDB,SC,23,17,0.5343,3,-0.3654
-2024-09,6015,Ireneu Orth,PP,,15,14,0.0079,1,0.5323
+2024-09,6015,Ireneu Orth,PP,RS,15,14,0.0079,1,0.5323
 2024-09,6027,Mecias de Jesus,REPUBLICANOS,RR,8,8,0.0083,1,0.6002
 2024-09,6304,Margareth Buzetti,PSD,MT,25,17,0.5273,3,-0.1389
 2024-09,6331,Sergio Moro,UNIÃO,PR,17,17,0.01,1,1.2817
@@ -802,7 +802,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-10,6008,Giordano,MDB,SP,24,18,0.4883,3,-0.2171
 2024-10,6009,Astronauta Marcos Pontes,PL,SP,26,15,0.0403,1,1.5473
 2024-10,6010,Ivete da Silveira,MDB,SC,22,17,0.5286,3,-0.3798
-2024-10,6015,Ireneu Orth,PP,,15,14,0.0148,1,0.586
+2024-10,6015,Ireneu Orth,PP,RS,15,14,0.0148,1,0.586
 2024-10,6027,Mecias de Jesus,REPUBLICANOS,RR,9,9,0.0176,1,0.6166
 2024-10,6304,Margareth Buzetti,PSD,MT,26,16,0.6013,3,-0.1728
 2024-10,6331,Sergio Moro,UNIÃO,PR,19,19,0.0226,1,1.3832
@@ -884,7 +884,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-11,6009,Astronauta Marcos Pontes,PL,SP,27,15,0.1941,2,1.5013
 2024-11,6010,Ivete da Silveira,MDB,SC,27,23,0.6215,1,-0.2896
 2024-11,6011,Beto Martins,PL,SC,25,17,0.2698,2,0.1963
-2024-11,6015,Ireneu Orth,PP,,15,14,0.0734,2,0.8284
+2024-11,6015,Ireneu Orth,PP,RS,15,14,0.0734,2,0.8284
 2024-11,6027,Mecias de Jesus,REPUBLICANOS,RR,25,25,0.2994,2,0.4002
 2024-11,6304,Margareth Buzetti,PSD,MT,30,22,0.6692,1,-0.0678
 2024-11,6331,Sergio Moro,UNIÃO,PR,14,13,0.1039,2,1.2699
@@ -967,7 +967,7 @@ month,id,nome,partido,uf,degree,cross_degree,eigen,community,pc1
 2024-12,6009,Astronauta Marcos Pontes,PL,SP,24,13,0.032,2,1.4915
 2024-12,6010,Ivete da Silveira,MDB,SC,35,29,0.8271,1,-0.5057
 2024-12,6011,Beto Martins,PL,SC,25,17,0.1538,2,0.1395
-2024-12,6015,Ireneu Orth,PP,,15,14,0.0102,2,0.5936
+2024-12,6015,Ireneu Orth,PP,RS,15,14,0.0102,2,0.5936
 2024-12,6027,Mecias de Jesus,REPUBLICANOS,RR,22,21,0.0746,2,0.5352
 2024-12,6304,Margareth Buzetti,PSD,MT,29,22,0.6523,1,-0.1226
 2024-12,6331,Sergio Moro,UNIÃO,PR,8,8,0.007,2,1.1522

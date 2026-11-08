@@ -59,7 +59,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5012,Randolfe Rodrigues,REDE,AP,18,0
 5030,Givago Tenório,PP,AL,18,5
 5052,Roberto Muniz,PP,BA,11,0
-5070,Wilder Morais,DEM,,18,0
+5070,Wilder Morais,DEM,GO,18,0
 5072,Reditario Cassol,PP,RO,7,0
 5076,Ione Guimarães,PTB,GO,11,1
 5100,Hélio José,PROS,DF,18,6
@@ -82,6 +82,6 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5535,Telmário Mota,PTB,RR,18,0
 5537,Dário Berger,MDB,SC,18,1
 5540,Fernando Bezerra Coelho,MDB,PE,18,4
-5637,Donizeti Nogueira,PT,,0,1
+5637,Donizeti Nogueira,PT,TO,0,1
 5639,Guaracy Silveira,DC,TO,7,0
 5849,José Amauri,PODE,PI,18,1

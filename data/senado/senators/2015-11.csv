@@ -1,82 +1,82 @@
 senador_id,nome,partido,uf,n_votes,n_authored
-3,Antonio Carlos Valadares,,,0,17
-16,Edison Lobão,,,0,3
+3,Antonio Carlos Valadares,,SE,0,17
+16,Edison Lobão,,MA,0,3
 35,Jader Barbalho,,PA,0,5
-40,José Agripino,,,0,11
+40,José Agripino,,RN,0,11
 70,Renan Calheiros,,AL,0,1
-72,Roberto Requião,MDB,,0,9
-73,Romero Jucá,,,0,8
-87,Garibaldi Alves Filho,,,0,15
-90,José Serra,PSDB,,0,12
-111,Blairo Maggi,,,0,6
-374,Paulo Rocha,,,0,6
+72,Roberto Requião,MDB,PR,0,9
+73,Romero Jucá,,RR,0,8
+87,Garibaldi Alves Filho,,RN,0,15
+90,José Serra,PSDB,SP,0,12
+111,Blairo Maggi,,MT,0,6
+374,Paulo Rocha,,PA,0,6
 391,Aécio Neves,,MG,0,15
-456,Ronaldo Caiado,DEM,,0,25
-558,Vanessa Grazziotin,PCdoB,,0,16
-604,Walter Pinheiro,,,0,10
+456,Ronaldo Caiado,DEM,GO,0,25
+558,Vanessa Grazziotin,PCdoB,AM,0,16
+604,Walter Pinheiro,,BA,0,10
 612,Eunício Oliveira,,CE,0,8
-615,José Pimentel,,,0,6
+615,José Pimentel,,CE,0,6
 631,Magno Malta,,ES,0,3
-635,Ricardo Ferraço,,,0,16
-643,Lúcia Vânia,,,0,6
-677,Roberto Rocha,,,0,9
+635,Ricardo Ferraço,,ES,0,16
+643,Lúcia Vânia,,GO,0,6
+677,Roberto Rocha,,MA,0,9
 739,Ciro Nogueira,PP,PI,0,2
 825,Paulo Paim,,RS,0,29
-846,Aloysio Nunes Ferreira,PSDB,,0,11
-945,Alvaro Dias,,,0,13
-950,João Alberto Souza,,,0,5
-1023,Maria do Carmo Alves,DEM,,0,4
+846,Aloysio Nunes Ferreira,PSDB,SP,0,11
+945,Alvaro Dias,,PR,0,13
+950,João Alberto Souza,,MA,0,5
+1023,Maria do Carmo Alves,DEM,SE,0,4
 1173,Wellington Fagundes,,MT,0,7
-1176,Waldemir Moka,,,0,10
-2207,Raimundo Lira,,,0,8
-2331,Rose de Freitas,MDB,,0,2
-3360,Delcídio do Amaral,,,0,5
-3361,José Maranhão,,,0,5
+1176,Waldemir Moka,,MS,0,10
+2207,Raimundo Lira,,PB,0,8
+2331,Rose de Freitas,MDB,ES,0,2
+3360,Delcídio do Amaral,,MS,0,5
+3361,José Maranhão,,PB,0,5
 3366,Marcelo Crivella,,RJ,0,5
-3372,Valdir Raupp,MDB,,0,4
-3394,João Capiberibe,PSB,,0,11
-3396,Tasso Jereissati,,,0,13
-3398,Cristovam Buarque,,,0,26
-3634,Flexa Ribeiro,,,0,15
+3372,Valdir Raupp,MDB,RO,0,4
+3394,João Capiberibe,PSB,AP,0,11
+3396,Tasso Jereissati,,CE,0,13
+3398,Cristovam Buarque,,DF,0,26
+3634,Flexa Ribeiro,,PA,0,15
 3695,Lindbergh Farias,PT,RJ,0,7
-3713,Fátima Bezerra,PT,,0,3
-3741,Paulo Bauer,,,0,9
-3823,Benedito de Lira,,,0,6
+3713,Fátima Bezerra,PT,RN,0,3
+3741,Paulo Bauer,,SC,0,9
+3823,Benedito de Lira,,AL,0,6
 3830,Davi Alcolumbre,,AP,0,13
-4525,Fernando Collor,,,0,2
-4558,Gladson Cameli,,,0,5
+4525,Fernando Collor,,AL,0,2
+4558,Gladson Cameli,,AC,0,5
 4560,Sérgio Petecão,,AC,0,4
 4575,Lídice da Mata,PSB,BA,0,16
-4697,Ângela Portela,,,0,5
-4721,Eduardo Amorim,,,0,9
-4763,Vicentinho Alves,,,0,2
-4981,Acir Gurgacz,,,0,4
-4988,Ana Amélia,,,0,20
-4990,Jorge Viana,PT,,0,16
-5000,Marta Suplicy,,,0,4
-5004,Ivo Cassol,,,0,6
+4697,Ângela Portela,,RR,0,5
+4721,Eduardo Amorim,,SE,0,9
+4763,Vicentinho Alves,,TO,0,2
+4981,Acir Gurgacz,,RO,0,4
+4988,Ana Amélia,,RS,0,20
+4990,Jorge Viana,PT,AC,0,16
+5000,Marta Suplicy,,SP,0,4
+5004,Ivo Cassol,,RO,0,6
 5006,Gleisi Hoffmann,,PR,0,11
 5008,Humberto Costa,PT,PE,0,15
 5012,Randolfe Rodrigues,REDE,AP,0,14
-5038,Sandra Braga,,,0,3
-5100,Hélio José,PSD,,0,23
-5112,José Medeiros,,,0,8
-5132,Dalirio Beber,,,0,10
-5144,Zeze Perrella,PDT,,0,5
-5164,Ataídes Oliveira,,,0,10
-5178,Douglas Cintra,,,0,8
-5182,Regina Sousa,,,0,20
-5197,Cássio Cunha Lima,,,0,17
-5236,Reguffe,PDT,,0,11
+5038,Sandra Braga,,AM,0,3
+5100,Hélio José,PSD,DF,0,23
+5112,José Medeiros,,MT,0,8
+5132,Dalirio Beber,,SC,0,10
+5144,Zeze Perrella,PDT,MG,0,5
+5164,Ataídes Oliveira,,TO,0,10
+5178,Douglas Cintra,,PE,0,8
+5182,Regina Sousa,,PI,0,20
+5197,Cássio Cunha Lima,,PB,0,17
+5236,Reguffe,PDT,DF,0,11
 5322,Romário,,RJ,0,14
 5523,Otto Alencar,,BA,0,14
 5525,Omar Aziz,PSD,AM,0,5
-5527,Simone Tebet,,,0,11
-5529,Antonio Anastasia,,,0,21
-5531,Elmano Férrer,PTB,,0,11
-5533,Lasier Martins,,,0,12
-5535,Telmário Mota,,,0,17
-5537,Dário Berger,MDB,,0,13
-5540,Fernando Bezerra Coelho,,,0,10
-5635,Ricardo Franco,,,0,2
-5637,Donizeti Nogueira,PT,,0,4
+5527,Simone Tebet,,MS,0,11
+5529,Antonio Anastasia,,MG,0,21
+5531,Elmano Férrer,PTB,PI,0,11
+5533,Lasier Martins,,RS,0,12
+5535,Telmário Mota,,RR,0,17
+5537,Dário Berger,MDB,SC,0,13
+5540,Fernando Bezerra Coelho,,PE,0,10
+5635,Ricardo Franco,,SE,0,2
+5637,Donizeti Nogueira,PT,TO,0,4

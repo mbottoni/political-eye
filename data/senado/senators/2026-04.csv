@@ -71,7 +71,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 6010,Ivete da Silveira,MDB,SC,29,1
 6025,Roberta Acioly,REPUBLICANOS,RR,29,18
 6295,Carlos Fávaro,PSD,MT,29,3
-6304,Margareth Buzetti,PP,,0,1
+6304,Margareth Buzetti,PP,MT,0,1
 6331,Sergio Moro,PL,PR,29,2
 6335,Damares Alves,REPUBLICANOS,DF,29,55
 6336,Camilo Santana,PT,CE,29,1

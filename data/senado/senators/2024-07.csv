@@ -59,7 +59,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5985,Nelsinho Trad,PSD,MS,14,7
 5988,Soraya Thronicke,PODE,MS,14,4
 5990,Carlos Viana,PODE,MG,14,13
-5991,Castellar Neto,PP,,0,6
+5991,Castellar Neto,PP,MG,0,6
 5998,Daniella Ribeiro,PSD,PB,14,2
 6008,Giordano,MDB,SP,14,3
 6009,Astronauta Marcos Pontes,PL,SP,14,13
@@ -75,7 +75,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 6341,Hamilton Mourão,REPUBLICANOS,RS,14,7
 6342,Jorge Seif,PL,SC,14,9
 6345,Fernando Farias,MDB,AL,14,0
-6350,Augusta Brito,PT,,0,3
+6350,Augusta Brito,PT,CE,0,3
 6351,Janaína Farias,PT,CE,14,12
 6358,Ana Paula Lobato,PDT,MA,14,5
 6363,Rosana Martinelli,PL,MT,14,9

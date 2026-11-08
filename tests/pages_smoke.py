@@ -23,6 +23,7 @@ PAGES = [
     *[f"docs/orientacoes/?tab={t}" for t in ("gov", "cohesion", "rebels", "orient", "deputy", "blocs")],
     *[f"docs/emendas/?tab={t}" for t in ("overview", "map", "authors", "flows", "recipients", "timing")],
     *[f"docs/sancoes/?tab={t}" for t in ("overview", "who", "time", "repeat", "fines", "money", "cepim", "leniency", "changes", "company")],
+    *[f"docs/pncp/?tab={t}" for t in ("overview", "large", "suppliers", "buyers", "map", "parties")],
     *[f"docs/tse/?tab={t}" for t in ("overview", "parties", "equity", "results", "donors", "suppliers")],
     "docs/tse/?tab=equity&e=2018",
 ]

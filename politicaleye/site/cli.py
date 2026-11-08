@@ -10,7 +10,7 @@ from pathlib import Path
 from ..paths import DATA
 
 # page -> module under politicaleye.site with a build(data: Path) -> dict
-PAGES = {"camara": "camara", "senado": "senado", "orientacoes": "orientacoes", "emendas": "emendas", "tse": "tse", "sancoes": "sancoes"}
+PAGES = {"camara": "camara", "senado": "senado", "orientacoes": "orientacoes", "emendas": "emendas", "tse": "tse", "sancoes": "sancoes", "pncp": "pncp"}
 
 
 def cmd_build(a) -> int:

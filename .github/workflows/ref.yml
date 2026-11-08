@@ -36,6 +36,7 @@ jobs:
       - name: Download and rebuild
         run: |
           uv run python -m politicaleye ref update
+          uv run python -m politicaleye ref prefeitos
           uv run python -m politicaleye views update
 
       - name: Commit if the data changed

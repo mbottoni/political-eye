@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Public Contracts · political-eye</title>
+<meta name="description" content="Brazil's public contracts from the national procurement portal (PNCP): who buys, who sells, how concentrated it is, where the money goes, contracts with barred companies, and municipal contracts by the mayor's party.">
+<link rel="stylesheet" href="../lib/site.css">
+<style>
+  .nowrap { white-space: nowrap; }
+  .linkish { all: unset; cursor: pointer; color: var(--ink); text-decoration: underline; text-decoration-color: var(--axis); text-underline-offset: 2px; }
+  .linkish:hover, .linkish:focus-visible { text-decoration-color: var(--ink); }
+  .meter { height: 8px; border-radius: 4px; background: var(--grid); overflow: hidden; margin: 8px 0 4px; max-width: 520px; }
+  .meter i { display: block; height: 100%; background: var(--line); }
+  .flag { display: inline-block; font-size: 11px; padding: 0 6px; border-radius: 999px; border: 1px solid var(--border); color: var(--ink2); margin-right: 3px; white-space: nowrap; }
+  .flag.bad { color: var(--critical); border-color: currentColor; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="crumb"><a href="../">political-eye</a> / Public contracts</p>
+    <h1>Public contracts</h1>
+    <p>Every federal, state and municipal body must publish its contracts on the PNCP, the national procurement portal created by the 2021 procurement law. These pages count every contract published on the days read so far, and follow the large ones (R$ 1 million or more, about 3% of contracts and most of the money): who buys, who sells, how concentrated the buying is, where it happens, which contracts went to companies barred at the time, and what towns sign under each mayor's party. The history since 2021 is read newest first, so the charts fill in as it is read.</p>
+  </header>
+  <div id="coverage"></div>
+  <nav class="tabs">
+    <button data-tab="overview">Overview</button>
+    <button data-tab="large">Large contracts</button>
+    <button data-tab="suppliers">Suppliers</button>
+    <button data-tab="buyers">Buyers</button>
+    <button data-tab="map">Map</button>
+    <button data-tab="parties">Mayors' parties</button>
+  </nav>
+  <section id="tab-overview" role="tabpanel"></section>
+  <section id="tab-large" role="tabpanel" hidden></section>
+  <section id="tab-suppliers" role="tabpanel" hidden></section>
+  <section id="tab-buyers" role="tabpanel" hidden></section>
+  <section id="tab-map" role="tabpanel" hidden></section>
+  <section id="tab-parties" role="tabpanel" hidden></section>
+  <footer>
+    Contracts are counted by the day the PNCP published them, in their latest version read; a contract amended above or below R$ 1 million moves in or out of the large-contract tables. Suppliers who are private individuals have their CPF masked. Mayors are TSE's elected candidates, matched to each town by name; a contract is attributed to the mayor in office in the year it was signed. Every rule is in <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/pncp.md#the-explorer-page">methodology/pncp.md</a>. Sources: PNCP, CGU, TSE, Tesouro Nacional (population).
+  </footer>
+</main>
+<noscript>This page needs JavaScript. The data is at <a href="https://github.com/mbottoni/political-eye/tree/main/data/pncp">github.com/mbottoni/political-eye</a>.</noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

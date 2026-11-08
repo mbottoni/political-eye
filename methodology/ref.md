@@ -60,3 +60,43 @@ People are the connected groups of these links. `data/ref/overrides.csv`
   names written differently.
 
 Rebuilt weekly (`.github/workflows/ref.yml`) after the Saturday jobs.
+
+## Mayors: `prefeitos.csv`
+
+Every municipality's elected mayor, from TSE's candidate files for the
+municipal elections of 2016, 2020 and 2024
+(`cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_<year>.zip`,
+the `*_BRASIL.csv` member, latin1, `;`). Built by
+`python -m politicaleye ref prefeitos` (`politicaleye/ref/prefeitos.py`).
+
+| column | meaning |
+|---|---|
+| `ano` | the election year of the file (2016, 2020, 2024) |
+| `cod_ibge` | the municipality's IBGE code |
+| `municipio`, `uf`, `sg_ue` | TSE's name, state and own code for it |
+| `eleicao`, `data_eleicao`, `suplementar` | the election (`1` for a supplementary election held during the term) |
+| `turno`, `sq_candidato`, `nome_urna`, `partido`, `genero`, `cor_raca` | the winner, as TSE records them |
+
+One row per municipality and election won: candidates for `PREFEITO` whose
+result (`DS_SIT_TOT_TURNO`) is `ELEITO`, in the last round. No CPF is kept.
+
+**Matching to IBGE.** TSE names municipalities by its own code and name.
+Each is matched to `data/siconfi/entes.csv` by state and normalised name (no
+accents, apostrophes or hyphens: `Santa Bárbara d'Oeste` is
+`SANTA BARBARA DOESTE`), with a short list of spellings that differ between
+the two registries (`EMBU` is `Embu das Artes`, `ASSU` is `Açu`; the list is
+`SPELLING` in the code). Every municipality matches. In 2024, 5,528 regular
+elections had a winner. The rest had none at build time: annulled or
+contested elections, Brasília, Fernando de Noronha.
+
+**Who governed in a year** (`mayor_by_year`). For the terms 2017–2020,
+2021–2024 and 2025–2028, the regular winner of the election before the term.
+A supplementary election's winner replaces them from the year after that
+election. The calendar year is the unit, so a mayor replaced mid-year is
+attributed the whole year.
+
+**Parties across elections.** Pages that compare parties across terms count
+merged and renamed parties under their successor's name today: PMDB is MDB,
+PR is PL, PRB is Republicanos, DEM and PSL are União, PPS is Cidadania,
+PTN, PHS and PSC are Podemos, PEN, Patriota, PRP and PTB are PRD, PSDC is DC,
+PT do B is Avante, SD and PROS are Solidariedade, PPL is PCdoB.

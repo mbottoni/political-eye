@@ -89,3 +89,49 @@ PNCP lists with their full CPF. Their CPF is masked the CGU way
 business name often carries the owner's) or in the contract's object is
 masked too ([METHODOLOGY.md](../METHODOLOGY.md#peoples-data)). Their name is
 kept, as for sanctioned people.
+
+## The explorer page
+
+[`docs/pncp/`](https://mbottoni.github.io/political-eye/pncp/) draws on
+summaries that `python -m politicaleye site build pncp`
+(`politicaleye/site/pncp.py`) writes to `data/site/pncp/`. The daily job
+rebuilds them after each run.
+
+**Coverage.** Every total says how many days of the history it covers
+(`dias.csv`, out of every day since 1 September 2021). The history is read
+newest first. Days read are a sample of the calendar, not of buyers, so
+comparisons between parties, states or buyers are not biased by it, only
+noisy while few days are read.
+
+**Implausible values.** Some contracts are published with a global value
+thousands of times their initial value (R$ 7.8 million initial, R$ 45.6
+billion global). Amendments and renewals can raise a contract's value, but
+not by that much: a continuous service renewed to its ten-year limit, with
+price adjustments, stays around ten to thirteen times its first year. A
+contract whose global value is more than 15 times its initial value is
+counted at its initial value and marked "fixed". On the first day read, 15
+contracts were, publishing R$ 66.7 billion that count as R$ 96.6 million.
+The sanctions page uses the same rule for the contracts it shows.
+
+**Suppliers and buyers.** A supplier is a CNPJ (or a masked CPF). A buyer is
+a contracting body's CNPJ. Concentration among suppliers is the Gini
+coefficient of their totals, and the share the top 1% and 10% hold. A
+buyer's concentration is the Herfindahl index of its large-contract value
+across its suppliers (the sum of the squared shares), for buyers with five
+or more large contracts. The supplier table adds: whether the CNPJ is on CEIS
+or CNEP, contracts signed while barred
+([below](#contracts-with-sanctioned-companies)), amendment payments made to
+it directly (`data/emendas/pagamentos/`), and what election campaigns paid it
+(TSE `fornecedores.csv`, 2018–2026).
+
+**Places.** Per inhabitant uses the municipal populations in
+`data/siconfi/entes.csv`, summed by state. The municipal map counts only
+contracts of municipal bodies (`esfera` M) located in the town.
+
+**Mayors' parties.** A municipal body's contract is attributed to the mayor
+in office in the year it was signed (publication year when the signing date
+is missing), from [`data/ref/prefeitos.csv`](ref.md#mayors-prefeitoscsv),
+with merged and renamed parties under today's name. A party's value per
+inhabitant-year is its towns' large-contract value over the sum, year by
+year, of the population those mayors governed. These are associations:
+parties govern different kinds of towns.

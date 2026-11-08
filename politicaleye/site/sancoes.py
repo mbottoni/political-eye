@@ -26,6 +26,7 @@ import numpy as np
 import pandas as pd
 
 from .common import csv, write_json
+from .pncp import IMPLAUSIBLE
 
 # Sanctions that bar contracting: the same rule as politicaleye.pncp.build.BARS.
 BARS = re.compile(r"^(Impedimento|Declaração de Inidoneidade|Suspensão$)")
@@ -318,12 +319,14 @@ def build(data: Path) -> dict:
     big = [pd.read_csv(p, dtype=str, keep_default_na=False) for p in sorted((data / "pncp" / "contratos").glob("*.csv"))]
     big = pd.concat(big, ignore_index=True) if big else pd.DataFrame()
     sanc_c = _read(data / "pncp" / "contratos_sancionados.csv")
-    ccols = ["controle", "assinatura", "orgao", "esfera", "uf", "fornecedor", "objeto", "valor_global"]
+    ccols = ["controle", "assinatura", "orgao", "esfera", "uf", "fornecedor", "objeto", "valor_global", "valor_inicial"]
     contracts = pd.concat([x[ccols] for x in (big, sanc_c) if len(x)], ignore_index=True) if len(big) or len(sanc_c) else pd.DataFrame(columns=ccols)
     contracts = contracts[contracts.fornecedor.isin(cnpjs)].drop_duplicates("controle")
     cobre = sanc_c.groupby("controle").cobre.agg(_best) if len(sanc_c) else pd.Series(dtype=str)
     contracts["cobre"] = contracts.controle.map(cobre).fillna("")
-    contracts["valor_global"] = _money(contracts.valor_global)
+    # The same typo rule as the contracts page: a global value over 15 times the initial one counts at the initial value.
+    vg, vi = _money(contracts.valor_global), _money(contracts.valor_inicial)
+    contracts["valor_global"] = vg.where(~((vi > 0) & (vg > IMPLAUSIBLE * vi)), vi)
 
     # Campaign suppliers on election day.
     tse = []

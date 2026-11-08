@@ -14,7 +14,7 @@ Brazilian politics and public money from official open data, committed as it cha
 | [Deputies across sources](https://github.com/mbottoni/political-eye/blob/main/methodology/views.md): each deputy's discipline, amendments and campaign money in one row | weekly |
 | [Municipal finances](https://github.com/mbottoni/political-eye/blob/main/methodology/siconfi.md) (Siconfi): each town's payroll against the legal limits, and its cash; history being read | monthly |
 | STF: how long justices hold cases | on hold (the server only answers browsers) |
-| [Public contracts](https://github.com/mbottoni/political-eye/blob/main/methodology/pncp.md) (PNCP): contracts of R$1M+, contracts with sanctioned companies, daily totals; history being read | daily |
+| [Public contracts](https://mbottoni.github.io/political-eye/pncp/) (PNCP): who buys and who sells in contracts of R$1M+, concentration, contracts with barred companies, towns by their mayor's party; history being read | daily |
 
 <a href="https://mbottoni.github.io/political-eye/camara/"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/camara/network-dark.png">

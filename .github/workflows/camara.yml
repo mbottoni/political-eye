@@ -53,6 +53,8 @@ jobs:
           uv run python -m politicaleye camara update "${years[@]}"
 
       - name: Office allowance (CEAP)
+        # A separate server that answers 429 to quick requests: if it fails, the week's votes still commit.
+        continue-on-error: true
         run: uv run python -m politicaleye camara cota
 
       - name: Render the README chart

@@ -266,7 +266,7 @@ export function stack(box, o) {
 
 // ------------------------------------------------------------ histogram
 
-/** histogram(box, {values, bins, domain: [lo, hi], refs: [{x, label, color}], format, xLabel, table}) */
+/** histogram(box, {values, bins, domain: [lo, hi], refs: [{x, label, color}], format, tickFormat (axis only; "" hides a tick), xLabel, table}) */
 export function histogram(box, o) {
   box.replaceChildren();
   const vals = o.values.filter((v) => v != null && !Number.isNaN(v));
@@ -279,7 +279,7 @@ export function histogram(box, o) {
   const sx = linear(lo, hi, ml, w - mr), yt = upTo(Math.max(...counts), 4), sy = linear(0, yt[yt.length - 1], H - mb, mt);
   const f = o.format || ((v) => fmt(v, 1)), grid = css("--grid"), muted = css("--muted"), col = css("--line"), ink2 = css("--ink2");
   for (const v of yt) { s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(v), y2: sy(v), stroke: grid })); s.append(text(fmt(v), { x: ml - 6, y: sy(v) + 4, "text-anchor": "end", "font-size": 10, fill: muted })); }
-  for (const v of niceTicks(lo, hi, Math.max(2, Math.floor((w - ml) / 70)))) s.append(text(f(v), { x: sx(v), y: H - 14, "text-anchor": "middle", "font-size": 10, fill: muted }));
+  for (const v of niceTicks(lo, hi, Math.max(2, Math.floor((w - ml) / 70)))) s.append(text((o.tickFormat || f)(v), { x: sx(v), y: H - 14, "text-anchor": "middle", "font-size": 10, fill: muted }));
   if (o.xLabel) s.append(text(o.xLabel, { x: (ml + w - mr) / 2, y: H - 1, "text-anchor": "middle", "font-size": 10, fill: muted }));
   counts.forEach((c, i) => {
     if (!c) return;

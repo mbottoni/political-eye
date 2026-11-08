@@ -21,29 +21,37 @@ const ALIASES = { SOLIDARIED: "SOLIDARIEDADE", SOLIDARI: "SOLIDARIEDADE", SD: "S
 const partyKey = (label) => { const k = String(label || "").trim().toUpperCase(); return ALIASES[k] || k; };
 const later = (f) => { redraws.push(f); f(); };
 
+const MIN_ROLL = 10;   // contested roll calls a month needs before its shares are shown (October 2026 had 2)
+let THIN;
+async function thinMonths() {
+  if (!THIN) THIN = new Set((await data("camara/index.csv")).filter((r) => +r.votacoes_contested < MIN_ROLL).map((r) => r.month));
+  return THIN;
+}
+
 async function partidos() {
-  const p = await data("site/orientacoes/partidos.csv");
+  const [p, thin] = await Promise.all([data("site/orientacoes/partidos.csv"), thinMonths()]);
   const months = [...new Set(p.map((r) => r.month))].sort();
   const votes = new Map();
   for (const r of p) votes.set(r.partido, (votes.get(r.partido) || 0) + +r.n_votes);
   const big = [...votes.keys()].sort((a, b) => votes.get(b) - votes.get(a));
   const at = new Map(p.map((r) => [`${r.partido}|${r.month}`, r]));
-  return { p, months, big, get: (party, m, k) => num(at.get(`${party}|${m}`)?.[k]) };
+  return { p, months, big, get: (party, m, k) => (thin.has(m) ? null : num(at.get(`${party}|${m}`)?.[k])) };
 }
 
 // ------------------------------------------------------------ government
 
 async function gov(root) {
-  const idx = (await data("camara/index.csv")).filter((r) => r.with_gov !== "");
-  const last = idx[idx.length - 1];
+  const all = (await data("camara/index.csv")).filter((r) => r.with_gov !== "");
+  const idx = all.map((r) => (+r.votacoes_contested >= MIN_ROLL ? r : { ...r, with_gov: "", with_party: "", with_majority: "" }));
+  const last = all.filter((r) => +r.votacoes_contested >= MIN_ROLL).pop();
   tiles(root.appendChild(el("section", { className: "tiles" })), [
-    { label: "Votes with the government", value: pct(+last.with_gov), sub: `${last.month}, every deputy pooled` },
+    { label: "Votes with the government", value: pct(+last.with_gov), sub: `${last.month}, every deputy pooled, ${last.votacoes_contested} contested roll calls` },
     { label: "Votes with their party", value: pct(num(last.with_party)), sub: last.with_party === "" ? "too few roll calls with a party line" : `${pct(+last.oriented_share)} of votes had a party line` },
     { label: "Votes with their party's majority", value: pct(+last.with_majority), sub: "needs no orientation" },
     { label: "Votes matched to an orientation", value: pct(+last.orientation_coverage), sub: "the rest: party in a cut-off bloc name" },
   ]);
   const c1 = chart();
-  root.append(card("The chamber as a whole", "Pooled over every deputy's contested votes each month. The shaded months are February to October 2025, when almost every party sat in one bloc that gave no orientation, so 'with party' is left out.", c1));
+  root.append(card("The chamber as a whole", `Pooled over every deputy's contested votes each month. The shaded months are February to October 2025, when almost every party sat in one bloc that gave no orientation, so 'with party' is left out. Months with fewer than ${MIN_ROLL} contested roll calls are gaps here and on every chart of this page: a share over two or three votes says little.`, c1));
   const s = (k, name, color) => ({ name, color, points: idx.map((r) => [r.month, num(r[k])]) });
   later(() => C.line(c1, {
     x: "month", y: { min: 0, max: 1, format: (v) => pct(v) }, marks: GOVERNMENTS, bands: GAP, height: 260,
@@ -179,7 +187,9 @@ async function deputy(root) {
     if (!who) return;
     setParam("dep", id);
     const years = [...new Set(P.months.map((m) => m.slice(0, 4)))];
-    const rows = (await Promise.all(years.map((y) => data(`site/orientacoes/deputados_mes/${y}.csv`)))).flat().filter((r) => r.deputado_id === id);
+    const thin = await thinMonths();
+    const rows = (await Promise.all(years.map((y) => data(`site/orientacoes/deputados_mes/${y}.csv`)))).flat().filter((r) => r.deputado_id === id)
+      .map((r) => (+r.n_votes >= 5 && !thin.has(r.month) ? r : { ...r, with_gov: "", with_party: "", with_majority: "" }));
     const c = chart();
     out.replaceChildren(card(`${who.nome} (${who.partido}-${who.uf})`, `Month by month, over their contested votes; their party's pooled government support in grey for comparison. ${rows.length} months with votes.`, c));
     const draw = () => C.line(c, {

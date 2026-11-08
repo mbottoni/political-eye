@@ -81,6 +81,12 @@ export function setParam(k, v, dflt) {
 /** Tabs: buttons in `nav.tabs` with data-tab, panels with id `tab-<name>`. Calls onShow(name) the first time a tab opens. */
 export function tabs(onShow) {
   const nav = $("nav.tabs"), buttons = $$("button[data-tab]", nav), shown = new Set();
+  const edges = () => {
+    nav.classList.toggle("more-left", nav.scrollLeft > 2);
+    nav.classList.toggle("more-right", nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 2);
+  };
+  nav.addEventListener("scroll", edges, { passive: true });
+  new ResizeObserver(edges).observe(nav);
   const show = (name) => {
     if (!buttons.some((b) => b.dataset.tab === name)) name = buttons[0].dataset.tab;
     for (const b of buttons) {
@@ -90,6 +96,10 @@ export function tabs(onShow) {
       $(`#tab-${b.dataset.tab}`).hidden = !on;
     }
     setParam("tab", name, buttons[0].dataset.tab);
+    // Bring the chosen tab into the bar's view without moving the page.
+    const b = buttons.find((x) => x.dataset.tab === name);
+    if (b && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = Math.max(0, b.offsetLeft - nav.offsetLeft - (nav.clientWidth - b.offsetWidth) / 2);
+    edges();
     if (!shown.has(name)) { shown.add(name); onShow(name); }
     window.dispatchEvent(new Event("tabshow"));
   };

@@ -104,6 +104,15 @@ async function large(root) {
     t.update(rows.filter((x) => (!uf || x.uf === uf) && (!esf || x.esfera === esf) && (!ct || x.categoria === ct)));
   };
   draw();
+  const G = L.left_out;
+  if (G?.contratos) {
+    const gone = await data("site/pncp/descartados.csv"), gb = el("div");
+    root.append(card("Left out as typos", `${plural(G.contratos, "contract")} were published at values no buyer could pay, together ${brl(G.publicado)}: over ${brl(G.cap, 0)}, or a town's contract worth more than ${G.town_years} years of the town's whole revenue. Their initial value was no better, so they are left out of every total and ranking on this page.`, gb));
+    table(gb, gone, [{ key: "publicacao", label: "Published", text: true, fmt: day }, { key: "orgao", label: "Buyer", text: true, wrap: true }, { key: "uf", label: "UF", text: true },
+      { key: "fornecedor_nome", label: "Supplier", text: true, wrap: true, fmt: (v) => v || "A person (name withheld)" }, { key: "objeto", label: "Object", text: true, wrap: true },
+      { key: "valor_publicado", label: "Published at", fmt: (v) => brl(v) }, { key: "receita", label: "Town's revenue a year", fmt: (v) => (v === "" || v == null ? "–" : brl(v)) }],
+    { sortBy: "valor_publicado", pageSize: 10, name: "left-out-contracts" });
+  }
 }
 
 // ------------------------------------------------------------ suppliers

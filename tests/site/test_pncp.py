@@ -1,4 +1,4 @@
-"""The contracts page's summaries on a tiny world: two towns, two mayors, one typo."""
+"""The contracts page's summaries on a tiny world: two towns, two mayors, and typos of each kind."""
 
 import json
 
@@ -27,10 +27,17 @@ def world(tmp_path):
         contract("b", "2025-03-01", "B1", "M", "3500105", "S1", 3_000_000),
         contract("c", "2025-03-01", "B2", "M", "3500204", "S2", 45_000_000_000, initial=7_000_000),   # a typo
         contract("d", "2025-03-01", "B3", "F", "5300108", "S3", 1_000_000),
+        contract("e", "2025-03-01", "B1", "M", "3500105", "S4", 900_000_000),          # 4.5 years of town A's revenue
+        contract("f", "2025-03-01", "B3", "F", "5300108", "S5", 2_800_000_000_000),    # R$ 2.8 trillion
     ]), d / "pncp" / "contratos" / "2025-03.csv")
+    write_csv(pd.DataFrame([{"cod_ibge": "3500105", "ano": "2025", "periodicidade": "Q", "periodo": "1", "rcl": "100000000", "rcl_ajustada": "",
+                             "dtp": "", "dtp_pct": "", "limite_maximo_pct": "", "limite_prudencial_pct": "", "limite_alerta_pct": "", "situacao": ""},
+                            {"cod_ibge": "3500105", "ano": "2025", "periodicidade": "Q", "periodo": "3", "rcl": "190000000", "rcl_ajustada": "200000000",
+                             "dtp": "", "dtp_pct": "", "limite_maximo_pct": "", "limite_prudencial_pct": "", "limite_alerta_pct": "", "situacao": ""}]),
+              d / "siconfi" / "pessoal" / "2025.csv")
     write_csv(pd.DataFrame([{"dia": "2025-03-01", "publicados": "10", "atualizados": "0"}]), d / "pncp" / "dias.csv")
-    write_csv(pd.DataFrame([{"dia": "2025-03-01", "esfera": "M", "fornecedor_tipo": "PJ", "contratos": "8", "valor_global": "13000000.00"},
-                            {"dia": "2025-03-01", "esfera": "F", "fornecedor_tipo": "PJ", "contratos": "2", "valor_global": "1500000.00"}]),
+    write_csv(pd.DataFrame([{"dia": "2025-03-01", "esfera": "M", "fornecedor_tipo": "PJ", "contratos": "9", "valor_global": "45913000000.00"},
+                            {"dia": "2025-03-01", "esfera": "F", "fornecedor_tipo": "PJ", "contratos": "3", "valor_global": "2800001500000.00"}]),
               d / "pncp" / "resumo_dia.csv")
     write_csv(pd.DataFrame([{"cod_ibge": "3500105", "ente": "A", "uf": "SP", "regiao": "SE", "populacao": "1000", "cnpj": "", "capital": "0"},
                             {"cod_ibge": "3500204", "ente": "B", "uf": "SP", "regiao": "SE", "populacao": "3000", "cnpj": "", "capital": "0"}]),
@@ -53,8 +60,14 @@ def test_build(tmp_path):
     p.build(d)
     out = d / "site" / "pncp"
     r = json.loads((out / "resumo.json").read_text())
-    assert r["coverage"]["days_read"] == 1 and r["totals"]["contratos"] == 10
+    assert r["coverage"]["days_read"] == 1 and r["totals"]["contratos"] == 12
     assert r["large"]["implausible"]["contratos"] == 1 and r["large"]["valor"] == 13_000_000      # the typo counts at 7 M
+    # The two values with nothing to trust are left out everywhere, and the daily totals lose what every typo added.
+    assert r["large"]["left_out"]["contratos"] == 2 and r["large"]["left_out"]["publicado"] == 2_800_900_000_000
+    assert abs(r["totals"]["valor"] - (12_000_000 + 8_000_000 + 1_500_000)) < 1e-3   # municipal: large 12 M, small 8 M
+    gone = pd.read_csv(out / "descartados.csv").set_index("controle")
+    assert list(gone.index) == ["f", "e"] and gone.loc["e", "receita"] == 200_000_000 and pd.isna(gone.loc["f", "receita"])
+    assert {"e", "f"}.isdisjoint(pd.read_csv(out / "maiores.csv").controle) and "S4" not in set(pd.read_csv(out / "fornecedores.csv").cnpj)
     top = pd.read_csv(out / "maiores.csv")
     assert top.objeto.str.len().max() == p.OBJ and top.loc[top.controle == "c", "suspeito"].item() == 1
     # Mayors' parties, under today's names, per inhabitant-year of 2025.
@@ -73,3 +86,12 @@ def test_build_is_deterministic(tmp_path):
     first = {f: f.read_bytes() for f in (d / "site").rglob("*") if f.is_file()}
     p.build(d)
     assert first == {f: f.read_bytes() for f in (d / "site").rglob("*") if f.is_file()}
+
+
+def test_plausible():
+    c = pd.DataFrame({"valor_inicial": ["7000000", "0", "500000000", "20000000000", "1000000"],
+                      "valor_global": ["45000000000", "1129000000000", "500000000", "20000000000", "1000000"],
+                      "esfera": ["F", "M", "M", "E", "M"], "municipio_ibge": ["", "2603900", "2603900", "", "9999999"]})
+    got = p.plausible(c, pd.Series({"2603900": 131_000_000.0}))
+    # the 15x rule; no initial and 8,600 years of revenue; 3.8 years of revenue; over R$ 10 bn; a town with no report read
+    assert got.suspeito.tolist() == [1, 2, 2, 2, 0] and got.v.tolist() == [7_000_000, 0, 0, 0, 1_000_000]

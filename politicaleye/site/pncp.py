@@ -3,6 +3,8 @@
     resumo.json        coverage, totals, distributions, concentration and the small aggregates the page draws
     diario.csv         per publication day and sphere: contracts published and their value (every contract)
     maiores.csv        the largest contracts (R$ 1 million or more), trimmed for the browser
+    descartados.csv    contracts whose value is left out as a typo: over R$ 10 bn, or a town's contract
+                       worth more than three years of the town's whole revenue
     fornecedores.csv   the largest suppliers, with what else links them to the State: sanctions, amendment
                        payments received directly, sales to election campaigns
     orgaos.csv         the largest buyers, and how concentrated their suppliers are (HHI)
@@ -32,6 +34,8 @@ TOP = 3000
 OBJ = 140
 MIN_BUYER = 5             # contracts a buyer needs for its HHI to be shown
 IMPLAUSIBLE = 15          # a global value above this many times the initial one is taken as a typo
+CAP = 10e9                # no contract read is worth more: the largest real ones are 30-year PPPs near R$ 8 bn
+TOWN_YEARS = 3            # nor a town's contract worth more than this many years of the town's whole revenue (RCL)
 SANCTION_BARS = re.compile(r"^(Impedimento|Declaração de Inidoneidade|Suspensão$)")
 # Parties that merged or were renamed, to their successor today, so terms compare across elections.
 LINEAGE = {"PMDB": "MDB", "PR": "PL", "PRB": "REPUBLICANOS", "DEM": "UNIÃO", "PSL": "UNIÃO", "PPS": "CIDADANIA",
@@ -63,17 +67,41 @@ def hhi(shares: pd.Series) -> float:
     return float((shares ** 2).sum())
 
 
-def contracts(src: Path) -> pd.DataFrame:
+def town_revenue(data: Path) -> pd.Series:
+    """Each town's yearly net current revenue (RCL), from its latest payroll report read on Siconfi."""
+    parts = [pd.read_csv(p, dtype=str, keep_default_na=False, usecols=["cod_ibge", "ano", "periodo", "rcl", "rcl_ajustada"])
+             for p in sorted((data / "siconfi" / "pessoal").glob("*.csv"))]
+    if not parts:
+        return pd.Series(dtype=float)
+    t = pd.concat(parts, ignore_index=True)
+    t["r"] = pd.to_numeric(t.rcl_ajustada, errors="coerce").fillna(pd.to_numeric(t.rcl, errors="coerce"))
+    t = t[t.r > 0].sort_values(["cod_ibge", "ano", "periodo"])
+    return t.groupby("cod_ibge").r.last()
+
+
+def plausible(c: pd.DataFrame, rcl: pd.Series) -> pd.DataFrame:
+    """The value each contract is counted at (``v``) and why it differs from the published one (``suspeito``).
+
+    1: the global value is over IMPLAUSIBLE times the initial one (R$ 7.8 M initial, R$ 45.6 bn global):
+       amendments and renewals multiply a contract, but not by that much, so it counts at its initial value.
+    2: even so it is over CAP, or a town's contract over TOWN_YEARS years of the town's revenue (R$ 1 trillion
+       of equipment for a town that takes in R$ 275 M a year): there is no value to trust, so it counts as zero.
+    """
+    v, vi = _money(c.valor_global), _money(c.valor_inicial)
+    s = ((vi > 0) & (v > IMPLAUSIBLE * vi)).astype(int)
+    v = v.where(s == 0, vi)
+    town = pd.to_numeric(c.municipio_ibge.map(rcl), errors="coerce").where(c.esfera == "M")
+    wild = (v > CAP) | (v > TOWN_YEARS * town)
+    return c.assign(v=v.where(~wild, 0.0), suspeito=s.where(~wild, 2))
+
+
+def contracts(src: Path, rcl: pd.Series) -> pd.DataFrame:
     parts = [pd.read_csv(p, dtype=str, keep_default_na=False) for p in sorted((src / "contratos").glob("*.csv"))]
     if not parts:
         return pd.DataFrame(columns=["controle", "publicacao", "assinatura", "orgao_cnpj", "orgao", "esfera", "uf", "municipio_ibge",
-                                     "categoria", "fornecedor_tipo", "fornecedor", "fornecedor_nome", "objeto", "valor_global"])
-    c = pd.concat(parts, ignore_index=True).drop_duplicates("controle", keep="last")
-    c["v"], vi = _money(c.valor_global), _money(c.valor_inicial)
-    # Some global values are typos thousands of times the initial value (R$ 7.8 M initial, R$ 45.6 bn global):
-    # amendments and renewals can multiply a contract, but not by that much. Use the initial value instead.
-    c["suspeito"] = ((vi > 0) & (c.v > IMPLAUSIBLE * vi)).astype(int)
-    c["v"] = c.v.where(c.suspeito == 0, vi)
+                                     "categoria", "fornecedor_tipo", "fornecedor", "fornecedor_nome", "objeto", "valor_inicial",
+                                     "valor_global", "v", "suspeito", "ano"])
+    c = plausible(pd.concat(parts, ignore_index=True).drop_duplicates("controle", keep="last"), rcl)
     c["ano"] = c.assinatura.where(c.assinatura != "", c.publicacao).str[:4]
     return c
 
@@ -82,8 +110,13 @@ def build(data: Path) -> dict:
     src, out = data / "pncp", data / "site" / "pncp"
     days = _read(src / "dias.csv")
     daily = _read(src / "resumo_dia.csv")
-    c = contracts(src)
+    rcl = town_revenue(data)
+    every = contracts(src, rcl)
+    gone, c = every[every.suspeito == 2], every[every.suspeito != 2]   # values left out as typos: listed apart, counted nowhere
     sanc = _read(src / "contratos_sancionados.csv")
+    if len(sanc):
+        sanc = plausible(sanc, rcl)
+        sanc = sanc[sanc.suspeito != 2]
     entes = _read(data / "siconfi" / "entes.csv")
     pop = pd.to_numeric(entes.set_index("cod_ibge").populacao, errors="coerce") if len(entes) else pd.Series(dtype=float)
 
@@ -96,6 +129,10 @@ def build(data: Path) -> dict:
                      "published": int(pd.to_numeric(days.get("publicados", pd.Series(dtype=str)), errors="coerce").sum()) if len(days) else 0}
     if len(daily):
         daily = daily.assign(contratos=pd.to_numeric(daily.contratos), valor=_money(daily.valor_global))
+        # The daily totals sum published values: take out what the typos added (published minus counted).
+        excess = every.assign(x=_money(every.valor_global) - every.v).query("x > 0").groupby(["publicacao", "esfera", "fornecedor_tipo"]).x.sum()
+        key = pd.MultiIndex.from_frame(daily[["dia", "esfera", "fornecedor_tipo"]])
+        daily["valor"] = (daily.valor - excess.reindex(key).fillna(0.0).values).clip(lower=0.0)
         d = daily.groupby(["dia", "esfera"], as_index=False)[["contratos", "valor"]].sum()
         csv(d.round(2).sort_values(["dia", "esfera"]), out / "diario.csv")
         r["totals"] = {
@@ -122,9 +159,16 @@ def build(data: Path) -> dict:
         "log_edges": [6 + i / 4 for i in range(0, 21)],
         "log_hist": np.histogram(np.log10(c.v[c.v >= 1e6]).clip(6, 11 - 1e-9), bins=[6 + i / 4 for i in range(0, 21)])[0].tolist(),
         "median": float(c.v.median()) if len(c) else None,
-        "implausible": {"contratos": int(c.suspeito.sum()), "publicado": float(_money(c.valor_global)[c.suspeito == 1].sum()),
+        "implausible": {"contratos": int((c.suspeito == 1).sum()), "publicado": float(_money(c.valor_global)[c.suspeito == 1].sum()),
                         "usado": float(c.v[c.suspeito == 1].sum()), "ratio": IMPLAUSIBLE},
+        "left_out": {"contratos": len(gone), "publicado": float(_money(gone.valor_global).sum()), "cap": CAP, "town_years": TOWN_YEARS},
     }
+    g = gone.assign(valor_inicial=_money(gone.valor_inicial), valor_publicado=_money(gone.valor_global), objeto=gone.objeto.str.slice(0, OBJ),
+                    fornecedor_nome=gone.fornecedor_nome.where(gone.fornecedor_tipo != "PF", ""),   # the typo is the buyer's, not the person's
+                    receita=pd.to_numeric(gone.municipio_ibge.map(rcl), errors="coerce").where(gone.esfera == "M"))
+    csv(g.sort_values(["valor_publicado", "controle"], ascending=[False, True])[
+        ["controle", "publicacao", "orgao", "esfera", "uf", "municipio_ibge", "fornecedor_nome", "objeto", "valor_inicial", "valor_publicado", "receita"]].round(2),
+        out / "descartados.csv")
     top = c.sort_values(["v", "controle"], ascending=[False, True]).head(TOP).copy()
     top["objeto"] = top.objeto.str.slice(0, OBJ)
     csv(top[["controle", "publicacao", "assinatura", "orgao", "esfera", "uf", "municipio_ibge", "categoria", "fornecedor",
@@ -243,7 +287,7 @@ def build(data: Path) -> dict:
 
     # ---------------------------------------------------------- barred suppliers
     if len(sanc):
-        sv = sanc.assign(v=_money(sanc.valor_global))
+        sv = sanc
         r["sanctioned"] = {"by_cobre_sphere": sv.groupby(["cobre", "esfera"]).agg(contratos=("controle", "nunique"), valor=("v", "sum"))
                            .reset_index().to_dict("records"),
                            "suppliers": int(sv.fornecedor.nunique())}

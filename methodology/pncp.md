@@ -111,7 +111,34 @@ price adjustments, stays around ten to thirteen times its first year. A
 contract whose global value is more than 15 times its initial value is
 counted at its initial value and marked "fixed". On the first day read, 15
 contracts were, publishing R$ 66.7 billion that count as R$ 96.6 million.
-The sanctions page uses the same rule for the contracts it shows.
+
+Other typos inflate the initial value too, so the 15-times rule can't see
+them: R$ 3.9 trillion for neonatal care in the Federal District, R$ 1
+trillion of equipment for a town that takes in R$ 275 million a year, a
+commemorative coin at R$ 103 billion. A contract has no value to trust, and
+is left out of every total and ranking, when what it would count at is:
+
+- over R$ 10 billion. The largest real contracts in the first 198 days read
+  are 30-year public-private partnerships of R$ 6.7 to 7.9 billion (schools
+  and a hospital complex in Minas Gerais). Everything above R$ 10 billion was
+  a typo: 435 police motorcycles at R$ 17.7 billion, road repairs in one
+  Porto Alegre district at R$ 240 billion;
+- or, for a town's bodies, over three years of the town's whole net current
+  revenue (RCL, from its latest payroll report on Siconfi, see
+  [siconfi.md](siconfi.md)). Real large town contracts reach about 1.5
+  years of revenue: bus and sewage concessions that users pay for, over
+  decades. Above three years they were paving ten streets, building 25
+  houses or buying fuel, at R$ 1 to 3 billion in towns of R$ 50 to 250
+  million a year.
+
+In the first 198 days, 45 contracts were left out, publishing R$ 18.8
+trillion; without them the daily totals fall from R$ 19.3 trillion to R$ 476
+billion (about R$ 880 billion a year, the scale of Brazil's public
+purchasing). The daily totals sum published values, so each day loses what
+its typos added: the published value minus the value counted. The page
+lists every contract left out with what it was published at. A town with no
+report read on Siconfi gets only the R$ 10 billion test. The sanctions page
+uses the same rules for the contracts it shows.
 
 **Suppliers and buyers.** A supplier is a CNPJ (or a masked CPF). A buyer is
 a contracting body's CNPJ. Concentration among suppliers is the Gini

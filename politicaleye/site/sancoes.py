@@ -27,7 +27,7 @@ import pandas as pd
 
 from .common import csv, write_json
 from .deputados import party_in
-from .pncp import IMPLAUSIBLE
+from .pncp import plausible, town_revenue
 
 # Sanctions that bar contracting: the same rule as politicaleye.pncp.build.BARS.
 BARS = re.compile(r"^(Impedimento|Declaração de Inidoneidade|Suspensão$)")
@@ -358,14 +358,15 @@ def build(data: Path) -> dict:
     big = [pd.read_csv(p, dtype=str, keep_default_na=False) for p in sorted((data / "pncp" / "contratos").glob("*.csv"))]
     big = pd.concat(big, ignore_index=True) if big else pd.DataFrame()
     sanc_c = _read(data / "pncp" / "contratos_sancionados.csv")
-    ccols = ["controle", "assinatura", "orgao", "esfera", "uf", "fornecedor", "objeto", "valor_global", "valor_inicial"]
+    rcl = town_revenue(data)
+    if len(sanc_c):   # the contracts page's typo rules (methodology/pncp.md#implausible-values); values left out there are left out here
+        sanc_c = plausible(sanc_c, rcl).query("suspeito != 2")
+    ccols = ["controle", "assinatura", "orgao", "esfera", "uf", "municipio_ibge", "fornecedor", "objeto", "valor_global", "valor_inicial"]
     contracts = pd.concat([x[ccols] for x in (big, sanc_c) if len(x)], ignore_index=True) if len(big) or len(sanc_c) else pd.DataFrame(columns=ccols)
     contracts = contracts[contracts.fornecedor.isin(cnpjs)].drop_duplicates("controle")
     cobre = sanc_c.groupby("controle").cobre.agg(_best) if len(sanc_c) else pd.Series(dtype=str)
     contracts["cobre"] = contracts.controle.map(cobre).fillna("")
-    # The same typo rule as the contracts page: a global value over 15 times the initial one counts at the initial value.
-    vg, vi = _money(contracts.valor_global), _money(contracts.valor_inicial)
-    contracts["valor_global"] = vg.where(~((vi > 0) & (vg > IMPLAUSIBLE * vi)), vi)
+    contracts = plausible(contracts, rcl).query("suspeito != 2").assign(valor_global=lambda t: t.v)
 
     # Campaign suppliers on election day.
     tse = []
@@ -486,7 +487,7 @@ def build(data: Path) -> dict:
     pd_ = pay.assign(cepim=pay.favorecido.isin(cep_set))
     by_year = pd_[pd_.barrado != ""].groupby(["ano", "barrado"]).valor.sum().unstack(fill_value=0.0)
     by_year = by_year.reindex(columns=["sim", "possivel", "nao"], fill_value=0.0).reset_index()
-    sig = sanc_c.assign(v=_money(sanc_c.valor_global)) if len(sanc_c) else pd.DataFrame(columns=["cobre", "fornecedor", "v"])
+    sig = sanc_c if len(sanc_c) else pd.DataFrame(columns=["cobre", "fornecedor", "v"])
     dias = _read(data / "pncp" / "dias.csv")
     resumo["money"] = {
         "pncp": {"by_cobre": sig.groupby("cobre").agg(contratos=("v", "size"), empresas=("fornecedor", "nunique"), valor=("v", "sum"))

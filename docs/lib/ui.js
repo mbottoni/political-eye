@@ -42,7 +42,7 @@ export const plural = (n, word, many = `${word}s`) => `${fmt(n)} ${n === 1 ? wor
 export function brl(x, digits = 2) {
   if (x == null || x === "" || Number.isNaN(+x)) return "–";
   const v = +x, a = Math.abs(v), s = v < 0 ? "−" : "";
-  const [d, w] = a >= 1e9 ? [1e9, " bn"] : a >= 1e6 ? [1e6, " M"] : a >= 1e3 ? [1e3, " k"] : [1, ""];
+  const [d, w] = a >= 1e12 ? [1e12, " tn"] : a >= 1e9 ? [1e9, " bn"] : a >= 1e6 ? [1e6, " M"] : a >= 1e3 ? [1e3, " k"] : [1, ""];
   const n = a / d, whole = Math.abs(n - Math.round(n)) < 1e-6;
   // digits=0 (axis ticks, rough labels): whole numbers stay whole, R$ 1.5 bn keeps its decimal so ticks never repeat.
   const dd = d === 1 ? 0 : n >= 100 ? 0 : n >= 10 ? (digits === 0 && whole ? 0 : 1) : digits === 0 ? (whole ? 0 : 1) : digits;

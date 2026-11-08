@@ -50,9 +50,10 @@ function topBar(here) {
       s.pages.map((p) => h("a", { href: `../${p.key}/`, textContent: L(p.pt, p.en), ...(p.key === here ? { "aria-current": "page" } : {}) }))))));
   document.addEventListener("click", (e) => { if (!menu.contains(e.target)) menu.open = false; });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") menu.open = false; });
-  const brand = h("a", { className: "brand", href: "../", "aria-label": "political-eye" }, logo(), "political-eye");
+  const brand = h("a", { className: "brand", href: "../", "aria-label": "political-eye" }, logo(), h("span", { className: "brand-name", textContent: "political-eye" }));
   return h("header", { className: "top" }, h("div", { className: "wrap" }, brand,
-    h("nav", { className: "nav", "aria-label": L("Navegação", "Navigation") }, menu,
+    h("nav", { className: "nav", "aria-label": L("Navegação", "Navigation") },
+      h("a", { className: "nav-feature", href: "../ranking/", textContent: "Ranking", ...(here === "ranking" ? { "aria-current": "page" } : {}) }), menu,
       h("a", { className: "hide-sm", href: `${REPO}/blob/main/METHODOLOGY.md`, textContent: L("Metodologia", "Methodology") }),
       h("a", { className: "hide-sm", href: REPO, textContent: "GitHub" })),
     langSwitch()));

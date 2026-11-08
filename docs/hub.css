@@ -160,8 +160,8 @@ a.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-co
   .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 44px; }
 }
 @media (max-width: 760px) {
-  .top .nav { display: none; }   /* outranks the shared top bar's .top .nav */
-  .lang { margin-left: auto; }
+  .top .nav a:not(.nav-feature) { display: none; }   /* on phones the bar keeps only the ranking */
+  .top .nav { margin-left: auto; }
   .steps { grid-template-columns: 1fr; }
   .facts { grid-template-columns: repeat(2, auto); }
   .sec-head { flex-direction: column; align-items: flex-start; }

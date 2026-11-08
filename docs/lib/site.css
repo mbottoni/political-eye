@@ -56,6 +56,9 @@ a { color: var(--ink2); text-underline-offset: 2px; }
 .top .nav { display: flex; align-items: center; gap: 4px; margin-left: auto; }
 .top .nav > a, .pages > summary { color: var(--ink2); text-decoration: none; font-size: 14px; padding: 6px 10px; border-radius: 8px; cursor: pointer; }
 .top .nav > a:hover, .pages > summary:hover, .pages[open] > summary { color: var(--ink); background: var(--surface); }
+.top .nav a.nav-feature { color: var(--ink); font-weight: 600; border: 1px solid color-mix(in srgb, var(--line) 50%, transparent);
+  background: color-mix(in srgb, var(--line) 10%, transparent); border-radius: 999px; padding: 5px 13px; }
+.top .nav a.nav-feature:hover, .top .nav a.nav-feature[aria-current="page"] { background: color-mix(in srgb, var(--line) 20%, transparent); }
 .pages { position: relative; }
 .pages > summary { list-style: none; display: inline-flex; align-items: center; gap: 6px; }
 .pages > summary::-webkit-details-marker { display: none; }
@@ -191,6 +194,9 @@ footer { margin-top: 20px; font-size: 12px; color: var(--muted); max-width: 980p
   .tile .value { font-size: 24px; }
   .tablebar { gap: 6px; }
   .tablebar button { padding: 4px 8px; }
+}
+@media (max-width: 440px) {
+  .brand-name { display: none; }   /* the logo alone, so Ranking, the page menu and the language switch fit */
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
 

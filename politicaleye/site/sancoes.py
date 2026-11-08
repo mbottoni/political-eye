@@ -313,7 +313,6 @@ def build(data: Path) -> dict:
     pt["share"] = (pt.pago_sancionadas / pt.pago_total).where(pt.pago_total > 0).round(6)
     pt["share_sim"] = (pt.pago_sim / pt.pago_total).where(pt.pago_total > 0).round(6)
     pt = pt.reset_index()
-    by_party_year = (ind.assign(ano=ind.ano).groupby(["partido", "ano"])[["pago", "pago_sancionadas"]].sum().reset_index())
 
     # Contracts: the PNCP's large contracts of these companies, and every contract signed while barred.
     big = [pd.read_csv(p, dtype=str, keep_default_na=False) for p in sorted((data / "pncp" / "contratos").glob("*.csv"))]
@@ -572,7 +571,6 @@ def build(data: Path) -> dict:
     csv(au[["autor_codigo", "autor", "kind", "pessoa", "partido", "uf", "primeiro", "ultimo", "emendas", "pago_total",
             "pago_sancionadas", "pago_sim", "share", "empresas_sancionadas"]].sort_values("autor_codigo"), out / "autores.csv")
     csv(pt.sort_values("partido"), out / "partidos.csv")
-    csv(by_party_year.round(2).sort_values(["partido", "ano"]), out / "partidos_ano.csv")
     resumo["authors"] = {
         "with_payments": int(len(au)), "with_barred": int((au.pago_sancionadas > 0).sum()),
         "individual_per_million": float(1e6 * ind.pago_sancionadas.sum() / ind.pago.sum()) if ind.pago.sum() else None,

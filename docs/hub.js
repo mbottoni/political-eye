@@ -2,6 +2,8 @@
 import { brl, css, data, el, fmt, pct } from "./lib/ui.js";
 
 const sum = (xs) => xs.reduce((a, b) => a + b, 0);
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const month = (m) => `${MONTHS[+m.slice(5, 7) - 1]} ${m.slice(0, 4)}`;
 const NS = "http://www.w3.org/2000/svg";
 const svg = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); return e; };
 
@@ -42,17 +44,17 @@ const CARDS = {
   async camara() {
     const net = (await data("site/camara/networks.csv")).filter((r) => r.modularity_party !== "");
     const rows = lastMonths(net, 60), last = rows[rows.length - 1];
-    return { value: fmt(+last.modularity_party, 2), sub: `party polarisation of the co-voting graph, ${last.month}`, series: rows.map((r) => +r.modularity_party), opts: { labels: [rows[0].month.slice(0, 4), last.month.slice(0, 4)] } };
+    return { value: fmt(+last.modularity_party, 2), sub: `party polarisation of the co-voting graph, ${month(last.month)}`, series: rows.map((r) => +r.modularity_party), opts: { labels: [rows[0].month.slice(0, 4), last.month.slice(0, 4)] } };
   },
   async orientacoes() {
     const idx = (await data("camara/index.csv")).filter((r) => r.with_gov !== "");
     const rows = lastMonths(idx, 60), last = rows[rows.length - 1];
-    return { value: pct(+last.with_gov), sub: `of deputies' votes followed the government, ${last.month}`, series: rows.map((r) => +r.with_gov), opts: { labels: [rows[0].month.slice(0, 4), last.month.slice(0, 4)] } };
+    return { value: pct(+last.with_gov), sub: `of deputies' votes followed the government in ${month(last.month)}`, series: rows.map((r) => +r.with_gov), opts: { labels: [rows[0].month.slice(0, 4), last.month.slice(0, 4)] } };
   },
   async senado() {
     const idx = (await data("senado/index.csv")).filter((r) => r.with_gov !== "");
     const rows = lastMonths(idx, 60), last = rows[rows.length - 1];
-    return { value: pct(+last.with_gov), sub: `of senators' votes followed the government, 12 months to ${last.month}`, series: rows.map((r) => +r.with_gov), opts: { labels: [rows[0].month.slice(0, 4), last.month.slice(0, 4)] } };
+    return { value: pct(+last.with_gov), sub: `of senators' votes followed the government, in the 12 months to ${month(last.month)}`, series: rows.map((r) => +r.with_gov), opts: { labels: [rows[0].month.slice(0, 4), last.month.slice(0, 4)] } };
   },
   async deputados() {
     const d = await data("site/deputados/deputados_57.csv");
@@ -104,7 +106,7 @@ function hl(key, num, txt) {
 const HIGHLIGHTS = {
   async gov() {
     const idx = (await data("camara/index.csv")).filter((r) => r.with_gov !== ""), last = idx[idx.length - 1];
-    hl("gov", pct(+last.with_gov), `of the Câmara's votes followed the government's orientation in ${last.month}`);
+    hl("gov", pct(+last.with_gov), `of the Câmara's votes followed the government's orientation in ${month(last.month)}`);
   },
   async mayors() {
     const d = await data("site/deputados/deputados_57.csv"), m = (r) => +r.emendas_pago || 0, w = d.filter((r) => r.prefeito_mesmo_partido !== "" && m(r) > 0);

@@ -466,8 +466,8 @@ function timeline(box, o) {
   box.replaceChildren();
   const rows = o.rows;
   if (!rows.length) { box.append(el("p", { className: "empty", textContent: "No dated sanction." })); return; }
-  const lw = 150, mr = 12, rh = 18, mt = 4, mb = 24, H = mt + rh * (rows.length + o.lanes.length) + mb;
-  const w = Math.max(320, box.clientWidth || 600), s = C.svg("svg", { width: w, height: H, role: "img" });
+  const w = Math.max(300, box.clientWidth || 600), lw = Math.round(Math.min(170, w * 0.3)), mr = 12, rh = 18, mt = 4, mb = 24, H = mt + rh * (rows.length + o.lanes.length) + mb;
+  const s = C.svg("svg", { width: w, height: H, role: "img" });
   const t = (d) => Date.parse(`${d}T00:00:00Z`);
   const all = [...rows.flatMap((x) => [x.from, x.to]), ...o.lanes.flatMap((l) => l.points.map((p) => p.date))].filter(Boolean).map(t);
   const lo0 = Math.min(...all), hi0 = Math.max(...all, t(o.today)), pad = Math.max(30 * 864e5, (hi0 - lo0) * 0.04);
@@ -485,7 +485,7 @@ function timeline(box, o) {
   const hit = (node, kids) => { node.addEventListener("pointermove", (ev) => showTip(ev, kids)); node.addEventListener("pointerleave", hideTip); };
   rows.forEach((x, i) => {
     const y = mt + i * rh;
-    const lab = C.svg("text", { x: lw - 6, y: y + rh / 2 + 4, "text-anchor": "end", "font-size": 11, fill: ink2 }); lab.textContent = x.label.length > 24 ? `${x.label.slice(0, 23)}…` : x.label; s.append(lab);
+    const lab = C.svg("text", { x: lw - 6, y: y + rh / 2 + 4, "text-anchor": "end", "font-size": 11, fill: ink2 }); const fit = Math.floor((lw - 8) / 6.2); lab.textContent = x.label.length > fit ? `${x.label.slice(0, fit - 1)}…` : x.label; s.append(lab);
     const a = sx(x.from), b = x.to ? sx(x.to) : today;
     const r = C.svg("rect", { x: a, y: y + 3, width: Math.max(3, b - a), height: rh - 6, rx: 3, fill: x.color, opacity: x.to ? 1 : 0.75 });
     hit(r, [el("strong", { textContent: x.title }), ...x.tip.map((t2) => el("div", { className: "row", textContent: t2 }))]);
@@ -539,7 +539,7 @@ async function company(root) {
     box.append(tl);
     tiles(tl, [
       { label: "Sanctions listed", value: fmt(S.length), sub: `${fmt(x.vigentes)} in force on ${r.snapshot}${n(x.barra) ? ", barring contracts" : ""}` },
-      { label: "Bodies that sanctioned it", value: fmt(x.orgaos), sub: `in ${fmt(x.ufs)} states` },
+      { label: "Bodies that sanctioned it", value: fmt(x.orgaos), sub: n(x.ufs) ? `in ${plural(+x.ufs, "state")}` : "federal, or no state recorded" },
       { label: "Amendment money received", value: brl(n(x.emendas)), sub: n(x.emendas_sancionada) ? `${brl(x.emendas_sancionada)} while barred` : "none while barred" },
       { label: "Large public contracts", value: fmt(x.contratos), sub: n(x.contratos_sancionada) ? `${fmt(x.contratos_sancionada)} signed while barred` : "PNCP, R$ 1 M or more, history being read" },
     ]);

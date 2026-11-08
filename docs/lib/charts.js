@@ -278,7 +278,8 @@ export function histogram(box, o) {
   });
   for (const r of o.refs || []) {
     s.append(svg("line", { x1: sx(r.x), x2: sx(r.x), y1: mt - 6, y2: H - mb, stroke: r.color || ink2, "stroke-width": 1.5, "stroke-dasharray": "4 3" }));
-    s.append(text(r.label, { x: sx(r.x) + 3, y: mt - 8, "font-size": 10, fill: ink2 }));
+    const end = sx(r.x) > w * 0.8;
+    s.append(text(r.label, { x: sx(r.x) + (end ? -3 : 3), y: mt - 8, "text-anchor": end ? "end" : "start", "font-size": 10, fill: ink2 }));
   }
   s.setAttribute("aria-label", o.title || "Histogram");
   box.append(s);
@@ -295,10 +296,12 @@ export function scatter(box, o) {
   box.replaceChildren();
   const P = o.points.filter((p) => p.x != null && p.y != null && !Number.isNaN(+p.x) && !Number.isNaN(+p.y));
   if (!P.length) { box.append(el("p", { className: "empty", textContent: o.empty || "No data." })); return; }
-  const H = o.height || 320, ml = 56, mr = 14, mt = 12, mb = 38;
+  const H = o.height || 320, mr = 14, mt = 12, mb = 38;
   const tx = (v) => (o.x?.log ? Math.log10(Math.max(v, 1)) : +v), ty = (v) => (o.y?.log ? Math.log10(Math.max(v, 1)) : +v);
   const xs = P.map((p) => tx(p.x)), ys = P.map((p) => ty(p.y));
   const xd = [o.x?.min ?? Math.min(...xs), o.x?.max ?? Math.max(...xs)], yd = [o.y?.min ?? Math.min(...ys), o.y?.max ?? Math.max(...ys)];
+  const yfmt0 = o.y?.format || ((v) => fmt(v, 2));
+  const ml = marginFor(niceTicks(yd[0], yd[1], 4).map((v) => yfmt0(o.y?.log ? 10 ** v : v))) + (o.y?.label ? 18 : 0);
   const { w, s } = frame(box, H);
   const sx = linear(xd[0], xd[1] === xd[0] ? xd[0] + 1 : xd[1], ml, w - mr), sy = linear(yd[0], yd[1] === yd[0] ? yd[0] + 1 : yd[1], H - mb, mt);
   const grid = css("--grid"), muted = css("--muted"), surface = css("--surface"), ink2 = css("--ink2");

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parliamentary Amendments · political-eye</title>
+<meta name="description" content="Every parliamentary amendment to Brazil's federal budget since 2014: who sent money where, what was paid, and who received it.">
+<link rel="stylesheet" href="../lib/site.css">
+</head>
+<body>
+<main>
+  <header>
+    <p class="crumb"><a href="../">political-eye</a> / Parliamentary amendments</p>
+    <h1>Parliamentary amendments</h1>
+    <p>Every year deputies, senators, state benches and committees direct slices of the federal budget to places of their choosing. This page follows that money since 2014: how much was committed and actually paid, where it went, who sent it and who received it, including the "Pix" transfers sent straight to town halls. From the Portal da Transparência (CGU), refreshed daily.</p>
+  </header>
+  <nav class="tabs">
+    <button data-tab="overview">Overview</button>
+    <button data-tab="map">Map</button>
+    <button data-tab="authors">Authors</button>
+    <button data-tab="flows">Where it goes</button>
+    <button data-tab="recipients">Recipients</button>
+    <button data-tab="timing">Timing</button>
+  </nav>
+  <section id="tab-overview" role="tabpanel"></section>
+  <section id="tab-map" role="tabpanel" hidden></section>
+  <section id="tab-authors" role="tabpanel" hidden></section>
+  <section id="tab-flows" role="tabpanel" hidden></section>
+  <section id="tab-recipients" role="tabpanel" hidden></section>
+  <section id="tab-timing" role="tabpanel" hidden></section>
+  <footer>
+    Committed (empenhado), settled (liquidado) and paid amounts are as the Portal publishes them, cumulative to today; an amendment's year is its budget year. Rows without an amendment code (all of 2014, and some bench, committee and rapporteur lines up to 2020) count in every total but have no author. Payments to private individuals are summed, never named. Rules and gaps: <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/emendas.md">methodology/emendas.md</a>. Source: Portal da Transparência (CGU).
+  </footer>
+</main>
+<noscript>This page needs JavaScript. The data is at <a href="https://github.com/mbottoni/political-eye/tree/main/data/emendas">github.com/mbottoni/political-eye</a>.</noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

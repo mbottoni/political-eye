@@ -48,6 +48,12 @@ function upTo(hi, n = 4) {
   if (t.length > 1 && t[t.length - 1] < hi) t.push(+(t[t.length - 1] + t[1] - t[0]).toFixed(10));
   return t;
 }
+/** Ticks for a log10 axis (lo, hi in log10 units): decades, plus 2× and 5× when the range spans under three decades. */
+function logTicks(lo, hi) {
+  const out = [];
+  for (let k = Math.floor(lo); k <= Math.ceil(hi); k++) for (const m of hi - lo < 3 ? [1, 2, 5] : [1]) { const v = k + Math.log10(m); if (v >= lo - 1e-9 && v <= hi + 1e-9) out.push(v); }
+  return out.length >= 2 ? out : niceTicks(lo, hi, 4);
+}
 const linear = (d0, d1, r0, r1) => (v) => (d1 === d0 ? (r0 + r1) / 2 : r0 + ((v - d0) / (d1 - d0)) * (r1 - r0));
 export const monthIndex = (m) => +m.slice(0, 4) * 12 + (+m.slice(5, 7) - 1);
 export const monthLabel = (i) => `${Math.floor(i / 12)}-${String((i % 12) + 1).padStart(2, "0")}`;
@@ -308,14 +314,15 @@ export function scatter(box, o) {
   const xs = P.map((p) => tx(p.x)), ys = P.map((p) => ty(p.y));
   const xd = [o.x?.min ?? Math.min(...xs), o.x?.max ?? Math.max(...xs)], yd = [o.y?.min ?? Math.min(...ys), o.y?.max ?? Math.max(...ys)];
   const yfmt0 = o.y?.format || ((v) => fmt(v, 2));
-  const ml = marginFor(niceTicks(yd[0], yd[1], 4).map((v) => yfmt0(o.y?.log ? 10 ** v : v))) + (o.y?.label ? 18 : 0);
+  const yTicks = o.y?.log ? logTicks(yd[0], yd[1]) : niceTicks(yd[0], yd[1], 4);
+  const ml = marginFor(yTicks.map((v) => yfmt0(o.y?.log ? 10 ** v : v))) + (o.y?.label ? 18 : 0);
   const { w, s } = frame(box, H);
   const sx = linear(xd[0], xd[1] === xd[0] ? xd[0] + 1 : xd[1], ml, w - mr), sy = linear(yd[0], yd[1] === yd[0] ? yd[0] + 1 : yd[1], H - mb, mt);
   const grid = css("--grid"), muted = css("--muted"), surface = css("--surface"), ink2 = css("--ink2");
   const xf = o.x?.format || ((v) => fmt(v, 2)), yf = o.y?.format || ((v) => fmt(v, 2));
   const unlog = (v, log) => (log ? 10 ** v : v);
-  for (const v of niceTicks(yd[0], yd[1], 4)) { s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(v), y2: sy(v), stroke: grid })); s.append(text(yf(unlog(v, o.y?.log)), { x: ml - 6, y: sy(v) + 4, "text-anchor": "end", "font-size": 10, fill: muted })); }
-  for (const v of niceTicks(xd[0], xd[1], Math.max(2, Math.floor((w - ml) / 90)))) { s.append(svg("line", { x1: sx(v), x2: sx(v), y1: mt, y2: H - mb, stroke: grid })); s.append(text(xf(unlog(v, o.x?.log)), { x: sx(v), y: H - mb + 14, "text-anchor": "middle", "font-size": 10, fill: muted })); }
+  for (const v of yTicks) { s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(v), y2: sy(v), stroke: grid })); s.append(text(yf(unlog(v, o.y?.log)), { x: ml - 6, y: sy(v) + 4, "text-anchor": "end", "font-size": 10, fill: muted })); }
+  for (const v of o.x?.log ? logTicks(xd[0], xd[1]) : niceTicks(xd[0], xd[1], Math.max(2, Math.floor((w - ml) / 90)))) { s.append(svg("line", { x1: sx(v), x2: sx(v), y1: mt, y2: H - mb, stroke: grid })); s.append(text(xf(unlog(v, o.x?.log)), { x: sx(v), y: H - mb + 14, "text-anchor": "middle", "font-size": 10, fill: muted })); }
   if (o.x?.label) s.append(text(o.x.label, { x: (ml + w - mr) / 2, y: H - 4, "text-anchor": "middle", "font-size": 11, fill: ink2 }));
   if (o.y?.label) s.append(text(o.y.label, { x: 12, y: (mt + H - mb) / 2, "text-anchor": "middle", "font-size": 11, fill: ink2, transform: `rotate(-90 12 ${(mt + H - mb) / 2})` }));
   if (o.diagonal) {

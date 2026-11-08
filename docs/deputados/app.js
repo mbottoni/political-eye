@@ -142,15 +142,15 @@ async function profile(root) {
       got.members.then((xs) => xs.flat().filter((x) => x.id === id)), got.ideal]);
     const pg = new Map(P.map((x) => [`${partyKey(x.partido)}|${x.month}`, x]));
     const c1 = chart(), c2 = chart(), g = el("div", { className: "grid2" });
-    g.append(card("Month by month", "Their share of votes with the government and with their party's orientation; in grey, the government support of the party they were in that month.", c1),
+    g.append(card("Month by month", "Their share of votes with the government and with their party's orientation; in grey, the government support of the party they were in that month. Months where they cast fewer than five contested votes are left out (gaps).", c1),
       card("Where they sit on the main voting divide", "Their position each month on the first dimension of the roll calls (PT's side negative), against the middle half (shaded) and the median of the party they were in that month.", c2));
     box.append(g);
     L.later(() => C.line(c1, {
       x: "month", y: { min: 0, max: 1, format: (v) => pct(v) }, marks: GOVERNMENTS, bands: GAP, height: 240,
       series: [
         { name: "Their party with the government", color: css("--other"), width: 1.5, points: monthly.map((x) => [x.month, n(pg.get(`${partyKey(x.partido)}|${x.month}`)?.with_gov)]) },
-        { name: "With the government", color: C.slot(1), points: monthly.map((x) => [x.month, n(x.with_gov)]) },
-        { name: "With their party", color: C.slot(2), points: monthly.map((x) => [x.month, n(x.with_party)]) },
+        { name: "With the government", color: C.slot(1), points: monthly.map((x) => [x.month, +x.n_votes >= 5 ? n(x.with_gov) : null]) },
+        { name: "With their party", color: C.slot(2), points: monthly.map((x) => [x.month, +x.n_votes >= 5 ? n(x.with_party) : null]) },
       ],
       empty: "No contested votes in this legislature.",
     }));
@@ -198,7 +198,7 @@ async function profile(root) {
         { label: "Paid to barred companies", value: brl(sanc), sub: sanc ? `${plural(r.sancoes_empresas, "company", "companies")} under a CEIS or CNEP sanction, every budget since 2015` : "every budget since 2015" },
       ]);
       if (r.prefeito_mesmo_partido != null) am.append(finding(`${pct(r.prefeito_mesmo_partido)} of the money that reached a town went to towns whose mayor was from their party that year. By chance it would be ${pct(r.prefeito_base)}: the share of ${r.uf}'s towns their party ran.`));
-      const c3 = chart(), mbox = chart(), side = el("div"), g3 = el("div", { className: "grid2" });
+      const c3 = chart(), mbox = chart(), side = el("div"), g3 = el("div", { className: "grid2", style: "margin-top:16px" });
       const home = UF_CODE[r.uf] || "";
       const paidAll = sum(places.map((x) => +x.pago)), outside = sum(places.filter((x) => x.uf !== r.uf).map((x) => +x.pago));
       const towns = places.filter((x) => x.municipio_ibge && x.municipio_ibge.startsWith(home));
@@ -337,18 +337,19 @@ async function parties(root) {
   };
   draw();
   const t = el("div");
-  root.append(card("Party by party", "Medians over the party's deputies (their latest party in the legislature), totals where noted; own-party towns and chance are weighted by money paid.", t));
-  table(t, big.concat([...D.parties.entries()].filter(([, ps]) => ps.length < 5)).map(([p, ps]) => ({
-    party: p, deputies: ps.length, with_party: median(ps.map((r) => r.with_party)), with_gov: median(ps.map((r) => r.with_gov)), pc1: median(ps.map((r) => r.pc1)), cross: median(ps.map((r) => r.cross_share)),
-    paid: sum(ps.map((r) => r.emendas_pago || 0)), paid_med: median(ps.map((r) => r.emendas_pago)), camp: median(ps.map((r) => r.campanha_total)), from_party: median(ps.map((r) => r.campanha_partido_share)),
-    own: sum(ps.map((r) => r.campanha_proprios || 0)), barred: sum(ps.map((r) => r.sancoes_pago_sancionadas || 0)),
-    may: wmean(ps, "prefeito_mesmo_partido"), may0: wmean(ps, "prefeito_base"),
-  })), [
-    { key: "party", label: "Party", text: true }, { key: "deputies", label: "Deputies" }, { key: "with_party", label: "With party", fmt: (v) => pct(v) }, { key: "with_gov", label: "With government", fmt: (v) => pct(v) },
-    { key: "pc1", label: "Position", fmt: (v) => fmt(v, 2) }, { key: "cross", label: "Cross-party ties", fmt: (v) => pct(v) }, { key: "paid_med", label: "Amendments paid, median", fmt: (v) => brl(v) },
-    { key: "paid", label: "Amendments paid, total", fmt: (v) => brl(v) }, { key: "camp", label: "Campaign, median", fmt: (v) => brl(v) }, { key: "from_party", label: "From party", fmt: (v) => pct(v) },
-    { key: "may", label: "To own-party towns", fmt: (v) => pct(v) }, { key: "may0", label: "By chance", fmt: (v) => pct(v) },
-    { key: "own", label: "Own money, total", fmt: (v) => brl(v) }, { key: "barred", label: "To barred firms, total", fmt: (v) => brl(v) },
+  root.append(card("Party by party", "Medians over the party's deputies who served 12 months or more in the legislature (substitutes who sat briefly have no amendments of their own), by their latest party; own-party towns and chance are weighted by money paid; barred firms is a total.", t));
+  table(t, big.concat([...D.parties.entries()].filter(([, ps]) => ps.length < 5)).map(([p, all]) => {
+    const ps = all.filter((r) => (r.meses || 0) >= 12);
+    return {
+      party: p, deputies: all.length, regular: ps.length, with_party: median(ps.map((r) => r.with_party)), with_gov: median(ps.map((r) => r.with_gov)), pc1: median(ps.map((r) => r.pc1)),
+      paid_med: median(ps.map((r) => r.emendas_pago)), camp: median(ps.map((r) => r.campanha_total)), from_party: median(ps.map((r) => r.campanha_partido_share)),
+      may: wmean(all, "prefeito_mesmo_partido"), may0: wmean(all, "prefeito_base"), barred: sum(all.map((r) => r.sancoes_pago_sancionadas || 0)),
+    };
+  }), [
+    { key: "party", label: "Party", text: true }, { key: "deputies", label: "Deputies" }, { key: "regular", label: "12+ months" }, { key: "with_party", label: "With party", fmt: (v) => pct(v) },
+    { key: "with_gov", label: "With gov.", fmt: (v) => pct(v) }, { key: "pc1", label: "Position", fmt: (v) => fmt(v, 2) }, { key: "paid_med", label: "Amendments paid", fmt: (v) => brl(v) },
+    { key: "may", label: "Own-party towns", fmt: (v) => pct(v) }, { key: "may0", label: "Chance", fmt: (v) => pct(v) }, { key: "camp", label: "Campaign", fmt: (v) => brl(v) },
+    { key: "from_party", label: "From party", fmt: (v) => pct(v) }, { key: "barred", label: "To barred firms", fmt: (v) => brl(v) },
   ], { sortBy: "deputies", pageSize: 40, name: `parties-${leg}` });
 }
 

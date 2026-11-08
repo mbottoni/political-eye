@@ -6,7 +6,7 @@ const OFFICES = ["Presidente", "Governador", "Senador", "Deputado Federal", "Dep
 const OFFICE = { Presidente: "President", Governador: "Governor", Senador: "Senator", "Deputado Federal": "Federal deputy", "Deputado Estadual": "State deputy", "Deputado Distrital": "District deputy (DF)" };
 const SHORT = { Presidente: "President", Governador: "Governor", Senador: "Senator", "Deputado Federal": "Fed. deputy", "Deputado Estadual": "State deputy", "Deputado Distrital": "DF deputy" };
 const ORIGINS = [["origem_partido", "Parties"], ["origem_pessoas_fisicas", "Individuals"], ["origem_proprios", "Own money"], ["origem_outros_candidatos", "Other candidates"], ["origem_financiamento_coletivo", "Crowdfunding"]];
-const officeColor = (o) => C.slot(OFFICES.indexOf(o) + 1);
+const officeColor = (o) => C.slot([1, 2, 3, 4, 5, 7][OFFICES.indexOf(o)]);   // slot 6 (green) is too close to slot 3
 const partyColor = (p) => (p === "PT" ? css("--a") : p === "PL" ? css("--b") : css("--other"));
 const PARTY_LEGEND = () => [{ label: "PT", color: css("--a") }, { label: "PL", color: css("--b") }, { label: "Other parties", color: css("--other") }];
 

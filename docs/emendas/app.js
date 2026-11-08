@@ -48,12 +48,12 @@ async function overview(root) {
     { label: "Paid since 2014", value: brl(sum(A.years.map((x) => A.get(x, null, "pago")))), sub: `${A.years.length} budgets` },
   ]);
   const g = el("div", { className: "grid2" }), c1 = chart(), c2 = chart();
-  g.append(card("Committed, by type", "Amounts the government committed to pay (empenhado), by budget year.", c1),
+  g.append(card("Committed, by type", "Amounts the government committed to pay (empenhado), by budget year. Rapporteur amendments before 2020 are the general rapporteur's adjustments to the budget (in 2016 and 2017 mostly health transfers to states), not the RP 9 of 2020–2022.", c1),
     card("Paid, by type", `What has actually been paid so far, including carried-over payments. ${A.current} is still running.`, c2));
   root.append(g);
   const tbl = { rows: A.rows, cols: [{ key: "ano", label: "Year", text: true }, { key: "tipo", label: "Type", text: true, fmt: (v) => typeName[v] || v }, { key: "emendas", label: "Amendments" }, { key: "empenhado", label: "Committed", fmt: (v) => brl(v) }, { key: "pago", label: "Paid", fmt: (v) => brl(v) }], name: "amendments-by-year" };
   const stackOf = (k) => TYPES.map(([t, name]) => ({ name, color: typeColor(t), values: A.years.map((x) => A.get(x, t, k)) }));
-  later(() => { C.stack(c1, { x: A.years, series: stackOf("empenhado"), format: (v) => brl(v, 0), table: tbl }); C.stack(c2, { x: A.years, series: stackOf("pago"), format: (v) => brl(v, 0) }); });
+  later(() => { C.stack(c1, { x: A.years, series: stackOf("empenhado"), format: (v) => brl(v, 0), table: tbl }); C.stack(c2, { x: A.years, series: stackOf("pago"), format: (v) => brl(v, 0), table: { ...tbl, name: "amendments-paid-by-year" } }); });
   const c3 = chart();
   root.append(card("How much of what is committed gets paid", "Paid as a share of committed, by budget year and type. Individual amendments are mandatory (impositivas) since a 2015 constitutional amendment, bench amendments since the 2020 budget; the rapporteur amendments of 2020–2022 (RP 9, the 'secret budget') were not, and were ended by the Supreme Court in December 2022.", c3));
   later(() => C.line(c3, {

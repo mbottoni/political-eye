@@ -153,7 +153,7 @@ async function rebels(root) {
     C.histogram(h, { values: vals, domain: [0.4, 1], bins: 30, refs: [{ x: med, label: L(`mediana ${pct(med)}`, `median ${pct(med)}`) }], format: (v) => pct(v),
       xLabel: L("parcela dos votos com a maioria do partido", "share of votes with their party's majority"), unit: L("deputados", "deputies") });
     table(tb, rows, [
-      { key: "nome", label: L("Deputado", "Deputy"), text: true }, { key: "partido", label: T.party, text: true }, { key: "uf", label: "UF", text: true },
+      { key: "nome", label: L("Deputado", "Deputy"), text: true }, { key: "partido", label: T.party, text: true }, { key: "uf", label: L("UF", "State"), text: true },
       { key: "meses", label: L("Meses", "Months"), fmt: (v) => fmt(v) }, { key: "n_votes", label: T.votes, fmt: (v) => fmt(v) }, { key: "with_majority", label: T.majority, fmt: (v) => pct(v, 1) },
       { key: "with_party", label: T.withParty, fmt: (v) => pct(v, 1) }, { key: "with_gov", label: T.gov, fmt: (v) => pct(v, 1) },
     ], { sortBy: "with_majority", desc: false, pageSize: 15, name: `deputies-${leg}` });
@@ -174,15 +174,18 @@ async function orient(root) {
     card(L("Com que frequência duas bancadas concordam", "How often two benches agree"),
       L("Das votações em que as duas orientaram Sim ou Não (obstrução conta como Não), a parcela em que deram a mesma orientação. Em ordem de concordância com o líder do governo.",
         "Of the roll calls where both oriented Sim or Não (obstruction as Não), the share where they gave the same orientation. Ordered by agreement with the Government's leader."), c2));
-  const KINDS = [["sim", "Sim"], ["nao", "Não"], ["obstrucao", "Obstrução"], ["liberado", L("Liberado", "Liberado (free)")], ["none", L("Nenhuma", "None given")]];
-  const bench = L("Bancada", "Party");
+  const KINDS = [["sim", "Sim"], ["nao", "Não"], ["obstrucao", L("Obstrução", "Obstruction")], ["liberado", L("Liberado", "Free vote")], ["none", L("Nenhuma", "None given")]];
+  const bench = L("Bancada", "Bench");
+  // The four leaders' benches are named in the page's language; parties, federations and blocs keep their published names.
+  const LEADERS = { Governo: L("Governo", "Government"), Maioria: L("Maioria", "Majority"), Minoria: L("Minoria", "Minority"), "Oposição": L("Oposição", "Opposition") };
+  const nameOf = (p) => LEADERS[p] || p;
   const draw = () => {
     controls.replaceChildren(select(T.leg, LEGS, leg, (v) => { leg = +v; setParam("leg", v, "57"); draw(); }));
     const rows = k.filter((r) => +r.legislatura === leg && +r.total >= 50).sort((a, b) => +b.total - +a.total).slice(0, 24);
     C.stack(c1, {
-      x: rows.map((r) => r.partido), height: 260, format: (v) => pct(v), rotate: true,
+      x: rows.map((r) => nameOf(r.partido)), height: 260, format: (v) => pct(v), rotate: true,
       series: KINDS.map(([key, name], i) => ({ name, color: key === "none" ? css("--other") : C.slot(i + 1), values: rows.map((r) => +r[key] / +r.total) })),
-      table: { rows, cols: [{ key: "partido", label: bench, text: true }, { key: "total", label: L("Votações", "Roll calls"), fmt: (v) => fmt(v) }, ...KINDS.map(([key, name]) => ({ key, label: name, fmt: (v) => fmt(v) }))], name: `orientations-${leg}` },
+      table: { rows: rows.map((r) => ({ ...r, nome: nameOf(r.partido) })), cols: [{ key: "nome", label: bench, text: true }, { key: "total", label: L("Votações", "Roll calls"), fmt: (v) => fmt(v) }, ...KINDS.map(([key, name]) => ({ key, label: name, fmt: (v) => fmt(v) }))], name: `orientations-${leg}` },
     });
     const keep = new Set(rows.map((r) => r.partido));
     const pairs = agree.filter((r) => +r.legislatura === leg && keep.has(r.a) && keep.has(r.b));
@@ -193,11 +196,12 @@ async function orient(root) {
     const toAnchor = (p) => (p === anchor ? 2 : val.get(`${p}|${anchor}`)?.[0] ?? -1);
     parties.sort((a, b) => toAnchor(b) - toAnchor(a));
     C.heatmap(c2, {
-      rows: parties, cols: parties, value: (i, j) => (i === j ? null : val.get(`${parties[i]}|${parties[j]}`)?.[0] ?? null), color: C.seq,
+      rows: parties.map(nameOf), cols: parties.map(nameOf), value: (i, j) => (i === j ? null : val.get(`${parties[i]}|${parties[j]}`)?.[0] ?? null), color: C.seq,
       cell: 30, rowHeight: 22, labelWidth: 150, colLabelHeight: 130, allColLabels: true, cellText: (v) => Math.round(v * 100), dark: (v) => v > 0.55,
-      tip: (i, j, v) => [el("strong", { textContent: L(`${parties[i]} e ${parties[j]}`, `${parties[i]} and ${parties[j]}`) }),
+      tip: (i, j, v) => [el("strong", { textContent: L(`${nameOf(parties[i])} e ${nameOf(parties[j])}`, `${nameOf(parties[i])} and ${nameOf(parties[j])}`) }),
         el("div", { className: "row", textContent: L(`concordaram em ${pct(v)} de ${fmt(val.get(`${parties[i]}|${parties[j]}`)[1])} votações`, `agreed on ${pct(v)} of ${fmt(val.get(`${parties[i]}|${parties[j]}`)[1])} roll calls`) })],
-      table: { rows: pairs.map((r) => ({ ...r, share: +r.agree / +r.n })), cols: [{ key: "a", label: bench, text: true }, { key: "b", label: bench, text: true }, { key: "n", label: L("Ambas orientaram", "Both oriented"), fmt: (v) => fmt(v) }, { key: "share", label: L("Concordaram", "Agreed"), fmt: (v) => pct(v) }], name: `agreement-${leg}` },
+      key: { color: C.seq, from: "0%", to: "100%", label: L("orientações iguais", "same orientation") },
+      table: { rows: pairs.map((r) => ({ ...r, a: nameOf(r.a), b: nameOf(r.b), share: +r.agree / +r.n })), cols: [{ key: "a", label: `${bench} A`, text: true }, { key: "b", label: `${bench} B`, text: true }, { key: "n", label: L("Ambas orientaram", "Both oriented"), fmt: (v) => fmt(v) }, { key: "share", label: L("Concordaram", "Agreed"), fmt: (v) => pct(v) }], name: `agreement-${leg}` },
     });
   };
   later(draw);

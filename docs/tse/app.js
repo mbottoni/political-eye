@@ -86,7 +86,7 @@ async function overview(root) {
     { name: L("Outros", "Other"), color: css("--other"), values: offices.map((o) => row(o).total - sum(ORIGINS.map(([k]) => row(o)[k]))) }];
   const tbl = {
     rows: R.map((r) => ({ ...r, office: OFFICE[r.cargo], per: r.total / r.candidatos, share: r.publico / r.total })),
-    cols: [{ key: "office", label: L("Cargo", "Office"), text: true }, { key: "candidatos", label: L("Candidatos", "Candidates") }, { key: "eleitos", label: L("Eleitos", "Elected") },
+    cols: [{ key: "office", label: L("Cargo", "Office"), text: true }, { key: "candidatos", label: L("Candidatos", "Candidates"), fmt: (v) => fmt(v) }, { key: "eleitos", label: L("Eleitos", "Elected"), fmt: (v) => fmt(v) },
       { key: "total", label: L("Declarado", "Declared"), fmt: (v) => brl(v) }, { key: "per", label: L("Por candidato", "Per candidate"), fmt: (v) => brl(v) },
       { key: "share", label: L("Parcela pública", "Public share"), fmt: (v) => pct(v) }, { key: "origem_proprios", label: L("Recursos próprios", "Own money"), fmt: (v) => brl(v) }],
     name: `money-by-office-${year}`,
@@ -169,7 +169,7 @@ async function parties(root) {
           note: L(`mediana de ${brl(r.mediana_incumbentes)} para seus ${fmt(r.incumbentes)} deputados em exercício, ${brl(r.mediana_novos)} para os demais`,
             `median ${brl(r.mediana_incumbentes)} for its ${fmt(r.incumbentes)} incumbents, ${brl(r.mediana_novos)} for the others`) })).sort((a, b) => b.value - a.value),
         format: (v) => `${fmt(v, v < 10 ? 1 : 0)}×`, labelWidth: 120, barHeight: 14, legend: PARTY_LEGEND(),
-        table: { rows: pts, cols: [{ key: "partido", label: L("Partido", "Party"), text: true }, { key: "incumbentes", label: L("Em exercício", "Incumbents") },
+        table: { rows: pts, cols: [{ key: "partido", label: L("Partido", "Party"), text: true }, { key: "incumbentes", label: L("Em exercício", "Incumbents"), fmt: (v) => fmt(v) },
           { key: "mediana_incumbentes", label: L("Mediana, em exercício", "Median, incumbents"), fmt: (v) => brl(v) }, { key: "mediana_novos", label: L("Mediana, demais", "Median, others"), fmt: (v) => brl(v) }], name: `incumbents-${year}` },
       }));
     } else {
@@ -181,10 +181,10 @@ async function parties(root) {
     body.append(card(L(`Todos os partidos: ${OFFICE[office]}`, `Every party: ${OFFICE[office]}`),
       L("Dinheiro público é o FEFC mais o Fundo Partidário; “por candidato” é o dinheiro público dividido pelos candidatos, e “10 maiores”, a parcela dele que foi para os 10 candidatos mais bem financiados. As medianas de deputados em exercício e dos demais valem para deputado federal.", "Public money is the FEFC plus the Party Fund. Medians of incumbents and others are for federal deputies."), tb));
     table(tb, P.filter((r) => r.cargo === office).map((r) => ({ ...r, per: r.publico / r.candidatos })), [
-      { key: "partido", label: L("Partido", "Party"), text: true }, { key: "candidatos", label: L("Candidatos", "Candidates") }, { key: "eleitos", label: L("Eleitos", "Elected") },
+      { key: "partido", label: L("Partido", "Party"), text: true }, { key: "candidatos", label: L("Candidatos", "Candidates"), fmt: (v) => fmt(v) }, { key: "eleitos", label: L("Eleitos", "Elected"), fmt: (v) => fmt(v) },
       { key: "total", label: L("Declarado", "Declared"), fmt: (v) => brl(v) }, { key: "publico", label: L("Público", "Public"), fmt: (v) => brl(v) },
       { key: "per", label: L("Por candidato", "Public per candidate"), fmt: (v) => brl(v) }, { key: "gini_publico", label: "Gini", fmt: (v) => fmt(v, 2) },
-      { key: "top10_publico", label: L("10 maiores", "Top 10's share"), fmt: (v) => pct(v) }, { key: "incumbentes", label: L("Em exercício", "Incumbents") },
+      { key: "top10_publico", label: L("10 maiores", "Top 10's share"), fmt: (v) => pct(v) }, { key: "incumbentes", label: L("Em exercício", "Incumbents"), fmt: (v) => fmt(v) },
       { key: "mediana_incumbentes", label: L("Mediana, em exercício", "Median, incumbents"), fmt: (v) => brl(v) }, { key: "mediana_novos", label: L("Mediana, demais", "Median, others"), fmt: (v) => brl(v) },
     ], { sortBy: "publico", pageSize: 40, name: `parties-${office}-${year}` });
   };
@@ -238,11 +238,12 @@ async function equity(root) {
     ]);
     const maxPub = Math.max(...parties.map((a) => a.publico), 1), MIN_PUB = 1e6;
     const scatterOf = (box, k, pk, floor, rule) => {
+      const ruled = rule(0.5) >= 0;   // Black candidates in 2018: no rule, so nobody is flagged and the largest parties are named
       const pts = parties.filter((a) => a.publico >= MIN_PUB).map((a) => {
-        const x = a[k] / a.candidatos, y = a[pk] / a.publico, need = rule(x), below = y < need - 0.005;
-        return { x, y, label: below ? a.partido : "", title: a.partido, color: below ? css("--critical") : css("--other"), r: 3 + 6 * Math.sqrt(a.publico / maxPub), z: below ? 1 : 0,
+        const x = a[k] / a.candidatos, y = a[pk] / a.publico, need = rule(x), below = ruled && y < need - 0.005;
+        return { x, y, label: below || !ruled ? a.partido : "", title: a.partido, color: below ? css("--critical") : css("--other"), r: 3 + 6 * Math.sqrt(a.publico / maxPub), z: below ? 1 : 0,
           rows: [L(`${pct(x, 1)} dos seus ${fmt(a.candidatos)} candidatos, ${pct(y, 1)} dos seus ${brl(a.publico)} de dinheiro público`, `${pct(x, 1)} of its ${fmt(a.candidatos)} candidates, ${pct(y, 1)} of its ${brl(a.publico)} public money`),
-            below ? L(`▼ abaixo da regra em ${fmt(100 * (need - y), 1)} pontos`, `▼ below the rule by ${fmt(100 * (need - y), 1)} points`) : L("✓ cumpre a regra", "✓ meets the rule")] };
+            ...(!ruled ? [] : [below ? L(`▼ abaixo da regra em ${fmt(100 * (need - y), 1)} pontos`, `▼ below the rule by ${fmt(100 * (need - y), 1)} points`) : L("✓ cumpre a regra", "✓ meets the rule")])] };
       });
       const up = (v) => Math.min(1, Math.ceil((v + 0.03) * 10) / 10), down = (v) => Math.max(0, Math.floor((v - 0.03) * 10) / 10);
       const xs = pts.map((p) => p.x), ys = pts.map((p) => p.y);
@@ -251,7 +252,7 @@ async function equity(root) {
         points: pts, x: { label: L("Parcela dos candidatos do partido", "Share of the party's candidates"), format: (v) => pct(v), min: xd[0], max: xd[1] },
         y: { label: L("Parcela do seu dinheiro público", "Share of its public money"), format: (v) => pct(v), min: yd[0], max: yd[1] },
         diagonal: { label: L("proporcional", "in proportion") }, refs: floor ? [{ y: 0.3, label: L("piso de 30%", "30% floor") }] : [], labels: 10, labelRank: (a, b) => b.r - a.r, height: 340,
-        legend: [{ label: L("▼ Abaixo da regra", "▼ Below the rule"), color: css("--critical") }, { label: L("✓ Cumpre", "✓ Meets it"), color: css("--other") }],
+        legend: ruled ? [{ label: L("▼ Abaixo da regra", "▼ Below the rule"), color: css("--critical") }, { label: L("✓ Cumpre", "✓ Meets it"), color: css("--other") }] : [],
         table: { rows: pts.map((p) => ({ party: p.title, cand: p.x, money: p.y, gap: p.y - p.x })), cols: [{ key: "party", label: L("Partido", "Party"), text: true },
           { key: "cand", label: L("Parcela dos candidatos", "Share of candidates"), fmt: (v) => pct(v, 1) }, { key: "money", label: L("Parcela do dinheiro público", "Share of public money"), fmt: (v) => pct(v, 1) },
           { key: "gap", label: L("Diferença (pontos)", "Gap (points)"), fmt: (v) => fmt(100 * v, 1) }], name: `${k}-${year}` },
@@ -265,8 +266,8 @@ async function equity(root) {
       L(`${LAW.women} Cada ponto é um partido com R$ 1 milhão ou mais em dinheiro público (todos os partidos estão na tabela abaixo); os vermelhos ficam abaixo da regra.`,
         `${LAW.women} Each dot is a party with R$1 million or more in public money (every party is in the table below); red ones fall short.`), c1, n1),
     card(L("Candidatos negros: candidaturas e dinheiro público", "Black candidates: candidates against public money"),
-      L(`${LAW.black[year] || LAW.black[2026]} Cada ponto é um partido com R$ 1 milhão ou mais em dinheiro público; os vermelhos ficam abaixo da regra.`,
-        `${LAW.black[year] || LAW.black[2026]} Each dot is a party with R$1 million or more in public money; red ones fall short.`), c2, n2));
+      L(`${LAW.black[year] || LAW.black[2026]} Cada ponto é um partido com R$ 1 milhão ou mais em dinheiro público${year >= 2022 ? "; os vermelhos ficam abaixo da regra" : ""}.`,
+        `${LAW.black[year] || LAW.black[2026]} Each dot is a party with R$1 million or more in public money${year >= 2022 ? "; red ones fall short" : ""}.`), c2, n2));
     body.append(g);
     mine.later(() => { const [k, n] = scatterOf(c1, "mulheres", "publico_mulheres", true, (x) => Math.max(0.3, x));
       n1.textContent = L(`Por estes números, ${fmt(k)} de ${fmt(n)} partidos deram às mulheres menos do que a regra exige (com tolerância de meio ponto).`,
@@ -292,7 +293,7 @@ async function equity(root) {
         "Shares of the party's candidates and of its public money (FEFC and Party Fund). Gap: money share minus candidate share, in percentage points."), tb));
     table(tb, parties.map((a) => ({ partido: a.partido, candidatos: a.candidatos, w: a.mulheres / a.candidatos, wm: a.publico_mulheres / a.publico, wg: 100 * (a.publico_mulheres / a.publico - a.mulheres / a.candidatos),
       b: a.negros / a.candidatos, bm: a.publico_negros / a.publico, bg: 100 * (a.publico_negros / a.publico - a.negros / a.candidatos), publico: a.publico })), [
-      { key: "partido", label: L("Partido", "Party"), text: true }, { key: "candidatos", label: L("Candidatos", "Candidates") }, { key: "publico", label: L("Dinheiro público", "Public money"), fmt: (v) => brl(v) },
+      { key: "partido", label: L("Partido", "Party"), text: true }, { key: "candidatos", label: L("Candidatos", "Candidates"), fmt: (v) => fmt(v) }, { key: "publico", label: L("Dinheiro público", "Public money"), fmt: (v) => brl(v) },
       { key: "w", label: L("Mulheres, candidatas", "Women, candidates"), fmt: (v) => pct(v, 1) }, { key: "wm", label: L("Mulheres, dinheiro", "Women, money"), fmt: (v) => pct(v, 1) },
       { key: "wg", label: L("Diferença", "Gap"), fmt: (v) => fmt(v, 1) },
       { key: "b", label: L("Negros, candidatos", "Black, candidates"), fmt: (v) => pct(v, 1) }, { key: "bm", label: L("Negros, dinheiro", "Black, money"), fmt: (v) => pct(v, 1) },
@@ -331,7 +332,7 @@ async function results(root) {
         note: L(`${fmt(r.eleitos)} de ${fmt(r.candidatos)} eleitos · mediana de ${brl(r.mediana)}`, `${fmt(r.eleitos)} of ${fmt(r.candidatos)} elected · median ${brl(r.mediana)}`) })),
       format: (v) => pct(v, 1), max: 1, labelWidth: 90, barHeight: 16,
       table: { rows, cols: [{ key: "decil", label: L("Decil", "Tenth") }, { key: "min", label: L("De", "From"), fmt: (v) => brl(v) }, { key: "max", label: L("Até", "To"), fmt: (v) => brl(v) },
-        { key: "mediana", label: L("Mediana arrecadada", "Median raised"), fmt: (v) => brl(v) }, { key: "candidatos", label: L("Candidatos", "Candidates") }, { key: "eleitos", label: L("Eleitos", "Elected") }], name: `deciles-${office}-${year}` },
+        { key: "mediana", label: L("Mediana arrecadada", "Median raised"), fmt: (v) => brl(v) }, { key: "candidatos", label: L("Candidatos", "Candidates"), fmt: (v) => fmt(v) }, { key: "eleitos", label: L("Eleitos", "Elected"), fmt: (v) => fmt(v) }], name: `deciles-${office}-${year}` },
     }));
     const top = rows.find((r) => r.decil === 10), low = rows.filter((r) => r.decil <= 5);
     const seats = sum(rows.map((r) => r.eleitos));
@@ -363,11 +364,11 @@ async function results(root) {
     L("Todos os candidatos a presidente, governador, senador e deputado federal, com quanto arrecadaram e de onde. Filtre por nome, partido, estado ou cargo.",
       "Every candidate for president, governor, senator and federal deputy, with what they raised and from where. Filter by name, party, state or office."), tb));
   table(tb, cand.map((r) => ({ ...r, office: OFFICE[r.cargo], result: RESULT[r.resultado] ?? r.resultado, inc: r.incumbente ? L("sim", "yes") : "" })), [
-    { key: "nome_urna", label: L("Candidato", "Candidate"), text: true, wrap: true }, { key: "office", label: L("Cargo", "Office"), text: true }, { key: "uf", label: "UF", text: true },
+    { key: "nome_urna", label: L("Candidato", "Candidate"), text: true, wrap: true }, { key: "office", label: L("Cargo", "Office"), text: true }, { key: "uf", label: L("UF", "State"), text: true },
     { key: "partido", label: L("Partido", "Party"), text: true }, { key: "result", label: L("Resultado", "Result"), text: true }, { key: "inc", label: L("Em exercício", "Incumbent"), text: true },
     { key: "total", label: L("Arrecadado", "Raised"), fmt: (v) => brl(v) }, { key: "publico", label: L("Público", "Public"), fmt: (v) => brl(v) },
     { key: "origem_pessoas_fisicas", label: L("Pessoas físicas", "Individuals"), fmt: (v) => brl(v) }, { key: "origem_proprios", label: L("Próprios", "Own"), fmt: (v) => brl(v) },
-    { key: "n_doadores_pf", label: L("Doadores", "Donors") },
+    { key: "n_doadores_pf", label: L("Doadores", "Donors"), fmt: (v) => fmt(v) },
   ], { sortBy: "total", pageSize: 15, name: `candidates-${year}` });
 }
 
@@ -428,8 +429,8 @@ async function donors(root) {
       "Pairs among the largest donors who gave to two or more of the same candidates. Overlap: shared candidates over all the candidates either funded (Jaccard)."), t1),
   card(L("Candidatos com mais dinheiro de grandes doadores", "Candidates with the most money from large donors"),
     L("Dinheiro de doadores de R$ 50 mil ou mais, todos os cargos.", "Money from donors of R$50,000 or more, every office."), c2));
-  table(t1, pr, [{ key: "a", label: L("Doador", "Donor"), text: true, wrap: true }, { key: "b", label: L("Doador", "Donor"), text: true, wrap: true },
-    { key: "n", label: L("Candidatos em comum", "Shared candidates") }, { key: "ja", label: L("Sobreposição", "Overlap"), fmt: (v) => pct(v) }], { sortBy: "n", pageSize: 10, name: `donor-pairs-${year}` });
+  table(t1, pr, [{ key: "a", label: L("Doador A", "Donor A"), text: true, wrap: true }, { key: "b", label: L("Doador B", "Donor B"), text: true, wrap: true },
+    { key: "n", label: L("Candidatos em comum", "Shared candidates"), fmt: (v) => fmt(v) }, { key: "ja", label: L("Sobreposição", "Overlap"), fmt: (v) => pct(v) }], { sortBy: "n", pageSize: 10, name: `donor-pairs-${year}` });
   num(rec, ["grandes_doadores", "valor"]);
   later(() => C.bars(c2, { rows: rec.slice(0, 20).map((r) => ({ label: who(r), value: r.valor, color: elected(r) ? C.slot(1) : css("--other"),
     note: `${OFFICE[r.cargo] || r.cargo} · ${plural(r.grandes_doadores, L("grande doador", "large donor"), L("grandes doadores", "large donors"))}` })),
@@ -439,7 +440,7 @@ async function donors(root) {
     L("Pessoas físicas, com o CPF mascarado como faz a Controladoria-Geral da União (CGU). Doadores menores aparecem apenas como contagem nos totais de cada candidato.",
       "Private individuals, with their CPF masked the way the federal comptroller (CGU) does. Smaller donors appear only as a count in each candidate's totals."), t2));
   table(t2, gd, [{ key: "nome", label: L("Doador", "Donor"), text: true, wrap: true }, { key: "doador", label: L("CPF (mascarado)", "CPF (masked)"), text: true },
-    { key: "total", label: L("Doou", "Gave"), fmt: (v) => brl(v) }, { key: "n_candidatos", label: L("Candidatos", "Candidates") }], { sortBy: "total", pageSize: 15, name: `large-donors-${year}` });
+    { key: "total", label: L("Doou", "Gave"), fmt: (v) => brl(v) }, { key: "n_candidatos", label: L("Candidatos", "Candidates"), fmt: (v) => fmt(v) }], { sortBy: "total", pageSize: 15, name: `large-donors-${year}` });
 }
 
 // ------------------------------------------------------------ suppliers
@@ -470,7 +471,7 @@ async function suppliers(root) {
   root.append(card(L("Todos os fornecedores listados", "Every listed supplier"),
     L("Só empresas: pessoas pagas pelas campanhas (cabos eleitorais, motoristas) não aparecem.", "Companies only: people paid by campaigns (canvassers, drivers) are not listed."), t));
   table(t, F, [{ key: "nome", label: L("Empresa", "Company"), text: true, wrap: true }, { key: "cnpj", label: "CNPJ", text: true }, { key: "cnae", label: L("Atividade", "Activity"), text: true, wrap: true },
-    { key: "total", label: L("Contratado", "Contracted"), fmt: (v) => brl(v) }, { key: "n_candidatos", label: L("Campanhas", "Campaigns") }],
+    { key: "total", label: L("Contratado", "Contracted"), fmt: (v) => brl(v) }, { key: "n_candidatos", label: L("Campanhas", "Campaigns"), fmt: (v) => fmt(v) }],
   { sortBy: "total", pageSize: 15, name: `suppliers-${year}` });
 }
 

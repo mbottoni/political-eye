@@ -125,7 +125,8 @@ async function map(root) {
     const towns = [...val.keys()].map((c) => ({ c, v: value(c), e: ente.get(c) })).filter((x) => x.v != null && x.e && (measure !== "pc" || +x.e.populacao >= 10000));
     towns.sort((a, b) => b.v - a.v);
     const bx = chart();
-    side.replaceChildren(card(measure === "pc" ? L(`Mais por habitante (municípios com ${fmt(10000)} habitantes ou mais)`, `Most per inhabitant (towns of ${fmt(10000)}+)`) : L("Os que mais receberam", "The most"), null, bx));
+    side.replaceChildren(card(measure === "pc" ? L("Mais por habitante", "Most per inhabitant") : L("Os que mais receberam", "The most"),
+      measure === "pc" ? L(`Municípios com ${fmt(10000)} habitantes ou mais.`, `Towns of ${fmt(10000)} people or more.`) : L(`Pago em ${year}.`, `Paid in ${year}.`), bx));
     C.bars(bx, { rows: towns.slice(0, 20).map((x) => ({ label: `${x.e.ente} (${x.e.uf})`, value: x.v, code: x.c })), format: (v) => (measure === "pc" ? `R$ ${fmt(v, 0)}` : brl(v)), onClick: (r) => { picked = r.code; setParam("m", r.code); showTown(); }, labelWidth: 200 });
     const byUf = new Map(), popUf = new Map();
     for (const e of entes) popUf.set(e.uf, (popUf.get(e.uf) || 0) + +e.populacao);
@@ -173,9 +174,9 @@ async function authors(root) {
       const x = by.get(r.autor_codigo) || { autor_codigo: r.autor_codigo, autor: r.autor, emendas: 0, empenhado: 0, pago: 0 };
       x.emendas += +r.emendas; x.empenhado += +r.empenhado; x.pago += +r.pago; by.set(r.autor_codigo, x);
     }
-    const rows = [...by.values()].map((x) => { const w = who.get(x.autor_codigo) || {}; return { ...x, casa: w.casa === "camara" ? "Câmara" : w.casa === "senado" ? "Senado" : "", partido: w.partido || "", uf: w.uf || "", share: x.empenhado ? x.pago / x.empenhado : null }; });
+    const rows = [...by.values()].map((x) => { const w = who.get(x.autor_codigo) || {}; return { ...x, casa: w.casa === "camara" ? "Câmara" : w.casa === "senado" ? L("Senado", "Senate") : "", partido: w.partido || "", uf: w.uf || "", share: x.empenhado ? x.pago / x.empenhado : null }; });
     table(tb, rows, [
-      { key: "autor", label: L("Autor", "Author"), text: true }, { key: "casa", label: L("Casa", "House"), text: true }, { key: "partido", label: T.party, text: true }, { key: "uf", label: "UF", text: true },
+      { key: "autor", label: L("Autor", "Author"), text: true }, { key: "casa", label: L("Casa", "House"), text: true }, { key: "partido", label: T.party, text: true }, { key: "uf", label: L("UF", "State"), text: true },
       { key: "emendas", label: T.amendments, fmt: (v) => fmt(v) }, { key: "empenhado", label: T.committed, fmt: (v) => brl(v) }, { key: "pago", label: T.paid, fmt: (v) => brl(v) }, { key: "share", label: L("Parcela paga", "Paid share"), fmt: (v) => pct(v) },
     ], { sortBy: "pago", pageSize: 15, name: `authors-${period}` });
     const people = rows.filter((r) => r.casa);
@@ -228,6 +229,10 @@ async function flows(root) {
     const rows = [...total.keys()].sort(), cols = [...rows, "BR"];
     C.heatmap(hm, { rows, cols: cols.map((c) => (c === "BR" ? L("Nacional", "National") : c)), value: (i, j) => { const v = cell.get(`${rows[i]}|${cols[j]}`); return v ? v / total.get(rows[i]) : null; }, color: (v) => C.seq(Math.sqrt(v)),
       cell: 26, rowHeight: 18, labelWidth: 40, colLabelHeight: 50, allColLabels: true, cellText: (v) => (v >= 0.05 ? Math.round(v * 100) : ""), dark: (v) => Math.sqrt(v) > 0.55,
+      key: { color: (t) => C.seq(t), from: "0%", to: "100%", label: L("parcela do dinheiro do estado (escala de raiz)", "share of the state's money (square-root scale)") },
+      table: { rows: [...cell].map(([k, v]) => { const [a, b] = k.split("|"); return { uf_autor: a, destino: b === "BR" ? L("Nacional", "National") : b, pago: v, parcela: v / total.get(a) }; }),
+        cols: [{ key: "uf_autor", label: L("Estado do autor", "Author's state"), text: true }, { key: "destino", label: L("Destino", "Destination"), text: true },
+          { key: "pago", label: T.paid, fmt: (v) => brl(v) }, { key: "parcela", label: L("Parcela", "Share"), fmt: (v) => pct(v, 1) }], name: `flows-${period}` },
       tip: (i, j, v) => [el("strong", { textContent: `${rows[i]} → ${cols[j] === "BR" ? L("nacional", "national") : cols[j]}` }), el("div", { className: "row", textContent: L(`${pct(v, 1)} de ${brl(total.get(rows[i]))}`, `${pct(v, 1)} of ${brl(total.get(rows[i]))}`) })] });
   };
   later(draw);
@@ -253,11 +258,11 @@ async function recipients(root) {
     card(L(`Os ${fmt(1000)} favorecidos que mais receberam desde 2014`, `The ${fmt(1000)} recipients paid the most since 2014`),
       L("Pessoas jurídicas e órgãos públicos, por CNPJ ou código de unidade gestora.", "Legal entities and public bodies, by CNPJ or government unit code."), tb));
   const names = [...GROUPS.map(([n]) => n), OTHER];
-  later(() => C.stack(c1, { x: years, format: (v) => brl(v, 0), height: 260, series: names.map((g, i) => ({ name: g, color: i < 6 ? C.slot(i + 1) : css("--other"), values: years.map((y) => sum(nat.filter((r) => +r.ano === y && group(r.natureza) === g).map((r) => +r.valor))) })),
+  later(() => C.stack(c1, { x: years, format: (v) => brl(v, 0), height: 260, series: names.map((g, i) => ({ name: g, color: i < 6 ? C.slot([1, 2, 3, 4, 5, 7][i]) : css("--other")   /* slot 6 is too near slot 3's green */, values: years.map((y) => sum(nat.filter((r) => +r.ano === y && group(r.natureza) === g).map((r) => +r.valor))) })),
     table: { rows: nat.map((r) => ({ ...r, grupo: group(r.natureza) })), cols: [{ key: "ano", label: T.year, text: true }, { key: "grupo", label: L("Grupo", "Group"), text: true }, { key: "natureza", label: T.legalNature, text: true }, { key: "valor", label: T.paid, fmt: (v) => brl(v) }], name: "recipients-nature" } }));
   table(tb, top, [
     { key: "nome", label: L("Favorecido", "Recipient"), text: true, wrap: true }, { key: "favorecido", label: L("CNPJ / código", "CNPJ / code"), text: true }, { key: "natureza_juridica", label: T.legalNature, text: true, wrap: true },
-    { key: "uf", label: "UF", text: true }, { key: "emendas", label: T.amendments, fmt: (v) => fmt(v) }, { key: "primeiro", label: L("Primeiro", "First"), text: true, fmt: day }, { key: "ultimo", label: L("Último", "Last"), text: true, fmt: day }, { key: "total", label: T.paid, fmt: (v) => brl(v) },
+    { key: "uf", label: L("UF", "State"), text: true }, { key: "emendas", label: T.amendments, fmt: (v) => fmt(v) }, { key: "primeiro", label: L("Primeiro", "First"), text: true, fmt: day }, { key: "ultimo", label: L("Último", "Last"), text: true, fmt: day }, { key: "total", label: T.paid, fmt: (v) => brl(v) },
   ], { sortBy: "total", pageSize: 15, name: "top-recipients" });
 }
 

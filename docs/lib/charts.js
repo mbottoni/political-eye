@@ -16,6 +16,37 @@ export function svg(tag, attrs = {}) {
 }
 const text = (s, attrs) => { const t = svg("text", attrs); t.textContent = s; return t; };
 
+// Text width in px at a font size, measured with the page's own font.
+let ctx2d = null, family = null;
+function measure(s, size = 10, weight = "") {
+  if (typeof document === "undefined") return String(s).length * size * 0.6;
+  if (!ctx2d) { ctx2d = document.createElement("canvas").getContext("2d"); family = getComputedStyle(document.body).fontFamily || "sans-serif"; }
+  ctx2d.font = `${weight} ${size}px ${family}`;
+  return ctx2d.measureText(String(s)).width;
+}
+// A ring of the card's colour behind a label, so lines and dots never run through it.
+const halo = (attrs) => ({ ...attrs, stroke: css("--surface"), "stroke-width": 3, "stroke-linejoin": "round", "paint-order": "stroke" });
+// Shorten s to fit width, keeping a trailing "(PARTY-UF)" so a cut name still says whose it is.
+function fitText(s, width, size = 12) {
+  s = String(s);
+  if (measure(s, size) <= width) return s;
+  const m = s.match(/^(.*?)(\s*\([^()]*\))$/);
+  const [head, tail] = m && measure(m[2], size) < width * 0.5 ? [m[1], m[2]] : [s, ""];
+  let lo = 0, hi = head.length;
+  while (lo < hi) { const mid = (lo + hi + 1) >> 1; if (measure(`${head.slice(0, mid).trimEnd()}…${tail}`, size) <= width) lo = mid; else hi = mid - 1; }
+  return `${head.slice(0, lo).trimEnd()}…${tail}`;
+}
+// Greedy rows for labels laid out along x: [{a, b}] → row index per label, a new row only when one would overlap.
+function labelRows(spans, pad = 6) {
+  const ends = [];
+  return spans.map(({ a, b }) => {
+    let row = ends.findIndex((e) => a > e + pad);
+    if (row < 0) { row = ends.length; ends.push(-Infinity); }
+    ends[row] = b;
+    return row;
+  });
+}
+
 // ------------------------------------------------------------ colour
 
 export const RAMP = ["#cde2fb", "#b7d3f6", "#9ec5f4", "#86b6ef", "#6da7ec", "#5598e7", "#3987e5", "#2a78d6", "#256abf", "#1c5cab", "#184f95", "#104281", "#0d366b"];
@@ -114,7 +145,8 @@ export function legend(box, items) {
  */
 export function line(box, o) {
   box.replaceChildren();
-  const H = o.height || 240, mr = 12, mt = 12, mb = 26;
+  let H = o.height || 240, mt = 12;
+  const mr = 12, mb = 26;
   const X = xAccessor(o.x || "num"), yf = o.y?.format || ((v) => fmt(v, 2));
   const pts = o.series.flatMap((s) => [...s.points.filter((p) => p[1] != null),
     ...(s.band || []).filter((p) => p[1] != null).flatMap((p) => [[p[0], p[1]], [p[0], p[2]]])]);
@@ -127,18 +159,34 @@ export function line(box, o) {
   const yt = niceTicks(y0, y1, 4);
   if (o.y?.max == null) y1 = Math.max(y1, yt[yt.length - 1]);
   ml = marginFor(yt.map(yf));
-  const { w, s } = frame(box, H);
+  const w = Math.max(240, box.clientWidth || 600);
   const sx = linear(x0, x1, ml, w - mr);
+  // Band and mark labels sit in a strip above the plot, in as many rows as they need, so no line runs through them.
+  const tops = [];
+  for (const b of o.bands || []) {
+    if (!b.label || X.val(b.to) <= x0 || X.val(b.from) >= x1) continue;   // a band outside the axis draws nothing, label included
+    const wd = measure(b.label, 10), a = Math.min(Math.max(ml, sx(X.val(b.from))) + 2, w - mr - wd);
+    tops.push({ label: b.label, a, b: a + wd, x: a, anchor: "start" });
+  }
+  for (const m of o.marks || []) {
+    if (!m.label || X.val(m.x) <= x0 || X.val(m.x) > x1) continue;
+    const xv = sx(X.val(m.x)), wd = measure(m.label, 10), over = xv + 3 + wd > w - mr;
+    tops.push({ label: m.label, a: over ? xv - 3 - wd : xv + 3, b: over ? xv - 3 : xv + 3 + wd, x: over ? xv - 3 : xv + 3, anchor: over ? "end" : "start", mark: m });
+  }
+  tops.sort((p, q) => p.a - q.a);
+  labelRows(tops).forEach((row, i) => { tops[i].row = row; });
+  const nRows = tops.length ? 1 + Math.max(...tops.map((t) => t.row)) : 0;
+  mt += 13 * nRows; H += 13 * nRows;
+  const { s } = frame(box, H);
   const sy = linear(y0, y1, H - mb, mt);
+  const labelY = (row) => mt - 5 - 13 * row;
   const grid = css("--grid"), axis = css("--axis"), muted = css("--muted"), ink2 = css("--ink2");
   for (const b of o.bands || []) {
-    if (X.val(b.to) <= x0 || X.val(b.from) >= x1) continue;   // a band outside the axis draws nothing, label included
+    if (X.val(b.to) <= x0 || X.val(b.from) >= x1) continue;
     const a = sx(X.val(b.from)), c = sx(X.val(b.to));
     s.append(svg("rect", { x: Math.max(ml, a), y: mt, width: Math.max(0, Math.min(w - mr, c) - Math.max(ml, a)), height: H - mt - mb, fill: grid, opacity: 0.6 }));
-    // A label that would run past the right edge is drawn from the band's right end instead.
-    const over = b.label && Math.max(ml, a) + 4 + String(b.label).length * 5.8 > w - mr;
-    if (b.label) s.append(text(b.label, over ? { x: Math.min(w - mr, c) - 4, y: mt + 11, "text-anchor": "end", "font-size": 10, fill: muted } : { x: Math.max(ml, a) + 4, y: mt + 11, "font-size": 10, fill: muted }));
   }
+  for (const t of tops) s.append(text(t.label, { x: t.x, y: labelY(t.row), "text-anchor": t.anchor, "font-size": 10, fill: muted }));
   for (const v of yt) {
     s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(v), y2: sy(v), stroke: v === yt[0] && y0 === 0 ? axis : grid }));
     s.append(text(yf(v), { x: ml - 6, y: sy(v) + 4, "text-anchor": "end", "font-size": 10, fill: muted }));
@@ -146,14 +194,13 @@ export function line(box, o) {
   for (const v of o.xTicks ? o.xTicks.map(X.val) : X.ticks(x0, x1, w - ml - mr)) s.append(text(X.tick(v), { x: sx(v), y: H - 8, "text-anchor": "middle", "font-size": 10, fill: muted }));
   for (const m of o.marks || []) {
     if (X.val(m.x) <= x0 || X.val(m.x) > x1) continue;   // a mark at or past the edge would sit on the axis
-    const xv = sx(X.val(m.x));
-    s.append(svg("line", { x1: xv, x2: xv, y1: mt, y2: H - mb, stroke: axis, "stroke-dasharray": "3 3" }));
-    const over = m.label && xv + 3 + String(m.label).length * 5.8 > w - mr;
-    if (m.label) s.append(text(m.label, { x: over ? xv - 3 : xv + 3, y: H - mb - 4, "text-anchor": over ? "end" : "start", "font-size": 10, fill: muted }));
+    const xv = sx(X.val(m.x)), t = tops.find((q) => q.mark === m);
+    s.append(svg("line", { x1: xv, x2: xv, y1: t ? labelY(t.row) - 9 : mt, y2: H - mb, stroke: axis, "stroke-dasharray": "3 3" }));
   }
+  const refLabels = [];   // drawn after the series, so their halo sits over the lines
   for (const r of o.ref || []) {
     s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(r.y), y2: sy(r.y), stroke: r.color || ink2, "stroke-dasharray": "4 3" }));
-    if (r.label) s.append(text(r.label, { x: w - mr, y: sy(r.y) - 4, "text-anchor": "end", "font-size": 10, fill: ink2 }));
+    if (r.label) refLabels.push(text(r.label, halo({ x: w - mr, y: sy(r.y) - 4, "text-anchor": "end", "font-size": 10, fill: ink2 })));
   }
   for (const se of o.series) {
     if (!se.band) continue;
@@ -178,6 +225,7 @@ export function line(box, o) {
     });
     s.append(svg("path", { d, fill: "none", stroke: se.color, "stroke-width": se.width || 2, "stroke-linejoin": "round", "stroke-linecap": "round", opacity: se.opacity ?? 1 }));
   }
+  s.append(...refLabels);
   const hair = svg("line", { y1: mt, y2: H - mb, stroke: ink2, opacity: 0 });
   s.append(hair);
   const allX = [...new Set(o.series.flatMap((se) => se.points.map((p) => p[0])))].sort((a, b) => X.val(a) - X.val(b));
@@ -204,15 +252,17 @@ export function line(box, o) {
 export function bars(box, o) {
   box.replaceChildren();
   if (!o.rows.length) { box.append(el("p", { className: "empty", textContent: o.empty || L("Sem dados.", "No data.") })); return; }
-  const bh = o.barHeight || 18, gap = 6, lw = Math.min(o.labelWidth || 180, (box.clientWidth || 600) * 0.42), vw = 70;
+  const f = o.format || ((v) => fmt(v));
+  // The label column fits the longest label, from labelWidth (a floor, so charts side by side line up) to 45% of the width.
+  const bh = o.barHeight || 18, gap = 6, W = Math.max(240, box.clientWidth || 600);
+  const lw = Math.min(Math.max(o.labelWidth || 80, 14 + Math.max(...o.rows.map((r) => measure(r.label, 12)))), W * 0.45);
+  const vw = 10 + Math.max(...o.rows.map((r) => measure(f(r.value), 11)));
   const { w, s } = frame(box, o.rows.length * (bh + gap) + 4);
   const max = o.max ?? Math.max(...o.rows.map((r) => Math.abs(r.value)), 1e-9);
-  const sx = linear(0, max, 0, w - lw - vw - 8), ink = css("--ink"), ink2 = css("--ink2"), col = css("--line");
-  const f = o.format || ((v) => fmt(v));
+  const sx = linear(0, max, 0, Math.max(20, w - lw - vw - 4)), ink = css("--ink"), ink2 = css("--ink2"), col = css("--line");
   o.rows.forEach((r, i) => {
     const y = i * (bh + gap);
-    const fit = Math.floor((lw - 10) / 6.6);
-    const label = r.label.length > fit ? r.label.slice(0, fit - 1) + "…" : r.label;
+    const label = fitText(r.label, lw - 12, 12);
     s.append(text(label, { x: lw - 8, y: y + bh / 2 + 4, "text-anchor": "end", "font-size": 12, fill: ink2 }));
     const bw = Math.max(1, sx(Math.abs(r.value)));
     const rect = svg("rect", { x: lw, y, width: bw, height: bh, rx: 3, fill: r.color || col });
@@ -235,23 +285,29 @@ export function bars(box, o) {
 /** stack(box, {x: [labels], series: [{name, color, values: []}], format, height, table}) - columns stacked, 2px gaps. */
 export function stack(box, o) {
   box.replaceChildren();
-  const mb = o.rotate ? Math.min(140, 14 + 6 * Math.max(...o.x.map((x) => String(x).length))) : 24;
-  const H = (o.height || 240) + (o.rotate ? mb - 24 : 0), mr = 8, mt = 10;
+  const mr = 8, mt = 10, n = o.x.length;
   const totals = o.x.map((_, i) => o.series.reduce((a, se) => a + Math.max(0, se.values[i] || 0), 0));
   const yt = upTo(Math.max(...totals, 1e-9), 4), y1 = yt[yt.length - 1];
   const f = o.format || ((v) => fmt(v)), grid = css("--grid"), muted = css("--muted"), surface = css("--surface");
-  const ml = marginFor(yt.map(f));
+  const ml = marginFor(yt.map(f)), W = Math.max(240, box.clientWidth || 600), band = (W - ml - mr) / n;
+  // A few categories whose names don't fit side by side (offices on a phone) are turned, like rotate.
+  const widest = Math.max(...o.x.map((x) => measure(String(x), 10)));
+  const rotate = o.rotate || (n <= 12 && widest + 6 > band);
+  const deg = band >= 18 ? -40 : -90;   // lean 40° while columns keep the labels apart, else stand upright
+  const mb = rotate ? Math.min(140, deg === -90 ? 16 + widest : 18 + 0.65 * widest) : 24;
+  const H = (o.height || 240) + (rotate ? mb - 24 : 0);
   const { w, s } = frame(box, H);
-  const sy = linear(0, y1, H - mb, mt), n = o.x.length, band = (w - ml - mr) / n, bw = Math.max(3, Math.min(42, band * 0.7));
+  const sy = linear(0, y1, H - mb, mt), bw = Math.max(3, Math.min(42, band * 0.7));
   for (const v of yt) {
     s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(v), y2: sy(v), stroke: grid }));
     s.append(text(f(v), { x: ml - 6, y: sy(v) + 4, "text-anchor": "end", "font-size": 10, fill: muted }));
   }
-  const every = o.rotate ? 1 : Math.ceil(n / Math.max(1, Math.floor((w - ml - mr) / 44)));
+  // Below 11px a column, rotated labels show every k-th.
+  const every = rotate ? Math.ceil(11 / band) : Math.ceil(n / Math.max(1, Math.floor((w - ml - mr) / Math.max(44, widest + 8))));
   o.x.forEach((lab, i) => {
     const cx = ml + band * (i + 0.5);
-    if (i % every === 0) s.append(o.rotate
-      ? text(String(lab), { x: cx, y: H - mb + 12, "text-anchor": "end", "font-size": 10, fill: muted, transform: `rotate(-40 ${cx} ${H - mb + 12})` })
+    if (i % every === 0) s.append(rotate
+      ? text(String(lab), { x: cx + (deg === -90 ? 3 : 0), y: H - mb + 10, "text-anchor": "end", "font-size": 10, fill: muted, transform: `rotate(${deg} ${cx + (deg === -90 ? 3 : 0)} ${H - mb + 10})` })
       : text(String(lab), { x: cx, y: H - 8, "text-anchor": "middle", "font-size": 10, fill: muted }));
     let acc = 0;
     o.series.forEach((se) => {
@@ -344,28 +400,46 @@ export function scatter(box, o) {
   for (const v of o.x?.log ? logTicks(xd[0], xd[1]) : niceTicks(xd[0], xd[1], Math.max(2, Math.floor((w - ml) / 90)))) { s.append(svg("line", { x1: sx(v), x2: sx(v), y1: mt, y2: H - mb, stroke: grid })); s.append(text(xf(unlog(v, o.x?.log)), { x: sx(v), y: H - mb + 14, "text-anchor": "middle", "font-size": 10, fill: muted })); }
   if (o.x?.label) s.append(text(o.x.label, { x: (ml + w - mr) / 2, y: H - 4, "text-anchor": "middle", "font-size": 11, fill: ink2 }));
   if (o.y?.label) s.append(text(o.y.label, { x: 12, y: (mt + H - mb) / 2, "text-anchor": "middle", "font-size": 11, fill: ink2, transform: `rotate(-90 12 ${(mt + H - mb) / 2})` }));
+  const notes = [];   // labels for lines, drawn over the dots with a halo
   if (o.diagonal) {
     const lo = Math.max(xd[0], yd[0]), hi = Math.min(xd[1], yd[1]);
-    if (hi > lo) s.append(svg("line", { x1: sx(lo), y1: sy(lo), x2: sx(hi), y2: sy(hi), stroke: ink2, "stroke-dasharray": "4 3" }));
-    if (o.diagonal.label) s.append(text(o.diagonal.label, { x: sx(hi) - 4, y: sy(hi) + 12, "text-anchor": "end", "font-size": 10, fill: ink2 }));
+    if (hi > lo) {
+      s.append(svg("line", { x1: sx(lo), y1: sy(lo), x2: sx(hi), y2: sy(hi), stroke: ink2, "stroke-dasharray": "4 3" }));
+      // The label runs along the line, just above it, near its top end.
+      if (o.diagonal.label) {
+        const ax = sx(lo), ay = sy(lo), bx = sx(hi), by = sy(hi), px = ax + (bx - ax) * 0.96, py = ay + (by - ay) * 0.96;
+        const deg = (Math.atan2(by - ay, bx - ax) * 180) / Math.PI;
+        notes.push(text(o.diagonal.label, halo({ x: px, y: py - 5, "text-anchor": "end", "font-size": 10, fill: ink2, transform: `rotate(${deg.toFixed(1)} ${px.toFixed(1)} ${py.toFixed(1)})` })));
+      }
+    }
   }
   for (const r of o.refs || []) {
-    if (r.y != null) { s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(r.y), y2: sy(r.y), stroke: r.color || ink2, "stroke-dasharray": "3 3" })); s.append(text(r.label || "", { x: w - mr, y: sy(r.y) - 4, "text-anchor": "end", "font-size": 10, fill: r.color || ink2 })); }
-    if (r.x != null) { s.append(svg("line", { x1: sx(r.x), x2: sx(r.x), y1: mt, y2: H - mb, stroke: r.color || ink2, "stroke-dasharray": "3 3" })); s.append(text(r.label || "", { x: sx(r.x) + 4, y: mt + 10, "font-size": 10, fill: r.color || ink2 })); }
+    if (r.y != null) { s.append(svg("line", { x1: ml, x2: w - mr, y1: sy(r.y), y2: sy(r.y), stroke: r.color || ink2, "stroke-dasharray": "3 3" })); notes.push(text(r.label || "", halo({ x: w - mr, y: sy(r.y) - 4, "text-anchor": "end", "font-size": 10, fill: r.color || ink2 }))); }
+    if (r.x != null) { s.append(svg("line", { x1: sx(r.x), x2: sx(r.x), y1: mt, y2: H - mb, stroke: r.color || ink2, "stroke-dasharray": "3 3" })); notes.push(text(r.label || "", halo({ x: sx(r.x) + 4, y: mt + 10, "font-size": 10, fill: r.color || ink2 }))); }
   }
   const order = [...P].sort((a, b) => (a.z || 0) - (b.z || 0));
   for (const p of order) s.append(svg("circle", { cx: sx(tx(p.x)), cy: sy(ty(p.y)), r: p.r || 4, fill: p.color || css("--other"), stroke: surface, "stroke-width": 1.2, opacity: p.opacity ?? 0.9 }));
+  s.append(...notes);
   if (o.labels) {
     const cx = (xd[0] + xd[1]) / 2, cy = (yd[0] + yd[1]) / 2;
     const far = o.labelRank ? P.filter((p) => p.label).sort(o.labelRank).slice(0, o.labels) : P.filter((p) => p.label).sort((a, b) => ((tx(b.x) - cx) / (xd[1] - xd[0] || 1)) ** 2 + ((ty(b.y) - cy) / (yd[1] - yd[0] || 1)) ** 2
       - ((tx(a.x) - cx) / (xd[1] - xd[0] || 1)) ** 2 - ((ty(a.y) - cy) / (yd[1] - yd[0] || 1)) ** 2).slice(0, o.labels);
+    // Each label tries right, left, above and below its dot, and takes the first spot inside the plot that
+    // clears the other labels, preferring one over the fewest dots; the halo keeps it readable over the rest.
+    const dots = P.map((p) => [sx(tx(p.x)), sy(ty(p.y)), (p.r || 4) + 1]);
+    const covers = ([a, b, t, u]) => dots.reduce((n, [x, y, r]) => n + (x + r > a && x - r < b && y + r > t && y - r < u), 0);
     const placed = [];
     for (const p of far) {
-      const right = sx(tx(p.x)) < w * 0.75, lx = sx(tx(p.x)) + (right ? 7 : -7), ly = sy(ty(p.y)) + 4;
-      const wd = String(p.label).length * 5.6, box0 = right ? [lx, lx + wd] : [lx - wd, lx];
-      if (placed.some((q) => Math.abs(q.y - ly) < 12 && q.a < box0[1] && box0[0] < q.b)) continue;
-      placed.push({ y: ly, a: box0[0], b: box0[1] });
-      s.append(text(p.label, { x: lx, y: ly, "text-anchor": right ? "start" : "end", "font-size": 10, fill: ink2 }));
+      const px = sx(tx(p.x)), py = sy(ty(p.y)), wd = measure(p.label, 10), r = (p.r || 4) + 3;
+      const spots = [[px + r, py + 4, "start"], [px - r, py + 4, "end"], [px, py - r - 2, "middle"], [px, py + r + 9, "middle"]].map(([x, y, anchor]) => {
+        const a = anchor === "start" ? x : anchor === "end" ? x - wd : x - wd / 2;
+        return { x, y, anchor, box: [a, a + wd, y - 9, y + 2] };
+      }).filter(({ box: [a, b, t, u] }) => a >= ml && b <= w - mr && t >= mt && u <= H - mb
+        && !placed.some(([c, d, e, f]) => a < d && c < b && t < f && e < u));
+      if (!spots.length) continue;
+      const best = spots.map((sp) => ({ ...sp, n: covers(sp.box) })).reduce((m, sp) => (sp.n < m.n ? sp : m));
+      placed.push(best.box);
+      s.append(text(p.label, halo({ x: best.x, y: best.y, "text-anchor": best.anchor, "font-size": 10, fill: ink2 })));
     }
   }
   const hit = svg("rect", { x: ml, y: mt, width: w - ml - mr, height: H - mt - mb, fill: "transparent" });
@@ -393,12 +467,15 @@ export function scatter(box, o) {
 
 // ------------------------------------------------------------ heatmap
 
-/** heatmap(box, {rows: [labels], cols: [labels], value: (i, j) => number|null, color: (v) => css, format, cell, labelWidth, tip}) */
+/** heatmap(box, {rows: [labels], cols: [labels], value: (i, j) => number|null, color: (v) => css, format, cell, labelWidth, tip, key, table}) */
 export function heatmap(box, o) {
   box.replaceChildren();
   const nr = o.rows.length, nc = o.cols.length;
   if (!nr || !nc) { box.append(el("p", { className: "empty", textContent: o.empty || L("Sem dados.", "No data.") })); return; }
-  const lw = o.labelWidth || 110, th = o.colLabelHeight ?? 70, w0 = box.clientWidth || 600;
+  // Label room grows to fit the longest row and column names (never past 45% of the width), so no label is cut.
+  const w0 = box.clientWidth || 600;
+  const lw = Math.min(Math.max(o.labelWidth || 110, 12 + Math.max(...o.rows.map((r) => measure(r, 11)))), w0 * 0.45);
+  const th = o.colLabelHeight === 0 ? 0 : Math.max(o.colLabelHeight ?? 70, 12 + Math.max(...o.cols.map((c) => measure(c, 10))));
   const cw = Math.max(o.minCell || 4, Math.min(o.cell || 32, Math.floor((w0 - lw - 4) / nc))), chh = o.rowHeight || Math.max(14, Math.min(28, cw));
   const s = svg("svg", { width: lw + cw * nc + 4, height: th + chh * nr + 4, role: "img" });
   const ink2 = css("--ink2"), f = o.format || ((v) => fmt(v, 2));
@@ -421,6 +498,7 @@ export function heatmap(box, o) {
   s.setAttribute("aria-label", o.title || L("Mapa de calor", "Heatmap"));
   const wrap = el("div", { className: "tablewrap" }, s);
   box.append(wrap);
+  if (o.key) colorKey(box, o.key);   // {color: (t in 0..1) => css, from, to, label}
   if (o.legendItems) legend(box, o.legendItems);
   addTableToggle(box, o.table);
 }

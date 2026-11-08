@@ -8,7 +8,7 @@ import { avatar, deputySearch } from "../lib/search.js";
 
 setupPage();
 
-const TYPES = [["individual", L("Individual", "Individual")], ["especial", L("Transferência especial (Pix)", "Individual “Pix”")], ["bancada", L("De bancada", "State bench")],
+const TYPES = [["individual", L("Individual", "Individual")], ["especial", L("Transferência especial (Pix)", "Special transfer (“Pix”)")], ["bancada", L("De bancada", "State bench")],
   ["comissao", L("De comissão", "Committee")], ["relator", L("De relator", "Rapporteur")]];
 const UF_CODE = { RO: "11", AC: "12", AM: "13", RR: "14", PA: "15", AP: "16", TO: "17", MA: "21", PI: "22", CE: "23", RN: "24", PB: "25", PE: "26", AL: "27", SE: "28", BA: "29",
   MG: "31", ES: "32", RJ: "33", SP: "35", PR: "41", SC: "42", RS: "43", MS: "50", MT: "51", GO: "52", DF: "53" };
@@ -251,7 +251,7 @@ async function profile(root) {
     card(L("Votos menos parecidos", "Votes least like theirs"), L("Deputados que votaram do jeito oposto com mais frequência.", "Deputies who voted the other way most often."), t2));
     box.append(g2);
     const nbCols = [{ key: "who", label: L("Deputado", "Deputy"), text: true, wrap: true, fmt: (v, x) => (x.other ? profileLink(x.other) : v) }, { key: "party", label: L("Partido", "Party"), text: true },
-      { key: "n", label: L("Votos", "Votes") }, { key: "concordancia", label: L("Mesmo voto", "Same way"), fmt: (v) => pct(v) }];
+      { key: "n", label: L("Votos", "Votes"), fmt: (v) => fmt(v) }, { key: "concordancia", label: L("Mesmo voto", "Same way"), fmt: (v) => pct(v) }];
     const nbRows = (kind) => nb.filter((x) => x.tipo === kind).map((x) => { const o = D.byId.get(x.outro_id); return { who: o?.label || x.outro_id, party: o?.party || "", other: o, n: +x.n, concordancia: +x.concordancia }; });
     const near = nbRows("perto"), far = nbRows("longe");
     table(t1, near, nbCols, { search: false, pageSize: 8, name: `closest-${id}` });
@@ -340,7 +340,7 @@ async function profile(root) {
           tip: (c, v) => { const e = ente.get(c); return [el("strong", { textContent: e ? `${e.ente} (${e.uf})` : c }),
             el("div", { className: "row", textContent: v == null ? L("nada das emendas deste deputado", "nothing from their amendments") : L(`${brl(v)} pagos a favorecidos daqui`, `${brl(v)} paid to recipients here`) })]; },
           title: L("Onde chegou o dinheiro das emendas", "Where their amendment money landed") });
-        C.colorKey(mbox, { color: (t) => C.seq(0.1 + 0.9 * t), from: L("menos", "less"), to: brl(vmax), label: L("pago, por município", "paid, by town") });
+        C.colorKey(mbox, { color: (t) => C.seq(0.1 + 0.9 * t), from: brl(0), to: brl(vmax), label: L("pago, por município", "paid, by town") });
       });
       const placeName = (x) => (x.municipio_ibge ? `${ente.get(x.municipio_ibge)?.ente || x.municipio_ibge} (${x.uf})`
         : x.uf ? L(`Em algum lugar de ${x.uf} (município não identificado)`, `Somewhere in ${x.uf} (town not matched)`) : L("Local não informado", "No place given"));
@@ -451,7 +451,7 @@ async function compare(root) {
       cellText: (v) => fmt(v, 1).replace(/^-0([.,]0)$/, "0$1"), dark: (v) => Math.abs(v) > 0.55, format: (v) => fmt(v, 2),
       tip: (i, j, v) => [el("strong", { textContent: `${METRICS[i].label} × ${METRICS[j].label}` }), el("div", { className: "row", textContent: `Spearman ${fmt(v, 2)}` })],
       table: { rows: keys.flatMap((a, i) => keys.slice(i + 1).map((b, k) => ({ a: M[a].label, b: M[b].label, rho: corr[i][i + 1 + k] }))),
-        cols: [{ key: "a", label: L("Medida", "Measure"), text: true }, { key: "b", label: L("Medida", "Measure"), text: true }, { key: "rho", label: "Spearman", fmt: (v) => fmt(v, 2) }], name: "correlations" } });
+        cols: [{ key: "a", label: L("Medida A", "Measure A"), text: true }, { key: "b", label: L("Medida B", "Measure B"), text: true }, { key: "rho", label: "Spearman", fmt: (v) => fmt(v, 2) }], name: "correlations" } });
     C.colorKey(c2, { color: (t) => C.div(2 * t - 1), from: "−1", to: "+1", label: L("correlação de postos", "rank correlation") });
   });
 }
@@ -494,7 +494,7 @@ async function parties(root) {
       may: wmean(all, "prefeito_mesmo_partido"), may0: wmean(all, "prefeito_base"), barred: sum(all.map((r) => r.sancoes_pago_sancionadas || 0)),
     };
   }), [
-    { key: "party", label: L("Partido", "Party"), text: true }, { key: "deputies", label: L("Deputados", "Deputies") }, { key: "regular", label: L("12+ meses", "12+ months") },
+    { key: "party", label: L("Partido", "Party"), text: true }, { key: "deputies", label: L("Deputados", "Deputies"), fmt: (v) => fmt(v) }, { key: "regular", label: L("12+ meses", "12+ months"), fmt: (v) => fmt(v) },
     { key: "with_party", label: L("Com o partido", "With party"), fmt: (v) => pct(v) }, { key: "with_gov", label: L("Com o governo", "With gov."), fmt: (v) => pct(v) },
     { key: "pc1", label: L("Posição", "Position"), fmt: (v) => fmt(v, 2) }, { key: "paid_med", label: L("Emendas pagas", "Amendments paid"), fmt: (v) => brl(v) },
     { key: "may", label: L("Prefeitos do partido", "Own-party towns"), fmt: (v) => pct(v) }, { key: "may0", label: L("Acaso", "Chance"), fmt: (v) => pct(v) },
@@ -521,35 +521,35 @@ async function outliers(root) {
     { ...titled("Mais distantes do partido no apoio ao governo", "Most out of step with their party on the government"),
       note: L("Os mais afastados da mediana de apoio ao governo do próprio partido, para mais ou para menos.", "Furthest from their party's median government support, either way."),
       rows: active.filter((r) => off(r, "with_gov") != null).sort((a, b) => Math.abs(off(b, "with_gov")) - Math.abs(off(a, "with_gov"))), k: "with_gov",
-      extra: (r) => `${off(r, "with_gov") > 0 ? "+" : "−"}${fmt(100 * Math.abs(off(r, "with_gov")), 0)} ${L("p.p. vs. partido", "pts vs party")}` },
+      xl: L("Vs. partido", "Vs party"), extra: (r) => `${off(r, "with_gov") > 0 ? "+" : "−"}${fmt(100 * Math.abs(off(r, "with_gov")), 0)} ${L("p.p.", "pts")}` },
     { ...titled("Pontes", "Bridges"),
       note: L("Laços de voto com deputados de outros partidos, acima do que o tamanho do partido sozinho explicaria (um deputado de um partido de três membros tem, por construção, quase só laços com outros partidos).",
         "Co-voting ties to other parties' deputies, above what their party's size alone would give (a deputy of a three-member party has almost only cross-party ties by construction)."),
-      rows: active.filter((r) => r.cross_share != null).sort((a, b) => excess(b) - excess(a)), k: "cross_share", extra: (r) => `+${fmt(100 * excess(r), 0)} ${L("p.p. vs. esperado", "pts over expected")}` },
+      rows: active.filter((r) => r.cross_share != null).sort((a, b) => excess(b) - excess(a)), k: "cross_share", xl: L("Acima do esperado", "Over expected"), extra: (r) => `+${fmt(100 * excess(r), 0)} ${L("p.p.", "pts")}` },
     { ...titled("Mais dinheiro de emendas pago", "Most amendment money paid"),
       note: L("Valor pago até agora pelas emendas que apresentaram aos orçamentos da legislatura.", "Paid so far on the amendments they authored for the legislature's budgets."),
       rows: D.rows.filter((r) => r.emendas_pago).sort((a, b) => b.emendas_pago - a.emendas_pago), k: "emendas_pago" },
     { ...titled("Mais dinheiro de emendas enviado para fora do estado", "Most amendment money sent outside their state"),
       note: L("Parcela paga a outros estados (sem contar programas nacionais), entre deputados com R$ 1 milhão ou mais pagos.", "Share paid to other states (national programmes excluded), deputies with R$1 million or more paid."),
       rows: D.rows.filter((r) => r.emendas_pago >= 1e6 && r.emendas_pago_estado != null).sort((a, b) => (1 - b.emendas_pago_estado - b.emendas_pago_nacional) - (1 - a.emendas_pago_estado - a.emendas_pago_nacional)), k: "emendas_pago",
-      extra: (r) => L(`${pct(1 - r.emendas_pago_estado - r.emendas_pago_nacional)} fora de ${r.uf}`, `${pct(1 - r.emendas_pago_estado - r.emendas_pago_nacional)} outside ${r.uf}`) },
+      xl: L("Fora do estado", "Outside the state"), extra: (r) => pct(1 - r.emendas_pago_estado - r.emendas_pago_nacional) },
     { ...titled("Mais dinheiro a prefeitos do partido, acima do acaso", "Most money to towns their party runs, above chance"),
       note: L("Parcela do dinheiro a municípios que foi para cidades com prefeito do partido naquele ano, menos a parcela dos municípios do estado governados pelo partido. Deputados com R$ 5 milhões ou mais pagos.",
         "Share of their town money to towns whose mayor was from their party that year, minus the share of their state's towns their party ran. Deputies with R$5 million or more paid."),
-      rows: D.rows.filter((r) => r.prefeito_excesso != null && r.emendas_pago >= 5e6).sort((a, b) => b.prefeito_excesso - a.prefeito_excesso), k: "prefeito_mesmo_partido", extra: (r) => `${L("acaso", "chance")} ${pct(r.prefeito_base)}` },
+      rows: D.rows.filter((r) => r.prefeito_excesso != null && r.emendas_pago >= 5e6).sort((a, b) => b.prefeito_excesso - a.prefeito_excesso), k: "prefeito_mesmo_partido", xl: L("Acaso", "Chance"), extra: (r) => pct(r.prefeito_base) },
     { ...titled("Emendas pagas a empresas impedidas", "Amendment money paid to barred companies"),
       note: L("Pago a empresas enquanto estavam sob sanção do CEIS ou do CNEP, todos os orçamentos desde 2015 (veja a página de Sanções).", "Paid to companies while under a CEIS or CNEP sanction, every budget since 2015 (see the Sanctions page)."),
       rows: D.rows.filter((r) => r.sancoes_pago_sancionadas > 0).sort((a, b) => b.sancoes_pago_sancionadas - a.sancoes_pago_sancionadas), k: "sancoes_pago_sancionadas",
-      extra: (r) => plural(r.sancoes_empresas, L("empresa", "firm"), L("empresas", "firms")) },
+      xl: L("Empresas", "Firms"), extra: (r) => fmt(r.sancoes_empresas) },
     { ...titled("Mais recursos próprios na campanha", "Most of their own money in their campaign"),
       note: L("Autofinanciamento da campanha que levou à Câmara. A lei limita a 10% do teto de gastos do cargo, por isso vários aparecem com o mesmo valor.",
         "Self-funding of the campaign that elected them. The law caps it at 10% of the office's spending limit, which is why several sit at the same amount."),
       rows: D.rows.filter((r) => r.campanha_proprios > 0).sort((a, b) => b.campanha_proprios - a.campanha_proprios), k: "campanha_proprios",
-      extra: (r) => L(`${pct(r.campanha_proprios / r.campanha_total)} de ${brl(r.campanha_total)}`, `${pct(r.campanha_proprios / r.campanha_total)} of ${brl(r.campanha_total)}`) },
+      xl: L("Do arrecadado", "Of money raised"), extra: (r) => L(`${pct(r.campanha_proprios / r.campanha_total)} de ${brl(r.campanha_total)}`, `${pct(r.campanha_proprios / r.campanha_total)} of ${brl(r.campanha_total)}`) },
     { ...titled("Mais dinheiro de grandes doadores", "Most money from large donors"),
       note: L("De doadores pessoas físicas que deram R$ 50 mil ou mais à campanha.", "From private donors who gave their campaign R$50,000 or more."),
       rows: D.rows.filter((r) => r.grandes_doadores_valor > 0).sort((a, b) => b.grandes_doadores_valor - a.grandes_doadores_valor), k: "grandes_doadores_valor",
-      extra: (r) => plural(r.grandes_doadores, L("doador", "donor"), L("doadores", "donors")) },
+      xl: L("Doadores", "Donors"), extra: (r) => fmt(r.grandes_doadores) },
   ];
   const g = el("div", { className: "grid2" });
   for (const x of lists) {
@@ -557,7 +557,7 @@ async function outliers(root) {
     g.append(el("div", { className: "card" }, el("h2", { textContent: x.title }), el("p", { className: "note", textContent: x.note }), t));
     table(t, x.rows.slice(0, 10).map((r, i) => ({ i: i + 1, r, who: r.label, v: r[x.k], extra: x.extra ? x.extra(r) : "" })), [
       { key: "i", label: "#" }, { key: "who", label: L("Deputado", "Deputy"), text: true, wrap: true, fmt: (v, y) => profileLink(y.r) }, { key: "v", label: SHORT[x.k], fmt: M[x.k].money ? (v) => brl(v) : M[x.k].fmt },
-      ...(x.extra ? [{ key: "extra", label: "", text: true }] : []),
+      ...(x.extra ? [{ key: "extra", label: x.xl }] : []),
     ], { search: false, pageSize: 10, name: x.file });
   }
   root.append(g);

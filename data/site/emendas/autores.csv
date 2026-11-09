@@ -35,7 +35,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 1283,camara:74044,REPUBLICANOS,PB,camara,Wilson Santiago
 1297,camara:74047,PDT,PE,camara,PAULO RUBEM SANTIAGO
 1299,camara:74048,CIDADANIA,PE,camara,RAUL JUNGMANN
-1301,camara:73507,MDB,,senado,ROSE DE FREITAS
+1301,camara:73507,MDB,ES,senado,ROSE DE FREITAS
 1303,camara:74049,,,,JOÃO LYRA
 1304,camara:74050,PL,AL,camara,MAURÍCIO QUINTELLA LESSA
 1308,camara:74833,PSD,RJ,senado,AROLDE DE OLIVEIRA
@@ -131,11 +131,11 @@ autor_codigo,pessoa,partido,uf,casa,nome
 2021,senado:643,PSB,GO,senado,LUCIA VANIA
 2023,senado:825,PT,RS,senado,PAULO PAIM
 2025,senado:3396,PSDB,CE,senado,TASSO JEREISSATI
-2028,senado:3361,MDB,,senado,JOSE MARANHAO
+2028,senado:3361,MDB,PB,senado,JOSE MARANHAO
 2029,senado:631,PL,ES,senado,MAGNO MALTA
 2033,senado:87,MDB,RN,senado,GARIBALDI ALVES FILHO
 2038,senado:345,PSB,PR,senado,FLAVIO ARNS
-2042,senado:3360,PT,,senado,DELCIDIO DO AMARAL
+2042,senado:3360,PT,MS,senado,DELCIDIO DO AMARAL
 2047,senado:3394,PSB,AP,senado,JOAO CAPIBERIBE
 2048,senado:3372,MDB,RO,senado,VALDIR RAUPP
 2052,senado:945,PODE,PR,senado,ALVARO DIAS
@@ -160,7 +160,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 2213,camara:174861,MDB,RO,camara,AMIR LANDO
 2215,camara:141513,UNIÃO,MG,camara,Bilac Pinto
 2220,camara:141403,,,,RATINHO JUNIOR
-2227,camara:141374,PSD,,senado,ALEXANDRE SILVEIRA
+2227,camara:141374,PSD,MG,senado,ALEXANDRE SILVEIRA
 2238,camara:3151,,,,JAIRO ATAÍDE
 2246,senado:3,PSB,SE,senado,ANTONIO CARLOS VALADARES
 2253,senado:13,,,,CASILDO MALDANER
@@ -169,10 +169,10 @@ autor_codigo,pessoa,partido,uf,casa,nome
 2281,senado:72,MDB,PR,senado,ROBERTO REQUIAO
 2282,senado:73,MDB,RR,senado,ROMERO JUCA
 2289,senado:70,MDB,AL,senado,RENAN CALHEIROS
-2295,senado:90,PSDB,,senado,JOSE SERRA
+2295,senado:90,PSDB,SP,senado,JOSE SERRA
 2319,senado:952,,,,MOZARILDO CAVALCANTI
 2324,senado:950,MDB,MA,senado,JOAO ALBERTO SOUZA
-2331,senado:1023,PP,,senado,MARIA DO CARMO ALVES
+2331,senado:1023,PP,SE,senado,MARIA DO CARMO ALVES
 2340,senado:111,PL,MT,senado,BLAIRO MAGGI
 2355,camara:4930,AVANTE,PE,camara,SILVIO COSTA
 2356,camara:141391,CIDADANIA,SP,camara,Arnaldo Jardim
@@ -215,7 +215,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 2424,camara:141434,MDB,AC,camara,Flaviano Melo
 2429,camara:141480,PP,TO,camara,Lázaro Botelho
 2431,camara:141402,,,,CARLOS BRANDÃO
-2433,camara:141465,PSDB,,senado,PINTO ITAMARATY
+2433,camara:141465,PSDB,MA,senado,PINTO ITAMARATY
 2434,camara:141543,,,,PROFESSOR SETIMO
 2435,camara:141558,PSDB,MA,camara,WALDIR MARANHÃO
 2436,camara:141474,PDT,MA,camara,JULIÃO AMIN
@@ -282,7 +282,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 2568,camara:141870,PP,RS,camara,VILSON COVATTI
 2569,camara:141405,MDB,SC,camara,Celso Maldaner
 2570,camara:141413,PT,SC,camara,DÉCIO LIMA
-2573,camara:131943,MDB,,senado,JARBAS VASCONCELOS
+2573,camara:131943,MDB,PE,senado,JARBAS VASCONCELOS
 2579,senado:4525,PTB,AL,senado,FERNANDO COLLOR
 2586,camara:146307,PP,MT,camara,Neri Geller
 2593,camara:148134,PSL,MT,camara,PROFESSOR VICTÓRIO GALLI
@@ -297,7 +297,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 2620,camara:154178,REPUBLICANOS,SP,camara,Milton Vieira
 2625,camara:154919,PSD,SP,camara,Eleuses Paiva
 2627,camara:154997,PT,BA,camara,EMILIANO JOSÉ
-2633,senado:4981,PDT,,senado,ACIR GURGACZ
+2633,senado:4981,PDT,RO,senado,ACIR GURGACZ
 2637,camara:178846,PL,AM,camara,ALFREDO NASCIMENTO
 2661,camara:160396,,,,JOSÉ HUMBERTO
 2662,camara:160426,PSD,DF,camara,ROGÉRIO ROSSO
@@ -341,7 +341,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 2710,camara:160593,,,,PAULO WAGNER
 2711,camara:160527,PP,PB,camara,Aguinaldo Ribeiro
 2712,camara:160674,REPUBLICANOS,PB,camara,Hugo Motta
-2713,camara:160564,MDB,,senado,NILDA GONDIM
+2713,camara:160564,MDB,PB,senado,NILDA GONDIM
 2714,camara:160629,PODE,PB,camara,Romero Rodrigues
 2715,camara:160635,PODE,PB,camara,Ruy Carneiro
 2716,camara:160636,PTB,PB,camara,WILSON FILHO
@@ -487,7 +487,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 2881,camara:74858,PT,RJ,camara,Lindbergh Farias
 2884,senado:715,PTB,PE,senado,ARMANDO MONTEIRO
 2885,senado:5008,PT,PE,senado,HUMBERTO COSTA
-2886,senado:846,PSDB,,senado,ALOYSIO NUNES FERREIRA
+2886,senado:846,PSDB,SP,senado,ALOYSIO NUNES FERREIRA
 2887,senado:5000,MDB,SP,senado,MARTA SUPLICY
 2889,camara:74646,PSDB,MG,camara,Aécio Neves
 2891,senado:4877,,,,CYRO MIRANDA
@@ -553,7 +553,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 2991,camara:176120,,,,GUSTAVO PETTA
 2992,camara:176794,PT,SP,camara,MARIA LUCIA PRANDI
 2994,camara:177282,PSD,MG,camara,Subtenente Gonzaga
-2995,senado:5178,PTB,,senado,DOUGLAS CINTRA
+2995,senado:5178,PTB,PE,senado,DOUGLAS CINTRA
 2999,senado:4897,,,,ANTONIO AURELIANO
 3020,camara:178835,PDT,RS,camara,Afonso Motta
 3023,camara:137853,PCDOB,MG,camara,WADSON RIBEIRO
@@ -858,7 +858,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 3789,senado:5540,MDB,PE,senado,FERNANDO BEZERRA COELHO
 3790,camara:141446,PP,AC,senado,GLADSON CAMELI
 3791,senado:5100,PROS,DF,senado,HELIO JOSE
-3793,senado:5533,PODE,,senado,LASIER MARTINS
+3793,senado:5533,PODE,RS,senado,LASIER MARTINS
 3794,senado:5525,PSD,AM,senado,OMAR AZIZ
 3795,senado:5523,PSD,BA,senado,OTTO ALENCAR
 3796,senado:374,PT,PA,senado,PAULO ROCHA
@@ -866,14 +866,14 @@ autor_codigo,pessoa,partido,uf,casa,nome
 3798,camara:89282,S/PARTIDO,DF,senado,REGUFFE
 3799,camara:160597,S/PARTIDO,RJ,senado,ROMÁRIO
 3800,camara:74813,DEM,GO,senado,RONALDO CAIADO
-3801,camara:73507,MDB,,senado,ROSE DE FREITAS
-3802,senado:5038,MDB,,senado,SANDRA BRAGA
+3801,camara:73507,MDB,ES,senado,ROSE DE FREITAS
+3802,senado:5038,MDB,AM,senado,SANDRA BRAGA
 3803,senado:5527,MDB,MS,senado,SIMONE TEBET
-3804,senado:5535,PROS,,senado,TELMARIO MOTA
+3804,senado:5535,PROS,RR,senado,TELMARIO MOTA
 3805,camara:73653,PL,MT,senado,WELLINGTON FAGUNDES
 3806,camara:74037,PT,RN,senado,FÁTIMA BEZERRA
 3807,camara:178846,PL,AM,camara,ALFREDO NASCIMENTO
-3808,camara:131943,MDB,,senado,JARBAS VASCONCELOS
+3808,camara:131943,MDB,PE,senado,JARBAS VASCONCELOS
 3809,camara:178933,MDB,PR,camara,Sergio Souza
 3810,senado:5529,PSD,MG,senado,ANTONIO ANASTASIA
 3811,senado:677,PTB,MA,senado,ROBERTO ROCHA
@@ -882,7 +882,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 3814,camara:180545,DEM,PR,camara,OSMAR BERTOLDI
 3815,camara:181315,MDB,RJ,camara,MARQUINHO MENDES
 3816,camara:181316,PSB,MS,camara,ELIZEU DIONIZIO
-3817,senado:5637,PT,,senado,DONIZETI NOGUEIRA
+3817,senado:5637,PT,TO,senado,DONIZETI NOGUEIRA
 3818,camara:124411,MDB,RS,camara,MAURO PEREIRA
 3820,camara:186775,PP,MG,camara,FRANKLIN
 3821,camara:187008,PODE,PI,camara,SILAS FREIRE
@@ -901,10 +901,10 @@ autor_codigo,pessoa,partido,uf,casa,nome
 3845,senado:5052,PP,BA,senado,ROBERTO MUNIZ
 3847,camara:195143,PROS,PB,camara,ANDRÉ AMARAL
 3848,camara:195278,PCDOB,AC,camara,MOISÉS DINIZ
-3850,senado:5199,PSDB,,senado,DECA
-3851,senado:5617,PDT,,senado,PASTOR VALADARES
+3850,senado:5199,PSDB,PB,senado,DECA
+3851,senado:5617,PDT,RO,senado,PASTOR VALADARES
 3852,camara:195581,REPUBLICANOS,SP,camara,RICARDO BENTINHO
-3853,camara:141465,PSDB,,senado,PINTO ITAMARATY
+3853,camara:141465,PSDB,MA,senado,PINTO ITAMARATY
 3856,camara:81366,PSC,MA,camara,LUANA COSTA
 3858,camara:66179,PP,ES,camara,Norma Ayub
 3859,camara:195866,UNIÃO,CE,camara,Vaidon Oliveira
@@ -1093,7 +1093,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 4079,senado:5926,PSD,AP,senado,LUCAS BARRETO
 4080,senado:581,PT,BA,senado,JAQUES WAGNER
 4081,senado:5973,PSB,CE,senado,CID GOMES
-4082,senado:5979,PDT,,senado,LEILA BARROS
+4082,senado:5979,PDT,DF,senado,LEILA BARROS
 4083,senado:5899,PSD,GO,senado,VANDERLAN CARDOSO
 4084,camara:167493,PDT,MA,senado,WEVERTON ROCHA
 4085,senado:5929,PODE,MT,senado,JUIZA SELMA
@@ -1104,7 +1104,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 4090,camara:74833,PSD,RJ,senado,AROLDE DE OLIVEIRA
 4091,camara:178949,PSD,RN,senado,ZENAIDE MAIA
 4092,senado:475,MDB,RO,senado,CONFUCIO MOURA
-4093,senado:6027,REPUBLICANOS,,senado,MECIAS DE JESUS
+4093,senado:6027,REPUBLICANOS,RR,senado,MECIAS DE JESUS
 4094,camara:160565,PSD,SP,senado,MARA GABRILLI
 4095,camara:160568,PT,SE,senado,ROGÉRIO CARVALHO
 4096,camara:81232,PSD,TO,senado,IRAJÁ ABREU
@@ -1143,7 +1143,7 @@ autor_codigo,pessoa,partido,uf,casa,nome
 4135,camara:204532,NOVO,SP,camara,Vinicius Poit
 4136,camara:4931,PL,DF,senado,IZALCI LUCAS
 4137,camara:172711,PSDB,AM,senado,PLÍNIO VALÉRIO
-4138,senado:5976,NOVO,,senado,EDUARDO GIRAO
+4138,senado:5976,NOVO,CE,senado,EDUARDO GIRAO
 4139,camara:178883,PSD,MA,senado,ELIZIANE GAMA
 4140,camara:178897,PSB,MG,senado,RODRIGO PACHECO
 4141,senado:5998,PP,PB,senado,DANIELLA RIBEIRO
@@ -1205,14 +1205,14 @@ autor_codigo,pessoa,partido,uf,casa,nome
 4214,camara:215045,PP,RJ,camara,Pedro Augusto Palareti
 4215,camara:215044,PSOL,PA,camara,Vivi Reis
 4216,camara:212625,PODE,MA,camara,Dr. Gonçalo
-4218,camara:160564,MDB,,senado,NILDA GONDIM
+4218,camara:160564,MDB,PB,senado,NILDA GONDIM
 4221,senado:6008,PODE,SP,senado,GIORDANO
 4225,camara:217330,PSC,AP,camara,Pedro Dalua
 4226,camara:217480,PSD,RJ,camara,Jones Moura
 4227,senado:6019,MDB,RO,senado,MARIA ELIZA
 4228,senado:5898,PP,PI,senado,ELIANE NOGUEIRA
 4229,camara:218086,REPUBLICANOS,SP,camara,Ely Santos
-4232,camara:141374,PSD,,senado,ALEXANDRE SILVEIRA
+4232,camara:141374,PSD,MG,senado,ALEXANDRE SILVEIRA
 4239,senado:5906,PSDB,AL,senado,DRA. EUDOCIA
 4250,senado:5972,PDT,CE,senado,JULIO VENTURA
 4251,senado:6010,MDB,SC,senado,IVETE DA SILVEIRA

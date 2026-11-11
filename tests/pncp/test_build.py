@@ -80,3 +80,18 @@ def test_covers():
         "esfera": ["F", "F", "E", "F", "F", "M", "M"], "uf": ["SC", "SP", "SP", "DF", "DF", "PR", "PE"],
         "orgao": ["A", "A", "B", "MINISTERIO DA JUSTICA", "MINISTERIO DA SAUDE", "MUNICIPIO DA LAPA", "MUNICIPIO DE TORITAMA"]})
     assert b.covers(m).tolist() == ["sim", "nao", "nao", "nao", "sim", "nao", "possivel"]
+
+
+def test_update_leaves_a_failed_day_for_the_next_run(monkeypatch, tmp_path):
+    sancoes(tmp_path)
+
+    def contratos(day, updated=False):
+        if day == "2026-11-05":
+            raise RuntimeError("GET ...: HTTP 400 Página 3 inexistente.")
+        return [] if updated else [rec("a" + day, 10)]
+    monkeypatch.setattr(b.fetch, "contratos", contratos)
+    data = tmp_path / "pncp"
+    r = b.update(data, today=dt.date(2026, 11, 7), days=3)
+    assert r["dias"] == 2 and r["left"] == 1
+    dias = pd.read_csv(data / "dias.csv", dtype=str, keep_default_na=False)
+    assert dias[dias.publicados != ""].dia.tolist() == ["2026-11-04", "2026-11-06"]

@@ -20,7 +20,11 @@ page holds at most 500 contracts. Past about 20 requests a minute the API
 answers 429 with an HTML page and no `Retry-After`, clearing within a minute,
 so requests are spaced 4 seconds apart and a 429 waits 75 seconds. A day
 whose pages do not add up to the `totalRegistros` the API reports is not
-recorded, and is read again next run.
+recorded, and is read again next run. So is a day that hits HTTP 400
+("Página N inexistente", seen when a day's count shrinks while its pages are
+read) or a 422 with an empty body that persists through retries (seen in
+November 2026, gone on the next run). Until 2026-11-11 either one ended the
+whole run unsaved: three daily runs in a row lost their reading that way.
 
 **Runs.** Each daily run reads yesterday's updates, then the days not read
 yet, newest first, for up to five hours, saving every ten days

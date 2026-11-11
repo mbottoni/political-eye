@@ -6,6 +6,13 @@ as ``yyyyMMdd``. No data is HTTP 204 with an empty body. Past about 20
 requests a minute the API answers 429 with an HTML page and no
 ``Retry-After``; it clears within a minute. So requests are paced and a 429
 waits it out.
+
+Other answers seen in the history backfill (November 2026): 400 "Página N
+inexistente" when a day's count shrinks while its pages are read (asking for a
+page past the end gives the same), and an occasional 422 with an empty body
+that does not recur on the next run. Both raise ``RuntimeError`` (the 422
+after retries), so the caller leaves that day for the next run instead of
+losing the run.
 """
 
 from __future__ import annotations
@@ -22,6 +29,18 @@ PAUSE = 4.0          # seconds between requests (about 15 a minute)
 WAIT_429 = 75.0
 PAGE = 500
 _last = [0.0]
+
+
+def _message(e: urllib.error.HTTPError) -> str:
+    """The API's own explanation, if the error body carries one."""
+    try:
+        body = e.read().decode("utf-8", "replace")
+    except Exception:
+        return ""
+    try:
+        return str(json.loads(body).get("message", ""))[:200]
+    except (ValueError, AttributeError):
+        return body.strip()[:200]
 
 
 def _get(url: str, attempts: int = 8) -> dict | None:
@@ -44,9 +63,9 @@ def _get(url: str, attempts: int = 8) -> dict | None:
                 log(f"pncp: 429, waiting {WAIT_429:.0f}s")
                 time.sleep(WAIT_429)
                 continue
-            if e.code < 500:
-                raise
-            err: Exception = e
+            if e.code < 500 and e.code != 422:
+                raise RuntimeError(f"GET {url}: HTTP {e.code} {_message(e)}") from e
+            err: Exception = RuntimeError(f"HTTP {e.code} {_message(e)}")
         except (*NETWORK_ERRORS, json.JSONDecodeError) as e:
             _last[0] = time.monotonic()
             err = e

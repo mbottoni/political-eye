@@ -1,30 +1,30 @@
 {
   "acordos-leniencia": {
-    "url": "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/acordos-leniencia/20261112_AcordosLeniencia.zip",
-    "size": 40664,
-    "etag": "\"ffd6828ce78f44c6a2856789f463a21f\"",
-    "last_modified": "Thu, 12 Nov 2026 16:15:26 GMT",
-    "date": "2026-11-12"
+    "url": "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/acordos-leniencia/20261113_AcordosLeniencia.zip",
+    "size": 40663,
+    "etag": "\"0d619dce2e3c64dee21ae421599c90b4\"",
+    "last_modified": "Fri, 13 Nov 2026 16:15:26 GMT",
+    "date": "2026-11-13"
   },
   "ceis": {
-    "url": "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/ceis/20261112_CEIS.zip",
-    "size": 3478291,
-    "etag": "\"2c8ea29d404c9e8df4c152d366dc48a5\"",
-    "last_modified": "Thu, 12 Nov 2026 16:15:15 GMT",
-    "date": "2026-11-12"
+    "url": "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/ceis/20261113_CEIS.zip",
+    "size": 3502802,
+    "etag": "\"d0db6146f743a5acdb89be4bbd8dbaf5\"",
+    "last_modified": "Fri, 13 Nov 2026 16:15:14 GMT",
+    "date": "2026-11-13"
   },
   "cepim": {
-    "url": "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/cepim/20261111_CEPIM.zip",
-    "size": 80425,
-    "etag": "\"e08ab589b3922df24f06f761753c9540\"",
-    "last_modified": "Thu, 12 Nov 2026 13:35:26 GMT",
-    "date": "2026-11-11"
+    "url": "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/cepim/20261112_CEPIM.zip",
+    "size": 81017,
+    "etag": "\"24998ac1779967df57f5658132a467c9\"",
+    "last_modified": "Fri, 13 Nov 2026 13:40:04 GMT",
+    "date": "2026-11-12"
   },
   "cnep": {
-    "url": "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/cnep/20261112_CNEP.zip",
-    "size": 208013,
-    "etag": "\"fa1699c1c121b2227616333b0e2304e9\"",
-    "last_modified": "Thu, 12 Nov 2026 16:15:19 GMT",
-    "date": "2026-11-12"
+    "url": "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/cnep/20261113_CNEP.zip",
+    "size": 207885,
+    "etag": "\"7f08615b074923bf47153dd4097ccf0c\"",
+    "last_modified": "Fri, 13 Nov 2026 16:15:18 GMT",
+    "date": "2026-11-13"
   }
 }

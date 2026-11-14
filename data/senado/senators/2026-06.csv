@@ -1,5 +1,5 @@
 senador_id,nome,partido,uf,n_votes,n_authored
-22,Esperidião Amin,PP,SC,4,12
+22,Esperidião Amin,PP,SC,4,15
 35,Jader Barbalho,MDB,PA,4,7
 70,Renan Calheiros,MDB,AL,4,3
 285,Marcio Bittar,PL,AC,4,2
@@ -16,7 +16,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 3777,Eduardo Gomes,PL,TO,4,2
 3806,Zequinha Marinho,PODE,PA,4,5
 3830,Davi Alcolumbre,UNIÃO,AP,4,2
-4531,Jayme Campos,UNIÃO,MT,4,1
+4531,Jayme Campos,UNIÃO,MT,4,4
 4560,Sérgio Petecão,PSD,AC,4,2
 4639,Beto Faro,PT,PA,4,4
 4642,Efraim Filho,PL,PB,4,0
@@ -34,7 +34,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5385,Irajá,PSD,TO,4,1
 5386,Professora Dorinha Seabra,UNIÃO,TO,4,8
 5411,Weverton,PDT,MA,4,10
-5422,Marcos Rogério,PL,RO,4,4
+5422,Marcos Rogério,PL,RO,4,7
 5502,Plínio Valério,PSDB,AM,4,4
 5523,Otto Alencar,PSD,BA,4,1
 5525,Omar Aziz,PSD,AM,4,4
@@ -66,7 +66,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 5990,Carlos Viana,PSD,MG,4,5
 5998,Daniella Ribeiro,PP,PB,4,3
 6008,Giordano,PODE,SP,4,2
-6009,Astronauta Marcos Pontes,PL,SP,4,9
+6009,Astronauta Marcos Pontes,PL,SP,4,12
 6010,Ivete da Silveira,MDB,SC,4,4
 6025,Roberta Acioly,REPUBLICANOS,RR,4,2
 6295,Carlos Fávaro,PSD,MT,4,3
@@ -75,7 +75,7 @@ senador_id,nome,partido,uf,n_votes,n_authored
 6336,Camilo Santana,PT,CE,4,1
 6337,Cleitinho,REPUBLICANOS,MG,4,4
 6338,Teresa Leitão,PT,PE,4,9
-6340,Jaime Bagattoli,PL,RO,4,8
+6340,Jaime Bagattoli,PL,RO,4,11
 6341,Hamilton Mourão,REPUBLICANOS,RS,4,8
 6358,Ana Paula Lobato,PSB,MA,4,10
 6369,Jussara Lima,PSD,PI,4,1

@@ -62,14 +62,14 @@
   "autoria-2025": {
     "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2025-01-01&dataFimApresentacao=2025-12-31",
     "files": 126,
-    "size": 8793879,
-    "sha256": "4ff4204e8890357432fb1aad9f43639f0959f07e9406a6c059b68a2f16e0826c"
+    "size": 8781655,
+    "sha256": "826fab4e76f8f260a0d68de84a52226858ab86125920a9c925a3173670e22121"
   },
   "autoria-2026": {
     "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2026-01-01&dataFimApresentacao=2026-12-31",
     "files": 126,
-    "size": 5073170,
-    "sha256": "e2d6cd534dfc7117dbc8b274785122f0b606df0b4db859d75fe83db670f4fa26"
+    "size": 5329204,
+    "sha256": "6c03a8e0f92868d20b0d031e36858bf2bdef41fa131e40b9d88d68c120392591"
   },
   "orientacao-2018": {
     "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20180101/20181231",
@@ -113,8 +113,8 @@
   },
   "orientacao-2026": {
     "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20260101/20261231",
-    "size": 372380,
-    "sha256": "1c2c755d3a348245126110a9d89f01fdf7dc4ca669e9ab92d9a2e1b35d4e0b78"
+    "size": 400945,
+    "sha256": "c408e3e47b7dfde9d117f821d382db6c5efddb58fca909e2e2cd6180c3255c74"
   },
   "senadores-54": {
     "url": "https://legis.senado.leg.br/dadosabertos/senador/lista/legislatura/54.json?exercicio=S",
@@ -134,7 +134,7 @@
   "senadores-57": {
     "url": "https://legis.senado.leg.br/dadosabertos/senador/lista/legislatura/57.json?exercicio=S",
     "size": 163370,
-    "sha256": "9ad3871f295d7f947fe3e80cead393ca8bc2ef6120bf2e1d75dab7613e70d1f8"
+    "sha256": "6ab22007f0dd806f66f1b636c14170e3bb0528f14847c86e71e302735e8e97e2"
   },
   "votacao-2015": {
     "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2015-01-01&dataFim=2015-12-31",
@@ -193,7 +193,7 @@
   },
   "votacao-2026": {
     "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2026-01-01&dataFim=2026-12-31",
-    "size": 1258555,
-    "sha256": "d7b8e63fe2c235b82ebc17727a50eb4eb8ad6bec8b23e7d9ab6aa54ed74b6a0b"
+    "size": 1330739,
+    "sha256": "44e344831210ecd1921debb2987e11ce108c5c03378df0687ace707af3d73352"
   }
 }

@@ -63,6 +63,7 @@ flowchart LR
 
 - **One source, one directory, one job.** Each source has its code in `politicaleye/<source>/`, its tables in `data/<source>/`, its rules in `methodology/<source>.md`, its tests in `tests/<source>/` and its own scheduled workflow. Commits start with the source's name (`sancoes: update through 2026-11-08`).
 - **Deterministic tables.** Sorted CSV with fixed line endings: a rebuild that changes nothing makes no commit, so every diff is a real change at the source, corrections included.
+- **Summaries follow the code.** When the code that builds a page changes on main, `site.yml` rebuilds every page's summaries; a long run that started before the change rebuilds its page with the new code before it pushes.
 - **Provenance.** `data/<source>/sources.json` records every file and API response a build used (URL, size, ETag or SHA-256). Raw downloads stay in a git-ignored cache.
 - **Checked against itself.** The network numbers the pages compute in the browser are tested against the Python build on every push (`tests/*/parity.mjs`), and every page and tab is loaded in headless Chrome in both languages (`tests/pages_smoke.py`).
 

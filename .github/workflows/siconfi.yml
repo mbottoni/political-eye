@@ -69,5 +69,12 @@ jobs:
           for i in 1 2 3; do
             git push && exit 0
             git pull --rebase
+            # A long run uses the code it started with. If the page's builder changed on main
+            # meanwhile, rebuild the summaries with the code now there, so they never go out stale.
+            if ! git diff --quiet "$GITHUB_SHA" HEAD -- politicaleye; then
+              uv run python -m politicaleye site build siconfi
+              git add data/site/siconfi
+              git diff --staged --quiet || git commit -m "siconfi: summaries rebuilt with the code now on main"
+            fi
           done
           exit 1

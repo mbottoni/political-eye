@@ -68,6 +68,23 @@ feed reader:
 Dates come from the data (the sanctions snapshot, the day a contract was published), never from the clock, so a run
 with nothing new changes nothing. The rules, thresholds and limits are in [methodology/mudancas.md](methodology/mudancas.md).
 
+### Weekly email
+
+Every Monday the `weekly` workflow renders what the logs recorded in the week before (Monday to Monday, read from the
+commits) as an email in Portuguese: the week in numbers, then each source's largest changes, each linking to the page
+that explains it. It sends only when three repository secrets exist (Settings → Secrets and variables → Actions); until
+then it is a dry run and the rendered email is kept as a workflow artifact (`email`).
+
+| secret | value |
+|---|---|
+| `SMTP_USER` | the Gmail address that sends |
+| `SMTP_PASSWORD` | a Google [App Password](https://myaccount.google.com/apppasswords) for it (needs 2-Step Verification) |
+| `EMAIL_TO` | where it goes (several addresses separated by commas) |
+
+Optional: a repository **variable** `EMAIL_LANG` set to `en` sends it in English, `both` in both languages; `SMTP_HOST`
+and `SMTP_PORT` (environment) point it at another server. Run it by hand from the Actions tab (*weekly → Run
+workflow*), with a past date to render that week again.
+
 ## How it works
 
 ```mermaid
@@ -130,6 +147,7 @@ uv sync
 uv run python -m politicaleye -h                  # every source and its commands
 uv run python -m politicaleye sancoes update       # download one source and rebuild its tables
 uv run python -m politicaleye site build sancoes   # rebuild a page's summaries
+uv run python -m politicaleye site digest          # the weekly email, written to out/ (sent only with the SMTP variables)
 
 python3 -m http.server 8000                        # then open http://localhost:8000/docs/
 ```

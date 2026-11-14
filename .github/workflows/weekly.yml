@@ -1,0 +1,71 @@
+name: weekly
+
+# Mondays, 12:00 UTC (09:00 in Brasília): emails what the change logs (data/site/mudancas/) recorded in the week
+# that ended at 00:00 UTC, read from the commits, so a run GitHub starts hours late sends the same email. Sends only
+# when the SMTP_USER, SMTP_PASSWORD and EMAIL_TO secrets exist; otherwise it is a dry run and the rendered email is
+# kept as an artifact. The language comes from the EMAIL_LANG variable (pt, en or both; default pt). Writes nothing
+# to the repository.
+on:
+  schedule:
+    - cron: "0 12 * * 1"
+  workflow_dispatch:
+    inputs:
+      today:
+        description: "Send as if on this day (YYYY-MM-DD; empty = today): the email covers the Monday-to-Monday week before it"
+        required: false
+        default: ""
+      lang:
+        description: "Language: pt, en or both (empty = the EMAIL_LANG variable, else pt)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: weekly
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0       # the week's changes are the logs' rows committed in it, read from git...
+          filter: blob:none    # ...without downloading every old version of every table
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Test
+        run: uv run pytest -q tests/site/test_mudancas.py tests/site/test_digest.py
+
+      # Without these three secrets the email is a dry run (see the artifact).
+      - name: Render and send the week's changes
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_LANG: ${{ inputs.lang || vars.EMAIL_LANG }}
+          TODAY: ${{ inputs.today }}
+        run: |
+          if [[ -n "$TODAY" && ! "$TODAY" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "today must be YYYY-MM-DD, got: $TODAY" >&2
+            exit 1
+          fi
+          uv run python -m politicaleye site digest --out out ${TODAY:+--today "$TODAY"}
+
+      - name: Keep the rendered email
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: email
+          path: out/
+          retention-days: 30

@@ -97,6 +97,26 @@ file byte for byte, and commits nothing; a source that stops changing keeps its 
 - **Two jobs at once.** Each job writes its own log and feed; the feed of every source is rebuilt from every log
   after a rebase (`site feeds`), so a job pushing just after another does not drop the other's entries.
 
+## Weekly email
+
+`python -m politicaleye site digest` (`politicaleye/site/digest.py`, run by the `weekly` workflow on Mondays) renders
+the week's changes as an HTML and a text email.
+
+- **Which changes are the week's.** The rows in the logs as committed by Monday 00:00 UTC that were not in them as
+  committed a week before (`git rev-list --before`, `git show`). A change dated earlier but recorded in the week (a
+  CEPIM snapshot published late, a day of contracts read on a later run) is not lost; nothing is sent twice; and a
+  run that GitHub starts hours late, or a re-run, sends the same email. A day's count of older contracts that grew
+  counts by its growth. For a log that did not exist a week before, and without git history, the email takes the
+  rows dated in the week.
+- **What it says.** The week in numbers (companies in and out of the sanctions lists, people counted; new red
+  flags; amendment payments of R$ 5 million or more; contracts of R$ 100 million or more), then per source the same
+  summary line as the page and its ten largest changes (companies entering a list before those leaving), each
+  linking to the page that explains it, with the rest on the what-changed page. It repeats that sanctioned people
+  are counted, never named, and that a red flag is not evidence.
+- **Sending** follows b3-radar: Gmail SMTP with an App Password, only when the `SMTP_USER`, `SMTP_PASSWORD` and
+  `EMAIL_TO` secrets exist; otherwise a dry run, with `out/email.html` and `out/email.txt` kept as an artifact.
+  `EMAIL_LANG` (a repository variable) picks Portuguese (default), English or both.
+
 ## People and names
 
 - Sanctioned people are **counted per day, never named**, and their documents never appear.

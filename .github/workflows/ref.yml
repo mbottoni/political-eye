@@ -31,18 +31,18 @@ jobs:
         run: uv sync --frozen
 
       - name: Test
-        run: uv run pytest -q tests/ref tests/views tests/site/test_deputados.py
+        run: uv run pytest -q tests/ref tests/views tests/site/test_deputados.py tests/site/test_eleicao.py
 
       - name: Download and rebuild
         run: |
           uv run python -m politicaleye ref update
           uv run python -m politicaleye ref prefeitos
           uv run python -m politicaleye views update
-          uv run python -m politicaleye site build deputados
+          uv run python -m politicaleye site build deputados eleicao
 
       - name: Commit if the data changed
         run: |
-          git add data/ref data/views data/site/deputados
+          git add data/ref data/views data/site/deputados data/site/eleicao
           if git diff --staged --quiet; then
             echo "No data changes."
             exit 0

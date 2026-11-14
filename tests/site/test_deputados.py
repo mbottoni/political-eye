@@ -67,6 +67,7 @@ def test_build(tmp_path, monkeypatch):
     assert (ten.sancoes_pago_sancionadas, ten.sancoes_empresas) == (10, 1)
     # Embu's mayor is P1, as is deputy 10; São Paulo's is MDB. Half of SP's towns are P1's.
     assert (ten.prefeito_mesmo_partido, ten.prefeito_base) == (0.625, 0.5)
+    assert ten.prefeito_mesmo_partido_valor == 50   # Embu's R$ 50 of the R$ 80 paid to towns with a mayor
     assert np.isnan(v.loc["20", "prefeito_mesmo_partido"])
 
     nb = pd.read_csv(out / "vizinhos_57.csv", dtype=str)

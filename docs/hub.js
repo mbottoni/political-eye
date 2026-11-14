@@ -26,8 +26,8 @@ const EN = {
   rb_go: "Build the ranking",
   f_pages: "interactive pages", f_sources: "official sources", f_since: "data since", f_updated: "last update", f_stale: "sources overdue",
   swarm_title: "How the Câmara votes", swarm_others: "others", swarm_left: "← votes like PT", swarm_right: "votes like PL →",
-  h_findings: "What the data shows", p_findings: "Four numbers read just now from the pages' tables. Click one to see where it comes from.",
-  k_amend: "Amendments", k_campaigns: "Campaigns",
+  h_findings: "What the data shows", p_findings: "Numbers read just now from the pages' tables. Click one to see where it comes from.",
+  k_amend: "Amendments", k_campaigns: "Campaigns", k_election: "The 2026 election", g_election: "What the election did to the Câmara",
   t_orientacoes: "Party orientations", t_deputados: "Deputies across sources", t_sancoes: "Sanctions", t_tse: "Campaign finance",
   t_emendas: "Parliamentary amendments", t_pncp: "Public contracts", t_siconfi: "Municipal finances", t_stf: "STF case reviews", t_rules: "House rules",
   p_congress: "How deputies and senators vote, with whom, and how often they follow their party and the government.",
@@ -212,6 +212,20 @@ const FINDINGS = {
     finding("barred", brl(e.barrado, 0), tr({ pt: `em emendas pagas a ${num(e.empresas_barrado)} empresas enquanto estavam proibidas de contratar com o poder público`,
       en: `in amendments paid to ${num(e.empresas_barrado)} companies while they were barred from public contracts` }), box);
     if (by.length >= 2) spark(box, by.map((x) => +x.sim || 0), { bars: true, color: css("--c-control") || css("--critical"), height: 26 });
+  },
+  async reelection() {
+    // Of the deputies of the legislature that just ended who ran for the Câmara again, the share re-elected, against the election before.
+    const r = await data("site/eleicao/resumo.json"), [now, before] = r.legislaturas.map((l) => r.builds[l]);
+    const vs = el("span", { className: "vs" },
+      el("span", { textContent: String(now.eleicao) }), meter(now.taxa_reeleicao), el("span", { textContent: pct(now.taxa_reeleicao) }),
+      ...(before ? [el("span", { textContent: String(before.eleicao) }), meter(before.taxa_reeleicao, "base"), el("span", { textContent: pct(before.taxa_reeleicao) })] : []));
+    const won = now.grupos.reeleito, ran = now.concorreram_camara, novos = now.origem.novo / now.eleitos;
+    const pend = now.ufs_pendentes.length ? tr({ pt: ` (${now.ufs_pendentes.join(", ")} ainda sem resultado)`, en: ` (${now.ufs_pendentes.join(", ")} still to come)` }) : "";
+    const kicker = document.querySelector('[data-hl="reelection"] .kicker');
+    if (kicker) kicker.textContent = tr({ pt: `Eleição de ${now.eleicao}`, en: `The ${now.eleicao} election` });
+    finding("reelection", pct(now.taxa_reeleicao), tr({
+      pt: `dos deputados que tentaram a reeleição à Câmara em ${now.eleicao} se reelegeram: ${num(won)} de ${num(ran)}${before ? `, contra ${pct(before.taxa_reeleicao)} em ${before.eleicao}` : ""}. Dos ${num(now.eleitos)} eleitos até agora${pend}, ${pct(novos)} são novos na Câmara (sem mandato desde 2011).`,
+      en: `of the deputies who ran for the Câmara again in ${now.eleicao} were re-elected: ${num(won)} of ${num(ran)}${before ? `, against ${pct(before.taxa_reeleicao)} in ${before.eleicao}` : ""}. Of the ${num(now.eleitos)} elected so far${pend}, ${pct(novos)} are new to the Câmara (no seat since 2011).` }), vs);
   },
   async public() {
     const ys = (await data("site/tse/anos.csv")).map((r) => r.ano).sort();

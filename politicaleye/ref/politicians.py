@@ -128,6 +128,15 @@ def _unique(left: pd.DataFrame, right: pd.DataFrame, on: list[str]) -> pd.DataFr
     return lk.merge(rk, on=on, suffixes=("_l", "_r"))
 
 
+PARTICLES = {"DA", "DE", "DO", "DAS", "DOS", "E"}
+
+
+def _share_a_word(a: str, b: str) -> bool:
+    """Whether two normalised names have a word in common besides the first (particles left out)."""
+    words = lambda s: {w for w in s.split()[1:] if len(w) > 2 and w not in PARTICLES}   # noqa: E731
+    return bool(words(a) & words(b))
+
+
 def build(raw: Path, data: Path, overrides: Path | None = None) -> dict:
     legs = list(range(FIRST_LEG, 59))
     dep, sen, cand = deputies(raw), senators(raw, legs), candidates(raw)
@@ -152,11 +161,27 @@ def build(raw: Path, data: Path, overrides: Path | None = None) -> dict:
                      fed[~fed.id.isin(done)].assign(first=lambda t: t.civil.str.split().str[0].fillna("")),
                      ["nasc", "first", "uf"])
         links += [("camara", a, "tse", b, "nascimento+primeiro_nome+uf") for a, b in zip(m3.id_l, m3.id_r)]
+        linked |= set(m3.id_l)
 
         # Senado <-> TSE (senator and suplente candidacies): full name + state.
         st = cand[cand.cargo.isin(["SENADOR", "1º SUPLENTE", "2º SUPLENTE"]) & (cand.ano == y)]
         m3 = _unique(sen, st, ["civil", "uf"])
         links += [("senado", a, "tse", b, "nome_civil+uf") for a, b in zip(m3.id_l, m3.id_r)]
+
+        # Câmara <-> TSE, every other office (senator and their substitutes, governor, state deputy,
+        # president and the running mates): deputies who ran for something else, or switched to it
+        # after registering for the Câmara. Only keys with the birth date, so a namesake (a son with the
+        # same civil name) is never taken for the deputy. The looser key (birth date, first name, state)
+        # also needs another word of the name in common: two Franciscos born the same day in the same
+        # state are two people.
+        first = lambda t: t.civil.str.split().str[0].fillna("")   # noqa: E731
+        other = cand[(cand.cargo != "DEPUTADO FEDERAL") & (cand.ano == y)].assign(first=first)
+        m5 = _unique(dep_uf, other, ["civil", "nasc"])
+        links += [("camara", a, "tse", b, "outro_cargo:nome_civil+nascimento") for a, b in zip(m5.id_l, m5.id_r)]
+        m6 = _unique(dep_uf[~dep_uf.id.isin(set(m5.id_l))].assign(first=first), other[~other.id.isin(set(m5.id_r))],
+                     ["nasc", "first", "uf"])
+        m6 = m6[pd.Series([_share_a_word(a, b) for a, b in zip(m6.civil_l, m6.civil_r)], index=m6.index, dtype=bool)]
+        links += [("camara", a, "tse", b, "outro_cargo:nascimento+primeiro_nome+uf") for a, b in zip(m6.id_l, m6.id_r)]
 
     # Senado <-> Câmara (senators who were deputies): full civil name.
     m4 = _unique(sen, dep, ["civil"])

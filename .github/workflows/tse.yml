@@ -36,7 +36,7 @@ jobs:
         run: uv sync --frozen
 
       - name: Test
-        run: uv run pytest -q tests/tse tests/test_fetch.py tests/site/test_tse.py
+        run: uv run pytest -q tests/tse tests/test_fetch.py tests/site/test_tse.py tests/site/test_eleicao.py
 
       - name: Download and rebuild
         env:
@@ -50,11 +50,12 @@ jobs:
           uv run python -m politicaleye tse update "${years[@]}"
 
       - name: Rebuild the page summaries
-        run: uv run python -m politicaleye site build tse
+        # eleicao: who among the deputies ran, and won, in the latest election (results arrive in these files)
+        run: uv run python -m politicaleye site build tse eleicao
 
       - name: Commit if the data changed
         run: |
-          git add data/tse data/site/tse
+          git add data/tse data/site/tse data/site/eleicao
           if git diff --staged --quiet -- . ':!data/tse/sources.json'; then
             echo "No data changes."
             exit 0

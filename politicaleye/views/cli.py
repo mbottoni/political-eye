@@ -7,20 +7,22 @@ from pathlib import Path
 
 from ..camara.graphs import legislatura
 from ..paths import DATA
-from . import deputados, municipios
+from . import deputados, municipios, senadores
 
 
 def cmd_update(a) -> int:
     latest = legislatura(max(p.stem for p in (a.data / "camara" / "votes").glob("*.csv")))
     for leg in a.legislaturas or [latest - 1, latest]:
         deputados.build(leg, a.data)
+        if (a.data / "senado" / "votes").exists():
+            senadores.build(leg, a.data)
     if (a.data / "siconfi" / "entes.csv").exists():
         municipios.build(a.data)
     return 0
 
 
 def register(sources: argparse._SubParsersAction) -> None:
-    p = sources.add_parser("views", help="tables that join the sources: one row per deputy, ...")
+    p = sources.add_parser("views", help="tables that join the sources: one row per deputy, per senator, ...")
     p.add_argument("--data", type=Path, default=DATA)
     sub = p.add_subparsers(dest="cmd", required=True)
     u = sub.add_parser("update", help="rebuild data/views/ from the committed tables")

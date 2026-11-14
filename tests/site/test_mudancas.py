@@ -186,3 +186,14 @@ def test_formats():
     assert m.brl(150e6, "en") == "R$ 150 M" and m.brl(999_999_999, "pt") == "R$ 1,0 bi"
     assert m.day("2026-11-05", "pt") == "05/11/2026" and m.day("2026-11-05", "en") == "5 Nov 2026"
     assert m.cnpj(CO) == "11.111.111/0001-11" and m.month("2026-11", "en", short=True) == "Nov 2026"
+
+
+def test_describe_names_counts_and_months():
+    row = lambda **kw: pd.Series({c: "" for c in m.COLS} | {"pf": "0"} | kw)   # noqa: E731
+    tipos = m.TIPOS["alertas"] | m.TIPOS["camara"]
+    tipos = {k: {"pt": v[0], "en": v[1]} for k, v in tipos.items()}
+    old = m.describe(row(tipo="contratos_impedidas_historico", n="3928", valor="86106688.14", link="../alertas/?tab=contracts"), tipos, "pt")
+    assert old["title"] == "3.928 contratos" and old["value"] == "R$ 86,1 mi" and old["url"].endswith("/alertas/?tab=contracts")
+    firm = m.describe(row(tipo="emendas_impedidas", pf="1", link="../alertas/?tab=barred"), tipos, "en")
+    assert firm["title"] == "Individual firm (name withheld)" and not firm["named"] and firm["url"].endswith("?tab=barred&lang=en")
+    assert m.describe(row(tipo="mes", chave="2026-11", n="8"), tipos, "pt")["title"] == "novembro de 2026"

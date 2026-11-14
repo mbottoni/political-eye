@@ -664,8 +664,8 @@ def log_votes(data: Path, chamber: str) -> tuple[pd.DataFrame, dict]:
     for m, first, last, n in months:
         if first <= cut:
             continue
-        pt = f"{month(m, 'pt')}: {num(n, 'pt')} {'votação nominal' if n == 1 else 'votações nominais'}" + (f", de {day(first, 'pt')} a {day(last, 'pt')}" if first != last else f", em {day(first, 'pt')}")
-        en = f"{month(m, 'en')}: {num(n, 'en')} roll {'call' if n == 1 else 'calls'}" + (f", {day(first, 'en')} to {day(last, 'en')}" if first != last else f", on {day(first, 'en')}")
+        pt = f"{num(n, 'pt')} {'votação nominal' if n == 1 else 'votações nominais'}" + (f", de {day(first, 'pt')} a {day(last, 'pt')}" if first != last else f", em {day(first, 'pt')}")
+        en = f"{num(n, 'en')} roll {'call' if n == 1 else 'calls'}" + (f", {day(first, 'en')} to {day(last, 'en')}" if first != last else f", on {day(first, 'en')}")
         rows.append(_row(data=first, fonte=chamber, tipo="mes", chave=m, detalhe=pt, detalhe_en=en, n=n, link=f"../{chamber}/?month={m}"))
     return _frame(rows), {"desde": months[0][1], "ate": anchor}
 
@@ -727,6 +727,30 @@ def _abs(link: str, lang: str) -> str:
     return url
 
 
+def describe(r, tipos: dict, lang: str) -> dict:
+    """One change as the feeds and the weekly email show it, as the page does (docs/mudancas/app.js): its label, a
+    name (the company, the withheld-name note, a count of people or older contracts, a month), the detail, the value
+    and the absolute link to the page that explains it. ``r`` is a row of a change log read as text."""
+    pt = lang == "pt"
+    n = int(float(r.n)) if str(r.n) not in ("", "nan", "<NA>") else 0
+    if r.titulo:
+        title = r.titulo
+    elif str(r.pf) == "1":
+        title = withheld(lang)
+    elif r.tipo == "mes":
+        title = month(r.chave, lang)
+    elif r.tipo.endswith("_pessoas"):
+        title = f"{num(n, lang)} {('pessoa' if n == 1 else 'pessoas') if pt else ('person' if n == 1 else 'people')}"
+    elif r.tipo.endswith("_historico"):
+        title = f"{num(n, lang)} {('contrato' if n == 1 else 'contratos') if pt else ('contract' if n == 1 else 'contracts')}"
+    else:
+        title = "–"
+    value = float(r.valor) if str(r.valor) not in ("", "nan") else 0.0
+    return {"label": tipos.get(r.tipo, {}).get(lang, r.tipo), "title": title, "named": bool(r.titulo),
+            "detail": r.detalhe if pt else (r.detalhe_en or r.detalhe), "value": brl(value, lang) if value else "",
+            "url": _abs(r.link, lang)}
+
+
 def entries(data: Path, fonte: str) -> list[dict]:
     """One feed entry per day of a source's log, newest first, with its HTML in both languages."""
     out = data / "site" / "mudancas"
@@ -745,21 +769,12 @@ def entries(data: Path, fonte: str) -> list[dict]:
             page = SITE + f"mudancas/?fonte={fonte}&dia={d['data']}" + ("&lang=en" if lang == "en" else "")
             items = []
             for r in g.head(FEED_ITEMS).itertuples(index=False):
-                label = tipos.get(r.tipo, {}).get(lang, r.tipo)
-                title = r.titulo or (withheld(lang) if r.pf == "1" else "")
-                detail = r.detalhe if lang == "pt" else (r.detalhe_en or r.detalhe)
-                bits = [f"<b>{escape(label)}</b>"]
-                if title:
-                    bits.append(f'<a href="{escape(_abs(r.link, lang))}">{escape(title)}</a>')
-                elif r.n and r.tipo.endswith("_pessoas"):
-                    bits.append(escape(num(int(r.n), lang)))
-                text = ": ".join(bits)
-                if detail:
-                    text += f" — {escape(detail)}"
-                if r.valor:
-                    text += f" — {escape(brl(float(r.valor), lang))}"
-                if not title:
-                    text += f' (<a href="{escape(_abs(r.link, lang))}">{"ver" if lang == "pt" else "see"}</a>)'
+                x = describe(r, tipos, lang)
+                text = f'<b>{escape(x["label"])}</b>: <a href="{escape(x["url"])}">{escape(x["title"])}</a>'
+                if x["detail"]:
+                    text += f" — {escape(x['detail'])}"
+                if x["value"]:
+                    text += f" — {escape(x['value'])}"
                 items.append(f"<li>{text}</li>")
             more = len(g) - FEED_ITEMS
             html = f"<p>{escape(summary)}</p><ul>{''.join(items)}</ul>"

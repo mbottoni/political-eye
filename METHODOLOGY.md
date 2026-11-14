@@ -16,6 +16,7 @@ changes its numbers and every problem found in its data:
 | Views across sources (one row per deputy, one per municipality and year) | `data/views/` | [methodology/views.md](methodology/views.md) |
 | Red flags (patterns worth a closer look, across sources) | `data/site/alertas/` | [methodology/alertas.md](methodology/alertas.md) |
 | Deputies ranked (an index of recorded work, weights chosen by the reader) | `data/site/ranking/` | [methodology/ranking.md](methodology/ranking.md) |
+| Companies across sources (one profile per CNPJ) | `data/site/empresas/` | [methodology/empresas.md](methodology/empresas.md) |
 
 The rules below hold for every source.
 

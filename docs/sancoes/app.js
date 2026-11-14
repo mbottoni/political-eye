@@ -579,6 +579,7 @@ async function company(root) {
     const box = el("div");
     box.append(el("div", { className: "profile-head" }, el("h2", { textContent: x.nome || WITHHELD }),
       el("span", { className: "doc" }, cnpjFmt(cnpj), " ", ...lists.map((l) => el("span", { className: "pill", textContent: l })))));
+    if (/^\d{14}$/.test(cnpj)) box.append(el("p", { className: "about" }, el("a", { href: `../empresas/?cnpj=${cnpj}`, textContent: L("Todos os contratos, emendas, campanhas e sinais de alerta desta empresa, numa só ficha →", "All of this company's contracts, amendments, campaigns and red flags, in one profile →") })));
     if (!x.nome) box.append(el("p", { className: "about", textContent: L("Uma empresa individual (empresário individual ou MEI) leva o nome do dono; por isso esta página mostra o CNPJ e as sanções, mas não o nome.", "An individual firm (empresário individual or MEI) carries its owner's name, so this page shows its CNPJ and sanctions but not the name.") }));
     const tl = el("section", { className: "tiles" });
     box.append(tl);

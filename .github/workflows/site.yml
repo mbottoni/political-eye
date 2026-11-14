@@ -49,6 +49,8 @@ jobs:
           uv run python -m politicaleye site build $PAGES
 
       - name: Commit if a summary changed
+        env:
+          PAGES: ${{ inputs.pages }}
         run: |
           git add data/site
           if git diff --staged --quiet; then
@@ -61,6 +63,13 @@ jobs:
           git commit -m "site: summaries rebuilt with the code now on main" -m "Pages: ${pages}"
           for i in 1 2 3; do
             git push && exit 0
-            git pull --rebase
+            # A source job committed meanwhile: take main as it is now and rebuild on top of it,
+            # rather than rebase one generated summary onto another.
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            uv run python -m politicaleye site build $PAGES
+            git add data/site
+            git diff --staged --quiet && exit 0
+            git commit -m "site: summaries rebuilt with the code now on main"
           done
           exit 1

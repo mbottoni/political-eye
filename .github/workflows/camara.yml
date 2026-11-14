@@ -79,6 +79,6 @@ jobs:
           git commit -m "camara: update through $(date -u +%F)" -m "Months changed: ${months:-none (charts or index only)}"
           for i in 1 2 3; do
             git push && exit 0
-            git pull --rebase
+            git pull --rebase -X theirs   # on a clash in a generated summary, this run's (newer) build wins
           done
           exit 1

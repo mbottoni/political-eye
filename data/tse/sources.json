@@ -13,9 +13,9 @@
   },
   "consulta_cand_2026": {
     "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2026.zip",
-    "size": 3289753,
-    "etag": "\"323299-65fae207eabd0\"",
-    "last_modified": "Sat, 07 Nov 2026 11:35:34 GMT"
+    "size": 3285987,
+    "etag": "\"3223e3-6603e4c55c1af\"",
+    "last_modified": "Sat, 14 Nov 2026 15:35:45 GMT"
   },
   "prestacao_de_contas_eleitorais_candidatos_2018": {
     "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/prestacao_contas/prestacao_de_contas_eleitorais_candidatos_2018.zip",
@@ -31,8 +31,8 @@
   },
   "prestacao_de_contas_eleitorais_candidatos_2026": {
     "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/prestacao_contas/prestacao_de_contas_eleitorais_candidatos_2026.zip",
-    "size": 352521786,
-    "etag": "\"15030e3a-65faab5a4ae9d\"",
-    "last_modified": "Sat, 07 Nov 2026 07:30:56 GMT"
+    "size": 381787972,
+    "etag": "\"16c19f44-6602c9e6b1f9a\"",
+    "last_modified": "Fri, 13 Nov 2026 18:30:12 GMT"
   }
 }

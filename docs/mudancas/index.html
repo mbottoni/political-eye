@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="What changed · political-eye">O que mudou · political-eye</title>
+<meta name="description" content="O que mudou nos dados abertos nos últimos 90 dias: empresas que entraram ou saíram das listas de sanções, sinais de alerta novos, grandes pagamentos de emendas, grandes contratos e meses de votação, com feeds Atom." data-en-content="What changed in the open data over the last 90 days: companies that entered or left the sanctions lists, new red flags, large amendment payments, large contracts and roll-call months, with Atom feeds.">
+<link rel="alternate" type="application/atom+xml" title="political-eye: o que mudou" href="../feeds/todas.xml">
+<link rel="alternate" type="application/atom+xml" title="political-eye: what changed" hreflang="en" href="../feeds/en/all.xml">
+<link rel="stylesheet" href="../lib/site.css">
+<style>
+  .subscribe { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 18px 0 0; font-size: 13.5px; color: var(--ink2); }
+  .subscribe a.feed { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; color: var(--ink); text-decoration: none; padding: 5px 12px; border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--s2) 45%, transparent); background: color-mix(in srgb, var(--s2) 10%, transparent); }
+  .subscribe a.feed:hover { background: color-mix(in srgb, var(--s2) 18%, transparent); }
+  .subscribe a.feed svg { width: 14px; height: 14px; color: var(--s2); }
+  .subscribe .hint { font-size: 12.5px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 550; color: var(--ink2); padding: 6px 12px; border-radius: 999px;
+    border: 1px solid var(--border); background: var(--surface); transition: border-color .15s ease, background .15s ease; }
+  .chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--src, var(--line)); }
+  .chip b { font-weight: 650; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .chip:hover { border-color: color-mix(in srgb, var(--ink) 25%, transparent); }
+  .chip[aria-pressed="true"] { color: var(--ink); border-color: color-mix(in srgb, var(--src, var(--line)) 60%, transparent); background: color-mix(in srgb, var(--src, var(--line)) 12%, var(--surface)); }
+  .chip:focus-visible { outline: 2px solid var(--line); outline-offset: 2px; }
+  .controls .ctl { display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 550; color: var(--ink2); min-width: 0; }
+  #rule { margin: 0 0 18px; }
+  #rule p { margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--ink2); max-width: 900px; }
+  #rule p + p { margin-top: 6px; }
+  .day { margin: 0 0 26px; scroll-margin-top: 76px; }
+  .day > h2 { font-family: var(--serif); font-weight: 560; font-size: 22px; letter-spacing: -0.01em; margin: 0 0 12px; display: flex; align-items: baseline; gap: 10px; }
+  .day > h2 small { font-family: var(--sans); font-size: 12.5px; font-weight: 550; color: var(--muted); }
+  .day.hit > h2 { color: var(--line); }
+  .group { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px 12px; margin-bottom: 12px; position: relative; overflow: hidden; }
+  .group::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--src, var(--line)); }
+  .group > header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin-bottom: 8px; }
+  .badge { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--src, var(--line)); white-space: nowrap; }
+  .group .sum { margin: 0; font-size: 14.5px; font-weight: 600; color: var(--ink); line-height: 1.45; flex: 1 1 320px; }
+  .group .more-link { font-size: 12.5px; font-weight: 600; color: var(--ink2); white-space: nowrap; }
+  ul.items { list-style: none; margin: 0; padding: 0; }
+  ul.items li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 16px; padding: 9px 0; border-top: 1px solid var(--grid); }
+  ul.items .what { min-width: 0; }
+  ul.items .kind { display: inline-block; font-size: 11px; font-weight: 650; color: var(--ink2); margin-right: 8px; padding: 1px 8px; border-radius: 999px; vertical-align: 1px;
+    border: 1px solid color-mix(in srgb, var(--src, var(--line)) 40%, transparent); background: color-mix(in srgb, var(--src, var(--line)) 8%, transparent); white-space: nowrap; }
+  ul.items .name { font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+  ul.items a.name:hover { text-decoration: underline; }
+  ul.items .withheld { color: var(--muted); font-style: italic; font-weight: 500; }
+  ul.items .detail { display: block; font-size: 12.5px; color: var(--ink2); line-height: 1.5; margin-top: 2px; overflow-wrap: anywhere; }
+  ul.items .val { font-size: 13.5px; font-weight: 650; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; align-self: start; padding-top: 1px; }
+  ul.items .go { font-size: 12.5px; font-weight: 600; color: var(--ink2); white-space: nowrap; }
+  .group .note { margin: 8px 0 2px; font-size: 12.5px; color: var(--muted); font-style: italic; }
+  .group .toggle { margin-top: 6px; }
+  .quiet { color: var(--muted); font-size: 13.5px; margin: 6px 0 22px; }
+  .later { display: flex; justify-content: center; margin: 8px 0 24px; }
+  @media (max-width: 640px) {
+    ul.items li { grid-template-columns: 1fr; }
+    ul.items .val { text-align: left; padding-top: 2px; }
+    .day > h2 { font-size: 19px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="crumb"><a href="../">political-eye</a></p>
+    <h1 data-en="What changed">O que mudou</h1>
+    <p data-en="Every job on this site records what changed in its source, and the repository keeps the history. This page reads it for you: the last 90 days of companies that entered or left the sanctions lists, new red flags, large amendment payments, large contracts and the months that got their first roll calls, day by day. Each item leads to the page that explains it.">Cada robô deste site registra o que mudou na sua fonte, e o repositório guarda o histórico. Esta página lê esse histórico por você: os últimos 90 dias de empresas que entraram ou saíram das listas de sanções, sinais de alerta novos, grandes pagamentos de emendas, grandes contratos e os meses que ganharam suas primeiras votações nominais, dia a dia. Cada item leva à página que o explica.</p>
+    <p class="subscribe" id="subscribe"></p>
+  </header>
+  <section class="tiles" id="tiles"></section>
+  <div class="controls" id="controls"></div>
+  <div id="rule"></div>
+  <div id="timeline"></div>
+  <footer data-en-html="Built from each source's change log in &lt;code&gt;data/site/mudancas/&lt;/code&gt;, which the scheduled jobs update when their data changes. The feeds are plain Atom, one entry per source and day. Every rule and threshold is in &lt;a href=&quot;https://github.com/mbottoni/political-eye/blob/main/methodology/mudancas.md&quot;&gt;methodology/mudancas.md&lt;/a&gt;; the full history is in git (&lt;code&gt;git log -p data/&lt;/code&gt;).">Feito a partir do registro de mudanças de cada fonte em <code>data/site/mudancas/</code>, que os robôs atualizam quando seus dados mudam. Os feeds são Atom simples, uma entrada por fonte e dia. Cada regra e limite está em <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/mudancas.md">methodology/mudancas.md</a>; o histórico completo está no git (<code>git log -p data/</code>).</footer>
+</main>
+<noscript>Esta página precisa de JavaScript. Os registros estão em <a href="https://github.com/mbottoni/political-eye/tree/main/data/site/mudancas">github.com/mbottoni/political-eye</a> e os feeds em <a href="../feeds/todas.xml">feeds/todas.xml</a>.</noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

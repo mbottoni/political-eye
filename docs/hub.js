@@ -52,6 +52,8 @@ const EN = {
   s2_t: "Tables", s2_p: "Each run rebuilds sorted CSV tables and commits only when something changed, so the git history records what changed and when.",
   s3_t: "Pages", s3_p: "The pages read those tables straight from the repository, in your browser. The numbers on this page are read just now and change when new data arrives.",
   sources: "Sources:",
+  h_changes: "What changed", changes_go: "See every change", changes_feed: "Atom feed",
+  p_changes: "The latest changes the jobs recorded in each source: companies that entered or left the sanctions lists, new red flags, large payments and contracts, roll-call months.",
   foot: "Data, code and every rule behind the numbers: <a href=\"https://github.com/mbottoni/political-eye\">github.com/mbottoni/political-eye</a> (<a href=\"https://github.com/mbottoni/political-eye/blob/main/METHODOLOGY.md\">methodology</a>). Code under the MIT license.",
 };
 // Portuguese is what the HTML says; keep it to switch back.
@@ -234,6 +236,27 @@ async function redFlags() {
     stat(num(r.cruzamentos.entidades), tr({ pt: "empresas e entidades em duas listas ou mais", en: "companies and bodies on two lists or more" })));
 }
 
+// ------------------------------------------------------------ what changed
+
+// Each source's job keeps a change log with one summary per day (data/site/mudancas/<fonte>.json): the latest ones,
+// across sources, each linking to that day on the changes page.
+const CHANGE_SOURCES = { sancoes: "--s8", alertas: "--s4", emendas: "--s3", pncp: "--s2", camara: "--s1", senado: "--s7" };
+async function changes() {
+  const box = document.querySelector("#changes-list");
+  if (!box) return;
+  document.querySelector("#changes-feed").href = lang() === "en" ? "feeds/en/all.xml" : "feeds/todas.xml";
+  const metas = (await Promise.all(Object.keys(CHANGE_SOURCES).map((f) => data(`site/mudancas/${f}.json`).catch(() => null)))).filter(Boolean);
+  const order = Object.keys(CHANGE_SOURCES);
+  const days = metas.flatMap((m) => m.dias.map((d) => ({ ...d, m })))
+    .sort((a, b) => b.data.localeCompare(a.data) || order.indexOf(a.m.fonte) - order.indexOf(b.m.fonte)).slice(0, 6);
+  if (!days.length) return;
+  box.replaceChildren(...days.map((d) => el("li", { style: `--src: var(${CHANGE_SOURCES[d.m.fonte]})` },
+    el("a", { href: `mudancas/?fonte=${d.m.fonte}&dia=${d.data}` },
+      el("span", { className: "when", textContent: date(d.data) }),
+      el("span", { className: "src", textContent: d.m.nome[lang()] }),
+      el("span", { className: "what", textContent: lang() === "en" ? d.resumo_en : d.resumo })))));
+}
+
 // ------------------------------------------------------------ ranking banner
 
 async function ranking() {
@@ -382,6 +405,7 @@ function render() {
   swarm().catch((e) => console.warn("hub swarm:", e));
   redFlags().catch((e) => console.warn("hub red flags:", e));
   ranking().catch((e) => console.warn("hub ranking:", e));
+  changes().catch((e) => console.warn("hub changes:", e));
   lastUpdate();
   freshness();
 }

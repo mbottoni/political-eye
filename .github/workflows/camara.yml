@@ -63,12 +63,16 @@ jobs:
       - name: Rebuild the explorer's summaries
         run: uv run python -m politicaleye site build camara orientacoes
 
+      - name: Log what changed
+        # Months that got their first roll calls (data/site/mudancas/, docs/feeds/).
+        run: uv run python -m politicaleye site changes camara
+
       - name: Commit if the data changed
         run: |
           # Stage first: a new month is an untracked file, invisible to a plain
           # `git diff`. sources.json changes nightly on the server side, so
           # only commit when the tables themselves moved.
-          git add data/camara data/site/camara data/site/orientacoes figures/camara
+          git add data/camara data/site/camara data/site/orientacoes figures/camara data/site/mudancas docs/feeds
           if git diff --staged --quiet -- . ':!data/camara/sources.json'; then
             echo "No data changes."
             exit 0
@@ -80,5 +84,10 @@ jobs:
           for i in 1 2 3; do
             git push && exit 0
             git pull --rebase -X theirs   # on a clash in a generated summary, this run's (newer) build wins
+            # The feed of every source is built from every source's log: rebuild it from the logs as now merged,
+            # so another job's changes pushed meanwhile are not dropped from it.
+            uv run python -m politicaleye site feeds
+            git add docs/feeds
+            git diff --staged --quiet || git commit -m "camara: feeds rebuilt with the changes other jobs pushed"
           done
           exit 1

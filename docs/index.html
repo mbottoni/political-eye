@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..750&family=Newsreader:ital,opsz,wght@0,6..72,500..600;1,6..72,500..600&display=swap">
+<link rel="alternate" type="application/atom+xml" title="political-eye: o que mudou" href="feeds/todas.xml">
+<link rel="alternate" type="application/atom+xml" title="political-eye: what changed" hreflang="en" href="feeds/en/all.xml">
 <link rel="stylesheet" href="lib/site.css">
 <link rel="stylesheet" href="hub.css">
 </head>
@@ -62,7 +64,7 @@
         <p class="search-hint"><span id="try" hidden><span data-i="search_try">Experimente:</span> <span id="try-list"></span> · </span><a href="#achados" data-i="cta_explore">ou veja o que os dados mostram ↓</a></p>
       </div>
       <dl class="facts">
-        <div><dt data-i="f_pages">painéis interativos</dt><dd>11</dd></div>
+        <div><dt data-i="f_pages">painéis interativos</dt><dd>12</dd></div>
         <div><dt data-i="f_sources">fontes oficiais</dt><dd>6</dd></div>
         <div><dt data-i="f_since">dados desde</dt><dd>2014</dd></div>
         <div id="updated" hidden><dt data-i="f_updated">última atualização</dt><dd></dd></div>
@@ -90,6 +92,14 @@
       <a class="finding" href="sancoes/?tab=money" data-hl="barred" style="--accent: var(--c-control)"><span class="kicker" data-i="nav_control">Controle</span><span class="num"></span><span class="viz"></span><span class="txt"></span><span class="go" data-i="t_sancoes">Sanções</span></a>
       <a class="finding" href="tse/" data-hl="public" style="--accent: var(--c-money)"><span class="kicker" data-i="k_campaigns">Campanhas</span><span class="num"></span><span class="viz"></span><span class="txt"></span><span class="go" data-i="t_tse">Financiamento de campanha</span></a>
     </div>
+  </section>
+
+  <section class="block" id="mudancas" style="--accent: var(--s2)">
+    <div class="sec-head">
+      <div><h2 data-i="h_changes">O que mudou</h2><p data-i="p_changes">As mudanças mais recentes que os robôs registraram em cada fonte: empresas que entraram ou saíram das listas de sanções, sinais de alerta novos, grandes pagamentos e contratos, meses de votação.</p></div>
+      <div class="ch-links"><a class="btn" href="mudancas/" data-i="changes_go">Ver todas as mudanças</a><a class="btn feed" id="changes-feed" href="feeds/todas.xml"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.6" fill="currentColor"/></svg><span data-i="changes_feed">Feed Atom</span></a></div>
+    </div>
+    <ol class="changes" id="changes-list"></ol>
   </section>
 
   <section class="block" id="congresso" style="--accent: var(--c-congress)">

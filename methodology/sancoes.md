@@ -50,7 +50,9 @@ SANÇÃO` is `codigo_da_sancao`). Dates are ISO; money uses a `.` decimal point.
 **History starts on 2026-11-06** (CEPIM: 2026-10-28), the first snapshot
 recorded. Entries listed then have no `entrou` row; their sanction dates
 (`data_inicio_sancao`, `data_publicacao`) say how old they are. A change is
-dated by the snapshot that first shows it, not by the day the job ran.
+dated by the snapshot that first shows it, not by the day the job ran. The
+companies that entered and left in the last 90 days, with people counted,
+are on the what-changed page and in its feed ([mudancas.md](mudancas.md)).
 
 ## People's data
 

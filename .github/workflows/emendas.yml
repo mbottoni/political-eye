@@ -31,7 +31,7 @@ jobs:
         run: uv sync --frozen
 
       - name: Test
-        run: uv run pytest -q tests/emendas tests/test_fetch.py
+        run: uv run pytest -q tests/emendas tests/test_fetch.py tests/site/test_mudancas.py
 
       - name: Download and rebuild
         run: uv run python -m politicaleye emendas update
@@ -39,9 +39,13 @@ jobs:
       - name: Rebuild the explorer's summaries
         run: uv run python -m politicaleye site build emendas
 
+      - name: Log what changed
+        # Payments of R$ 5 million or more that were not in the previous build (data/site/mudancas/, docs/feeds/).
+        run: uv run python -m politicaleye site changes emendas
+
       - name: Commit if the data changed
         run: |
-          git add data/emendas data/site/emendas
+          git add data/emendas data/site/emendas data/site/mudancas docs/feeds
           if git diff --staged --quiet -- . ':!data/emendas/sources.json'; then
             echo "No data changes."
             exit 0
@@ -53,5 +57,10 @@ jobs:
           for i in 1 2 3; do
             git push && exit 0
             git pull --rebase -X theirs   # on a clash in a generated summary, this run's (newer) build wins
+            # The feed of every source is built from every source's log: rebuild it from the logs as now merged,
+            # so another job's changes pushed meanwhile are not dropped from it.
+            uv run python -m politicaleye site feeds
+            git add docs/feeds
+            git diff --staged --quiet || git commit -m "emendas: feeds rebuilt with the changes other jobs pushed"
           done
           exit 1

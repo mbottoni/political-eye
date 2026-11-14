@@ -52,12 +52,12 @@ jobs:
         env:
           PAGES: ${{ inputs.pages }}
         run: |
-          git add data/site
+          git add data/site docs/feeds   # the change logs' feeds (site build mudancas) live under docs/
           if git diff --staged --quiet; then
             echo "No summary changed."
             exit 0
           fi
-          pages=$(git diff --staged --name-only | cut -d/ -f3 | sort -u | tr '\n' ' ')
+          pages=$(git diff --staged --name-only -- data/site | cut -d/ -f3 | sort -u | tr '\n' ' ')
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "site: summaries rebuilt with the code now on main" -m "Pages: ${pages}"
@@ -68,7 +68,7 @@ jobs:
             git fetch -q origin main
             git reset -q --hard origin/main
             uv run python -m politicaleye site build $PAGES
-            git add data/site
+            git add data/site docs/feeds
             git diff --staged --quiet && exit 0
             git commit -m "site: summaries rebuilt with the code now on main"
           done

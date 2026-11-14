@@ -30,6 +30,7 @@ PAGES = [
     *[f"docs/tse/?tab={t}" for t in ("overview", "parties", "equity", "results", "donors", "suppliers")],
     "docs/tse/?tab=equity&e=2018",
     *[f"docs/deputados/?tab={t}" for t in ("profile", "compare", "parties", "outliers")], "docs/deputados/?tab=profile&leg=56",
+    "docs/mudancas/", "docs/mudancas/?fonte=alertas&dias=90", "docs/mudancas/?lang=en&fonte=pncp&dias=7",
 ]
 CHROME = ["google-chrome", "google-chrome-stable", "chromium", "chromium-browser",
           "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"]

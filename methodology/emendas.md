@@ -23,6 +23,8 @@ about 32 MB; three latin-1, `;`-separated CSVs)
 
 The amounts are cumulative as of the file's date: the daily job rebuilds
 every table, and each commit's diff is what was committed or paid that day.
+Payments that reach R$ 5 million are also listed on the what-changed page
+and in its feed ([mudancas.md](mudancas.md)).
 `data/emendas/sources.json` records the zip's URL, size, ETag and
 `Last-Modified`.
 

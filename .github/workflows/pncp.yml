@@ -54,10 +54,15 @@ jobs:
         if: ${{ !cancelled() }}   # keep what was read even if the read failed
         run: uv run python -m politicaleye site build pncp
 
+      - name: Log what changed
+        if: ${{ !cancelled() }}
+        # Contracts of R$ 100 million or more published in the last 90 days (data/site/mudancas/, docs/feeds/).
+        run: uv run python -m politicaleye site changes pncp
+
       - name: Commit if a table changed
         if: ${{ !cancelled() }}
         run: |
-          git add data/pncp data/site/pncp
+          git add data/pncp data/site/pncp data/site/mudancas docs/feeds
           if git diff --staged --quiet; then
             echo "No data changes."
             exit 0
@@ -75,11 +80,17 @@ jobs:
           for i in 1 2 3; do
             git push && exit 0
             git pull --rebase -X theirs   # on a clash in a generated summary, this run's (newer) build wins
+            # The feed of every source is built from every source's log: rebuild it from the logs as now merged,
+            # so another job's changes pushed meanwhile are not dropped from it.
+            uv run python -m politicaleye site feeds
+            git add docs/feeds
+            git diff --staged --quiet || git commit -m "pncp: feeds rebuilt with the changes other jobs pushed"
             # A long run uses the code it started with. If the page's builder changed on main
             # meanwhile, rebuild the summaries with the code now there, so they never go out stale.
             if ! git diff --quiet "$GITHUB_SHA" HEAD -- politicaleye; then
               uv run python -m politicaleye site build pncp
-              git add data/site/pncp
+              uv run python -m politicaleye site changes pncp
+              git add data/site/pncp data/site/mudancas docs/feeds
               git diff --staged --quiet || git commit -m "pncp: summaries rebuilt with the code now on main"
             fi
           done

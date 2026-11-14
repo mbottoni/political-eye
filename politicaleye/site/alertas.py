@@ -178,7 +178,7 @@ def build(data: Path) -> dict:
     if len(cs):
         cs = plausible(cs, rcl)
         cs = cs[(cs.suspeito != 2) & (cs.cobre == "sim") & cs.fornecedor.str.fullmatch(r"\d{14}")].drop_duplicates("controle")
-        cs["nome"], cs["pf"] = name_of(cs.fornecedor, cs.fornecedor_nome, pd.Series("", index=cs.index))
+        cs["nome"], cs["pf"] = name_of(cs.fornecedor, cs.fornecedor_nome)   # legal nature looked up where known
         cs = cs.assign(valor=cs.v, objeto=cs.objeto.str.slice(0, 160))
         cols = ["controle", "assinatura", "orgao", "esfera", "uf", "fornecedor", "nome", "pf", "objeto", "valor", "categoria_sancao", "sancao_inicio", "sancao_fim", "orgao_sancionador"]
         cs = cs[cols].rename(columns={"fornecedor": "cnpj"}).sort_values(["valor", "controle"], ascending=[False, True])
@@ -247,7 +247,7 @@ def build(data: Path) -> dict:
     org = buyers(every[every.suspeito != 2]).reset_index()
     if len(org):
         dom = org[(org.contratos >= DOM_CONTRACTS) & (org.valor >= DOM_VALUE) & (org.maior_share >= DOM_SHARE)].copy()
-        dom["nome"], dom["pf"] = name_of(dom.maior_fornecedor, dom.maior_fornecedor_nome.fillna(""), pd.Series("", index=dom.index))
+        dom["nome"], dom["pf"] = name_of(dom.maior_fornecedor, dom.maior_fornecedor_nome.fillna(""))
         dom = dom[["orgao_cnpj", "orgao", "esfera", "uf", "municipio_ibge", "contratos", "fornecedores", "valor", "maior_fornecedor", "nome", "pf", "maior_share", "hhi"]]
         dom = dom.rename(columns={"maior_fornecedor": "cnpj"}).sort_values(["valor", "orgao_cnpj"], ascending=[False, True])
         base = org[(org.contratos >= DOM_CONTRACTS)]

@@ -96,7 +96,10 @@ so its name is withheld too ("Individual firm (name withheld)"). A company
 name counts as a person's when it is an MEI name (`12.345.678 JOAO SILVA`),
 carries a CPF, or is two or more words that all occur in real people's names
 (the TSE candidate files and the politician crosswalk), leaving out `ME`,
-`EPP`, `EIRELI` and connectors (`VAGNER BORGES DIAS`, `JOAO DA SILVA ME`). A
+`EPP`, `EIRELI` and connectors (`VAGNER BORGES DIAS`, `JOAO DA SILVA ME`).
+Single-letter initials count as name words as long as one whole name word is
+there, since initials and a surname is the usual way an individual firm is
+registered (`P R C DUARTE`, `A.K.R PRADO`; since 2026-11-14). A
 name with `LTDA` never counts. On 2026-11-06 this withheld 700 of 12,471
 names.
 

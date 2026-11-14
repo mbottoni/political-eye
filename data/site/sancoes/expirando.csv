@@ -153,7 +153,7 @@ fim,cnpj,nome,lista,categoria,orgao,esfera,uf,pf
 2026-11-20,40194606000120,,CEIS,Impedimento/proibição de contratar com prazo determinado,EPB-SECRETARIA ESTADO D ADMINISTRAÇÃO PARAIBA,ESTADUAL,PB,1
 2026-11-20,42858822000158,CIDICOLA - CIRURGICA MATERIAIS HOSPITALARES LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,PREFEITURA MUNICIPAL DE FERNANDOPOLIS - SP,MUNICIPAL,SP,0
 2026-11-20,46305226000100,HYPE LICITE SOLUTION LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,MINISTERIO DA SAUDE,FEDERAL,PA,0
-2026-11-20,48664401000172,M V B DOCIO - EI,CEIS,Suspensão,EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES,FEDERAL,RN,0
+2026-11-20,48664401000172,,CEIS,Suspensão,EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES,FEDERAL,RN,1
 2026-11-20,49535617000109,SMART CLEAN COMERCIO ATACADISTA LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,COMANDO DO EXERCITO,FEDERAL,PA,0
 2026-11-20,53365489000161,ATIVA COMERCIO INDUSTRIA E IMPORTACAO LTDA,CEIS,Suspensão,EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES,FEDERAL,PB,0
 2026-11-20,53710803000104,STP COMERCIAL LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,MINISTERIO DA SAUDE,FEDERAL,PB,0
@@ -161,7 +161,7 @@ fim,cnpj,nome,lista,categoria,orgao,esfera,uf,pf
 2026-11-20,56955436000199,LICIT LATARO LIMITADA,CEIS,Impedimento/proibição de contratar com prazo determinado,COMANDO DO EXERCITO,FEDERAL,RS,0
 2026-11-20,58895099000117,EMORAES SOLUCOES COMERCIAIS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,JUSTICA FEDERAL,FEDERAL,SP,0
 2026-11-20,62041804000196,,CEIS,Impedimento/proibição de contratar com prazo determinado,MIN.DA GEST.E DA INOVACAO EM SERVICOS PUBLICO,FEDERAL,DF,1
-2026-11-20,63209335000134,R. SANTOS DE OLIVEIRA,CEIS,Impedimento/proibição de contratar com prazo determinado,MINISTERIO DA SAUDE,FEDERAL,PA,0
+2026-11-20,63209335000134,,CEIS,Impedimento/proibição de contratar com prazo determinado,MINISTERIO DA SAUDE,FEDERAL,PA,1
 2026-11-20,63446794000131,,CEIS,Impedimento/proibição de contratar com prazo determinado,MIN.DA GEST.E DA INOVACAO EM SERVICOS PUBLICO,FEDERAL,DF,1
 2026-11-20,65755212000124,DELTA LICITACOES LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,MINISTERIO DA SAUDE,FEDERAL,PA,0
 2026-11-21,00654914000176,SENENGE CONSTRUCAO CIVIL E SERVICOS LTDA EM RECUPERACAO JUDICIAL,CEIS,Suspensão,COMANDO DO EXERCITO,FEDERAL,PA,0
@@ -195,7 +195,7 @@ fim,cnpj,nome,lista,categoria,orgao,esfera,uf,pf
 2026-11-21,51231953000100,,CEIS,Impedimento/proibição de contratar com prazo determinado,Receita Federal do Brasil,FEDERAL,,1
 2026-11-21,52145142000140,GATT NEGOCIOS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,COMANDO DO EXERCITO,FEDERAL,RR,0
 2026-11-21,52332054000158,FG COMERCIO TENDTUDO LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,ASSEMBLEIA LEGISLATIVA DO ESTADO DO CEARA,ESTADUAL,CE,0
-2026-11-21,55692400000105,K. N. B. DA SILVA,CEIS,Impedimento/proibição de contratar com prazo determinado,COMANDO DO EXERCITO,FEDERAL,CE,0
+2026-11-21,55692400000105,,CEIS,Impedimento/proibição de contratar com prazo determinado,COMANDO DO EXERCITO,FEDERAL,CE,1
 2026-11-21,56124875000150,SATURNO DISTRIBUIDORA LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,JUSTICA ELEITORAL,FEDERAL,ES,0
 2026-11-21,56124875000150,SATURNO DISTRIBUIDORA LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,Tribunal Regional Eleitoral do Espírito Santo (TRE-ES),FEDERAL,ES,0
 2026-11-21,57012146000174,AMM LICITACOES LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,MIN.DA GEST.E DA INOVACAO EM SERVICOS PUBLICO,FEDERAL,AC,0
@@ -446,7 +446,7 @@ fim,cnpj,nome,lista,categoria,orgao,esfera,uf,pf
 2026-11-30,02068769000177,HELGA ENGENHARIA LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,1º Grau - TRF1 / Seção Judiciária Amapá - SJAP / Capital SJAP / 6ª Macapá,FEDERAL,AP,0
 2026-11-30,02332985000188,KLASS COMERCIO E REPRESENTACAO LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,1º Grau - TRF4 / SEÇÃO JUDICIÁRIA DO PARANÁ / SUBSEÇÃO JUDICIÁRIA DE GUARAPUAVA / 1ª VARA FEDERAL DE GUARAPUAVA,FEDERAL,PR,0
 2026-11-30,06069276000102,ATENTO SAO PAULO SERVICOS DE SEGURANCA PATRIMONIAL LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,UNIVERSIDADE DE SÃO PAULO - USP,ESTADUAL,SP,0
-2026-11-30,12290486000129,J B GREGORIO,CEIS,Impedimento/proibição de contratar com prazo determinado,"Tribunal de Justiça do Estado de Goiás / 1º Grau - TJGO / URUAÇU / URUAÇU - 2ª Vara (Cív., Criminal - crime em geral, crimes dolosos contra a vida e Pres. do Trib. do Juri, das Faz. Púb. e de Reg. Pub",ESTADUAL,GO,0
+2026-11-30,12290486000129,,CEIS,Impedimento/proibição de contratar com prazo determinado,"Tribunal de Justiça do Estado de Goiás / 1º Grau - TJGO / URUAÇU / URUAÇU - 2ª Vara (Cív., Criminal - crime em geral, crimes dolosos contra a vida e Pres. do Trib. do Juri, das Faz. Púb. e de Reg. Pub",ESTADUAL,GO,1
 2026-11-30,15316645000105,VERSATIL EMPREENDIMENTOS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,COMANDO DO EXERCITO,FEDERAL,RR,0
 2026-11-30,21731071000134,,CEIS,Impedimento/proibição de contratar com prazo determinado,PROCURADORIA GERAL DO ESTADO DO CEARA,ESTADUAL,CE,1
 2026-11-30,28364690000187,LOBATOUR AGENCIA DE VIAGENS E TURISMO LTDA.,CEIS,Suspensão,COMANDO DO EXERCITO,FEDERAL,RJ,0
@@ -1051,7 +1051,7 @@ fim,cnpj,nome,lista,categoria,orgao,esfera,uf,pf
 2026-12-22,18969194000101,,CEIS,Impedimento/proibição de contratar com prazo determinado,INSTITUTO FEDERAL DE MATO GROSSO,FEDERAL,MT,1
 2026-12-22,24972979000128,CHARLIE EQUIPAMENTOS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,COMANDO DA MARINHA,FEDERAL,RJ,0
 2026-12-22,30479645000110,AMR SOLUCOES LABORATORIAIS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,ESP-UNIVERSIDADE DE SAO PAULO - USP,ESTADUAL,SP,0
-2026-12-22,31493939000169,C. F. DE MORAES RAMOS,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de Toritama (PE),MUNICIPAL,PE,0
+2026-12-22,31493939000169,,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de Toritama (PE),MUNICIPAL,PE,1
 2026-12-22,35570151000160,EMBALANORTE EMBALAGENS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,TRIBUNAL REGIONAL ELEITORAL DO AMAZONAS,ESTADUAL,AM,0
 2026-12-22,37117510000153,IRMAOS LIMA COLE PRODUTOS FARMACEUTICOS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,TRIBUNAL DE CONTAS DO ESTADO DO R. DE JANEIRO,ESTADUAL,RJ,0
 2026-12-22,37117510000153,IRMAOS LIMA COLE PRODUTOS FARMACEUTICOS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,Tribunal de Contas do Estado do Rio de Janeiro - TCE-RJ,ESTADUAL,RJ,0
@@ -1313,7 +1313,7 @@ fim,cnpj,nome,lista,categoria,orgao,esfera,uf,pf
 2027-01-06,15761310000104,J C LIMA DA SILVA MAGAZINE,CEIS,Impedimento/proibição de contratar com prazo determinado,UNIVERSIDADE FEDERAL DE SANTA CATARINA,,SC,0
 2027-01-06,23181255000101,HAVAL ENGENHARIA E SERVICOS LTDA,CEIS,Suspensão,BANCO DO NORDESTE DO BRASIL,FEDERAL,CE,0
 2027-01-06,28265790000156,AFP INDUSTRIA DE MOVEIS SERVICOS E COMERCIO LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,DEPARTAMENTO DE POLICIA FEDERAL,FEDERAL,PA,0
-2027-01-06,28521211000199,C DO VALE LOPES,CEIS,Impedimento/proibição de contratar com prazo determinado,PRESIDENCIA DA REPUBLICA,FEDERAL,DF,0
+2027-01-06,28521211000199,,CEIS,Impedimento/proibição de contratar com prazo determinado,PRESIDENCIA DA REPUBLICA,FEDERAL,DF,1
 2027-01-06,29999597000101,D.B DE ARAUJO ELETRICA,CEIS,Impedimento/proibição de contratar com prazo determinado,Companhia Catarinense de Águas e Saneamento - SC,ESTADUAL,SC,0
 2027-01-06,31865774000109,MARTA JUSSARA DE MOURA LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de Maracanaú (CE),MUNICIPAL,CE,0
 2027-01-06,33358693000148,NAVERA ENGENHARIA LIMITADA,CEIS,Suspensão,EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES,FEDERAL,PE,0
@@ -1374,9 +1374,9 @@ fim,cnpj,nome,lista,categoria,orgao,esfera,uf,pf
 2027-01-09,09019150000111,C&C SERVICOS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,SUPERINTENDENCIA POLICIA RODV. FEDERAL - CE,FEDERAL,CE,0
 2027-01-09,11443028000110,IMPACTO LIMPEZA E CONSERVACAO LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,INST.CHICO MENDES DE CONSER.DA BIODIVERSIDADE,FEDERAL,DF,0
 2027-01-09,12430721000110,COMERCIAL DE GAS PSD LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,PREFEITURA MUNICIPAL DE VIÇOSA - MG,MUNICIPAL,MG,0
-2027-01-09,14410553000127,A.C.F. MOREIRA,CEIS,Impedimento/proibição de contratar com prazo determinado,Controladoria Geral do Estado de Rondônia - RO,ESTADUAL,RO,0
-2027-01-09,14410553000127,A.C.F. MOREIRA,CEIS,Suspensão,SUPERINTEND.ESTAD.DE COMPRAS E LICITAÇÕES-RO,ESTADUAL,RO,0
-2027-01-09,14410553000127,A.C.F. MOREIRA,CEIS,Suspensão,SUPERINTEND.ESTAD.DE COMPRAS E LICITAÇÕES-RO,ESTADUAL,RO,0
+2027-01-09,14410553000127,,CEIS,Impedimento/proibição de contratar com prazo determinado,Controladoria Geral do Estado de Rondônia - RO,ESTADUAL,RO,1
+2027-01-09,14410553000127,,CEIS,Suspensão,SUPERINTEND.ESTAD.DE COMPRAS E LICITAÇÕES-RO,ESTADUAL,RO,1
+2027-01-09,14410553000127,,CEIS,Suspensão,SUPERINTEND.ESTAD.DE COMPRAS E LICITAÇÕES-RO,ESTADUAL,RO,1
 2027-01-09,24988253000183,THM SOLUCOES GERAIS LTDA,CEIS,Suspensão,Receita Federal do Brasil,FEDERAL,,0
 2027-01-09,26155692000130,RECURSOS HUMANOS ADMINISTRACAO E SERVICOS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,MIN.DA GEST.E DA INOVACAO EM SERVICOS PUBLICO,FEDERAL,AC,0
 2027-01-09,27427212000106,OMEGA COMERCIO E SERVICOS LTDA,CEIS,Suspensão,UNIVERSIDADE FEDERAL DE ALAGOAS,FEDERAL,AL,0
@@ -1603,7 +1603,7 @@ fim,cnpj,nome,lista,categoria,orgao,esfera,uf,pf
 2027-01-21,08228323000220,MASSA FALIDA DE HWC EMPREENDIMENTOS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,1º Grau - TRF1 / Seção Judiciária Distrito Federal - SJDF / Capital SJDF / 14ª Brasília,FEDERAL,DF,0
 2027-01-21,13179318000123,MEDICSEG SEGURANCA E MEDICINA DO TRABALHO LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de São Manuel - SP,MUNICIPAL,SP,0
 2027-01-21,15150504000165,LDS SERVICOS DE LIMPEZA LTDA EM RECUPERACAO JUDICIAL,CEIS,Impedimento/proibição de contratar com prazo determinado,UNIVERSIDADE FEDERAL DO CEARA,FEDERAL,CE,0
-2027-01-21,16785394000170,CARLOS C DE SOUZA SANTOS,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de Juazeiro do Norte (CE),MUNICIPAL,CE,0
+2027-01-21,16785394000170,,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de Juazeiro do Norte (CE),MUNICIPAL,CE,1
 2027-01-21,18017239000130,MARQ CONSTRUTORA LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de Juazeiro do Norte (CE),MUNICIPAL,CE,0
 2027-01-21,20772716000114,INLABEL SOLUCOES EM ROTULOS ADESIVOS LTDA,CEIS,Suspensão,Empresa Brasileira de Correios e Telégrafos,FEDERAL,DF,0
 2027-01-21,20772716000114,INLABEL SOLUCOES EM ROTULOS ADESIVOS LTDA,CEIS,Suspensão,Empresa Brasileira de Correios e Telégrafos,FEDERAL,DF,0
@@ -1790,7 +1790,7 @@ fim,cnpj,nome,lista,categoria,orgao,esfera,uf,pf
 2027-01-29,35967965000132,,CEIS,Impedimento/proibição de contratar com prazo determinado,COMANDO DO EXERCITO,FEDERAL,RO,1
 2027-01-29,41393376000190,SCL DISTRIBUIDORA LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,PREFEITURA MUNICIPAL DE TANGARA DA SERRA - MT,MUNICIPAL,MT,0
 2027-01-29,43016920000100,MULTI MIX FLEX COMERCIO DE PRODUTOS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,"MINISTERIO DA CIENCIA,TECNOLOGIA E INOVAÇÃO",FEDERAL,SP,0
-2027-01-29,46146162000133,R. F. DE ARAUJO,CEIS,Impedimento/proibição de contratar com prazo determinado,COMANDO DO EXERCITO,FEDERAL,RO,0
+2027-01-29,46146162000133,,CEIS,Impedimento/proibição de contratar com prazo determinado,COMANDO DO EXERCITO,FEDERAL,RO,1
 2027-01-29,46182920000179,,CEIS,Impedimento/proibição de contratar com prazo determinado,COMANDO DO EXERCITO,FEDERAL,RO,1
 2027-01-29,48836857000172,CABOS DE ACO BRASIL COMERCIO E INDUSTRIA LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,PREFEITURA MUNICIPAL DE HORIZONTE - CE,MUNICIPAL,CE,0
 2027-01-29,53251412000160,H S DE MORAIS - COMERCIO,CEIS,Impedimento/proibição de contratar com prazo determinado,COMANDO DO EXERCITO,FEDERAL,RS,0
@@ -1842,7 +1842,7 @@ fim,cnpj,nome,lista,categoria,orgao,esfera,uf,pf
 2027-02-02,17754216000145,GJT SERVICOS & LOCACAO LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,"MINISTERIO DA CIENCIA,TECNOLOGIA E INOVAÇÃO",FEDERAL,DF,0
 2027-02-02,21603062000168,G ALVES CABRAL LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de Juazeiro do Norte (CE),MUNICIPAL,CE,0
 2027-02-02,22594152000100,X7E EMPREENDIMENTO LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de Juazeiro do Norte (CE),MUNICIPAL,CE,0
-2027-02-02,23347561000167,N LANDY BOTO PORTELA,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de Juazeiro do Norte (CE),MUNICIPAL,CE,0
+2027-02-02,23347561000167,,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de Juazeiro do Norte (CE),MUNICIPAL,CE,1
 2027-02-02,27209293000178,"D E M - MAQUINAS, IMPLEMENTOS E SERVICOS LTDA",CEIS,Suspensão,Empresa Brasileira de Correios e Telégrafos,FEDERAL,DF,0
 2027-02-02,27691290000113,BRANGE MEDIA LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,SUPERIOR TRIBUNAL DE JUSTICA,FEDERAL,DF,0
 2027-02-02,30199011000103,DANTAS DISTRIBUICAO E SERVICOS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,MINISTERIO PUBLICO DO ESTADO DO MATO G.DO SUL,ESTADUAL,MS,0
@@ -1979,7 +1979,7 @@ fim,cnpj,nome,lista,categoria,orgao,esfera,uf,pf
 2027-02-06,53557733000198,LIGHT BRASIL LTDA,CEIS,Suspensão,COMPANHIA ÁGUAS DE JOINVILLE/SC,MUNICIPAL,SC,0
 2027-02-06,59527180000107,,CEIS,Impedimento/proibição de contratar com prazo determinado,CAMARA MUNICIPAL DE JACAREÍ - SP,MUNICIPAL,SP,1
 2027-02-06,59731602000161,,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de Teixeira (PB),MUNICIPAL,PB,1
-2027-02-07,01819902000117,L C PINTO,CEIS,Impedimento/proibição de contratar com prazo determinado,1º Grau - TRF1 / Seção Judiciária Amazonas - SJAM / Capital SJAM / 1ª Manaus,FEDERAL,AM,0
+2027-02-07,01819902000117,,CEIS,Impedimento/proibição de contratar com prazo determinado,1º Grau - TRF1 / Seção Judiciária Amazonas - SJAM / Capital SJAM / 1ª Manaus,FEDERAL,AM,1
 2027-02-07,03286287000156,ALENKAR CALGAROTTO,CEIS,Impedimento/proibição de contratar com prazo determinado,Receita Federal do Brasil,FEDERAL,,0
 2027-02-07,04368344000109,"RICOPIA LOCACOES DE IMPRESSORAS,MULTIFUNCIONAIS E SERVICOS LTDA",CEIS,Suspensão,"INST.FED.DE EDUC.,CIENC.E TEC.DO CEARÁ",FEDERAL,CE,0
 2027-02-07,04368344000109,"RICOPIA LOCACOES DE IMPRESSORAS,MULTIFUNCIONAIS E SERVICOS LTDA",CEIS,Suspensão,"Instituto Federal de Educação, Ciência e Tecnologia do Ceará",FEDERAL,CE,0
@@ -2062,7 +2062,7 @@ fim,cnpj,nome,lista,categoria,orgao,esfera,uf,pf
 2027-02-10,26402220000135,CRISTIANE M. OST,CEIS,Impedimento/proibição de contratar com prazo determinado,PREFEITURA DE CANDÓI - PR,MUNICIPAL,PR,0
 2027-02-10,27164079000142,TRINAY INDUSTRIA E COMERCIO DE CONFECCOES LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,Tribunal Regional do Trabalho da 18ª Região - GO,FEDERAL,GO,0
 2027-02-10,27213451000163,QG SERVICOS E LOCACOES LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,Prefeitura Municipal de Água Comprida (MG),MUNICIPAL,MG,0
-2027-02-10,28521211000199,C DO VALE LOPES,CEIS,Impedimento/proibição de contratar com prazo determinado,EDF-DEFENSORIA PÚBLICA DO DISTRITO FEDERAL,ESTADUAL,DF,0
+2027-02-10,28521211000199,,CEIS,Impedimento/proibição de contratar com prazo determinado,EDF-DEFENSORIA PÚBLICA DO DISTRITO FEDERAL,ESTADUAL,DF,1
 2027-02-10,28931351000135,,CEIS,Suspensão,MINISTERIO DA SAUDE,FEDERAL,RJ,1
 2027-02-10,30949099000133,VFB BRASIL LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,PREFEITUA MUNICIPAL DE PEDREGULHO - SP,MUNICIPAL,SP,0
 2027-02-10,32212184000140,PRO ATIVA TECNOLOGIA COMERCIO E SERVICOS LTDA,CEIS,Impedimento/proibição de contratar com prazo determinado,MIN.DA GEST.E DA INOVACAO EM SERVICOS PUBLICO,FEDERAL,PB,0

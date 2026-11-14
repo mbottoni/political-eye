@@ -29,7 +29,8 @@ PAGES = [
     *[f"docs/siconfi/?tab={t}" for t in ("overview", "map", "dist", "cash", "parties", "pix", "town")],
     *[f"docs/tse/?tab={t}" for t in ("overview", "parties", "equity", "results", "donors", "suppliers")],
     "docs/tse/?tab=equity&e=2018",
-    *[f"docs/deputados/?tab={t}" for t in ("profile", "compare", "parties", "outliers")], "docs/deputados/?tab=profile&leg=56",
+    *[f"docs/deputados/?tab={t}" for t in ("profile", "compare", "parties", "outliers", "eleicao")], "docs/deputados/?tab=profile&leg=56",
+    "docs/deputados/?tab=eleicao&leg=56&lang=en", "docs/deputados/?tab=profile&dep=204460",
 ]
 CHROME = ["google-chrome", "google-chrome-stable", "chromium", "chromium-browser",
           "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"]

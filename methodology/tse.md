@@ -82,6 +82,8 @@ directorate gave how much to whom.
 ## Gaps
 
 - **2026 candidacy status** (`situacao_candidatura`) is blank in TSE's file.
+- **Amapá's 2026 federal deputies have no result yet** (2026-11-14): all 91 candidates are `#NULO` (empty
+  here), so 505 of the 513 seats are known. Every other state has as many elected as seats.
 - **2026 accounts are still being filed and judged**: second-round accounts
   and late or rectifying filings arrive in the weeks after the election, so
   2026 numbers will move in the weekly diffs.

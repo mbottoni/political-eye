@@ -59,6 +59,7 @@ workflow, after the views) for [the deputies page](https://mbottoni.github.io/po
 | `grandes_doadores`, `grandes_doadores_valor` | donors of R$50,000 or more to the campaign that elected them, and what they gave |
 | `sancoes_pago_total`, `sancoes_pago_sancionadas`, `sancoes_empresas` | from the sanctions page ([sancoes.md](sancoes.md)): amendment money paid, and paid to companies while under a barring sanction, every budget since 2015 |
 | `prefeito_mesmo_partido` | of their amendment money that reached a town (payments table, recipient's town), the share paid in a year when that town's mayor ([ref.md](ref.md), `prefeitos.csv`) was of the deputy's party in the month of the payment |
+| `prefeito_mesmo_partido_valor` | that money in reais: amendment money paid to towns whose mayor was of the deputy's party that year |
 | `prefeito_base` | the same share by chance: the share of the deputy's own state's towns that party ran that year, averaged over the same payments |
 | `presenca`, `votacoes_mandato` | roll-call participation: the votes they cast over the roll calls held, in the months they appear in the Câmara's tables (voting or signing), and that number of roll calls |
 | `propostas_autor`, `projetos_autor`, `propostas_coautor` | proposals they presented as first signer (all, and bills: PL, PLP, PEC, PDL, PRC) and proposals they co-signed |
@@ -118,3 +119,64 @@ or more in office, so a substitute's few weeks don't set the scale. On
 2026-11-08 the median deputy of the 57th legislature had voted in 80% of roll
 calls and filed 20 bills.
 
+## The election tab: `data/site/eleicao/`
+
+Built by `python -m politicaleye site build eleicao` (in the weekly `tse` and
+`ref` workflows) for the deputies page's **Eleição** tab: what the general
+election at the end of a legislature did to its deputies, and the Chamber it
+chose. The 57th legislature goes with the 2026 election, the 56th with 2022.
+
+**Each deputy's outcome** (`deputados_<leg>.csv`, one row per deputy of the
+legislature, substitutes who took a seat included). The deputy's candidacies
+in that election come from the crosswalk, for any office ([ref.md](ref.md)).
+When a deputy has two (registered for the Câmara, then ran for the Senate),
+the one that went to the ballot counts: a candidacy with a result before one
+without, a win before a loss. The outcome (`grupo`):
+
+| `grupo` | rule |
+|---|---|
+| `reeleito` | ran for federal deputy and TSE's result starts with ELEITO (ELEITO POR QP, ELEITO POR MÉDIA) |
+| `nao_reeleito` | ran for federal deputy and ended SUPLENTE or NÃO ELEITO |
+| `outro_eleito`, `outro_derrotado` | ran for another office (senator or Senate substitute, governor or deputy governor, state or district deputy, president or vice-president) and won or lost |
+| `sem_resultado` | the candidacy has no result in TSE's file: Amapá's federal deputies on 2026-11-14 (the state's count is not in it yet), or a candidacy withdrawn, refused or under appeal |
+| `nao_concorreu` | no candidacy linked: they did not run, or the crosswalk could not tie their candidacy to them |
+
+Beside the outcome: the office, result, party, state and gender of the
+candidacy, the money it raised (`campanha_total`, TSE's revenue), the party
+they ran under or, if they did not run, their last party in the Câmara
+(`partido_eleicao`, one name per party), and what the tab compares the
+outcomes on: the ranking page's index with its default weights (`indice`,
+computed as [ranking.md](ranking.md) describes, only for deputies with 12
+months or more), roll-call participation (the Speaker's left out), amendment
+money paid, and the share and amount of it paid to towns run by their party
+(`prefeito_mesmo_partido`, `prefeito_base`, `prefeito_mesmo_partido_valor`,
+above). The tab compares deputies with 12 months or more in office and states
+that it describes the groups: the re-elected also differ in party, state, time
+in office and campaign money.
+
+**The Chamber the election chose** (`eleitos_<year>.csv`): every federal
+deputy elected, with `origem`: `reeleito` if they are a deputy of the outgoing
+legislature, `ex_deputado` if they first appear in the Câmara's monthly tables
+(from 2015) in an earlier legislature or have a Câmara id from before 2015,
+`novo` otherwise. The Câmara gives new deputies an id only when they take
+office, so until February those elected for the first time are the ones with
+no Câmara id; after it, the first legislature they appear in tells them apart.
+
+**Seats per party** (`partidos_<year>.csv`): won at the election before
+(`eleitos_antes`), held by the deputies in the Câmara's tables in the election
+month (`em_exercicio`: those who voted or filed a proposal in October; former
+deputies credited as authors of a paper, with no party or state, are left
+out), and won at this election, split by origin. Merged parties count under
+today's name (PSC as PODE, PTB and PATRIOTA as PRD, PROS as SOLIDARIEDADE).
+
+`resumo.json` has, per legislature, the counts per outcome, the re-election
+rate among those who ran for the Câmara again and have a result, the seats
+known and the states still without a result (a state with fewer elected than
+its seats).
+
+On 2026-11-14, of the 57th legislature's 644 deputies: 306 re-elected, 186 not
+re-elected (168 of them substitutes), 34 elected to another office (19 to the
+Senate), 41 lost a race for another office, 17 with no result, 60 did not run.
+62% of those who ran for the Câmara again and have a result were re-elected
+(61% in 2022). Of the 505 elected so far (Amapá's 8 seats missing), 306 sat in
+the 57th, 25 are former deputies, 174 are new.

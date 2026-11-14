@@ -19,6 +19,8 @@ on:
 
 permissions:
   contents: write
+  issues: write    # job-alert: open, comment on and close the failure issue
+  actions: read    # job-alert: name the step that failed
 
 concurrency:
   group: site
@@ -29,9 +31,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: astral-sh/setup-uv@v5
+      - uses: astral-sh/setup-uv@v10.3.3
         with:
           enable-cache: true
 
@@ -73,3 +75,16 @@ jobs:
             git commit -m "site: summaries rebuilt with the code now on main"
           done
           exit 1
+
+      # Last: open or update the "<workflow> job failing" issue, or close it once a run succeeds.
+      - name: Report the failure in an issue
+        if: failure()
+        uses: ./.github/actions/job-alert
+        with:
+          outcome: failure
+
+      - name: Close the failure issue
+        if: success()
+        uses: ./.github/actions/job-alert
+        with:
+          outcome: success

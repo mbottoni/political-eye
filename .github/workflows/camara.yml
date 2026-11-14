@@ -16,6 +16,8 @@ on:
 
 permissions:
   contents: write
+  issues: write    # job-alert: open, comment on and close the failure issue
+  actions: read    # job-alert: name the step that failed
 
 # One group per source. Sources write to separate directories, so concurrent
 # pushes from different sources rebase cleanly (see the retry loop below).
@@ -29,9 +31,9 @@ jobs:
     timeout-minutes: 60
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: astral-sh/setup-uv@v5
+      - uses: astral-sh/setup-uv@v10.3.3
         with:
           enable-cache: true
 
@@ -82,3 +84,16 @@ jobs:
             git pull --rebase -X theirs   # on a clash in a generated summary, this run's (newer) build wins
           done
           exit 1
+
+      # Last: open or update the "<workflow> job failing" issue, or close it once a run succeeds.
+      - name: Report the failure in an issue
+        if: failure()
+        uses: ./.github/actions/job-alert
+        with:
+          outcome: failure
+
+      - name: Close the failure issue
+        if: success()
+        uses: ./.github/actions/job-alert
+        with:
+          outcome: success

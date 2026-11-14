@@ -44,6 +44,8 @@ const EN = {
   d_siconfi: "Which towns break the payroll cap or end the year without cash, whether \"Pix\" amendments go to towns in trouble, and each mayor's party.",
   nav_control_long: "Accountability and justice", p_control: "Who is barred from public contracts, what they still receive, and the patterns that deserve a closer look.",
   d_sancoes: "Who is barred from public contracts or fined for corruption, by whom and for how long: repeat offenders, fines, leniency deals, and the amendments and contracts barred companies still get, by member of Congress and by party.",
+  t_empresas: "Companies across sources",
+  d_empresas: "One profile per CNPJ: current and past sanctions, public contracts, the amendment money it received and from which members of Congress, the campaigns it sold to and the red flags it appears on.",
   d_stf: "How long each justice holds a case after asking for more time to review it. On hold: the STF's server turns away clients that do not present themselves as a web browser.",
   r1: "Official data only, with the source on every number.", r2: "No full CPF is ever published.", r3: "Sanctioned people are counted, never named.",
   r4: "Every rule and data quirk is in the methodology.", methodology: "Methodology",
@@ -176,6 +178,11 @@ const CARDS = {
     return { value: num(r.tiles.ceis + r.tiles.cnep), series: sy.map((x) => sum(keys.map((k) => +x[k] || 0))), opts: { bars: true, labels: [sy[0].ano, sy[sy.length - 1].ano] },
       sub: tr({ pt: `sanções registradas, por ano de início; ${brl(r.money.emendas.barrado)} em emendas pagas a empresas enquanto estavam impedidas`,
         en: `sanctions listed, by the year they began; ${brl(r.money.emendas.barrado)} in amendments paid to companies while barred` }) };
+  },
+  async empresas() {
+    const r = await data("site/empresas/resumo.json");
+    return { value: num(r.empresas), sub: tr({ pt: `empresas e entidades com ficha; ${num(r.em_varias)} aparecem em duas fontes ou mais`,
+      en: `companies and organisations profiled; ${num(r.em_varias)} appear in two sources or more` }) };
   },
 };
 

@@ -17,7 +17,8 @@ export const SECTIONS = [
     { key: "siconfi", pt: "Finanças municipais", en: "Municipal finances" }] },
   { key: "controle", pt: "Controle e justiça", en: "Accountability and justice", accent: "--s8", pages: [
     { key: "sancoes", pt: "Sanções", en: "Sanctions" },
-    { key: "alertas", pt: "Sinais de alerta", en: "Red flags" }] },
+    { key: "alertas", pt: "Sinais de alerta", en: "Red flags" },
+    { key: "empresas", pt: "Empresas em todas as fontes", en: "Companies across sources" }] },
 ];
 const REPO = "https://github.com/mbottoni/political-eye";
 

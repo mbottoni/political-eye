@@ -39,7 +39,7 @@ in court without the list being updated.
 ### 2. Contracts signed with a company barred at the time (`contratos_impedidas.csv`)
 
 **Rule.** A contract on the PNCP whose signing day falls within a barring sanction of the supplier (a 14-digit
-CNPJ) whose reach covers the buying body (`cobre = sim` in `data/pncp/contratos_sancionados.csv`).
+CNPJ) whose reach covers the buying body (`cobre = sim` in `data/pncp/sancionados/`).
 Contracts with values the contracts page leaves out as typos are left out here too.
 **Measured against.** The contracts read so far; the PNCP history since 2021 is read newest first, so the
 count grows as it fills in (198 of 1,893 days on 2026-11-08: 1,027 contracts, R$ 91 million).

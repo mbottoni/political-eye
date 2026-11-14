@@ -36,7 +36,7 @@ pages, takes a few runs; after that a run takes about four minutes.
 | table | one row per |
 |---|---|
 | `data/pncp/contratos/YYYY-MM.csv` | contract worth R$1,000,000 or more (`valor_global`), by month of publication: `controle` (`numeroControlePNCP`), `compra`, `publicacao`, `assinatura`, `vigencia_inicio`, `vigencia_fim`, the contracting body (`orgao_cnpj`, `orgao`, `esfera` F/E/M/N, `poder`, `uf`, `municipio_ibge`), `tipo`, `categoria`, the supplier (`fornecedor_tipo` PJ/PF/PE, `fornecedor`, `fornecedor_nome`), `objeto` (cut at 200 characters), `valor_inicial`, `valor_global`, `retificacao` |
-| `data/pncp/contratos_sancionados.csv` | contract of any value and sanction: the same columns plus the sanction (`lista`, `codigo_sancao`, `categoria_sancao`, `sancao_inicio`, `sancao_fim`, `abrangencia`, `orgao_sancionador`, `esfera_sancionador`, `uf_sancionador`) and `cobre` |
+| `data/pncp/sancionados/YYYY-MM.csv` | contract of any value and sanction, one file per month of publication (a single `contratos_sancionados.csv` until Nov 2026, when it passed GitHub's 100 MB file limit): the same columns plus the sanction (`lista`, `codigo_sancao`, `categoria_sancao`, `sancao_inicio`, `sancao_fim`, `abrangencia`, `orgao_sancionador`, `esfera_sancionador`, `uf_sancionador`) and `cobre` |
 | `data/pncp/resumo_dia.csv` | publication day, sphere and kind of supplier: `contratos` and `valor_global`, for every contract published |
 | `data/pncp/dias.csv` | day read: contracts published, contracts updated |
 
@@ -47,13 +47,13 @@ estimated 75 MB for the whole history while covering most of the money. `resumo_
 counts everything. A contract updated below the threshold leaves the table.
 
 **Updates.** A contract can change after publication (amendments raise its
-value, rectifications fix fields). `contratos/` and `contratos_sancionados.csv`
+value, rectifications fix fields). `contratos/` and `sancionados/`
 always hold the latest version read; `resumo_dia.csv` counts each day's
 contracts as they were when that day was read.
 
 ## Contracts with sanctioned companies
 
-`contratos_sancionados.csv` lists every contract whose supplier (by CNPJ) was
+`sancionados/` lists every contract whose supplier (by CNPJ) was
 under a sanction that bars contracting on the day the contract was signed:
 on CEIS or CNEP ([sancoes.md](sancoes.md)), in a category that bars
 contracting (impediment, *inidoneidade*, suspension; fines do not), with a

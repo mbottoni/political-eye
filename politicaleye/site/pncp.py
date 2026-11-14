@@ -26,6 +26,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from ..pncp.build import read_sanctioned
 from ..ref.prefeitos import mayor_by_year
 from .common import csv, write_json
 
@@ -113,7 +114,7 @@ def build(data: Path) -> dict:
     rcl = town_revenue(data)
     every = contracts(src, rcl)
     gone, c = every[every.suspeito == 2], every[every.suspeito != 2]   # values left out as typos: listed apart, counted nowhere
-    sanc = _read(src / "contratos_sancionados.csv")
+    sanc = read_sanctioned(src)
     if len(sanc):
         sanc = plausible(sanc, rcl)
         sanc = sanc[sanc.suspeito != 2]

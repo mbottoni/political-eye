@@ -27,7 +27,7 @@ import pandas as pd
 
 from ..views.deputados import election_of
 from .common import csv, write_json
-from .pncp import plausible, town_revenue
+from .pncp import plausible, read_sanctioned, town_revenue
 from .sancoes import individual_firm, name_tokens, party_timeline
 
 # Thresholds (see methodology/alertas.md for why each one).
@@ -174,7 +174,7 @@ def build(data: Path) -> dict:
 
     # ---------------------------------------------------------- 2. contracts signed with a barred company
     rcl = town_revenue(data)
-    cs = _read(data / "pncp" / "contratos_sancionados.csv")
+    cs = read_sanctioned(data / "pncp")
     if len(cs):
         cs = plausible(cs, rcl)
         cs = cs[(cs.suspeito != 2) & (cs.cobre == "sim") & cs.fornecedor.str.fullmatch(r"\d{14}")].drop_duplicates("controle")

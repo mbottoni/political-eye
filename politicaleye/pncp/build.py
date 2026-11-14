@@ -1,8 +1,9 @@
 """Public contracts from the PNCP: ``data/pncp/``.
 
     data/pncp/contratos/YYYY-MM.csv     contracts worth VALOR_MIN or more, by month of publication
-    data/pncp/contratos_sancionados.csv contracts of any value signed with a company the sanctions
-                                        lists (data/sancoes/) had barred on the signing date
+    data/pncp/sancionados/YYYY-MM.csv   contracts of any value signed with a company the sanctions
+                                        lists (data/sancoes/) had barred on the signing date, by month
+                                        of publication
     data/pncp/resumo_dia.csv            every contract published, counted and summed by day,
                                         government sphere and kind of supplier
     data/pncp/dias.csv                  the days read so far
@@ -36,6 +37,8 @@ CONTRATOS = ["controle", "compra", "publicacao", "assinatura", "vigencia_inicio"
              "fornecedor_nome", "objeto", "valor_inicial", "valor_global", "retificacao"]
 SANCIONADOS = CONTRATOS + ["lista", "codigo_sancao", "categoria_sancao", "sancao_inicio", "sancao_fim", "abrangencia",
                            "orgao_sancionador", "esfera_sancionador", "uf_sancionador", "cobre"]
+SANC_DIR = "sancionados"
+LEGACY_SANC = "contratos_sancionados.csv"   # one file until Nov 2026, when it outgrew GitHub's 100 MB limit
 # Sanctions that bar a company from contracting; fines and the like do not.
 BARS = re.compile(r"^(Impedimento|Declaração de Inidoneidade|Suspensão$)")
 ESFERA = {"FEDERAL": "F", "ESTADUAL": "E", "MUNICIPAL": "M"}
@@ -150,13 +153,32 @@ def match_sanctions(contracts: pd.DataFrame, sanc: pd.DataFrame) -> pd.DataFrame
     return m[SANCIONADOS]
 
 
+def read_sanctioned(data: Path) -> pd.DataFrame:
+    """Every contract signed with a barred company (``data/pncp/sancionados/``, and the legacy single file if present)."""
+    files = sorted((data / SANC_DIR).glob("*.csv")) + [p for p in [data / LEGACY_SANC] if p.exists()]
+    parts = [pd.read_csv(p, dtype=str, keep_default_na=False) for p in files]
+    return pd.concat(parts, ignore_index=True) if parts else pd.DataFrame(columns=SANCIONADOS)
+
+
+def write_by_month(t: pd.DataFrame, folder: Path, sort: list[str]) -> None:
+    """One file per month of publication; months no longer present are removed."""
+    keep = set()
+    for month, part in t.assign(_m=t.publicacao.str[:7]).groupby("_m"):
+        p = folder / f"{month}.csv"
+        write_csv(part.drop(columns="_m").sort_values(sort), p)
+        keep.add(p)
+    for p in folder.glob("*.csv"):
+        if p not in keep:
+            p.unlink()
+
+
 class Store:
     """The committed tables, loaded once per run and written after each batch."""
 
     def __init__(self, data: Path):
         self.data = data
         self.big = self._read_dir(data / "contratos", CONTRATOS)
-        self.sanc = self._read(data / "contratos_sancionados.csv", SANCIONADOS)
+        self.sanc = read_sanctioned(data)[SANCIONADOS]
         self.resumo = self._read(data / "resumo_dia.csv", RESUMO)
         self.dias = self._read(data / "dias.csv", DIAS)
         self.new_big, self.new_sanc, self.new_resumo = [], [], []
@@ -204,16 +226,9 @@ class Store:
             ["dia", "esfera", "fornecedor_tipo"], keep="last")
         self.big, self.sanc, self.resumo = big, sanc, res
         self.new_big, self.new_sanc, self.new_resumo = [], [], []
-        folder = self.data / "contratos"
-        keep = set()
-        for month, part in big.assign(_m=big.publicacao.str[:7]).groupby("_m"):
-            p = folder / f"{month}.csv"
-            write_csv(part.drop(columns="_m").sort_values(["publicacao", "controle"]), p)
-            keep.add(p)
-        for p in folder.glob("*.csv"):
-            if p not in keep:
-                p.unlink()
-        write_csv(sanc.sort_values(["assinatura", "controle", "lista", "codigo_sancao"]), self.data / "contratos_sancionados.csv")
+        write_by_month(big, self.data / "contratos", ["publicacao", "controle"])
+        write_by_month(sanc, self.data / SANC_DIR, ["assinatura", "controle", "lista", "codigo_sancao"])
+        (self.data / LEGACY_SANC).unlink(missing_ok=True)
         write_csv(res.sort_values(["dia", "esfera", "fornecedor_tipo"]), self.data / "resumo_dia.csv")
         write_csv(self.dias.sort_values("dia"), self.data / "dias.csv")
 

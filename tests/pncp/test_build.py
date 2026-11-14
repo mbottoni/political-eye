@@ -52,7 +52,7 @@ def test_update(monkeypatch, tmp_path):
     assert r["dias"] == 2 and r["atualizados"] == 0
     big = pd.read_csv(data / "contratos" / "2026-11.csv", dtype=str)
     assert big.controle.tolist() == ["a", "d"]                                    # by publication day, then id
-    s = pd.read_csv(data / "contratos_sancionados.csv", dtype=str)
+    s = pd.read_csv(data / "sancionados" / "2026-11.csv", dtype=str)
     assert s.controle.tolist() == ["a"] and s.lista.tolist() == ["ceis"]          # c was signed before it; a fine bars nothing
     assert s.cobre.tolist() == ["possivel"]                                       # same sphere and state
     res = pd.read_csv(data / "resumo_dia.csv", dtype=str)

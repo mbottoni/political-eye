@@ -14,7 +14,8 @@ export const SECTIONS = [
     { key: "tse", pt: "Financiamento de campanha", en: "Campaign finance" },
     { key: "emendas", pt: "Emendas parlamentares", en: "Parliamentary amendments" },
     { key: "pncp", pt: "Contratos públicos", en: "Public contracts" },
-    { key: "siconfi", pt: "Finanças municipais", en: "Municipal finances" }] },
+    { key: "siconfi", pt: "Finanças municipais", en: "Municipal finances" },
+    { key: "municipios", pt: "Meu município", en: "My town" }] },
   { key: "controle", pt: "Controle e justiça", en: "Accountability and justice", accent: "--s8", pages: [
     { key: "sancoes", pt: "Sanções", en: "Sanctions" },
     { key: "alertas", pt: "Sinais de alerta", en: "Red flags" }] },

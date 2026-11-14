@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="My town · political-eye">Meu município · political-eye</title>
+<meta name="description" content="O perfil de cada um dos 5.570 municípios do Brasil a partir de dados oficiais: prefeitos e partidos, as emendas parlamentares que a prefeitura recebeu e de quem, os contratos de seus órgãos e as contas, comparados aos municípios parecidos." data-en-content="A profile of each of Brazil's 5,570 towns from official data: mayors and parties, the amendment money the town government received and from whom, its bodies' contracts and its accounts, against similar towns.">
+<link rel="stylesheet" href="../lib/site.css">
+<style>
+  .dossier { margin: 10px 0 16px; scroll-margin-top: 130px; }
+  .dname { font-family: var(--serif); font-size: 38px; font-weight: 560; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 10px; }
+  .dmeta, .dlinks { margin: 0 0 6px; color: var(--ink2); font-size: 14px; }
+  .chip { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 650; color: var(--ink); background: color-mix(in srgb, var(--accent) 16%, transparent); }
+  .chip.soft { font-weight: 550; background: var(--surface); border: 1px solid var(--border); }
+  .jump { position: sticky; top: 60px; z-index: 6; display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 18px; padding: 10px 0;
+    background: color-mix(in srgb, var(--page) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  .jump a { font-size: 13px; font-weight: 550; color: var(--ink2); text-decoration: none; padding: 5px 13px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
+  .jump a:hover { color: var(--ink); border-color: color-mix(in srgb, var(--accent) 50%, transparent); }
+  .dsec { display: flex; align-items: center; gap: 12px; font-size: 21px; font-weight: 680; letter-spacing: -0.015em; margin: 40px 0 16px; scroll-margin-top: 130px; }
+  .dsec::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+  .ranks { display: grid; gap: 14px; margin-top: 4px; }
+  .rank { display: grid; grid-template-columns: minmax(170px, 320px) 1fr 110px; gap: 16px; align-items: center; font-size: 13px; }
+  .rank .rl { color: var(--ink2); }
+  .rank .rl small { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .rank .rv { text-align: right; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .track { position: relative; height: 8px; border-radius: 99px; background: linear-gradient(90deg, var(--grid), color-mix(in srgb, var(--accent) 35%, var(--grid))); }
+  .track .dot { position: absolute; top: 50%; width: 14px; height: 14px; border-radius: 50%; transform: translate(-50%, -50%); background: var(--accent); box-shadow: 0 0 0 3px var(--surface); }
+  .track .ring { position: absolute; top: 50%; width: 12px; height: 12px; border-radius: 50%; transform: translate(-50%, -50%); border: 2px solid var(--ink2); background: var(--surface); }
+  .track .mid { position: absolute; left: 50%; top: -5px; bottom: -5px; width: 2px; transform: translateX(-1px); border-radius: 1px; background: var(--axis); }
+  .rkey { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--ink2); margin: 12px 0 0; }
+  .rkey i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+  .flag { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; font-size: 12px; }
+  .flag::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .st { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+  .st::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .linkish { all: unset; cursor: pointer; color: var(--ink); text-decoration: underline; text-decoration-color: var(--axis); text-underline-offset: 2px; }
+  .linkish:hover, .linkish:focus-visible { text-decoration-color: var(--ink); }
+  .cover { font-size: 13px; color: var(--ink2); margin: -4px 0 14px; }
+  .cover b { color: var(--ink); }
+  @media (max-width: 640px) {
+    .dname { font-size: 30px; }
+    .rank { grid-template-columns: 1fr auto; gap: 6px 12px; }
+    .rank .track { grid-column: 1 / -1; grid-row: 2; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="crumb"><a href="../">political-eye</a> / Meu município</p>
+    <h1 data-en="My town">Meu município</h1>
+    <p data-en="Each of Brazil's 5,570 towns leaves traces in several public records: who was elected mayor, the amendment money members of Congress sent to the town government, the contracts its bodies sign, and the fiscal reports it files with the Treasury. This page joins them for one town at a time and sets each number against the median of the state's towns and of towns of similar size. Start by searching for your town.">Cada um dos 5.570 municípios do Brasil deixa rastros em vários registros públicos: quem foi eleito prefeito, o dinheiro de emendas que deputados e senadores mandaram para a prefeitura, os contratos que seus órgãos assinam e os relatórios fiscais que entrega ao Tesouro. Esta página reúne esses registros, um município por vez, e compara cada número com a mediana dos municípios do mesmo estado e dos de porte parecido. Comece buscando o seu.</p>
+  </header>
+  <div class="controls" id="find"></div>
+  <section id="profile"></section>
+  <footer data-en-html="Amendments: payments (Portal da Transparência) to the town government, matched by who was paid: the municipality's own CNPJ, where &quot;Pix&quot; transfers land, and its funds and other municipal bodies located there. Until 2024 the Portal recorded most health transfers as paid to Banco do Brasil in Brasília, so they cannot be placed in a town; from 2025 they appear paid to each town's health fund. Contracts: the PNCP's contracts of R$ 1 million or more signed by the town's bodies, and contracts of any value signed with a company barred on that day, over the days of the PNCP history read so far; implausible values are left out as on the contracts page. Accounts: payroll and cash as each town declared them on Siconfi. Similar towns: the same state, and towns of the same population band nationwide. Mayors' parties are compared as they stood each year. Every rule is in <a href=&quot;https://github.com/mbottoni/political-eye/blob/main/methodology/municipios.md&quot;>methodology/municipios.md</a>. Sources: Portal da Transparência (CGU), PNCP, Tesouro Nacional (Siconfi), TSE, Câmara and Senado.">
+    Emendas: pagamentos (Portal da Transparência) ao governo municipal, identificados por quem recebeu: o CNPJ do próprio município, onde caem as transferências "Pix", e seus fundos e demais órgãos municipais sediados nele. Até 2024, o Portal registrava a maior parte dos repasses de saúde como pagos ao Banco do Brasil, em Brasília, e por isso eles não podem ser atribuídos a um município; a partir de 2025 aparecem pagos ao fundo de saúde de cada município. Contratos: os contratos de R$ 1 milhão ou mais assinados pelos órgãos do município no PNCP, e os de qualquer valor assinados com empresas impedidas naquele dia, nos dias do histórico do PNCP lidos até agora; valores implausíveis ficam de fora, como na página de contratos. Contas: despesa com pessoal e caixa como cada município declarou no Siconfi. Municípios parecidos: os do mesmo estado e os da mesma faixa de população no país. Os partidos dos prefeitos são comparados como eram em cada ano. Todas as regras estão em <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/municipios.md">methodology/municipios.md</a>. Fontes: Portal da Transparência (CGU), PNCP, Tesouro Nacional (Siconfi), TSE, Câmara e Senado.
+  </footer>
+</main>
+<noscript>Esta página precisa de JavaScript. Os dados estão em <a href="https://github.com/mbottoni/political-eye/tree/main/data/site/municipios">github.com/mbottoni/political-eye</a>.</noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -3,6 +3,8 @@
 import { css, data, el } from "./lib/ui.js";
 import { brl, date, lang, langSwitch, month, num, pct, tr } from "./lib/i18n.js";
 import { deputies, deputySearch } from "./lib/search.js";
+import { townHref, townSearch } from "./lib/towns.js";
+import { SECTIONS } from "./lib/page.js";
 
 const sum = (xs) => xs.reduce((a, b) => a + b, 0);
 const NS = "http://www.w3.org/2000/svg";
@@ -18,6 +20,10 @@ const EN = {
   cta_explore: "or see what the data shows ↓", cta_how: "How it works",
   search_label: "Find a deputy and see how they vote, what they propose, where their amendments go and who paid for their campaign.",
   search_try: "Try:",
+  search_town: "Or find your town: who runs it, the amendment money it gets and from whom, its contracts and its accounts.",
+  tb_kicker: "My town", tb_title: "Who runs your town, where its money comes from and whom it contracts",
+  tb_text: "For each of the 5,570 towns: its mayors and their parties, the amendment money the town government received and from which members of Congress, its bodies' contracts, with barred companies singled out, and its accounts. Each number is set against towns of the same state and of similar size.",
+  tb_go: "See your town",
   ab_kicker: "Red flags", ab_title: "Patterns across the open data that deserve a closer look",
   ab_text: "Amendments and contracts for companies barred from public contracts, campaign suppliers later paid from the same member's amendments, amendment money concentrated on one private recipient. Each flag gives its rule, what it is measured against and the innocent explanations. A flag is not evidence of an irregularity.",
   ab_go: "See the red flags",
@@ -234,6 +240,20 @@ async function redFlags() {
     stat(num(r.cruzamentos.entidades), tr({ pt: "empresas e entidades em duas listas ou mais", en: "companies and bodies on two lists or more" })));
 }
 
+// ------------------------------------------------------------ town profiles banner
+
+async function townBanner() {
+  const r = await data("site/municipios/resumo.json"), box = document.querySelector("#tb-stats");
+  if (!box) return;
+  const y = r.emendas.by_year.find((x) => x.ano === r.ano_ref) || r.emendas.by_year[r.emendas.by_year.length - 1], s = r.pncp.sancionados;
+  const stat = (n, label) => el("div", {}, el("b", { textContent: n }), el("span", { textContent: label }));
+  box.replaceChildren(
+    stat(num(r.towns), tr({ pt: "municípios, cada um com seu perfil", en: "towns, each with its profile" })),
+    stat(brl(y.total), tr({ pt: `em emendas pagas aos governos municipais em ${y.ano}, ${brl(y.pix)} por Pix`, en: `in amendments paid to town governments in ${y.ano}, ${brl(y.pix)} by "Pix"` })),
+    stat(num(r.pncp.contratos), tr({ pt: `contratos de R$ 1 milhão ou mais de órgãos municipais, em ${num(r.pncp.days_read)} dias lidos`, en: `contracts of R$ 1 million or more by town bodies, in ${num(r.pncp.days_read)} days read` })),
+    stat(num(s.sim + s.possivel), tr({ pt: "contratos municipais com empresa impedida que a sanção alcançava ou pode ter alcançado", en: "town contracts with a company whose bar reached, or may have reached, the buyer" })));
+}
+
 // ------------------------------------------------------------ ranking banner
 
 async function ranking() {
@@ -360,6 +380,7 @@ function searchBox() {
   if (searchLang === lang()) return;   // a resize redraws the charts, not the box someone may be typing in
   searchLang = lang();
   document.querySelector("#deputy-search").replaceChildren(deputySearch({ href: profileHref, large: true }));
+  document.querySelector("#town-search")?.replaceChildren(townSearch({ href: (t) => townHref(t.cod), large: true }));
   // Three deputies of the current legislature, at random, so the suggestion favours no one.
   const go = () => deputies().then((all) => {
     const now = all.filter((d) => d.leg === 57 && d.votes >= 50);
@@ -382,6 +403,10 @@ function render() {
   swarm().catch((e) => console.warn("hub swarm:", e));
   redFlags().catch((e) => console.warn("hub red flags:", e));
   ranking().catch((e) => console.warn("hub ranking:", e));
+  townBanner().catch((e) => console.warn("hub towns:", e));
+  // Count the pages from the shared menu, so a new page is counted without editing this line.
+  const pages = document.querySelector('[data-i="f_pages"]')?.nextElementSibling;
+  if (pages) pages.textContent = num(SECTIONS.reduce((n, s) => n + s.pages.length, 0));
   lastUpdate();
   freshness();
 }

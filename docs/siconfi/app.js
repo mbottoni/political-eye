@@ -231,6 +231,8 @@ async function town(root) {
     const last = Y.filter((x) => x.dtp_pct != null).slice(-1)[0];
     const box = el("div");
     box.append(el("h2", { textContent: `${e.ente} (${e.uf})`, style: "margin:4px 0 10px" }));
+    box.append(el("p", { style: "margin:0 0 14px;font-size:14px" }, el("a", { href: `../municipios/?town=${cod}`,
+      textContent: L("Perfil completo do município: prefeitos, emendas por autor, contratos e comparação com municípios parecidos →", "Full town profile: mayors, amendments by author, contracts, and similar towns →") })));
     const tl = el("section", { className: "tiles" });
     box.append(tl);
     tiles(tl, [

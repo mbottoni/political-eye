@@ -157,7 +157,10 @@ def build(data: Path) -> dict:
         ei = ei.assign(valor=_money(ei.valor), pagamentos=pd.to_numeric(ei.pagamentos))
         ei["nome"], ei["pf"] = name_of(ei.favorecido, ei.favorecido.map(names).fillna(""))
         d = who(ei.pessoa)
-        ei = pd.concat([ei, d], axis=1)
+        # Keep the author's party and state in the amendment's year (from the sanctions page); today's only fills blanks.
+        for c in ("partido", "uf"):
+            ei[c] = ei[c].where(ei[c] != "", d[c])
+        ei = pd.concat([ei, d.drop(columns=["partido", "uf"])], axis=1)
         ei["autor"] = ei.deputado.where(ei.deputado != "", ei.autor)
         ei = ei.rename(columns={"favorecido": "cnpj"})[["cnpj", "nome", "pf", "pessoa", "deputado_id", "senador_id", "casa", "leg", "autor", "tipo", "partido", "uf", "barrado", "valor", "pagamentos", "primeiro", "ultimo"]]
         ei = ei.sort_values(["valor", "cnpj", "autor"], ascending=[False, True, True])

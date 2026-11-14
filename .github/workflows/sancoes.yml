@@ -41,9 +41,15 @@ jobs:
         # Also reads the amendments, PNCP and TSE tables as committed, so its cross-source numbers are at most a day behind.
         run: uv run python -m politicaleye site build sancoes alertas ranking
 
+      - name: Rebuild the town profiles
+        # Joins amendments, PNCP, Siconfi, sanctions and mayors as committed (at most a day behind each). Its own
+        # step, allowed to fail, so a problem with the profiles never costs the day's sanctions snapshot.
+        continue-on-error: true
+        run: uv run python -m politicaleye site build municipios
+
       - name: Commit if a list changed
         run: |
-          git add data/sancoes data/site/sancoes data/site/alertas data/site/ranking
+          git add data/sancoes data/site/sancoes data/site/alertas data/site/ranking data/site/municipios
           if git diff --staged --quiet -- . ':!data/sancoes/sources.json'; then
             echo "No data changes."
             exit 0

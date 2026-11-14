@@ -6,6 +6,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 72442,Felipe Carreras,PSB,PE,5,6
 73433,Arlindo Chinaglia,PT,SP,6,51
 73441,Celso Russomanno,REPUBLICANOS,SP,5,4
+73483,Luis Carlos Heinze,,,0,19
 73486,Pompeo de Mattos,PDT,RS,6,3
 73579,Alberto Fraga,PL,DF,6,6
 73604,Rui Falcão,PT,SP,6,1
@@ -21,7 +22,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 74041,Luiz Couto,PT,PB,6,11
 74043,Wellington Roberto,PSD,PB,6,0
 74057,Alice Portugal,PCdoB,BA,4,6
-74060,Daniel Almeida,PCdoB,BA,6,18
+74060,Daniel Almeida,PCdoB,BA,6,22
 74075,Elcione Barbalho,MDB,PA,5,0
 74079,José Priante,MDB,PA,1,0
 74084,Raimundo Santos,PSD,PA,6,177
@@ -64,7 +65,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 92699,Fernando Monteiro,PSD,PE,6,3
 92776,Stefano Aguiar,PSD,MG,5,1
 98057,Lafayette de Andrada,PL,MG,4,11
-98148,Cobalchini,MDB,SC,5,4
+98148,Cobalchini,MDB,SC,5,8
 98615,Ismael,PL,SC,6,3
 104552,Socorro Neri,PP,AC,5,19
 107283,Gleisi Hoffmann,PT,PR,4,3
@@ -87,7 +88,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 141398,Carlos Zarattini,PT,SP,6,3
 141408,Cleber Verde,MDB,MA,6,7
 141411,Dagoberto Nogueira,PP,MS,6,3
-141421,Eduardo da Fonte,PP,PE,6,6
+141421,Eduardo da Fonte,PP,PE,6,7
 141431,Fernando Coelho Filho,UNIÃO,PE,5,1
 141450,Hugo Leal,PSD,RJ,4,11
 141456,Jilmar Tatto,PT,SP,6,4
@@ -189,7 +190,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 178927,Aliel Machado,PV,PR,4,2
 178929,Diego Garcia,UNIÃO,PR,6,4
 178931,Luciano Ducci,PSB,PR,6,4
-178933,Sergio Souza,MDB,PR,4,6
+178933,Sergio Souza,MDB,PR,4,16
 178934,Toninho Wandscheer,PP,PR,6,1
 178937,Altineu Côrtes,PL,RJ,5,276
 178943,Marcos Soares,PSDB,RJ,3,0
@@ -241,7 +242,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 204391,José Nelto,UNIÃO,GO,6,1
 204394,Gervásio Maia,PCdoB,PB,6,11
 204395,Pedro Lupion,REPUBLICANOS,PR,4,3
-204396,Vermelho,PL,PR,6,2
+204396,Vermelho,PL,PR,6,4
 204398,Felipe Francischini,PODE,PR,6,16
 204404,Lucas Redecker,PSD,RS,6,3
 204406,Pedro Westphalen,PP,RS,6,1
@@ -456,7 +457,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220666,Coronel Meira,PL,PE,6,5
 220667,Pedro Campos,PSB,PE,6,2
 220668,Maria Arraes,PSB,PE,6,11
-220669,Lula da Fonte,PP,PE,6,6
+220669,Lula da Fonte,PP,PE,6,7
 220670,Iza Arruda,MDB,PE,6,1
 220671,Dilvanda Faro,PT,PA,6,5
 220672,Henderson Pinto,UNIÃO,PA,5,1
@@ -468,7 +469,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220681,Fábio Macedo,PODE,MA,4,0
 220682,Tadeu Veneri,PT,PR,6,8
 220683,Beto Richa,PSDB,PR,5,4
-220684,Tião Medeiros,PP,PR,6,2
+220684,Tião Medeiros,PP,PR,6,16
 220685,Paulo Litro,UNIÃO,PR,6,0
 220686,Duarte Jr.,AVANTE,MA,6,2
 220687,Márcio Honaiser,SOLIDARIEDADE,MA,6,3

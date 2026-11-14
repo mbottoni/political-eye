@@ -83,17 +83,17 @@
     "dataset": "proposicoes",
     "year": 2025,
     "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2025.csv",
-    "size": 90195633,
-    "etag": "\"6aeeaa48-56046b1\"",
-    "last_modified": "Sat, 07 Nov 2026 04:34:16 GMT"
+    "size": 90234485,
+    "etag": "\"6af7e4e1-560de75\"",
+    "last_modified": "Sat, 14 Nov 2026 04:34:41 GMT"
   },
   "proposicoes-2026": {
     "dataset": "proposicoes",
     "year": 2026,
     "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2026.csv",
-    "size": 42597337,
-    "etag": "\"6aeea9f3-289fbd9\"",
-    "last_modified": "Sat, 07 Nov 2026 04:32:51 GMT"
+    "size": 44709237,
+    "etag": "\"6af7e497-2aa3575\"",
+    "last_modified": "Sat, 14 Nov 2026 04:33:27 GMT"
   },
   "proposicoesAutores-2015": {
     "dataset": "proposicoesAutores",
@@ -180,16 +180,16 @@
     "year": 2025,
     "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2025.csv",
     "size": 38939258,
-    "etag": "\"6aeeb65a-2522a7a\"",
-    "last_modified": "Sat, 07 Nov 2026 05:25:46 GMT"
+    "etag": "\"6af7f234-2522a7a\"",
+    "last_modified": "Sat, 14 Nov 2026 05:31:32 GMT"
   },
   "proposicoesAutores-2026": {
     "dataset": "proposicoesAutores",
     "year": 2026,
     "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2026.csv",
-    "size": 15343438,
-    "etag": "\"6aeeb671-ea1f4e\"",
-    "last_modified": "Sat, 07 Nov 2026 05:26:09 GMT"
+    "size": 16092376,
+    "etag": "\"6af7f24d-f58cd8\"",
+    "last_modified": "Sat, 14 Nov 2026 05:31:57 GMT"
   },
   "votacoes-2015": {
     "dataset": "votacoes",
@@ -275,17 +275,17 @@
     "dataset": "votacoes",
     "year": 2025,
     "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2025.csv",
-    "size": 8765235,
-    "etag": "\"6aeeca8e-85bf33\"",
-    "last_modified": "Sat, 07 Nov 2026 06:51:58 GMT"
+    "size": 8764929,
+    "etag": "\"6af8053a-85be01\"",
+    "last_modified": "Sat, 14 Nov 2026 06:52:42 GMT"
   },
   "votacoes-2026": {
     "dataset": "votacoes",
     "year": 2026,
     "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2026.csv",
-    "size": 4877550,
-    "etag": "\"6aeeca5e-4a6cee\"",
-    "last_modified": "Sat, 07 Nov 2026 06:51:10 GMT"
+    "size": 5190275,
+    "etag": "\"6af804c0-4f3283\"",
+    "last_modified": "Sat, 14 Nov 2026 06:50:40 GMT"
   },
   "votacoesOrientacoes-2015": {
     "dataset": "votacoesOrientacoes",
@@ -372,16 +372,16 @@
     "year": 2025,
     "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2025.csv",
     "size": 1095383,
-    "etag": "\"6aeecdfd-10b6d7\"",
-    "last_modified": "Sat, 07 Nov 2026 07:06:37 GMT"
+    "etag": "\"6af807f5-10b6d7\"",
+    "last_modified": "Sat, 14 Nov 2026 07:04:21 GMT"
   },
   "votacoesOrientacoes-2026": {
     "dataset": "votacoesOrientacoes",
     "year": 2026,
     "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2026.csv",
     "size": 453882,
-    "etag": "\"6aeecd16-6ecfa\"",
-    "last_modified": "Sat, 07 Nov 2026 07:02:46 GMT"
+    "etag": "\"6af80772-6ecfa\"",
+    "last_modified": "Sat, 14 Nov 2026 07:02:10 GMT"
   },
   "votacoesVotos-2015": {
     "dataset": "votacoesVotos",
@@ -468,15 +468,15 @@
     "year": 2025,
     "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2025.csv",
     "size": 58233239,
-    "etag": "\"6aeecc44-3789197\"",
-    "last_modified": "Sat, 07 Nov 2026 06:59:16 GMT"
+    "etag": "\"6af807bc-3789197\"",
+    "last_modified": "Sat, 14 Nov 2026 07:03:24 GMT"
   },
   "votacoesVotos-2026": {
     "dataset": "votacoesVotos",
     "year": 2026,
     "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv",
     "size": 17665811,
-    "etag": "\"6aeecb87-10d8f13\"",
-    "last_modified": "Sat, 07 Nov 2026 06:56:07 GMT"
+    "etag": "\"6af80692-10d8f13\"",
+    "last_modified": "Sat, 14 Nov 2026 06:58:26 GMT"
   }
 }

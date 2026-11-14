@@ -77,11 +77,13 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 123086,Átila Lira,PP,PI,17,6
 123756,Antônia Lúcia,MDB,AC,21,2
 128760,Paulo Marinho Jr,PL,MA,22,3
+131567,JOSE BONIFACIO,,,0,6
 133439,André Figueiredo,PDT,CE,24,18
 133810,Marcelo Moraes,PL,RS,20,4
 136811,Afonso Hamm,PP,RS,18,6
 137070,Vicentinho Júnior,PSDB,TO,22,1
 139285,Lídice da Mata,PSB,BA,23,28
+141388,Antonio José Medeiros,,,0,7
 141391,Arnaldo Jardim,CIDADANIA,SP,15,16
 141398,Carlos Zarattini,PT,SP,21,8
 141408,Cleber Verde,MDB,MA,23,7
@@ -126,7 +128,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 160553,Antonio Brito,PSD,BA,12,13
 160556,Padre João,PT,MG,22,15
 160558,Paulo Freire Costa,PL,SP,23,4
-160559,Alceu Moreira,MDB,RS,24,8
+160559,Alceu Moreira,MDB,RS,24,11
 160561,Missionário José Olimpio,PL,SP,23,5
 160569,Waldenor Pereira,PT,BA,22,10
 160575,Erika Kokay,PT,DF,24,35
@@ -240,7 +242,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 204390,Professor Alcides,PSDB,GO,20,20
 204391,José Nelto,UNIÃO,GO,15,5
 204394,Gervásio Maia,PCdoB,PB,24,13
-204395,Pedro Lupion,REPUBLICANOS,PR,16,22
+204395,Pedro Lupion,REPUBLICANOS,PR,16,27
 204396,Vermelho,PL,PR,21,6
 204398,Felipe Francischini,PODE,PR,24,24
 204404,Lucas Redecker,PSD,RS,23,9
@@ -265,7 +267,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 204449,Nelson Barbudo,PODE,MT,22,5
 204450,Doutor Luizinho,PP,RJ,6,22
 204453,Natália Bonavides,PT,RN,23,8
-204455,Luiz Lima,NOVO,RJ,23,35
+204455,Luiz Lima,NOVO,RJ,23,36
 204456,Gutemberg Reis,MDB,RJ,24,2
 204457,Juninho do Pneu,PSDB,RJ,23,1
 204459,Daniela do Waguinho,REPUBLICANOS,RJ,23,12
@@ -296,7 +298,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 204511,David Soares,PODE,SP,20,7
 204512,Delegado Marcelo Freitas,UNIÃO,MG,23,6
 204515,André Janones,REDE,MG,23,2
-204517,Zé Vitor,PL,MG,17,7
+204517,Zé Vitor,PL,MG,17,8
 204518,Dr. Frederico,PL,MG,22,14
 204520,Junio Amaral,PL,MG,23,19
 204524,Pinheirinho,PP,MG,11,6
@@ -314,7 +316,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 204549,AJ Albuquerque,PP,CE,18,4
 204550,Júnior Mano,PSB,CE,10,2
 204553,Pastor Sargento Isidório,AVANTE,BA,24,11
-204557,Sidney Leite,PSD,AM,19,6
+204557,Sidney Leite,PSD,AM,19,8
 204558,Marcelo Nilo,REPUBLICANOS,BA,23,0
 204559,Zé Neto,PT,BA,20,5
 204560,Adolfo Viana,PSDB,BA,16,38
@@ -397,7 +399,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220602,Dimas Gadelha,PT,RJ,23,5
 220603,Dani Cunha,PL,RJ,21,2
 220604,Marcos Tavares,PDT,RJ,21,18
-220605,Bandeira de Mello,PV,RJ,24,1
+220605,Bandeira de Mello,PV,RJ,24,2
 220606,Reimont,PT,RJ,24,26
 220607,Max Lemos,UNIÃO,RJ,24,11
 220608,Cristiane Lopes,PODE,RO,23,5
@@ -472,14 +474,14 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220686,Duarte Jr.,AVANTE,MA,24,5
 220687,Márcio Honaiser,SOLIDARIEDADE,MA,22,9
 220688,Dr. Francisco,PT,PI,23,5
-220690,Capitão Alden,PL,BA,23,69
+220690,Capitão Alden,PL,BA,23,72
 220691,Diego Coronel,REPUBLICANOS,BA,24,10
 220692,Dal Barreto,UNIÃO,BA,22,1
 220693,Roberta Roma,PL,BA,18,8
 220694,Ricardo Maia,MDB,BA,20,0
 220695,Rogéria Santos,REPUBLICANOS,BA,19,90
 220696,Ivoneide Caetano,PT,BA,23,14
-220697,Jadyel Alencar,REPUBLICANOS,PI,20,17
+220697,Jadyel Alencar,REPUBLICANOS,PI,20,18
 220698,Beto Preto,PSD,PR,17,11
 220699,Castro Neto,MDB,PI,20,8
 220700,Florentino Neto,PT,PI,22,3

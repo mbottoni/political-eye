@@ -2,32 +2,36 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 62881,Danilo Forte,PP,CE,4,3
 66385,Julio Arcoverde,PP,PI,3,0
 66828,Fausto Pinato,UNIÃO,SP,5,8
-69871,Bacelar,PV,BA,5,6
+69871,Bacelar,PV,BA,5,7
 72442,Felipe Carreras,PSB,PE,5,2
-73433,Arlindo Chinaglia,PT,SP,1,11
+73433,Arlindo Chinaglia,PT,SP,1,12
 73441,Celso Russomanno,REPUBLICANOS,SP,3,2
+73483,Luis Carlos Heinze,,,0,3
 73486,Pompeo de Mattos,PDT,RS,4,9
 73579,Alberto Fraga,PL,DF,5,11
-73604,Rui Falcão,PT,SP,3,2
+73604,Rui Falcão,PT,SP,3,5
+73653,Wellington Fagundes,,,0,1
 73692,Osmar Terra,PL,RS,5,4
-73701,Benedita da Silva,PT,RJ,5,5
+73701,Benedita da Silva,PT,RJ,5,6
 73768,Dilceu Sperafico,PP,PR,4,10
 73778,Luiz Carlos Hauly,PODE,PR,5,7
 73788,Ricardo Barros,PP,PR,5,3
-73801,Renildo Calheiros,PCdoB,PE,3,10
+73801,Renildo Calheiros,PCdoB,PE,3,11
 73806,Roseana Sarney,MDB,MA,3,2
 73808,Sérgio Brito,PSD,BA,5,0
-74041,Luiz Couto,PT,PB,5,7
+73924,Davi Alcolumbre,,,0,1
+74041,Luiz Couto,PT,PB,5,8
 74043,Wellington Roberto,PSD,PB,1,0
-74057,Alice Portugal,PCdoB,BA,4,7
-74060,Daniel Almeida,PCdoB,BA,5,8
+74057,Alice Portugal,PCdoB,BA,4,8
+74060,Daniel Almeida,PCdoB,BA,5,9
 74075,Elcione Barbalho,MDB,PA,1,1
 74084,Raimundo Santos,PSD,PA,5,11
 74090,Átila Lins,PSD,AM,3,2
+74131,João Carlos Bacelar,,,0,6
 74140,José Carlos Araújo,DC,BA,4,0
-74156,Leonardo Monteiro,PT,MG,3,3
+74156,Leonardo Monteiro,PT,MG,3,4
 74158,Mário Heringer,PDT,MG,5,0
-74160,Patrus Ananias,PT,MG,2,5
+74160,Patrus Ananias,PT,MG,2,6
 74161,Reginaldo Lopes,PT,MG,0,4
 74171,Chico Alencar,PSOL,RJ,5,10
 74253,Julio Lopes,PP,RJ,3,9
@@ -37,11 +41,11 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 74295,Inácio Arruda,PCdoB,CE,5,1
 74317,Júlio Cesar,PSD,PI,4,2
 74356,Silas Câmara,REPUBLICANOS,AM,3,0
-74371,Rubens Otoni,PT,GO,4,3
+74371,Rubens Otoni,PT,GO,4,4
 74374,Geraldo Resende,UNIÃO,MS,5,21
-74376,Vander Loubet,PT,MS,4,8
-74398,Maria do Rosário,PT,RS,3,12
-74400,Paulo Pimenta,PT,RS,5,11
+74376,Vander Loubet,PT,MS,4,9
+74398,Maria do Rosário,PT,RS,3,13
+74400,Paulo Pimenta,PT,RS,5,13
 74428,Mendonça Filho,PL,PE,4,1
 74454,Eunício Oliveira,MDB,CE,1,0
 74467,Damião Feliciano,UNIÃO,PB,2,0
@@ -52,9 +56,9 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 74585,Lincoln Portela,PL,MG,5,3
 74646,Aécio Neves,PSDB,MG,3,0
 74784,Luiza Erundina,PSOL,SP,5,2
-74848,Jandira Feghali,PCdoB,RJ,5,5
+74848,Jandira Feghali,PCdoB,RJ,5,6
 74856,Laura Carneiro,PSD,RJ,3,102
-74858,Lindbergh Farias,PT,RJ,5,9
+74858,Lindbergh Farias,PT,RJ,5,10
 81055,Márcio Jerry,PCdoB,MA,5,3
 88256,Clodoaldo Magalhães,PV,PE,5,4
 91228,Waldemar Oliveira,AVANTE,PE,4,9
@@ -62,10 +66,10 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 92699,Fernando Monteiro,PSD,PE,5,3
 92776,Stefano Aguiar,PSD,MG,4,1
 98057,Lafayette de Andrada,PL,MG,0,11
-98148,Cobalchini,MDB,SC,2,4
+98148,Cobalchini,MDB,SC,2,8
 98615,Ismael,PL,SC,5,8
 104552,Socorro Neri,PP,AC,5,7
-107283,Gleisi Hoffmann,PT,PR,4,2
+107283,Gleisi Hoffmann,PT,PR,4,3
 107970,Ana Paula Leão,PP,MG,3,2
 109429,Benes Leocádio,UNIÃO,RN,5,6
 115200,Raniery Paulino,REPUBLICANOS,PB,4,6
@@ -75,33 +79,37 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 122974,Pedro Lucas Fernandes,UNIÃO,MA,2,5
 123086,Átila Lira,PP,PI,5,0
 123756,Antônia Lúcia,MDB,AC,5,2
+131097,PAULO MONTANS,,,0,1
 133439,André Figueiredo,PDT,CE,5,15
 133810,Marcelo Moraes,PL,RS,4,1
-136811,Afonso Hamm,PP,RS,4,5
+133917,EDUARDO BRAGA,,,0,1
+136811,Afonso Hamm,PP,RS,4,25
 137070,Vicentinho Júnior,PSDB,TO,4,2
 139285,Lídice da Mata,PSB,BA,0,9
-141391,Arnaldo Jardim,CIDADANIA,SP,3,2
-141398,Carlos Zarattini,PT,SP,5,4
+139346,RENAN CALHEIROS,,,0,2
+141391,Arnaldo Jardim,CIDADANIA,SP,3,6
+141398,Carlos Zarattini,PT,SP,5,5
 141408,Cleber Verde,MDB,MA,2,21
 141411,Dagoberto Nogueira,PP,MS,4,1
 141421,Eduardo da Fonte,PP,PE,2,3
 141431,Fernando Coelho Filho,UNIÃO,PE,3,0
 141450,Hugo Leal,PSD,RJ,1,18
-141456,Jilmar Tatto,PT,SP,4,5
-141458,João Carlos Bacelar,PL,BA,2,2
+141456,Jilmar Tatto,PT,SP,4,6
+141458,João Carlos Bacelar,PL,BA,2,5
 141459,João Maia,PP,RN,3,1
-141464,José Airton Félix Cirilo,PT,CE,1,3
+141464,José Airton Félix Cirilo,PT,CE,1,4
 141485,Luiz Carlos Busato,UNIÃO,RS,4,2
 141487,Luiz Fernando Faria,UNIÃO,MG,3,0
-141488,Paulo Teixeira,PT,SP,5,9
+141488,Paulo Teixeira,PT,SP,5,10
 141516,Paulo Abi-Ackel,PSDB,MG,4,1
 141518,Paulinho da Força,SOLIDARIEDADE,SP,3,0
 141531,Rodrigo de Castro,UNIÃO,MG,5,0
-141533,Rodrigo Rollemberg,PSB,DF,5,12
-141555,Vinicius Carvalho,PL,SP,5,17
+141533,Rodrigo Rollemberg,PSB,DF,5,14
+141535,Rogério Marinho,,,0,1
+141555,Vinicius Carvalho,PL,SP,5,19
 143084,Tiago Dimas,PODE,TO,5,0
 143632,Domingos Neto,PSD,CE,3,6
-150418,Márcio Marinho,REPUBLICANOS,BA,2,10
+150418,Márcio Marinho,REPUBLICANOS,BA,2,14
 152605,Glauber Braga,PSOL,RJ,5,0
 153423,Renilce Nicodemos,MDB,PA,5,5
 154178,Milton Vieira,REPUBLICANOS,SP,4,2
@@ -109,79 +117,80 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 156190,Marcel van Hattem,NOVO,RS,5,9
 157130,Túlio Gadêlha,PSD,PE,2,7
 160161,Marcelo Queiroz,PSDB,RJ,4,5
-160508,Afonso Florence,PT,BA,1,2
+160508,Afonso Florence,PT,BA,1,3
 160510,Luis Tibé,AVANTE,MG,2,2
 160512,Aureo Ribeiro,SOLIDARIEDADE,RJ,5,13
 160517,Paulo Folletto,PSB,ES,5,3
 160518,Weliton Prado,PSD,MG,3,1
 160527,Aguinaldo Ribeiro,PP,PB,3,2
-160535,Marcon,PT,RS,5,2
-160538,Bohn Gass,PT,RS,5,3
+160535,Marcon,PT,RS,5,3
+160538,Bohn Gass,PT,RS,5,4
 160545,Alexandre Leite,UNIÃO,SP,4,0
 160548,Jonas Donizette,PSB,SP,4,19
 160552,Danrlei de Deus Hinterholz,PSD,RS,4,0
 160553,Antonio Brito,PSD,BA,1,40
-160556,Padre João,PT,MG,5,9
+160556,Padre João,PT,MG,5,12
 160558,Paulo Freire Costa,PL,SP,4,1
-160559,Alceu Moreira,MDB,RS,5,6
+160559,Alceu Moreira,MDB,RS,5,8
 160561,Missionário José Olimpio,PL,SP,5,3
-160569,Waldenor Pereira,PT,BA,4,3
-160575,Erika Kokay,PT,DF,5,13
+160569,Waldenor Pereira,PT,BA,4,4
+160575,Erika Kokay,PT,DF,5,14
 160588,Diego Andrade,PSD,MG,3,0
 160591,Vinicius Gurgel,PL,AP,5,1
-160592,Zeca Dirceu,PT,PR,3,4
+160592,Zeca Dirceu,PT,PR,3,5
 160598,Flávia Morais,MDB,GO,4,12
 160599,Dimas Fabiano,PP,MG,5,0
 160600,Arthur Oliveira Maia,UNIÃO,BA,4,1
 160601,Pr. Marco Feliciano,PL,SP,5,3
-160604,Pedro Uczai,PT,SC,0,34
-160610,Valmir Assunção,PT,BA,2,3
+160604,Pedro Uczai,PT,SC,0,35
+160610,Valmir Assunção,PT,BA,2,4
 160621,Sandro Alex,PSD,PR,4,0
 160632,Zé Silva,UNIÃO,MG,5,2
 160635,Ruy Carneiro,PODE,PB,0,1
 160640,Eros Biondini,PL,MG,2,7
 160641,Professora Marcivania,PCdoB,AP,3,2
 160642,Pastor Eurico,PSDB,PE,5,3
-160665,Augusto Coutinho,REPUBLICANOS,PE,5,14
+160665,Augusto Coutinho,REPUBLICANOS,PE,5,16
 160666,Félix Mendonça Júnior,PDT,BA,5,12
 160673,Giovani Cherini,PL,RS,5,2
 160674,Hugo Motta,REPUBLICANOS,PB,5,0
 160758,Domingos Sávio,PL,MG,5,5
 160976,Tiririca,PSD,SP,4,0
-161440,Pezenti,MDB,SC,4,5
+161440,Pezenti,MDB,SC,4,7
 161550,Emidinho Madeira,PL,MG,5,1
-162067,Kiko Celeguim,PT,SP,5,12
+162067,Kiko Celeguim,PT,SP,5,13
 162332,Luiz Nishimori,PSD,PR,3,5
 165470,Rodrigo Valadares,PL,SE,5,4
 166402,Magda Mofatto,PL,GO,5,0
 171623,Fabio Reis,PSD,SE,5,0
-171786,Miguel Ângelo,PT,MG,2,4
+171786,Miguel Ângelo,PT,MG,2,5
 175765,Ribamar Silva,PODE,SP,2,7
 178829,Capitão Augusto,PL,SP,5,8
 178831,André Abdon,PP,AP,4,1
 178832,Leandre,PSD,PR,4,1
 178835,Afonso Motta,PDT,RS,1,2
 178843,Marx Beltrão,UNIÃO,AL,5,2
-178857,Jorge Solla,PT,BA,5,8
+178857,Jorge Solla,PT,BA,5,9
 178858,Mário Negromonte Jr.,PSB,BA,4,0
 178860,Paulo Azi,UNIÃO,BA,1,0
 178866,Luizianne Lins,REDE,CE,4,1
-178871,Evair Vieira de Melo,REPUBLICANOS,ES,3,15
-178873,Helder Salomão,PT,ES,5,15
-178876,Célio Silveira,MDB,GO,5,2
+178871,Evair Vieira de Melo,REPUBLICANOS,ES,3,17
+178873,Helder Salomão,PT,ES,5,16
+178876,Célio Silveira,MDB,GO,5,10
 178881,Aluisio Mendes,REPUBLICANOS,MA,3,5
 178882,André Fufuca,PP,MA,1,1
 178886,Juscelino Filho,PSDB,MA,5,0
 178887,Rubens Pereira Júnior,PT,MA,4,6
 178895,Misael Varella,PSD,MG,1,1
 178896,Newton Cardoso Jr,MDB,MG,3,1
+178901,Tereza Cristina,,,0,2
 178905,Fabio Garcia,UNIÃO,MT,3,1
 178908,Delegado Éder Mauro,PL,PA,4,3
 178910,Joaquim Passarinho,PL,PA,5,2
 178929,Diego Garcia,UNIÃO,PR,3,18
 178931,Luciano Ducci,PSB,PR,5,4
-178933,Sergio Souza,MDB,PR,3,2
-178934,Toninho Wandscheer,PP,PR,4,6
+178933,Sergio Souza,MDB,PR,3,8
+178934,Toninho Wandscheer,PP,PR,4,12
 178937,Altineu Côrtes,PL,RJ,3,141
 178943,Marcos Soares,PSDB,RJ,2,1
 178945,Rosangela Gomes,REPUBLICANOS,RJ,5,0
@@ -192,12 +201,12 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 178963,Covatti Filho,PP,RS,3,2
 178964,Heitor Schuch,PSD,RS,4,11
 178966,Geovania de Sá,REPUBLICANOS,SC,4,1
-178970,João Daniel,PT,SE,4,3
+178970,João Daniel,PT,SE,4,7
 178972,Alex Manente,CIDADANIA,SP,1,14
 178975,Baleia Rossi,MDB,SP,2,1
 178983,Marcio Alvino,PL,SP,3,0
 178985,Miguel Lombardi,PL,SP,5,1
-178986,Nilto Tatto,PT,SP,4,13
+178986,Nilto Tatto,PT,SP,4,14
 178987,Orlando Silva,PCdoB,SP,5,21
 178992,Vitor Lippi,PSD,SP,3,3
 178993,Carlos Henrique Gaguim,UNIÃO,TO,3,3
@@ -205,7 +214,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 179000,Marcelo Álvaro Antônio,PL,MG,5,1
 179001,Márcio Biolchi,MDB,RS,4,2
 180214,Pastor Diniz,UNIÃO,RR,1,2
-188097,Merlong Solano,PT,PI,5,4
+188097,Merlong Solano,PT,PI,5,5
 191923,Flávio Nogueira,PT,PI,5,71
 194260,Nivaldo Albuquerque,UNIÃO,AL,4,3
 198197,Greyce Elias,PL,MG,4,5
@@ -219,7 +228,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 204361,Carlos Chiodini,MDB,SC,2,1
 204362,Ricardo Guidi,PL,SC,5,1
 204364,Eli Borges,REPUBLICANOS,TO,3,4
-204365,Gilson Marques,NOVO,SC,5,43
+204365,Gilson Marques,NOVO,SC,5,45
 204367,Daniel Freitas,PL,SC,4,6
 204368,Fabio Schiochet,UNIÃO,SC,5,4
 204369,Caroline de Toni,PL,SC,3,11
@@ -228,15 +237,15 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 204378,Coronel Chrisóstomo,PL,RO,4,1
 204379,Acácio Favacho,MDB,AP,4,4
 204387,Sargento Fahur,PL,PR,5,8
-204388,Bibo Nunes,PL,RS,5,7
+204388,Bibo Nunes,PL,RS,5,47
 204390,Professor Alcides,PSDB,GO,4,1
 204391,José Nelto,UNIÃO,GO,2,2
 204394,Gervásio Maia,PCdoB,PB,5,1
-204395,Pedro Lupion,REPUBLICANOS,PR,2,1
+204395,Pedro Lupion,REPUBLICANOS,PR,2,3
 204396,Vermelho,PL,PR,2,2
 204398,Felipe Francischini,PODE,PR,5,8
 204404,Lucas Redecker,PSD,RS,5,1
-204406,Pedro Westphalen,PP,RS,5,6
+204406,Pedro Westphalen,PP,RS,5,12
 204407,Fernanda Melchionna,PSOL,RS,5,5
 204408,Gustinho Ribeiro,PP,SE,5,2
 204409,Daniel Trzeciak,PSDB,RS,4,2
@@ -247,16 +256,16 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 204419,Glaustin da Fokus,PODE,GO,2,0
 204423,André Ferreira,PL,PE,4,0
 204425,Silvio Costa Filho,REPUBLICANOS,PE,4,0
-204426,Carlos Veras,PT,PE,5,17
+204426,Carlos Veras,PT,PE,5,18
 204427,Fernando Rodolfo,PRD,PE,4,0
 204431,Marcos Aurélio Sampaio,MDB,PI,5,0
 204436,Isnaldo Bulhões Jr.,MDB,AL,4,10
 204441,Otoni de Paula,PSD,RJ,2,0
 204444,Helio Lopes,PL,RJ,1,5
-204445,Fernando Mineiro,PT,RN,2,3
+204445,Fernando Mineiro,PT,RN,2,4
 204449,Nelson Barbudo,PODE,MT,5,1
 204450,Doutor Luizinho,PP,RJ,0,19
-204453,Natália Bonavides,PT,RN,2,3
+204453,Natália Bonavides,PT,RN,2,4
 204455,Luiz Lima,NOVO,RJ,5,16
 204456,Gutemberg Reis,MDB,RJ,3,1
 204457,Juninho do Pneu,PSDB,RJ,5,0
@@ -268,7 +277,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 204473,General Girão,PL,RN,5,3
 204474,Juarez Costa,REPUBLICANOS,MT,2,2
 204479,Nicoletti,PL,RR,0,2
-204480,Rogério Correia,PT,MG,5,3
+204480,Rogério Correia,PT,MG,5,4
 204481,Dr. Jaziel,PL,CE,4,0
 204482,Euclydes Pettersen,REPUBLICANOS,MG,4,8
 204485,Luiz Carlos Motta,PL,SP,4,2
@@ -276,13 +285,13 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 204488,Célio Studart,PSD,CE,5,1
 204489,Robério Monteiro,PSB,CE,3,0
 204491,Gilberto Abramo,REPUBLICANOS,MG,3,3
-204492,Paulo Guedes,PT,MG,5,14
+204492,Paulo Guedes,PT,MG,5,15
 204494,Fred Costa,PRD,MG,3,10
-204495,Airton Faleiro,PT,PA,5,5
+204495,Airton Faleiro,PT,PA,5,9
 204496,Celso Sabino,PDT,PA,5,7
 204497,Júnior Ferrari,PSD,PA,5,10
 204498,Olival Marques,PODE,PA,1,0
-204501,Alencar Santana,PT,SP,5,78
+204501,Alencar Santana,PT,SP,5,79
 204504,Cezinha de Madureira,PL,SP,5,17
 204506,Marcos Pereira,REPUBLICANOS,SP,1,0
 204508,Igor Timo,UNIÃO,MG,4,0
@@ -319,14 +328,14 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 205476,Charles Fernandes,PSD,BA,4,1
 205550,Jorge Braz,REPUBLICANOS,RJ,5,0
 206018,Célia Xakriabá,PSOL,MG,5,21
-209189,Joseildo Ramos,PT,BA,4,2
+209189,Joseildo Ramos,PT,BA,4,3
 209787,Nikolas Ferreira,PL,MG,5,12
 210989,Bruno Farias,REPUBLICANOS,MG,5,1
 213762,Carla Dickson,PL,RN,4,10
 214694,Jorge Goetten,REPUBLICANOS,SC,4,7
 215043,Josivaldo JP,UNIÃO,MA,4,2
 220526,Gilvan da Federal,PL,ES,4,2
-220527,Jack Rocha,PT,ES,5,11
+220527,Jack Rocha,PT,ES,5,12
 220528,Dr. Victor Linhalis,PSB,ES,3,1
 220529,Gilson Daniel,PODE,ES,4,4
 220530,Messias Donato,UNIÃO,ES,4,45
@@ -344,15 +353,15 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220545,Filipe Martins,PL,TO,5,2
 220546,Rodolfo Nogueira,PL,MS,5,3
 220547,Marcos Pollon,PL,MS,5,2
-220548,Camila Jara,PT,MS,4,3
+220548,Camila Jara,PT,MS,4,4
 220549,Any Ortiz,PP,RS,4,6
 220550,Mauricio Marcon,PL,RS,5,3
 220551,Franciane Bayer,REPUBLICANOS,RS,4,4
 220552,Zucco,PL,RS,5,1
-220553,Denise Pessôa,PT,RS,4,6
-220554,Alexandre Lindenmeyer,PT,RS,4,8
+220553,Denise Pessôa,PT,RS,4,7
+220554,Alexandre Lindenmeyer,PT,RS,4,9
 220555,Daiana Santos,PCdoB,RS,4,4
-220556,Ana Paula Lima,PT,SC,4,21
+220556,Ana Paula Lima,PT,SC,4,22
 220557,Daniela Reinehr,PL,SC,5,2
 220558,Zé Trovão,PL,SC,5,6
 220559,Julia Zanatta,PL,SC,5,24
@@ -360,14 +369,14 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220561,Delegada Katarina,PSD,SE,4,2
 220563,Icaro de Valmir,REPUBLICANOS,SE,5,2
 220564,Yandra Moura,UNIÃO,SE,3,1
-220565,Delegada Adriana Accorsi,PT,GO,2,5
+220565,Delegada Adriana Accorsi,PT,GO,2,6
 220566,Lêda Borges,REPUBLICANOS,GO,2,1
 220567,Jeferson Rodrigues,PSDB,GO,4,1
 220568,Gustavo Gayer,PL,GO,5,48
 220569,Silvye Alves,UNIÃO,GO,2,2
 220570,Dr. Ismael Alexandrino,PSD,GO,1,5
 220571,Daniel Agrobom,PSD,GO,5,6
-220572,Marussa Boldrin,REPUBLICANOS,GO,4,11
+220572,Marussa Boldrin,REPUBLICANOS,GO,4,19
 220573,Dorinaldo Malafaia,PDT,AP,4,4
 220574,Cabo Gilberto Silva,PL,PB,5,43
 220578,Josenildo,PDT,AP,5,1
@@ -390,7 +399,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220603,Dani Cunha,PL,RJ,3,12
 220604,Marcos Tavares,PDT,RJ,4,2
 220605,Bandeira de Mello,PV,RJ,5,1
-220606,Reimont,PT,RJ,4,15
+220606,Reimont,PT,RJ,4,16
 220607,Max Lemos,UNIÃO,RJ,3,1
 220608,Cristiane Lopes,PODE,RO,0,1
 220609,Maurício Carvalho,UNIÃO,RO,2,1
@@ -408,17 +417,17 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220623,Duda Salabert,PSOL,MG,5,8
 220624,Robinson Faria,PP,RN,3,1
 220625,Delegada Ione,PL,MG,5,15
-220626,Rafael Simoes,UNIÃO,MG,5,4
+220626,Rafael Simoes,UNIÃO,MG,5,5
 220628,Mauricio do Vôlei,PL,MG,4,3
-220629,Dandara,PT,MG,2,5
+220629,Dandara,PT,MG,2,6
 220630,Pedro Aihara,PP,MG,5,0
 220631,Samuel Viana,UNIÃO,MG,5,0
-220632,Ana Pimentel,PT,MG,5,5
+220632,Ana Pimentel,PT,MG,5,6
 220633,Ricardo Salles,NOVO,SP,1,1
 220635,Bruno Ganem,PODE,SP,5,7
 220637,Marina Silva,REDE,SP,1,1
 220638,Antonio Carlos Rodrigues,PODE,SP,5,3
-220640,Juliana Cardoso,PT,SP,5,21
+220640,Juliana Cardoso,PT,SP,5,22
 220641,Rodrigo Gambale,PODE,SP,1,5
 220642,Delegado Bruno Lima,PODE,SP,5,3
 220643,Sônia Guajajara,PSOL,SP,4,3
@@ -432,7 +441,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220651,Simone Marquetto,PP,SP,4,1
 220652,Delegado Palumbo,PODE,SP,5,1
 220653,Fábio Teruel,MDB,SP,4,0
-220654,Delegado Paulo Bilynskyj,PL,SP,4,2
+220654,Delegado Paulo Bilynskyj,PL,SP,4,4
 220655,Mario Frias,PL,SP,5,1
 220656,Fernanda Pessoa,PSD,CE,5,2
 220657,André Fernandes,PL,CE,3,0
@@ -447,7 +456,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220668,Maria Arraes,PSB,PE,4,12
 220669,Lula da Fonte,PP,PE,5,3
 220670,Iza Arruda,MDB,PE,5,0
-220671,Dilvanda Faro,PT,PA,1,6
+220671,Dilvanda Faro,PT,PA,1,7
 220672,Henderson Pinto,UNIÃO,PA,5,3
 220673,Delegado Caveira,PL,PA,3,13
 220674,Dra. Alessandra Haber,PODE,PA,3,1
@@ -455,13 +464,13 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220676,Andreia Siqueira,PSB,PA,5,4
 220677,Keniston Braga,MDB,PA,5,1
 220681,Fábio Macedo,PODE,MA,2,0
-220682,Tadeu Veneri,PT,PR,5,4
+220682,Tadeu Veneri,PT,PR,5,5
 220683,Beto Richa,PSDB,PR,5,4
-220684,Tião Medeiros,PP,PR,4,2
+220684,Tião Medeiros,PP,PR,4,6
 220685,Paulo Litro,UNIÃO,PR,4,1
 220686,Duarte Jr.,AVANTE,MA,3,1
 220687,Márcio Honaiser,SOLIDARIEDADE,MA,4,13
-220688,Dr. Francisco,PT,PI,4,4
+220688,Dr. Francisco,PT,PI,4,5
 220689,Detinha,PL,MA,4,1
 220690,Capitão Alden,PL,BA,5,51
 220691,Diego Coronel,REPUBLICANOS,BA,4,2
@@ -469,36 +478,36 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220693,Roberta Roma,PL,BA,2,2
 220694,Ricardo Maia,MDB,BA,5,1
 220695,Rogéria Santos,REPUBLICANOS,BA,5,80
-220696,Ivoneide Caetano,PT,BA,4,3
+220696,Ivoneide Caetano,PT,BA,4,4
 220697,Jadyel Alencar,REPUBLICANOS,PI,5,6
 220698,Beto Preto,PSD,PR,4,6
 220699,Castro Neto,MDB,PI,2,2
-220700,Florentino Neto,PT,PI,5,2
+220700,Florentino Neto,PT,PI,5,3
 220701,Delegado Matheus Laiola,UNIÃO,PR,5,1
 220702,Geraldo Mendes,UNIÃO,PR,4,0
 220703,Neto Carletto,AVANTE,BA,1,0
-220704,Carol Dartora,PT,PR,4,7
+220704,Carol Dartora,PT,PR,4,8
 220707,Amanda Gentil,PP,MA,4,1
 220708,Gabriel Nunes,PSD,BA,5,0
 220712,Fausto Jr.,UNIÃO,AM,5,3
 220713,Saullo Vianna,MDB,AM,4,1
 220714,Adail Filho,MDB,AM,4,0
 220715,Amom Mandel,REPUBLICANOS,AM,2,6
-221148,Alfredinho,PT,SP,5,4
+221148,Alfredinho,PT,SP,5,5
 221328,Adilson Barroso,PL,SP,1,3
 221329,Ricardo Abrão,PSDB,RJ,4,6
 221338,Professora Luciene Cavalcante,PSOL,SP,4,5
 224117,Gabriel Mota,UNIÃO,RR,5,1
-224333,Welter,PT,PR,5,3
+224333,Welter,PT,PR,5,4
 225846,Itamar Paim,PL,PR,5,1
 226075,Priscila Costa,PL,CE,1,0
 226837,Saulo Pedroso,PSD,SP,1,0
 227991,Dr Flávio,PL,RJ,5,2
-230765,Enfermeira Rejane,PCdoB,RJ,4,6
-230767,Rodrigo da Zaeli,PL,MT,5,9
+230765,Enfermeira Rejane,PCdoB,RJ,4,7
+230767,Rodrigo da Zaeli,PL,MT,5,15
 230768,Zé Adriano,PP,AC,5,9
 230957,João Cury,MDB,SP,2,0
-233592,Paulo Lemos,PT,AP,5,2
+233592,Paulo Lemos,PT,AP,5,3
 233594,Rafael Fera,PODE,RO,4,5
 235800,Jorge Araújo,PP,BA,4,10
 236284,Glaycon Franco,PSDB,MG,4,2

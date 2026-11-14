@@ -98,7 +98,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 141518,Paulinho da Força,SOLIDARIEDADE,SP,2,0
 141531,Rodrigo de Castro,UNIÃO,MG,3,2
 141533,Rodrigo Rollemberg,PSB,DF,3,0
-141555,Vinicius Carvalho,PL,SP,2,3
+141555,Vinicius Carvalho,PL,SP,2,7
 143084,Tiago Dimas,PODE,TO,3,0
 143632,Domingos Neto,PSD,CE,3,0
 150418,Márcio Marinho,REPUBLICANOS,BA,2,0
@@ -124,7 +124,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 160553,Antonio Brito,PSD,BA,1,1
 160556,Padre João,PT,MG,2,5
 160558,Paulo Freire Costa,PL,SP,3,0
-160559,Alceu Moreira,MDB,RS,3,11
+160559,Alceu Moreira,MDB,RS,3,12
 160561,Missionário José Olimpio,PL,SP,2,1
 160569,Waldenor Pereira,PT,BA,2,0
 160575,Erika Kokay,PT,DF,3,5
@@ -268,7 +268,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 204462,Chris Tonietto,PL,RJ,3,4
 204464,Talíria Petrone,PSOL,RJ,3,7
 204472,José Medeiros,PL,MT,1,9
-204473,General Girão,PL,RN,3,14
+204473,General Girão,PL,RN,3,16
 204474,Juarez Costa,REPUBLICANOS,MT,2,1
 204479,Nicoletti,PL,RR,2,0
 204480,Rogério Correia,PT,MG,3,4
@@ -387,7 +387,7 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220591,Meire Serafim,UNIÃO,AC,2,0
 220592,Zezinho Barbary,PP,AC,2,0
 220594,Coronel Assis,PL,MT,1,1
-220595,Coronel Fernanda,PL,MT,3,0
+220595,Coronel Fernanda,PL,MT,3,1
 220597,Thiago Flores,UNIÃO,RO,3,1
 220598,Tarcísio Motta,PSOL,RJ,2,7
 220599,Marcelo Crivella,REPUBLICANOS,RJ,3,5
@@ -416,11 +416,11 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220626,Rafael Simoes,UNIÃO,MG,2,1
 220628,Mauricio do Vôlei,PL,MG,2,0
 220629,Dandara,PT,MG,3,0
-220630,Pedro Aihara,PP,MG,3,0
+220630,Pedro Aihara,PP,MG,3,1
 220631,Samuel Viana,UNIÃO,MG,3,1
 220632,Ana Pimentel,PT,MG,3,0
 220633,Ricardo Salles,NOVO,SP,2,0
-220635,Bruno Ganem,PODE,SP,3,2
+220635,Bruno Ganem,PODE,SP,3,3
 220637,Marina Silva,REDE,SP,2,0
 220638,Antonio Carlos Rodrigues,PODE,SP,3,0
 220640,Juliana Cardoso,PT,SP,3,8
@@ -469,14 +469,14 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 220687,Márcio Honaiser,SOLIDARIEDADE,MA,3,0
 220688,Dr. Francisco,PT,PI,3,0
 220689,Detinha,PL,MA,3,0
-220690,Capitão Alden,PL,BA,2,19
+220690,Capitão Alden,PL,BA,2,20
 220691,Diego Coronel,REPUBLICANOS,BA,3,0
 220692,Dal Barreto,UNIÃO,BA,3,0
 220694,Ricardo Maia,MDB,BA,3,0
 220695,Rogéria Santos,REPUBLICANOS,BA,3,45
 220696,Ivoneide Caetano,PT,BA,2,0
 220697,Jadyel Alencar,REPUBLICANOS,PI,3,6
-220698,Beto Preto,PSD,PR,3,3
+220698,Beto Preto,PSD,PR,3,8
 220699,Castro Neto,MDB,PI,1,0
 220700,Florentino Neto,PT,PI,3,0
 220701,Delegado Matheus Laiola,UNIÃO,PR,3,2
@@ -506,6 +506,6 @@ deputado_id,nome,partido,uf,n_votes,n_authored
 233594,Rafael Fera,PODE,RO,1,0
 235800,Jorge Araújo,PP,BA,3,3
 236284,Glaycon Franco,PSDB,MG,3,1
-236375,Marcos Braz,PSDB,RJ,2,4
+236375,Marcos Braz,PSDB,RJ,2,9
 236423,Valdir Trindade,REPUBLICANOS,PB,2,7
 236518,Santin Roveda,UNIÃO,PR,0,1

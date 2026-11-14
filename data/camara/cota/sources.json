@@ -37,14 +37,14 @@
   },
   "cota-2025": {
     "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
-    "size": 6901269,
-    "etag": "\"6af0174b-694e15\"",
-    "last_modified": "Sun, 08 Nov 2026 06:31:39 GMT"
+    "size": 6933130,
+    "etag": "\"6af80192-69ca8a\"",
+    "last_modified": "Sat, 14 Nov 2026 06:37:06 GMT"
   },
   "cota-2026": {
     "url": "https://www.camara.leg.br/cotas/Ano-2026.csv.zip",
-    "size": 4579100,
-    "etag": "\"6af0174a-45df1c\"",
-    "last_modified": "Sun, 08 Nov 2026 06:31:38 GMT"
+    "size": 4669971,
+    "etag": "\"6af80190-474213\"",
+    "last_modified": "Sat, 14 Nov 2026 06:37:04 GMT"
   }
 }

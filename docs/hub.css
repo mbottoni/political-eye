@@ -98,6 +98,10 @@ a.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-co
 .cadence { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 550; color: var(--ink2); }
 .cadence i { width: 7px; height: 7px; border-radius: 50%; background: var(--good); }
 .cadence.hold i { background: var(--muted); }
+.cadence.late i { background: var(--warning); }
+.cadence.failed i { background: var(--warning); }
+.cadence.late .fresh, .cadence.failed .fresh { color: var(--serious); }
+.facts #stale dd { color: var(--serious); }
 .card h3 { font-size: 17px; line-height: 1.25; font-weight: 660; letter-spacing: -0.01em; margin: 0 0 10px; }
 .card .headline { margin-bottom: 10px; }
 .card .headline .num { display: block; font-size: 30px; line-height: 1.05; font-weight: 700; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }

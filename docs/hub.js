@@ -24,7 +24,7 @@ const EN = {
   rb_kicker: "Deputies ranked", rb_title: "Who works most, by what the data records, with the weights you choose",
   rb_text: "Roll-call participation, bills filed, rapporteur opinions and thrift with the office allowance, against deputies of the same state. Each criterion becomes a 0–100 score; you decide how much each counts. The ranking does not measure ideology, the quality of laws or honesty.",
   rb_go: "Build the ranking",
-  f_pages: "interactive pages", f_sources: "official sources", f_since: "data since", f_updated: "last update",
+  f_pages: "interactive pages", f_sources: "official sources", f_since: "data since", f_updated: "last update", f_stale: "sources overdue",
   swarm_title: "How the Câmara votes", swarm_others: "others", swarm_left: "← votes like PT", swarm_right: "votes like PL →",
   h_findings: "What the data shows", p_findings: "Four numbers read just now from the pages' tables. Click one to see where it comes from.",
   k_amend: "Amendments", k_campaigns: "Campaigns",
@@ -305,6 +305,53 @@ async function lastUpdate() {
   } catch { /* offline or rate-limited: leave it out */ }
 }
 
+// ------------------------------------------------------------ is each source up to date?
+
+// Each card's scheduled job, and how many days may pass since its last successful run before the card says it is
+// overdue (the schedule plus a day's slack: GitHub starts scheduled runs hours late). A run that reads nothing new
+// still succeeds, so a quiet source is not mistaken for a stuck one.
+const JOBS = {
+  camara: ["camara", 9], senado: ["senado", 9], orientacoes: ["camara-blocos", 2], deputados: ["ref", 9],
+  tse: ["tse", 9], emendas: ["emendas", 2], pncp: ["pncp", 2], siconfi: ["siconfi", 2], sancoes: ["sancoes", 2],
+};
+let runs = null;
+async function freshness() {
+  try {
+    if (!runs) {
+      const r = await fetch("https://api.github.com/repos/mbottoni/political-eye/actions/runs?event=schedule&status=completed&per_page=100");
+      if (!r.ok) return;
+      runs = (await r.json()).workflow_runs || [];
+    }
+    if (!runs.length) return;
+    const en = lang() === "en", now = Date.now(), days = (t) => (now - Date.parse(t)) / 864e5;
+    const reach = days(runs[runs.length - 1].updated_at);   // how far back the runs read go
+    const late = [];
+    for (const [key, [job, maxDays]] of Object.entries(JOBS)) {
+      const badge = document.querySelector(`[data-key="${key}"] .cadence`);
+      if (!badge) continue;
+      const mine = runs.filter((x) => x.path === `.github/workflows/${job}.yml`);
+      const ok = mine.find((x) => x.conclusion === "success");
+      if (!ok && reach <= maxDays) continue;   // no run in what was read, and it may not be due yet: say nothing
+      const overdue = !ok || days(ok.updated_at) > maxDays;
+      const failed = mine[0]?.conclusion === "failure";
+      badge.querySelector(".fresh")?.remove();
+      badge.classList.toggle("late", overdue);
+      badge.classList.toggle("failed", failed && !overdue);
+      badge.title = ok ? (en ? `Last successful run: ${date(ok.updated_at)}` : `Última execução bem-sucedida: ${date(ok.updated_at)}`)
+        : (en ? "No successful run recently" : "Nenhuma execução bem-sucedida recente");
+      if (overdue || failed) {
+        badge.append(el("span", { className: "fresh", textContent: overdue ? (en ? " · overdue" : " · atrasado") : (en ? " · last run failed" : " · última falhou") }));
+      }
+      if (overdue) late.push(badge.closest(".card")?.querySelector("h3")?.textContent || key);
+    }
+    const box = document.querySelector("#stale");
+    box.querySelector("dd").textContent = num(late.length);
+    box.querySelector("dt").textContent = late.length === 1 ? (en ? "source overdue" : "fonte atrasada") : (en ? "sources overdue" : "fontes atrasadas");
+    box.title = late.join(", ");
+    box.hidden = !late.length;
+  } catch { /* offline or rate-limited: leave the badges as they are */ }
+}
+
 // ------------------------------------------------------------ find a deputy
 
 const profileHref = (d) => `deputados/?tab=profile&leg=${d.leg}&dep=${d.id}`;
@@ -336,6 +383,7 @@ function render() {
   redFlags().catch((e) => console.warn("hub red flags:", e));
   ranking().catch((e) => console.warn("hub ranking:", e));
   lastUpdate();
+  freshness();
 }
 
 document.querySelector("#lang-slot").replaceWith(langSwitch());

@@ -29,7 +29,7 @@ import pandas as pd
 
 from .common import csv, write_json
 from .deputados import party_in
-from .pncp import plausible, town_revenue
+from .pncp import plausible, read_sanctioned, town_revenue
 
 # Sanctions that bar contracting: the same rule as politicaleye.pncp.build.BARS.
 BARS = re.compile(r"^(Impedimento|Declaração de Inidoneidade|Suspensão$)")
@@ -364,7 +364,7 @@ def build(data: Path) -> dict:
     # Contracts: the PNCP's large contracts of these companies, and every contract signed while barred.
     big = [pd.read_csv(p, dtype=str, keep_default_na=False) for p in sorted((data / "pncp" / "contratos").glob("*.csv"))]
     big = pd.concat(big, ignore_index=True) if big else pd.DataFrame()
-    sanc_c = _read(data / "pncp" / "contratos_sancionados.csv")
+    sanc_c = read_sanctioned(data / "pncp")
     rcl = town_revenue(data)
     if len(sanc_c):   # the contracts page's typo rules (methodology/pncp.md#implausible-values); values left out there are left out here
         sanc_c = plausible(sanc_c, rcl).query("suspeito != 2")

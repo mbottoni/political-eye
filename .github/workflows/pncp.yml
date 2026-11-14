@@ -62,6 +62,12 @@ jobs:
             echo "No data changes."
             exit 0
           fi
+          # GitHub refuses a whole push if one file is over 100 MB: name it instead of losing the run to a vague error.
+          big=$(git diff --staged --name-only --diff-filter=AM -z | xargs -0 -r du -m | awk '$1 >= 95 {print $2 " (" $1 " MB)"}')
+          if [ -n "$big" ]; then
+            echo "::error::files near GitHub's 100 MB limit, split them: $big"
+            exit 1
+          fi
           n=$(git diff --staged -U0 -- data/pncp/dias.csv | grep -c '^+[0-9]' || true)
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

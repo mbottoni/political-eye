@@ -78,8 +78,7 @@ the initial value, and a contract over R$ 10 billion or over three years of the 
 
 - **Large contracts** are those of R$ 1 million or more (`data/pncp/contratos/`).
 - **Contracts with barred companies** are every contract, of any value, signed with a company under a
-  sanction that bars contracting on the signing day (`data/pncp/contratos_sancionados.csv`, or its monthly
-  files under `data/pncp/sancionados/`). A contract matched to several sanctions counts once, at the widest
+  sanction that bars contracting on the signing day (`data/pncp/sancionados/`). A contract matched to several sanctions counts once, at the widest
   reach (`cobre`): the sanction reached the buyer (`sim`), may have (`possivel`) or came from another town or
   sphere and does not bar this contract (`nao`). The profile lists those that did or may have, and counts the
   rest.
@@ -92,7 +91,7 @@ sample of the calendar, not of towns, so comparisons between towns are fair, onl
 **Names.** A supplier that is a private individual (masked CPF), an individual firm by legal nature, or whose
 name is made only of words of people's names and initials (`"P R C DUARTE"`, `"JOAO DA SILVA ME"`; the words
 come from TSE's candidate lists and the politicians crosswalk, as on the sanctions page) is shown as "name
-withheld", and its contract's object is left out with it. A corporation (`S.A.`) never is. On 2026-11-14, 1,509 of the 23,640 suppliers of
+withheld", and its contract's object is left out with it. A corporation (`S.A.`) is not. On 2026-11-14, 1,510 of the 23,640 suppliers of
 town bodies were.
 
 ## Accounts

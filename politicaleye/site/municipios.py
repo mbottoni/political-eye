@@ -51,7 +51,7 @@ from .alertas import INDIVIDUAL, PRIVATE, display
 from .common import csv, write_json
 from .deputados import party_in
 from .emendas import _people, town_codes
-from .pncp import START, contracts, plausible, town_revenue
+from .pncp import START, contracts, plausible, read_sanctioned, town_revenue
 from .sancoes import individual_firm, name_tokens
 from .siconfi import SIZES, size_class
 
@@ -113,19 +113,12 @@ def towns(data: Path) -> pd.DataFrame:
 
 def is_personal(cnpj: pd.Series, nome: pd.Series, tipo: pd.Series, natureza: pd.Series, people: set[str]) -> pd.Series:
     """A supplier whose name is a person's: a private individual (masked CPF), an individual firm by legal nature,
-    or a name made only of people's names and initials (``"P R C DUARTE"``, ``"JOAO DA SILVA ME"``)."""
+    or a name made of people's names and initials (``sancoes.individual_firm``: ``"P R C DUARTE"``)."""
     from ..ref.politicians import norm
-
-    def initials(n: str) -> bool:
-        t = [x for x in norm(n).split() if x not in {"ME", "EPP", "EIRELI", "EI", "MEI"}]
-        if "LTDA" in t:
-            return False
-        rest = [x for x in t if len(x) > 1 and x not in {"DA", "DE", "DO", "DAS", "DOS", "E"}]
-        return len(rest) < len(t) and bool(rest) and all(x in people for x in rest)
-    # A corporation ("BAYER S.A.") is never a person's firm, though "S" and "A" are also initials in people's names.
-    corporation = nome.fillna("").map(lambda n: norm(n).endswith(" S A") or norm(n).endswith(" SA"))
-    return ((tipo == "PF") | cnpj.str.contains(r"\*", regex=True) | natureza.isin(INDIVIDUAL)
-            | ((individual_firm(nome, people) | nome.fillna("").map(initials)) & ~corporation))
+    # A corporation ("BAYER S.A.") is not a person's firm, though "S" and "A" are also initials in people's names.
+    # Only "S A" as written apart: a bare "SA" may be the surname Sá.
+    corporation = nome.fillna("").map(lambda n: norm(n).endswith(" S A"))
+    return (tipo == "PF") | cnpj.str.contains(r"\*", regex=True) | natureza.isin(INDIVIDUAL) | (individual_firm(nome, people) & ~corporation)
 
 
 # ------------------------------------------------------------ amendments
@@ -239,17 +232,6 @@ def author_rows(gov: pd.DataFrame, who: pd.DataFrame, links: dict) -> dict[str, 
     return out
 
 
-# ------------------------------------------------------------ contracts
-
-
-def read_sanctioned(src: Path, cols: list[str]) -> pd.DataFrame:
-    """Contracts signed with a barred company: ``sancionados/YYYY-MM.csv``, or the single file those replace."""
-    files = sorted((src / "sancionados").glob("*.csv")) + [p for p in [src / "contratos_sancionados.csv"] if p.exists()]
-    parts = [pd.read_csv(p, dtype=str, keep_default_na=False, usecols=lambda c: c in cols) for p in files]
-    t = pd.concat(parts, ignore_index=True) if parts else pd.DataFrame(columns=cols)
-    return t.drop_duplicates(["controle", "lista", "codigo_sancao"], keep="last") if len(t) else t
-
-
 # ------------------------------------------------------------ build
 
 
@@ -307,10 +289,8 @@ def build(data: Path) -> dict:
     cm = c[(c.esfera == "M") & c.municipio_ibge.isin(codes)]
     left_out = cm[cm.suspeito == 2].groupby("municipio_ibge").size()
     cm = cm[cm.suspeito != 2]
-    scols = ["controle", "assinatura", "publicacao", "orgao", "esfera", "municipio_ibge", "fornecedor_tipo", "fornecedor", "fornecedor_nome", "objeto",
-             "valor_inicial", "valor_global", "lista", "codigo_sancao", "categoria_sancao", "orgao_sancionador", "cobre"]
-    sc = read_sanctioned(src, scols)
-    sc = sc[(sc.esfera == "M") & sc.municipio_ibge.isin(codes) & sc.cobre.isin(REACH)] if len(sc) else pd.DataFrame(columns=scols)
+    sc = read_sanctioned(src)   # every contract signed with a company barred that day, any value
+    sc = sc[(sc.esfera == "M") & sc.municipio_ibge.isin(codes) & sc.cobre.isin(REACH)]
     sc = plausible(sc, rcl)
     sc = sc[sc.suspeito != 2].assign(r=lambda t: t.cobre.map(REACH))
     sc = sc.sort_values(["controle", "r", "lista", "codigo_sancao"]).drop_duplicates("controle", keep="last")   # the widest reach per contract

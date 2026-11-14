@@ -82,10 +82,10 @@ def test_helpers():
     assert m.today("PMDB") == "MDB" and m.today("PRP") == "PRD" and m.today("DEM") == "UNIÃO" and m.today("S.PART.") == ""
     v = pd.Series([1.0, 2.0, 2.0, None, 5.0])
     assert m.percentile(v, [pd.Series(["a", "a", "a", "a", "b"])]).round(4).tolist()[:3] == [0.1667, 0.6667, 0.6667]
-    names = pd.Series(["P R C DUARTE", "JOAO DA SILVA ME", "CONSTRUTORA X LTDA", "J A COMERCIO", "DUARTE S.A.", "FULANO"])
-    hide = m.is_personal(pd.Series(["1", "2", "3", "4", "5", "***.123.456-**"]), names, pd.Series(["PJ", "PJ", "PJ", "PJ", "PJ", "PF"]),
-                         pd.Series("", index=names.index), {"DUARTE", "JOAO", "SILVA", "S", "A"})
-    assert hide.tolist() == [True, True, False, False, False, True]
+    names = pd.Series(["P R C DUARTE", "JOAO DA SILVA ME", "CONSTRUTORA X LTDA", "J A COMERCIO", "DUARTE S.A.", "JOAO DE SA", "FULANO"])
+    hide = m.is_personal(pd.Series(["1", "2", "3", "4", "5", "6", "***.123.456-**"]), names, pd.Series(["PJ", "PJ", "PJ", "PJ", "PJ", "PJ", "PF"]),
+                         pd.Series("", index=names.index), {"DUARTE", "JOAO", "SILVA", "SA", "S", "A"})
+    assert hide.tolist() == [True, True, False, False, False, True, True]
 
 
 def test_build(tmp_path):

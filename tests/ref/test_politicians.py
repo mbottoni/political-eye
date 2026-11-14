@@ -32,8 +32,12 @@ def write_inputs(root):
         2018: [["901", "ANA PAULA SOUZA", "ANA PAULA", "DEPUTADO FEDERAL", "SP", "01/01/1980"],
                ["902", "ESPERIDIÃO AMIN HELOU FILHO", "AMIN", "SENADOR", "SC", "21/12/1947"]],
         2022: [["903", "ANA PAULA SOUZA", "ANA PAULA", "DEPUTADO FEDERAL", "SP", "01/01/1980"],   # runs again
-               ["904", "ANA PAULA LIMA", "ANA PAULA", "DEPUTADO FEDERAL", "SC", ""]],             # no birth date
-        2026: [["905", "ANA PAULA SOUSA MACHADO", "ANA PAULA", "DEPUTADO FEDERAL", "SP", "01/01/1980"]],  # respelled
+               ["904", "ANA PAULA LIMA", "ANA PAULA", "DEPUTADO FEDERAL", "SC", ""],              # no birth date
+               ["910", "ANA CAROLINA REIS", "CAROL", "DEPUTADO ESTADUAL", "SP", "01/01/1980"]],   # same day, first name, state
+        2026: [["905", "ANA PAULA SOUSA MACHADO", "ANA PAULA", "DEPUTADO FEDERAL", "SP", "01/01/1980"],  # respelled
+               ["906", "ANA PAULA LIMA", "ANA PAULA", "SENADOR", "SC", "05/05/1975"],              # runs for the Senate
+               ["907", "ANA PAULA LIMA", "ANINHA", "DEPUTADO ESTADUAL", "SC", "01/01/2000"],       # a namesake
+               ["908", "ANA PAULA SOUZA", "ANA PAULA", "GOVERNADOR", "SP", "01/01/1980"]],         # switched office
     }.items():
         t = io.StringIO()
         w = csv.writer(t, delimiter=";", quoting=csv.QUOTE_ALL)
@@ -65,11 +69,16 @@ def test_crosswalk(tmp_path):
     assert who[("tse", "901")] == who[("tse", "903")] == "camara:2"          # the same person, two elections
     assert who[("tse", "904")] == "camara:3"                                   # no birth date: name + state
     assert who[("tse", "905")] == "camara:2"                                   # birth date, first name, state
+    assert who[("tse", "906")] == "camara:3"                                   # another office: name + birth date
+    assert who[("tse", "908")] == "camara:2"                                   # registered for two offices
+    assert ("tse", "907") not in who.index                                     # same name, another birth date
+    assert ("tse", "910") not in who.index                                     # no other word of the name in common
     assert ("emendas", "5000") not in who.index                                # two deputies called Ana Paula
     assert ("emendas", "7121") not in who.index                                # a bench, not a person
     assert ("camara", "4") not in who.index                                    # left before 2011
     m = x.set_index(["fonte", "id"]).metodo
     assert m[("tse", "901")] == "nome_civil+nascimento" and m[("tse", "904")] == "nome_civil+uf"
+    assert m[("tse", "906")] == "outro_cargo:nome_civil+nascimento"
     assert m[("camara", "1")] == ""
     assert r["autores_ligados"] == 2
 

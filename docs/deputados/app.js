@@ -127,10 +127,30 @@ async function profile(root) {
   root.append(el("div", { className: "controls" }, el("label", { style: "flex:1 1 360px" }, L("Encontre um deputado", "Find a deputy"), search)), out);
   const lc = local();
   const pool = D.rows.filter((x) => (x.meses || 0) >= 6);
+  const values = (k) => pool.map((x) => x[k]).filter((x) => x != null && !Number.isNaN(x));
   const rankOf = (k, v) => {
-    const xs = pool.map((x) => x[k]).filter((x) => x != null && !Number.isNaN(x));
+    const xs = values(k);
     if (v == null || Number.isNaN(v) || !xs.length) return null;
     return (xs.filter((x) => x < v).length + xs.filter((x) => x === v).length / 2) / xs.length;
+  };
+  // Where one deputy's value stands, in words, from counts of deputies strictly below and above (a tie is said
+  // outright, never counted half): "the lowest of 581", "the 3rd highest of 581", "above 37% of deputies".
+  const standing = (r, k) => {
+    const v = r[k], xs = values(k);
+    if (v == null || Number.isNaN(v)) return "";
+    const lo = xs.filter((x) => x < v).length, hi = xs.filter((x) => x > v).length;
+    const ties = xs.length - lo - hi - (pool.includes(r) ? 1 : 0), n = lo + hi + ties + 1;   // n counts the deputy, in the pool or not
+    if (n < 2) return "";
+    const tied = ties ? L(`, empatado com ${ties === 1 ? "outro" : `outros ${fmt(ties)}`}`, `, tied with ${plural(ties, "other")}`) : "";
+    const [top, bottom] = [hi + 1, lo + 1];
+    if (Math.min(top, bottom) <= 10) {
+      const nth = Math.min(top, bottom), high = top <= bottom, of = fmt(n);
+      if (nth === 1) return (high ? L(`o maior entre os ${of}`, `the highest of ${of}`) : L(`o menor entre os ${of}`, `the lowest of ${of}`)) + tied;
+      const en = `${nth}${nth === 2 ? "nd" : nth === 3 ? "rd" : "th"}`;
+      return (high ? L(`o ${nth}º maior entre os ${of}`, `the ${en} highest of ${of}`) : L(`o ${nth}º menor entre os ${of}`, `the ${en} lowest of ${of}`)) + tied;
+    }
+    const share = Math.floor((100 * lo) / n) / 100;   // rounded down: "above 98%" never overstates
+    return L(`acima de ${pct(share)} dos deputados`, `above ${pct(share)} of deputies`);
   };
   const sectionHead = (sid, text) => el("h3", { className: "dsec", id: sid, textContent: text });
   const show = async (id) => {
@@ -182,14 +202,12 @@ async function profile(root) {
     });
 
     // In short, and against everyone else
-    // Rounded down, so the very top reads "above 99%", never "above 100%".
-    const above = (k) => { const q = rankOf(k, r[k]); if (q == null) return ""; const d = Math.floor(q * 100) / 100; return L(`acima de ${pct(d)} dos deputados`, `above ${pct(d)} of deputies`); };
     tiles(box.appendChild(el("section", { className: "tiles" })), [
       { label: L("Participação nas votações nominais", "Roll-call participation"), value: pct(r.presenca),
-        sub: [above("presenca"), r.votacoes_mandato ? L(`${fmt(r.votacoes_mandato)} votações no período`, `${fmt(r.votacoes_mandato)} roll calls held`) : ""].filter(Boolean).join(" · ") },
-      { label: L("Projetos apresentados", "Bills filed"), value: fmt(r.projetos_autor), sub: [above("projetos_autor"), L("como 1º signatário", "as first signer")].filter(Boolean).join(" · ") },
-      { label: L("Votos com o governo", "Votes with the government"), value: pct(r.with_gov), sub: [above("with_gov"), vs("with_gov", pct)].filter(Boolean).join(" · ") },
-      { label: L("Emendas pagas", "Amendments paid"), value: brl(r.emendas_pago), sub: above("emendas_pago") || L("nenhuma emenda paga", "no amendment paid") },
+        sub: [standing(r, "presenca"), r.votacoes_mandato ? L(`${fmt(r.votacoes_mandato)} votações no período`, `${fmt(r.votacoes_mandato)} roll calls held`) : ""].filter(Boolean).join(" · ") },
+      { label: L("Projetos apresentados", "Bills filed"), value: fmt(r.projetos_autor), sub: [standing(r, "projetos_autor"), L("como 1º signatário", "as first signer")].filter(Boolean).join(" · ") },
+      { label: L("Votos com o governo", "Votes with the government"), value: pct(r.with_gov), sub: [standing(r, "with_gov"), vs("with_gov", pct)].filter(Boolean).join(" · ") },
+      { label: L("Emendas pagas", "Amendments paid"), value: brl(r.emendas_pago), sub: r.emendas_pago > 0 ? standing(r, "emendas_pago") : L("nenhuma emenda paga", "no amendment paid") },
     ]);
     const ranks = el("div", { className: "ranks" });
     for (const k of RANKED) {

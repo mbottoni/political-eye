@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>political-eye: Senado Federal — what changed</title>
+  <subtitle>Each month that got its first roll calls in the plenary, on the day of the first; the count grows each week until the month ends.</subtitle>
+  <id>tag:mbottoni.github.io,2026:political-eye/feeds/en/senado</id>
+  <link rel="self" type="application/atom+xml" href="https://mbottoni.github.io/political-eye/feeds/en/senado.xml"/>
+  <link rel="alternate" type="text/html" href="https://mbottoni.github.io/political-eye/mudancas/?fonte=senado&amp;lang=en"/>
+  <updated>2026-11-03T12:00:00Z</updated>
+  <author><name>political-eye</name><uri>https://github.com/mbottoni/political-eye</uri></author>
+  <entry>
+    <id>tag:mbottoni.github.io,2026:political-eye/en/senado/2026-11-03</id>
+    <title>Senado Federal, 3 Nov 2026: Roll calls of November 2026: 8</title>
+    <link rel="alternate" type="text/html" href="https://mbottoni.github.io/political-eye/mudancas/?fonte=senado&amp;dia=2026-11-03&amp;lang=en"/>
+    <published>2026-11-03T12:00:00Z</published>
+    <updated>2026-11-03T12:00:00Z</updated>
+    <category term="senado" label="Senado Federal"/>
+    <summary>Roll calls of November 2026: 8</summary>
+    <content type="html">&lt;p&gt;Roll calls of November 2026: 8&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Month with roll calls&lt;/b&gt; — November 2026: 8 roll calls, 3 Nov 2026 to 12 Nov 2026 (&lt;a href=&quot;https://mbottoni.github.io/political-eye/senado/?month=2026-11&amp;amp;lang=en&quot;&gt;see&lt;/a&gt;)&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:mbottoni.github.io,2026:political-eye/en/senado/2026-10-14</id>
+    <title>Senado Federal, 14 Oct 2026: Roll calls of October 2026: 3</title>
+    <link rel="alternate" type="text/html" href="https://mbottoni.github.io/political-eye/mudancas/?fonte=senado&amp;dia=2026-10-14&amp;lang=en"/>
+    <published>2026-10-14T12:00:00Z</published>
+    <updated>2026-10-14T12:00:00Z</updated>
+    <category term="senado" label="Senado Federal"/>
+    <summary>Roll calls of October 2026: 3</summary>
+    <content type="html">&lt;p&gt;Roll calls of October 2026: 3&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Month with roll calls&lt;/b&gt; — October 2026: 3 roll calls, 14 Oct 2026 to 15 Oct 2026 (&lt;a href=&quot;https://mbottoni.github.io/political-eye/senado/?month=2026-10&amp;amp;lang=en&quot;&gt;see&lt;/a&gt;)&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:mbottoni.github.io,2026:political-eye/en/senado/2026-09-01</id>
+    <title>Senado Federal, 1 Sep 2026: Roll calls of September 2026: 2</title>
+    <link rel="alternate" type="text/html" href="https://mbottoni.github.io/political-eye/mudancas/?fonte=senado&amp;dia=2026-09-01&amp;lang=en"/>
+    <published>2026-09-01T12:00:00Z</published>
+    <updated>2026-09-01T12:00:00Z</updated>
+    <category term="senado" label="Senado Federal"/>
+    <summary>Roll calls of September 2026: 2</summary>
+    <content type="html">&lt;p&gt;Roll calls of September 2026: 2&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Month with roll calls&lt;/b&gt; — September 2026: 2 roll calls, 1 Sep 2026 to 3 Sep 2026 (&lt;a href=&quot;https://mbottoni.github.io/political-eye/senado/?month=2026-09&amp;amp;lang=en&quot;&gt;see&lt;/a&gt;)&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+</feed>

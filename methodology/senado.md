@@ -198,6 +198,11 @@ window it reproduces every count in `index.csv` exactly
 (`tests/senado/parity.mjs`, run in CI); it also offers 6-, 3- and 1-month
 windows, which the index does not record.
 
+Each senator's profile, with these tables joined to amendments and campaign
+money and ranked against the other senators, is on
+[the senators page](https://mbottoni.github.io/political-eye/senadores/)
+([views.md](views.md#the-senators-page-datasitesenadores)).
+
 ## Tables
 
 | table | one row per |

@@ -24,6 +24,7 @@ import pandas as pd
 
 from ..fetch import download, get_bytes
 from ..io import read_raw, write_csv
+from ..senado.fetch import _listed_uf
 
 DEPUTADOS = "https://dadosabertos.camara.leg.br/arquivos/deputados/csv/deputados.csv"
 SENADORES = "https://legis.senado.leg.br/dadosabertos/senador/lista/legislatura/{leg}.json?exercicio=S"
@@ -82,8 +83,9 @@ def senators(raw: Path, legs: list[int]) -> pd.DataFrame:
         ps = json.loads(p.read_text())["ListaParlamentarLegislatura"]["Parlamentares"]["Parlamentar"]
         for x in ps if isinstance(ps, list) else [ps]:
             i = x["IdentificacaoParlamentar"]
+            # The identification block has a UF only for senators in office today; every mandate has one.
             rows.append((i["CodigoParlamentar"], i["NomeParlamentar"].strip(), norm(i.get("NomeCompletoParlamentar", "")),
-                         norm(i["NomeParlamentar"]), (i.get("UfParlamentar") or "").strip(), leg))
+                         norm(i["NomeParlamentar"]), _listed_uf(x, leg), leg))
     s = pd.DataFrame(rows, columns=["id", "nome", "civil", "parl", "uf", "leg"])
     return s.groupby(["id", "nome", "civil", "parl", "uf"], as_index=False).leg.agg(lambda v: sorted(set(v)))
 

@@ -24,11 +24,11 @@ Treasury and the national procurement portal), rebuild tidy, deterministic table
 something changed. The repository is the dataset, and its history is a record of what changed and when: lists the
 government overwrites every day, such as who is barred from public contracts, keep their past here.
 
-On top of the tables, eleven interactive pages go from the big picture down to one deputy, party, company or town.
-They run in the browser, read the data straight from this repository, and are in Portuguese with an English switch.
-**Search any federal deputy from the front page** to open their profile: roll-call participation, bills filed, how
-they vote and with whom, who they co-sign with, their party history, where their amendment money went and who paid
-for their campaign, each ranked against every other deputy.
+On top of the tables, twelve interactive pages go from the big picture down to one deputy, senator, party, company
+or town. They run in the browser, read the data straight from this repository, and are in Portuguese with an English
+switch. **Search any federal deputy or senator from the front page** to open their profile: roll-call participation,
+bills filed, how they vote and with whom, who they co-sign with, their party history, where their amendment money went
+and who paid for their campaign, each ranked against every other member of their chamber.
 
 ## What you can explore
 
@@ -38,6 +38,7 @@ for their campaign, each ranked against every other deputy.
 | | [Senado Federal](https://mbottoni.github.io/political-eye/senado/) | The same two networks for the Senate, each over the twelve months to date, and how often each senator votes with their party and the government. | Senado, Dados Abertos | [![senado](https://github.com/mbottoni/political-eye/actions/workflows/senado.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/senado.yml) weekly |
 | | [Party orientations](https://mbottoni.github.io/political-eye/orientacoes/) | How often each deputy follows their party's and the government's orientation and votes with their party's majority: government support by party, cohesion, rebels, blocs. | Câmara, Dados Abertos | [![blocs](https://github.com/mbottoni/political-eye/actions/workflows/camara-blocos.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/camara-blocos.yml) daily (blocs) |
 | | [Deputies across sources](https://mbottoni.github.io/political-eye/deputados/) | One profile per deputy, searchable from the front page: roll-call participation, bills filed and co-signed, party history, how they vote and with whom, the amendments they sent and where the money landed (towns their party runs included), who paid for their campaign, and where they rank on each; then every deputy compared. | All of the above, joined | [![ref](https://github.com/mbottoni/political-eye/actions/workflows/ref.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/ref.yml) weekly |
+| | [Senators across sources](https://mbottoni.github.io/political-eye/senadores/) | The same profile for each senator, suplentes who took a seat included, ranked against the other senators: roll-call participation (roll calls they presided left out), what they signed, how they vote and with whom, their party history, the amendments they sent and where the money landed, "Pix" included, the race that gave them their seat and every candidacy of 2018, 2022 and 2026. | All of the above, joined | [![ref](https://github.com/mbottoni/political-eye/actions/workflows/ref.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/ref.yml) weekly |
 | | [Deputies ranked](https://mbottoni.github.io/political-eye/ranking/) | Every federal deputy ordered by an index of recorded work, with weights you choose: roll-call participation, bills filed, rapporteur opinions and thrift with the office allowance (against deputies of the same state). It does not measure ideology, the quality of laws or honesty; red flags appear beside names, never in the score. | Câmara, Dados Abertos and CEAP | [![sancoes](https://github.com/mbottoni/political-eye/actions/workflows/sancoes.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/sancoes.yml) daily |
 | **Public money** | [Campaign finance](https://mbottoni.github.io/political-eye/tse/) | Where candidates' money came from in 2018, 2022 and 2026: how party leaderships split public funds, whether women and Black candidates got their legal share, money against winning, the large donors and the companies campaigns paid. | TSE | [![tse](https://github.com/mbottoni/political-eye/actions/workflows/tse.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/tse.yml) weekly |
 | | [Parliamentary amendments](https://mbottoni.github.io/political-eye/emendas/) | Every amendment since 2014: who sent it, where the money landed, how much was committed and paid, and who received it, "Pix" transfers included. | Portal da Transparência (CGU) | [![emendas](https://github.com/mbottoni/political-eye/actions/workflows/emendas.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/emendas.yml) daily |
@@ -95,7 +96,7 @@ barred = pd.read_csv(RAW + "sancoes/ceis.csv", dtype=str)  # today's list of bar
 | [`data/sancoes/`](data/sancoes) | CEIS, CNEP, CEPIM and leniency agreements as published each day, and a log of what changed |
 | [`data/siconfi/`](data/siconfi) | Each town's payroll against the legal limits and its cash, from its fiscal reports |
 | [`data/pncp/`](data/pncp) | Contracts of R$ 1 million or more, every contract signed with a sanctioned company, daily totals |
-| [`data/ref/`](data/ref) · [`data/views/`](data/views) | One politician across sources, every elected mayor since 2016; one row per deputy, one per town and year |
+| [`data/ref/`](data/ref) · [`data/views/`](data/views) | One politician across sources, every elected mayor since 2016; one row per deputy, one per senator, one per town and year |
 | [`data/site/`](data/site) | The small summaries the pages draw |
 
 To see how a list changed, ask git: `git log -p -- data/sancoes/ceis.csv`.

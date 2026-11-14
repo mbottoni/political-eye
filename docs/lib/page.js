@@ -9,6 +9,7 @@ export const SECTIONS = [
     { key: "senado", pt: "Senado Federal", en: "Senado Federal" },
     { key: "orientacoes", pt: "Orientação partidária", en: "Party orientations" },
     { key: "deputados", pt: "Deputados em todas as fontes", en: "Deputies across sources" },
+    { key: "senadores", pt: "Senadores em todas as fontes", en: "Senators across sources" },
     { key: "ranking", pt: "Ranking dos deputados", en: "Deputies ranked" }] },
   { key: "dinheiro", pt: "Dinheiro público", en: "Public money", accent: "--s3", pages: [
     { key: "tse", pt: "Financiamento de campanha", en: "Campaign finance" },

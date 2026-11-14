@@ -320,6 +320,7 @@ async function lastUpdate() {
 const JOBS = {
   camara: ["camara", 9], senado: ["senado", 9], orientacoes: ["camara-blocos", 2], deputados: ["ref", 9],
   tse: ["tse", 9], emendas: ["emendas", 2], pncp: ["pncp", 2], siconfi: ["siconfi", 2], sancoes: ["sancoes", 2],
+  empresas: ["sancoes", 2],   // rebuilt by the sanctions job
 };
 let runs = null;
 async function freshness() {
@@ -332,7 +333,7 @@ async function freshness() {
     if (!runs.length) return;
     const en = lang() === "en", now = Date.now(), days = (t) => (now - Date.parse(t)) / 864e5;
     const reach = days(runs[runs.length - 1].updated_at);   // how far back the runs read go
-    const late = [];
+    const late = [], counted = new Set();   // a job behind two cards is one source overdue
     for (const [key, [job, maxDays]] of Object.entries(JOBS)) {
       const badge = document.querySelector(`[data-key="${key}"] .cadence`);
       if (!badge) continue;
@@ -349,7 +350,7 @@ async function freshness() {
       if (overdue || failed) {
         badge.append(el("span", { className: "fresh", textContent: overdue ? (en ? " · overdue" : " · atrasado") : (en ? " · last run failed" : " · última falhou") }));
       }
-      if (overdue) late.push(badge.closest(".card")?.querySelector("h3")?.textContent || key);
+      if (overdue && !counted.has(job)) { counted.add(job); late.push(badge.closest(".card")?.querySelector("h3")?.textContent || key); }
     }
     const box = document.querySelector("#stale");
     box.querySelector("dd").textContent = num(late.length);

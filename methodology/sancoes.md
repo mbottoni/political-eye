@@ -100,7 +100,7 @@ carries a CPF, or is two or more words that all occur in real people's names
 Single-letter initials count as name words as long as one whole name word is
 there, since initials and a surname is the usual way an individual firm is
 registered (`P R C DUARTE`, `A.K.R PRADO`; since 2026-11-14). A
-name with `LTDA` never counts. On 2026-11-06 this withheld 700 of 12,471
+name with `LTDA`, or ending in `S.A.` or `S/A`, never counts. On 2026-11-06 this withheld 700 of 12,471
 names.
 
 **In force.** A sanction is in force on a day when it started on or before

@@ -136,7 +136,10 @@ def test_build_is_deterministic(tmp_path):
 
 
 def test_individual_firm():
-    people = {"VAGNER", "BORGES", "DIAS", "JOAO", "SILVA", "CARLOS"}
+    people = {"VAGNER", "BORGES", "DIAS", "JOAO", "SILVA", "CARLOS", "DUARTE", "PRADO", "VALE", "LOPES"}
     names = pd.Series(["VAGNER BORGES DIAS", "JOAO DA SILVA ME", "63.465.879 BRUNA BUZZO", "MARIA LIMA ***.462.240-**",
                        "SILVA LTDA", "CONSTRUTORA SILVA", "CARLOS", ""])
     assert s.individual_firm(names, people).tolist() == [True, True, True, True, False, False, False, False]
+    # initials and a surname: the usual way an individual firm is registered
+    initials = pd.Series(["P R C DUARTE", "A.K.R PRADO", "C DO VALE LOPES", "A B", "J B CONSTRUCOES", "P R C DUARTE LTDA"])
+    assert s.individual_firm(initials, people).tolist() == [True, True, True, False, False, False]

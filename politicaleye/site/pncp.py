@@ -107,6 +107,23 @@ def contracts(src: Path, rcl: pd.Series) -> pd.DataFrame:
     return c
 
 
+def buyers(c: pd.DataFrame) -> pd.DataFrame:
+    """Every buyer of large contracts (counted values ``v``): contracts, value, suppliers, the HHI of its suppliers'
+    shares (MIN_BUYER contracts or more) and its largest supplier with that supplier's share. Indexed by orgao_cnpj."""
+    by = c.groupby(["orgao_cnpj", "fornecedor"]).v.sum().reset_index()
+    share = by.v / by.groupby("orgao_cnpj").v.transform("sum")
+    h = by.assign(s=share).groupby("orgao_cnpj").s.apply(hhi)
+    top_sup = by.sort_values(["orgao_cnpj", "v"], ascending=[True, False]).drop_duplicates("orgao_cnpj").set_index("orgao_cnpj")
+    org = c.groupby("orgao_cnpj").agg(orgao=("orgao", "last"), esfera=("esfera", "last"), uf=("uf", "last"),
+                                      municipio_ibge=("municipio_ibge", "last"), contratos=("v", "size"), valor=("v", "sum"),
+                                      fornecedores=("fornecedor", "nunique"))
+    org["hhi"] = h.reindex(org.index).where(org.contratos >= MIN_BUYER)
+    org["maior_fornecedor"] = top_sup.fornecedor.reindex(org.index)
+    org["maior_fornecedor_nome"] = c.drop_duplicates("fornecedor").set_index("fornecedor").fornecedor_nome.reindex(org.maior_fornecedor).values
+    org["maior_share"] = (top_sup.v.reindex(org.index) / org.valor).round(4)
+    return org
+
+
 def build(data: Path) -> dict:
     src, out = data / "pncp", data / "site" / "pncp"
     days = _read(src / "dias.csv")
@@ -222,17 +239,7 @@ def build(data: Path) -> dict:
                                 "emendas": int((sup.emendas > 0).sum()), "of": int(len(sup))}
 
     # ---------------------------------------------------------- buyers
-    by = c.groupby(["orgao_cnpj", "fornecedor"]).v.sum().reset_index()
-    share = by.v / by.groupby("orgao_cnpj").v.transform("sum")
-    h = by.assign(s=share).groupby("orgao_cnpj").s.apply(hhi)
-    top_sup = by.sort_values(["orgao_cnpj", "v"], ascending=[True, False]).drop_duplicates("orgao_cnpj").set_index("orgao_cnpj")
-    org = c.groupby("orgao_cnpj").agg(orgao=("orgao", "last"), esfera=("esfera", "last"), uf=("uf", "last"),
-                                      municipio_ibge=("municipio_ibge", "last"), contratos=("v", "size"), valor=("v", "sum"),
-                                      fornecedores=("fornecedor", "nunique"))
-    org["hhi"] = h.reindex(org.index).where(org.contratos >= MIN_BUYER)
-    org["maior_fornecedor"] = top_sup.fornecedor.reindex(org.index)
-    org["maior_fornecedor_nome"] = c.drop_duplicates("fornecedor").set_index("fornecedor").fornecedor_nome.reindex(org.maior_fornecedor).values
-    org["maior_share"] = (top_sup.v.reindex(org.index) / org.valor).round(4)
+    org = buyers(c)
     hh = org.hhi.dropna()
     r["buyers"] = {"n": int(len(org)), "with_hhi": int(len(hh)), "hhi_median": float(hh.median()) if len(hh) else None,
                    "hhi_hist": np.histogram(hh, bins=[i / 20 for i in range(21)])[0].tolist() if len(hh) else [],

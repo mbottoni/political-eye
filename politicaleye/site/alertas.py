@@ -27,7 +27,7 @@ import pandas as pd
 
 from ..views.deputados import election_of
 from .common import csv, write_json
-from .pncp import plausible, read_sanctioned, town_revenue
+from .pncp import buyers, contracts, plausible, read_sanctioned, town_revenue
 from .sancoes import individual_firm, name_tokens, party_timeline
 
 # Thresholds (see methodology/alertas.md for why each one).
@@ -178,7 +178,7 @@ def build(data: Path) -> dict:
     if len(cs):
         cs = plausible(cs, rcl)
         cs = cs[(cs.suspeito != 2) & (cs.cobre == "sim") & cs.fornecedor.str.fullmatch(r"\d{14}")].drop_duplicates("controle")
-        cs["nome"], cs["pf"] = name_of(cs.fornecedor, cs.fornecedor_nome, pd.Series("", index=cs.index))
+        cs["nome"], cs["pf"] = name_of(cs.fornecedor, cs.fornecedor_nome)   # legal nature looked up where known
         cs = cs.assign(valor=cs.v, objeto=cs.objeto.str.slice(0, 160))
         cols = ["controle", "assinatura", "orgao", "esfera", "uf", "fornecedor", "nome", "pf", "objeto", "valor", "categoria_sancao", "sancao_inicio", "sancao_fim", "orgao_sancionador"]
         cs = cs[cols].rename(columns={"fornecedor": "cnpj"}).sort_values(["valor", "controle"], ascending=[False, True])
@@ -241,12 +241,13 @@ def build(data: Path) -> dict:
                                   "p90_maior_share": float(top.share.quantile(0.9)) if len(top) else None}}
 
     # ---------------------------------------------------------- 5. a buyer dominated by one supplier
-    org = _read(data / "site" / "pncp" / "orgaos.csv")
+    # Built here from the contracts, with the contracts page's typo rules, never from that page's summaries:
+    # a red-flag list must not inherit whatever state another page's build is in (or its top-3,000 cut).
+    every = contracts(data / "pncp", rcl)
+    org = buyers(every[every.suspeito != 2]).reset_index()
     if len(org):
-        for c in ("contratos", "valor", "maior_share", "hhi", "fornecedores"):
-            org[c] = pd.to_numeric(org[c], errors="coerce")
         dom = org[(org.contratos >= DOM_CONTRACTS) & (org.valor >= DOM_VALUE) & (org.maior_share >= DOM_SHARE)].copy()
-        dom["nome"], dom["pf"] = name_of(dom.maior_fornecedor, dom.maior_fornecedor_nome.fillna(""), pd.Series("", index=dom.index))
+        dom["nome"], dom["pf"] = name_of(dom.maior_fornecedor, dom.maior_fornecedor_nome.fillna(""))
         dom = dom[["orgao_cnpj", "orgao", "esfera", "uf", "municipio_ibge", "contratos", "fornecedores", "valor", "maior_fornecedor", "nome", "pf", "maior_share", "hhi"]]
         dom = dom.rename(columns={"maior_fornecedor": "cnpj"}).sort_values(["valor", "orgao_cnpj"], ascending=[False, True])
         base = org[(org.contratos >= DOM_CONTRACTS)]
@@ -259,8 +260,7 @@ def build(data: Path) -> dict:
 
     # ---------------------------------------------------------- 6. leniency, then new contracts
     le = _read(data / "sancoes" / "leniencia.csv")
-    parts = [pd.read_csv(p, dtype=str, keep_default_na=False) for p in sorted((data / "pncp" / "contratos").glob("*.csv"))]
-    big = plausible(pd.concat(parts, ignore_index=True).drop_duplicates("controle"), rcl) if parts else pd.DataFrame()
+    big = every   # the latest version of each large contract, at its counted value
     if len(le) and len(big):
         le = le[le.cnpj_do_sancionado.str.fullmatch(r"\d{14}")]
         start = le.groupby("cnpj_do_sancionado").data_de_inicio_do_acordo.min()

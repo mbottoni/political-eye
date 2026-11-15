@@ -44,7 +44,13 @@ guessed:
    son with his father's civil name is never taken for him. A deputy can link
    to two candidacies in one election (registered for the Câmara, then ran for
    the Senate).
-2. **Senado ↔ TSE**, one election at a time: the full name and state.
+2. **Senado ↔ TSE**, one election at a time: the full name and state. The
+   legislature lists give a senator's state in the identification block
+   only for senators in office today, so it is read from the mandate that
+   covers the legislature, as in [senado.md](senado.md#votes). Until
+   2026-11-14 it was not, and half the Senate candidacies that link now went
+   unlinked (122 of 248 in 2018, 2022 and 2026; Rodrigo Pacheco's and Leila
+   Barros's among them).
 3. **Senado ↔ Câmara**: the full civil name (`nome_civil`), for senators who
    were deputies.
 4. **Amendment authors ↔ legislators**: the author's name against deputies'
@@ -56,7 +62,9 @@ guessed:
    people and stay unlinked.
 
 People are the connected groups of these links. `data/ref/overrides.csv`
-(`fonte, id, pessoa`) fixes or adds a link by hand.
+(`fonte, id, pessoa`) fixes or adds a link by hand. It links Eduardo Gomes
+(TO) to his 2018 Senate candidacy: TSE lists him twice that year, as first
+suplente and as senator, so name and state are not unique.
 
 **Coverage** (2026-11-07):
 
@@ -69,6 +77,10 @@ People are the connected groups of these links. `data/ref/overrides.csv`
 - Other offices (2026-11-14): 622 candidacies in 2018, 2022 and 2026. In 2026,
   76 of the 57th legislature's deputies had a candidacy for another office, 45
   of them for the Senate (19 elected).
+- Senators (2026-11-14, with states read from the mandates): 53 of the 54
+  elected in 2018 and all 27 elected in 2022 link to a Senado id, and 105 of
+  the 106 senators who sat in the 57th legislature link to a Senate
+  candidacy of 2018, 2022 or 2026.
 - 1,478 of 1,664 amendment-author codes link to a person. Of the rest, 121
   are benches, committees or the rapporteur; the others are homonyms or
   names written differently.

@@ -6,6 +6,7 @@ import * as C from "../lib/charts.js";
 import { L, month } from "../lib/i18n.js";
 import { currentPage, setupPage } from "../lib/page.js";
 import { avatar, deputySearch, photo, profileHref, senatorPhoto } from "../lib/search.js";
+import { electionNote, electionTab } from "./eleicao.js";
 
 setupPage();
 
@@ -191,6 +192,7 @@ async function profile(root) {
     out.replaceChildren(box);
     // Who they are
     const trail = el("p", { className: "trail", hidden: true });
+    const ballot = el("p", { className: "trail", hidden: true });   // what the election at the end of the legislature did
     const SECTIONS = [["sec-resumo", L("Resumo", "Summary")], ["sec-votos", L("Votações", "Votes")], ["sec-atividade", L("Atividade legislativa", "Legislative work")],
       ["sec-emendas", L("Emendas", "Amendments")], ["sec-campanha", L("Campanha", "Campaign")]];
     const legFrom = `${LEG_YEARS[leg][0]}-02`, legTo = `${LEG_YEARS[leg][4]}-01`;
@@ -201,12 +203,13 @@ async function profile(root) {
         el("h2", { className: "dname", textContent: r.nome }),
         el("p", { className: "dmeta" }, el("span", { className: "chip", textContent: `${r.party} · ${r.uf}` }), " ",
           L(`${LEG_NAME[leg]} · ${plural(r.meses || 0, "mês", "meses")} de mandato`, `${LEG_NAME[leg]} · ${plural(r.meses || 0, "month")} in office`)),
-        trail,
+        trail, ballot,
         el("p", { className: "dlinks" }, el("a", { href: ext.href, textContent: ext.text }), " · ", el("a", { href: more.href, textContent: more.text })))),
     el("nav", { className: "jump", "aria-label": L("Seções do perfil", "Profile sections") }, ...SECTIONS.map(([k, t]) => el("a", { href: `#${k}`, textContent: t,
       on: { click: (e) => { e.preventDefault(); document.getElementById(k)?.scrollIntoView({ behavior: "smooth", block: "start" }); } } }))));
     for (const [a, b] of presided) box.append(el("p", { className: "about", textContent: L(`Presidiu a Câmara de ${month(a)} a ${b ? month(b) : "hoje"}. O presidente só vota para desempatar, por isso a participação nas votações não se compara à dos outros deputados.`,
       `Presided over the Câmara from ${month(a)} to ${b ? month(b) : "today"}. The president votes only to break a tie, so their roll-call participation does not compare with other deputies'.`) }));
+    if (!SENATE) electionNote(leg, id).then((x) => { if (x) { ballot.replaceChildren(...x); ballot.hidden = false; } }).catch(() => {});
     if (SENATE && r.presidiu >= 10) box.append(el("p", { className: "about", textContent: L(`Presidiu ${fmt(r.presidiu)} votações nominais nesta legislatura. Quem preside a sessão só vota para desempatar nas votações abertas (art. 51 do Regimento Interno do Senado), por isso essas votações ficam fora da conta da participação.`,
       `Presided over ${fmt(r.presidiu)} roll calls in this legislature. Whoever presides votes only to break a tie in open votes (article 51 of the Senate's rules), so those roll calls are left out of their participation.`) }));
     got.trail.then((T) => {
@@ -652,7 +655,7 @@ async function outliers(root) {
 
 // ------------------------------------------------------------ page
 
-const SECTIONS = { profile, compare, parties, outliers };
+const SECTIONS = { profile, compare, parties, outliers, eleicao: (root) => electionTab(root, { leg, later: local().later, openProfile }) };
 const shown = new Set();
 function render(name) {
   const inner = el("div");

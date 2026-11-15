@@ -27,7 +27,7 @@ in the Câmara's tables (voting or signing). A month they missed entirely does n
 
 Mayors' parties (data/ref/prefeitos.csv): ``prefeito_mesmo_partido`` is the share of a deputy's
 amendment money paid to a town in a year when that town's mayor was of the deputy's party (their party
-that month); ``prefeito_base`` is what the share would be by chance: the share of their own state's
+that month), and ``prefeito_mesmo_partido_valor`` that money in reais; ``prefeito_base`` is what the share would be by chance: the share of their own state's
 towns that party ran, averaged over the same payments. Parties are compared under today's name only
 from the year they merged (DEM and PSL count as UNIÃO from 2022, not before).
 
@@ -153,7 +153,7 @@ def _mayors(data: Path, pg: pd.DataFrame, view: pd.DataFrame, month_party: dict 
 
     ``month_party`` maps (member id, "YYYY-MM") to their party that month; by default the Câmara's deputies.
     """
-    cols = ["prefeito_mesmo_partido", "prefeito_base"]
+    cols = ["prefeito_mesmo_partido", "prefeito_base", "prefeito_mesmo_partido_valor"]
     ref = data / "ref" / "prefeitos.csv"
     t = pg[pg.municipio_ibge != ""].copy()
     if not ref.exists() or t.empty:
@@ -186,7 +186,8 @@ def _mayors(data: Path, pg: pd.DataFrame, view: pd.DataFrame, month_party: dict 
     t["w"] = t.valor.astype(float)
     g = t[t.w > 0].groupby("pessoa")
     out = pd.DataFrame({"prefeito_mesmo_partido": g.apply(lambda x: x.w[x.same].sum() / x.w.sum(), include_groups=False),
-                        "prefeito_base": g.apply(lambda x: (x.w * x.base).sum() / x.w.sum(), include_groups=False)})
+                        "prefeito_base": g.apply(lambda x: (x.w * x.base).sum() / x.w.sum(), include_groups=False),
+                        "prefeito_mesmo_partido_valor": g.apply(lambda x: x.w[x.same].sum() / 100, include_groups=False)})
     return out.round(4)
 
 

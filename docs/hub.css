@@ -79,6 +79,9 @@ section.block { padding-top: 56px; scroll-margin-top: 72px; }
 .finding .viz svg { display: block; width: 100%; height: 26px; }
 .finding .txt { font-size: 14px; line-height: 1.5; color: var(--ink2); flex: 1; }
 .finding .go { font-size: 13px; font-weight: 600; color: var(--ink); display: inline-flex; gap: 6px; align-items: center; }
+.finding.wide { grid-column: 1 / -1; display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(180px, 280px); grid-template-areas: "kicker kicker kicker" "num txt viz" "go go go"; gap: 10px 28px; align-items: center; }
+.finding.wide .kicker { grid-area: kicker; } .finding.wide .num { grid-area: num; } .finding.wide .txt { grid-area: txt; }
+.finding.wide .viz { grid-area: viz; } .finding.wide .go { grid-area: go; }
 .finding .go::after, .card .go::after { content: "→"; transition: transform .18s ease; }
 .finding:hover .go::after, a.card:hover .go::after { transform: translateX(3px); }
 .meter { display: block; position: relative; height: 8px; border-radius: 99px; background: color-mix(in srgb, var(--ink) 9%, transparent); overflow: hidden; }
@@ -169,6 +172,7 @@ a.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-co
   .steps { grid-template-columns: 1fr; }
   .facts { grid-template-columns: repeat(2, auto); }
   .sec-head { flex-direction: column; align-items: flex-start; }
+  .finding.wide { display: flex; align-items: stretch; }
 }
 @media (max-width: 560px) {
   .wrap, main.hub { padding-left: 16px; padding-right: 16px; }

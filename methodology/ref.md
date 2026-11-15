@@ -33,6 +33,17 @@ guessed:
    then birth date, first name and state (`nascimento+primeiro_nome+uf`),
    since the two registries spell names differently (SOUZA and SOUSA, an
    added JUNIOR or married name, ORLEANS BRAGANCA and ORLEANS E BRAGANCA).
+   Then **Câmara ↔ TSE, every other office** (senator and Senate substitutes,
+   governor and deputy governor, state and district deputy, president and
+   vice-president), so a deputy who ran for something else is not taken for
+   one who stayed out: the civil name and birth date
+   (`outro_cargo:nome_civil+nascimento`); then birth date, first name and
+   state with another word of the name in common
+   (`outro_cargo:nascimento+primeiro_nome+uf`; two Franciscos born the same
+   day in Rio de Janeiro are two people). Both keys carry the birth date, so a
+   son with his father's civil name is never taken for him. A deputy can link
+   to two candidacies in one election (registered for the Câmara, then ran for
+   the Senate).
 2. **Senado ↔ TSE**, one election at a time: the full name and state. The
    legislature lists give a senator's state in the identification block
    only for senators in office today, so it is read from the mandate that
@@ -63,6 +74,9 @@ suplente and as senator, so name and state are not unique.
 - 2026: 64% of elected deputies and 26% of elected senators, because those
   elected for the first time get a Câmara or Senado id only when they take
   office on 1 February 2027. The weekly job links them then.
+- Other offices (2026-11-14): 622 candidacies in 2018, 2022 and 2026. In 2026,
+  76 of the 57th legislature's deputies had a candidacy for another office, 45
+  of them for the Senate (19 elected).
 - Senators (2026-11-14, with states read from the mandates): 53 of the 54
   elected in 2018 and all 27 elected in 2022 link to a Senado id, and 105 of
   the 106 senators who sat in the 57th legislature link to a Senate

@@ -1,8 +1,9 @@
 name: ref
 
-# Rebuilds the crosswalk that links one politician across sources, and the
-# views that join the sources through it, after the Saturday jobs have
-# refreshed the Câmara, Senado and TSE data.
+# Rebuilds the crosswalk that links one politician across sources, the
+# views that join the sources through it, and the deputies' and senators'
+# profile pages built on them, after the Saturday jobs have refreshed the
+# Câmara, Senado and TSE data.
 on:
   schedule:
     - cron: "17 12 * * 0"   # Sundays, 12:17 UTC
@@ -10,6 +11,8 @@ on:
 
 permissions:
   contents: write
+  issues: write    # job-alert: open, comment on and close the failure issue
+  actions: read    # job-alert: name the step that failed
 
 concurrency:
   group: ref
@@ -21,9 +24,9 @@ jobs:
     timeout-minutes: 30
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: astral-sh/setup-uv@v5
+      - uses: astral-sh/setup-uv@v10.3.3
         with:
           enable-cache: true
 
@@ -31,18 +34,18 @@ jobs:
         run: uv sync --frozen
 
       - name: Test
-        run: uv run pytest -q tests/ref tests/views tests/site/test_deputados.py
+        run: uv run pytest -q tests/ref tests/views tests/site/test_deputados.py tests/site/test_senadores.py tests/site/test_eleicao.py
 
       - name: Download and rebuild
         run: |
           uv run python -m politicaleye ref update
           uv run python -m politicaleye ref prefeitos
           uv run python -m politicaleye views update
-          uv run python -m politicaleye site build deputados
+          uv run python -m politicaleye site build deputados senadores eleicao
 
       - name: Commit if the data changed
         run: |
-          git add data/ref data/views data/site/deputados
+          git add data/ref data/views data/site/deputados data/site/senadores data/site/eleicao
           if git diff --staged --quiet; then
             echo "No data changes."
             exit 0
@@ -55,3 +58,16 @@ jobs:
             git pull --rebase -X theirs   # on a clash in a generated summary, this run's (newer) build wins
           done
           exit 1
+
+      # Last: open or update the "<workflow> job failing" issue, or close it once a run succeeds.
+      - name: Report the failure in an issue
+        if: failure()
+        uses: ./.github/actions/job-alert
+        with:
+          outcome: failure
+
+      - name: Close the failure issue
+        if: success()
+        uses: ./.github/actions/job-alert
+        with:
+          outcome: success

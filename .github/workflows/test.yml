@@ -63,3 +63,20 @@ jobs:
           print(m, gv.number_of_nodes(), gv.number_of_edges(), gc.number_of_edges())
           assert gv.number_of_nodes() > 0
           EOF
+
+  # How big the repository is and what makes it grow (scripts/size_report.py).
+  # A separate job because it needs the whole history; informational only:
+  # printed in the log and the run summary, and never fails the run.
+  size:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Repository size report
+        continue-on-error: true
+        run: |
+          python3 scripts/size_report.py | tee size.txt
+          { echo '```'; cat size.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"

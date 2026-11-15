@@ -122,6 +122,7 @@ uv run pytest                          # builders, rules and edge cases
 node tests/camara/parity.mjs           # the browser reproduces the Python network numbers
 node tests/senado/parity.mjs
 uv run python tests/pages_smoke.py     # every page and tab loads (needs Chrome)
+uv run python scripts/size_report.py   # repository size by source, history and growth
 ```
 
 <details>

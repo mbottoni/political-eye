@@ -6,34 +6,7 @@
 <title data-en="Deputies across sources · political-eye">Deputados em todas as fontes · political-eye</title>
 <meta name="description" content="Cada deputado federal em um só lugar: como vota, com quem vota, o dinheiro de emendas que enviou e para onde, e a campanha que o elegeu." data-en-content="Every federal deputy in one place: how they vote, whom they vote with, the amendment money they sent and where, and the campaign that elected them.">
 <link rel="stylesheet" href="../lib/site.css">
-<style>
-  /* one deputy's profile */
-  .dossier { display: flex; gap: 24px; align-items: center; margin: 10px 0 16px; scroll-margin-top: 130px; }
-  .dossier .avatar { box-shadow: 0 0 0 4px var(--surface), 0 0 0 5px var(--border); }
-  .dname { font-family: var(--serif); font-size: 36px; font-weight: 560; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 8px; }
-  .dmeta, .trail, .dlinks { margin: 0 0 6px; color: var(--ink2); font-size: 14px; }
-  .chip { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 650; color: var(--ink); background: color-mix(in srgb, var(--accent) 16%, transparent); }
-  .chip.soft { font-weight: 550; background: var(--surface); border: 1px solid var(--border); }
-  .jump { position: sticky; top: 60px; z-index: 6; display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 18px; padding: 10px 0;
-    background: color-mix(in srgb, var(--page) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-  .jump a { font-size: 13px; font-weight: 550; color: var(--ink2); text-decoration: none; padding: 5px 13px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
-  .jump a:hover { color: var(--ink); border-color: color-mix(in srgb, var(--accent) 50%, transparent); }
-  .dsec { display: flex; align-items: center; gap: 12px; font-size: 21px; font-weight: 680; letter-spacing: -0.015em; margin: 40px 0 16px; scroll-margin-top: 130px; }
-  .dsec::after { content: ""; flex: 1; height: 1px; background: var(--border); }
-  .ranks { display: grid; gap: 12px; margin-top: 4px; }
-  .rank { display: grid; grid-template-columns: minmax(160px, 300px) 1fr 96px; gap: 16px; align-items: center; font-size: 13px; }
-  .rank .rl { color: var(--ink2); }
-  .rank .rv { text-align: right; font-weight: 650; font-variant-numeric: tabular-nums; }
-  .track { position: relative; height: 8px; border-radius: 99px; background: linear-gradient(90deg, var(--grid), color-mix(in srgb, var(--accent) 35%, var(--grid))); }
-  .track .dot { position: absolute; top: 50%; width: 14px; height: 14px; border-radius: 50%; transform: translate(-50%, -50%); background: var(--accent); box-shadow: 0 0 0 3px var(--surface); }
-  .track .ptick { position: absolute; top: -5px; bottom: -5px; width: 2px; transform: translateX(-1px); border-radius: 1px; background: var(--ink2); }
-  @media (max-width: 640px) {
-    .dossier { flex-direction: column; align-items: flex-start; gap: 14px; }
-    .dname { font-size: 29px; }
-    .rank { grid-template-columns: 1fr auto; gap: 6px 12px; }
-    .rank .track { grid-column: 1 / -1; grid-row: 2; }
-  }
-</style>
+<link rel="stylesheet" href="../lib/profile.css">
 </head>
 <body>
 <main>
@@ -48,11 +21,13 @@
     <button data-tab="compare" data-en="Compare deputies">Comparar deputados</button>
     <button data-tab="parties" data-en="Parties">Partidos</button>
     <button data-tab="outliers" data-en="Stand-outs">Destaques</button>
+    <button data-tab="eleicao" data-en="Election">Eleição</button>
   </nav>
   <section id="tab-profile" role="tabpanel"></section>
   <section id="tab-compare" role="tabpanel" hidden></section>
   <section id="tab-parties" role="tabpanel" hidden></section>
   <section id="tab-outliers" role="tabpanel" hidden></section>
+  <section id="tab-eleicao" role="tabpanel" hidden></section>
   <footer data-en-html="Votes: contested Plenário roll calls (at least 2.5% of votes on the losing side), pooled over the legislature. &quot;With their party&quot; is how often a deputy followed their party leader's orientation; &quot;with the government&quot;, the government leader's. Voting position is the first principal component of each month's votes, with PT's side negative. Amendments: those the deputy authored for the budgets their legislature approved (2024–2027 for the 57th, 2020–2023 for the 56th), as paid so far. Campaign: their federal-deputy campaign in the election that chose the legislature. People are linked across sources through the politicians crosswalk; a deputy missing from a source has nothing there or could not be linked. Rules and gaps: <a href=&quot;https://github.com/mbottoni/political-eye/blob/main/methodology/views.md&quot;>methodology/views.md</a>. Sources: Câmara dos Deputados, Portal da Transparência (CGU), TSE.">
     Votos: votações nominais disputadas do Plenário (ao menos 2,5% dos votos no lado derrotado), somadas ao longo da legislatura. "Com o partido" é a frequência com que o deputado seguiu a orientação do líder do partido; "com o governo", a do líder do governo. A posição de voto é o primeiro componente principal dos votos de cada mês, com o lado do PT negativo. Emendas: as que o deputado apresentou aos orçamentos aprovados pela sua legislatura (2024–2027 para a 57ª, 2020–2023 para a 56ª), pelo valor pago até agora. Campanha: a campanha a deputado federal na eleição que escolheu a legislatura. As pessoas são ligadas entre as fontes pela tabela de correspondência de políticos; um deputado ausente de uma fonte não tem registro nela ou não pôde ser identificado. Regras e lacunas: <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/views.md">methodology/views.md</a>. Fontes: Câmara dos Deputados, Portal da Transparência (CGU), TSE.
   </footer>

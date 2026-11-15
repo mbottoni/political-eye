@@ -143,3 +143,6 @@ def test_individual_firm():
     # initials and a surname: the usual way an individual firm is registered
     initials = pd.Series(["P R C DUARTE", "A.K.R PRADO", "C DO VALE LOPES", "A B", "J B CONSTRUCOES", "P R C DUARTE LTDA"])
     assert s.individual_firm(initials, people).tolist() == [True, True, True, False, False, False]
+    # a corporation's "S.A." is not two initials
+    corp = pd.Series(["SILVA S.A.", "DUARTE S/A", "J SILVA S A", "PRADO S.A. - PRADO S.A."])
+    assert s.individual_firm(corp, people).tolist() == [False, False, False, False]

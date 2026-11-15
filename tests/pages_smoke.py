@@ -29,7 +29,12 @@ PAGES = [
     *[f"docs/siconfi/?tab={t}" for t in ("overview", "map", "dist", "cash", "parties", "pix", "town")],
     *[f"docs/tse/?tab={t}" for t in ("overview", "parties", "equity", "results", "donors", "suppliers")],
     "docs/tse/?tab=equity&e=2018",
-    *[f"docs/deputados/?tab={t}" for t in ("profile", "compare", "parties", "outliers")], "docs/deputados/?tab=profile&leg=56",
+    *[f"docs/deputados/?tab={t}" for t in ("profile", "compare", "parties", "outliers", "eleicao")], "docs/deputados/?tab=profile&leg=56",
+    "docs/deputados/?tab=eleicao&leg=56&lang=en", "docs/deputados/?tab=profile&dep=204460",
+    *[f"docs/senadores/?tab={t}" for t in ("profile", "compare", "parties", "outliers")], "docs/senadores/?tab=profile&leg=56",
+    "docs/senadores/?tab=profile&sen=5936&lang=en",
+    "docs/mudancas/", "docs/mudancas/?fonte=alertas&dias=90", "docs/mudancas/?lang=en&fonte=pncp&dias=7",
+    "docs/municipios/", "docs/municipios/?town=2611101&lang=en", "docs/municipios/?town=5300108",
     "docs/empresas/", "docs/empresas/?tab=list", "docs/empresas/?lang=en",
 ]
 CHROME = ["google-chrome", "google-chrome-stable", "chromium", "chromium-browser",

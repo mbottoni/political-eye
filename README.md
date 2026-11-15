@@ -24,11 +24,11 @@ Treasury and the national procurement portal), rebuild tidy, deterministic table
 something changed. The repository is the dataset, and its history is a record of what changed and when: lists the
 government overwrites every day, such as who is barred from public contracts, keep their past here.
 
-On top of the tables, eleven interactive pages go from the big picture down to one deputy, party, company or town.
-They run in the browser, read the data straight from this repository, and are in Portuguese with an English switch.
-**Search any federal deputy from the front page** to open their profile: roll-call participation, bills filed, how
-they vote and with whom, who they co-sign with, their party history, where their amendment money went and who paid
-for their campaign, each ranked against every other deputy.
+On top of the tables, fifteen interactive pages go from the big picture down to one deputy, senator, party, company
+or town. They run in the browser, read the data straight from this repository, and are in Portuguese with an English
+switch. **Search any federal deputy or senator from the front page** to open their profile: roll-call participation,
+bills filed, how they vote and with whom, who they co-sign with, their party history, where their amendment money went
+and who paid for their campaign, each ranked against every other member of their chamber.
 
 ## What you can explore
 
@@ -38,17 +38,55 @@ for their campaign, each ranked against every other deputy.
 | | [Senado Federal](https://mbottoni.github.io/political-eye/senado/) | The same two networks for the Senate, each over the twelve months to date, and how often each senator votes with their party and the government. | Senado, Dados Abertos | [![senado](https://github.com/mbottoni/political-eye/actions/workflows/senado.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/senado.yml) weekly |
 | | [Party orientations](https://mbottoni.github.io/political-eye/orientacoes/) | How often each deputy follows their party's and the government's orientation and votes with their party's majority: government support by party, cohesion, rebels, blocs. | Câmara, Dados Abertos | [![blocs](https://github.com/mbottoni/political-eye/actions/workflows/camara-blocos.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/camara-blocos.yml) daily (blocs) |
 | | [Deputies across sources](https://mbottoni.github.io/political-eye/deputados/) | One profile per deputy, searchable from the front page: roll-call participation, bills filed and co-signed, party history, how they vote and with whom, the amendments they sent and where the money landed (towns their party runs included), who paid for their campaign, and where they rank on each; then every deputy compared. | All of the above, joined | [![ref](https://github.com/mbottoni/political-eye/actions/workflows/ref.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/ref.yml) weekly |
+| | [Senators across sources](https://mbottoni.github.io/political-eye/senadores/) | The same profile for each senator, suplentes who took a seat included, ranked against the other senators: roll-call participation (roll calls they presided left out), what they signed, how they vote and with whom, their party history, the amendments they sent and where the money landed, "Pix" included, the race that gave them their seat and every candidacy of 2018, 2022 and 2026. | All of the above, joined | [![ref](https://github.com/mbottoni/political-eye/actions/workflows/ref.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/ref.yml) weekly |
 | | [Deputies ranked](https://mbottoni.github.io/political-eye/ranking/) | Every federal deputy ordered by an index of recorded work, with weights you choose: roll-call participation, bills filed, rapporteur opinions and thrift with the office allowance (against deputies of the same state). It does not measure ideology, the quality of laws or honesty; red flags appear beside names, never in the score. | Câmara, Dados Abertos and CEAP | [![sancoes](https://github.com/mbottoni/political-eye/actions/workflows/sancoes.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/sancoes.yml) daily |
 | **Public money** | [Campaign finance](https://mbottoni.github.io/political-eye/tse/) | Where candidates' money came from in 2018, 2022 and 2026: how party leaderships split public funds, whether women and Black candidates got their legal share, money against winning, the large donors and the companies campaigns paid. | TSE | [![tse](https://github.com/mbottoni/political-eye/actions/workflows/tse.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/tse.yml) weekly |
 | | [Parliamentary amendments](https://mbottoni.github.io/political-eye/emendas/) | Every amendment since 2014: who sent it, where the money landed, how much was committed and paid, and who received it, "Pix" transfers included. | Portal da Transparência (CGU) | [![emendas](https://github.com/mbottoni/political-eye/actions/workflows/emendas.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/emendas.yml) daily |
 | | [Public contracts](https://mbottoni.github.io/political-eye/pncp/) | Who buys and who sells in contracts of R$ 1 million or more: concentration, contracts signed with barred companies, money per inhabitant, towns by their mayor's party. *History since 2021 still being read.* | PNCP | [![pncp](https://github.com/mbottoni/political-eye/actions/workflows/pncp.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/pncp.yml) daily |
 | | [Municipal finances](https://mbottoni.github.io/political-eye/siconfi/) | Which of the 5,570 towns break the legal caps on payroll or end the year without free cash, whether "Pix" amendments go to towns in trouble, towns by their mayor's party. *History since 2015 still being read.* | Tesouro Nacional, Siconfi | [![siconfi](https://github.com/mbottoni/political-eye/actions/workflows/siconfi.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/siconfi.yml) twice a day |
+| | [My town](https://mbottoni.github.io/political-eye/municipios/) | One profile per town, searchable from the front page: who was elected mayor each term, the amendment money the town government received ("Pix" included), from which members of Congress and parties and whether from the mayor's, the contracts its bodies signed and those with barred companies, its payroll and cash; each number against towns of the same state and of similar size. | All of the above, joined | [![sancoes](https://github.com/mbottoni/political-eye/actions/workflows/sancoes.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/sancoes.yml) daily |
 | **Accountability** | [Sanctions](https://mbottoni.github.io/political-eye/sancoes/) | Who is barred from public contracts or fined for corruption (CEIS, CNEP, CEPIM, leniency agreements), by whom and for how long: repeat offenders, fines, leniency deals, and the amendments and contracts barred companies still get, by member of Congress and by party. | CGU | [![sancoes](https://github.com/mbottoni/political-eye/actions/workflows/sancoes.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/sancoes.yml) daily |
 | | [Red flags](https://mbottoni.github.io/political-eye/alertas/) | Patterns across the sources that deserve a closer look: amendments and contracts for companies barred at the time, campaign suppliers later paid from the same member's amendments, amendment money concentrated on one private recipient, buyers dominated by one supplier, contracts after a leniency agreement. Each with its rule, its baseline and the innocent explanations: a flag is not evidence of an irregularity. | All of the above, joined | [![sancoes](https://github.com/mbottoni/political-eye/actions/workflows/sancoes.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/sancoes.yml) daily |
 | | [Companies across sources](https://mbottoni.github.io/political-eye/empresas/) | One profile per company or organisation (CNPJ), searchable by name or CNPJ: its sanctions, current and past, the PNCP contracts it signed, the amendment money paid to it and whose amendments paid it, the campaigns it sold to, and the red-flag lists it is on. | All of the above, joined | [![sancoes](https://github.com/mbottoni/political-eye/actions/workflows/sancoes.yml/badge.svg)](https://github.com/mbottoni/political-eye/actions/workflows/sancoes.yml) daily |
+| | [What changed](https://mbottoni.github.io/political-eye/mudancas/) | The last 90 days, day by day: companies that entered or left the sanctions lists, new red flags, amendment payments of R$ 5 million or more, contracts of R$ 100 million or more, months with their first roll calls. Each item links to the page that explains it; every source has an [Atom feed](#follow-the-changes). | Each source's change log | every source's job |
 | | STF case reviews | How long each justice holds a case after asking for more time. *On hold: the court's server only answers web browsers.* | STF, Corte Aberta | – |
 
 Each page's footer links the methodology behind every number on it.
+
+## Follow the changes
+
+Each job also keeps a short log of what changed in its source, and the site publishes it as
+[a page](https://mbottoni.github.io/political-eye/mudancas/) and as Atom feeds, one entry per source and day, for any
+feed reader:
+
+| Feed | Portuguese | English |
+|---|---|---|
+| Every source | [`feeds/todas.xml`](https://mbottoni.github.io/political-eye/feeds/todas.xml) | [`feeds/en/all.xml`](https://mbottoni.github.io/political-eye/feeds/en/all.xml) |
+| Sanctions: companies in and out of the lists | [`feeds/sancoes.xml`](https://mbottoni.github.io/political-eye/feeds/sancoes.xml) | [`feeds/en/sancoes.xml`](https://mbottoni.github.io/political-eye/feeds/en/sancoes.xml) |
+| Red flags: new ones | [`feeds/alertas.xml`](https://mbottoni.github.io/political-eye/feeds/alertas.xml) | [`feeds/en/alertas.xml`](https://mbottoni.github.io/political-eye/feeds/en/alertas.xml) |
+| Amendment payments of R$ 5 million or more | [`feeds/emendas.xml`](https://mbottoni.github.io/political-eye/feeds/emendas.xml) | [`feeds/en/emendas.xml`](https://mbottoni.github.io/political-eye/feeds/en/emendas.xml) |
+| Contracts of R$ 100 million or more | [`feeds/pncp.xml`](https://mbottoni.github.io/political-eye/feeds/pncp.xml) | [`feeds/en/pncp.xml`](https://mbottoni.github.io/political-eye/feeds/en/pncp.xml) |
+| Roll-call months, Câmara and Senado | [`feeds/camara.xml`](https://mbottoni.github.io/political-eye/feeds/camara.xml), [`feeds/senado.xml`](https://mbottoni.github.io/political-eye/feeds/senado.xml) | [`feeds/en/camara.xml`](https://mbottoni.github.io/political-eye/feeds/en/camara.xml), [`feeds/en/senado.xml`](https://mbottoni.github.io/political-eye/feeds/en/senado.xml) |
+
+Dates come from the data (the sanctions snapshot, the day a contract was published), never from the clock, so a run
+with nothing new changes nothing. The rules, thresholds and limits are in [methodology/mudancas.md](methodology/mudancas.md).
+
+### Weekly email
+
+Every Monday the `weekly` workflow renders what the logs recorded in the week before (Monday to Monday, read from the
+commits) as an email in Portuguese: the week in numbers, then each source's largest changes, each linking to the page
+that explains it. It sends only when three repository secrets exist (Settings → Secrets and variables → Actions); until
+then it is a dry run and the rendered email is kept as a workflow artifact (`email`).
+
+| secret | value |
+|---|---|
+| `SMTP_USER` | the Gmail address that sends |
+| `SMTP_PASSWORD` | a Google [App Password](https://myaccount.google.com/apppasswords) for it (needs 2-Step Verification) |
+| `EMAIL_TO` | where it goes (several addresses separated by commas) |
+
+Optional: a repository **variable** `EMAIL_LANG` set to `en` sends it in English, `both` in both languages; `SMTP_HOST`
+and `SMTP_PORT` (environment) point it at another server. Run it by hand from the Actions tab (*weekly → Run
+workflow*), with a past date to render that week again.
 
 ## How it works
 
@@ -96,8 +134,8 @@ barred = pd.read_csv(RAW + "sancoes/ceis.csv", dtype=str)  # today's list of bar
 | [`data/sancoes/`](data/sancoes) | CEIS, CNEP, CEPIM and leniency agreements as published each day, and a log of what changed |
 | [`data/siconfi/`](data/siconfi) | Each town's payroll against the legal limits and its cash, from its fiscal reports |
 | [`data/pncp/`](data/pncp) | Contracts of R$ 1 million or more, every contract signed with a sanctioned company, daily totals |
-| [`data/ref/`](data/ref) · [`data/views/`](data/views) | One politician across sources, every elected mayor since 2016; one row per deputy, one per town and year |
-| [`data/site/`](data/site) | The small summaries the pages draw |
+| [`data/ref/`](data/ref) · [`data/views/`](data/views) | One politician across sources, every elected mayor since 2016; one row per deputy, one per senator, one per town and year |
+| [`data/site/`](data/site) | The small summaries the pages draw; [`data/site/mudancas/`](data/site/mudancas) is each source's log of what changed in its last 90 days |
 
 To see how a list changed, ask git: `git log -p -- data/sancoes/ceis.csv`.
 
@@ -112,6 +150,7 @@ uv sync
 uv run python -m politicaleye -h                  # every source and its commands
 uv run python -m politicaleye sancoes update       # download one source and rebuild its tables
 uv run python -m politicaleye site build sancoes   # rebuild a page's summaries
+uv run python -m politicaleye site digest          # the weekly email, written to out/ (sent only with the SMTP variables)
 
 python3 -m http.server 8000                        # then open http://localhost:8000/docs/
 ```
@@ -123,6 +162,7 @@ uv run pytest                          # builders, rules and edge cases
 node tests/camara/parity.mjs           # the browser reproduces the Python network numbers
 node tests/senado/parity.mjs
 uv run python tests/pages_smoke.py     # every page and tab loads (needs Chrome)
+uv run python scripts/size_report.py   # repository size by source, history and growth
 ```
 
 <details>
@@ -137,6 +177,7 @@ politicaleye/            the Python package: python -m politicaleye <source> <co
 data/                    every table, as committed by the jobs
 docs/                    the site (GitHub Pages): index.html, one folder per page
   lib/                   shared kit: ui.js, charts.js, i18n.js, page.js, site.css, maps
+  feeds/                 Atom feeds of what changed, written by the jobs
 methodology/             one file per source: every rule and data problem
 figures/                 images regenerated by the jobs, and the README's
 tests/                   pytest per source, parity tests, page smoke test
@@ -150,7 +191,9 @@ tests/                   pytest per source, parity tests, page smoke test
 O **political-eye** acompanha a política e o dinheiro público do Brasil com dados oficiais abertos: votações e redes
 no Congresso, disciplina partidária, financiamento de campanha, emendas parlamentares, contratos públicos, finanças
 municipais e sanções. Robôs agendados no GitHub Actions baixam cada fonte, refazem tabelas organizadas e as registram
-no git só quando algo muda, então o histórico do repositório mostra o que mudou e quando. O
+no git só quando algo muda, então o histórico do repositório mostra o que mudou e quando; a página
+[O que mudou](https://mbottoni.github.io/political-eye/mudancas/) e os [feeds Atom](#follow-the-changes) contam
+isso sem precisar do git. O
 [site](https://mbottoni.github.io/political-eye/) está em português, com versão em inglês, e cada número tem a regra
 que o produz descrita na [metodologia](METHODOLOGY.md).
 

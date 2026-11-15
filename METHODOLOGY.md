@@ -13,10 +13,12 @@ changes its numbers and every problem found in its data:
 | Municipal finances (Siconfi) | `data/siconfi/` | [methodology/siconfi.md](methodology/siconfi.md) |
 | Public contracts (PNCP) | `data/pncp/` | [methodology/pncp.md](methodology/pncp.md) |
 | Reference tables (one politician across sources) | `data/ref/` | [methodology/ref.md](methodology/ref.md) |
-| Views across sources (one row per deputy, one per municipality and year) | `data/views/` | [methodology/views.md](methodology/views.md) |
+| Views across sources (one row per deputy, one per senator, one per municipality and year) | `data/views/` | [methodology/views.md](methodology/views.md) |
 | Red flags (patterns worth a closer look, across sources) | `data/site/alertas/` | [methodology/alertas.md](methodology/alertas.md) |
 | Deputies ranked (an index of recorded work, weights chosen by the reader) | `data/site/ranking/` | [methodology/ranking.md](methodology/ranking.md) |
 | Companies across sources (one profile per CNPJ) | `data/site/empresas/` | [methodology/empresas.md](methodology/empresas.md) |
+| Town profiles (one municipality across the sources, against similar towns) | `data/site/municipios/` | [methodology/municipios.md](methodology/municipios.md) |
+| What changed (each source's change log, the page and the Atom feeds) | `data/site/mudancas/`, `docs/feeds/` | [methodology/mudancas.md](methodology/mudancas.md) |
 
 The rules below hold for every source.
 

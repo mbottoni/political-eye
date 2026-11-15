@@ -2,7 +2,9 @@
 // the pages' own summaries. Portuguese by default (the HTML's own text), English on request.
 import { css, data, el } from "./lib/ui.js";
 import { brl, date, lang, langSwitch, month, num, pct, tr } from "./lib/i18n.js";
-import { deputies, deputySearch } from "./lib/search.js";
+import { deputySearch, members, profileHref } from "./lib/search.js";
+import { townHref, townSearch } from "./lib/towns.js";
+import { SECTIONS } from "./lib/page.js";
 
 const sum = (xs) => xs.reduce((a, b) => a + b, 0);
 const NS = "http://www.w3.org/2000/svg";
@@ -16,8 +18,12 @@ const EN = {
   title: "Brazil's politics and public money, <em>in plain sight</em>.",
   lede: "Scheduled jobs download data from Congress, the electoral court, the comptroller general, the National Treasury and the procurement portal, rebuild tidy tables and commit them to git, so the repository's history shows what changed and when. Each page goes from the big picture down to one deputy, party, company or town.",
   cta_explore: "or see what the data shows ↓", cta_how: "How it works",
-  search_label: "Find a deputy and see how they vote, what they propose, where their amendments go and who paid for their campaign.",
+  search_label: "Find a deputy or senator and see how they vote, what they propose, where their amendments go and who paid for their campaign.",
   search_try: "Try:",
+  search_town: "Or find your town: who runs it, the amendment money it gets and from whom, its contracts and its accounts.",
+  tb_kicker: "My town", tb_title: "Who runs your town, where its money comes from and whom it contracts",
+  tb_text: "For each of the 5,570 towns: its mayors and their parties, the amendment money the town government received and from which members of Congress, its bodies' contracts, with barred companies singled out, and its accounts. Each number is set against towns of the same state and of similar size.",
+  tb_go: "See your town",
   ab_kicker: "Red flags", ab_title: "Patterns across the open data that deserve a closer look",
   ab_text: "Amendments and contracts for companies barred from public contracts, campaign suppliers later paid from the same member's amendments, amendment money concentrated on one private recipient. Each flag gives its rule, what it is measured against and the innocent explanations. A flag is not evidence of an irregularity.",
   ab_go: "See the red flags",
@@ -26,9 +32,9 @@ const EN = {
   rb_go: "Build the ranking",
   f_pages: "interactive pages", f_sources: "official sources", f_since: "data since", f_updated: "last update", f_stale: "sources overdue",
   swarm_title: "How the Câmara votes", swarm_others: "others", swarm_left: "← votes like PT", swarm_right: "votes like PL →",
-  h_findings: "What the data shows", p_findings: "Four numbers read just now from the pages' tables. Click one to see where it comes from.",
-  k_amend: "Amendments", k_campaigns: "Campaigns",
-  t_orientacoes: "Party orientations", t_deputados: "Deputies across sources", t_sancoes: "Sanctions", t_tse: "Campaign finance",
+  h_findings: "What the data shows", p_findings: "Numbers read just now from the pages' tables. Click one to see where it comes from.",
+  k_amend: "Amendments", k_campaigns: "Campaigns", k_election: "The 2026 election", g_election: "What the election did to the Câmara",
+  t_orientacoes: "Party orientations", t_deputados: "Deputies across sources", t_senadores: "Senators across sources", t_sancoes: "Sanctions", t_tse: "Campaign finance",
   t_emendas: "Parliamentary amendments", t_pncp: "Public contracts", t_siconfi: "Municipal finances", t_stf: "STF case reviews", t_rules: "House rules",
   p_congress: "How deputies and senators vote, with whom, and how often they follow their party and the government.",
   weekly: "weekly", daily: "daily", monthly: "monthly", on_hold: "on hold", explore: "Explore",
@@ -36,6 +42,7 @@ const EN = {
   d_senado: "The same two graphs for the Senate, each over the twelve months to date, and how often each senator votes with their party and the government.",
   d_orientacoes: "How often each deputy follows their party's and the government's orientation and votes with their party's majority: government support by party, cohesion, rebels.",
   d_deputados: "Every deputy in one place: how they vote and with whom, the amendments they sent and where they landed, whether they favoured their party's mayors, and who paid for their campaign.",
+  d_senadores: "Every senator in one place, ranked against the other senators: participation, what they sign, how they vote and with whom, their amendments, \"Pix\" included, and the race that gave them their seat.",
   s_joined: "All sources, joined",
   nav_money_long: "Public money", p_money: "From campaign finance to amendments, contracts and each town's accounts.",
   d_tse: "Where candidates' money came from in 2018, 2022 and 2026: how parties split public funds, quotas for women and Black candidates, large donors and suppliers.",
@@ -54,6 +61,8 @@ const EN = {
   s2_t: "Tables", s2_p: "Each run rebuilds sorted CSV tables and commits only when something changed, so the git history records what changed and when.",
   s3_t: "Pages", s3_p: "The pages read those tables straight from the repository, in your browser. The numbers on this page are read just now and change when new data arrives.",
   sources: "Sources:",
+  h_changes: "What changed", changes_go: "See every change", changes_feed: "Atom feed",
+  p_changes: "The latest changes the jobs recorded in each source: companies that entered or left the sanctions lists, new red flags, large payments and contracts, roll-call months.",
   foot: "Data, code and every rule behind the numbers: <a href=\"https://github.com/mbottoni/political-eye\">github.com/mbottoni/political-eye</a> (<a href=\"https://github.com/mbottoni/political-eye/blob/main/METHODOLOGY.md\">methodology</a>). Code under the MIT license.",
 };
 // Portuguese is what the HTML says; keep it to switch back.
@@ -142,6 +151,16 @@ const CARDS = {
       sub: tr({ pt: `deputados da 57ª legislatura, suplentes incluídos; ${pct(own)} do dinheiro deles para municípios foi a prefeitos do próprio partido`,
         en: `deputies of the 57th legislature, substitutes included; ${pct(own)} of their town money went to own-party mayors` }) };
   },
+  async senadores() {
+    const d = (await data("site/senadores/senadores_57.csv")).filter((r) => r.presenca !== "" && +r.meses >= 6);
+    const v = d.map((r) => +r.presenca).sort((a, b) => a - b), mid = v[Math.floor((v.length - 1) / 2)];
+    // How many senators voted in each share of the roll calls held while they were in office: a distribution, 10 columns.
+    const hist = Array(10).fill(0);
+    for (const x of v) hist[Math.min(9, Math.floor(x * 10))]++;
+    return { value: pct(mid), series: hist, opts: { bars: true, mark: Math.min(9, Math.floor(mid * 10)), labels: [tr({ pt: "senadores por participação: 0%", en: "senators by participation: 0%" }), "100%"] },
+      sub: tr({ pt: `de participação nas votações nominais, a do senador mediano da 57ª legislatura (entre os ${num(d.length)} com seis meses ou mais de mandato)`,
+        en: `roll-call participation of the median senator in the 57th legislature (among the ${num(d.length)} with six months or more in office)` }) };
+  },
   async tse() {
     const ys = (await data("site/tse/anos.csv")).map((r) => r.ano).sort();
     const tot = await Promise.all(ys.map(async (y) => { const t = await data(`site/tse/${y}/resumo.csv`); return { y, total: sum(t.map((r) => +r.total)), pub: sum(t.map((r) => +r.publico)) }; }));
@@ -220,6 +239,20 @@ const FINDINGS = {
       en: `in amendments paid to ${num(e.empresas_barrado)} companies while they were barred from public contracts` }), box);
     if (by.length >= 2) spark(box, by.map((x) => +x.sim || 0), { bars: true, color: css("--c-control") || css("--critical"), height: 26 });
   },
+  async reelection() {
+    // Of the deputies of the legislature that just ended who ran for the Câmara again, the share re-elected, against the election before.
+    const r = await data("site/eleicao/resumo.json"), [now, before] = r.legislaturas.map((l) => r.builds[l]);
+    const vs = el("span", { className: "vs" },
+      el("span", { textContent: String(now.eleicao) }), meter(now.taxa_reeleicao), el("span", { textContent: pct(now.taxa_reeleicao) }),
+      ...(before ? [el("span", { textContent: String(before.eleicao) }), meter(before.taxa_reeleicao, "base"), el("span", { textContent: pct(before.taxa_reeleicao) })] : []));
+    const won = now.grupos.reeleito, ran = now.concorreram_camara, novos = now.origem.novo / now.eleitos;
+    const pend = now.ufs_pendentes.length ? tr({ pt: ` (${now.ufs_pendentes.join(", ")} ainda sem resultado)`, en: ` (${now.ufs_pendentes.join(", ")} still to come)` }) : "";
+    const kicker = document.querySelector('[data-hl="reelection"] .kicker');
+    if (kicker) kicker.textContent = tr({ pt: `Eleição de ${now.eleicao}`, en: `The ${now.eleicao} election` });
+    finding("reelection", pct(now.taxa_reeleicao), tr({
+      pt: `dos deputados que tentaram a reeleição à Câmara em ${now.eleicao} se reelegeram: ${num(won)} de ${num(ran)}${before ? `, contra ${pct(before.taxa_reeleicao)} em ${before.eleicao}` : ""}. Dos ${num(now.eleitos)} eleitos até agora${pend}, ${pct(novos)} são novos na Câmara (sem mandato desde 2011).`,
+      en: `of the deputies who ran for the Câmara again in ${now.eleicao} were re-elected: ${num(won)} of ${num(ran)}${before ? `, against ${pct(before.taxa_reeleicao)} in ${before.eleicao}` : ""}. Of the ${num(now.eleitos)} elected so far${pend}, ${pct(novos)} are new to the Câmara (no seat since 2011).` }), vs);
+  },
   async public() {
     const ys = (await data("site/tse/anos.csv")).map((r) => r.ano).sort();
     const y = ys.includes("2022") ? "2022" : ys[ys.length - 1], t = await data(`site/tse/${y}/resumo.csv`), share = sum(t.map((r) => +r.publico)) / sum(t.map((r) => +r.total));
@@ -239,6 +272,41 @@ async function redFlags() {
     stat(num(r.contratos_impedidas.casos), tr({ pt: "contratos com empresas impedidas na data", en: "contracts with companies barred on the day" })),
     stat(num(r.campanha_emendas.casos), tr({ pt: "fornecedores de campanha pagos com emendas do mesmo deputado", en: "campaign suppliers paid from the same deputy's amendments" })),
     stat(num(r.cruzamentos.entidades), tr({ pt: "empresas e entidades em duas listas ou mais", en: "companies and bodies on two lists or more" })));
+}
+
+// ------------------------------------------------------------ town profiles banner
+
+async function townBanner() {
+  const r = await data("site/municipios/resumo.json"), box = document.querySelector("#tb-stats");
+  if (!box) return;
+  const y = r.emendas.by_year.find((x) => x.ano === r.ano_ref) || r.emendas.by_year[r.emendas.by_year.length - 1], s = r.pncp.sancionados;
+  const stat = (n, label) => el("div", {}, el("b", { textContent: n }), el("span", { textContent: label }));
+  box.replaceChildren(
+    stat(num(r.towns), tr({ pt: "municípios, cada um com seu perfil", en: "towns, each with its profile" })),
+    stat(brl(y.total), tr({ pt: `em emendas pagas aos governos municipais em ${y.ano}, ${brl(y.pix)} por Pix`, en: `in amendments paid to town governments in ${y.ano}, ${brl(y.pix)} by "Pix"` })),
+    stat(num(r.pncp.contratos), tr({ pt: `contratos de R$ 1 milhão ou mais de órgãos municipais, em ${num(r.pncp.days_read)} dias lidos`, en: `contracts of R$ 1 million or more by town bodies, in ${num(r.pncp.days_read)} days read` })),
+    stat(num(s.sim + s.possivel), tr({ pt: "contratos municipais com empresa impedida que a sanção alcançava ou pode ter alcançado", en: "town contracts with a company whose bar reached, or may have reached, the buyer" })));
+}
+
+// ------------------------------------------------------------ what changed
+
+// Each source's job keeps a change log with one summary per day (data/site/mudancas/<fonte>.json): the latest ones,
+// across sources, each linking to that day on the changes page.
+const CHANGE_SOURCES = { sancoes: "--s8", alertas: "--s4", emendas: "--s3", pncp: "--s2", camara: "--s1", senado: "--s7" };
+async function changes() {
+  const box = document.querySelector("#changes-list");
+  if (!box) return;
+  document.querySelector("#changes-feed").href = lang() === "en" ? "feeds/en/all.xml" : "feeds/todas.xml";
+  const metas = (await Promise.all(Object.keys(CHANGE_SOURCES).map((f) => data(`site/mudancas/${f}.json`).catch(() => null)))).filter(Boolean);
+  const order = Object.keys(CHANGE_SOURCES);
+  const days = metas.flatMap((m) => m.dias.map((d) => ({ ...d, m })))
+    .sort((a, b) => b.data.localeCompare(a.data) || order.indexOf(a.m.fonte) - order.indexOf(b.m.fonte)).slice(0, 6);
+  if (!days.length) return;
+  box.replaceChildren(...days.map((d) => el("li", { style: `--src: var(${CHANGE_SOURCES[d.m.fonte]})` },
+    el("a", { href: `mudancas/?fonte=${d.m.fonte}&dia=${d.data}` },
+      el("span", { className: "when", textContent: date(d.data) }),
+      el("span", { className: "src", textContent: d.m.nome[lang()] }),
+      el("span", { className: "what", textContent: lang() === "en" ? d.resumo_en : d.resumo })))));
 }
 
 // ------------------------------------------------------------ ranking banner
@@ -318,7 +386,7 @@ async function lastUpdate() {
 // overdue (the schedule plus a day's slack: GitHub starts scheduled runs hours late). A run that reads nothing new
 // still succeeds, so a quiet source is not mistaken for a stuck one.
 const JOBS = {
-  camara: ["camara", 9], senado: ["senado", 9], orientacoes: ["camara-blocos", 2], deputados: ["ref", 9],
+  camara: ["camara", 9], senado: ["senado", 9], orientacoes: ["camara-blocos", 2], deputados: ["ref", 9], senadores: ["ref", 9],
   tse: ["tse", 9], emendas: ["emendas", 2], pncp: ["pncp", 2], siconfi: ["siconfi", 2], sancoes: ["sancoes", 2],
   empresas: ["sancoes", 2],   // rebuilt by the sanctions job
 };
@@ -362,14 +430,14 @@ async function freshness() {
 
 // ------------------------------------------------------------ find a deputy
 
-const profileHref = (d) => `deputados/?tab=profile&leg=${d.leg}&dep=${d.id}`;
 let searchLang = null;
 function searchBox() {
   if (searchLang === lang()) return;   // a resize redraws the charts, not the box someone may be typing in
   searchLang = lang();
-  document.querySelector("#deputy-search").replaceChildren(deputySearch({ href: profileHref, large: true }));
-  // Three deputies of the current legislature, at random, so the suggestion favours no one.
-  const go = () => deputies().then((all) => {
+  document.querySelector("#deputy-search").replaceChildren(deputySearch({ href: (d) => profileHref(d), large: true }));
+  document.querySelector("#town-search")?.replaceChildren(townSearch({ href: (t) => townHref(t.cod), large: true }));
+  // Three members of the current legislature (deputies or senators), at random, so the suggestion favours no one.
+  const go = () => members().then((all) => {
     const now = all.filter((d) => d.leg === 57 && d.votes >= 50);
     if (!now.length) return;
     const pickN = [];
@@ -390,6 +458,11 @@ function render() {
   swarm().catch((e) => console.warn("hub swarm:", e));
   redFlags().catch((e) => console.warn("hub red flags:", e));
   ranking().catch((e) => console.warn("hub ranking:", e));
+  townBanner().catch((e) => console.warn("hub towns:", e));
+  // Count the pages from the shared menu, so a new page is counted without editing this line.
+  const pages = document.querySelector('[data-i="f_pages"]')?.nextElementSibling;
+  if (pages) pages.textContent = num(SECTIONS.reduce((n, s) => n + s.pages.length, 0));
+  changes().catch((e) => console.warn("hub changes:", e));
   lastUpdate();
   freshness();
 }

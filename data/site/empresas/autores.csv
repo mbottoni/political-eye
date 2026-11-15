@@ -144,7 +144,7 @@ autor_codigo,nome,tipo,partido,uf,link
 2077,Marco Maia,parlamentar,PT,RS,
 2083,André Figueiredo,parlamentar,PDT,CE,d57:133439
 2091,Flexa Ribeiro,parlamentar,PSDB,PA,s:3634
-2098,Afonso Hamm,parlamentar,PP,RS,d57:136811
+2098,Afonso Hamm - PP/RS,parlamentar,,,d57:136811
 2123,José Agripino,parlamentar,DEM,RN,s:40
 2127,Raimundo Lira,parlamentar,PSD,PB,s:2207
 2152,Beto Faro,parlamentar,PT,PA,d56:141335
@@ -172,7 +172,7 @@ autor_codigo,nome,tipo,partido,uf,link
 2331,Maria do Carmo Alves,parlamentar,PP,SE,s:1023
 2340,Blairo Maggi,parlamentar,PL,MT,s:111
 2355,Silvio Costa,parlamentar,AVANTE,PE,
-2356,Arnaldo Jardim,parlamentar,CIDADANIA,SP,d57:141391
+2356,Arnaldo Jardim - CIDADANIA/SP,parlamentar,,,d57:141391
 2357,Inácio Arruda,parlamentar,PCdoB,CE,d57:74295
 2359,Kátia Abreu,parlamentar,PP,TO,s:1249
 2360,Osmar Júnior,parlamentar,,,
@@ -333,8 +333,8 @@ autor_codigo,nome,tipo,partido,uf,link
 2711,Aguinaldo Ribeiro,parlamentar,PP,PB,d57:160527
 2712,Hugo Motta,parlamentar,REPUBLICANOS,PB,d57:160674
 2713,Nilda Gondim,parlamentar,MDB,PB,s:5281
-2714,Romero Rodrigues,parlamentar,PODE,PB,d57:160629
-2715,Ruy Carneiro,parlamentar,PODE,PB,d57:160635
+2714,Romero Rodrigues - PODE/PB,parlamentar,,,d57:160629
+2715,Ruy Carneiro - PODE/PB,parlamentar,,,d57:160635
 2716,Wilson Filho,parlamentar,PTB,PB,
 2717,Anderson Ferreira,parlamentar,PR,PE,
 2718,Augusto Coutinho,parlamentar,REPUBLIC,PE,d57:160665
@@ -592,7 +592,7 @@ autor_codigo,nome,tipo,partido,uf,link
 3074,Cícero Almeida,parlamentar,PHS,AL,
 3075,Clarissa Garotinho,parlamentar,UNIÃO,RJ,d56:178939
 3076,Conceição Sampaio,parlamentar,PSDB,AM,
-3077,Covatti Filho,parlamentar,PP,RS,d57:178963
+3077,Covatti Filho - PP/RS,parlamentar,,,d57:178963
 3078,Cristiane Brasil,parlamentar,PTB,RJ,
 3079,Dâmina Pereira,parlamentar,PODE,MG,
 3080,Daniel Coelho,parlamentar,CIDADANIA,PE,d56:178916
@@ -626,7 +626,7 @@ autor_codigo,nome,tipo,partido,uf,link
 3138,Arnon Bezerra,parlamentar,PTB,CE,
 3146,Betinho Rosado,parlamentar,,,
 3155,Carlos Melles,parlamentar,DEM,MG,
-3160,Celso Russomanno,parlamentar,REPUBLICANOS,SP,d57:73441
+3160,Celso Russomanno,parlamentar,REPUBLIC,SP,d57:73441
 3166,Claudio Cajado,parlamentar,PP,BA,d57:74537
 3173,Darcísio Perondi,parlamentar,MDB,RS,d56:73891
 3174,Davi Alves Silva Júnior,parlamentar,PR,MA,
@@ -647,7 +647,7 @@ autor_codigo,nome,tipo,partido,uf,link
 3220,Hermes Parcianello,parlamentar,MDB,PR,d56:73772
 3228,Ivan Valente,parlamentar,PSOL,SP,d57:73531
 3230,Jaime Martins,parlamentar,PROS,MG,
-3235,Geovania de Sá,parlamentar,REPUBLICANOS,SC,d57:178966
+3235,Geovania de Sá,parlamentar,REPUBLIC,SC,d57:178966
 3239,João Leão,parlamentar,PP,BA,d57:74550
 3240,Giovani Feltes,parlamentar,MDB,RS,d56:178996
 3242,João Pizzolatti,parlamentar,,,
@@ -662,7 +662,7 @@ autor_codigo,nome,tipo,partido,uf,link
 3279,Dr. Luiz Fernando,parlamentar,,,
 3283,Goulart,parlamentar,PSD,SP,
 3297,Mauro Lopes,parlamentar,PP,MG,d56:74749
-3298,Heitor Schuch,parlamentar,PSD,RS,d57:178964
+3298,Heitor Schuch - PSD/RS,parlamentar,,,d57:178964
 3299,Mendonça Filho,parlamentar,PL,PE,d57:74428
 3309,Nelson Meurer,parlamentar,PP,PR,
 3311,Newton Cardoso,parlamentar,PMDB,MG,
@@ -759,7 +759,7 @@ autor_codigo,nome,tipo,partido,uf,link
 3703,Leo de Brito,parlamentar,PT,AC,d56:178825
 3704,Lucas Vergilio,parlamentar,SOLIDARIEDADE,GO,d56:178879
 3705,Luciano Ducci,parlamentar,PSB,PR,d57:178931
-3706,Lucio Mosquini,parlamentar,PL,RO,d57:178954
+3706,Lucio Mosquini - PL/RO,parlamentar,,,d57:178954
 3707,Luiz Carlos Ramos,parlamentar,PR,RJ,
 3708,Luiz Cláudio,parlamentar,PR,RO,
 3709,Luiz Lauro Filho,parlamentar,PSDB,SP,d56:178982
@@ -808,7 +808,7 @@ autor_codigo,nome,tipo,partido,uf,link
 3753,Ronaldo Lessa,parlamentar,PDT,AL,
 3754,Ronaldo Martins,parlamentar,REPUBLICANOS,CE,d56:122466
 3755,Rôney Nemer,parlamentar,PP,DF,
-3756,Rosangela Gomes,parlamentar,REPUBLICANOS,RJ,d57:178945
+3756,Rosangela Gomes,parlamentar,REPUBLIC,RJ,d57:178945
 3757,Rossoni,parlamentar,PSDB,PR,d56:178935
 3758,Rubens Pereira Júnior,parlamentar,PT,MA,d57:178887
 3759,Samuel Moreira,parlamentar,PSDB,SP,d56:178990
@@ -959,7 +959,7 @@ autor_codigo,nome,tipo,partido,uf,link
 3945,Coronel Chrisóstomo,parlamentar,PL,RO,d57:204378
 3946,Coronel Tadeu,parlamentar,PL,SP,d57:204514
 3947,Cristiano Vale,parlamentar,PP,PA,d56:135054
-3948,Da Vitoria,parlamentar,PP,ES,d57:204355
+3948,Da Vitoria - PP/ES,parlamentar,,,d57:204355
 3949,Daniel Freitas,parlamentar,PL,SC,d57:204367
 3950,Daniel Silveira,parlamentar,PTB,RJ,d56:204454
 3951,Daniel Trzeciak,parlamentar,PSDB,RS,d57:204409
@@ -1151,7 +1151,7 @@ autor_codigo,nome,tipo,partido,uf,link
 4155,Kim Kataguiri,parlamentar,MISSÃO,SP,d57:204536
 4156,Léo Motta,parlamentar,REPUBLICANOS,MG,d56:204547
 4157,Lucas Gonzalez,parlamentar,NOVO,MG,d56:204523
-4158,Luiz Lima - NOVO/RJ,parlamentar,,,d57:204455
+4158,Luiz Lima,parlamentar,NOVO,RJ,d57:204455
 4159,Manuel Marcos,parlamentar,REPUBLICANOS,AC,d56:204469
 4160,Marcelo Freixo,parlamentar,PSB,RJ,d56:76874
 4161,Marcos Pereira,parlamentar,REPUBLICANOS,SP,d57:204506
@@ -1191,7 +1191,7 @@ autor_codigo,nome,tipo,partido,uf,link
 4209,Jorge Goetten,parlamentar,REPUBLICANOS,SC,d57:214694
 4210,Carlos Portinho,parlamentar,PL,RJ,s:5936
 4211,Ricardo da Karol,parlamentar,PDT,RJ,d56:215042
-4212,Josivaldo JP,parlamentar,UNIÃO,MA,d57:215043
+4212,Josivaldo Jp,parlamentar,UNIÃO,MA,d57:215043
 4213,Milton Coelho,parlamentar,PSB,PE,d56:92172
 4214,Pedro Augusto Palareti,parlamentar,PP,RJ,d56:215045
 4215,Vivi Reis,parlamentar,PSOL,PA,d56:215044
@@ -1344,7 +1344,7 @@ autor_codigo,nome,tipo,partido,uf,link
 4404,Keniston Braga,parlamentar,MDB,PA,d57:220677
 4405,Kiko Celeguim,parlamentar,PT,SP,d57:162067
 4406,Lebrão,parlamentar,UNIÃO,RO,d57:220600
-4407,Lêda Borges,parlamentar,REPUBLICANOS,GO,d57:220566
+4407,Lêda Borges,parlamentar,REPUBLIC,GO,d57:220566
 4408,Leo Prates,parlamentar,REPUBLIC,BA,d57:80815
 4409,Lucas Ramos,parlamentar,PSB,PE,d57:220662
 4410,Luciano Amaral,parlamentar,PSD,AL,d57:220581
@@ -1359,7 +1359,7 @@ autor_codigo,nome,tipo,partido,uf,link
 4421,Marcos Tavares,parlamentar,PDT,RJ,d57:220604
 4422,Maria Arraes,parlamentar,PSB,PE,d57:220668
 4423,Mario Frias,parlamentar,PL,SP,d57:220655
-4424,Marussa Boldrin,parlamentar,REPUBLICANOS,GO,d57:220572
+4424,Marussa Boldrin,parlamentar,REPUBLIC,GO,d57:220572
 4425,Matheus Noronha,parlamentar,PL,CE,d57:220661
 4426,Maurício Carvalho,parlamentar,UNIÃO,RO,d57:220609
 4427,Mauricio do Vôlei,parlamentar,PL,MG,d57:220628
@@ -1371,7 +1371,7 @@ autor_codigo,nome,tipo,partido,uf,link
 4433,Messias Donato,parlamentar,UNIÃO,ES,d57:220530
 4434,Miguel Ângelo,parlamentar,PT,MG,d57:171786
 4435,Murillo Gouvea,parlamentar,PSDB,RJ,d57:220617
-4436,Murilo Galdino,parlamentar,REPUBLICANOS,PB,d57:220584
+4436,Murilo Galdino,parlamentar,REPUBLIC,PB,d57:220584
 4437,Nely Aquino,parlamentar,PODE,MG,d57:220622
 4438,Neto Carletto,parlamentar,AVANTE,BA,d57:220703
 4439,Nikolas Ferreira,parlamentar,PL,MG,d57:209787
@@ -1398,7 +1398,7 @@ autor_codigo,nome,tipo,partido,uf,link
 4460,Ricardo Maia,parlamentar,MDB,BA,d57:220694
 4461,Ricardo Salles,parlamentar,NOVO,SP,d57:220633
 4462,Roberta Roma,parlamentar,PL,BA,d57:220693
-4463,Roberto Duarte,parlamentar,REPUBLICANOS,AC,d57:220588
+4463,Roberto Duarte,parlamentar,REPUBLIC,AC,d57:220588
 4464,Roberto Monteiro Pai,parlamentar,PL,RJ,d57:220613
 4465,Robinson Faria,parlamentar,PP,RN,d57:220624
 4466,Rodolfo Nogueira,parlamentar,PL,MS,d57:220546

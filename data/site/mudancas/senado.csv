@@ -1,0 +1,4 @@
+data,fonte,tipo,chave,titulo,pf,detalhe,detalhe_en,valor,n,link
+2026-11-03,senado,mes,2026-11,,0,"8 votações nominais, de 03/11/2026 a 12/11/2026","8 roll calls, 3 Nov 2026 to 12 Nov 2026",,8,../senado/?month=2026-11
+2026-10-14,senado,mes,2026-10,,0,"3 votações nominais, de 14/10/2026 a 15/10/2026","3 roll calls, 14 Oct 2026 to 15 Oct 2026",,3,../senado/?month=2026-10
+2026-09-01,senado,mes,2026-09,,0,"2 votações nominais, de 01/09/2026 a 03/09/2026","2 roll calls, 1 Sep 2026 to 3 Sep 2026",,2,../senado/?month=2026-09

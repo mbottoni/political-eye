@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR">
+  <title>political-eye: Senado Federal — o que mudou</title>
+  <subtitle>Cada mês que ganhou suas primeiras votações nominais no Plenário, na data da primeira; o número cresce a cada semana até o mês acabar.</subtitle>
+  <id>tag:mbottoni.github.io,2026:political-eye/feeds/senado</id>
+  <link rel="self" type="application/atom+xml" href="https://mbottoni.github.io/political-eye/feeds/senado.xml"/>
+  <link rel="alternate" type="text/html" href="https://mbottoni.github.io/political-eye/mudancas/?fonte=senado"/>
+  <updated>2026-11-03T12:00:00Z</updated>
+  <author><name>political-eye</name><uri>https://github.com/mbottoni/political-eye</uri></author>
+  <entry>
+    <id>tag:mbottoni.github.io,2026:political-eye/senado/2026-11-03</id>
+    <title>Senado Federal, 03/11/2026: Votações nominais de novembro de 2026: 8</title>
+    <link rel="alternate" type="text/html" href="https://mbottoni.github.io/political-eye/mudancas/?fonte=senado&amp;dia=2026-11-03"/>
+    <published>2026-11-03T12:00:00Z</published>
+    <updated>2026-11-03T12:00:00Z</updated>
+    <category term="senado" label="Senado Federal"/>
+    <summary>Votações nominais de novembro de 2026: 8</summary>
+    <content type="html">&lt;p&gt;Votações nominais de novembro de 2026: 8&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Mês com votações nominais&lt;/b&gt;: &lt;a href=&quot;https://mbottoni.github.io/political-eye/senado/?month=2026-11&quot;&gt;novembro de 2026&lt;/a&gt; — 8 votações nominais, de 03/11/2026 a 12/11/2026&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:mbottoni.github.io,2026:political-eye/senado/2026-10-14</id>
+    <title>Senado Federal, 14/10/2026: Votações nominais de outubro de 2026: 3</title>
+    <link rel="alternate" type="text/html" href="https://mbottoni.github.io/political-eye/mudancas/?fonte=senado&amp;dia=2026-10-14"/>
+    <published>2026-10-14T12:00:00Z</published>
+    <updated>2026-10-14T12:00:00Z</updated>
+    <category term="senado" label="Senado Federal"/>
+    <summary>Votações nominais de outubro de 2026: 3</summary>
+    <content type="html">&lt;p&gt;Votações nominais de outubro de 2026: 3&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Mês com votações nominais&lt;/b&gt;: &lt;a href=&quot;https://mbottoni.github.io/political-eye/senado/?month=2026-10&quot;&gt;outubro de 2026&lt;/a&gt; — 3 votações nominais, de 14/10/2026 a 15/10/2026&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:mbottoni.github.io,2026:political-eye/senado/2026-09-01</id>
+    <title>Senado Federal, 01/09/2026: Votações nominais de setembro de 2026: 2</title>
+    <link rel="alternate" type="text/html" href="https://mbottoni.github.io/political-eye/mudancas/?fonte=senado&amp;dia=2026-09-01"/>
+    <published>2026-09-01T12:00:00Z</published>
+    <updated>2026-09-01T12:00:00Z</updated>
+    <category term="senado" label="Senado Federal"/>
+    <summary>Votações nominais de setembro de 2026: 2</summary>
+    <content type="html">&lt;p&gt;Votações nominais de setembro de 2026: 2&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Mês com votações nominais&lt;/b&gt;: &lt;a href=&quot;https://mbottoni.github.io/political-eye/senado/?month=2026-09&quot;&gt;setembro de 2026&lt;/a&gt; — 2 votações nominais, de 01/09/2026 a 03/09/2026&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+</feed>

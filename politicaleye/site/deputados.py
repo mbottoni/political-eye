@@ -85,15 +85,26 @@ def wilson(k: np.ndarray, n: np.ndarray, z: float = 1.96) -> tuple[np.ndarray, n
     return mid - half, mid + half
 
 
-def _covoting(data: Path, leg: int, ids: list[str]) -> pd.DataFrame:
-    """Pooled agreement between every pair of deputies over the legislature's contested roll calls."""
+def _graphs(chamber: str):
+    """The graphs module of a chamber: politicaleye.camara.graphs or politicaleye.senado.graphs (same functions)."""
+    if chamber == "senado":
+        from ..senado import graphs as sg
+        return sg
+    return g
+
+
+def _covoting(data: Path, leg: int, ids: list[str], *, chamber: str = "camara", member: str = "deputado_id",
+              min_shared: int | None = None) -> pd.DataFrame:
+    """Pooled agreement between every pair of members over the legislature's contested roll calls."""
+    gm, root = _graphs(chamber), data / chamber
+    min_shared = MIN_SHARED if min_shared is None else min_shared
     pos = {d: i for i, d in enumerate(ids)}
     n = len(ids)
     agree, both = np.zeros((n, n), dtype=np.int64), np.zeros((n, n), dtype=np.int64)
-    for m in g.months(data / "camara"):
-        if g.legislatura(m) != leg:
+    for m in gm.months(root):
+        if gm.legislatura(m) != leg:
             continue
-        who, _, M = g.vote_matrix(g.load_month(m, data / "camara").votes)
+        who, _, M = gm.vote_matrix(gm.load_month(m, root).votes)
         keep = [k for k, d in enumerate(who) if str(d) in pos]
         if not keep:
             continue
@@ -108,34 +119,40 @@ def _covoting(data: Path, leg: int, ids: list[str]) -> pd.DataFrame:
         rate = agree / both
         lo, hi = wilson(agree, both)
     for i, d in enumerate(ids):
-        ok = np.flatnonzero((both[i] >= MIN_SHARED) & (np.arange(n) != i))
+        ok = np.flatnonzero((both[i] >= min_shared) & (np.arange(n) != i))
         if not len(ok):
             continue
         # Ranked on the Wilson bounds, so a pair that agreed on 50 of 52 votes does not
         # outrank one that agreed on 480 of 500: closest by the lower bound, furthest by the upper.
-        near = ok[np.lexsort((ok, -lo[i, ok]))]
+        # With fewer than 16 partners, half go each way (the odd one to the furthest), so no one is in both lists.
+        near = ok[np.lexsort((ok, -lo[i, ok]))][:min(NEIGHBOURS, max(1, len(ok) // 2))]
         far = ok[np.lexsort((ok, hi[i, ok]))]
-        for kind, pick in (("perto", near[:NEIGHBOURS]), ("longe", far[:NEIGHBOURS])):
+        far = far[~np.isin(far, near)][:NEIGHBOURS]
+        for kind, pick in (("perto", near), ("longe", far)):
             for j in pick:
-                rows.append({"deputado_id": d, "tipo": kind, "outro_id": ids[j], "n": int(both[i, j]),
+                rows.append({member: d, "tipo": kind, "outro_id": ids[j], "n": int(both[i, j]),
                              "concordancia": round(float(rate[i, j]), 4)})
-    return pd.DataFrame(rows, columns=["deputado_id", "tipo", "outro_id", "n", "concordancia"])
+    return pd.DataFrame(rows, columns=[member, "tipo", "outro_id", "n", "concordancia"])
 
 
-def _network(data: Path, leg: int) -> pd.DataFrame:
+def _network(data: Path, leg: int, chamber: str = "camara", member: str = "deputado_id") -> pd.DataFrame:
     """Mean ideal point and eigenvector centrality over the legislature's months; cross-party share of ties."""
-    files = sorted((data / "site" / "camara" / "members").glob("*.csv"))
+    files = sorted((data / "site" / chamber / "members").glob("*.csv"))
     t = pd.concat([pd.read_csv(f, dtype={"id": str}) for f in files], ignore_index=True) if files else pd.DataFrame()
     if t.empty:
-        return pd.DataFrame(columns=["deputado_id", "pc1", "eigen", "cross_share"])
+        return pd.DataFrame(columns=[member, "pc1", "eigen", "cross_share"])
     t = t[t.month.map(g.legislatura) == leg]
     out = t.groupby("id").agg(pc1=("pc1", "mean"), eigen=("eigen", "mean"), degree=("degree", "sum"), cross=("cross_degree", "sum"))
     out["cross_share"] = (out.cross / out.degree).where(out.degree > 0)
-    return out[["pc1", "eigen", "cross_share"]].round(4).rename_axis("deputado_id").reset_index()
+    return out[["pc1", "eigen", "cross_share"]].round(4).rename_axis(member).reset_index()
 
 
-def _mayors(data: Path, pg: pd.DataFrame, view: pd.DataFrame) -> pd.DataFrame:
-    """Per person: share of town payments to towns their party governed that year, and the chance level."""
+def _mayors(data: Path, pg: pd.DataFrame, view: pd.DataFrame, month_party: dict | None = None,
+            member: str = "deputado_id") -> pd.DataFrame:
+    """Per person: share of town payments to towns their party governed that year, and the chance level.
+
+    ``month_party`` maps (member id, "YYYY-MM") to their party that month; by default the Câmara's deputies.
+    """
     cols = ["prefeito_mesmo_partido", "prefeito_base"]
     ref = data / "ref" / "prefeitos.csv"
     t = pg[pg.municipio_ibge != ""].copy()
@@ -149,14 +166,15 @@ def _mayors(data: Path, pg: pd.DataFrame, view: pd.DataFrame) -> pd.DataFrame:
     may["uf2"] = may.cod_ibge.str[:2]
     t = t.merge(may[["exercicio", "cod_ibge", "p"]], left_on=["ano", "municipio_ibge"], right_on=["exercicio", "cod_ibge"], how="inner")
 
-    # The deputy's party in the month of the payment (their latest one after they left).
-    month_party = {}
-    for f in sorted((data / "camara" / "deputies").glob("*.csv")):
-        if f.stem[:4] >= str(t.ano.min()):
-            d = pd.read_csv(f, dtype=str, keep_default_na=False, usecols=["deputado_id", "partido"])
-            month_party.update({(i, f.stem): p for i, p in zip(d.deputado_id, d.partido)})
+    # The member's party in the month of the payment (their latest one after they left).
+    if month_party is None:
+        month_party = {}
+        for f in sorted((data / "camara" / "deputies").glob("*.csv")):
+            if f.stem[:4] >= str(t.ano.min()):
+                d = pd.read_csv(f, dtype=str, keep_default_na=False, usecols=["deputado_id", "partido"])
+                month_party.update({(i, f.stem): p for i, p in zip(d.deputado_id, d.partido)})
     who = view.set_index("pessoa")
-    dep = t.pessoa.map(who.deputado_id)
+    dep = t.pessoa.map(who[member])
     label = [month_party.get((i, m), who.partido.get(pe, "")) for i, m, pe in zip(dep, t.ano_mes, t.pessoa)]
     t["mine"] = [party_in(x, y) for x, y in zip(label, t.ano)]
     t["same"] = t.mine == t.p
@@ -227,9 +245,12 @@ def _activity(data: Path, leg: int, ids: list[str]) -> dict[str, pd.DataFrame]:
     return {"per": per.rename_axis("deputado_id").reset_index(), "mo": mo, "kinds": kinds, "co": co, "parties": parties}
 
 
-def build_leg(data: Path, leg: int) -> dict:
-    out = data / "site" / "deputados"
-    view = pd.read_csv(data / "views" / f"deputados_{leg}.csv", dtype=str, keep_default_na=False)
+def amendments(data: Path, leg: int, view: pd.DataFrame, out: Path):
+    """``emendas_<leg>.csv`` and ``destinos_<leg>.csv`` under ``out`` for the people of ``view``.
+
+    Returns (amendments by person, year and type; paid by place; shares paid in their own state and nationally;
+    the payments, with the person and the recipient's town).
+    """
     x = pd.read_csv(data / "ref" / "politicians.csv", dtype=str, keep_default_na=False)
     autor = x[x.fonte == "emendas"].set_index("id").pessoa
     people = set(view.pessoa)
@@ -265,31 +286,50 @@ def build_leg(data: Path, leg: int) -> dict:
     shares = pd.DataFrame({"emendas_pago_estado": em[em.casa].groupby("pessoa").pago.sum() / tot,
                            "emendas_pago_nacional": em[em.uf == ""].groupby("pessoa").pago.sum() / tot}).fillna(0)
     shares = shares.where(tot.reindex(shares.index) > 0).round(4)
+    return by, de, shares, pg
+
+
+def donors(data: Path, campaigns: pd.DataFrame, path: Path):
+    """The donors of R$50,000 or more to each person's campaign, written to ``path``; returns (rows, totals by person).
+
+    ``campaigns`` has one row per person and campaign: ``pessoa, ano, sq_candidato``.
+    """
+    parts = []
+    for y, c in campaigns[campaigns.sq_candidato != ""].groupby("ano"):
+        f = data / "tse" / str(y) / "doacoes_grandes_doadores.csv"
+        if f.exists():
+            sq = c.set_index("sq_candidato").pessoa
+            dd = pd.read_csv(f, dtype=str, keep_default_na=False)
+            parts.append(dd[dd.sq_candidato.isin(sq.index)].assign(pessoa=lambda t: t.sq_candidato.map(sq), valor=lambda t: pd.to_numeric(t.valor)))
+    dd = pd.concat(parts, ignore_index=True) if parts else pd.DataFrame(columns=["pessoa", "doador", "nome", "valor"])
+    csv(dd[["pessoa", "doador", "nome", "valor"]].sort_values(["pessoa", "valor", "doador"], ascending=[True, False, True]), path)
+    return dd, dd.groupby("pessoa").agg(grandes_doadores=("doador", "size"), grandes_doadores_valor=("valor", "sum"))
+
+
+def sanctions(data: Path, people: set) -> pd.DataFrame:
+    """Amendment money paid to companies under a barring sanction, every budget (the sanctions page's table), by person."""
+    cols = ["sancoes_pago_total", "sancoes_pago_sancionadas", "sancoes_empresas"]
+    sp = data / "site" / "sancoes" / "autores.csv"
+    if not sp.exists():
+        return pd.DataFrame(columns=cols)
+    s = pd.read_csv(sp, dtype=str, keep_default_na=False)
+    s = s[s.pessoa.isin(people)]
+    for c in ("pago_total", "pago_sancionadas", "empresas_sancionadas"):
+        s[c] = pd.to_numeric(s[c], errors="coerce").fillna(0)
+    sanc = s.groupby("pessoa")[["pago_total", "pago_sancionadas", "empresas_sancionadas"]].sum()
+    sanc.columns = cols
+    return sanc
+
+
+def build_leg(data: Path, leg: int) -> dict:
+    out = data / "site" / "deputados"
+    view = pd.read_csv(data / "views" / f"deputados_{leg}.csv", dtype=str, keep_default_na=False)
+    by, de, shares, pg = amendments(data, leg, view, out)
 
     # The large donors of the campaign that elected them.
-    y = election_of(leg)
-    dd_path = data / "tse" / str(y) / "doacoes_grandes_doadores.csv"
-    sq = view[view.campanha_sq_candidato != ""].set_index("campanha_sq_candidato").pessoa
-    if dd_path.exists():
-        dd = pd.read_csv(dd_path, dtype=str, keep_default_na=False)
-        dd = dd[dd.sq_candidato.isin(sq.index)].assign(pessoa=lambda t: t.sq_candidato.map(sq), valor=lambda t: pd.to_numeric(t.valor))
-    else:
-        dd = pd.DataFrame(columns=["pessoa", "doador", "nome", "valor"])
-    csv(dd[["pessoa", "doador", "nome", "valor"]].sort_values(["pessoa", "valor", "doador"], ascending=[True, False, True]),
-        out / f"doadores_{leg}.csv")
-    donors = dd.groupby("pessoa").agg(grandes_doadores=("doador", "size"), grandes_doadores_valor=("valor", "sum"))
-
-    # Amendment money paid to companies under a barring sanction, every budget (the sanctions page's table).
-    sp = data / "site" / "sancoes" / "autores.csv"
-    if sp.exists():
-        s = pd.read_csv(sp, dtype=str, keep_default_na=False)
-        s = s[s.pessoa.isin(people)]
-        for c in ("pago_total", "pago_sancionadas", "empresas_sancionadas"):
-            s[c] = pd.to_numeric(s[c], errors="coerce").fillna(0)
-        sanc = s.groupby("pessoa")[["pago_total", "pago_sancionadas", "empresas_sancionadas"]].sum()
-        sanc.columns = ["sancoes_pago_total", "sancoes_pago_sancionadas", "sancoes_empresas"]
-    else:
-        sanc = pd.DataFrame(columns=["sancoes_pago_total", "sancoes_pago_sancionadas", "sancoes_empresas"])
+    camp = pd.DataFrame({"pessoa": view.pessoa, "ano": election_of(leg), "sq_candidato": view.campanha_sq_candidato})
+    dd, donated = donors(data, camp, out / f"doadores_{leg}.csv")
+    sanc = sanctions(data, set(view.pessoa))
 
     work = _activity(data, leg, view.deputado_id.tolist())
     csv(work["mo"], out / f"atividade_{leg}.csv")
@@ -298,7 +338,7 @@ def build_leg(data: Path, leg: int) -> dict:
     csv(work["parties"].sort_values(["deputado_id", "de"]), out / f"partidos_{leg}.csv")
 
     v = view.merge(_network(data, leg), on="deputado_id", how="left").merge(work["per"], on="deputado_id", how="left")
-    v = v.join(shares, on="pessoa").join(donors, on="pessoa").join(sanc, on="pessoa").join(_mayors(data, pg, view), on="pessoa")
+    v = v.join(shares, on="pessoa").join(donated, on="pessoa").join(sanc, on="pessoa").join(_mayors(data, pg, view), on="pessoa")
     for c in ("grandes_doadores", "grandes_doadores_valor", "sancoes_pago_sancionadas", "sancoes_pago_total", "sancoes_empresas"):
         v[c] = v[c].fillna(0)
     v["grandes_doadores"] = v.grandes_doadores.astype(int)

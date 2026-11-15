@@ -1,0 +1,4 @@
+data,fonte,tipo,chave,titulo,pf,detalhe,detalhe_en,valor,n,link
+2026-10-14,camara,mes,2026-10,,0,"3 votações nominais, em 14/10/2026","3 roll calls, on 14 Oct 2026",,3,../camara/?month=2026-10
+2026-09-01,camara,mes,2026-09,,0,"3 votações nominais, de 01/09/2026 a 03/09/2026","3 roll calls, 1 Sep 2026 to 3 Sep 2026",,3,../camara/?month=2026-09
+2026-08-12,camara,mes,2026-08,,0,"5 votações nominais, em 12/08/2026","5 roll calls, on 12 Aug 2026",,5,../camara/?month=2026-08

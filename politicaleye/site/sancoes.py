@@ -72,14 +72,15 @@ def name_tokens(data: Path) -> set[str]:
 def individual_firm(names: pd.Series, people: set[str]) -> pd.Series:
     """Whether a company name is a person's: an MEI name (``"12.345.678 JOAO SILVA"``), a name carrying a CPF, or
     two or more words that are all words of people's names (``"VAGNER BORGES DIAS"``, ``"JOAO DA SILVA ME"``), where
-    single-letter initials count too as long as one whole name word is there (``"P R C DUARTE"``, ``"A.K.R PRADO"``)."""
+    single-letter initials count too as long as one whole name word is there (``"P R C DUARTE"``, ``"A.K.R PRADO"``).
+    A name with LTDA, or ending in S.A. or S/A, is a company's."""
     from ..ref.politicians import norm
 
     def one(n: str) -> bool:
         if _MEI.search(n or ""):
             return True
         t = [x for x in norm(n).split() if x not in _SUFFIX]
-        if "LTDA" in t:
+        if "LTDA" in t or t[-2:] == ["S", "A"]:   # "S.A." and "S/A" read as two letters, not as initials
             return False
         core = [x for x in t if x not in _CONNECTORS]
         whole = [x for x in core if len(x) > 1]

@@ -85,12 +85,26 @@ header .crumb { margin: 0 0 14px; font-size: 12px; font-weight: 650; text-transf
 header .crumb a { color: var(--accent, var(--line)); text-decoration: none; }
 header .crumb a:hover { text-decoration: underline; }
 
-/* tabs: one scrolling row on narrow screens */
+/* tabs: one row. When the tabs don't fit it scrolls sideways; lib/ui.js tabs() wraps it in .tabbar
+   with a round arrow on each edge that has more, sitting on the fade, and keeps the open tab in view. */
 .tabs { display: flex; gap: 2px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 26px 0 20px; border-bottom: 1px solid var(--border); }
 .tabs::-webkit-scrollbar { display: none; }
-.tabs.more-right { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 44px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 44px), transparent); }
-.tabs.more-left { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 44px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 44px), transparent); }
-.tabs.more-left.more-right { -webkit-mask-image: linear-gradient(to right, transparent, #000 44px, #000 calc(100% - 44px), transparent); mask-image: linear-gradient(to right, transparent, #000 44px, #000 calc(100% - 44px), transparent); }
+.tabbar { --fade: 76px; display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; margin: 26px 0 20px; }
+.tabbar > * { grid-area: 1 / 1; }
+.tabbar > .tabs { margin: 0; }
+.tabbar.more-right > .tabs { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - var(--fade)), transparent calc(100% - 22px)); mask-image: linear-gradient(to right, #000 calc(100% - var(--fade)), transparent calc(100% - 22px)); }
+.tabbar.more-left > .tabs { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - var(--fade)), transparent calc(100% - 22px)); mask-image: linear-gradient(to left, #000 calc(100% - var(--fade)), transparent calc(100% - 22px)); }
+.tabbar.more-left.more-right > .tabs { -webkit-mask-image: linear-gradient(to right, transparent 22px, #000 var(--fade), #000 calc(100% - var(--fade)), transparent calc(100% - 22px)); mask-image: linear-gradient(to right, transparent 22px, #000 var(--fade), #000 calc(100% - var(--fade)), transparent calc(100% - 22px)); }
+.tab-arrow { all: unset; box-sizing: border-box; grid-area: 1 / 1; z-index: 1; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+  color: var(--ink2); background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow);
+  opacity: 0; visibility: hidden; transition: opacity .15s ease, visibility .15s, color .15s ease, border-color .15s ease; }
+.tab-arrow.prev { justify-self: start; }
+.tab-arrow.next { justify-self: end; }
+.tab-arrow::before { content: ""; width: 7px; height: 7px; border: solid currentColor; border-width: 0 1.75px 1.75px 0; }
+.tab-arrow.next::before { transform: translateX(-2px) rotate(-45deg); }
+.tab-arrow.prev::before { transform: translateX(2px) rotate(135deg); }
+.tab-arrow:hover { color: var(--ink); border-color: color-mix(in srgb, var(--accent, var(--ink)) 45%, transparent); }
+.tabbar.more-left > .prev, .tabbar.more-right > .next { opacity: 1; visibility: visible; }
 .tabs button {
   all: unset; cursor: pointer; padding: 10px 14px; font-size: 14px; font-weight: 500; color: var(--ink2); border-bottom: 2px solid transparent;
   margin-bottom: -1px; white-space: nowrap; border-radius: 8px 8px 0 0; transition: color .15s ease, background .15s ease;

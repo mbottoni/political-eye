@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Senators across sources · political-eye">Senadores em todas as fontes · political-eye</title>
+<meta name="description" content="Cada senador em um só lugar: como vota, com quem vota, o que assina, o dinheiro de emendas que enviou e para onde, e a campanha que lhe deu a vaga." data-en-content="Every senator in one place: how they vote, whom they vote with, what they sign, the amendment money they sent and where, and the race that gave them their seat.">
+<link rel="stylesheet" href="../lib/site.css">
+<link rel="stylesheet" href="../lib/profile.css">
+</head>
+<body>
+<main>
+  <header>
+    <p class="crumb"><a href="../">political-eye</a> / Senadores em todas as fontes</p>
+    <h1 data-en="Senators across sources">Senadores em todas as fontes</h1>
+    <p data-en="The Senate's 81 seats, held for eight years, leave the same traces as the Câmara's: roll calls, amendments to the federal budget and campaign accounts filed with the electoral court. This page joins them for each senator of the current and the previous legislature, substitutes who took a seat included: how they vote and with whom, what they sign, the amendment money they sent and where it landed, and the race that gave them their seat. Each measure is ranked against the other senators, never against the 513 deputies; then the page compares all senators at once.">As 81 cadeiras do Senado, ocupadas por oito anos, deixam os mesmos rastros que as da Câmara: votações nominais, emendas ao Orçamento federal e prestações de contas de campanha entregues à Justiça Eleitoral. Esta página reúne esses registros para cada senador da legislatura atual e da anterior, suplentes que assumiram incluídos: como vota e com quem, o que assina, o dinheiro de emendas que enviou e onde ele chegou, e a campanha que lhe deu a vaga. Cada medida é comparada à dos outros senadores, nunca à dos 513 deputados; depois, a página compara todos os senadores de uma vez.</p>
+  </header>
+  <div class="controls" id="legislature"></div>
+  <nav class="tabs">
+    <button data-tab="profile" data-en="One senator">Um senador</button>
+    <button data-tab="compare" data-en="Compare senators">Comparar senadores</button>
+    <button data-tab="parties" data-en="Parties">Partidos</button>
+    <button data-tab="outliers" data-en="Stand-outs">Destaques</button>
+  </nav>
+  <section id="tab-profile" role="tabpanel"></section>
+  <section id="tab-compare" role="tabpanel" hidden></section>
+  <section id="tab-parties" role="tabpanel" hidden></section>
+  <section id="tab-outliers" role="tabpanel" hidden></section>
+  <footer data-en-html="Votes: contested Plenário roll calls (at least 2.5% of votes on the losing side), pooled over the legislature; the Senate's own roll calls only, not joint sessions of Congress. &quot;With their party&quot; is how often a senator followed their party leader's orientation (published from October 2018); &quot;with the government&quot;, the government leader's. Participation is the votes cast over the roll calls held while they were in office, those they presided left out. The Senate does not record signing order: a senator signed a matéria whether they wrote it or joined it; signature drives (over 20 senators, every PEC among them) and signatures as a leader are counted apart. Amendments: those the senator authored for the budgets their legislature approved, as paid so far. Campaign: the Senate race, as candidate or substitute, that gave them the seat (2018 or 2022; 2014 is not in the data), and every candidacy of 2018, 2022 and 2026 linked to them. Rules and gaps: <a href=&quot;https://github.com/mbottoni/political-eye/blob/main/methodology/views.md#the-senators-page-datasitesenadores&quot;>methodology/views.md</a> and <a href=&quot;https://github.com/mbottoni/political-eye/blob/main/methodology/senado.md&quot;>methodology/senado.md</a>. Sources: Senado Federal, Portal da Transparência (CGU), TSE.">
+    Votos: votações nominais disputadas do Plenário (ao menos 2,5% dos votos no lado derrotado), somadas ao longo da legislatura; só as do Senado, não as sessões conjuntas do Congresso. "Com o partido" é a frequência com que o senador seguiu a orientação do líder do partido (publicada desde outubro de 2018); "com o governo", a do líder do governo. A participação é a parcela das votações realizadas enquanto estava no cargo em que votou, sem contar as que presidiu. O Senado não registra a ordem das assinaturas: um senador assinou uma matéria tanto se a escreveu quanto se aderiu a ela; abaixo-assinados (mais de 20 senadores, entre eles toda PEC) e assinaturas como líder são contados à parte. Emendas: as que o senador apresentou aos orçamentos aprovados pela sua legislatura, pelo valor pago até agora. Campanha: a candidatura ao Senado, como titular ou suplente, que lhe deu a vaga (2018 ou 2022; 2014 não está nos dados), e todas as candidaturas de 2018, 2022 e 2026 ligadas a ele. Regras e lacunas: <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/views.md#the-senators-page-datasitesenadores">methodology/views.md</a> e <a href="https://github.com/mbottoni/political-eye/blob/main/methodology/senado.md">methodology/senado.md</a>. Fontes: Senado Federal, Portal da Transparência (CGU), TSE.
+  </footer>
+</main>
+<noscript>Esta página precisa de JavaScript. Os dados estão em <a href="https://github.com/mbottoni/political-eye/tree/main/data/views">github.com/mbottoni/political-eye</a>.</noscript>
+<script type="module" src="../deputados/app.js"></script>
+</body>
+</html>

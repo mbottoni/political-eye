@@ -97,6 +97,11 @@ Companies and members of Congress that appear on two lists or more. Appearing tw
 is one fact seen twice (a barred company that receives amendments and also signs contracts). They are the
 first cases to look at.
 
+## New flags
+
+Each build lists the flags that were not in the previous one in `data/site/mudancas/alertas.csv`, read by the
+what-changed page and its feed ([mudancas.md](mudancas.md)).
+
 ## Thresholds
 
 `CONC_MIN`, `CONC_SHARE`, `CONC_SINCE`, `CAMPAIGN_MIN`, `DOM_CONTRACTS`, `DOM_VALUE` and `DOM_SHARE` in

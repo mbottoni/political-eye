@@ -9,6 +9,7 @@ export const SECTIONS = [
     { key: "senado", pt: "Senado Federal", en: "Senado Federal" },
     { key: "orientacoes", pt: "Orientação partidária", en: "Party orientations" },
     { key: "deputados", pt: "Deputados em todas as fontes", en: "Deputies across sources" },
+    { key: "senadores", pt: "Senadores em todas as fontes", en: "Senators across sources" },
     { key: "ranking", pt: "Ranking dos deputados", en: "Deputies ranked" }] },
   { key: "dinheiro", pt: "Dinheiro público", en: "Public money", accent: "--s3", pages: [
     { key: "tse", pt: "Financiamento de campanha", en: "Campaign finance" },
@@ -18,7 +19,8 @@ export const SECTIONS = [
     { key: "municipios", pt: "Meu município", en: "My town" }] },
   { key: "controle", pt: "Controle e justiça", en: "Accountability and justice", accent: "--s8", pages: [
     { key: "sancoes", pt: "Sanções", en: "Sanctions" },
-    { key: "alertas", pt: "Sinais de alerta", en: "Red flags" }] },
+    { key: "alertas", pt: "Sinais de alerta", en: "Red flags" },
+    { key: "mudancas", pt: "O que mudou", en: "What changed" }] },
 ];
 const REPO = "https://github.com/mbottoni/political-eye";
 

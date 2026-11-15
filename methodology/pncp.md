@@ -101,6 +101,10 @@ summaries that `python -m politicaleye site build pncp`
 (`politicaleye/site/pncp.py`) writes to `data/site/pncp/`. The daily job
 rebuilds them after each run.
 
+Contracts of R$ 100 million or more published in the last 90 days are also
+listed day by day on the what-changed page and in its feed
+([mudancas.md](mudancas.md)).
+
 **Coverage.** Every total says how many days of the history it covers
 (`dias.csv`, out of every day since 1 September 2021). The history is read
 newest first. Days read are a sample of the calendar, not of buyers, so

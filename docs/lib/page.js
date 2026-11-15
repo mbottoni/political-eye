@@ -20,6 +20,7 @@ export const SECTIONS = [
   { key: "controle", pt: "Controle e justiça", en: "Accountability and justice", accent: "--s8", pages: [
     { key: "sancoes", pt: "Sanções", en: "Sanctions" },
     { key: "alertas", pt: "Sinais de alerta", en: "Red flags" },
+    { key: "empresas", pt: "Empresas em todas as fontes", en: "Companies across sources" },
     { key: "mudancas", pt: "O que mudou", en: "What changed" }] },
 ];
 const REPO = "https://github.com/mbottoni/political-eye";

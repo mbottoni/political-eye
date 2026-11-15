@@ -35,6 +35,7 @@ PAGES = [
     "docs/senadores/?tab=profile&sen=5936&lang=en",
     "docs/mudancas/", "docs/mudancas/?fonte=alertas&dias=90", "docs/mudancas/?lang=en&fonte=pncp&dias=7",
     "docs/municipios/", "docs/municipios/?town=2611101&lang=en", "docs/municipios/?town=5300108",
+    "docs/empresas/", "docs/empresas/?tab=list", "docs/empresas/?lang=en",
 ]
 CHROME = ["google-chrome", "google-chrome-stable", "chromium", "chromium-browser",
           "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"]

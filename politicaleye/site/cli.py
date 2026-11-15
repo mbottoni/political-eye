@@ -11,7 +11,7 @@ from pathlib import Path
 from ..paths import DATA
 
 # page -> module under politicaleye.site with a build(data: Path) -> dict
-PAGES = {"camara": "camara", "senado": "senado", "orientacoes": "orientacoes", "emendas": "emendas", "tse": "tse", "sancoes": "sancoes", "deputados": "deputados", "pncp": "pncp", "siconfi": "siconfi", "alertas": "alertas", "ranking": "ranking", "municipios": "municipios", "senadores": "senadores", "eleicao": "eleicao",
+PAGES = {"camara": "camara", "senado": "senado", "orientacoes": "orientacoes", "emendas": "emendas", "tse": "tse", "sancoes": "sancoes", "deputados": "deputados", "pncp": "pncp", "siconfi": "siconfi", "alertas": "alertas", "ranking": "ranking", "municipios": "municipios", "empresas": "empresas", "senadores": "senadores", "eleicao": "eleicao",
          "mudancas": "mudancas"}   # last: it reads the other pages' summaries
 
 

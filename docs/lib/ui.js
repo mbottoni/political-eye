@@ -78,16 +78,41 @@ export function setParam(k, v, dflt) {
   history.replaceState(null, "", q ? `?${q}` : location.pathname);
 }
 
-/** Tabs: buttons in `nav.tabs` with data-tab, panels with id `tab-<name>`. Calls onShow(name) the first time a tab opens. */
+/**
+ * Tabs: buttons in `nav.tabs` with data-tab, panels with id `tab-<name>`. Calls onShow(name) the first time a tab opens.
+ * The tabs stay on one row. When they don't fit, the row scrolls sideways; a round arrow over the fade on each
+ * side with hidden tabs shows there is more and pages the row along. The open tab is kept in view.
+ */
 export function tabs(onShow) {
   const nav = $("nav.tabs"), buttons = $$("button[data-tab]", nav), shown = new Set();
+  const motion = () => (matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth");
+  // Page along: the first tab not fully clear of the fade on that side comes into view, so none is skipped.
+  const page = (dir) => {
+    const n = nav.getBoundingClientRect(), pad = 60, rs = buttons.map((b) => b.getBoundingClientRect());
+    const r = dir > 0 ? rs.find((x) => x.right > n.right - pad + 4) : rs.findLast((x) => x.left < n.left + pad - 4);
+    const by = !r ? dir * nav.clientWidth : dir > 0 ? Math.max(60, r.left - n.left - pad) : Math.min(-60, r.right - n.right + pad);
+    nav.scrollBy({ left: by, behavior: motion() });
+  };
+  const arrow = (dir) => el("button", { type: "button", className: `tab-arrow ${dir > 0 ? "next" : "prev"}`, tabIndex: -1, "aria-hidden": "true",
+    title: dir > 0 ? L("Mais abas", "More tabs") : L("Abas anteriores", "Previous tabs"), on: { click: () => page(dir) } });
+  const bar = el("div", { className: "tabbar" });
+  nav.before(bar);
+  bar.append(nav, arrow(-1), arrow(1));
   const edges = () => {
-    nav.classList.toggle("more-left", nav.scrollLeft > 2);
-    nav.classList.toggle("more-right", nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 2);
+    bar.classList.toggle("more-left", nav.scrollLeft > 2);
+    bar.classList.toggle("more-right", nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 2);
+  };
+  // Centre the open tab in the bar without moving the page.
+  const reveal = (behavior = "auto") => {
+    const b = buttons.find((x) => x.getAttribute("aria-selected") === "true");
+    if (!b || nav.scrollWidth <= nav.clientWidth) return;
+    const r = b.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    nav.scrollTo({ left: nav.scrollLeft + r.left - n.left - (n.width - r.width) / 2, behavior });
   };
   nav.addEventListener("scroll", edges, { passive: true });
   new ResizeObserver(edges).observe(nav);
-  const show = (name) => {
+  document.fonts?.ready.then(() => { reveal(); edges(); });   // tab widths change when the web font arrives
+  const show = (name, behavior) => {
     if (!buttons.some((b) => b.dataset.tab === name)) name = buttons[0].dataset.tab;
     for (const b of buttons) {
       const on = b.dataset.tab === name;
@@ -96,9 +121,7 @@ export function tabs(onShow) {
       $(`#tab-${b.dataset.tab}`).hidden = !on;
     }
     setParam("tab", name, buttons[0].dataset.tab);
-    // Bring the chosen tab into the bar's view without moving the page.
-    const b = buttons.find((x) => x.dataset.tab === name);
-    if (b && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = Math.max(0, b.offsetLeft - nav.offsetLeft - (nav.clientWidth - b.offsetWidth) / 2);
+    reveal(behavior);
     edges();
     if (!shown.has(name)) { shown.add(name); onShow(name); }
     window.dispatchEvent(new Event("tabshow"));
@@ -106,14 +129,14 @@ export function tabs(onShow) {
   nav.setAttribute("role", "tablist");
   for (const b of buttons) {
     b.setAttribute("role", "tab");
-    b.addEventListener("click", () => show(b.dataset.tab));
+    b.addEventListener("click", () => show(b.dataset.tab, motion()));
     b.addEventListener("keydown", (e) => {
       const i = buttons.indexOf(b), j = e.key === "ArrowRight" ? i + 1 : e.key === "ArrowLeft" ? i - 1 : null;
-      if (j != null) { const n = buttons[(j + buttons.length) % buttons.length]; n.focus(); show(n.dataset.tab); }
+      if (j != null) { const n = buttons[(j + buttons.length) % buttons.length]; n.focus(); show(n.dataset.tab, motion()); }
     });
   }
   show(params.get("tab") || buttons[0].dataset.tab);
-  return show;
+  return (name) => show(name, motion());
 }
 
 // ------------------------------------------------------------ tooltip

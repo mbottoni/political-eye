@@ -36,3 +36,8 @@ data,lista,mudanca,kind,n
 2026-11-16,ceis,saiu,pessoa,5
 2026-11-16,cnep,entrou,empresa,6
 2026-11-16,cnep,saiu,empresa,4
+2026-11-17,ceis,entrou,empresa,37
+2026-11-17,ceis,saiu,empresa,25
+2026-11-17,ceis,saiu,pessoa,22
+2026-11-17,cnep,entrou,empresa,3
+2026-11-17,cnep,saiu,empresa,2

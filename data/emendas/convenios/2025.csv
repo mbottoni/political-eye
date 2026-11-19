@@ -1,6 +1,7 @@
 codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,subfuncao
 202512710007,984424,2025-12-19,INSTITUTO CULTURAL REDEGUNDIS FEITOSA NUNES,Realizar curso de formacao e pesquisa audiovisual em geral na cidade de Itaporanga/PB.,200000.00,PARAÍBA (UF),13,392
 202512710007,985812,2025-12-25,GREMIO RECREATIVO E CULTURAL ESCOLA DE SAMBA UNIDOS DO ROGER,"Implementar e desenvolver o Projeto Oficinas Carnavalescas de Samba, por meio da realizacao de acoes formativas e culturais voltadas ao segmento carnavalesco, incluindo oficinas gratuitas de percussao, danca afrobrasileira e corte e costura de fantasias, na cidade de Joao Pessoa/PB",250000.00,PARAÍBA (UF),13,392
+202512710008,988228,2025-12-17,CONSORCIO INTERMUNICIPAL DE SAUDE DO CARIRI OCIDENTAL,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,299998.00,PARAÍBA (UF),10,302
 202512710012,986254,2025-12-22,DIOCESE DE GUARABIRA,"O presente instrumento tem como objeto a cooperacao tecnico-financeira entre o Ministerio da Cultura e o Santuario Padre Ibiapina visando a implantacao, estruturacao e funcionamento de um museu nas dependencias do Santuario localizado em Santa Fe, distrito do municipio de Solanea, estado da Paraiba. A iniciativa tem como finalidade a preservacao, organizacao, pesquisa, salvaguarda e difusao do acervo historico, cultu",400000.00,PARAÍBA (UF),13,391
 202512710015,980795,2025-12-05,ORGANIZACAO PARA O DESENVOLVIMENTO COMUNITARIO SUSTENTAVEL,Desenvolvimento do Projeto Filhos da Inteligencia,300000.00,PARAÍBA (UF),24,126
 202512710017,989091,2025-12-31,ASSOCIACAO COMUNITARIA DOS PRODUTORES RURAIS DO MUNICIPIO DE MATARACA-ACPRM,"Estruturacao de Unidades Produtivas Agroecologicas Integradas com Base em Bioinsumos e SAFs, c/ criacao de animais, cultivo de mandioca e implantacao de unidades de capacitacao em agroecologia, beneficiando agricultorasfamiliares que sao maes solteiras da Uruba, em Mataraca/PB, no ambito da Acao 210V.",200000.00,PARAÍBA (UF),21,608
@@ -41,6 +42,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202514030012,977665,2025-12-30,CARITAS DIOCESANA DE TEOFILO OTONI,"Promover o fortalecimento e a estruturacao das organizacoes sociais de Agricultores familiares, associacoes, cooperativas e similares atraves da implantacao de unidades produtivas dos assentamentos da reforma agraria e das areas de ampliacao e diversificacao da producao de agricultores familiares do municipio de Teofilo Otoni MG",400000.00,MINAS GERAIS (UF),21,608
 202514050001,977695,2025-10-13,CENTRO DE DESENVOLVIMENTO ECONOMICO E SOCIAL,"Fomentar a agricultura familiar urbana, periurbana e rural de Sete Lagoas, por meio de difusao de conhecimento, capacitacao em sistemas sustentaveis de producao, acompanhamento tecnico, fortalecimento do protagonismo de jovens e mulher e desenvolvimento e implantacao de aplicativo digital (HORTA FACIL), voltado a gestao das hortas.",200000.00,MINAS GERAIS (UF),21,606
 202514050002,978143,2025-10-09,FUNDACAO EDUCACIONAL LUCAS MACHADO FELUMA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,400000.00,MINAS GERAIS (UF),10,302
+202514050002,978150,2025-11-14,ASCOMCER - INSTITUTO DE SAUDE,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,400000.00,MINAS GERAIS (UF),10,302
 202514050004,975900,2025-12-05,NIC - NUCLEO DE INCENTIVO A CIDADANIA,"Implementacao e Desenvolvimento do Projeto Mulheres em Cena por meio de realizacao de oficinas destinadas as mulheres de 18 a 59 anos, em situacao de vulnerabilidade social na cidade de Contagem- MG, oportunizando o desenvolvimento de habilidades para a construcao de novas oportunidades de geracao de renda, fortalecendo autonomia e melhoria na qualidade de vida das mulheres.",299955.48,MINAS GERAIS (UF),14,422
 202514050006,977473,2025-12-08,INSTITUTO CULTURAL AMILCAR MARTINS,"Desenvolvimento, publicacao e distribuicao do software de pesquisa da Revista do Arquivo Publico Mineiro pelo INSTITUTO CULTURAL AMILCAR MARTINS.",876000.00,BELO HORIZONTE - MG,13,392
 202514050009,975502,2025-12-18,ASSOCIACAO COMERCIAL INDUSTRIAL E AGRONEGOCIOS DE MANHUACU,"Apoio a Realizacao do 27 Simposio de Cafeicultura da Regiao das Matas de Minas, a ser realizado na cidade de Manhuacu- Minas Gerais.",286500.00,MINAS GERAIS (UF),20,608
@@ -113,6 +115,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202516190004,976228,2025-09-04,MUNICIPIO DE NOVA OLINDA DO NORTE,CONSTRUCAO DO CENTRO CULTURAL DIAMANTE NEGRO,428807.58,NOVA OLINDA DO NORTE - AM,15,244
 202516190004,976230,2025-09-05,MUNICIPIO DE CAAPIRANGA,Construcao da 2a Etapa da Orla no Municipio de Caapiranga/AM,955000.00,CAAPIRANGA - AM,15,244
 202516190004,976231,2025-09-04,MUNICIPIO DE BARREIRINHA,CONSTRUCAO DE ESPACO COLETIVO NO MUNICIPIO DE BARREIRINHA-1a ETAPA,1281057.19,BARREIRINHA - AM,15,244
+202516190004,976234,2025-09-15,MUNICIPIO DE TEFE,CONSTRUCAO DE GINASIO COBERTO NO MUNICIPIO DE TEFE/AM,4654705.39,TEFÉ - AM,15,244
 202516190004,976236,2025-09-04,MUNICIPIO DE NOVA OLINDA DO NORTE,AMPLIACAO DO CENTRO CULTURAL CORRE CAMPO,470000.00,NOVA OLINDA DO NORTE - AM,15,244
 202516190004,976239,2025-09-04,MUNICIPIO DE MARAA,CONSTRUCAO DO CENTRO CULTURAL NO MUNICIPIO DE MARAA - 1a ETAPA,950229.51,MARAÃ - AM,15,244
 202516190004,976241,2025-09-04,MUNICIPIO DE BOCA DO ACRE,CONSTRUCAO DE UM TERMINAL RODOVIARIO NO MUNICIPIO DE BOCA DO ACRE/AM,1428317.14,BOCA DO ACRE - AM,15,244
@@ -217,14 +220,25 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202519970025,977348,2025-08-15,INSTITUTO PARA O DESENVOLVIMENTO SUSTENTAVEL E CIDADANIA DO VALE DO RIBEIRA,"Acao de educacao popular, conscientizacao, incidencia e inovacao metodologica para o fortalecimento do protagonismo comunitario visando a producao de alimentos saudaveis e agroecologicas no meio urbano, com a promocao de novos habitos de alimentacao saudavel, visando o combate a inseguranca alimentar em Registro/SP.",150000.00,SÃO PAULO (UF),21,606
 202520230002,976358,2025-07-28,MUNICIPIO DE PAIM FILHO,PAVIMENTACAO ASFALTICA NO PERIMETRO URBANO DO MUNICIPIO DE PAIM FILHO/RS,384205.00,PAIM FILHO - RS,15,451
 202520230002,976359,2025-07-21,MUNICIPIO DE DOIS IRMAOS DAS MISSOES,Pavimentacao Asfaltica em Vias Urbanas,384205.00,DOIS IRMÃOS DAS MISSÕES - RS,15,451
+202520230002,976360,2025-07-31,MUNICIPIO DE SANTO ANTONIO DO PALMA,"Implantacao de Pavimentacao em vias urbanas, Santo Antonio do Palma RS.",384205.00,SANTO ANTÔNIO DO PALMA - RS,15,451
+202520230002,977025,2025-08-01,MUNICIPIO DE DILERMANDO DE AGUIAR,Implantacao de pavimentacao em vias publicas urbanas no municipio de Dilermando de Aguiar/RS.,384205.00,DILERMANDO DE AGUIAR - RS,15,451
+202520230002,977026,2025-08-22,MUNICIPIO DE CAPAO DO LEAO,Implantacao de pavimentacao em vias publicas urbanas no municipio de Capao do Leao/RS.,384205.00,CAPÃO DO LEÃO - RS,15,451
+202520230002,977038,2025-08-13,MUNICIPIO DE NOVO XINGU,Obra de Infraestrutura urbana - pavimentacao asfaltica no perimetro urbano do municipio de Novo Xingu-RS.,384205.00,NOVO XINGU - RS,15,451
 202520230002,977041,2025-07-30,MUNICIPIO DE PONTE PRETA,"Pavimentacao Asfaltica (CBUQ), Sinalizacao Viaria e Construcao de Passeio Publico em via urbana do municipio de Ponte Preta -RS.",384205.00,PONTE PRETA - RS,15,451
+202520230002,977042,2025-07-30,MUNICIPIO DE FORMIGUEIRO,Pavimentacao da Rua Samuel Massaro com todas as intervencoes no perimetro urbano,384205.00,FORMIGUEIRO - RS,15,451
 202520230002,977320,2025-08-04,MUNICIPIO DE CANUDOS DO VALE,Pavimentacao de vias urbanas no municipio de Canudos do Vale/RS.,384205.00,CANUDOS DO VALE - RS,15,451
+202520230002,977323,2025-08-19,MUNICIPIO DE BARAO DO TRIUNFO,INTERVENCOES DE QUALIFICACAO VIARIA NO PERIMETRO URBANO DO MUNICIPIO DE BARAO DO TRIUNFO/RS.,384205.00,BARÃO DO TRIUNFO - RS,15,451
 202520230002,977331,2025-08-28,MUNICIPIO DE LAGOAO,PAVIMENTACAO DE VIA URBANA,384205.00,LAGOÃO - RS,15,451
+202520230002,977333,2025-08-18,MUNICIPIO DE PALMARES DO SUL,QUALIFICACAO DE VIAS URBANAS NO MUNICIPIO DE PALMARES DO SUL/RS.,384205.00,PALMARES DO SUL - RS,15,451
 202520230002,977343,2025-08-15,MUNICIPIO DE TABAI,Pavimentacao com Bloco de Concreto Intertravado na Rua do Municipio de Tabai- RS. Sendo que a rua e dentro do perimetro urbano do municipio.,384205.00,TABAÍ - RS,15,451
+202520230002,977602,2025-08-27,MUNICIPIO DE ITAARA,Pavimentacao de via urbana no Municipio de Itaara - RS.,384205.00,ITAARA - RS,15,451
 202520230002,977603,2025-08-27,MUNICIPIO DE IRAI,Pavimentacao asfaltica em via Publica.,384205.00,IRAÍ - RS,15,451
 202520230002,977605,2025-08-15,MUNICIPIO DE TENENTE PORTELA,IMPLANTACAO DE PAVIMENTACAO EM VIAS PUBLICAS URBANAS,384205.00,TENENTE PORTELA - RS,15,451
 202520230002,977609,2025-09-02,MUNICIPIO DE CONSTANTINA,PAVIMENTACAO,384205.00,CONSTANTINA - RS,15,451
+202520230002,977610,2025-08-25,MUNICIPIO DE CAMARGO,Recapeamento em vias Urbanas do Municipio de Camargo/RS.,384205.00,CAMARGO - RS,15,451
+202520230002,977611,2025-09-10,MUNICIPIO DE ALEGRIA,Pavimentacao Asfaltica no municipio de Alegria/RS.,384205.00,ALEGRIA - RS,15,451
 202520230002,991014,2026-01-05,MUNICIPIO DE NOVA BOA VISTA,Pavimentacao urbana na Rua Madeira,389863.00,NOVA BOA VISTA - RS,15,451
+202520230004,978379,2025-12-09,MUNICIPIO DE NOVA PALMA,Reforma e aquisicao de equipamentos do Centro Cultural do Municipio de Nova Palma RS,487329.00,NOVA PALMA - RS,13,845
 202520230006,975989,2025-08-29,MUNICIPIO DE MAMPITUBA,Aquisicao de Equipamento Agricola.,188513.02,MAMPITUBA - RS,15,244
 202520230006,975990,2025-08-29,MUNICIPIO DE HERVEIRAS,Maquinas e equipamentos,191000.00,HERVEIRAS - RS,15,244
 202520230006,975991,2025-08-29,MUNICIPIO DE MARAU,Aquisicao de Maquinas e Equipamentos.,191000.00,MARAU - RS,15,244
@@ -241,7 +255,9 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202520230008,974952,2025-07-01,MUNICIPIO DE LINHA NOVA,Aquisicao de maquinas e Equipamentos.,285545.00,LINHA NOVA - RS,20,608
 202520230008,974977,2025-07-01,MUNICIPIO DE BOA VISTA DO CADEADO,AQUISICAO MAQUINAS E EQUIPAMENTOS,285545.00,BOA VISTA DO CADEADO - RS,20,608
 202520230008,974978,2025-07-01,MUNICIPIO DE SAO PEDRO DAS MISSOES,Aquisicao de Maquinas e Equipamentos,285545.00,SÃO PEDRO DAS MISSÕES - RS,20,608
+202520230008,974979,2025-11-28,MUNICIPIO DE CAPAO DO CIPO,Aquisicao de Maquinas e Equipamentos.,285545.00,CAPÃO DO CIPÓ - RS,20,608
 202520230008,974982,2025-07-01,MUNICIPIO DE CORONEL PILAR,Aquisicao de Maquinas e Equipamentos.,285545.00,CORONEL PILAR - RS,20,608
+202520230008,974985,2025-07-01,MUNICIPIO DE SOBRADINHO,Aquisicao de maquinas e equipamentos.,285545.00,SOBRADINHO - RS,20,608
 202520230008,975110,2025-07-01,MUNICIPIO DE PRESIDENTE LUCENA,Aquisicao de Maquinas e Equipamentos.,285545.00,PRESIDENTE LUCENA - RS,20,608
 202520230008,975176,2025-07-01,MUNICIPIO DE RONDINHA,Aquisicao de Maquinas e Equipamentos.,285545.00,RONDINHA - RS,20,608
 202520230008,975186,2025-07-16,MUNICIPIO DE BARRA DO GUARITA,Aquisicao de Maquinas e Equipamentos,293048.44,BARRA DO GUARITA - RS,20,608
@@ -257,6 +273,8 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202520230008,975476,2025-07-16,MUNICIPIO DE IBIRAIARAS,Aquisicao de Maquinas e Equipamentos,285545.00,IBIRAIARAS - RS,20,608
 202520230008,975489,2025-08-04,MUNICIPIO DE COLORADO,AQUISICAO DE MAQUINAS E EQUIPAMENTOS,524295.00,COLORADO - RS,20,608
 202520230008,975505,2025-08-04,MUNICIPIO DE ANDRE DA ROCHA,Aquisicao de Maquinas e Equipamentos.,285545.00,ANDRÉ DA ROCHA - RS,20,608
+202520230008,975512,2025-10-31,MUNICIPIO DE AUREA,AQUISICAO DE MAQUINAS E EQUIPAMENTOS,285545.00,ÁUREA - RS,20,608
+202520230008,975559,2025-12-18,MUNICIPIO DE PROGRESSO,AQUISICAO DE MAQUINAS E EQUIPAMENTOS,285545.00,PROGRESSO - RS,20,608
 202520230008,975592,2025-12-23,MUNICIPIO DE CRISTAL,AQUISICAO DE MAQUINAS E EQUIPAMENTOS,285545.00,CRISTAL - RS,20,608
 202520230012,975888,2025-07-21,MUNICIPIO DE CANELA,Revitalizacao do Parque do Lago no Municipio de Canela/RS.,384205.00,CANELA - RS,23,695
 202520230012,976026,2025-07-16,MUNICIPIO DE CHAPADA,Revitalizacao da Praca da Republica no Municipio de Chapada-RS.,384205.00,CHAPADA - RS,23,695
@@ -305,6 +323,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202520380012,980793,2025-11-14,ASSOCIACAO DE ACOLHIMENTO RANCHO DOS PROFETAS,"Instalacao de uma usina de energia solar fotovoltaica, visando reduzir os custos operacionais com energia eletrica, promovendo a sustentabilidade financeira da instituicao a medio e longo prazo, melhorando a infraestrutura e qualidade dos servicos prestados.",100000.00,PARANÁ (UF),08,244
 202520380012,981660,2025-12-18,COMUNIDADE TERAPEUTICA SAO JOSE,"Continuidade na contratacao de pessoa juridica para a prestacao de servicos de Monitoramento, Assessoria Tecnica Permanente, Recrutamento e Selecao de RH; contratacao de pessoa juridica para a prestacao de servicos de consultoria especializada na elaboracao / execucao de projetos e contratacao de pessoa juridica para a prestacao de servicos de Capacitacao Continuada dos colaboradores.",260000.00,PARANÁ (UF),08,244
 202520380014,1ABAUH,2025-12-24,"FUNDACAO DA UNIVERSIDADE FEDERAL DO PARANA PARA O DESENVOLVIMENTO DA CIENCIA,TECNOLOGIA E DA CULTURA","CONTRATO 172/2025 ENTRE UFPR E FUNPAR. PROCESSO 23075.048552/2025-97 OBJETO: IMPLEMENTAÇÃO DO[CENTRO INTERDISCIPLINAR DE PESQUISA, INOVAÇÃOE DESENVOLVIMENTO DE FÁRMACOS À BASE DE CANNABIS - CIPID-CANNABIS",889212.17,PARANÁ (UF),12,364
+202520830003,986792,2025-12-08,MUNICIPIO DE BARREIRA,Pavimentacao em Vias Urbanas do Municipio de Barreira - CE,389863.00,BARREIRA - CE,15,451
 202520830005,986873,2025-12-30,INSTITUTO DE ASSISTENCIA E PROTECAO SOCIAL,"Promover a inclusao digital e o desenvolvimento sustentavel de pessoas em situacao de vulnerabilidade social, por meio da ampliacao e estruturacao das atividades do Centro de Recondicionamento de Computadores CRC/IAPS nos estados do Ceara e Rio Grande do Norte, com a aquisicao de bens permanentes (equipamentos de informatica, mobiliario, equipamentos de climatizacao, infraestrutura de galpao e ferramentas profission",200000.00,CEARÁ (UF),24,126
 202520830006,986071,2026-01-02,INSTITUTO TECNOLOGICO HIDROAMBIENTAL CULTURAL ESPORTIVO E SOCIAL DO BRASIL - IHAB,Apoio a Realizacao da 3a edicao do Evento WBS Obstacle Race no Municipio de Fortaleza/CE,196000.00,CEARÁ (UF),27,812
 202520830010,976150,2025-07-17,MUNICIPIO DE CARIRIACU,Construcao de Passagens Molhadas em Areas Rurais do Municipio de Caririacu - Ceara,955000.00,CARIRIAÇU - CE,15,244
@@ -334,6 +353,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202523970005,984443,2025-12-31,"FUNDACAO COORDENACAO DE PROJETOS,PESQUISAS E ESTUDOS TECNOLOGICOS COPPETEC","Desenvolver e implementar um conjunto de acoes voltadas a estruturacao e consolidacao do Nucleo de Inovacao e Projetos (NUINP/UNIRIO), como unidade estrategica e metodologica a gestao de projetos e parcerias institucionais. O projeto visa ao aperfeicoamento da governanca, a transparencia, a eficiencia, a captacao de recursos e a gestao orientada a resultados na UNIRIO",3192589.07,RIO DE JANEIRO (UF),12,364
 202523970007,975081,2025-07-01,MUNICIPIO DE CANTAGALO,Aquisicao de maquinas e equipamentos.,334250.00,CANTAGALO - RJ,20,608
 202523970007,975272,2025-09-01,SINDICATO RURAL DE RESENDE,Aquisicao de equipamentos com o objetivo de aprimorar a capacidade de atendimento e desenvolvimento do Sindicato Rural de Resende.,353350.00,RIO DE JANEIRO (UF),20,608
+202523970007,975283,2025-10-10,MUNICIPIO DE SUMIDOURO,AQUISICAO DE MAQUINAS E EQUIPAMENTOS,286500.00,SUMIDOURO - RJ,20,608
 202523970007,975329,2025-07-24,MUNICIPIO DE ITAOCARA,Aquisicao de Maquinas e Equipamentos,587325.00,ITAOCARA - RJ,20,608
 202524070001,984126,2025-11-24,HOSPITAL BENEFICENTE SAO CARLOS,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,200000.00,RIO GRANDE DO SUL (UF),10,302
 202524420004,975274,2025-08-27,INSTITUTO FLOR DO PIQUI,"Apoio a agricultura e a agroindustria de pequeno e medio porte no estado do Ceara, por meio da realizacao de feiras, festivais de integracao produtiva, intercambios, cursos de capacitacao e acoes de comercializacao, visando fortalecer cadeias produtivas, gerar renda e promover o desenvolvimento sustentavel.",1910000.00,CEARÁ (UF),20,608
@@ -345,6 +365,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202524420015,981610,2026-01-12,ASSOCIACAO DOS ATINGIDOS POR BARRAGENS EM DEFESA DO MEIO AMBIENTE,"Realizacao de oficinas comunitarias sobre acesso a justica e direitos socioambientais, articuladas a producao de um levantamento participativo sobre as condicoes de acesso ao saneamento basico por populacoes atingidas, com base na metodologia AAAQ (disponibilidade, acessibilidade, aceitabilidade e qualidade) e analise dos impactos das mudancas climaticas sobre esses servicos.",200000.00,CEARÁ (UF),14,422
 202524420018,976706,2025-12-10,INSTITUTO JUVENTUDE PELA VIDA,Implementacao e Desenvolvimento do Projeto Juventude pela Vida no Municipio de Fortaleza/CE,1959999.96,FORTALEZA - CE,27,812
 202524460001,980580,2025-11-14,DESAFIO JOVEM EBENEZER,"Promover a capacitacao de profissionais, acolhidos e voluntarios do Desafio JovemEbenezer, alem de profissionais voltados para a Politica Nacional Sobre Drogas, por meio daoferta de cursos profissionalizantes, visando aprimorar a qualificacao tecnica e pedagogicapara o atendimento de acolhidos na fase final do tratamento.",333038.00,RIO GRANDE DO NORTE (UF),08,244
+202524460004,979536,2025-10-10,LIGA NORTE RIOGRANDENSE CONTRA O CANCER,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,500000.00,RIO GRANDE DO NORTE (UF),10,302
 202524560004,978237,2025-12-31,SOCIEDADE ASSISTENCIAL SARAVIDA,"Aprimorar a a qualidade do acolhimento nas unidades por meio de contratacao de equipe tecnica operacional e aquisicao de 2 (dois) veiculos e equipamentos de informatica, visando o fortalecimento da rede de cuidado e protecao social.",998521.75,PERNAMBUCO (UF),08,244
 202524680003,980360,2025-10-16,INSTITUTO DE DESENVOLVIMENTO SOCIAL PELA MUSICA - IDSM,Implementacao de um programa de capacitacao continuada em musica coletiva a ser desenvolvido no ambito do NEOJIBA,200000.00,BAHIA (UF),13,392
 202524680010,976214,2025-09-12,MIRAR LEJOS,"Producao de dois filmes documentais media metragem de ate 70 minutos cada, no formato 4K - Projeto O que a vida me ensinou: Cartas da Prisao e Reflexao e resistencia (titulo provisorio)",1750000.00,BAHIA (UF),13,392
@@ -402,8 +423,11 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202526760001,925155,2022-01-07,FUNDO MUNICIPAL DE SAUDE DO MUNICIPIO DE MACAPA,CONSTRUCAO DE UNIDADE DE ATENCAO ESPECIALIZADA EM SAUDE,74547924.36,MACAPÁ - AP,10,302
 202527000005,977644,2025-09-08,MUNICIPIO DE IGUATU,Natal Iguatu - 1a edicao.,300000.00,IGUATU - CE,23,695
 202527000006,980517,2025-10-21,FUNDACAO WALDEMAR ALCANTARA,"Producao, Edicao e lancamento de livros da colecao Estante Ceara terceira Edicao.",400000.00,CEARÁ (UF),13,392
+202527000010,976361,2025-07-22,MUNICIPIO DE IRAUCUBA,Pavimentacao em pedra tosca em diversas ruas da sede e distritos do municipio de Iraucuba/CE.,960019.00,IRAUÇUBA - CE,15,451
 202527000010,976362,2025-07-22,MUNICIPIO DE IGUATU,Pavimentacao em diversas ruas do municipio de Iguatu - CE.,1152697.00,IGUATU - CE,15,451
+202527000010,986786,2025-12-10,MUNICIPIO DE TURURU,Pavimentacao em diversas ruas do municipio de Tururu - CE,974658.00,TURURU - CE,15,451
 202527000011,975482,2025-10-01,"INSTITUTO FUTURE DE JUVENTUDE, PROMOCAO, TURISMO, CULTURA E DESENVOLVIMENTO SUSTENTAVEL",APOIAR A REALIZACAO DO COALIZAO AGRO IBIAPABA,191000.00,CEARÁ (UF),20,608
+202527110006,979581,2025-10-21,INSTITUTO WALFREDO GUEDES PEREIRA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,300000.00,JOÃO PESSOA - PB,10,302
 202527110009,981652,2025-11-11,ASSOCIACAO DOS PEQUENOS PRODUTORES DO SITIO MARES,"Aquisicao de insumos para fomento a producao de frutas, melhorando a renda e a qualidade de vida dos produtores",191000.00,PARAÍBA (UF),20,608
 202527110012,975447,2025-08-11,ASSOCIACAO BRASILEIRA DE CRIADORES DE CAMARAO,Plano de Desenvolvimento da Carcinicultura no Estado da Paraiba,300000.00,PARAÍBA (UF),20,608
 202527150002,978808,2025-10-10,FUNDACAO PEDRO AMERICO,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,1506431.00,PARAÍBA (UF),10,302
@@ -425,6 +449,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202527370009,976834,2025-12-10,ASSOCIACAO ASAGRO,"Aquisicao de insumos, equipamentos, implantacao de sistema de geracao de energia fotovoltaica para o fortalecimento das atividades produtivas da Associacao ASAGRO.",477500.00,BAHIA (UF),20,608
 202527370010,975509,2025-08-28,SINDICATO RURAL DE ITAPETINGA,Apoio a realizacao da 54a Exposicao Agropecuaria de Itapetinga.,448850.00,ITAPETINGA - BA,20,608
 202527370012,989503,2025-12-31,INSTITUTO GEOGRAFICO E HISTORICO DA BAHIA,"ORGANIZACAO, TRATAMENTO E DIGITALIZACAO DE ACERVOS para a Biblioteca Ruy Barbosa do Instituto Geografico e Historico da Bahia IGHB, em Salvador/BA.",400000.00,BAHIA (UF),13,392
+202527370015,977319,2025-08-07,MUNICIPIO DE IPIAU,Pavimentacao de Vias Urbanas no municipio de Ipiau/BA.,1152697.00,IPIAÚ - BA,15,451
 202527370015,986787,2025-12-19,MUNICIPIO DE IRECE,Pavimentacao asfaltica na sede do municipio de Irece-BA,779727.00,IRECÊ - BA,15,451
 202527370015,988335,2026-01-07,MUNICIPIO DE NAZARE,Execucao de obras de pavimentacao e qualificacao viaria em ruas da sede do Municipio de Nazare,487329.00,NAZARÉ - BA,15,451
 202527500001,977823,2025-10-10,LIGA ALVARO BAHIA CONTRA A MORTALIDADE INFANTIL,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,200000.00,BAHIA (UF),10,302
@@ -454,6 +479,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202527640009,980058,2025-11-19,FUNDACAO ASSISTENCIAL VICOSENSE,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,300000.00,MINAS GERAIS (UF),10,302
 202527640009,980089,2025-10-13,ASSOCIACAO DE CARIDADE SAO JOSE,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,232302.00,MINAS GERAIS (UF),10,302
 202527640009,985648,2025-12-04,FUNDACAO HOSPITALAR DE MONTES CLAROS,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,300000.00,MINAS GERAIS (UF),10,302
+202527640009,988831,2025-12-22,FUNDACAO SAO FRANCISCO XAVIER,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,200000.00,MINAS GERAIS (UF),10,302
 202527640009,989475,2026-01-06,HOSPITAL NOSSA SENHORA DA SAUDE,Convenio aguardando detalhamento das informações. Fonte: LC131.,250000.00,MINAS GERAIS (UF),10,302
 202527640009,989494,2026-01-06,CASA DE CARIDADE DE VICOSA HOSPITAL SAO SEBASTIAO,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,299932.00,MINAS GERAIS (UF),10,302
 202527640013,990320,2025-12-26,ASSOCIACAO ALDEIA KANA MIHAY PATAXO RETIRINHO,"O presente instrumento tem como objeto o custeio de acoes voltadas a valorizacao cultural e ao fortalecimento organizacional dos povos indigenas, por meio da realizacao da Festa das Aguas.",200000.00,Nacional,14,423
@@ -488,6 +514,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202527960007,977044,2025-08-21,MUNICIPIO DE PALMITAL,Convenio aguardando detalhamento das informações. Fonte: LC131.,384205.00,PALMITAL - SP,15,451
 202527960007,977797,2025-08-27,MUNICIPIO DE CORDEIROPOLIS,Qualificacao viaria nas ruas do Municipio de Cordeiropolis-SP.,384205.00,CORDEIRÓPOLIS - SP,15,451
 202527960007,977868,2025-09-02,MUNICIPIO DE PORTO FERREIRA,Recapeamento Asfaltico no Municipio de Porto Ferreira.,384205.00,PORTO FERREIRA - SP,15,451
+202528020004,990689,2026-01-07,ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS DE CAMPINAS,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,300000.00,SÃO PAULO (UF),10,302
 202528020006,989280,2025-12-31,INSTITUICAO PADRE HAROLDO RAHM,"Fortalecer as hortas comunitarias terapeuticas do Instituto Padre Haroldo, promovendo acoes de Agricultura Urbana e Periurbana no municipio de Campinas/SP.",400000.00,SÃO PAULO (UF),08,306
 202528020008,976873,2025-10-17,ASSOCIACAO FREEMIND BRASIL - SOCIEDADE INTERNACIONAL DE VOLUNTARIOS E PROFISSIONAIS DA PREVENCAO E TRATAMENTO DE USO DE SUBSTANCIAS.,Implementar e disponibilizar capacitacao por meio do CURSO SUPERANDO O ESTIGMA E PROMOVENDO A REINSERCAO SOCIAL no estado de Sao Paulo.,200000.00,SÃO PAULO (UF),08,244
 202528020010,975691,2025-09-12,INSTITUTO USINA DE SONHOS,"Realizacao de Cinema Itinerante movido a energia solar nos municipios de Campinas, Hortolandia, Monte Mor, Mombuca, Elias Fausto, Americana, Rio das Pedras, Sumare, Torrinha e Jau no Estado de Sao Paulo.",230000.00,SÃO PAULO (UF),13,392
@@ -552,6 +579,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202528260003,987833,2025-12-23,INSTITUTO SOCIAL CONVIVER,"Realizacao do projeto Qualquer Tom Intervalo Cultural em escolas publicas do Distrito Federal, com acoes de contacao de historias literarias musicadas e workshops formativos sobre cultura afro-brasileira, voltadas a promocao da leitura, da diversidade etnico-racial e da formacao critica de estudantes.",100000.00,DISTRITO FEDERAL (UF),13,392
 202528260003,988366,2025-12-25,CASA DE PATERNIDADE,"Oferecer curso gratuito de musicalizacao para criancas, adolescentes e jovens da comunidade Santa Luzia e Cidade Estrutural DF, promovendo inclusao social e desenvolvimento cultural.",120000.00,DISTRITO FEDERAL (UF),13,392
 202528260003,989908,2026-01-07,INSTITUTO EMBALANDO SONHOS - IES,"Realizacao do projeto DE OLHO NO FUTURO, com a execucao de oficinas formativas de arte e cultura para a promocao da Economia Criativa no Distrito Federal.",330000.00,DISTRITO FEDERAL (UF),13,392
+202528260003,990076,2025-12-31,INSTITUTO SEMEAR,"Realizar oficinas de formacao cultural e social voltadas para defesa dos direitos da crianca e do adolescente para educadores sociais, educadores populares e agentes culturais no Distrito Federal.",130000.00,DISTRITO FEDERAL (UF),13,392
 202528260004,991496,2026-01-06,INSTITUTO CULTURAL E SOCIAL NO SETOR,"Promover a capacitacao de pessoas em situacao de vulnerabilidade, inscritas no Cadastro Unico para Programas Sociais do Governo Federal - CadUnico, na area de Gastronomia Social, Empreendedorismo e Cooperativismo, Sustentabilidade e Agroecologia, na regiao administrativa de Planaltina/DF, com vistas a empregabilidade e/ou ao empreendedorismo, possibilitando lhes inclusao socioeconomica.",155000.00,DISTRITO FEDERAL (UF),08,244
 202528260005,976548,2025-11-03,FEDERACAO HABITCIONAL DO SOL NASCENTE,"Implementacao e Desenvolvimento do Projeto Federacao Habitacional do Sol Nascente, no Distrito Federal",245000.00,DISTRITO FEDERAL (UF),27,812
 202528260005,976586,2025-10-13,INSTITUTO BOM SAMARITANO-IBS,Implementacao e Desenvolvimento do Projeto Esporte e Evolucao no Distrito Federal,147000.00,DISTRITO FEDERAL (UF),27,812
@@ -605,6 +633,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202528260015,977564,2025-09-08,ASSOCIACAO DOS TRABALHADORES E MOTOCICLISTAS DE APLICATIVO DO DISTRITO FEDERAL E GOIAS,"Executar o projeto Coopera + Trabalhadores de App, com capacitacoes, seminarios, pesquisas e apoio a criacao de uma cooperativa de entregadores por aplicativo no DF.",400000.00,DISTRITO FEDERAL (UF),11,334
 202528260015,978644,2025-09-22,INSTITUTO DE DESENVOLVIMENTO AMBIENTAL E HUMANO DA REGIAO AMAZONICA - IDAHRA,"Promover a inclusao e o empoderamento de pessoas em situacao de vulnerabilidade social no Distrito Federal, especialmente da populacao em situacao de rua, por meio de processos formativos e de acoes voltadas a economia solidaria e a geracao de renda, fortalecendo o protagonismo, a autonomia e a valorizacao de saberes comunitarios.",130000.00,DISTRITO FEDERAL (UF),11,334
 202528490003,976695,2025-10-09,ASSOCIACAO DOJO.COM,Implementacao e Desenvolvimento do Projeto Dojo no Esporte no Municipio de Campo Mourao/PR,392000.00,PARANÁ (UF),27,812
+202528490009,976365,2025-07-25,MUNICIPIO DE CIDADE GAUCHA,Recapeamento em vias publicas urbanas do municipio de Cidade Gaucha-PR.,481104.00,CIDADE GAÚCHA - PR,15,451
 202528490009,976366,2025-07-25,MUNICIPIO DE NOVA LONDRINA,RECAPEAMENTO DE VIAS URBANAS DO MUNICIPIO DE NOVA LONDRINA,960019.00,NOVA LONDRINA - PR,15,451
 202528490009,977034,2025-08-11,MUNICIPIO DE LOANDA,Recapeamento de Asfalto,960016.00,LOANDA - PR,15,451
 202528490009,977330,2025-08-13,MUNICIPIO DE TUNEIRAS DO OESTE,Recapeamento de Asfalto,529554.00,TUNEIRAS DO OESTE - PR,15,451
@@ -614,6 +643,8 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202528550004,978939,2025-10-13,HOSPITAL DE CARIDADE SAO ROQUE,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,349936.00,SANTA CATARINA (UF),10,302
 202528550004,978998,2025-10-21,ASSOCIACAO DO HOSPITAL JARAGUA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,438000.00,SANTA CATARINA (UF),10,302
 202528550004,985149,2025-12-03,ASSOCIACAO HOSPITALAR NOSSA SENHORA DE FATIMA-SC,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,2000000.00,SANTA CATARINA (UF),10,302
+202528550004,989855,2026-01-06,HOSPITAL REGIONAL DE PALMITOS,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,300000.00,SANTA CATARINA (UF),10,302
+202528550004,991395,2026-01-08,ASSOCIACAO BENEFICENTE FREI ROGERIO,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,300000.00,SANTA CATARINA (UF),10,302
 202528550012,978334,2025-10-28,OBATALA MOVIMENTO NEGRO DE LAGES,"Realizacao de formacao continuada em cultura afro-brasileira e protagonismo da mulher negra, com encontros vivenciais, oficinas, programacao cultural, em espaco comunitario de Lages/SC.",140000.00,SANTA CATARINA (UF),13,391
 202528550013,975725,2025-09-03,INSTITUTO ARAXA DE INOVACAO SOCIAL,"Realizacao do projeto ARTE POR TODA PARTE - Juventude tambem quer acesso a cidade! Realizacao de 03 acoes de formacao tecnica e capacitacao em producao audiovisual a serem realizadas em 06 oficinas de 03 horas cada, divididas em Roteirizacao, Gravacao e Edicao com jovens de Itapema, Porto Belo e Bombinhas. Producao de 03 produtos audiovisuais, sendo: 01 curta-metragem de ficcao de 15 minutos sobre Descobertas de Dife",300000.00,SANTA CATARINA (UF),13,392
 202528550013,976083,2025-11-03,GREMIO RECREATIVO E CULTURAL ESCOLA DE SAMBA JARDIM DAS PALMEIRAS,Jardim Capacita II,200000.00,SANTA CATARINA (UF),13,392
@@ -658,6 +689,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202528620010,987868,2025-12-19,"FUNDACAO ENNIO DE JESUS PINHEIRO AMARAL DE APOIO AO INSTITUTO FEDERAL DE EDUCACAO,CIENCIA E TECNOLOGIA SUL-RIO-GRANDENSE",Oferecer um curso popular para jovens e adultos das classes populares para se qualificarem para ingressar na universidade.,100000.00,RIO GRANDE DO SUL (UF),12,363
 202528620014,983382,2025-11-06,FUNDACAO DE APOIO DA UNIVERSIDADE FEDERAL DO RGS,CURSO DE EXTENSAO EM EDUCACAO INCLUSIVA: TESSITURAS DO FAZER PEDAGOGICO (3a EDICAO),250000.00,RIO GRANDE DO SUL (UF),12,364
 202528620016,980217,2025-09-29,FUNDACAO DE APOIO A TECNOLOGIA E CIENCIA EM RECUPERACAO JUDICIAL,Apoiar a Realizacao da Feira Internacional do Cooperativismo e da Economia Solidaria: Construindo a Ecologia Integral Frente as Emergencias Climaticas FEICOOP,2000000.00,RIO GRANDE DO SUL (UF),12,364
+202528620022,980066,2025-10-16,FUNDACAO DE SAUDE DR. JACOB BLESZ,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,200000.00,RIO GRANDE DO SUL (UF),10,302
 202528620022,984123,2025-11-20,ASSOCIACAO HOSPITAL DE CARIDADE IJUI,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,550000.00,RIO GRANDE DO SUL (UF),10,302
 202528620022,988141,2025-12-19,ASSOCIACAO BENEFICENTE HOSPITALAR SAO RAFAEL ARCANJO,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,200000.00,RIO GRANDE DO SUL (UF),10,302
 202528620022,988142,2025-12-15,ASSOCIACAO EDUCADORA SAO CARLOS - AESC,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,200000.00,RIO GRANDE DO SUL (UF),10,302
@@ -740,6 +772,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202530200005,975192,2025-07-24,MUNICIPIO DE NOVA CANDELARIA,Aquisicao de Maquinas e Equipamentos.,191000.00,NOVA CANDELÁRIA - RS,20,608
 202530200005,975435,2025-10-15,MUNICIPIO DE GENTIL,Aquisicao de Maquinas e Equipamentos.,476545.00,GENTIL - RS,20,608
 202530200005,975520,2025-10-15,MUNICIPIO DE PORTO MAUA,Aquisicao de maquinas e equipamentos,191000.00,PORTO MAUÁ - RS,20,608
+202530200006,977329,2025-08-18,MUNICIPIO DE ALVORADA,"A proposta do Municipio de Alvorada/RS para aporte de recursos do orcamento da Uniao para implantacao de infraestrutura urbana atraves de pavimentacao, drenagem pluvial, calcadas para circulacao de pedestres com acessibilidade universal e sinalizacao viaria estao diretamente relacionadas e enquadradas com as diretrizes e objetivos do Programa de Apoio a Politica Nacional de Desenvolvimento Urbano voltado a implantaca",384205.00,ALVORADA - RS,15,451
 202530200006,977798,2025-08-28,MUNICIPIO DE SAO FRANCISCO DE ASSIS,Pavimentacao de vias com blocos intertravados em varios bairros do perimetro urbano do municipio,863680.00,SÃO FRANCISCO DE ASSIS - RS,15,451
 202530200011,978683,2025-11-26,COMUNIDADE TERAPEUTICA SENHOR JESUS CENTRO DE REFORMULACAO COMPORTAMENTAL - CTSJ,"Custeio parcial da folha de pagamento e dos encargos sociais da instituicao, com a finalidade de viabilizar o acolhimento e os cuidados prestados a depedentes quimicos no municipio de Tapes/RS.",100000.00,RIO GRANDE DO SUL (UF),08,244
 202530410005,986759,2026-01-07,INSTITUTO LIXO E CIDADANIA,"O objeto do Termo de Fomento consiste na execucao de um projeto de educacao ambiental e fortalecimento da coleta seletiva inclusiva em territorios urbanos vulneraveis, por meio da mobilizacao de catadores(as), realizacao de campanhas educativas e oficinas formativas, producao de materiais de comunicacao ambiental e consolidacao de indicadores de impacto.",300000.00,PARANÁ (UF),18,128
@@ -748,6 +781,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202530410010,989860,2026-01-07,BENEFICENCIA CAMILIANA DO SUL,Convenio aguardando detalhamento das informações. Fonte: LC131.,450000.00,PARANÁ (UF),10,302
 202530410015,976596,2025-12-18,ASSOCIACAO CAMINHO CERTO - ACC,Apoio a Realizacao do Evento Conexoes Esportivas no Estado do Parana - PR,440152.81,PARANÁ (UF),27,812
 202530410015,976738,2025-11-26,ASSOCIACAO DESPORTIVA DE TELEMACO BORBA,Implementacao e Desenvolvimento do Projeto Esportivo e Social de Futsal Feminino da ADTB no Municipio de Telemaco Borba/PR,147000.00,PARANÁ (UF),27,812
+202530420003,983744,2025-11-11,MUNICIPIO DE ITAPERUNA,AQUISICAO DE PATRULHA MECANIZADA,955000.00,ITAPERUNA - RJ,15,244
 202530430003,979121,2025-09-24,MUNICIPIO DE ICATU,RECUPERACAO DE ESTRADAS VICINAIS DO MUNICIPIO DE ICATU/MA,955000.00,ICATU - MA,15,244
 202530510002,982400,2025-12-09,ASSOCIACAO CARAIVA VIVA,"Implementacao e Desenvolvimento do Projeto Encontro Infantil de Capoeira no Distrito de Caraiva, Municipio de Porto Seguro/BA",294000.00,BAHIA (UF),27,812
 202530510002,987975,2025-12-23,ASSOCIACAO DE DESENVOLVIMENTO ECONOMICO E SOCIAL DA BAHIA,Implementacao e Desenvolvimento do Projeto Esporte Cidadao no Estado da Bahia,686000.00,BAHIA (UF),27,812
@@ -872,9 +906,11 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202533320004,987981,2025-12-22,ASSOCIACAO HOSPITAL E MATERNIDADE SANTA TEREZINHA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,206400.00,PARANÁ (UF),10,302
 202533320004,989859,2026-01-07,ASSOC DOS PAIS E AMIGOS DOS EXCEP DE SAO PEDRO DO IVAI,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,279597.00,PARANÁ (UF),10,302
 202534960006,977808,2025-09-05,ASSOCIACAO DE APOIO LAR VITORIAS,"Promover acoes para criancas e adolescentes com deficiencia, fortalecer os vinculos familiares, bem como sensibilizar a comunidade sobre os direitos das pessoas com deficiencia e o enfrentamento ao capacitismo.",1000000.00,AMAZONAS (UF),14,422
+202535300010,978733,2025-10-08,FUNDACAO GOVERNADOR FLAVIO RIBEIRO COUTINHO,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,200000.00,SANTA RITA - PB,10,302
 202535680002,979689,2025-10-20,SANTA CASA DE MISERICORDIA DA BAHIA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,299971.00,BAHIA (UF),10,302
 202536110003,978861,2025-10-29,SPDM - ASSOCIACAO PAULISTA PARA O DESENVOLVIMENTO DA MEDICINA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,999993.00,Nacional,10,302
 202536110003,979740,2025-10-10,FUNDACAO FACULDADE DE MEDICINA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,497213.00,Nacional,10,302
+202536110003,979745,2025-10-10,FUNDACAO FACULDADE DE MEDICINA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,699999.00,Nacional,10,302
 202536110003,988219,2025-12-17,FUNDACAO ZERBINI,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,2100000.00,Nacional,10,302
 202536110010,975938,2025-12-31,INSTITUTO PATRICIA GALVAO - COMUNICACAO E MIDIA,Amplificacao e qualificacao do debate publico sobre a violencia contra mulheres idosas no Brasil.,300000.00,Nacional,14,422
 202536110010,990056,2026-01-07,ASSOCIACAO FALA MULHER,"Executar palestras presenciais e online e compartilhar informacoes, orientacoes e materiais educativos sobre violencia domestica e familiar, utilizando conteudos digitais, impressos e divulgacao nos canais oficiais da Associacao Fala Mulher, com foco prioritario em mulheres negras, trans, imigrantes e demais mulheres que se identifiquem com a tematica.",500000.00,Nacional,14,422
@@ -1073,6 +1109,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202537710014,981651,2025-12-02,COMUNIDADE TERAPEUTICA SAO JOSE,"Dar continuidade ao fomento dos recursos humanos por meio da contratacao de monitores, psicologa, assistente social, assistente administrativo e estagiario em psicologia e contratacao de pessoa juridica para a prestacao de servicos de consultoria para a elaboracao e execucao de projetos. O processo tambem contempla o custeio de despesas com aluguel, aquisicao de materiais de escritorio e botijoes de gas, necessarios",450000.00,SÃO JOSÉ DOS PINHAIS - PR,08,244
 202537710014,981656,2025-12-02,COMUNIDADE TERAPEUTICA SAO JOSE,"Continuidade do projeto de capacitacao profissionalizante por meio da contratacao de profissionais qualificados para a realizacao de oficinas nas areas de Informatica, Barbearia, Panificacao e Reciclagem, bem como da aquisicao dos insumos necessarios. O projeto tambem contempla o custeio de despesas essenciais, incluindo aluguel, materiais de escritorio, itens de higiene/protecao e botijoes de gas, assegurando a manu",490000.00,SÃO JOSÉ DOS PINHAIS - PR,08,244
 202537710014,981660,2025-12-18,COMUNIDADE TERAPEUTICA SAO JOSE,"Continuidade na contratacao de pessoa juridica para a prestacao de servicos de Monitoramento, Assessoria Tecnica Permanente, Recrutamento e Selecao de RH; contratacao de pessoa juridica para a prestacao de servicos de consultoria especializada na elaboracao / execucao de projetos e contratacao de pessoa juridica para a prestacao de servicos de Capacitacao Continuada dos colaboradores.",260000.00,SÃO JOSÉ DOS PINHAIS - PR,08,244
+202537750012,984129,2025-11-20,FUNDACAO PRO RIM,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,500000.00,TOCANTINS (UF),10,302
 202537750012,985681,2025-12-04,CASA DE CARIDADE DOM ORIONE,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,500000.00,TOCANTINS (UF),10,302
 202537750017,979135,2025-10-08,ASSOCIACAO NACIONAL DE EQUOTERAPIA ANDE BRASIL,Realizacao de curso de capacitacao em equoterapia para servidores da rede publica do Estado do Tocantins.,310393.00,Nacional,14,422
 202537770003,981766,2025-11-14,ASSOCIACAO CULTURAL DE RENOVACAO TECNOLOGICA SOROCABANA,"O Painel Inteligente propoe o desenvolvimento de uma plataforma tecnologica em Saude 4.0,voltada ao mapeamento, monitoramento e fortalecimento de indicadores de saude integral (mental,fisica e social) em comunidades vulnerabilizadas, como aldeias indigenas, assentamentos rurais eperiferias urbanas. A proposta parte de uma concepcao ampliada de saude e adota tecnologiasdigitais personalizaveis como ferramentas para di",400000.00,SÃO PAULO (UF),19,571
@@ -1298,6 +1335,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202539780003,976896,2025-12-09,INSTITUTO CELEIRO DE BAMBA,Implementacao e desenvolvimento do projeto Ponto de Partida no estado de Minas Gerais.,980000.00,MINAS GERAIS (UF),27,812
 202539800006,975584,2025-11-17,GREMIO DESPORTIVO JUVENTUS,"Promover o desporto na modalidade futebol, por meio da formacao, preparacao e participacao de equipes nas categorias SUB-14 e SUB-15, conforme previsto no plano de trabalho.",490000.00,SANTA CATARINA (UF),27,811
 202539800007,975320,2025-11-13,ASSOCIACAO BARATEIRO DE FUTSAL CLUBE,Implementacao ao desenvolvimento Esportivo do futsal feminino da Associacao Barateiro Futsal. Desenvolver o futsal para meninas e mulheres das categorias Sub 17 e Adulto.,196000.00,SANTA CATARINA (UF),27,811
+202539840003,978854,2025-10-30,ASSOCIACAO CULTURAL E CIENTIFICA VIRVI RAMOS,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,300000.00,RIO GRANDE DO SUL (UF),10,302
 202539840003,985661,2025-12-03,ASSOCIACAO DR BARTHOLOMEU TACCHINI,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,200000.00,RIO GRANDE DO SUL (UF),10,302
 202539840003,988231,2025-12-17,SANTA CASA DE MISERICORDIA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,200000.00,RIO GRANDE DO SUL (UF),10,302
 202539840006,988658,2026-01-14,"FUNDACAO ENNIO DE JESUS PINHEIRO AMARAL DE APOIO AO INSTITUTO FEDERAL DE EDUCACAO,CIENCIA E TECNOLOGIA SUL-RIO-GRANDENSE","Promover a participacao da comunidade academica do IFSul Campus Novo Hamburgo no processo de definicao das prioridades orcamentarias de 2026, por meio de assembleias setoriais e uma assembleia geral, em conformidade com os principios dagestao democratica.",68000.00,RIO GRANDE DO SUL (UF),12,363
@@ -1371,6 +1409,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202540290003,977417,2025-09-10,INSTITUTO HISTORICO E GEOGRAFICO BRASILEIRO,1) Manutencao preventiva de padrao de entrada de energia;2) Manutencao de paineis eletricos.,100000.00,Nacional,13,391
 202540290005,975716,2025-10-02,ASSOCIACAO MUNDIAL DOS AMIGOS DAS RESERVAS DA BIOSFERA,"Producao de um filme de genero documental, comemorativo do Bicentenario de Dom Pedro II, media-metragem, com duracao de 26 minutos e resolucao em 4k, destinado a ampla disponibilizacao digital gratuita.",200000.00,Nacional,13,392
 202540290006,977473,2025-12-08,INSTITUTO CULTURAL AMILCAR MARTINS,"Desenvolvimento, publicacao e distribuicao do software de pesquisa da Revista do Arquivo Publico Mineiro pelo INSTITUTO CULTURAL AMILCAR MARTINS.",876000.00,MINAS GERAIS (UF),13,392
+202540290007,989587,2025-12-24,POLICIA MILITAR DO ESTADO DE MINAS GERAIS,"Reaparelhar a Policia Militar de Minas Gerais, por meio da aquisicao de armamento, a fim de fortalecer as acoes de combate a criminalidade no estado.",248365.45,MINAS GERAIS (UF),06,181
 202540290012,987461,2025-12-22,INSTITUTO CULTURAL FILARMONICA,Ampliar o acesso a musica sinfonica e difundir a producao artistica da Orquestra Filarmonica de Minas Gerais,160000.00,MINAS GERAIS (UF),13,392
 202540290021,977639,2025-11-07,FUNDO MUNICIPAL DE SAUDE,REFORMA DE UNIDADE DE ATENCAO ESPECIALIZADA EM SAUDE,976300.00,ANTÔNIO CARLOS - MG,10,302
 202540330001,975566,2025-10-15,MUNICIPIO DE PORTO XAVIER,Aquisicao de Maquinas e Equipamentos,429750.00,PORTO XAVIER - RS,20,608
@@ -1767,6 +1806,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202541300009,985308,2025-11-26,CENTRO ORGANIZATIVO DOS TRABALHADORES,Fomento ao Cooperativismo e Soberania Alimentar em Comunidade.,484851.40,SÃO PAULO (UF),11,334
 202541300013,979734,2025-12-23,SOCIEDADE CAMPINEIRA DE EDUCACAO E INSTRUCAO,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,700000.00,SÃO PAULO (UF),10,302
 202541300013,980093,2026-01-08,ASSOCIACAO DO HOSPITAL E MATERNIDADE SAO JOSE DE BARRA BONITA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,550000.00,SÃO PAULO (UF),10,302
+202541300013,988862,2025-12-23,GRUPO DE PESQUISA E ASSISTENCIA AO CANCER INFANTIL,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,499896.00,SÃO PAULO (UF),10,302
 202541300014,975542,2025-09-03,CULTURAL PROJECT BRAZIL INSTITUTE,"Realizacao da 2a. temporada da Mostra de cinema Role 22, na cidade de Itanhaem. O projeto preve a exibicao de 10 filmes nacionais, entre longas e curtas metragens.",120000.00,SÃO PAULO (UF),13,392
 202541300014,976060,2025-08-27,FUNDO POSITIVO,"Promover o fortalecimento da diversidade cultural brasileira e a inclusao social de grupos em situacao de vulnerabilidade no municipio de Sao Paulo, por meio de acoes formativas e artisticas em formato de oficinas culturais, com foco em acessibilidade, valorizacao das identidades culturais, dialogo intercultural e protagonismo comunitario, contribuindo para a articulacao de redes, a geracao de oportunidades sociocult",150000.00,SÃO PAULO (UF),13,392
 202541300014,976063,2025-10-01,"ASSOCIACAO DA PARADA DO ORGULHO DE LESBICAS, GAYS, BISSEXUAIS, TRAVESTIS E TRANSGENEROS DE SANTOS",Apoio a realizacao da Parada do Orgulho LGBT+ de Santos e DiversaFeira.,150000.00,SÃO PAULO (UF),13,392
@@ -1786,9 +1826,11 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202541300021,978704,2025-11-17,ASSOCIACAO DOS AMIGOS DA APA DE CAMPINAS,"Formar e capacitar uma rede de apoio aos direitos legais do Rio Atibaia responsavel pelo abastecimento de agua de 100% da populacao de Campinas, SP alem de ser o macro corredor ecologico e abrigar nas suas margens os principais remanescentes florestais de mata Atlantica da Regiao Metropolitana de Campinas/SP",300000.00,SÃO PAULO (UF),18,128
 202541300021,988810,2026-01-07,ASSOCIACAO AGUAS CLARAS,"Promover acoes de educacao ambiental que contribuam para a organizacao social e formacao cidada de moradoras e moradores dos bairros Lealdade e Amizade, em Sao Jose do Rio Preto/SP, tornando-os capazes de identificar as demandas ambientais de seu territorio e propor solucoes que possam mitigar os efeitos da crise climatica.",200000.00,SÃO PAULO (UF),18,128
 202541320003,978879,2025-10-07,SANTA CASA DE MISERICORDIA DE GUAIRA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,250000.00,SÃO PAULO (UF),10,302
+202541320003,978895,2025-10-21,IRMANDADE DA SANTA CASA DE MISERICORDIA DE LIMEIRA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,400000.00,SÃO PAULO (UF),10,302
 202541320003,978900,2025-10-29,IRMANDADE DA SANTA CASA DE MISERICORDIA DE MOCOCA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,489799.00,SÃO PAULO (UF),10,302
 202541320003,988189,2026-01-06,SOCIEDADE FILANTROPICA HOSPITAL JOSE VENANCIO,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,315000.00,SÃO PAULO (UF),10,302
 202541320003,990648,2026-01-07,BANCO DE OLHOS DE SOROCABA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,384000.00,SÃO PAULO (UF),10,302
+202541320005,991526,2026-01-07,FUNDACAO FACULDADE DE MEDICINA,FOMENTAR PESQUISAS CIENTIFICAS E TECNOLOGICAS NA AREA DE PESQUISA CLINICA,297994.00,Nacional,10,571
 202541320006,977640,2025-11-24,COOPERATIVA DE TRABALHO COLETA E MANUSEIO DE MATERIAL RECICLAVEL - ALIANCA,"O projeto Circularidade Solidaria: Economia Circular em Acao tem como principal objetivo o fortalecimento da Cooperativa de Trabalho Coleta e Manuseio de Material Reciclavel - Alianca e Central UNIR, buscando uma gestao mais eficiente dos residuos solidos e a promocao de praticas sustentaveis na comunidade. A proposta e a aquisicao de equipamentos e reforma do cercamento, calcamento e muro do terreno do barracao, par",500000.00,SÃO PAULO (UF),18,542
 202541320006,977752,2025-12-23,INSTITUTO DE PROJETOS E PESQUISAS SOCIO AMBIENTAIS,"Elaborar o Zoneamento Ambiental Municipal de Ubatuba, com enfoque setorial em areas prioritarias, para subsidiar o planejamento territorial com diretrizes de conservacao e uso sustentavel do territorio.",500000.00,SÃO PAULO (UF),18,542
 202541320006,984939,2025-12-19,ASSOCIACAO MATA CILIAR,"Modernizar o viveiro de mudas nativas da Associacao Mata Ciliar para distribuicao das mudas nas bacias dos Rios Piracicaba, Jundiai e Capivari.",200000.00,SÃO PAULO (UF),18,542
@@ -1917,13 +1959,18 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202541380022,989536,2026-01-07,ASSOCIACAO DAS PRACAS MILITARES DO ESTADO DO CEARA ASPRA-CE,"Promocao dos direitos humanos por meio do cuidado integral a saude mental, com atendimentos especializados voltados a inclusao social, ao bem-estar psicossocial e ao exercicio da cidadania.",200000.00,CEARÁ (UF),14,422
 202541390011,986217,2025-12-30,INSTITUTO VLADIMIR HERZOG,Articulacao Internacional em Defesa da Democracia,369860.88,Nacional,14,422
 202541400004,979697,2025-10-17,IRMANDADE DA SANTA CASA DE MISERICORDIA DE PASSOS,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,1000000.00,MINAS GERAIS (UF),10,302
+202541400007,977036,2025-08-15,MUNICIPIO DE MONTE SANTO DE MINAS,Recapeamento asfaltico em vias publicas urbanas do Municipio de Monte Santo de Minas-MG,384205.00,MONTE SANTO DE MINAS - MG,15,451
 202541400007,977051,2025-08-01,MUNICIPIO DE CORINTO,Pavimentacao de vias publicas.,384205.00,CORINTO - MG,15,451
 202541400007,977052,2025-08-01,MUNICIPIO DE VARZEA DA PALMA,PAVIMENTACAO DE VIAS URBANAS,384205.00,VÁRZEA DA PALMA - MG,15,451
 202541400007,977340,2025-08-28,MUNICIPIO DE RAPOSOS,OBRAS DE INFRAESTRUTURA URBANA NO MUNICIPIO DE RAPOSOS.,384205.00,RAPOSOS - MG,15,451
 202541400007,977799,2025-09-19,MUNICIPIO DE INIMUTABA,Pavimentacao de Vias,384205.00,INIMUTABA - MG,15,451
+202541400007,977869,2025-09-02,MUNICIPIO DE CAPETINGA,Pavimentacao e Adequacao de vias no municipio de Capetinga/MG.,384205.00,CAPETINGA - MG,15,451
+202541400007,986789,2025-12-05,MUNICIPIO DE CASSIA,Intervencoes de qualificacao viaria no perimetro urbano do municipio de Cassia/MG,974658.00,CÁSSIA - MG,15,451
 202541400007,988316,2025-12-23,MUNICIPIO DE JURUAIA,Pavimentacao de vias no Municipio de Juruaia/MG,487329.00,JURUAIA - MG,15,451
 202541400007,988317,2025-12-22,MUNICIPIO DE JUATUBA,PAVIMENTACAO DE VIAS PUBLICAS EM JUATUBA/MG,389863.00,JUATUBA - MG,15,451
 202541400007,988318,2025-12-17,MUNICIPIO DE PORTEIRINHA,Pavimentacao de vias no municipio de Porteirinha/MG,779727.00,PORTEIRINHA - MG,15,451
+202541400007,988322,2025-12-30,MUNICIPIO DE NOVA PORTEIRINHA,Execucao de calcamento em bloco sextavado em vias urbanas de Nova Porteirinha-MG.,389863.00,NOVA PORTEIRINHA - MG,15,451
+202541400007,991008,2026-01-05,MUNICIPIO DE IGUATAMA,Pavimentacao de Vias Diversas no Perimetro Urbano do Municipio de Iguatama/MG,779727.00,IGUATAMA - MG,15,451
 202541400008,976000,2025-08-29,MUNICIPIO DE GURINHATA,AQUISICAO DE MAQUINAS EEQUIPAMENTOS.,477500.00,GURINHATÃ - MG,15,244
 202541400008,976001,2025-08-29,MUNICIPIO DE SENADOR FIRMINO,AQUISICAO DE EQUIPAMENTOS,477500.00,SENADOR FIRMINO - MG,15,244
 202541400008,976136,2025-07-31,MUNICIPIO DE ITAMARANDIBA,Pavimentacao de estradas vicinais,477500.00,ITAMARANDIBA - MG,15,244
@@ -1932,6 +1979,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202541400008,976142,2025-08-06,MUNICIPIO DE ITAUNA,Pavimentacao de estradas vicinais.,955000.00,ITAÚNA - MG,15,244
 202541400008,976145,2025-08-22,MUNICIPIO DE MONTE CARMELO,Implantacao de Pontes em estradas vicinais,955000.00,MONTE CARMELO - MG,15,244
 202541410001,983703,2025-12-04,FUNDO MUNICIPAL DE SAUDE DE SOUSA,CONSTRUCAO DE UNIDADE DE ATENCAO ESPECIALIZADA EM SAUDE,1464366.00,SOUSA - PB,10,302
+202541410012,980074,2025-10-29,INSTITUTO WALFREDO GUEDES PEREIRA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,500000.00,JOÃO PESSOA - PB,10,302
 202541410013,979549,2025-10-14,FUNDACAO ASSISTENCIAL DA PARAIBA- FAP,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,800000.00,CAMPINA GRANDE - PB,10,302
 202541410013,980071,2025-10-09,FUNDACAO ASSISTENCIAL DA PARAIBA- FAP,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,200000.00,CAMPINA GRANDE - PB,10,302
 202541420007,975925,2026-01-01,INSTITUTO BRASILEIRO DE DESENVOLVIMENTO E INOVACAO,"Promover acoes de aperfeicoamento, qualificacao e insercao profissional na construcao civil atraves de cursos, oficinas e palestras, e organizacao de mutiroes comunitarios para mulheres em situacao de vulnerabilidade nas comunidades perifericas de Natal e Macaiba/RN.",1000000.00,RIO GRANDE DO NORTE (UF),14,422
@@ -2021,6 +2069,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202541800017,987765,2025-12-11,INSTITUTO PRATTI CHAGAS,"Realizacao do Projeto Batalha do N9V: Cultura, Arte e Lazer na Favela",200000.00,ESPÍRITO SANTO (UF),13,392
 202541800017,989193,2025-12-30,INSTITUTO BASE FORTE,"Realizacao do Projeto Sons do Futuro - Oficinas de musicalizacao e formacao instrumental para criancas e adolescentes em situacao de vulnerabilidade social, no municipio de Vila Velha/ES.",100000.00,ESPÍRITO SANTO (UF),13,392
 202541800020,981963,2025-10-30,INCUBADORA DE EMPRESAS DE BASE TECNOLOGICA TECVITORIA,Ciclo de Incubacao: da Validacao a Prototipacao,200000.00,ESPÍRITO SANTO (UF),23,691
+202541800020,982281,2025-10-30,AGENCIA DE DESENVOLVIMENTO DAS MICRO E PEQUENAS EMPRESAS E DO EMPREENDEDORISMO - ADERES,Promover e divulgar os produtos do segmento MEI do estado do Espirito Santo atraves de Feiras de Negocios e Comercializacao.,1200000.00,ESPÍRITO SANTO (UF),23,691
 202541800020,983980,2025-11-14,SERVICO DE APOIO AS MICROS E PEQUENAS EMPRESAS DO ESPIRITO SANTO,"Fomentar o acesso ao mercado de artesaos, micro e pequenas empresas capixabas, por meio de custeio de evento promovido pelo SEBRAE/ES, que seja referencia e tenha relevancia no Estado do ES, bem como atraves de locacao de areas com montagem de estandes em feiras de acesso a mercado, para pequenos negocios, no formato B2B (Empresa para Empresa) e B2C (Empresa para consumidor final), realizado por organizadores indepen",11069857.00,ESPÍRITO SANTO (UF),23,691
 202541800021,976356,2025-10-07,ASSOCIACAO CARIACIQUENSE DE ESPORTES,"Implementacao e Desenvolvimento de Nucleos de Atividades Esportivas no Projeto Novos Horizontes, no Municipio de Vitoria/ES",196000.00,ESPÍRITO SANTO (UF),27,812
 202541800021,976400,2025-11-11,INSTITUTO ERICK SILVA,"Implementacao e Desenvolvimento do Projeto De Maos Dadas Nesta Luta, no Municipio Vila Velha/ES",196000.00,ESPÍRITO SANTO (UF),27,812
@@ -2028,6 +2077,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202541800021,976502,2025-11-28,"GERAR - GERACAO DE EMPREGO, RENDA E APOIO AO DESENVOLVIMENTO REGIONAL",Implementacao e Desenvolvimento do Projeto Geracao Esportiva no Estado do Espirito Santo,950484.99,ESPÍRITO SANTO (UF),27,812
 202541800021,976603,2025-11-10,SERRA FUTEBOL CLUBE,"Implementacao e Desenvolvimento do Projeto Futebol do Serra Futebol Clube, no Municipio de Serra/ES",196000.00,ESPÍRITO SANTO (UF),27,812
 202541800021,977216,2025-10-07,FEDERACAO ESPIRITO SANTENSE DE VOLEIBOL,Implementacao e Desenvolvimento do Projeto Grande Sacada 2 no Estado do Espirito Santo,196000.00,ESPÍRITO SANTO (UF),27,812
+202541800022,976132,2025-07-21,MUNICIPIO DE SAO ROQUE DO CANAA,Pavimentacao de estrada vicinal no Municipio de Sao Roque do Canaa ES.,668500.00,SÃO ROQUE DO CANAÃ - ES,15,244
 202541820004,974904,2025-07-16,MUNICIPIO DE MONTE ALEGRE,Aquisicao de Maquinas e Equipamentos,1117350.00,MONTE ALEGRE - PA,20,608
 202541820004,975955,2025-10-02,COOPERATIVA MISTA DE AGRICULTORES E PESCADORES DO ESTADO DO PARA,Aquisicao de maquinas e equipamentos.,620750.00,PARÁ (UF),20,608
 202541820004,987831,2025-12-22,INSTITUTO DE INTEGRACAO SOCIAL DO POVO DA AMAZONIA LEGAL - INSTITUTO AMAZONIDAS,Aquisicao de equipamentos agricolas para atender os agricultores do Instituto AMAZONIDAS,410411.25,PARÁ (UF),20,608
@@ -2156,6 +2206,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202542780011,981872,2025-12-31,INSTITUTO MESTRE NADO,"Promover acoes de formacao, valorizacao e difusao da Cultura Popular e Tradicional de Olinda, tendo como referencia o legado artistico e pedagogico do Mestre Nado, com foco na transmissao de saberes tradicionais a adolescentes e jovens de escolas publicas em Olinda.",300000.00,PERNAMBUCO (UF),13,392
 202542780011,984256,2025-11-25,INSTITUTO DELTA ZERO PARA O DESENVOLVIMENTO DA ECONOMIA CRIATIVA,"Realizacao do projeto Ciclo As Filhas das Filhas das Filhas, formacao em escrita literaria e criativa integrada a Festa Literaria das Periferias em Pernambuco (Flup/PE), voltada a mulheres descendentes de trabalhadoras domesticas que romperam esse ciclo por meio da educacao, culminando na publicacao de uma coletanea com textos produzidos durante a formacao.",300000.00,PERNAMBUCO (UF),13,392
 202542780011,987951,2026-01-15,ARQUIDIOCESE DE OLINDA E RECIFE,"Aquisicao de EQUIPAMENTOS para MODERNIZACAO da Biblioteca Publica/Biblioteca Comunitaria Biblioteca Eclesiastica do Seminario Arquidiocesano de Olinda e Recife, localizada na OLINDA/PE.",300000.00,PERNAMBUCO (UF),13,392
+202542780012,988344,2026-01-05,MUNICIPIO DE SALGUEIRO,Pavimentacao em paralelo de varias ruas do municipio de Salgueiro/PE,487329.00,SALGUEIRO - PE,15,451
 202542780017,977567,2025-10-30,CARITAS BRASILEIRA,"O projeto tem como objetivo fortalecer e promover o desenvolvimento de empreendimentos em Economia Popular e Solidaria nos municipios de Salgueiro, Petrolina e Afogados da Ingazeira, por meio de acoes formativas e assessoria tecnica, atendendo diretamente 30 empreendimentos. Onde o publico sao agricultores/asfamiliares, mulheres e jovens do sertao pernambucano.",300000.00,PERNAMBUCO (UF),11,334
 202542780017,978527,2026-01-01,"CENTRO DE APOIO A PRODUCAO COMUNITARIA , CIDADANIA ,CULTURA E COMUNICACAO POPULAR","Implantar, implementar e operacionalizar o Projeto Movimento Empreender Cabo.",300000.00,PERNAMBUCO (UF),11,334
 202542780017,978645,2025-11-18,ASSOCIACAO DOS AGRICULTORES DO ASSENTAMENTO GAIPIO,"REESTRUTURAR A AGROINDUSTRIA DO ASSENTAMENTO DE GAIPIO, IPOJUCA-PE; E QUALIFICAR SEUS BENEFICIARIOS PARA O CORRETO BENEFICIAMENTO DA TILAPIA.",400000.00,PERNAMBUCO (UF),11,334
@@ -2259,6 +2310,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202543010014,988234,2025-12-15,FUNDACAO HOSPITALAR SANTA OTILIA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,300000.00,SANTA CATARINA (UF),10,302
 202543010014,989479,2026-01-06,ASSOCIACAO BENEFICENTE SANTA TERESINHA,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,300000.00,SANTA CATARINA (UF),10,302
 202543010014,989839,2026-01-07,HOSPITAL NOSSA SENHORA DA CONCEICAO,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,299893.00,SANTA CATARINA (UF),10,302
+202543010014,991376,2026-01-08,ASSOCIACAO BENEFICENTE FREI ROGERIO,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,300000.00,SANTA CATARINA (UF),10,302
 202543010014,991466,2026-01-14,ASSOC DE PAIS E AMIGOS DOS EXCEPCIONAIS DE BLUMENAU,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,200000.00,SANTA CATARINA (UF),10,302
 202543010014,991580,2026-01-07,ORDEM AUX DAS SENHORAS EVANGELICAS DE TIMBO,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,200000.00,SANTA CATARINA (UF),10,302
 202543010019,983138,2025-10-31,INSTITUTO DIVERSA - ASSOCIACAO MULTIPROFISSIONAL,"O presente convenio tem como objetivo promover a organizacao e o acompanhamento de 40 empreendimentos da Economia Popular e Solidaria no estado de Santa Catarina. Atraves desta iniciativa, busca-se oferecer melhorias nas condicoes de participacao economica e social desses empreendimentos, por meio da realizacao de acoes de formacao, capacitacao e assessoramento tecnico. Essas acoes visam aprimorar a gestao, producao",600000.00,SANTA CATARINA (UF),11,334
@@ -2287,6 +2339,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202543110007,975667,2025-09-09,INSTITUTO CULTURA EM MOVIMENTO,"producao de 01 (uma) obra audiovisual documental de media-metragem com a minutagem de ate 55 Minutos, em qualidade Full HD e 2k, sobre a trajetoria de torcidas de bairro do Flamengo que fazem parte das federacoes Flafavela.",500000.00,RIO DE JANEIRO (UF),13,392
 202543110007,984921,2025-12-23,INSTITUTO BRASILEIRO DE BIODIVERSIDADE,"Realizar 120 oficinas artisticas; 40 oficinas ambientais; uma mostra cultural aberta a comunidade; com as acoes acontecendo na regiao de Grumari, na cidade do Rio de Janeiro, voltado para a promocao artistica e consciencia ambiental da regiao.",250000.00,RIO DE JANEIRO (UF),13,392
 202543110008,976529,2025-12-11,FEDERACAO DE ESPORTES RADICAIS E DE ESPORTES DE PRAIA - FERP,"Implementacao e Desenvolvimento do Projeto Futevolei RJ-Futevolei Para Todos, no Municipio do Rio de Janeiro/RJ",391861.83,RIO DE JANEIRO (UF),27,812
+202543110008,976646,2025-12-01,INSTITUTO PARATODOS,"Implementacao e Desenvolvimento do Projeto Paraesporte Volei de Praia, no Municipio do Rio de Janeiro/RJ.",391999.96,RIO DE JANEIRO (UF),27,812
 202543110008,976741,2025-12-24,CONFEDERACAO BRASILEIRA DE GINASTICA,Apoio a Realizacao do Evento Ginastica Artistica no Municipio do Rio de Janeiro/RJ,196000.00,RIO DE JANEIRO (UF),27,812
 202543110009,975588,2025-12-18,INSTITUTO PARATODOS,"Implementacao e Execucao do Projeto Paraesporte Beach Soccer, conforme previsto no plano de trabalho.",588000.00,RIO DE JANEIRO (UF),27,811
 202543110009,975649,2025-10-15,INSTITUTO FAVELARTE,"Implementacao de dois nucleos de futebol para o desenvolvimento do Programa Futebol de Base no Rio de Janeiro/RJ, conforme previsto no plano de trabalho.",735000.00,RIO DE JANEIRO (UF),27,811
@@ -2321,7 +2374,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202543200012,1AAZYC,2025-11-06,FUNDACAO DE PESQUISAS FLORESTAIS DO PARANA,CONTRATO 134/2025 COM A FUPEF. OBJETO APOIO AO PROJETO 'MULHERES NA GESTÃO ESPORTIVA'.,191000.00,PARANÁ (UF),12,364
 202543200012,1ABAOR,2025-11-26,"FUNDACAO DA UNIVERSIDADE FEDERAL DO PARANA PARA O DESENVOLVIMENTO DA CIENCIA,TECNOLOGIA E DA CULTURA","CONTRATO 144/2025 COM A FUNPAR. OBJETO: APOIO PRESTADO PELA FUNPAR NA GESTÃO ADMINISTRATIVA, FINANCEIRA E OPERACIONAL DO PROJETO DENOMINADO 'REVITALIZAÇÃO DO LABORATÓRIO DE PRÁTICAS PEDAGÓGICAS DO CAMPUS AVANÇADO DA UFPR EM JANDAIA DO SUL'.",45000.00,PARANÁ (UF),12,364
 202543200012,1ABAQW,2025-12-17,"FUNDACAO DA UNIVERSIDADE FEDERAL DO PARANA PARA O DESENVOLVIMENTO DA CIENCIA,TECNOLOGIA E DA CULTURA",CONTRATO 164/2025 COM A FUNPAR. OBJETO: DAR APOIO AO PROGRAMA DE ESPECIALIZACAO EM EDUCAÇÃO DO CAMPO - UFPR LITORAL (MATINHOS),269123.03,PARANÁ (UF),12,364
-202543200012,1ABATC,2025-12-22,"FUNDACAO DA UNIVERSIDADE FEDERAL DO PARANA PARA O DESENVOLVIMENTO DA CIENCIA,TECNOLOGIA E DA CULTURA",CONTRATO 175/2025 COM A FUNPAR. OBJETO: APOIO AS POLITICAS AFIRMATIVASEM CONTEXTOS EDUCACIONAIS. PROAFE,2106000.00,PARANÁ (UF),12,364
+202543200012,1ABATC,2025-12-22,"FUNDACAO DA UNIVERSIDADE FEDERAL DO PARANA PARA O DESENVOLVIMENTO DA CIENCIA,TECNOLOGIA E DA CULTURA",CONTRATO 175/2025 COM A FUNPAR. OBJETO: APOIO AS POLITICAS AFIRMATIVASEM CONTEXTOS EDUCACIONAIS. PROAFE,3177150.00,PARANÁ (UF),12,364
 202543200012,1ABAUA,2025-12-24,"FUNDACAO DA UNIVERSIDADE FEDERAL DO PARANA PARA O DESENVOLVIMENTO DA CIENCIA,TECNOLOGIA E DA CULTURA",CONTRATO 173/2025 ENTRE UFPR E FUNPAR. OBJETO: DAR APOIO AO CICLO DE EVENTOS DO PROGRAMA DE PÓS-GRADUAÇÃO EM PLANEJAMENTO URBANO. PROCESSO 23075.074113/2025-30,90000.00,PARANÁ (UF),12,364
 202543200012,1ABAWB,2025-12-30,FUNDACAO DE PESQUISAS FLORESTAIS DO PARANA,CONTTRATO 159/2025 UFPR E FUPEF- OBJETO:DAR APOIO AO PROJETO REDE DE APOIO ÀS MINORIAS/MULHERES NA ENGENHARIA REDAME. PROCESSO: 23075.071899/2025-33. DATA DA ASSINATURA: 11DEZ2025.,191000.00,PARANÁ (UF),12,364
 202543200014,1AAQVP,2024-01-05,"FUNDACAO DA UNIVERSIDADE FEDERAL DO PARANA PARA O DESENVOLVIMENTO DA CIENCIA,TECNOLOGIA E DA CULTURA",APOIO AO TERMO DE EXECUÇÃO DESCENTRALIZADA DENOMINADO 'TED QUILOMBOS UFPR 2023'.,8381210.68,PARANÁ (UF),12,364
@@ -2591,6 +2644,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202543670017,975846,2025-12-05,INSTITUTO SANDRA MORAES,"Realizacao de atendimento oftalmologico e doacao dos oculos, nos casos de erro de refracao, para mulheres (criancas, adolescentes, adultos e idosas) em situacao de vulnerabilidade social e risco social na Cidade de Olinda/PE.",500000.00,PERNAMBUCO (UF),14,422
 202543670017,982223,2025-12-05,INSTITUTO DE GERENCIAMENTO DE CIDADES IGC,"Realizacao de atendimento oftalmologico e odontologico para mulheres (criancas, adolescentes, adultos e idosas) em situacao de vulnerabilidade social e risco social na Regiao Metropolitana do Recife/PE",1000000.00,PERNAMBUCO (UF),14,422
 202543670018,985854,2025-12-19,FUNDACAO GILBERTO FREYRE,Realizar o seminario internacional de intercambio cultural comemorativo aos 125 anos de nascimento de Gilberto Freyre a ser realizado na Espanha. Gilberto Freyre e Miguel de Cervantes UMA PONTE ENTRE DOIS MUNDOS BRASIL ESPANHA.,450000.00,PERNAMBUCO (UF),13,392
+202543680001,988188,2026-01-07,"REDE MUNICIPAL DR. MARIO GATTI DE URGENCIA, EMERGENCIA E HOSPITALAR",AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,1157543.00,SÃO PAULO (UF),10,302
 202543680006,964846,2024-12-31,CENTRO GASPAR GARCIA DE DIREITOS HUMANOS,"Combate ao racismo ambiental e garantia da mitigacao de riscos, construcao de alternativas habitacionais e permanencia da populacao moradora de ocupacoes no estado de Sao Paulo por meio de acoes e formacoes em direito, construcao de diretrizes de forma participativa com tecnicos especializados, incidencia no Judiciario, Executivo e Legislativo e construcao de alternativas para regularizacao fundiaria. Consolidacao de",1050000.00,SÃO PAULO (UF),14,422
 202543680006,978024,2025-10-01,FUNDO POSITIVO,"Fortalecimento da empregabilidade e inclusao social de pessoas em situacao de rua, com enfoque na populacao LGBTQIA+, da cidade de Sao Paulo, por meio de estrategias intersetoriais que articulem governos, sociedade civil e setor privado.",500000.00,SÃO PAULO (UF),14,422
 202543680006,979481,2025-10-21,ASSOCIACAO DE PAIS E AMIGOS DOS AUTISTAS DE FRANCA,Ofertar atendimentos de equoterapia para pessoas com deficiencia.,500000.00,SÃO PAULO (UF),14,422
@@ -2770,7 +2824,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202543990009,978306,2025-11-10,INSTITUTO CARAVANA AU MOVEL,Acoes de controle populacional e microchipagem de caes e gatos no Estado de Goias.,955000.00,GOIÁS (UF),18,541
 202544010006,976448,2025-09-04,CRUZ AZUL NO BRASIL,"Qualificacao e atualizacao dos profissionais e voluntarios do estado de Santa Catarina nas tematicas de Dependencia Quimica, Tratamento e Reinsercao Social da populacao usuaria de alcool e outras drogas.",200000.00,SANTA CATARINA (UF),08,244
 202544010007,989810,2025-12-24,ASSOCIACAO PROFESSOR ARTUR NOVAES,Implantacao de Centro de Treinamento e participacao em evento oficial da FCV - Federacao Catarinense de Voleibol em Blumenau/SC.,196000.00,SANTA CATARINA (UF),27,811
-202544020004,1AAUUI,2024-08-12,PROGRAMA DAS NACOES UNIDAS PARA O DESENVOLVIMENTO - PNUD,"DESENVOLVER SUBSÍDIOS (ESTUDOS, METODOLOGIAS, INICIATIVAS PILOTO) VOLTADOS À PROMOÇÃO DE INOVAÇÃO E FORTALECIMENTO DA INCLUSÃO NAS INICIAT VAS DE PROMOÇÃO DE DIREITOS HUMANOS E CIDADANIA NO BRASIL.",1079340.41,SÃO PAULO (UF),14,422
+202544020004,1AAUUI,2024-08-12,PROGRAMA DAS NACOES UNIDAS PARA O DESENVOLVIMENTO - PNUD,"DESENVOLVER SUBSÍDIOS (ESTUDOS, METODOLOGIAS, INICIATIVAS PILOTO) VOLTADOS À PROMOÇÃO DE INOVAÇÃO E FORTALECIMENTO DA INCLUSÃO NAS INICIAT VAS DE PROMOÇÃO DE DIREITOS HUMANOS E CIDADANIA NO BRASIL.",1453963.75,SÃO PAULO (UF),14,422
 202544020004,988365,2025-12-29,INSTITUTO VLADIMIR HERZOG,Realizacao do Projeto Dialogos e Direitos: processos formativos para a Educacao Popular em Direitos Humanos,850000.00,SÃO PAULO (UF),14,422
 202544020004,989612,2026-01-01,ASSOCIACAO CANTAREIRA,"Promover oficinas de formacao com mulheres e liderancas comunitarias no territorio da Brasilandia, Sao Paulo - SP, capacitando-as como multiplicadoras guardias da memoria, do modo de criar, fazer e viver, dos diferentes grupos perifericos que constituem a sociedade brasileira, conforme proposto no art. 216 da Constituicao Federal.",200000.00,SÃO PAULO (UF),14,422
 202544020006,975406,2025-09-12,CENTRO DE IMPRENSA ASSESSORIA E RADIO,"Realizacao de um documentario de mediametragem sobre a vida e o legado do Padre Jaime Crowe com gravacoes na grande Sao Paulo, a ser veiculado nas redes sociais e em emissoras publicas, educativas e comunitarias.",300000.00,SÃO PAULO (UF),13,392
@@ -2796,7 +2850,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202544020008,975664,2025-10-16,INSTITUTO SOS BILLINGS,"Apoiar a Realizacao do Festival de Esportes Tigrinho em Sao Bernardo do Campo/SP, conforme previsto no plano de trabalho.",196000.00,SÃO PAULO (UF),27,811
 202544020008,975670,2025-10-17,INSTITUTO SOS BILLINGS,"Apoiar a Realizacao do Festival de Esportes Tigrinho em Santo Andre/SP, conforme previsto no plano de trabalho.",196000.00,SÃO PAULO (UF),27,811
 202544020008,975674,2025-10-21,INSTITUTO SOS BILLINGS,"Apoiar a Realizacao do Projeto Festival de Esportes Tigrinho em Diadema/SP, conforme previsto no plano de trabalho.",196000.00,SÃO PAULO (UF),27,811
-202544020009,1AAUUI,2024-08-12,PROGRAMA DAS NACOES UNIDAS PARA O DESENVOLVIMENTO - PNUD,"DESENVOLVER SUBSÍDIOS (ESTUDOS, METODOLOGIAS, INICIATIVAS PILOTO) VOLTADOS À PROMOÇÃO DE INOVAÇÃO E FORTALECIMENTO DA INCLUSÃO NAS INICIAT VAS DE PROMOÇÃO DE DIREITOS HUMANOS E CIDADANIA NO BRASIL.",1079340.41,SÃO PAULO (UF),14,422
+202544020009,1AAUUI,2024-08-12,PROGRAMA DAS NACOES UNIDAS PARA O DESENVOLVIMENTO - PNUD,"DESENVOLVER SUBSÍDIOS (ESTUDOS, METODOLOGIAS, INICIATIVAS PILOTO) VOLTADOS À PROMOÇÃO DE INOVAÇÃO E FORTALECIMENTO DA INCLUSÃO NAS INICIAT VAS DE PROMOÇÃO DE DIREITOS HUMANOS E CIDADANIA NO BRASIL.",1453963.75,SÃO PAULO (UF),14,422
 202544020013,985849,2025-12-04,CEQUALIS - CENTRO DE QUALIFICACAO SOCIAL E AMBIENTAL,"Realizar, no ambito do Programa Brasileiro de Qualificacao Social e Profissional, de que trata a Resolucao CODEFAT no 995 de 15 de fevereiro de 2024, acoes de qualificacao social e profissional para jovens e pessoas em situacao de vulnerabilidade social, com foco em ocupacoes demandadas pelo setor produtivo local e/ou relacionadas a vocacao economica do territorio. Capacitacao na area de Tecnologia da Informacao, aos",1661474.69,SÃO PAULO (UF),11,333
 202544020013,985918,2025-12-04,CEQUALIS - CENTRO DE QUALIFICACAO SOCIAL E AMBIENTAL,"Realizar, no ambito do Programa Brasileiro de Qualificacao Social e Profissional, de que trata a Resolucao CODEFAT no 995 de 15 de fevereiro de 2024, acoes de qualificacao social e profissional para jovens e pessoas em situacao de vulnerabilidade social, com foco em ocupacoes demandadas pelo setor produtivo local e/ou relacionadas a vocacao economica do territorio. Capacitacao na area de Tecnologia da Informacao, aos",1661474.69,SÃO PAULO (UF),11,333
 202544020013,985930,2025-12-11,CEQUALIS - CENTRO DE QUALIFICACAO SOCIAL E AMBIENTAL,"Realizar, no ambito do Programa Brasileiro de Qualificacao Social e Profissional, de que trata a Resolucao CODEFAT no 995 de 15 de fevereiro de 2024, acoes de qualificacao social e profissional para jovens e pessoas em situacao de vulnerabilidade social, com foco em ocupacoes demandadas pelo setor produtivo local e/ou relacionadas a vocacao economica do territorio. Capacitacao na area de Tecnologia da Informacao, aos",1676950.62,SÃO PAULO (UF),11,333
@@ -2826,6 +2880,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202544070001,976675,2025-11-21,FUDOSHIN SPORTS,"Implementacao e Desenvolvimento do Projeto Karate, Forca e Disciplina no Estado do Goias",196000.00,GOIÁS (UF),27,812
 202544070007,991434,2026-01-06,INSTITUTO SUMARE,"Oferecer cursos de capacitacao profissional para pessoas em situacao de vulnerabilidade, residentes em Goiania/GO e Regiao Metropolitana, inscritas no Cadastro Unico de Programas Sociais do Governo Federal (CadUnico), preparando-os para ingressar no mercado de trabalho ou iniciar seus proprios negocios, promovendo a inclusao socioeconomica e a melhora da qualidade de vida.",2000000.00,GOIÁS (UF),08,244
 202544080004,976543,2025-08-22,MUNICIPIO DE IRECE,Recuperacao e readequacao dos acessos ao Espaco Cultural do municipio de Irece/BA,481104.00,IRECÊ - BA,23,695
+202544080008,989499,2026-01-07,REAL SOCIEDADE PORTUGUESA DE BENEF 16 DE SETEMBRO,AQUISICAO DE EQUIPAMENTO E MATERIAL PERMANENTE,1000000.00,BAHIA (UF),10,302
 202544080015,976171,2025-08-22,MOVIMENTO CULTURAL SOCIAL MCS,"Implementacao e Desenvolvimento do Projeto Mais Esporte, Mais Saude, no Estado da Bahia",4900000.00,BAHIA (UF),27,812
 202544130005,977313,2025-08-22,INSTITUTO DE PESOS E MEDIDAS DO ESTADO DO CEARA - IPEM/CE,Apoiar o Fortalecimento e Estruturacao Institucional do Instituto de Pesos e Medidas do Estado do Ceara IPEM/CE.,3000000.00,CEARÁ (UF),22,125
 202544140006,975364,2025-07-16,ESTADO DE PERNAMBUCO,"Conclusao das obras da Barragem Igarapeba, no municipio de Sao Benedito do Sul, no Estado de Pernambuco.",206199987.65,PERNAMBUCO (UF),18,544
@@ -2862,6 +2917,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202544230010,983967,2025-12-09,INSTITUTO TIAGO CAMILO,Implementacao e Desenvolvimento do Projeto DOJO do Brasil 3 no Municipio de Sao Caetano do Sul/SP,196000.00,SÃO PAULO (UF),27,812
 202544230010,984634,2025-12-23,RIFLE - ASSOCIACAO PAULISTA DOS RIFLES,"Implementacao e desenvolvimento do projeto TRAP Brasil: Formacao e Inclusao Social no Tiro ao Prato, no Municipio de Saltinho/SP",1029000.00,SÃO PAULO (UF),27,812
 202544230010,985915,2025-12-26,RIFLE - ASSOCIACAO PAULISTA DOS RIFLES,Implementacao e Desenvolvimento do Projeto Foco e Mente Tiro Desportivo e Saude Mental,196000.00,SÃO PAULO (UF),27,812
+202544230010,987999,2026-01-06,CONFEDERACAO BRASILEIRA DE ARTES MARCIAIS CHINESAS - KUNG-FU,Apoio a Realizacao do Evento Circuito Brasil de Kung-Fu VILA MARARI Sao Paulo/SP,4018000.00,SÃO PAULO (UF),27,812
 202544230011,990309,2025-12-29,FEDERACAO PAULISTA DE BASKETBALL,"Realizar congressos tecnicos, clinicas de capacitacao e torneios de avaliacao na modalidade de Basquete 5x5 no Estado de Sao Paulo.",1127000.00,SÃO PAULO (UF),27,811
 202544230011,991664,2025-12-31,INSTITUTO TIAGO CAMILO,Implantacao e desenvolvimento de Centro de Treinamento de Alto Rendimento para atletas na modalidade Judo no Municipio de Sao Caetano do Sul/SP,196000.00,SÃO PAULO (UF),27,811
 202544230014,984285,2025-12-22,MUNICIPIO DE JOANOPOLIS,Promover acoes de manejo populacional e microchipagem de caes e gatos no municipio de Joanopolis - SP.,191000.00,JOANÓPOLIS - SP,18,541
@@ -3278,6 +3334,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550060001,979500,2026-01-05,MIXTO ESPORTE CLUBE,Implementacao e Desenvolvimento do projeto DESBRAVADORES MIRINS 2025 no Estado da Paraiba,392000.00,Nacional,27,812
 202550060001,979502,2025-12-17,INSTITUTO JOAO CORDEIRO PELA CIDADANIA,"Implementacao e Desenvolvimento do projeto Karate Shotokan: Disciplina, Respeito e Cidadania em Movimento no Estado de Sao Paulo",195999.85,Nacional,27,812
 202550060001,979509,2025-11-18,ASSOCIACAO EMIVAL DE APOIO A COMUNIDADE,"Implementacao e Desenvolvimento do Projeto Juntos pela Comunidade 02, em Sobradinho II/DF",98000.00,Nacional,27,812
+202550060001,979559,2026-01-13,CENTRO CULTURAL SOCIAL E EDUCACIONAL PERIFERARTE,"Apoio a Realizacao do Festival de Capoeira de Uberlandia, no Municipio de Uberlandia/MG",196000.00,Nacional,27,812
 202550060001,979563,2025-12-23,PROAME - PROJETO AMOR E ESPERANCA,Implementacao e Desenvolvimento do Projeto Arena do Futuro no Distrito Federal,98000.00,Nacional,27,812
 202550060001,979570,2025-12-17,INSTITUTO A33,"Implementacao e Desenvolvimento do Projeto Esporte na Orla, no Distrito Federal",490000.00,Nacional,27,812
 202550060001,979639,2025-11-17,INSTITUTO ATLETA NOVO IAN,Implementacao e Desenvolvimento do Projeto Atleta Novo no municipio de Sidrolandia/MS,195999.90,Nacional,27,812
@@ -3298,6 +3355,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550060001,979914,2025-12-09,INSTITUTO INCENTIVA,Implementacao e Desenvolvimento do Projeto Atleta do Futuro no Municipio do Recife/PE,686000.00,Nacional,27,812
 202550060001,979931,2025-12-19,INSTITUTO BRASILEIRO DE QUALIDADE DE VIDA - IBQV,Apoio a Realizacao do Evento Choque de Titas de Futebol Americano em Brasilia/DF,147000.00,Nacional,27,812
 202550060001,979935,2025-12-01,ASSOCIACAO EVANGELISTICA QUARTETO DAVS,"Apoio a Realizacao do Evento Encontro da Familia, no Municipio Vitoria/ES",490000.00,Nacional,27,812
+202550060001,980034,2025-12-29,CENTRO SOCIAL JANGADA,Implementacao e Desenvolvimento do Projeto Jangada Esportiva no Municipio de Sao Paulo/SP,196000.00,Nacional,27,812
 202550060001,980038,2026-01-02,INSTITUTO PRIMEIROS PASSOS DF,"Apoio a Realizacao do Evento Futebol Desafio dos Campeoes, em Brasilia/DF",98000.00,Nacional,27,812
 202550060001,980043,2025-11-11,INSTITUTO ATLETA PARA SEMPRE,Apoio a Realizacao da Corrida Atleta para Sempre em Gravata no Estado de Pernambuco,200000.00,Nacional,27,812
 202550060001,980052,2025-12-23,INSTITUTO ANJOS DA ESPERANCA,Implementacao e Desenvolvimento do Projeto Fla-Esportes no Municipio de Vicosa/MG,196000.00,Nacional,27,812
@@ -3368,6 +3426,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550060001,981565,2025-12-11,INSTITUTO RIO ESPORTE E LAZER,Implementacao e Desenvolvimento do Projeto IREL Esporte em Acao no Estado do Rio de Janeiro,356686.52,Nacional,27,812
 202550060001,981616,2025-12-10,ASSOCIACAO BRASILEIRA DE KARATE-DO-SHOTOKAN - A.B.K.S,"Implementacao e Desenvolvimento do Programa Transformando Cidadaos e Formando Campeoes no Esporte e na Vida, no Municipio de Cacimbas/PB.",195999.80,Nacional,27,812
 202550060001,981622,2025-11-21,FABRICA CASCAVELENSE DE CIDADAOS,"Implementacao e Desenvolvimento do Projeto Academia Talentos de Jesus, no Municipio de Cascavel/PR",588000.00,Nacional,27,812
+202550060001,981752,2025-12-24,MUNICIPIO DE SAO JOSE DO SABUGI,"Implementacao e Desenvolvimento das Atividades Desportistas, no Municipio de Sao Jose do Sabugi/PB",294000.00,SÃO JOSÉ DO SABUGI - PB,27,812
 202550060001,981809,2025-12-23,INSTITUTO BR ARTE,Implementacao e Desenvolvimento do Projeto Jogando Juntos pela Cidadania no Estado de Sergipe,841776.00,Nacional,27,812
 202550060001,981865,2025-11-28,"LACULTESP - LAZER, CULTURA E ESPORTE, QUALIDADE DE VIDA",Implementacao e Desenvolvimento do Projeto Lacultesp Qualidade de Vida no Estado de Sao Paulo,980000.00,Nacional,27,812
 202550060001,981878,2025-12-19,ACADEMIA DE FUTEBOL FORMADORES DE ATLETAS,Implementacao e Desenvolvimento do Projeto Escolinha de Futebol Santarritense Sport Club Continuada no Estado de Minas Gerais,196000.00,Nacional,27,812
@@ -3382,6 +3441,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550060001,982197,2025-12-19,INSTITUTO CRIANCA SANTA MARIA,Apoio a Realizacao do Evento Base Forte em Santa Maria/DF,196000.00,Nacional,27,812
 202550060001,982226,2025-12-08,ASSOCIACAO DA ESCOLINHA DE FUTEBOL FUTURA NACAO DA SERRA DO BOMBOCADINHO - CUITE - PB,"Implementacao e Desenvolvimento do Projeto Escolinha de Futebol Futura Nacao da Serra do Bombocadinho, no Municipio de Cuite/PB",252840.00,Nacional,27,812
 202550060001,982418,2026-01-02,ASSOCIACAO CIVIL DA SOCIEDADE INOVA,Implementacao e Desenvolvimento do Projeto Ativa RJ no Estado do Rio de Janeiro,980000.00,Nacional,27,812
+202550060001,982495,2025-12-15,INSTITUTO RECICLANDO O FUTURO - RECICLANDO O FUTURO,"Implementacao e Desenvolvimento do Projeto Judo e Futsal: Dois Caminhos, um Futuro, no RIACHO FUNDO II - DF",233156.00,Nacional,27,812
 202550060001,982525,2026-01-02,ASSOCIACAO AMIGOS DA JUVENTUDE - ADJ,Implementacao e desenvolvimento do projeto A Rua e Nossa no municipio de Eunapolis-BA,196000.00,Nacional,27,812
 202550060001,982532,2025-11-14,"A LIGA INDEPENDENTE ESPORTIVA, CULTURAL, SOCIAL E EDUCACIONAL",Implementacao e Desenvolvimento do Projeto A LIGA JUNTOS PELO ESPORTE no Estado de Sao Paulo,980000.00,Nacional,27,812
 202550060001,982558,2025-11-28,"A LIGA INDEPENDENTE ESPORTIVA, CULTURAL, SOCIAL E EDUCACIONAL",Implementacao e Desenvolvimento do Projeto A Liga Ativa Brasil no Estado de Sao Paulo,980000.00,Nacional,27,812
@@ -3397,6 +3457,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550060001,982947,2026-01-08,INSTITUTO CULTURAL ATITUDE NOBRE,"Apoio a Realizacao do Evento 1a Copa ICAN de Futebol, no Municipio de Sao Paulo/SP",1195110.00,Nacional,27,812
 202550060001,982950,2025-12-29,MUNICIPIO DE ITAPISSUMA,Apoio a Realizacao do Evento de Campeonatos e Torneios no Municipio de Itapissuma/PE,1638438.00,ITAPISSUMA - PE,27,812
 202550060001,982962,2025-12-10,INSTITUTO MULHERES EM ACAO DE SALVADOR-BAHIA,Implementacao e Desenvolvimento do Projeto Ballet Sonho de Infancia - 3o Edicao no Estado Bahia,195999.18,Nacional,27,812
+202550060001,983227,2026-01-07,INSTITUTO BRASIL DE DESENVOLVIMENTO ECONOMICO (IBRASIL),Implementacao e Desenvolvimento do Projeto Descobrindo Talentos em Campo no Municipio de Macapa/AP,809936.09,Nacional,27,812
 202550060001,983238,2025-12-29,INSTITUTO MENSAGEM DE PAZ,Implementacao e Desenvolvimento do Projeto Mensagem de Paz com Inclusao Municipio de Sao Paulo/SP.,196000.00,Nacional,27,812
 202550060001,983269,2025-12-15,INSTITUTO VERTICE,Implementacao e Desenvolvimento do Projeto Vida Ativa no Estado do Rio de Janeiro/RJ.,2940000.00,Nacional,27,812
 202550060001,983727,2025-12-31,ASSOCIACAO PERNAMBUCANA DE ESPORTES,"Apoio a Realizacao do Evento 1a Copa ASPE de Futsal, no Municipio de Recife/PE",319987.00,Nacional,27,812
@@ -3434,6 +3495,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550060001,988549,2026-01-06,MUNICIPIO DE ARAME,Apoio a Realizacao Do Evento De Mountain Bike Maratona Da Serra No Municipio De Arame/MA,588000.00,ARAME - MA,27,812
 202550060001,988576,2025-12-26,ASSOCIACAO DE PRODUTORES RURAIS DO POVOADO CENTRO DOS MONTELLES,Apoio a realizacao ao Evento Campeonatos Municipais de Futsal e Volei Amador Masculino Edicao 2026 em Mata Roma/MA,294000.00,Nacional,27,812
 202550060001,988585,2026-01-02,REDE MATA ROMA SOLIDARIA & SUSTENTABILIDADE,Apoio a Realizacao do Evento Campeonato Municipal de Futebol Amador de Mata Roma/MA,294000.00,Nacional,27,812
+202550060001,988591,2025-12-31,MUNICIPIO DE MASSAPE DO PIAUI,Apoio a Realizacao de Evento Torneio Regional de Futebol Amador no Municipio de Massape do Piaui/PI,490000.00,MASSAPÊ DO PIAUÍ - PI,27,812
 202550060001,988681,2025-12-31,CENTRO CULTURAL E ESPORTIVO FE E CIDADANIA,Apoio a Realizacao do Evento 1a Copa dos Trabalhadores do Municipio de Guarulhos/SP,392000.00,Nacional,27,812
 202550060001,988712,2025-12-31,CENTRO INTEGRADO DE ESTUDOS E PROGRAMAS DE DESENVOLVIMENTO SUSTENTAVEL,Implementacao e Desenvolvimento do Projeto Conexao Vida Melhor no Municipio do Rio de Janeiro/RJ,980000.00,Nacional,27,812
 202550060001,988716,2025-12-26,ASSOCIACAO BENEFICENTE REDENCAO,Implementacao e Desenvolvimento do Projeto Redencao Esporte em Acao (R.E.A) no Municipio de Campinas/SP,196000.00,Nacional,27,812
@@ -3511,14 +3573,17 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550060002,982479,2025-10-30,MUNICIPIO DE BREJO DE AREIA,"Reforma do Estadio Ribeirao e Quadra de Areia, no Municipio de Brejo de Areia/MA.",486989.29,BREJO DE AREIA - MA,27,812
 202550060002,982533,2025-12-01,MUNICIPIO DE ITAMBE,Aquisicao e instalacao de Playground no Municipio de Itambe/PR.,196000.00,ITAMBÉ - PR,27,812
 202550060002,982542,2025-11-05,MUNICIPIO DE ESPLANADA,"Construcao de Quadra Poliesportiva Coberta, no Municipio de Esplanada/BA.",1148984.38,ESPLANADA - BA,27,812
+202550060002,982575,2025-11-07,MUNICIPIO DE CAROLINA,"Reforma do Estadio de Futebol, no Municipio de Carolina/MA.",779200.00,CAROLINA - MA,27,812
 202550060002,982632,2025-12-05,MUNICIPIO DE DIONISIO CERQUEIRA,"Construcao de Quadra Poliesportiva, no Municipio de Dionisio Cerqueira/SC.",389600.00,DIONÍSIO CERQUEIRA - SC,27,812
 202550060002,982658,2025-11-07,MUNICIPIO DE ITAUBAL,"Construcao de Quadra Poliesportiva, no Municipio de Itaubal/AP.",859410.85,ITAUBAL - AP,27,812
 202550060002,982736,2025-12-15,MUNICIPIO DE NOVO ACORDO,"Reforma de Quadra Poliesportiva, no Municipio de Novo Acordo/TO.",389600.00,NOVO ACORDO - TO,27,812
 202550060002,982763,2026-01-13,MUNICIPIO DE PINTADAS,"Construcao de Areninha Esportiva, no Municipio de Pintadas/BA.",487000.00,PINTADAS - BA,27,812
 202550060002,982826,2025-10-30,MUNICIPIO DE CONCEICAO DA APARECIDA,"Reforma do Campo de Futebol, no Municipio de Conceicao da Aparecida/MG.",409080.00,CONCEIÇÃO DA APARECIDA - MG,27,812
+202550060002,983001,2025-11-27,MUNICIPIO DE UBAIRA,"Construcao de Arena Esportiva, no Municipio de Ubaira/BA.",487000.00,UBAÍRA - BA,27,812
 202550060002,983016,2025-12-19,MUNICIPIO DE MANOEL EMIDIO,"Construcao de Complexo Esportivo, no Municipio de Manoel Emidio/PI.",389600.00,MANOEL EMÍDIO - PI,27,812
 202550060002,983026,2025-12-03,MUNICIPIO DE GRUPIARA,"Construcao de Campo de Futebol Society e Quadra de Areia, no Municipio de Grupiara/MG.",389600.00,GRUPIARA - MG,27,812
 202550060002,983034,2025-10-31,MUNICIPIO DE PONTE SERRADA,"Construcao de Quadra Poliesportiva Coberta, no Municipio de Ponte Serrada/SC.",944925.13,PONTE SERRADA - SC,27,812
+202550060002,983060,2025-12-22,MUNICIPIO DE NOVORIZONTE,"Construcao de Campo de Futebol, no Municipio de Novorizonte/MG.",472462.08,NOVORIZONTE - MG,27,812
 202550060002,983086,2026-01-07,MUNICIPIO DE DOURADO,"Construcao de Campo de Futebol, no Municipio de Dourado/SP.",487000.00,DOURADO - SP,27,812
 202550060002,983131,2025-12-05,MUNICIPIO DE MERCES,"Reforma de Quadras Poliesportivas, no Municipio de Merces/MG.",779200.00,MERCÊS - MG,27,812
 202550060002,983134,2025-12-17,MUNICIPIO DE ARAGUACEMA,"Reforma de Quadra Poliesportiva, no Municipio de Araguacema/TO.",395472.25,ARAGUACEMA - TO,27,812
@@ -3613,6 +3678,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550070003,982176,2025-12-25,SECRETARIA DE ESTADO DE TURISMO,Realizacao de cursos de qualificacao profissional voltados a prestadores de servicos turisticos no Estado do Para.,2600000.00,Nacional,23,695
 202550070003,982185,2025-12-30,ASSOCIACAO CONSTRUIR DE ASSISTENCIA SOCIAL,Realizacao de cursos de qualificacao profissional voltados a prestadores de servicos turisticos nos municipios de Guapimirim e Buzios RJ.,400000.00,Nacional,23,695
 202550070003,987800,2025-12-31,INSTITUTO CONEXAO,Implementacao do Projeto Rio Destino 360 no Estado do Rio de Janeiro.,4000000.00,Nacional,23,695
+202550070003,988080,2025-12-23,MUNICIPIO DE NATAL,"Execucao de acoes de qualificacao profissional no setor turistico de Natal, por meio de cursos e capacitacoes",2994000.00,NATAL - RN,23,695
 202550070003,988537,2025-12-31,INSTITUTO SOCIAL DE CAPELANIA EDUCACIONAL E CULTURAL DO MARANHAO ISCEC MA,Realizacao de Cursos de Qualificacao voltados a prestadores de servicos turisticos.,330000.00,Nacional,23,695
 202550070003,988679,2026-01-15,INSTITUTO NACIONAL DE PARCERIAS PUBLICAS - INPP,Realizacao do projeto Qualifica Turismo,5000000.00,Nacional,23,695
 202550070004,978426,2025-09-10,MUNICIPIO DE FARIAS BRITO,"III EXPOVAQ Exposicao Agropecuaria, Artesanato e Vaquejada.",2712000.00,FARIAS BRITO - CE,23,695
@@ -3651,6 +3717,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550070004,982069,2026-01-06,MUNICIPIO DE SANTA MARIA,Marcha para Jesus - 26a Edicao.,221691.00,SANTA MARIA - RS,23,695
 202550070004,982071,2026-01-22,"INSTITUTO DE GASTRONOMIA, CULTURA E TURISMO PANELA DE BARRO","5 Edicao do Festival Botecos Guarapa, em Guarapari/ES, 2026.",399982.40,Nacional,23,695
 202550070004,982072,2026-01-22,MUNICIPIO DE CATOLE DO ROCHA,41o Carnaval no municipio de Catole do Rocha-PB,558737.00,CATOLÉ DO ROCHA - PB,23,695
+202550070004,982073,2026-01-22,MUNICIPIO DE PARANAGUA,14a Festa Nacional da Tainha,551740.00,PARANAGUÁ - PR,23,695
 202550070004,982075,2026-01-21,MUNICIPIO DE CHAPADA DO NORTE,Festa de Nossa Senhora do Rosario dos Homens Pretos 204a Edicao.,250500.00,CHAPADA DO NORTE - MG,23,695
 202550070004,982077,2026-01-12,CENTRO DE ARTICULACAO DE POPULACOES MARGINALIZADAS-CEAP,I Mostra Cultural Ubuntu Carioca em 2026,751740.00,Nacional,23,695
 202550070004,982078,2025-12-31,MUNICIPIO DE OURO VERDE,REVEILLON OURO VERDE-SP 2026,249750.00,OURO VERDE - SP,23,695
@@ -3677,6 +3744,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550070004,982179,2026-01-13,FUNDACAO DOS MUNICIPIOS DAS MISSOES - FUNMISSOES,Festa dos 400 anos das Missoes Jesuiticas - 2026,250000.00,Nacional,23,695
 202550070004,982180,2026-01-20,INSTITUTO BEM VIVER DF,CIRCUITO DE GASTRONOMIA E ARTESANATO NAS SATELITES,441691.00,Nacional,23,695
 202550070004,982181,2025-12-15,MUNICIPIO DE SOLONOPOLE,CARNASOL 2026,200000.00,SOLONÓPOLE - CE,23,695
+202550070004,982191,2026-01-08,CONSELHO REGIONAL DE TURISMO DO GRANDE OESTE,3a edicao do Oeste integra 2026.,751740.00,Nacional,23,695
 202550070004,982222,2025-12-09,MUNICIPIO DE RONDON,Agro Rondon Farm Show - 4a Edicao.,200013.00,RONDON - PR,23,695
 202550070004,982230,2025-12-18,MUNICIPIO DE SAO FRANCISCO DE SALES,Reveillon 2026 - 63a Edicao,202021.53,SÃO FRANCISCO DE SALES - MG,23,695
 202550070004,982236,2025-11-24,MUNICIPIO DE CAFELANDIA,Contratacao de Show para a comemoracao do 43o aniversario do municipio de Cafelandia/PR.,290000.00,CAFELÂNDIA - PR,23,695
@@ -3758,6 +3826,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550070004,988888,2026-01-22,SECRETARIA DO TURISMO DO ESTADO DO PIAUI,7a Agrofeira do municipio de Corrente PI.,350000.00,Nacional,23,695
 202550070004,988891,2026-01-23,SECRETARIA DO TURISMO DO ESTADO DO PIAUI,Aniversario do municipio de Jaicos/PI edicao 2026.,290000.00,Nacional,23,695
 202550070004,988894,2026-01-23,SECRETARIA DO TURISMO DO ESTADO DO PIAUI,98o Aniversario da Cidade de Jurema edicao 2026.,250000.00,Nacional,23,695
+202550070004,988895,2026-01-20,MUNICIPIO DE SANTA ISABEL,Realizacao de Evento - 8a Expobel,414014.18,SANTA ISABEL - SP,23,695
 202550070004,988898,2026-01-20,COMISSAO DA FESTA DA UVA E FEIRAS AGRO-INDUSTRIAIS,35a Festa Nacional da Uva 2026.,351740.00,Nacional,23,695
 202550070004,988899,2026-01-23,SECRETARIA DO TURISMO DO ESTADO DO PIAUI,Festejos Religiosos no municipio de Sao Raimundo Nonato-PI 2026.,260000.00,Nacional,23,695
 202550070004,988903,2026-01-13,ASSOCIACAO BENEFICENTE VIDA E PAZ,Realizacao do evento Fun Land Ji-Parana,1500000.00,Nacional,23,695
@@ -3839,6 +3908,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550100001,986503,2025-12-18,MUNICIPIO DE CORUMBATAI DO SUL,Aquisicao de maquinas e equipamentos agricolas,191212.01,CORUMBATAÍ DO SUL - PR,20,608
 202550100001,986625,2025-12-24,INSTITUTO BESOURO DE FOMENTO SOCIAL E PESQUISA,"Fomentar o desenvolvimento rural no interior do Estado do Rio de Janeiro, atraves da aquisicao de maquinas e equipamentos agricolas, com o objetivo de promover a modernizacao e fortalecer a producao regional.",12415000.00,Nacional,20,608
 202550230001,979676,2025-10-02,MUNICIPIO DE POCAO DE PEDRAS,PAVIMENTACAO ASFALTICA NO MUNICIPIO DE POCAO DE PEDRAS-MA,960019.00,POÇÃO DE PEDRAS - MA,15,451
+202550230001,979680,2025-09-23,MUNICIPIO DE SAO FRANCISCO DO GLORIA,Pavimentacao de vias Urbanas,672443.00,SÃO FRANCISCO DO GLÓRIA - MG,15,451
 202550230001,979681,2025-10-14,MUNICIPIO DE SAMBAIBA,Convenio aguardando detalhamento das informações. Fonte: LC131.,1441714.00,SAMBAÍBA - MA,15,451
 202550230001,979685,2025-09-19,MUNICIPIO DE PRESIDENTE DUTRA,Pavimentacao de diversas ruas no municipio de Presidente Dutra/Ba,1053913.00,PRESIDENTE DUTRA - BA,15,451
 202550230001,979798,2025-10-03,MUNICIPIO DE NOVA ITARANA,Pavimentacao de vias no Perimetro Urbano do municipio de Nova Itarana-Ba,397385.00,NOVA ITARANA - BA,15,451
@@ -3856,6 +3926,8 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550230001,980452,2025-10-28,MUNICIPIO DE CRIXAS,PAVIMENTACAO URBANA DE RUAS E AVENIDAS DENTRO DO PERIMETRO URBANO NO MUNICIPIO DE CRIXAS GO,960019.00,CRIXÁS - GO,15,451
 202550230001,980453,2025-10-01,MUNICIPIO DE DONA EUZEBIA,Pavimentacao de vias Urbanas Municipio Dona Euzebia/MG,384205.00,DONA EUSÉBIA - MG,15,451
 202550230001,980457,2025-10-15,MUNICIPIO DE BOITUVA,Convenio aguardando detalhamento das informações. Fonte: LC131.,384205.00,BOITUVA - SP,15,451
+202550230001,980528,2025-11-05,MUNICIPIO DE SERIO,PAVIMENTACAO DE VIAS URBANAS NO MUNICIPIO DE SERIO/RS.,384205.00,SÉRIO - RS,15,451
+202550230001,980532,2026-01-09,MUNICIPIO DE ALAGOA GRANDE,Pavimentacao em Paralelepipedo em Diversas Ruas no Municipio de Alagoa Grande-PB,960019.00,ALAGOA GRANDE - PB,15,451
 202550230001,980533,2025-10-21,MUNICIPIO DE SENADOR JOSE PORFIRIO,Pavimentacao em Bloquetes de Vias urbanas,1053913.00,SENADOR JOSÉ PORFÍRIO - PA,15,451
 202550230001,980535,2025-10-02,MUNICIPIO DE JOSE DA PENHA,Pavimentacao e drenagem de ruas no municipio de Jose da Penha/RN.,672443.00,JOSÉ DA PENHA - RN,15,451
 202550230001,980541,2025-10-30,MUNICIPIO DE MASSARANDUBA,Pavimentacao Asfaltica de Ruas na Zona Urbana do Municipio de Massaranduba - PB,960019.00,MASSARANDUBA - PB,15,451
@@ -3871,16 +3943,20 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550230001,980564,2025-10-23,MUNICIPIO DE CUBATI,Pavimentacao de Ruas no municipio de Cubati/PB.,952935.00,CUBATI - PB,15,451
 202550230001,980565,2025-11-04,MUNICIPIO DE SANTO ANTONIO DO SUDOESTE,Implantacao e adequacao de calcada no perimetro urbano de Santo Antonio do Sudoeste,384218.00,SANTO ANTÔNIO DO SUDOESTE - PR,15,451
 202550230001,980581,2025-10-14,MUNICIPIO DE VITORINO FREIRE,Recapeamento e implantacao asfaltica de vias urbanas no municipio de Vitorino Freire/MA,3377873.00,VITORINO FREIRE - MA,15,451
+202550230001,980582,2025-11-28,MUNICIPIO DE FLORES,Pavimentacao em diversas ruas localizadas no perimetro urbano do Municipio de Flores-PE.,960019.00,FLORES - PE,15,451
+202550230001,980583,2025-10-06,MUNICIPIO DE RIO NEGRO,PAVIMENTACAO ASFALTICA DE VIA URBANA DENTRO DO QUADRO URBANO DO MUNICIPIOS DE RIO NEGRO-PR.,481104.00,RIO NEGRO - PR,15,451
 202550230001,980584,2025-11-03,MUNICIPIO DE UCHOA,RECAPEAMENTO ASFALTICO,960019.00,UCHOA - SP,15,451
 202550230001,980589,2025-10-21,MUNICIPIO DE FORTUNA DE MINAS,Recapeamento de Vias urbanas tipo CBUQ em Diversas ruas de Fortuna de Minas.,481104.00,FORTUNA DE MINAS - MG,15,451
 202550230001,980592,2025-12-02,MUNICIPIO DE LAGOA FORMOSA,RECAPEAMENTO DE VIAS URBANAS DO MUNICIPIO DE LAGOA FORMOSA-MG,389863.00,LAGOA FORMOSA - MG,15,451
 202550230001,980594,2025-10-20,SECRETARIA DAS CIDADES,Pavimentacao de vias publicas no municipio de Picos PI,1053913.00,Nacional,15,451
+202550230001,980983,2025-10-15,MUNICIPIO DE CORREIA PINTO,Pavimentacao asfaltica no perimetro urbano de Correia Pinto.,384205.00,CORREIA PINTO - SC,15,451
 202550230001,980984,2025-12-19,MUNICIPIO DE TAQUARA,Pavimentacao em via do municipio de Taquara.,477541.00,TAQUARA - RS,15,451
 202550230001,980985,2025-10-14,MUNICIPIO DE SAO CARLOS DO IVAI,PAVIMENTACAO URBANA E/OU RECAPE DE VIAS PUBLICAS,481104.00,SÃO CARLOS DO IVAÍ - PR,15,451
 202550230001,980986,2025-11-04,MUNICIPIO DE CLAUDIO,Pavimentacao e/ou Obras Congeneres em Vias Publicas.,1152000.00,CLÁUDIO - MG,15,451
 202550230001,980989,2025-10-31,MUNICIPIO DE AMETISTA DO SUL,Pavimentacao asfaltica em via Publica.,617333.00,AMETISTA DO SUL - RS,15,451
 202550230001,980990,2025-10-30,MUNICIPIO DE SEBERI,Pavimentacao asfaltica em via Publica.,617333.00,SEBERI - RS,15,451
 202550230001,980993,2025-10-31,MUNICIPIO DE PRESIDENTE PRUDENTE,"Adequacao viaria (recapeamento) de vias em Presidente Prudente, Sao Paulo.",1043373.87,PRESIDENTE PRUDENTE - SP,15,451
+202550230001,981000,2026-01-07,MUNICIPIO DE PEREIRO,PAVIMENTACAO NA ZONA URBANA NA SEDE DO MUNICIPIO DE PEREIRO/CE.,617333.00,PEREIRO - CE,15,451
 202550230001,981005,2025-12-22,MUNICIPIO DE PARAISOPOLIS,Pavimentacao em vias publicas urbanas no municipio de Paraisopolis,384205.00,PARAISÓPOLIS - MG,15,451
 202550230001,981017,2025-10-17,PREFEITURA MUNICIPAL DE PARANAPANEMA,Qualificacao Viaria no municipio,384205.00,PARANAPANEMA - SP,15,451
 202550230001,981021,2025-10-28,MUNICIPIO DE MATO CASTELHANO,Pavimentacao de Vias Urbanas,529554.00,MATO CASTELHANO - RS,15,451
@@ -3896,6 +3972,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550230001,981471,2025-12-30,MUNICIPIO DE SERRA DO RAMALHO,Convenio aguardando detalhamento das informações. Fonte: LC131.,617333.00,SERRA DO RAMALHO - BA,15,451
 202550230001,981472,2026-01-05,MUNICIPIO DE CURRALINHOS,PAVIMENTACAO DE VIAS PUBLICAS NO MUNICIPIO DE CURRALINHOS - PI.,1053913.00,CURRALINHOS - PI,15,451
 202550230001,981474,2025-12-30,MUNICIPIO DE SAO MATEUS,Execucao das obras de pavimentacao e drenagem de vias urbanas em Sao Mateus/ES.,1053913.00,SÃO MATEUS - ES,15,451
+202550230001,981477,2025-10-15,MUNICIPIO DE CRATO,Pavimentacao em Diversas Ruas URBANA DO municipio de Crato-CE,1053913.00,CRATO - CE,15,451
 202550230001,981480,2025-12-10,MUNICIPIO DE JACOBINA,PAVIMENTACAO DE VIAS URBANAS NO MUNICIPIO DE JACOBINA/BA,517619.00,JACOBINA - BA,15,451
 202550230001,981481,2025-12-08,MUNICIPIO DE AMERICO DE CAMPOS,Recapeamento Asfaltico,960019.00,AMÉRICO DE CAMPOS - SP,15,451
 202550230001,981482,2025-10-30,MUNICIPIO DE SANTA FE DO SUL,Recapeamento Asfaltico nas vias urbanas do Municipio de Santa Fe do Sul-SP.,960019.00,SANTA FÉ DO SUL - SP,15,451
@@ -3909,6 +3986,8 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550230001,981501,2025-10-23,MUNICIPIO DE NOVA ERECHIM,PAVIMENTACAO E REPERFILAGEM DE VIAS URBANA DE NOVA ERECHIM-SC,577425.00,NOVA ERECHIM - SC,15,451
 202550230001,981502,2025-10-14,MUNICIPIO DE PALMEIRA,Pavimentacao de vias urbanas,384205.00,PALMEIRA - SC,15,451
 202550230001,981507,2025-11-04,MUNICIPIO DE SAO JOSE DO SABUGI,Execucao de obras de pavimentacao urbana em vias publicas do municipio de Sao Jose do Sabugi-PB,481104.00,SÃO JOSÉ DO SABUGI - PB,15,451
+202550230001,981508,2026-01-05,MUNICIPIO DE BELEM DO BREJO DO CRUZ,Execucao de obras de pavimentacao urbana em vias publicas do municipio de Belem do Brejo do Cruz-PB,960019.00,BELÉM DO BREJO DO CRUZ - PB,15,451
+202550230001,981510,2026-01-05,MUNICIPIO DE IBIPEBA,PAVIMENTACAO EM VIAS URBANAS DO MUNICIPIO DE IBIPEBA-BA,1053913.00,IBIPEBA - BA,15,451
 202550230001,981511,2025-10-20,MUNICIPIO DE FRANCISCO MORATO,Intervencoes para adequacao viaria em vias do perimetro urbano de Francisco Morato/SP.,1053913.00,FRANCISCO MORATO - SP,15,451
 202550230001,981514,2025-11-19,MUNICIPIO DE ESTRELA,Pavimentacao asfaltica (recapeamento) em via urbana do Municipio de Estrela - RS.,481104.00,ESTRELA - RS,15,451
 202550230001,981519,2025-11-04,MUNICIPIO DE LAPAO,PAVIMENTACAO DE VIAS URBANAS NO MUNICIPIO DE LAPAO-BA,384205.00,LAPÃO - BA,15,451
@@ -3917,7 +3996,9 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550230001,981525,2025-10-09,MUNICIPIO DE LAGO DO JUNCO,Pavimentacao Asfaltica em Vias Urbanas do Municipio de Lago do Junco / MA,1053913.00,LAGO DO JUNCO - MA,15,451
 202550230001,981526,2025-10-28,MUNICIPIO DE SAO GONCALO DO RIO PRETO,Intervencoes de qualificacao viaria ( Pavimentacao em Bloquete) no perimetro urbano do municipio de Sao Goncalo do Rio Preto MG,437464.00,SÃO GONÇALO DO RIO PRETO - MG,15,451
 202550230001,981530,2025-10-30,MUNICIPIO DE ITAPECERICA DA SERRA,"Execucao de obras de pavimentacao asfaltica da Rua Jose Corento de Godoi, PERIMETRO URBANO do Municipio de Itapecerica da Serra/SP, totalizando 1.456 m2, incluindo servicos preliminares, terraplenagem, drenagem superficial, base e sub-base, revestimento, guias, sarjetas e sinalizacao viaria.Area: 1.456 m2Valor total: R$ 541.197,16Repasse Federal (emenda parlamentar): R$ 477.541,00Contrapartida Municipal: R$ 63.656,16",477541.00,ITAPECERICA DA SERRA - SP,15,451
+202550230001,981531,2025-10-24,MUNICIPIO DE CIDADE GAUCHA,Recapeamento em vias publicas urbanas do municipio de Cidade Gaucha-PR.,478597.00,CIDADE GAÚCHA - PR,15,451
 202550230001,981626,2025-10-31,MUNICIPIO DE JACI,Recapeamento em diversas ruas do Municipio de Jaci/SP.,477542.00,JACI - SP,15,451
+202550230001,981627,2025-12-17,MUNICIPIO DE SANTA HELENA,Execucao de obras de pavimentacao urbana em vias publicas do municipio de Santa Helena-PB,960019.00,SANTA HELENA - PB,15,451
 202550230001,981629,2025-10-30,MUNICIPIO DE ALCANTIL,Pavimentacao em Paralelepipedo e Drenagem de Ruas na Zona Urbana do Municipio de Alcantil - PB.,1441714.00,ALCANTIL - PB,15,451
 202550230001,981632,2025-10-15,MUNICIPIO DE XAXIM,Recapeamento asfaltico em CBUQ em vias urbanas do municipio de Xaxim/SC.,481104.00,XAXIM - SC,15,451
 202550230001,981637,2025-10-23,MUNICIPIO DE DORES DO TURVO,Pavimentacao de vias urbanas no municipio de Dores do Turvo,529554.00,DORES DO TURVO - MG,15,451
@@ -3930,6 +4011,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550230001,981945,2025-11-27,MUNICIPIO DE MARCIONILIO SOUZA,Pavimentacao em paralelepipedo no municipio de Marcionilio Souza - BA.,617333.00,MARCIONÍLIO SOUZA - BA,15,451
 202550230001,981947,2025-10-21,MUNICIPIO DE JACINTO,Implantacao de pavimentacao em bloquete sextavado no perimetro urbano do Municipio de Jacinto/MG.,385401.00,JACINTO - MG,15,451
 202550230001,981948,2025-10-24,MUNICIPIO DE REGISTRO,Pavimentacao Asfaltico em diversas ruas do municipio de Registro/SP,960019.00,REGISTRO - SP,15,451
+202550230001,981956,2026-01-05,SECRETARIA DO DESENVOLVIMENTO ECONOMICO,"Pavimentacao em Paralelepipedo de 7.580,00m2, em Vias Publicas da Zona Urbana do Municipio de Flores do Piaui - PI.",1053913.00,Nacional,15,451
 202550230001,983281,2025-11-27,MUNICIPIO DE PEDRO REGIS,Pavimentacao em Paralelepipedo e Drenagem de Ruas na Zona Urbana do Municipio de Pedro Regis - PB.,481104.00,PEDRO RÉGIS - PB,15,451
 202550230001,983283,2025-11-21,MUNICIPIO DE ARARUAMA,Pavimentacao de via urbana no bairro Areal em Araruama,477178.31,ARARUAMA - RJ,15,451
 202550230001,983286,2025-12-30,MUNICIPIO DE SAPUCAIA,Pavimentacao com bloqueteamento em vias publicas do municipio de Sapucaia-PA.,959058.98,SAPUCAIA - PA,15,451
@@ -3940,22 +4022,30 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550230001,983301,2025-12-03,MUNICIPIO DE RIO REAL,Pavimentacao de diversas ruas do municipio de Rio Real/Ba,960019.00,RIO REAL - BA,15,451
 202550230001,983309,2025-11-17,MUNICIPIO DE BREJINHO DE NAZARE,Pavimentacao de ruas no perimetro urbano do municipio de Brejinho de Nazare - TO,960019.00,BREJINHO DE NAZARÉ - TO,15,451
 202550230001,983312,2025-11-25,MUNICIPIO DE PINHAL,Pavimentacao de vias publicas urbanas no municipio de Pinhal/RS.,674903.00,PINHAL - RS,15,451
+202550230001,983866,2025-12-12,MUNICIPIO DE BORBOREMA,Execucao de obra de pavimentacao asfaltica em vias urbanas do municipio de Borborema/PB,481104.00,BORBOREMA - PB,15,451
+202550230001,983869,2025-11-28,MUNICIPIO DE PANORAMA,Recapeamento em diversas ruas do municipio de Panorama - SP.,1441714.00,PANORAMA - SP,15,451
 202550230001,983874,2025-11-21,MUNICIPIO DE GOVERNADOR NUNES FREIRE,PAVIMENTACAO DE VIAS NA SEDE DO MUNICIPIO DE GOVERNADOR NUNES FREIRE/MA,1441714.00,GOVERNADOR NUNES FREIRE - MA,15,451
 202550230001,983876,2025-11-19,MUNICIPIO DE COLINAS DO TOCANTINS,Pavimentacao asfaltica em vias publica do Municipio de Colinas do Tocantins -TO,960019.00,COLINAS DO TOCANTINS - TO,15,451
 202550230001,983877,2025-11-27,MUNICIPIO DE PEDRO AFONSO,Implantacao de recapeamento asfaltico de vias urbanas com sinalizacao no municipio de Pedro Afonso -TO.,1441714.00,PEDRO AFONSO - TO,15,451
+202550230001,984094,2025-12-04,MUNICIPIO DE SERRA DA RAIZ,Execucao de obra de pavimentacao em vias urbanas do municipio.,960019.00,SERRA DA RAIZ - PB,15,451
+202550230001,984095,2025-11-17,MUNICIPIO DE VICOSA,Obras de pavimentacao e qualificacao viaria urbana no municipio de Vicosa-MG.,578003.00,VIÇOSA - MG,15,451
 202550230001,984096,2025-11-11,MUNICIPIO DE PONTE NOVA,Pavimentacao em vias do municipio de Ponte Nova-MG,578002.00,PONTE NOVA - MG,15,451
 202550230001,984100,2025-11-19,MUNICIPIO DE SERRA DOS AIMORES,Pavimentacao em diversas ruas no municipio de Serra dos Aimores - MG.,1891022.29,SERRA DOS AIMORÉS - MG,15,451
 202550230001,984102,2025-12-03,MUNICIPIO DE JABORA,Pavimentacao de passeio publico (calcadas e meio fio) no perimetro urbano do municipio.,389863.00,JABORÁ - SC,15,451
 202550230001,984104,2025-11-27,MUNICIPIO DE TENENTE LAURENTINO CRUZ,Pavimentao no permetro urbano do Municpio de Tenente Laurentino Cruz/RN.,389863.00,TENENTE LAURENTINO CRUZ - RN,15,451
 202550230001,984105,2025-11-19,MUNICIPIO DE TOCANTINOPOLIS,RECAPEAMENTO DE RUAS E AVENIDAS NA AREA URBANA DO MUNICIPIO DE TOCANTINOPOLIS.,1441714.00,TOCANTINÓPOLIS - TO,15,451
+202550230001,984106,2025-12-11,MUNICIPIO DE SAO PEDRO DA SERRA,Pavimentacao de vias urbanas no Municipio.,389863.00,SÃO PEDRO DA SERRA - RS,15,451
 202550230001,984108,2025-11-17,MUNICIPIO DE CAMANDUCAIA,Pavimentacao de vias urbanas no municipio de Camanducaia/MG.,672443.00,CAMANDUCAIA - MG,15,451
 202550230001,984514,2026-01-05,MUNICIPIO DE TURVELANDIA,Recapeamento no municipio de Turvelandia-Go.,481104.00,TURVELÂNDIA - GO,15,451
+202550230001,984515,2025-12-03,MUNICIPIO DE CORONEL FABRICIANO,"Pavimentacao de Ruas no Municipio de Coronel Fabriciano: Rua Dois, Corrego Alto.",617333.00,CORONEL FABRICIANO - MG,15,451
 202550230001,984525,2025-11-26,MUNICIPIO DE SAO LOURENCO DA SERRA,Pavimentacao e Adequacao da Via localizada em perimetro urbano em Trecho da Estrada Maria Soares Soares Pereira.,389863.00,SÃO LOURENÇO DA SERRA - SP,15,451
 202550230001,984531,2025-11-26,MUNICIPIO DE VESPASIANO,RECAPEAMENTO; 2)DRENAGEM; 3)SINALIZACAO VIARIA EM DIVERSOS LOGRADOUROS DO MUNICIPIO DE VESPASIANO/MG.,481104.00,VESPASIANO - MG,15,451
 202550230001,984535,2025-12-30,MUNICIPIO DE OUROESTE,Recapeamento de diversas ruas no municipio de Ouroeste - SP.,873242.00,OUROESTE - SP,15,451
+202550230001,984537,2025-12-01,MUNICIPIO DE CACONDE,"Pavimentacao das ruas: Avenida Sampaio Vidal; Rua Sao Pedro, Rua Tapajos, Avenida Henrique Agostineto e Rua Washington Luis",389863.00,CACONDE - SP,15,451
 202550230001,984553,2025-12-10,MUNICIPIO DE XAMBIOA,Pavimentacao Asfaltica de vias urbanas em Xambioa -TO.,960019.00,XAMBIOÁ - TO,15,451
 202550230001,984555,2025-12-10,MUNICIPIO DE CRISOPOLIS,PAVIMENTACAO EM PARALELEPIPEDO DE RUAS NO MUNICIPIO DE CRISOPOLIS/BA.,578003.00,CRISÓPOLIS - BA,15,451
 202550230001,984556,2025-12-08,MUNICIPIO DE SEVERINIA,"Recapeamento em diversas ruas do Municipio de Severinia/SP, localizado dentro do Perimetro Urbano.",481104.00,SEVERÍNIA - SP,15,451
+202550230001,984559,2026-01-05,MUNICIPIO DE FAXINAL DO SOTURNO,Implantacao de pavimentacao em vias publicas urbanas no municipio de Faxinal do Soturno/RS.,481104.00,FAXINAL DO SOTURNO - RS,15,451
 202550230001,985040,2025-12-03,MUNICIPIO DE DESCALVADO,EXECUCAO DE OBRAS DE INFRAESTRUTURA URBANA DE RECAPEAMENTO ASFALTICO EM VIAS PUBLICAS DO MUNICIPIO DE DESCALVADO/SP,481104.00,DESCALVADO - SP,15,451
 202550230001,985042,2025-12-11,MUNICIPIO DE RIBEIRA DO PIAUI,PAVIMENTACAO DE VIAS URBANAS DO MUNICIPIO DE RIBEIRA DO PIAUI-PI,389863.00,RIBEIRA DO PIAUÍ - PI,15,451
 202550230001,985053,2025-11-24,MUNICIPIO DE SANTA RITA DE IBITIPOCA,Pavimentacao de Vias Urbanas,389863.00,SANTA RITA DE IBITIPOCA - MG,15,451
@@ -3963,31 +4053,42 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550230001,985055,2026-01-05,MUNICIPIO DE VIRGINOPOLIS,ADEQUACAO DE VIAS URBANAS NO MUNICIPIO DE VIRGINOPOLIS - MINAS GERAIS,481104.00,VIRGINÓPOLIS - MG,15,451
 202550230001,985056,2025-12-08,MUNICIPIO DE UBAITABA,Pavimentacao de vias urbanas no Bairro Gutemberg Araujo do municipio de Ubaitaba/BA,389863.00,UBAITABA - BA,15,451
 202550230001,985066,2025-12-24,MUNICIPIO DE JAGUARIBARA,CONSTRUCAO DO CALCADAO DA AV. MARIA DIOGENES DE AQUINO ZONA URBANA SEDE DO MUNICIPIO DE JAGUARIBARA/CE.,617333.00,JAGUARIBARA - CE,15,451
+202550230001,985166,2025-12-05,MUNICIPIO DE SAO LOURENCO DO SUL,Pavimentacao no Bairro Fiorame,481104.00,SÃO LOURENÇO DO SUL - RS,15,451
 202550230001,985169,2025-12-02,MUNICIPIO DE BELMIRO BRAGA,Pavimentacao nas ruas urbanas do municipio de Belmiro Braga/MG.,389863.00,BELMIRO BRAGA - MG,15,451
 202550230001,986524,2026-03-04,MUNICIPIO DE BALSAS,Implantacao de infraestrutura de qualificacao viaria em Balsas - MA,487329.00,BALSAS - MA,15,451
 202550230001,986525,2025-12-24,MUNICIPIO DE ROSARIO,Pavimentacao em bloquetes no municipio de Rosario/MA.,974658.00,ROSÁRIO - MA,15,451
 202550230001,986528,2025-12-22,MUNICIPIO DE MATO GROSSO,Execucao de obra de pavimentacao em vias urbanas do municipio.,481104.00,MATO GROSSO - PB,15,451
 202550230001,986531,2025-12-09,MUNICIPIO DE IRAI DE MINAS,Execucao de obra de Recapeamento Asfaltico em diversas vias urbanas do Municipio de Irai De Minas-MG.,389863.00,IRAÍ DE MINAS - MG,15,451
+202550230001,986534,2026-01-05,MUNICIPIO DE SANTA CRUZ DAS PALMEIRAS,Recapeamento asfaltico em ruas do Municipio de Santa Cruz das Palmeiras/SP (Perimetro Urbano).,389863.00,SANTA CRUZ DAS PALMEIRAS - SP,15,451
 202550230001,986545,2025-12-23,MUNICIPIO DE SERRANIA,PAVIMENTACAO ASFALTICA EM DIVERSAS RUAS DE SERRANIA MG.,389863.00,SERRANIA - MG,15,451
+202550230001,986548,2026-01-14,MUNICIPIO DE AMELIA RODRIGUES,Pavimentacao de via urbana do municipio de Amelia Rodrigues/BA,960019.00,AMÉLIA RODRIGUES - BA,15,451
 202550230001,986552,2026-01-08,MUNICIPIO DE QUATIPURU,Pavimentacao em concreto de vias urbanas no municipio de Quatipuru/PA,2870210.00,QUATIPURU - PA,15,451
 202550230001,988387,2025-12-29,MUNICIPIO DE ARARUAMA,Pavimentacao de via publica no municipio de Araruama,477356.51,ARARUAMA - RJ,15,451
 202550230001,988394,2026-01-06,MUNICIPIO DE CONCEICAO DE IPANEMA,"Pavimentacao com Bloco sextavado, drenagem pluvial, calcadas acessiveis e sinalizacao viaria em perimetro urbano na sede do municipio de Conceicao de Ipanema MG.",389863.00,CONCEIÇÃO DE IPANEMA - MG,15,451
 202550230001,988396,2025-12-29,MUNICIPIO DE MARILIA,Pavimentacao e fresagem em diversas ruas do municipio de Marilia.,389863.00,MARÍLIA - SP,15,451
 202550230001,988397,2025-12-23,MUNICIPIO DE DORMENTES,Pavimentacao no municipio de Dormentes-PE.,1128700.00,DORMENTES - PE,15,451
+202550230001,988403,2025-12-30,MUNICIPIO DE TACIMA,Pavimentacao em Paralelepipedo e Drenagem de Ruas na Zona Urbana do Municipio de Tacima - PB.,487329.00,TACIMA - PB,15,451
+202550230001,988414,2026-01-07,MUNICIPIO DE NAZARE,Execucao de obras de pavimentacao e qualificacao viaria em ruas da sede do Municipio de Nazare,974658.00,NAZARÉ - BA,15,451
 202550230001,988421,2025-12-18,MUNICIPIO DE CAIEIRAS,"Execucao de Drenagem, Reforco de Base, Pavimentacao, calcadas, Guias e Sarjetas em ruas do Municipio de Caieiras/SP.",1072124.00,CAIEIRAS - SP,15,451
 202550230001,988423,2025-12-24,MUNICIPIO DE SAPIRANGA,Obras de Pavimentacao em Via Publica no Perimetro Urbano do Municipio de Sapiranga.,389863.00,SAPIRANGA - RS,15,451
 202550230001,988426,2025-12-17,MUNICIPIO DE PORTEIRAS,Pavimentacao em Vias Urbanas do Municipio de Porteiras - CE,682261.00,PORTEIRAS - CE,15,451
+202550230001,988429,2026-01-06,MUNICIPIO DE SALINAS,"Implantacao de pavimentacao em vias publicas, no Municipio de Salinas/MG",391066.00,SALINAS - MG,15,451
 202550230001,988430,2026-01-09,MUNICIPIO DE SANTA BARBARA DE GOIAS,Pavimentacao asfaltica em vias urbanas do municipio de Santa Barbara de Goias.,481104.00,SANTA BÁRBARA DE GOIÁS - GO,15,451
 202550230001,988434,2026-01-05,MUNICIPIO DE PIRACICABA,"Implantacao de Qualificacao viaria, em via publica localizada em perimetro urbano, no municipio de Piracicaba.",674903.00,PIRACICABA - SP,15,451
+202550230001,988441,2025-12-16,MUNICIPIO DE PRESIDENTE JUSCELINO,Pavimentacao de vias publicas urbanas no municipio de Presidente Juscelino/MG,487329.00,PRESIDENTE JUSCELINO - MG,15,451
 202550230001,988445,2025-12-24,MUNICIPIO DE RESPLENDOR,"Execucao de obras de pavimentacao e drenagem superficial entre os trechos da Rua Doutor Manuel Mauro Ladeira Vilas e Rua Antalcidas Sergio Ferreira na Avenida Presidente Tancredo Neves, no Municipio de Resplendor/MG.",487329.00,RESPLENDOR - MG,15,451
 202550230001,988446,2026-01-05,MUNICIPIO DE TRES CACHOEIRAS,Pavimentacao Asfaltica de Rua na area urbana da Comunidade de Vila Fernando Ferrari.,477541.00,TRÊS CACHOEIRAS - RS,15,451
+202550230001,988455,2026-01-05,MUNICIPIO DE MUTUM,Pavimentacao de vias urbanas dentro do Distrito de Centenario no municipio de Mutum/MG.,389863.00,MUTUM - MG,15,451
 202550230001,988463,2025-12-29,MUNICIPIO DE FELICIO DOS SANTOS,Convenio aguardando detalhamento das informações. Fonte: LC131.,674903.00,FELÍCIO DOS SANTOS - MG,15,451
+202550230001,988922,2026-01-06,MUNICIPIO DE RIBEIRA DO POMBAL,Requalificao Viria no permetro urbano de Ribeira do Pombal.,877193.00,RIBEIRA DO POMBAL - BA,15,451
 202550230001,988924,2026-01-14,MUNICIPIO DE BRASILEIRA,Pavimentacao de vias publicas urbanas do Municipio de Brasileira - PI,584795.00,BRASILEIRA - PI,15,451
 202550230001,988926,2025-12-24,MUNICIPIO DE JAGUARIBARA,Pavimentacao em paralelepipedo com rejuntamento e com calcada no Municipio de Jaguaribara/CE.,487329.00,JAGUARIBARA - CE,15,451
 202550230001,988927,2026-01-15,MUNICIPIO DE LAGOA ALEGRE,Pavimentacao em paralelepipedo de vias publicas no Municipio de Lagoa Alegre PI.,389863.00,LAGOA ALEGRE - PI,15,451
 202550230001,990968,2026-01-05,MUNICIPIO DE PIRACAIA,"Obra de infraestrutura de qualificacao viaria, recapeamento urbano em diversas ruas do municipio de Piracaia SP",438157.40,PIRACAIA - SP,15,451
 202550230001,990971,2026-01-07,MUNICIPIO DE AMATURA,Qualificacao de Vias na cidade de Amatura/AM.,748150.00,AMATURÁ - AM,15,451
 202550230001,990972,2026-01-05,MUNICIPIO DE ELISEU MARTINS,Pavimentacao em paralelepipedo no municipio de Eliseu Martins-PI,389863.00,ELISEU MARTINS - PI,15,451
+202550230001,990976,2026-01-06,MUNICIPIO DE PEREIRO,PAVIMENTACAO DE RUAS NA ZONA URBANA NO MUNICIPIODE PEREIRO/CE.,974658.00,PEREIRO - CE,15,451
+202550230001,990980,2026-01-08,MUNICIPIO DE CARAUBAS,Pavimentacao em Paralelepipedo e Drenagem de Ruas na Zona Urbana do Municipio de Caraubas - PB,779727.00,CARAÚBAS - PB,15,451
 202550230001,990983,2026-01-07,MUNICIPIO DE CATANDUVA,Promover infraestrutura urbana de qualidade em nosso municipio.,1053913.00,CATANDUVA - SP,15,451
 202550230001,990992,2026-01-06,MUNICIPIO DE CARBONITA,"PAVIMENTACAO ASFALTICA EM TSD (TRATAMENTO SUPERFICIAL DUPLO) DE VIAS URBANAS, MUNICIPIO DE CARBONITA.",487329.00,CARBONITA - MG,15,451
 202550230001,990999,2026-01-05,MUNICIPIO DE SEBASTIAO LEAL,"Apoio a Politica Nacional de Desenvolvimento Urbano, com a construcao de uma pista de caminhada no municipio de Sebastiao Leal - PI.",389863.00,SEBASTIÃO LEAL - PI,15,451
@@ -3995,6 +4096,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550230001,991421,2026-01-05,MUNICIPIO DE SAO JOAO DA CANABRAVA,PAVIMENTACAO DE VIAS PUBLICAS NO MUNICIPIO DE SAO JOAO DA CANABRAVA - PI.,389863.00,SÃO JOÃO DA CANABRAVA - PI,15,451
 202550230001,991739,2026-01-06,MUNICIPIO DE PALMEIRA DO PIAUI,PAVIMENTACAO DE VIAS URBANAS DO MUNICIPIO DE PALMEIRA DO PIAUI-PI,389863.00,PALMEIRA DO PIAUÍ - PI,15,451
 202550230001,991876,2026-01-15,MUNICIPIO DE TANQUE DO PIAUI,Pavimentacao em paralelepipedo no Municipio de Tanque do Piaui PI.,389863.00,TANQUE DO PIAUÍ - PI,15,451
+202550230001,991879,2026-01-08,MUNICIPIO DE MATOS COSTA,Pavimentacao em vias urbanas do municipio de Matos Costa/SC.,481104.00,MATOS COSTA - SC,15,451
 202550230001,991945,2026-01-12,ESTADO DE GOIAS,Obras de infraestrutura de pavimentacao no Estado de Goias,1435000.00,Nacional,15,451
 202550230001,991947,2026-01-12,ESTADO DE GOIAS,Adequacao de vias em municipios do Estado de Goias,1000154.00,Nacional,15,451
 202550230001,991951,2026-01-06,MUNICIPIO DE ALTO RIO DOCE,Pavimentacao de Vias Urbanas do Municipio de Alto Rio Doce - MG,623781.00,ALTO RIO DOCE - MG,15,451
@@ -4004,6 +4106,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550480002,978191,2025-09-29,SECRETARIA DE ESTADO DAS CIDADES E INTEGRACAO REGIONAL (SECIR),AQUISICAO DE EQUIPAMENTOS PARA APOIO A INFRAESTRUTURA PRODUTIVA.,10505000.00,Nacional,15,244
 202550480002,978252,2025-10-01,MUNICIPIO DE NIOAQUE,AQUISICAO DE PATRULHA MECANIZADA,540530.00,NIOAQUE - MS,15,244
 202550480002,978263,2025-12-03,MUNICIPIO DE DILERMANDO DE AGUIAR,Pavimentacao em Estrada Vicinal no Municipio de Dilermando de Aguiar/RS.,1048607.28,DILERMANDO DE AGUIAR - RS,15,244
+202550480002,978267,2025-10-13,MUNICIPIO DE SANTA LUCIA,Aquisicao de maquinas e equipamentos para o municipio de Santa Lucia - SP.,382000.00,SANTA LÚCIA - SP,15,244
 202550480002,978408,2025-12-08,MUNICIPIO DE CONGONHAL,Pavimentacao de estradas vicinais,345547.70,CONGONHAL - MG,15,244
 202550480002,978410,2025-12-30,MUNICIPIO DE CRUZEIRO DA FORTALEZA,Aquisicao de Equipamentos,477500.00,CRUZEIRO DA FORTALEZA - MG,15,244
 202550480002,978411,2025-09-22,MUNICIPIO DE ALPESTRE,Aquisicao de Maquina Agricola,191000.00,ALPESTRE - RS,15,244
@@ -4012,6 +4115,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550480002,978415,2025-12-17,MUNICIPIO DE CARIRIACU,Pavimentacao em area rural no Municipio de Caririacu - Ceara.,419292.23,CARIRIAÇU - CE,15,244
 202550480002,978423,2025-12-16,MUNICIPIO DE BOM LUGAR,PAVIMENTACAO DE ESTRADA VICINAL NO MUNICIPIO DE BOM LUGAR/MA.,864500.00,BOM LUGAR - MA,15,244
 202550480002,978424,2025-12-16,MUNICIPIO DE BOM LUGAR,Construcao de estradas vicinais no Municipio de Bom Lugar/MA,944752.48,BOM LUGAR - MA,15,244
+202550480002,978432,2025-12-10,MUNICIPIO DE TAQUARUCU DO SUL,Pavimentacao de estrada vicinal no Municipio de Taquarucu do Sul/RS.,338161.34,TAQUARUÇU DO SUL - RS,15,244
 202550480002,978447,2025-10-02,MUNICIPIO DE AREALVA,Aquisicao de maquinas e equipamentos para o municipio de Arealva-SP.,279005.06,AREALVA - SP,15,244
 202550480002,978458,2025-12-16,MUNICIPIO DE CABO VERDE,PAVIMENTACAO DE ESTRADA VICINAL EM CABOVERDE - MG,501375.00,CABO VERDE - MG,15,244
 202550480002,978472,2025-10-22,MUNICIPIO DE TRES PALMEIRAS,Aquisicao de maquinas e equipamentos,191000.00,TRÊS PALMEIRAS - RS,15,244
@@ -4044,12 +4148,15 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550480002,978912,2025-10-20,MUNICIPIO DE MARECHAL THAUMATURGO,Aquisicao de Maquinas e Equipamentos Agricolas.,1289250.00,MARECHAL THAUMATURGO - AC,15,244
 202550480002,979020,2025-10-29,MUNICIPIO DE QUIXERE,Aquisicao de Maquinas e Equipamentos Para o Municipio de Quixere/CE.,531258.28,QUIXERÉ - CE,15,244
 202550480002,979023,2025-10-16,MUNICIPIO DE BARAO DE ANTONINA,Aquisicao de maquinas e equipamentos para o municipio de Barao de Antonina -SP,1068866.14,BARÃO DE ANTONINA - SP,15,244
+202550480002,979024,2025-12-31,MUNICIPIO DE COARI,Aquisicao de Maquinas e Equipamentos para o Municipio de Coari-Am,487050.00,COARI - AM,15,244
 202550480002,979051,2025-12-08,MUNICIPIO DE GONZAGA,Pavimentacao de Estradas Rurais do Municipio de Gonzaga-MG,1056790.50,GONZAGA - MG,15,244
 202550480002,979102,2025-10-21,MUNICIPIO DE BRUMADINHO,Aquisicao de maquinas e equipamentos,477500.00,BRUMADINHO - MG,15,244
 202550480002,979434,2025-11-03,MUNICIPIO DE PITANGUI,Aquisicao de Equipamento de Apoio a Producao.,477500.00,PITANGUI - MG,15,244
+202550480002,979435,2025-12-05,SECRETARIA DA AGRICULTURA FAMILIAR,IMPLANTACAO DE ESTRUTURAS PARA GERACAO E DISTRIBUICAO DE ENERGIA,630342.00,Nacional,15,244
 202550480002,979446,2025-10-15,MUNICIPIO DE ARROIO GRANDE,Aquisicao de Maquinas.,316184.79,ARROIO GRANDE - RS,15,244
 202550480002,979605,2025-10-16,MUNICIPIO DE SANTO EXPEDITO DO SUL,Aquisicao de Maquinas e Equipamentos,197015.61,SANTO EXPEDITO DO SUL - RS,15,244
 202550480002,979611,2025-10-07,MUNICIPIO DE LAPAO,Aquisicao de maquinas e equipamentos para o municipio de Lapao-BA,573000.00,LAPÃO - BA,15,244
+202550480002,979614,2025-11-12,MUNICIPIO DE BOITUVA,Aquisicao de Maquinas e Equipamentos para o Municipio de Boituva/SP.,955000.00,BOITUVA - SP,15,244
 202550480002,979778,2025-10-23,MUNICIPIO DE BARROLANDIA,Aquisicao de Maquina e Equipamentos para o Municipio de Barrolandia-TO.,663502.03,BARROLÂNDIA - TO,15,244
 202550480002,979783,2025-12-04,MUNICIPIO DE MONTE DO CARMO,Aquisicao de Maquinas e Equipamentos para o Municipio de Monte do Carmo-TO.,142569.33,MONTE DO CARMO - TO,15,244
 202550480002,979958,2025-11-14,"SECRETARIA DE ESTADO DA AGRICULTURA, ABASTECIMENTO, AQUICULTURA E PESCA - SEAG",Aquisicao de Maquinas e Equipamentos Agricolas.,976010.00,Nacional,15,244
@@ -4063,8 +4170,11 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550480002,980091,2025-12-09,MUNICIPIO DE FORMOSO,Aquisicao de Maquinas e Equipamentos,382000.00,FORMOSO - MG,15,244
 202550480002,980234,2025-11-03,MUNICIPIO DE GONZAGA,Aquisicao de maquinas e equipamentos,325111.11,GONZAGA - MG,15,244
 202550480002,980269,2025-10-16,MUNICIPIO DE IBIRA,Aquisicao de maquinas e equipamentos para apoio a infraestrutura produtiva no Municipio de Ibira SP,912789.00,IBIRÁ - SP,15,244
+202550480002,980270,2025-10-20,MUNICIPIO DE ABAIRA,Aquisicao de Maquinas e Equipamentos para o Municipio de Abaira/BA.,286500.00,ABAÍRA - BA,15,244
+202550480002,980306,2025-10-29,MUNICIPIO DE ASTORGA,Aquisicao de maquinas e equipamentos.,191000.00,ASTORGA - PR,15,244
 202550480002,980314,2025-12-02,MUNICIPIO DE HELIODORA,Pavimentacao de Estrada Vicinal.,312034.20,HELIODORA - MG,15,244
 202550480002,980460,2025-11-27,MUNICIPIO DE FONTOURA XAVIER,Aquisicao de Maquinas e Equipamentos,477500.00,FONTOURA XAVIER - RS,15,244
+202550480002,980504,2025-12-17,MUNICIPIO DE FREI INOCENCIO,Implantacao de estradas vicinais do Municipio Frei Inocencio/MG,524611.28,FREI INOCÊNCIO - MG,15,244
 202550480002,980512,2025-11-12,MUNICIPIO DE SERRA DO SALITRE,Aquisicao de Maquinas Implementos Agricolas.,477500.00,SERRA DO SALITRE - MG,15,244
 202550480002,980653,2025-10-24,MUNICIPIO DE DOURADOQUARA,Aquisicao de maquinas eequipamentos,668500.00,DOURADOQUARA - MG,15,244
 202550480002,980654,2025-11-06,MUNICIPIO DE ENGENHO VELHO,Aquisicao de Maquinas,180972.50,ENGENHO VELHO - RS,15,244
@@ -4081,10 +4191,13 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550480002,981457,2025-12-16,MUNICIPIO DE SANTO INACIO DO PIAUI,PAVIMENTACAO DE VIAS EM ESTRADAS VICINAIS NO MUNICIPIO DE SANTO INACIO DO PIAUI - PI.,955000.00,SANTO INÁCIO DO PIAUÍ - PI,15,244
 202550480002,981671,2025-10-17,MUNICIPIO DE BROCHIER,Aquisicao de maquinas e equipamentos.,366911.06,BROCHIER - RS,15,244
 202550480002,981679,2025-10-23,MUNICIPIO DE ALTO RIO NOVO,Aquisicao de maquinas e equipamentos.,403000.00,ALTO RIO NOVO - ES,15,244
+202550480002,981692,2025-12-17,MUNICIPIO DE SAO GONCALO DO PIAUI,Pavimentacao de estradas vicinais do municipio de Sao Goncalo do Piaui PI,898196.44,SÃO GONÇALO DO PIAUÍ - PI,15,244
 202550480002,981694,2025-12-17,MUNICIPIO DE QUEIMADA NOVA,PAVIMENTACAO DE VIAS EM ESTRADAS VICINAIS NO MUNICIPIO DE QUEIMADA NOVA - PI.,1432500.00,QUEIMADA NOVA - PI,15,244
 202550480002,981695,2025-12-17,MUNICIPIO DE QUEIMADA NOVA,PAVIMENTACAO DE VIAS EM ESTRADAS VICINAIS NO MUNICIPIO DE QUEIMADA NOVA - PI.,1432500.00,QUEIMADA NOVA - PI,15,244
+202550480002,981777,2025-12-08,MUNICIPIO DE GUARATUBA,Aquisicao de equipamentos.,191000.00,GUARATUBA - PR,15,244
 202550480002,981782,2025-11-03,MUNICIPIO DE ITAPAGIPE,Aquisicao de maquina para o municipio de Itapagipe/MG.,420480.33,ITAPAGIPE - MG,15,244
 202550480002,981783,2025-11-11,MUNICIPIO DE CENTENARIO,Aquisicao de maquinas e equipamentos.,573000.00,CENTENÁRIO - RS,15,244
+202550480002,981791,2025-12-16,MUNICIPIO DE CAJUEIRO DA PRAIA,Pavimentacao de vias na zona rural do municipio de Cajueiro da Praia-PI,955000.00,CAJUEIRO DA PRAIA - PI,15,244
 202550480002,981798,2025-11-18,MUNICIPIO DE BUTIA,Aquisicao de Maquinas.,429750.00,BUTIÁ - RS,15,244
 202550480002,981835,2025-11-27,MUNICIPIO DE TOROPI,Aquisicao de equipamento.,370375.34,TOROPI - RS,15,244
 202550480002,981897,2025-10-20,MUNICIPIO DE TUCANO,Aquisicao de maquinas e equipamentos para o municipio de Tucano-BA.,1000000.00,TUCANO - BA,15,244
@@ -4092,7 +4205,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550480002,981899,2025-10-29,MUNICIPIO DE MONTE NEGRO,AQUISICAO DE MAQUINAS E EQUIPAMENTOS.,286500.00,MONTE NEGRO - RO,15,244
 202550480002,981912,2025-10-20,MUNICIPIO DE SAO PEDRO DO SUL,Aquisicao de maquinas e equipamentos,217478.93,SÃO PEDRO DO SUL - RS,15,244
 202550480002,982043,2025-11-05,MUNICIPIO DE CAAPIRANGA,Aquisicao de Maquina para o Municipio de Caapiranga/AM,467950.00,CAAPIRANGA - AM,15,244
-202550480002,982045,2025-12-16,MUNICIPIO DE JOAO COSTA,Pavimentacao de Vias na Zona Rural do Municipio de Joao Costa - PI.,742777.00,JOÃO COSTA - PI,15,244
+202550480002,982045,2025-12-16,MUNICIPIO DE JOAO COSTA,Pavimentacao de Vias na Zona Rural do Municipio de Joao Costa - PI.,735522.59,JOÃO COSTA - PI,15,244
 202550480002,982240,2025-12-31,MUNICIPIO DE MURICILANDIA,Aquisicao de maquina para o Municipio de Muricilandia - TO.,477500.00,MURICILÂNDIA - TO,15,244
 202550480002,982242,2025-12-29,MUNICIPIO DE ANHEMBI,AQUISICAO DE MAQUINAS E EQUIPAMENTOS.,955000.00,ANHEMBI - SP,15,244
 202550480002,982667,2025-11-20,MUNICIPIO DE CACONDE,Aquisicao de maquinas e equipamentos,525250.00,CACONDE - SP,15,244
@@ -4101,8 +4214,10 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550480002,982682,2025-10-24,MUNICIPIO DE DURANDE,Aquisicao de maquinas e equipamentos.,478678.00,DURANDÉ - MG,15,244
 202550480002,982689,2025-10-23,MUNICIPIO DE CARBONITA,Aquisicao de maquina e implementos agricolas,179957.81,CARBONITA - MG,15,244
 202550480002,982697,2025-12-11,MUNICIPIO DE PAULA CANDIDO,Pavimentacao de estradas vicinais no municipio de Paula Candido/MG,373023.50,PAULA CÂNDIDO - MG,15,244
+202550480002,982722,2025-11-12,MUNICIPIO DE VENTUROSA,Aquisicao de Maquinas e Equipamentos para o Municipio de Venturosa PE,429750.00,VENTUROSA - PE,15,244
 202550480002,982732,2025-11-05,MUNICIPIO DE ITAPITANGA,Aquisicao de maquinarios agricolas para o Municipio de Itapitanga - BA,286500.00,ITAPITANGA - BA,15,244
 202550480002,982862,2025-11-05,MUNICIPIO DE REGISTRO,Aquisicao de maquinas e equipamentos para o municipio de Registro,524772.00,REGISTRO - SP,15,244
+202550480002,982867,2025-12-17,MUNICIPIO DE AROEIRAS DO ITAIM,Pavimentacao de estradas vicinais na zona rural de Aroeiras do Itaim PI.,382000.00,AROEIRAS DO ITAIM - PI,15,244
 202550480002,982883,2025-11-12,MUNICIPIO DE AVELINO LOPES,AQUISICAO DE MAQUINA PARA O MUNICIPIO DE AVELINO LOPES-PI,382000.00,AVELINO LOPES - PI,15,244
 202550480002,983155,2025-11-11,MUNICIPIO DE ERVAL GRANDE,AQUISICAO DE MAQUINAS E EQUIPAMENTOS,343640.24,ERVAL GRANDE - RS,15,244
 202550480002,983157,2025-11-20,MUNICIPIO DE ESCADA,Aquisicao de Equipamento para oMunicipio de Escada/PE,382000.00,ESCADA - PE,15,244
@@ -4111,14 +4226,18 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550480002,983739,2025-12-16,MUNICIPIO DE SURUBIM,Aquisicao de maquinas e equipamentos para o Municipio de Surubim/PE,955000.00,SURUBIM - PE,15,244
 202550480002,983740,2025-11-10,MUNICIPIO DE BARRA DE SAO FRANCISCO,Aquisicao de Maquinas e Equipamentos,795248.00,BARRA DE SÃO FRANCISCO - ES,15,244
 202550480002,983742,2025-11-13,MUNICIPIO DE AGUAS FORMOSAS,Aquisicao de maquinas e equipamentos,191000.00,ÁGUAS FORMOSAS - MG,15,244
+202550480002,983761,2025-12-22,MUNICIPIO DE CURRALINHOS,PAVIMENTACAO DE VIAS EM ESTRADAS VICINAIS NO MUNICIPIO DE CURRALINHOS/PI,382000.00,CURRALINHOS - PI,15,244
 202550480002,983988,2025-11-14,MUNICIPIO DE ESTRELA,Aquisicao de Maquina e Equipamentos para o Municipio de Estrela/RS,238750.00,ESTRELA - RS,15,244
 202550480002,983991,2025-12-10,MUNICIPIO DE DOM PEDRITO,AQUISICAO DE MAQUINAS E EQUIPAMENTOS PARA O MUNICIPIO,286500.00,DOM PEDRITO - RS,15,244
 202550480002,983992,2025-12-22,"SECRETARIA DE ESTADO DE AGRICULTURA, PECUARIA E ABASTECIMENTO",Aquisicao de Maquinarios e Equipamentos,4747059.21,Nacional,15,244
 202550480002,984113,2025-12-11,CONSORCIO INTERMUNICIPAL MULTIFINALITARIO DA AREA MINEIRA DA SUDENE,AQUISICAO DE EQUIPAMENTOS E MAQUINAS,894552.48,Nacional,15,244
 202550480002,984137,2025-11-20,MUNICIPIO DE PORTO XAVIER,Aquisicao de Maquinas e Equipamentos,477500.00,PORTO XAVIER - RS,15,244
+202550480002,984241,2025-12-22,MUNICIPIO DE GRACA ARANHA,PAVIMENTACAO DE ESTRADAS DE VICINAIS NA ZONA RURAL DO MUNICIPIO DE GRACA ARANHA/MA,950005.23,GRAÇA ARANHA - MA,15,244
+202550480002,984373,2025-12-17,MUNICIPIO DE SERRO,Pavimentacao de Estrada Vicinal,321488.46,SERRO - MG,15,244
 202550480002,984444,2025-12-18,MUNICIPIO DE UNAI,Aquisicao de Maquinas e Equipamentos,5730000.00,UNAÍ - MG,15,244
 202550480002,984576,2025-12-18,CONSORCIO INTERMUNICIPAL MULTIFINALITARIO DA AREA MINEIRA DA SUDENE,AQUISICAO DE MAQUINAS E EQUIPAMENTOS,3996000.00,Nacional,15,244
 202550480002,984578,2025-12-11,CONSORCIO INTERMUNICIPAL MULTIFINALITARIO DA AREA MINEIRA DA SUDENE,AQUISICAO DE MAQUINAS E EQUIPAMENTOS PARA O CONSORCIO CIMAMS,7956600.00,Nacional,15,244
+202550480002,984786,2025-12-19,MUNICIPIO DE LAGOA DO BARRO DO PIAUI,Pavimentacao de vias na zona rural do Municipio de Lagoa do Barro do Piaui/PI,477500.00,LAGOA DO BARRO DO PIAUÍ - PI,15,244
 202550480002,985159,2025-12-08,MUNICIPIO DE DURANDE,Aquisicao de maquinas e equipamentos,1051678.00,DURANDÉ - MG,15,244
 202550480002,985312,2025-12-16,MUNICIPIO DE ASSARE,Construcao de Passagens Molhadas no Municipio de Assare - Ceara,477500.00,ASSARÉ - CE,15,244
 202550480002,985315,2025-12-17,ASSOCIACAO DE COOPERACAO AGRICOLA DO ESTADO DE SERGIPE - ACASE,Aquisicao de equipamentos para apoio a producao,1630342.00,Nacional,15,244
@@ -4129,28 +4248,37 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202550480002,986393,2025-12-15,MUNICIPIO DE PRESIDENTE EPITACIO,Aquisicao de maquinas e equipamentos,382000.00,PRESIDENTE EPITÁCIO - SP,15,244
 202550480002,986598,2025-12-11,MUNICIPIO DE ENGENHO VELHO,Aquisicao de Maquinas e equipamentos,377868.01,ENGENHO VELHO - RS,15,244
 202550480002,987803,2025-12-19,CONSORCIO INTERMUNICIPAL MULTIFINALITARIO DA AREA MINEIRA DA SUDENE,AQUISICAO DE EQUIPAMENTOS PARA O CONSORCIO CIMAMS,590238.00,Nacional,15,244
+202550480002,987816,2025-12-22,MUNICIPIO DE NOVA SANTA RITA,CONSTRUCAO DE PASSAGEM MOLHADA NO MUNICIPIO DE NOVA SANTA RITA/PI,1432500.00,NOVA SANTA RITA - PI,15,244
 202550480002,987901,2025-12-18,MUNICIPIO DE BARAO DO MONTE ALTO,Aquisicao de maquinas e equipamentos para o Municipio de Barao do Monte Alto/MG,382000.00,BARÃO DE MONTE ALTO - MG,15,244
 202550480002,987907,2025-12-18,MUNICIPIO DE MIRASELVA,Aquisicao de Maquinas e Equipamentos para o Municipio,375234.96,MIRASELVA - PR,15,244
+202550480002,987911,2025-12-22,MUNICIPIO DE ITAPIPOCA,Pavimentacao de estradas vicinais no Municipio de Itapipoca/CE,424050.14,ITAPIPOCA - CE,15,244
 202550480002,987982,2025-12-23,MUNICIPIO DE ALTEROSA,AQUISICAO DE MAQUINAS E EQUIPAMENTOS,382000.00,ALTEROSA - MG,15,244
 202550480002,987984,2025-12-18,MUNICIPIO DE CHORROCHO,AQUISICAO DE MAQUINAS E EQUIPAMENTOS PARA O MUNICIPIO DE CHORROCHO/BA,811750.00,CHORROCHÓ - BA,15,244
 202550480002,988077,2025-12-24,MUNICIPIO DE VIRGEM DA LAPA,Pavimentacao de estradas vicinais,328282.56,VIRGEM DA LAPA - MG,15,244
 202550480002,988102,2025-12-23,MUNICIPIO DE ALMENARA,Aquisicao de Maquinas,382000.00,ALMENARA - MG,15,244
 202550480002,988503,2025-12-18,MUNICIPIO DE VIRMOND,Aquisicao de maquinas agricolas,382000.00,VIRMOND - PR,15,244
 202550480002,988538,2025-12-22,MUNICIPIO DE GENERAL CARNEIRO,Aquisicao de maquinas e/ou equipamentos,286500.00,GENERAL CARNEIRO - PR,15,244
+202550480002,988829,2025-12-24,MUNICIPIO DE DOUTOR CAMARGO,Maquinas e Equipamentos Agricolas,286500.00,DOUTOR CAMARGO - PR,15,244
 202550480002,989274,2025-12-24,MUNICIPIO DE CAPITAO,Aquisicao de maquinas e equipamentos de apoio a producao para o Municipio de Capitao/RS,191000.00,CAPITÃO - RS,15,244
+202550480002,989282,2025-12-25,MUNICIPIO DE MIRANGABA,Aquisicao de Maquinas e Equipamentos,276950.00,MIRANGABA - BA,15,244
 202550480002,989380,2025-12-24,MUNICIPIO DE LINDOESTE,Aquisicao de Maquinas e Equipamentos,286500.00,LINDOESTE - PR,15,244
 202550480002,989386,2026-01-01,MUNICIPIO DE LARANJEIRAS DO SUL,Aquisicao de Maquinas e Equipamentos,477500.00,LARANJEIRAS DO SUL - PR,15,244
 202550480002,989435,2025-12-25,ASSOCIACAO COMUNITARIA RURAL DO SITIO LAGOA DO POLDRO,Aquisicao de Equipamentos para Apoio a Producao,481301.00,Nacional,15,244
+202550480002,989436,2025-12-23,MUNICIPIO DE GUAMIRANGA,Aquisicao de maquinas para o Municipio de Guamiranga,286500.00,GUAMIRANGA - PR,15,244
 202550480002,989547,2025-12-23,MUNICIPIO DE SENGES,Aquisicao de equipamento,477500.00,SENGÉS - PR,15,244
 202550480002,989762,2025-12-24,ASSOCIACAO COMUNITARIA RURAL DO SITIO LAGOA DO POLDRO,Aquisicao de Equipamentos para Apoio a Producao,460267.00,Nacional,15,244
 202550480002,990273,2026-01-01,MUNICIPIO DE ANTONINA,Aquisicao de Maquinas e Equipamentos,382000.00,ANTONINA - PR,15,244
+202550480002,990417,2026-01-01,MUNICIPIO DE CASCAVEL,Aquisicao de maquina para o Municipio de Cascavel/PR,429750.00,CASCAVEL - PR,15,244
+202550480002,990781,2026-01-05,MUNICIPIO DE PONTA GROSSA,Aquisicao de maquinas e equipamentos,293342.00,PONTA GROSSA - PR,15,244
 202560110001,1AAQKR,2023-12-29,INST INTERAMERICANO DE COOPERACAO PARA A AGRICULTURA,PROJETO DE COOPERAÇÃO TÉCNICA FORTALECER OS INSTRUMENTOS DE GOVERNANÇAORDENAMENTO TERRITORIAL VOLTADOS À INCLUSÃO ECONÔMICA SÓCIO PRODUTIVA.,80000000.00,Nacional,15,244
 202560110001,979964,2025-10-22,MUNICIPIO DE TIBAU DO SUL,AQUISICAO DE EQUIPAMENTO AGRICOLA PARA O MUNICIPIO DE TIBAU DO SUL - RN,424781.99,TIBAU DO SUL - RN,15,244
 202560110001,980236,2025-12-11,MUNICIPIO DE FILADELFIA,Aquisicao de Maquinas e Equipamentos Agricolas,588000.00,FILADÉLFIA - TO,15,244
 202560110001,980240,2025-10-22,MUNICIPIO DE JEQUITAI,Aquisicao de maquinas e equipamentos,477500.00,JEQUITAÍ - MG,15,244
+202560110001,980241,2025-12-31,MUNICIPIO DE URUACU,Aquisicao de maquinas e equipamentos para o municipio de Uruacu-Go.,1146000.00,URUAÇU - GO,15,244
 202560110001,980242,2025-10-20,MUNICIPIO DE PORTALEGRE,Aquisicao de maquinas e equipamentos,191628.12,PORTALEGRE - RN,15,244
 202560110001,980243,2025-10-15,MUNICIPIO DE IPE,Aquisicao de Maquinas.,286500.00,IPÊ - RS,15,244
 202560110001,980244,2025-10-29,MUNICIPIO DE MONTE BELO DO SUL,Aquisicao de maquinas e equipamentos.,236282.02,MONTE BELO DO SUL - RS,15,244
+202560110001,980245,2025-12-22,MUNICIPIO DE CUITE,Aquisicao de Equipamentos para Apoio a Producao.,1410040.00,CUITÉ - PB,15,244
 202560110001,980256,2025-12-15,MUNICIPIO DE VARZEA DA ROCA,Aquisicao de Maquinas e Equipamentos,1050500.00,VÁRZEA DA ROÇA - BA,15,244
 202560110001,980258,2025-10-09,MUNICIPIO DE SAO VALENTIM DO SUL,Aquisicao de maquinas e equipamentos para o municipio de Sao Valentim do Sul.,198630.75,SÃO VALENTIM DO SUL - RS,15,244
 202560110001,980260,2025-10-29,MUNICIPIO DE ANTONIO MARTINS,Aquisicao e Maquinas e Equipamentos,248300.00,ANTÔNIO MARTINS - RN,15,244
@@ -4167,6 +4295,8 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560110001,980303,2025-10-10,MUNICIPIO DE POCO DAS ANTAS,Aquisicao de maquinas Equipamentos,154621.32,POÇO DAS ANTAS - RS,15,244
 202560110001,980308,2025-10-16,MUNICIPIO DE RAFAEL GODEIRO,Aquisicao de maquinas e implementos agricolas para o Municipio de Rafael Godeiro/RN.,248300.00,RAFAEL GODEIRO - RN,15,244
 202560110001,980321,2025-12-29,MUNICIPIO DE BOCAINA,Pavimentacao de Estradas Vicinais no municipio de Bocaina - PI.,368361.29,BOCAINA - PI,15,244
+202560110001,980325,2025-12-17,MUNICIPIO DE UMARI,Pavimentacao em Areas Rurais do Municipio de Umari - Ceara.,701560.34,UMARI - CE,15,244
+202560110001,980332,2025-11-25,MUNICIPIO DE ATILIO VIVACQUA,Pavimentacao de Estradas Vicinais no Municipio de Atilio Vivacqua/ES.,799157.35,ATILIO VIVACQUA - ES,15,244
 202560110001,980464,2025-10-15,MUNICIPIO DE PARAISO DAS AGUAS,Aquisicao de maquinas e equipamentos agricolas para o Municipio de Paraiso das Aguas/MS.,525250.00,PARAÍSO DAS ÁGUAS - MS,15,244
 202560110001,980466,2025-10-13,MUNICIPIO DE CRISTAL DO SUL,Aquisicao de maquinas e equipamentos para Municipio de Cristal do Sul/RS.,238750.00,CRISTAL DO SUL - RS,15,244
 202560110001,980467,2025-10-14,MUNICIPIO DE IGUATAMA,Aquisicao de maquinas e equipamentos para o Municipio de Iguatama/MG.,422767.07,IGUATAMA - MG,15,244
@@ -4175,10 +4305,12 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560110001,980474,2025-10-13,MUNICIPIO DE DEODAPOLIS,Aquisicao de maquinas e equipamentos.,354967.34,DEODÁPOLIS - MS,15,244
 202560110001,980479,2025-12-23,MUNICIPIO DE POSSE,Aquisicao de maquinas e equipamentos.,955000.00,POSSE - GO,15,244
 202560110001,980492,2025-12-16,MUNICIPIO DE RIO DOS BOIS,Construcao de ponte em concreto em estradas vicinais no municipio de Rio dos Bois TO.,471911.70,RIO DOS BOIS - TO,15,244
+202560110001,980520,2025-12-17,MUNICIPIO DE DIANOPOLIS,Pavimentacao de estradas vicinais do municipio de Dianopolis -TO.,1432500.00,DIANÓPOLIS - TO,15,244
 202560110001,980522,2025-12-18,MUNICIPIO DE VILA FLOR,Aquisicao de maquinas e equipamentos agricolas para o municipio de Vila Flor/RN,477057.07,VILA FLOR - RN,15,244
 202560110001,980524,2025-10-21,MUNICIPIO DE CARBONITA,Aquisicao de maquina/equipamento para atender o municipio de Carbonita-MG.,321475.32,CARBONITA - MG,15,244
 202560110001,980648,2025-10-16,MUNICIPIO DE OURO VELHO,Aquisicao de Equipamentos,316000.00,OURO VELHO - PB,15,244
 202560110001,980651,2025-10-24,MUNICIPIO DE NOVO AIRAO,AQUISICAO DE MAQUINAS E EQUIPAMENTOS,1204130.00,NOVO AIRÃO - AM,15,244
+202560110001,980659,2025-12-24,MUNICIPIO DE CASTELO DO PIAUI,Pavimentacao de estradas vicinais no municipio de Castelo do Piaui/PI.,955000.00,CASTELO DO PIAUÍ - PI,15,244
 202560110001,980668,2025-12-17,MUNICIPIO DE IRACEMINHA,Pavimentacao de estrada vicial no Municpio de Iraceminha/SC,477500.00,IRACEMINHA - SC,15,244
 202560110001,980700,2025-10-16,MUNICIPIO DE QUIRINOPOLIS,Aquisicao de maquinas eequipamentos.,955000.00,QUIRINÓPOLIS - GO,15,244
 202560110001,980820,2025-12-12,MUNICIPIO DE TEFE,AQUISICAO DE EQUIPAMENTO,955000.00,TEFÉ - AM,15,244
@@ -4196,9 +4328,14 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560110001,981120,2025-12-31,MUNICIPIO DE TABATINGA,AQUISICAO DE MAQUINAS E EQUIPAMENTOS NO MUNICIPIO DE TABATINGA/AM,955000.00,TABATINGA - AM,15,244
 202560110001,981124,2025-11-03,MUNICIPIO DE MATO CASTELHANO,AQUISICAO DE MAQUINAS PARA APOIO A INFRAESTRUTURA PRODUTIVA,286500.00,MATO CASTELHANO - RS,15,244
 202560110001,981132,2025-10-23,MUNICIPIO DE GOIOXIM,Aquisicao de maquinas e equipamentos para o municipio de Goioxim.,955000.00,GOIOXIM - PR,15,244
+202560110001,981134,2025-12-16,MUNICIPIO DE VITORINO FREIRE,Pavimentacao de estradas vicinais no municipio de Vitorino Freire/MA,1491807.88,VITORINO FREIRE - MA,15,244
 202560110001,981140,2025-12-17,MUNICIPIO DE ITAGUARI,Pavimentacao de Estradas Vicinais no Municipiode Itaguari/GO,764000.00,ITAGUARI - GO,15,244
+202560110001,981141,2025-12-29,MUNICIPIO DE DOIS IRMAOS DO TOCANTINS,Pavimentacao de estradas vicinais no Municipio de Dois Irmaos do Tocantins/TO,477500.00,DOIS IRMÃOS DO TOCANTINS - TO,15,244
+202560110001,981148,2025-12-18,MUNICIPIO DE BARRA DO OURO,Construcao de ponte e pavimentacao na zona rural do municipio de Barra do Ouro-TO,1421834.41,BARRA DO OURO - TO,15,244
+202560110001,981158,2025-12-17,MUNICIPIO DE ILOPOLIS,Pavimentacao de estradas vicinais no Municipio de Ilopolis - RS,684900.00,ILÓPOLIS - RS,15,244
 202560110001,981162,2025-10-16,MUNICIPIO DE CASTELANDIA,Aquisicao de maquinas e equipamentos para o Municipio de Castelandia/GO,349304.19,CASTELÂNDIA - GO,15,244
 202560110001,981165,2025-10-24,MUNICIPIO DE MARAA,Aquisicao de maquinas e equipamentos no municipio de Maraa/AM,955000.00,MARAÃ - AM,15,244
+202560110001,981324,2025-10-21,MUNICIPIO DE GRAMADO,Aquisicao de Equipamento para Patrulha Agricola no municipio de Gramado.,286500.00,GRAMADO - RS,15,244
 202560110001,981326,2025-10-23,MUNICIPIO DE ASSU,AQUISICAO DE EQUIPAMENTOS AGRICOLAS PARA O MUNICIPIO DE ASSU - RN.,248300.00,AÇU - RN,15,244
 202560110001,981362,2025-11-03,MUNICIPIO DE JACINTO MACHADO,Aquisicao de Maquinas e Equipamentos,477500.00,JACINTO MACHADO - SC,15,244
 202560110001,981447,2025-11-06,MUNICIPIO DE UARINI,Aquisicao de Paineis Solares para o Municipio de Uarini/AM.,768151.00,UARINI - AM,15,244
@@ -4218,6 +4355,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560110001,983151,2025-11-11,MUNICIPIO DE LINDOLFO COLLOR,Aquisicao de Maquina/Equipamento para o Municipio de Lindolfo Collor,247029.69,LINDOLFO COLLOR - RS,15,244
 202560110001,983154,2025-12-22,MUNICIPIO DE BUIQUE,AQUISICAO DE MAQUINAS E EQUIPAMENTOS PARA O MUNICIPIO DE BUIQUE/PE,955000.00,BUÍQUE - PE,15,244
 202560110001,983158,2025-11-07,MUNICIPIO DE BASTOS,AQUISICAO DE MAQUINAS E EQUIPAMENTOS PARA O MUNICIPIO DE BASTOS/SP,573000.00,BASTOS - SP,15,244
+202560110001,983174,2025-12-17,MUNICIPIO DE SOCORRO DO PIAUI,Construcao de Passagem Molhada no municipio de Socorro do Piaui/PI,382000.00,SOCORRO DO PIAUÍ - PI,15,244
 202560110001,983327,2025-11-13,MUNICIPIO DE TRAIRAO,AQUISICAO DE MAQUINA PARA O MUNICIPIO DE TRAIRAO/PA,698415.00,TRAIRÃO - PA,15,244
 202560110001,983847,2025-12-04,MUNICIPIO DE TUPA,AQUISICAO DE MAQUINAS PARA O MUNICIPIO DE TUPA/SP,668500.00,TUPÃ - SP,15,244
 202560110001,984242,2025-12-16,INSTITUTO DE DESENVOLVIMENTO SOCIOAMBIENTAL - IDS,Aquisicao de equipamentos,3487825.00,Nacional,15,244
@@ -4229,9 +4367,12 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560110001,986001,2025-12-11,MUNICIPIO DE IPIRA,Aquisicao de Maquinas e Equipamentos,1910000.00,IPIRÁ - BA,15,244
 202560110001,986397,2025-12-12,MUNICIPIO DE MARECHAL THAUMATURGO,Aquisicao de Maquinas e Equipamentos Agricolas,687600.00,MARECHAL THAUMATURGO - AC,15,244
 202560110001,987906,2025-12-29,MUNICIPIO DE MARAVILHA,Aquisicao de Maquinas e Equipamentos para o Municipio de Maravilha/AL,507026.00,MARAVILHA - AL,15,244
+202560110001,989141,2025-12-31,MUNICIPIO DE DOIS IRMAOS DO BURITI,Aquisicao de maquina para Dois Irmaos do Buriti/MS,477500.00,DOIS IRMÃOS DO BURITI - MS,15,244
+202560110001,989442,2025-12-31,MUNICIPIO DE CAMAPUA,Aquisicao de Maquinas e Equipamentos para o Municipio de Camapua/MS,477500.00,CAMAPUÃ - MS,15,244
 202560110001,989656,2026-01-01,MUNICIPIO DE SANTA RITA DO PARDO,Aquisicao de maquinas e equipamentos para o Municipio de Santa Rita do Pardo/MS,622825.00,SANTA RITA DO PARDO - MS,15,244
 202560110001,989761,2025-12-31,ASSOCIACAO DOS PRODUTORES RURAIS DA COMUNIDADE SAO MATEUS,Aquisicao de maquinas e equipamentos,248300.00,Nacional,15,244
 202560110001,990782,2025-12-31,MUNICIPIO DE MINAS DO LEAO,Aquisicao de uma maquina para o Municipio de Minas do Leao/RS,286500.00,MINAS DO LEÃO - RS,15,244
+202560110001,991073,2026-01-01,MUNICIPIO DE MANOEL VIANA,Aquisicao de Patrulha Agricola Mecanizada,286500.00,MANOEL VIANA - RS,15,244
 202560110002,979125,2025-11-11,MUNICIPIO DE PIRPIRITUBA,Construcao de Portal Turistico no municipio de Pirpirituba/PB.,481104.00,PIRPIRITUBA - PB,23,695
 202560110002,980387,2025-10-30,MUNICIPIO DE OURO VELHO,Revitalizacao da Praca Publica 'Massilon Dantas' no municipio de Ouro Velho/PB,481104.00,OURO VELHO - PB,23,695
 202560110002,981571,2025-10-30,MUNICIPIO DE SAO JOAO DO PARAISO,Readequacao e urbanizacao na orla do rio Lajeado para implantacao de Praca de Eventos no municipio de Sao Joao do Paraiso/MA.,2391283.00,SÃO JOÃO DO PARAÍSO - MA,23,695
@@ -4248,7 +4389,9 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560110002,985797,2025-12-30,INSTITUTO DE DESENVOLVIMENTO DO PIAUI - IDEPI,CONSTRUCAO DE PRACAS PUBLICAS NO MUNICIPIO DE SAO RAIMUNDO NONATO/PI.,1168800.00,PIAUÍ (UF),23,695
 202560110002,990245,2026-01-06,MUNICIPIO DE PEDRA,"Pavimentacao do acesso ao Acude Mororo, no municipio de Pedra/PE.",730500.00,PEDRA - PE,23,695
 202560120002,978389,2025-11-07,MUNICIPIO DE CURRALINHOS,Execucao de Obras e Servicos de Engenharia para Estradas Vicinais no municipio de Curralinhos - PI.,955000.00,CURRALINHOS - PI,20,608
+202560120002,978393,2025-11-12,MUNICIPIO DE SIMPLICIO MENDES,Execucao de Obras e Servicos de Engenharia para Estradas Vicinais no municipio de Simplicio Mendes - PI.,955000.00,SIMPLÍCIO MENDES - PI,20,608
 202560120002,978399,2025-12-03,MUNICIPIO DE ASSUNCAO DO PIAUI,Execucao de Obras e Servicos de Engenharia para Estradas Vicinais no municipio de Assuncao do Piaui - PI.,382000.00,ASSUNÇÃO DO PIAUÍ - PI,20,608
+202560120002,978464,2025-11-12,MUNICIPIO DE UARINI,Execucao de obras e servicos de engenharia em estradasvicinais no Municipio de Uarini/AM.,2159129.90,UARINI - AM,20,608
 202560120002,978467,2025-11-04,MUNICIPIO DE MATIAS CARDOSO,Aquisicao de Maquinas e Equipamentos,286500.00,MATIAS CARDOSO - MG,20,608
 202560120002,978499,2025-11-28,MUNICIPIO DE CARAUARI,Aquisicao de Maquinas e Equipamentos,1910000.00,CARAUARI - AM,20,608
 202560120002,978508,2025-11-03,MUNICIPIO DE CANUTAMA,Aquisicao de Maquinas e Equipamentos,955000.00,CANUTAMA - AM,20,608
@@ -4259,17 +4402,22 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560120002,978580,2025-11-03,MUNICIPIO DE IBIRAPUITA,Aquisicao de Maquinas e Equipamentos,780400.22,IBIRAPUITÃ - RS,20,608
 202560120002,978585,2025-11-04,MUNICIPIO DE JULIO DE CASTILHOS,Aquisicao de Maquinas e Equipamentos agricola,673275.00,JÚLIO DE CASTILHOS - RS,20,608
 202560120002,978589,2025-11-03,MUNICIPIO DE JESUANIA,Aquisicao de maquinas e equipamentos,602064.47,JESUÂNIA - MG,20,608
+202560120002,978591,2025-11-03,MUNICIPIO DE GUARAITA,Aquisicao de Maquinas e Equipamentos,575831.58,GUARAÍTA - GO,20,608
 202560120002,978595,2025-11-07,MUNICIPIO DE BURITI DOS MONTES,Execucao de Obras e Servicos de Engenharia em Estradas Vicinais no municipio de Buriti dos Montes - PI.,1384750.00,BURITI DOS MONTES - PI,20,608
 202560120002,978661,2025-10-31,MUNICIPIO DE JARDIM,Aquisicao de Maquinas e Equipamentos,764000.00,JARDIM - MS,20,608
 202560120002,978673,2025-12-18,MUNICIPIO DE MAXARANGUAPE,Aquisicao de Maquinas e Equipamentos,369585.00,MAXARANGUAPE - RN,20,608
 202560120002,978677,2025-11-28,MUNICIPIO DE BOA VISTA,Aquisicao de Maquinas e Equipamentos,396343.15,BOA VISTA - PB,20,608
 202560120002,978678,2025-11-03,MUNICIPIO DE VARZEA,Aquisicao de maquinas e equipamentos,622660.00,VÁRZEA - RN,20,608
+202560120002,978679,2025-11-13,MUNICIPIO DE MUNHOZ DE MELLO,Aquisicao de maquinas eu equipamentos,429750.00,MUNHOZ DE MELO - PR,20,608
 202560120002,978682,2025-11-04,MUNICIPIO DE CONQUISTA,AQUISICAO DE MAQUINAS E EQUIPAMENTOS.,477500.00,CONQUISTA - MG,20,608
+202560120002,978692,2025-11-03,MUNICIPIO DE NOVO ITACOLOMI,Aquisicao de Maquinas e Equipamentos,429750.00,NOVO ITACOLOMI - PR,20,608
 202560120002,978694,2025-11-04,MUNICIPIO DE CHUPINGUAIA,AQUISICAO DE MAQUINAS E EQUIPAMENTOS.,477500.00,CHUPINGUAIA - RO,20,608
 202560120002,978707,2025-11-03,MUNICIPIO DE PIMENTA,Aquisicao de Maquinas e Equipamentos,429750.00,PIMENTA - MG,20,608
 202560120002,978708,2025-11-03,MUNICIPIO DE CANINDE,Aquisicao de Maquinas e Equipamentos,836449.17,CANINDÉ - CE,20,608
 202560120002,978715,2025-11-03,MUNICIPIO DE PORTALEGRE,Aquisicao de Maquinas e Equipamentos,1337000.00,PORTALEGRE - RN,20,608
 202560120002,978737,2025-11-03,MUNICIPIO DE SENGES,Aquisicao de Maquinas e Equipamentos,429750.00,SENGÉS - PR,20,608
+202560120002,978755,2025-12-03,MUNICIPIO DE PIRIPIRI,Execucao de Obras e Servicos de Engenharia em Estradas Vicinais no municipio de Piripiri-Pi,1432500.00,PIRIPIRI - PI,20,608
+202560120002,978777,2025-11-28,MUNICIPIO DE GUARACIAMA,Aquisicao de Maquinas e Equipamentos.,477500.00,GUARACIAMA - MG,20,608
 202560120002,978814,2025-11-04,MUNICIPIO DE MAR VERMELHO,Aquisicao de Maquinas e Equipamentos,382000.00,MAR VERMELHO - AL,20,608
 202560120002,978821,2025-12-03,MUNICIPIO DE NOVA IPIXUNA,EXECUCAO DE OBRAS E SERVICOS DE ENGENHARIA EM ESTRADAS VICINAIS.,573000.00,NOVA IPIXUNA - PA,20,608
 202560120002,978889,2025-11-06,MUNICIPIO DE VIRGEM DA LAPA,Execucao de obras e servicos de engenharia em estradas vicinais.,477500.00,VIRGEM DA LAPA - MG,20,608
@@ -4297,8 +4445,10 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560120002,979426,2025-11-03,MUNICIPIO DE NICOLAU VERGUEIRO,Aquisicao de Maquinas e Equipamentos,286500.00,NICOLAU VERGUEIRO - RS,20,608
 202560120002,979478,2025-11-03,MUNICIPIO DE RELVADO,Aquisicao de Maquinas e Equipamentos,286500.00,RELVADO - RS,20,608
 202560120002,979479,2025-11-03,MUNICIPIO DE PONTAO,Aquisicao de Maquinas e Equipamentos.,286500.00,PONTÃO - RS,20,608
+202560120002,979513,2025-11-07,MUNICIPIO DE ITAGUACU DA BAHIA,Execucao de obras e servicos de engenharia em estradas vicinais,1910000.00,ITAGUAÇU DA BAHIA - BA,20,608
 202560120002,979517,2025-11-07,MUNICIPIO DE ITUPIRANGA,Execucao de obras e servicos de engenharia em estradas vicinais no municipio de Itupiranga/PA.,1100325.22,ITUPIRANGA - PA,20,608
 202560120002,979631,2025-11-13,MUNICIPIO DE CELSO RAMOS,Aquisicao de Maquinas e Equipamentos,601650.00,CELSO RAMOS - SC,20,608
+202560120002,979633,2025-12-09,MUNICIPIO DE PASSAGEM,Aquisicao de Maquinas e Equipamentos,396343.15,PASSAGEM - PB,20,608
 202560120002,979634,2025-11-03,MUNICIPIO DE PALMITINHO,Aquisicao de Maquinas e Equipamentos,286500.00,PALMITINHO - RS,20,608
 202560120002,979635,2025-11-03,MUNICIPIO DE AUREA,AQUISICAO DE MAQUINAS E EQUIPAMENTOS,573000.00,ÁUREA - RS,20,608
 202560120002,979637,2025-11-03,MUNICIPIO DE GOIANA,Aquisicao de maquinas e equipamentos,764000.00,GOIANÁ - MG,20,608
@@ -4316,6 +4466,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560120002,979756,2025-11-04,MUNICIPIO DE CARNEIROS,Aquisicao de Maquinas e Equipamentos,573000.00,CARNEIROS - AL,20,608
 202560120002,979763,2025-11-03,MUNICIPIO DE AGUAS MORNAS,Aquisicao de Maquinas e Equipamentos,477500.00,ÁGUAS MORNAS - SC,20,608
 202560120002,979873,2025-11-03,MUNICIPIO DE PLANALTO,Aquisicao de Maquinas e Equipamentos,286500.00,PLANALTO - RS,20,608
+202560120002,979882,2025-11-03,MUNICIPIO DE TRES MARIAS,Aquisicao de Maquinas e Equipamentos,477500.00,TRÊS MARIAS - MG,20,608
 202560120002,979901,2025-11-03,MUNICIPIO DE SAO JOSE DO CEDRO,AQUISICAO DE MAQUINAS E EQUIPAMENTOS,219650.00,SÃO JOSÉ DO CEDRO - SC,20,608
 202560120002,979915,2025-12-15,ESTADO DE MATO GROSSO,Aquisicoes de Maquinas e equipamentos,6715560.00,MATO GROSSO (UF),20,608
 202560120002,980001,2025-11-03,MUNICIPIO DE RIO BOM,Aquisicao de Maquinas e Equipamentos,429750.00,RIO BOM - PR,20,608
@@ -4340,6 +4491,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560120002,980253,2025-10-31,MUNICIPIO DE GUAMIRANGA,Aquisicao de Maquinas e Equipamentos,429750.00,GUAMIRANGA - PR,20,608
 202560120002,980254,2025-12-02,MUNICIPIO DE IPORA DO OESTE,AQUISICAO DE MAQUINAS E EQUIPAMENTOS PARA IPORA DO OESTE/SC,477500.00,IPORÃ DO OESTE - SC,20,608
 202560120002,980289,2025-11-28,MUNICIPIO DE MORENO,Aquisicao de Maquinas e Equipamentos,764000.00,MORENO - PE,20,608
+202560120002,980291,2025-11-03,MUNICIPIO DE BARROS CASSAL,Aquisicao de Maquinas e Equipamentos,286500.00,BARROS CASSAL - RS,20,608
 202560120002,980437,2025-11-07,MUNICIPIO DE DESTERRO,Execucao de obras e servicos de engenharia em estradas vicinais.,396343.15,DESTERRO - PB,20,608
 202560120002,980710,2025-11-03,MUNICIPIO DE APUI,Aquisicao de Maquinas e Equipamentos.,955000.00,APUÍ - AM,20,608
 202560120002,980712,2025-11-03,MUNICIPIO DE RIACHUELO,Aquisicao de Maquinas e Equipamentos,477500.00,RIACHUELO - RN,20,608
@@ -4354,6 +4506,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560120002,981060,2025-11-11,MUNICIPIO DE SAO JOAO EVANGELISTA,Aquisicao de Maquinas e Equipamentos.,477500.00,SÃO JOÃO EVANGELISTA - MG,20,608
 202560120002,981065,2025-11-28,MUNICIPIO DE ITAPUCA,Aquisicao de Maquinas e Equipamentos.,286500.00,ITAPUCA - RS,20,608
 202560120002,981069,2025-11-28,MUNICIPIO DE LAPAO,Aquisicao de maquinas e equipamentos,1909999.99,LAPÃO - BA,20,608
+202560120002,981073,2025-11-03,MUNICIPIO DE MARATA,Aquisicao de Maquinas e Equipamentos.,286500.00,MARATÁ - RS,20,608
 202560120002,981074,2025-12-09,MUNICIPIO DE CANAPI,Aquisicao de maquinas e equipamentos,382000.00,CANAPI - AL,20,608
 202560120002,981085,2025-12-31,MUNICIPIO DE SOUSA,Aquisicao de Maquinas e Equipamentos,382000.00,SOUSA - PB,20,608
 202560120002,981188,2025-12-08,ASSOCIACAO DOS PRODUTORES RURAIS E ARTESANAIS OZIEL ALVES III PIPIRIPAU APRACOA,Aquisicao de equipamentos para o fortalecimento da producao da agricultura familiar.,955000.00,Nacional,20,608
@@ -4361,15 +4514,20 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560120002,981540,2025-11-13,MUNICIPIO DE AGUA DOCE,Aquisicao de Maquinas e Equipamentos,599095.38,ÁGUA DOCE - SC,20,608
 202560120002,981541,2025-12-02,MUNICIPIO DE AGRONOMICA,Aquisicao de Maquinas e Equipamentos.,219650.00,AGRONÔMICA - SC,20,608
 202560120002,981559,2025-12-19,MUNICIPIO DE ITAMBE,Aquisicao de Maquinas e Equipamentos.,573000.00,ITAMBÉ - PE,20,608
+202560120002,981578,2025-11-19,MUNICIPIO DE ALMAS,Aquisicao de Maquinas e Equipamentos,668500.00,ALMAS - TO,20,608
 202560120002,981588,2025-11-13,MUNICIPIO DE MARTINS,Aquisicao de maquinas e equipamentos.,382000.00,MARTINS - RN,20,608
 202560120002,981594,2025-12-23,MUNICIPIO DE TEREZINHA,Aquisicao de maquinas e equipamentos.,382000.00,TEREZINHA - PE,20,608
+202560120002,981676,2025-11-11,MUNICIPIO DE PIEN,Aquisicao de Maquinas e Equipamentos,506150.00,PIÊN - PR,20,608
+202560120002,981700,2025-12-31,MUNICIPIO DE UARINI,Execucao de obras e servicos de engenharia em estradasvicinais no Municipio de Uarini/AM.,6103696.28,UARINI - AM,20,608
 202560120002,981714,2025-12-02,MUNICIPIO DE SERRA CAIADA,Aquisicao de Maquinas e Equipamentos.,613110.00,PRESIDENTE JUSCELINO - RN,20,608
 202560120002,981720,2025-11-28,MUNICIPIO DE FREI MARTINHO,Aquisicao de maquinas e equipamentos.,553900.00,FREI MARTINHO - PB,20,608
 202560120002,981727,2025-11-28,MUNICIPIO DE SANTO ANTONIO DO ARACANGUA,Aquisicao de maquinas e Equipamentos.,477500.00,SANTO ANTÔNIO DO ARACANGUÁ - SP,20,608
 202560120002,981729,2025-11-03,MUNICIPIO DE CORONEL SAPUCAIA,Aquisicao de Maquinas e Equipamentos.,456738.30,CORONEL SAPUCAIA - MS,20,608
+202560120002,981923,2025-11-06,MUNICIPIO DE ALCINOPOLIS,Execucao de obras e servicos de engenharia em estradas vicinais.,955000.00,ALCINÓPOLIS - MS,20,608
 202560120002,982094,2025-12-16,ASSOCIACAO DE PEQUENOS PRODUTORES RURAIS DA FAZENDA LARGA-APROFAL,Aquisicao de Equipamento e Implemento Agricola,477500.00,Nacional,20,608
 202560120002,982776,2025-12-18,COOPERATIVA MISTA DE AGRICULTORES E PESCADORES DO ESTADO DO PARA,"Aquisicao de maquinas, equipamentos e kits de energia solar, para fomento ao setor agropecuario dos associados COOPAGRI.",1654060.00,Nacional,20,608
 202560120002,982810,2025-12-02,MUNICIPIO DE SAO GONCALO DO PARA,Aquisicao de Maquinas e Equipamentos.,382000.00,SÃO GONÇALO DO PARÁ - MG,20,608
+202560120002,982812,2025-12-11,MUNICIPIO DE MONTE DO CARMO,Aquisicao de Maquinas e Equipamentos.,764000.00,MONTE DO CARMO - TO,20,608
 202560120002,982919,2025-12-24,ASSOCIACAO DAS MULHERES RURAIS E AGRICULTORAS FAMILIARES DO DISTRITO FEDERAL E ENTORNO - REDE DE MULHERES,"Aquisicao de um caminhao bau 3/4, que visa melhorar o transporte dos Produtos da Associacao das Mulheres Rurais e Agricultoras Familiares do DF e Entorno.",286624.15,Nacional,20,608
 202560120002,982920,2025-12-24,INSTITUTO DE DESENVOLVIMENTO SOCIOAMBIENTAL - IDS,Aquisicao de equipamentos agricolas e contratacao de Operacionalizacao para possibilitar o fortalecimento daproducao e a melhoria da qualidade de vida das familias agricultoras dos assentamentos na Regiao do Baixo Acre.,3487824.26,Nacional,20,608
 202560120002,982965,2025-12-02,MUNICIPIO DE POMERODE,Aquisicao de Maquinas e Equipamentos.,219650.00,POMERODE - SC,20,608
@@ -4378,6 +4536,7 @@ codigo_emenda,numero,data_publicacao,convenente,objeto,valor,localidade,funcao,s
 202560120002,983049,2025-12-15,ASSOCIACAO DOS TRABALHADORES RURAIS DE TRES CONQUISTAS,Aquisicao de Equipamentos e implementos agricolas para atendimento aos agricultores familiares do Assentamento Tres Conquistas e comunidades vizinhas,286500.00,Nacional,20,608
 202560120002,983275,2025-12-18,ASSOCIACAO DOS PRODUTORES DA AGROVILA DE IRACEMA,Aquisicao de maquinas e equipamentos agricolas para atender os agricultores rurais da Associacao dos Produtores rurais da Agrovila de Iracema em Castanhal Para.,278860.00,Nacional,20,608
 202560120002,983384,2025-11-28,FEDERACAO DAS ASSOCIACOES DE PEQUENOS PRODUTORES RURAIS DO DISTRITO FEDERAL E DO ENTORNO,Aquisicao de implementos agricolas e equipamentos para estruturacao da FEPRORURAL,955000.00,Nacional,20,608
+202560120002,983523,2025-12-02,MUNICIPIO DE JUSSARA,Aquisicao de Maquinas e Equipamentos.,429750.00,JUSSARA - PR,20,608
 202560120002,983528,2025-12-22,MUNICIPIO DE SAO BENTO,Aquisicao de Maquinas e Equipamentos,906530.00,SÃO BENTO - PB,20,608
 202560120002,983654,2025-12-02,MUNICIPIO DE SAO SEBASTIAO DE LAGOA DE ROCA,Aquisicao de Maquinas e Equipamentos,680000.00,SÃO SEBASTIÃO DE LAGOA DE ROÇA - PB,20,608
 202560120002,983926,2025-12-02,MUNICIPIO DE MAJOR GERCINO,Aquisicao de Maquinas e equipamentos,477500.00,MAJOR GERCINO - SC,20,608

@@ -5959,7 +5959,7 @@ favorecido,nome,natureza_juridica,tipo
 03657851000108,INSTITUTO ESCOLA DO TEATRO BOLSHOI NO BRASIL,Associação Privada,Pessoa Jurídica
 03658028000109,SECRETARIA DE ESTADO DE CULTURA E ECONOMIA CRIATIVA DO DISTRITO FEDERAL,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,Pessoa Jurídica
 03658656000194,ASSOCIACAO PULSAR COMPANHIA DE DANCA,Associação Privada,Pessoa Jurídica
-03659166000102,INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVAVEIS-IBAMA,Autarquia Federal,Pessoa Jurídica
+03659166000102,SEM INFORMACAO,Autarquia Federal,Pessoa Jurídica
 03659378000190,SOFA CENTER INDUSTRIA E COMERCIO DE MOVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 03659427000194,JP SERVICOS DE IMPRENSA LTDA,Sociedade Simples Limitada,Pessoa Jurídica
 03660128000170,POSTO UMARITUBA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -17882,7 +17882,7 @@ favorecido,nome,natureza_juridica,tipo
 10437790000120,NPM COMERCIAL DE COMBUSTIVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10437956000109,ESPACO CULT ARTE E CULTURA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10438115000116,VETMOC DISTRIBUIDORA DE PRODUTOS AGROPECUARIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-10438215000142,PRIMEIRA COMPANHIA DE INFANTARIA,Órgão Público do Poder Executivo Federal,Pessoa Jurídica
+10438215000142,CODIGO INEXISTENTE NO SIAFI,Órgão Público do Poder Executivo Federal,Pessoa Jurídica
 10438451000169,"INSTITUTO NACIONAL DE GESTAO. EDUCACAO, TECNOLOGIAE INOVACAO - INGETI",Associação Privada,Pessoa Jurídica
 10438570000111,MUNICIPIO DE PASSAGEM FRANCA,Município,Pessoa Jurídica
 10439655000114,PHENIX SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -26818,6 +26818,7 @@ favorecido,nome,natureza_juridica,tipo
 13673314000105,MUNICIPIO DE DOM BASILIO,Município,Pessoa Jurídica
 13674118000147,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL - FMAS UBAJARA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 13674148000153,MUNICIPIO DE JUSSIAPE,Município,Pessoa Jurídica
+13674500000150,NORTE & SUL SERVICOS TERCEIRIZADOS DE MAO DE OBRA LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 13674817000197,MUNICIPIO DE LIVRAMENTO DE NOSSA SENHORA,Município,Pessoa Jurídica
 13675341000109,INSTITUTO CAMINHO DA LUZ,Associação Privada,Pessoa Jurídica
 13675380000106,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL DE POTIRETAMA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -32549,6 +32550,7 @@ favorecido,nome,natureza_juridica,tipo
 17432497000110,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 17433496000190,BELEM RIO SEGURANCA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 17433496000270,BELEM RIO SEGURANCA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+17433496000513,BELEM RIO SEGURANCA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 17435049000170,MACHADO - PRESTADORA DE SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 17435476000158,BRASIL ILUMINACAO E CONSTRUCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 17435942000103,HOSPITAL SANTANA DE GUARACIABA,Associação Privada,Pessoa Jurídica
@@ -46634,6 +46636,7 @@ favorecido,nome,natureza_juridica,tipo
 34707692000124,MATEUS HENRIQUE GOETZ 02774379032,Empresário (Individual),Pessoa Jurídica
 34709658000199,ALFA REALIDADE VIRTUAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 34712324000174,34.712.324 ELTON RIBEIRO DE ALMEIDA,Empresário (Individual),Pessoa Jurídica
+34713303000173,ASSOCIACAO TERAPEUTICA CANNABIS MEDICINAL FLOR DA VIDA,Associação Privada,Pessoa Jurídica
 34713918000108,ESCOLA DE JUDO DE SAO GONCALO DO SAPUCAI,Associação Privada,Pessoa Jurídica
 34714794000177,VALENTIM EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 34715539000149,DSB TRADING LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -47340,6 +47343,7 @@ favorecido,nome,natureza_juridica,tipo
 35927779000170,T A - INDUSTRIA E FACCAO DE ARTIGOS PARA O VESTUARIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 35928906000155,RAF REFRIGERACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 35930488000130,NEXTENGE ENGENHARIA E SERVICOS ELETRICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+35931217000108,"AVA-SP ASSOCIACAO VERBO AMAR, VALORIZANDO A VIDA E RESGATANDO A DIGNIDADE",Associação Privada,Pessoa Jurídica
 35933557000160,FUNDACAO AMAZONAS DE ALTO RENDIMENTO,Fundação Pública de Direito Público Estadual ou do Distrito Federal,Pessoa Jurídica
 35940241000103,FERRAZ COMERCIO DE BRINQUEDOS EDUCATIVOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 35942214000161,ARAGAO BRINQUEDOS E ARTIGOS ESPORTIVOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -48655,6 +48659,7 @@ favorecido,nome,natureza_juridica,tipo
 38743357000132,STRATA ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 38756278000166,ENGATE ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 38820240000105,ABC DO GLORIA,Associação Privada,Pessoa Jurídica
+38822842000100,GUIMARAES LIMA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 38823895000137,38.823.895 MURILO QUEIROZ CABRAL,Empresário (Individual),Pessoa Jurídica
 38826316000100,POSTO ESCOLA SALVADOR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 38827942000110,KOLSEN COMERCIO E MANUTENCAO DE EQUIPAMENTOS DE TECNOLOGIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -51946,6 +51951,7 @@ favorecido,nome,natureza_juridica,tipo
 46787644000172,MUNICIPIO DE CAMPOS NOVOS PAULISTA,Município,Pessoa Jurídica
 46788600000167,800 MILHAS APOIO ADMINISTRATIVO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 46797852000152,ARQCOMPANY SERVICOS DE INCORPORACAO CONSTRUCOES E REFORMA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+46799236000130,PEIXE DE CARDUME ESCOLA DE TEATRO POPULAR - ETP,Associação Privada,Pessoa Jurídica
 46799756000143,METAWELL COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 46803272000120,ASSOCIACAO DE DESENVOLVIMENTO COMUNITARIO QUEIMADA BONITA,Associação Privada,Pessoa Jurídica
 46810136000168,CADMUS COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -54880,6 +54886,7 @@ favorecido,nome,natureza_juridica,tipo
 57296606000133,IMPERIO PARTICIPACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57304479000177,DIGEL ELETRICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57306847000469,ODAIR PNEUS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+57312564000187,LICITA RD COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57315580000123,57.315.580 MARCELO DE JESUS LIMA,Empresário (Individual),Pessoa Jurídica
 57318826000110,ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS T.SAMPAIO,Associação Privada,Pessoa Jurídica
 57319063000122,ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS DE PRESIDENTE BERNARDES,Associação Privada,Pessoa Jurídica
@@ -55013,6 +55020,7 @@ favorecido,nome,natureza_juridica,tipo
 58077235000161,WU COMERCIO & SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 58079562000152,AGRO TECH DRONES AGRICOLAS IMPORT. E EXPORT. LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 58088964000113,MF INDUSTRIA PAULISTA DE CAFE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+58096398000191,SECRETARIA DE ESTADO DE AGRICULTURA FAMILIAR DE MATO GROSSO,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,Pessoa Jurídica
 58115684000157,ESTEVES & AMORIM CONSTRUTORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 58131538000115,ASSOCIACAO DE PRODUTORES RURAIS COMUNIDADE VALE DO BERLENGA,Associação Privada,Pessoa Jurídica
 58151580000106,CONSORCIO INTERMUNICIPAL GRANDE ABC,Consórcio Público de Direito Público (Associação Pública),Pessoa Jurídica
@@ -56318,6 +56326,7 @@ favorecido,nome,natureza_juridica,tipo
 66944539000107,FERRAGENS SAO JUDAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 66944651000148,66.944.651 ALEX HEIDER ABREU SANTOS,Empresário (Individual),Pessoa Jurídica
 66969262000177,"UNIT - INDUSTRIA, COMERCIO, IMPORTACAO E EXPORTACAO LIMITADA",Sociedade Empresária Limitada,Pessoa Jurídica
+66969754000162,RRA GOLD LINE COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 66990136000285,ASSOCIACAO NUCLEO DE APOIO E RECUPERACAO DA VIDA NAREV,Associação Privada,Pessoa Jurídica
 66991647000130,FUNDACAO DE APOIO INST AO DESENV CIENT E TECNOLOGICO,Fundação Privada,Pessoa Jurídica
 66991670000125,BERIMBAU COMERCIO E PRODUCOES ARTISTICAS LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica

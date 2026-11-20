@@ -6012,7 +6012,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-05,,Pessoa Fisica,AL,VIÇOSA,1,1424.60
 ,2017-05,,Pessoa Fisica,AM,COARI,1,1672.40
 ,2017-05,,Pessoa Fisica,AM,HUMAITÁ,1,1224.00
-,2017-05,,Pessoa Fisica,AM,MANAUS,18,21894.00
+,2017-05,,Pessoa Fisica,AM,MANAUS,17,20670.00
 ,2017-05,,Pessoa Fisica,AM,PARINTINS,1,1448.20
 ,2017-05,,Pessoa Fisica,AM,TEFÉ,1,1224.00
 ,2017-05,,Pessoa Fisica,AP,AMAPÁ,1,1224.00
@@ -6054,7 +6054,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-05,,Pessoa Fisica,CE,MARANGUAPE,1,1464.35
 ,2017-05,,Pessoa Fisica,CE,PORANGA,1,1519.60
 ,2017-05,,Pessoa Fisica,CE,QUIXADÁ,1,1626.40
-,2017-05,,Pessoa Fisica,DF,BRASÍLIA,157,353784.90
+,2017-05,,Pessoa Fisica,DF,BRASÍLIA,158,355008.90
 ,2017-05,,Pessoa Fisica,ES,ALEGRE,1,1319.00
 ,2017-05,,Pessoa Fisica,ES,CACHOEIRO DE ITAPEMIRIM,1,1315.35
 ,2017-05,,Pessoa Fisica,ES,GUARAPARI,1,1319.00
@@ -13610,7 +13610,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-07,,Pessoa Fisica,CE,PORANGA,1,174.48
 ,2017-07,,Pessoa Fisica,CE,QUIXADÁ,1,671.58
 ,2017-07,,Pessoa Fisica,CE,SOBRAL,1,223.86
-,2017-07,,Pessoa Fisica,DF,BRASÍLIA,76,620632.19
+,2017-07,,Pessoa Fisica,DF,BRASÍLIA,75,619183.99
 ,2017-07,,Pessoa Fisica,ES,ALEGRE,2,760.08
 ,2017-07,,Pessoa Fisica,ES,ARACRUZ,1,220.84
 ,2017-07,,Pessoa Fisica,ES,LINHARES,1,223.86
@@ -13659,7 +13659,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-07,,Pessoa Fisica,PR,CASCAVEL,1,0.00
 ,2017-07,,Pessoa Fisica,PR,CURITIBA,6,26876.17
 ,2017-07,,Pessoa Fisica,PR,SANTO ANTÔNIO DA PLATINA,1,475.04
-,2017-07,,Pessoa Fisica,RJ,RIO DE JANEIRO,48,76465.50
+,2017-07,,Pessoa Fisica,RJ,RIO DE JANEIRO,49,77913.70
 ,2017-07,,Pessoa Fisica,RN,AÇU,1,439.04
 ,2017-07,,Pessoa Fisica,RN,CAICÓ,1,223.86
 ,2017-07,,Pessoa Fisica,RN,NATAL,6,48856.20
@@ -16501,10 +16501,10 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-08,,Pessoa Fisica,AM,COARI,2,3683.20
 ,2017-08,,Pessoa Fisica,AM,HUMAITÁ,2,4761.28
 ,2017-08,,Pessoa Fisica,AM,ITACOATIARA,1,1854.62
-,2017-08,,Pessoa Fisica,AM,MANAUS,22,34051.42
+,2017-08,,Pessoa Fisica,AM,MANAUS,21,33005.02
 ,2017-08,,Pessoa Fisica,AM,PARINTINS,3,4626.78
 ,2017-08,,Pessoa Fisica,AP,MACAPÁ,3,3121.02
-,2017-08,,Pessoa Fisica,BA,ALAGOINHAS,3,5363.38
+,2017-08,,Pessoa Fisica,BA,ALAGOINHAS,4,6681.78
 ,2017-08,,Pessoa Fisica,BA,ANTÔNIO CARDOSO,1,1141.40
 ,2017-08,,Pessoa Fisica,BA,BOM JESUS DA LAPA,6,2518.35
 ,2017-08,,Pessoa Fisica,BA,BONINAL,1,3330.48
@@ -16534,7 +16534,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-08,,Pessoa Fisica,BA,PAULO AFONSO,2,12406.96
 ,2017-08,,Pessoa Fisica,BA,POÇÕES,1,3312.26
 ,2017-08,,Pessoa Fisica,BA,RIBEIRA DO POMBAL,1,1318.40
-,2017-08,,Pessoa Fisica,BA,SALVADOR,27,46967.05
+,2017-08,,Pessoa Fisica,BA,SALVADOR,26,45648.65
 ,2017-08,,Pessoa Fisica,BA,SANTO AMARO,1,1141.40
 ,2017-08,,Pessoa Fisica,BA,SEABRA,3,3500.98
 ,2017-08,,Pessoa Fisica,BA,SERRINHA,1,1226.78
@@ -16555,7 +16555,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-08,,Pessoa Fisica,CE,RUSSAS,1,1046.40
 ,2017-08,,Pessoa Fisica,CE,SOBRAL,1,1270.26
 ,2017-08,,Pessoa Fisica,CE,TIANGUÁ,1,1046.40
-,2017-08,,Pessoa Fisica,DF,BRASÍLIA,248,831225.30
+,2017-08,,Pessoa Fisica,DF,BRASÍLIA,249,832271.70
 ,2017-08,,Pessoa Fisica,ES,ALEGRE,2,2092.80
 ,2017-08,,Pessoa Fisica,ES,CACHOEIRO DE ITAPEMIRIM,2,1915.80
 ,2017-08,,Pessoa Fisica,ES,COLATINA,1,1141.40
@@ -19221,11 +19221,11 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-09,,Pessoa Fisica,AM,COARI,1,1318.40
 ,2017-09,,Pessoa Fisica,AM,HUMAITÁ,2,4326.06
 ,2017-09,,Pessoa Fisica,AM,ITACOATIARA,1,1513.76
-,2017-09,,Pessoa Fisica,AM,MANAUS,20,27717.22
+,2017-09,,Pessoa Fisica,AM,MANAUS,19,26575.82
 ,2017-09,,Pessoa Fisica,AM,PARINTINS,3,4244.10
 ,2017-09,,Pessoa Fisica,AM,SÃO GABRIEL DA CACHOEIRA,1,36538.72
 ,2017-09,,Pessoa Fisica,AP,MACAPÁ,2,2567.84
-,2017-09,,Pessoa Fisica,BA,ALAGOINHAS,3,2297.25
+,2017-09,,Pessoa Fisica,BA,ALAGOINHAS,4,2364.93
 ,2017-09,,Pessoa Fisica,BA,BOM JESUS DA LAPA,1,0.00
 ,2017-09,,Pessoa Fisica,BA,BONINAL,1,320.70
 ,2017-09,,Pessoa Fisica,BA,BRUMADO,2,1304.50
@@ -19246,7 +19246,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-09,,Pessoa Fisica,BA,POÇÕES,1,536.22
 ,2017-09,,Pessoa Fisica,BA,PRADO,1,67.68
 ,2017-09,,Pessoa Fisica,BA,RIBEIRA DO POMBAL,2,2744.84
-,2017-09,,Pessoa Fisica,BA,SALVADOR,22,15756.84
+,2017-09,,Pessoa Fisica,BA,SALVADOR,21,15689.16
 ,2017-09,,Pessoa Fisica,BA,SANTA MARIA DA VITÓRIA,1,0.00
 ,2017-09,,Pessoa Fisica,BA,SANTO AMARO,1,1185.14
 ,2017-09,,Pessoa Fisica,BA,SEABRA,1,354.00
@@ -19266,7 +19266,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-09,,Pessoa Fisica,CE,QUIXERAMOBIM,1,447.72
 ,2017-09,,Pessoa Fisica,CE,SOBRAL,1,500.82
 ,2017-09,,Pessoa Fisica,CE,TIANGUÁ,1,447.72
-,2017-09,,Pessoa Fisica,DF,BRASÍLIA,159,142440.89
+,2017-09,,Pessoa Fisica,DF,BRASÍLIA,160,143582.29
 ,2017-09,,Pessoa Fisica,ES,ALEGRE,1,578.12
 ,2017-09,,Pessoa Fisica,ES,CACHOEIRO DE ITAPEMIRIM,1,351.48
 ,2017-09,,Pessoa Fisica,ES,COLATINA,1,578.12
@@ -22823,12 +22823,12 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-10,,Pessoa Fisica,AL,PORTO CALVO,1,79.48
 ,2017-10,,Pessoa Fisica,AM,HUMAITÁ,1,1446.08
 ,2017-10,,Pessoa Fisica,AM,ITACOATIARA,1,829.04
-,2017-10,,Pessoa Fisica,AM,MANAUS,12,10902.50
+,2017-10,,Pessoa Fisica,AM,MANAUS,11,10115.10
 ,2017-10,,Pessoa Fisica,AM,PARINTINS,3,2467.58
 ,2017-10,,Pessoa Fisica,AM,SÃO GABRIEL DA CACHOEIRA,1,18269.36
 ,2017-10,,Pessoa Fisica,AP,MACAPÁ,2,489.36
 ,2017-10,,Pessoa Fisica,BA,ACAJUTIBA,1,67.68
-,2017-10,,Pessoa Fisica,BA,ALAGOINHAS,4,3950.96
+,2017-10,,Pessoa Fisica,BA,ALAGOINHAS,5,4104.02
 ,2017-10,,Pessoa Fisica,BA,BARREIRAS,1,3192.51
 ,2017-10,,Pessoa Fisica,BA,BOM JESUS DA LAPA,13,11751.13
 ,2017-10,,Pessoa Fisica,BA,BONINAL,1,2020.84
@@ -22850,7 +22850,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-10,,Pessoa Fisica,BA,PAULO AFONSO,1,827.76
 ,2017-10,,Pessoa Fisica,BA,POÇÕES,1,2493.92
 ,2017-10,,Pessoa Fisica,BA,RIBEIRA DO POMBAL,2,1160.94
-,2017-10,,Pessoa Fisica,BA,SALVADOR,17,11345.58
+,2017-10,,Pessoa Fisica,BA,SALVADOR,16,11192.52
 ,2017-10,,Pessoa Fisica,BA,SANTA MARIA DA VITÓRIA,1,98.07
 ,2017-10,,Pessoa Fisica,BA,SANTO AMARO,1,2321.88
 ,2017-10,,Pessoa Fisica,BA,SEABRA,2,1508.80
@@ -22871,7 +22871,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-10,,Pessoa Fisica,CE,QUIXERAMOBIM,1,895.44
 ,2017-10,,Pessoa Fisica,CE,SOBRAL,1,895.44
 ,2017-10,,Pessoa Fisica,CE,TIANGUÁ,1,895.44
-,2017-10,,Pessoa Fisica,DF,BRASÍLIA,110,76412.30
+,2017-10,,Pessoa Fisica,DF,BRASÍLIA,111,77199.70
 ,2017-10,,Pessoa Fisica,ES,ALEGRE,2,1023.86
 ,2017-10,,Pessoa Fisica,ES,CACHOEIRO DE ITAPEMIRIM,1,147.16
 ,2017-10,,Pessoa Fisica,ES,LINHARES,1,1051.62
@@ -26201,7 +26201,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-11,,Pessoa Fisica,AM,TEFÉ,2,1068.50
 ,2017-11,,Pessoa Fisica,AM,TONANTINS,1,2270.30
 ,2017-11,,Pessoa Fisica,AP,MACAPÁ,3,3531.64
-,2017-11,,Pessoa Fisica,BA,ALAGOINHAS,3,2660.28
+,2017-11,,Pessoa Fisica,BA,ALAGOINHAS,4,3108.00
 ,2017-11,,Pessoa Fisica,BA,ANTÔNIO CARDOSO,1,223.86
 ,2017-11,,Pessoa Fisica,BA,BARREIRAS,1,2168.02
 ,2017-11,,Pessoa Fisica,BA,BOM JESUS DA LAPA,1,298.19
@@ -26226,7 +26226,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-11,,Pessoa Fisica,BA,PORTO SEGURO,1,755.12
 ,2017-11,,Pessoa Fisica,BA,POÇÕES,1,1968.00
 ,2017-11,,Pessoa Fisica,BA,RIBEIRA DO POMBAL,2,2210.72
-,2017-11,,Pessoa Fisica,BA,SALVADOR,19,15987.18
+,2017-11,,Pessoa Fisica,BA,SALVADOR,18,15539.46
 ,2017-11,,Pessoa Fisica,BA,SANTA RITA DE CÁSSIA,1,956.58
 ,2017-11,,Pessoa Fisica,BA,SANTO AMARO,1,1832.52
 ,2017-11,,Pessoa Fisica,BA,SEABRA,2,827.76
@@ -30266,7 +30266,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-12,,Pessoa Fisica,AM,TONANTINS,1,2270.30
 ,2017-12,,Pessoa Fisica,AM,URUCARÁ,1,3018.48
 ,2017-12,,Pessoa Fisica,AP,MACAPÁ,46,130644.12
-,2017-12,,Pessoa Fisica,BA,ALAGOINHAS,2,1988.70
+,2017-12,,Pessoa Fisica,BA,ALAGOINHAS,3,2212.56
 ,2017-12,,Pessoa Fisica,BA,ANAGÉ,1,1838.71
 ,2017-12,,Pessoa Fisica,BA,ANTÔNIO CARDOSO,1,603.90
 ,2017-12,,Pessoa Fisica,BA,BARREIRAS,4,1565.66
@@ -30294,7 +30294,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-12,,Pessoa Fisica,BA,PORTO SEGURO,1,212.40
 ,2017-12,,Pessoa Fisica,BA,POÇÕES,1,1296.30
 ,2017-12,,Pessoa Fisica,BA,RIBEIRA DO POMBAL,4,1617.50
-,2017-12,,Pessoa Fisica,BA,SALVADOR,34,28806.96
+,2017-12,,Pessoa Fisica,BA,SALVADOR,33,28583.10
 ,2017-12,,Pessoa Fisica,BA,SANTA RITA DE CÁSSIA,1,956.58
 ,2017-12,,Pessoa Fisica,BA,SANTANA,1,760.08
 ,2017-12,,Pessoa Fisica,BA,SANTO AMARO,1,1921.02

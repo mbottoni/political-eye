@@ -1,30 +1,30 @@
 {
   "acordos-leniencia": {
     "url": "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/acordos-leniencia/20261119_AcordosLeniencia.zip",
-    "size": 40664,
-    "etag": "\"eeae4daca2e951b7c9469e06594abc63\"",
-    "last_modified": "Thu, 19 Nov 2026 16:15:36 GMT",
+    "size": 40662,
+    "etag": "\"c156af0100d9a6e17e1589105a81596d\"",
+    "last_modified": "Fri, 20 Nov 2026 16:13:02 GMT",
     "date": "2026-11-19"
   },
   "ceis": {
     "url": "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/ceis/20261119_CEIS.zip",
-    "size": 3432274,
-    "etag": "\"1d695d3d2136616a694ad87598c88f24\"",
-    "last_modified": "Thu, 19 Nov 2026 16:15:24 GMT",
+    "size": 3432888,
+    "etag": "\"ad9cc80dad3e8b2c7c04f01d0dbdb67c\"",
+    "last_modified": "Fri, 20 Nov 2026 16:12:50 GMT",
     "date": "2026-11-19"
   },
   "cepim": {
     "url": "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/cepim/20261118_CEPIM.zip",
-    "size": 80656,
-    "etag": "\"a5561e04a521ca3b0fe9c98e6aeacf9e\"",
-    "last_modified": "Thu, 19 Nov 2026 13:35:48 GMT",
+    "size": 80919,
+    "etag": "\"442abd36faf3bfd8d42dab7cdd71ba71\"",
+    "last_modified": "Fri, 20 Nov 2026 13:34:50 GMT",
     "date": "2026-11-18"
   },
   "cnep": {
     "url": "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/cnep/20261119_CNEP.zip",
-    "size": 205458,
-    "etag": "\"7eb229ee2ca7a99bda8679d63557f540\"",
-    "last_modified": "Thu, 19 Nov 2026 16:15:28 GMT",
+    "size": 207098,
+    "etag": "\"ba1be81cf6c4c4584522bfb47f462af5\"",
+    "last_modified": "Fri, 20 Nov 2026 16:12:54 GMT",
     "date": "2026-11-19"
   }
 }

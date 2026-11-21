@@ -7,3 +7,7 @@ id,data,sessao,sequencial,tipo_sessao,processo_id,materia,sigla,secreta,resultad
 7114,2026-11-11,594175,4428,DOR,9101131,PLP 230/2025,PLP,0,A,68,0,0,"Votação nominal do Projeto de Lei Complementar nº 230, de 2025, nos termos do parecer."
 7115,2026-11-12,597365,4429,DOR,9127383,PLP 299/2026,PLP,0,A,40,38,0,"Votação nominal do Requerimento n° 770, de 2026, de Líderes."
 7116,2026-11-12,597365,4430,DOR,9127383,PLP 299/2026,PLP,0,A,45,31,0,"Votação nominal da Emenda nº 75 (Substitutivo) ao PLP nº 299/2026, nos termos do parecer, ressalvados os destaques."
+7117,2026-11-18,594179,4431,DOR,9127383,PLP 299/2026,PLP,0,R,30,47,0,"Votação nominal da Emenda nº 40 ao Projeto de Lei Complementar nº 299, de 2026, destacada."
+7118,2026-11-18,594179,4432,DOR,9127383,PLP 299/2026,PLP,0,A,45,32,1,"Votação nominal do Art. 6º do Substitutivo ao Projeto de Lei Complementar nº 299, de 2026, destacado."
+7119,2026-11-18,594179,4433,DOR,9127383,PLP 299/2026,PLP,0,A,49,31,0,"Votação nominal do Art. 6º-F da Lei Complementar nº 200, de 2023, constante do art. 1º do Substitutivo ao PLP nº 299/2026, destacado."
+7120,2026-11-18,594179,4434,DOR,9127383,PLP 299/2026,PLP,0,A,69,2,1,"Votação nominal das Emendas, subemenda e adequações redacionais do Relator, em turno suplementar, nos termos do parecer."

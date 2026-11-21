@@ -62,14 +62,14 @@
   "autoria-2025": {
     "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2025-01-01&dataFimApresentacao=2025-12-31",
     "files": 126,
-    "size": 8781655,
-    "sha256": "826fab4e76f8f260a0d68de84a52226858ab86125920a9c925a3173670e22121"
+    "size": 8781901,
+    "sha256": "5bd1519366d92c62f9cfbfb1bb540acb34454b641e9c610ca3714ea307d9f1c4"
   },
   "autoria-2026": {
     "url": "https://legis.senado.leg.br/dadosabertos/processo?codigoParlamentarAutor=<code>&dataInicioApresentacao=2026-01-01&dataFimApresentacao=2026-12-31",
     "files": 126,
-    "size": 5329204,
-    "sha256": "6c03a8e0f92868d20b0d031e36858bf2bdef41fa131e40b9d88d68c120392591"
+    "size": 5493261,
+    "sha256": "343ca29dbc27c72b6dd46e5138ce7efdc3f09adfa1ef98fad630243265b783fd"
   },
   "orientacao-2018": {
     "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20180101/20181231",
@@ -113,8 +113,8 @@
   },
   "orientacao-2026": {
     "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/20260101/20261231",
-    "size": 400945,
-    "sha256": "c408e3e47b7dfde9d117f821d382db6c5efddb58fca909e2e2cd6180c3255c74"
+    "size": 431070,
+    "sha256": "a6969cec4e01880da70623282738d16df394e81c18fb265ff240862d568523bc"
   },
   "senadores-54": {
     "url": "https://legis.senado.leg.br/dadosabertos/senador/lista/legislatura/54.json?exercicio=S",
@@ -133,8 +133,8 @@
   },
   "senadores-57": {
     "url": "https://legis.senado.leg.br/dadosabertos/senador/lista/legislatura/57.json?exercicio=S",
-    "size": 163370,
-    "sha256": "6ab22007f0dd806f66f1b636c14170e3bb0528f14847c86e71e302735e8e97e2"
+    "size": 163458,
+    "sha256": "ccbc6ec7d159d211bee8bbc783dda4c88a296347cd540f9f52add7e3df2031e1"
   },
   "votacao-2015": {
     "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2015-01-01&dataFim=2015-12-31",
@@ -193,7 +193,7 @@
   },
   "votacao-2026": {
     "url": "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2026-01-01&dataFim=2026-12-31",
-    "size": 1330739,
-    "sha256": "44e344831210ecd1921debb2987e11ce108c5c03378df0687ace707af3d73352"
+    "size": 1416529,
+    "sha256": "26a8a3e80f5151a6da0b8a85070ce0efc6a97c7bdfffcbefa6559a85a53608e4"
   }
 }

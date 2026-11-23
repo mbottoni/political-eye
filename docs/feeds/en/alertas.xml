@@ -5,8 +5,18 @@
   <id>tag:mbottoni.github.io,2026:political-eye/feeds/en/alertas</id>
   <link rel="self" type="application/atom+xml" href="https://mbottoni.github.io/political-eye/feeds/en/alertas.xml"/>
   <link rel="alternate" type="text/html" href="https://mbottoni.github.io/political-eye/mudancas/?fonte=alertas&amp;lang=en"/>
-  <updated>2026-11-19T12:00:00Z</updated>
+  <updated>2026-11-23T12:00:00Z</updated>
   <author><name>political-eye</name><uri>https://github.com/mbottoni/political-eye</uri></author>
+  <entry>
+    <id>tag:mbottoni.github.io,2026:political-eye/en/alertas/2026-11-23</id>
+    <title>Red flags, 23 Nov 2026: Newly listed: 1 amendment paid to a barred company</title>
+    <link rel="alternate" type="text/html" href="https://mbottoni.github.io/political-eye/mudancas/?fonte=alertas&amp;dia=2026-11-23&amp;lang=en"/>
+    <published>2026-11-23T12:00:00Z</published>
+    <updated>2026-11-23T12:00:00Z</updated>
+    <category term="alertas" label="Red flags"/>
+    <summary>Newly listed: 1 amendment paid to a barred company</summary>
+    <content type="html">&lt;p&gt;Newly listed: 1 amendment paid to a barred company&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Amendment paid to a barred company&lt;/b&gt;: &lt;a href=&quot;https://mbottoni.github.io/political-eye/alertas/?tab=barred&amp;amp;lang=en&quot;&gt;Individual firm (name withheld)&lt;/a&gt; — 22.624.444/0001-30 · amendments by João Maia (PP-RN) · 1 payment, Nov 2026 · certain reach — R$ 16.1 k&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;i&gt;A flag is not evidence of an irregularity: it is a pattern in official data that may have a legitimate explanation.&lt;/i&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <id>tag:mbottoni.github.io,2026:political-eye/en/alertas/2026-11-19</id>
     <title>Red flags, 19 Nov 2026: Newly listed: 1 amendment paid to a barred company, 15 contracts with barred companies and 1 buyer dominated by one supplier; and 2 older contracts found in the PNCP history</title>

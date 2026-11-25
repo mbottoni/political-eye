@@ -6036,6 +6036,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-05,,Pessoa Fisica,BA,JUAZEIRO,1,1224.00
 ,2017-05,,Pessoa Fisica,BA,MORRO DO CHAPÉU,1,1531.40
 ,2017-05,,Pessoa Fisica,BA,PAULO AFONSO,1,1531.40
+,2017-05,,Pessoa Fisica,BA,PORTO SEGURO,1,1224.00
 ,2017-05,,Pessoa Fisica,BA,POÇÕES,1,1253.90
 ,2017-05,,Pessoa Fisica,BA,PRADO,1,1291.92
 ,2017-05,,Pessoa Fisica,BA,RIBEIRA DO POMBAL,2,3062.80
@@ -6143,7 +6144,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-05,,Pessoa Fisica,PE,PALMARES,1,1224.00
 ,2017-05,,Pessoa Fisica,PE,PAULISTA,1,1224.00
 ,2017-05,,Pessoa Fisica,PE,PETROLINA,1,1224.00
-,2017-05,,Pessoa Fisica,PE,RECIFE,26,31621.02
+,2017-05,,Pessoa Fisica,PE,RECIFE,26,31535.37
 ,2017-05,,Pessoa Fisica,PE,SALGUEIRO,1,1096.85
 ,2017-05,,Pessoa Fisica,PE,SERRA TALHADA,1,1642.90
 ,2017-05,,Pessoa Fisica,PE,VITÓRIA DE SANTO ANTÃO,1,1224.00
@@ -6202,7 +6203,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-05,,Pessoa Fisica,RJ,ITAGUAÍ,1,455.21
 ,2017-05,,Pessoa Fisica,RJ,NITERÓI,10,7150.43
 ,2017-05,,Pessoa Fisica,RJ,NOVA FRIBURGO,1,431.30
-,2017-05,,Pessoa Fisica,RJ,RIO DE JANEIRO,269,217250.90
+,2017-05,,Pessoa Fisica,RJ,RIO DE JANEIRO,268,216112.55
 ,2017-05,,Pessoa Fisica,RJ,VASSOURAS,1,982.90
 ,2017-05,,Pessoa Fisica,RJ,VOLTA REDONDA,2,1404.96
 ,2017-05,,Pessoa Fisica,RN,AÇU,2,2448.00
@@ -13652,9 +13653,10 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-07,,Pessoa Fisica,PE,SERRA TALHADA,1,380.04
 ,2017-07,,Pessoa Fisica,PI,BARRAS,1,692.40
 ,2017-07,,Pessoa Fisica,PI,CANTO DO BURITI,1,1448.20
-,2017-07,,Pessoa Fisica,PI,FLORIANO,2,916.26
+,2017-07,,Pessoa Fisica,PI,FLORIANO,1,692.40
 ,2017-07,,Pessoa Fisica,PI,PIRIPIRI,1,174.48
 ,2017-07,,Pessoa Fisica,PI,TERESINA,11,3975.88
+,2017-07,,Pessoa Fisica,PI,ÁGUA BRANCA,1,223.86
 ,2017-07,,Pessoa Fisica,PR,CAPANEMA,1,1072.44
 ,2017-07,,Pessoa Fisica,PR,CASCAVEL,1,0.00
 ,2017-07,,Pessoa Fisica,PR,CURITIBA,6,26876.17
@@ -16532,6 +16534,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-08,,Pessoa Fisica,BA,MORRO DO CHAPÉU,2,3094.90
 ,2017-08,,Pessoa Fisica,BA,MUTUÍPE,1,1245.50
 ,2017-08,,Pessoa Fisica,BA,PAULO AFONSO,2,12406.96
+,2017-08,,Pessoa Fisica,BA,PORTO SEGURO,1,1141.40
 ,2017-08,,Pessoa Fisica,BA,POÇÕES,1,3312.26
 ,2017-08,,Pessoa Fisica,BA,RIBEIRA DO POMBAL,1,1318.40
 ,2017-08,,Pessoa Fisica,BA,SALVADOR,26,45648.65
@@ -16555,7 +16558,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-08,,Pessoa Fisica,CE,RUSSAS,1,1046.40
 ,2017-08,,Pessoa Fisica,CE,SOBRAL,1,1270.26
 ,2017-08,,Pessoa Fisica,CE,TIANGUÁ,1,1046.40
-,2017-08,,Pessoa Fisica,DF,BRASÍLIA,249,832271.70
+,2017-08,,Pessoa Fisica,DF,BRASÍLIA,250,833566.50
 ,2017-08,,Pessoa Fisica,ES,ALEGRE,2,2092.80
 ,2017-08,,Pessoa Fisica,ES,CACHOEIRO DE ITAPEMIRIM,2,1915.80
 ,2017-08,,Pessoa Fisica,ES,COLATINA,1,1141.40
@@ -16578,7 +16581,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-08,,Pessoa Fisica,GO,JARAGUÁ,1,2613.20
 ,2017-08,,Pessoa Fisica,GO,JATAÍ,1,1294.80
 ,2017-08,,Pessoa Fisica,GO,MORRINHOS,1,1100.15
-,2017-08,,Pessoa Fisica,GO,PIRES DO RIO,3,4488.30
+,2017-08,,Pessoa Fisica,GO,PIRES DO RIO,2,3193.50
 ,2017-08,,Pessoa Fisica,GO,RIO VERDE,2,2341.20
 ,2017-08,,Pessoa Fisica,GO,SÃO LUÍS DE MONTES BELOS,1,1294.80
 ,2017-08,,Pessoa Fisica,GO,URUAÇU,1,1294.80
@@ -16687,7 +16690,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-08,,Pessoa Fisica,PE,PALMARES,1,1223.40
 ,2017-08,,Pessoa Fisica,PE,PAULISTA,2,2269.80
 ,2017-08,,Pessoa Fisica,PE,PETROLINA,5,7046.20
-,2017-08,,Pessoa Fisica,PE,RECIFE,31,36575.36
+,2017-08,,Pessoa Fisica,PE,RECIFE,31,36572.66
 ,2017-08,,Pessoa Fisica,PE,SALGUEIRO,3,3366.05
 ,2017-08,,Pessoa Fisica,PE,SERRA TALHADA,1,1223.40
 ,2017-08,,Pessoa Fisica,PE,VITÓRIA DE SANTO ANTÃO,1,1318.40
@@ -16749,7 +16752,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-08,,Pessoa Fisica,RJ,IGUABA GRANDE,1,1575.40
 ,2017-08,,Pessoa Fisica,RJ,ITAGUAÍ,1,3109.30
 ,2017-08,,Pessoa Fisica,RJ,NITERÓI,4,4642.31
-,2017-08,,Pessoa Fisica,RJ,RIO DE JANEIRO,281,378637.28
+,2017-08,,Pessoa Fisica,RJ,RIO DE JANEIRO,280,377498.58
 ,2017-08,,Pessoa Fisica,RJ,SEROPÉDICA,5,8447.40
 ,2017-08,,Pessoa Fisica,RJ,TERESÓPOLIS,1,2658.50
 ,2017-08,,Pessoa Fisica,RJ,VASSOURAS,1,990.25
@@ -19243,6 +19246,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-09,,Pessoa Fisica,BA,JEREMOABO,2,2024.85
 ,2017-09,,Pessoa Fisica,BA,JUAZEIRO,3,2291.66
 ,2017-09,,Pessoa Fisica,BA,MORRO DO CHAPÉU,2,899.16
+,2017-09,,Pessoa Fisica,BA,PORTO SEGURO,1,1141.40
 ,2017-09,,Pessoa Fisica,BA,POÇÕES,1,536.22
 ,2017-09,,Pessoa Fisica,BA,PRADO,1,67.68
 ,2017-09,,Pessoa Fisica,BA,RIBEIRA DO POMBAL,2,2744.84
@@ -19266,7 +19270,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-09,,Pessoa Fisica,CE,QUIXERAMOBIM,1,447.72
 ,2017-09,,Pessoa Fisica,CE,SOBRAL,1,500.82
 ,2017-09,,Pessoa Fisica,CE,TIANGUÁ,1,447.72
-,2017-09,,Pessoa Fisica,DF,BRASÍLIA,160,143582.29
+,2017-09,,Pessoa Fisica,DF,BRASÍLIA,161,144988.80
 ,2017-09,,Pessoa Fisica,ES,ALEGRE,1,578.12
 ,2017-09,,Pessoa Fisica,ES,CACHOEIRO DE ITAPEMIRIM,1,351.48
 ,2017-09,,Pessoa Fisica,ES,COLATINA,1,578.12
@@ -19285,7 +19289,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-09,,Pessoa Fisica,GO,IPORÁ,3,159.48
 ,2017-09,,Pessoa Fisica,GO,JARAGUÁ,1,30.50
 ,2017-09,,Pessoa Fisica,GO,JATAÍ,1,75.93
-,2017-09,,Pessoa Fisica,GO,PIRES DO RIO,3,2052.34
+,2017-09,,Pessoa Fisica,GO,PIRES DO RIO,2,645.83
 ,2017-09,,Pessoa Fisica,GO,RIO VERDE,3,1196.50
 ,2017-09,,Pessoa Fisica,GO,SÃO LUÍS DE MONTES BELOS,1,27.09
 ,2017-09,,Pessoa Fisica,GO,URUAÇU,1,64.80
@@ -19369,7 +19373,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-09,,Pessoa Fisica,PE,OURICURI,1,276.96
 ,2017-09,,Pessoa Fisica,PE,PAULISTA,1,1046.40
 ,2017-09,,Pessoa Fisica,PE,PETROLINA,2,1582.62
-,2017-09,,Pessoa Fisica,PE,RECIFE,27,22371.39
+,2017-09,,Pessoa Fisica,PE,RECIFE,26,21229.99
 ,2017-09,,Pessoa Fisica,PE,SALGUEIRO,1,67.68
 ,2017-09,,Pessoa Fisica,PE,SERRA TALHADA,1,276.96
 ,2017-09,,Pessoa Fisica,PE,VITÓRIA DE SANTO ANTÃO,1,1283.40
@@ -22871,7 +22875,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-10,,Pessoa Fisica,CE,QUIXERAMOBIM,1,895.44
 ,2017-10,,Pessoa Fisica,CE,SOBRAL,1,895.44
 ,2017-10,,Pessoa Fisica,CE,TIANGUÁ,1,895.44
-,2017-10,,Pessoa Fisica,DF,BRASÍLIA,111,77199.70
+,2017-10,,Pessoa Fisica,DF,BRASÍLIA,112,77458.96
 ,2017-10,,Pessoa Fisica,ES,ALEGRE,2,1023.86
 ,2017-10,,Pessoa Fisica,ES,CACHOEIRO DE ITAPEMIRIM,1,147.16
 ,2017-10,,Pessoa Fisica,ES,LINHARES,1,1051.62
@@ -22887,7 +22891,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-10,,Pessoa Fisica,GO,IPORÁ,1,447.72
 ,2017-10,,Pessoa Fisica,GO,JARAGUÁ,1,377.01
 ,2017-10,,Pessoa Fisica,GO,JATAÍ,2,2017.80
-,2017-10,,Pessoa Fisica,GO,PIRES DO RIO,2,1378.56
+,2017-10,,Pessoa Fisica,GO,PIRES DO RIO,1,1119.30
 ,2017-10,,Pessoa Fisica,MA,BALSAS,1,800.00
 ,2017-10,,Pessoa Fisica,MA,GOVERNADOR ARCHER,1,223.86
 ,2017-10,,Pessoa Fisica,MA,IMPERATRIZ,1,1270.26
@@ -30242,7 +30246,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-12,,Pessoa Fisica,AC,RIO BRANCO,13,12016.48
 ,2017-12,,Pessoa Fisica,AC,TARAUACÁ,3,7072.44
 ,2017-12,,Pessoa Fisica,AL,DELMIRO GOUVEIA,1,203.04
-,2017-12,,Pessoa Fisica,AL,MACEIÓ,10,4708.84
+,2017-12,,Pessoa Fisica,AL,MACEIÓ,11,4932.70
 ,2017-12,,Pessoa Fisica,AL,PENEDO,2,162.68
 ,2017-12,,Pessoa Fisica,AL,PORTO CALVO,1,158.96
 ,2017-12,,Pessoa Fisica,AL,SANTANA DO IPANEMA,1,174.48
@@ -30468,7 +30472,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-12,,Pessoa Fisica,PI,BOM JESUS,1,380.04
 ,2017-12,,Pessoa Fisica,PI,CAMPO MAIOR,1,223.86
 ,2017-12,,Pessoa Fisica,PI,CANTO DO BURITI,1,380.04
-,2017-12,,Pessoa Fisica,PI,FLORIANO,2,937.08
+,2017-12,,Pessoa Fisica,PI,FLORIANO,1,713.22
 ,2017-12,,Pessoa Fisica,PI,JOSÉ DE FREITAS,1,1200.00
 ,2017-12,,Pessoa Fisica,PI,PARNAÍBA,4,2634.24
 ,2017-12,,Pessoa Fisica,PI,PEDRO LAURENTINO,1,368.58
@@ -30476,6 +30480,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-12,,Pessoa Fisica,PI,SÃO RAIMUNDO NONATO,1,380.04
 ,2017-12,,Pessoa Fisica,PI,TERESINA,15,11090.68
 ,2017-12,,Pessoa Fisica,PI,VALENÇA DO PIAUÍ,1,937.08
+,2017-12,,Pessoa Fisica,PI,ÁGUA BRANCA,1,223.86
 ,2017-12,,Pessoa Fisica,PR,APUCARANA,5,18490.00
 ,2017-12,,Pessoa Fisica,PR,ARAPONGAS,1,119.70
 ,2017-12,,Pessoa Fisica,PR,ASSIS CHATEAUBRIAND,1,67.68
@@ -30503,7 +30508,7 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-12,,Pessoa Fisica,RJ,NITERÓI,4,2687.65
 ,2017-12,,Pessoa Fisica,RJ,PARAÍBA DO SUL,1,203.38
 ,2017-12,,Pessoa Fisica,RJ,RESENDE,1,442.50
-,2017-12,,Pessoa Fisica,RJ,RIO DE JANEIRO,226,167992.29
+,2017-12,,Pessoa Fisica,RJ,RIO DE JANEIRO,225,167768.43
 ,2017-12,,Pessoa Fisica,RJ,SEROPÉDICA,2,2041.24
 ,2017-12,,Pessoa Fisica,RJ,SÃO GONÇALO,1,283.95
 ,2017-12,,Pessoa Fisica,RN,AÇU,2,1739.04

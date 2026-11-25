@@ -579,6 +579,7 @@ favorecido,nome,natureza_juridica,tipo
 00418993000116,CONSELHO ADMINISTRATIVO DE DEFESA ECONOMICA-CADE,Autarquia Federal,Pessoa Jurídica
 00420371000122,VILA SAO JOSE BENTO COTTOLENGO,Associação Privada,Pessoa Jurídica
 00420619000155,AUREMAC SERV BENEF DE MAQUINAS E EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+00421002000154,PANIFICADORA REQUINTE JANAUBA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00422370000117,ENZILABOR PRODUTOS LABORATORIAIS E HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00422743000150,ASSOCIACAO DOS MORADORES DO MUNICIPIO DE SANTO ANTONIO DOSMILAGRES,Associação Privada,Pessoa Jurídica
 00424275000152,UNIGRAF-UNIDAS GRAFICAS E EDITORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -653,7 +654,7 @@ favorecido,nome,natureza_juridica,tipo
 00476612000155,CONSORCIO PUBLICO INTERMUNICIPAL DE SAUDE DO NORTE PIONEIRO,Consórcio Público de Direito Privado,Pessoa Jurídica
 00478727000189,AGROSERVICE EMPREITEIRA AGRICOLA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00478911000129,DIGIPLUS TECNOLOGIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-00479418000123,A N ROTA FARMACIA VETERINARIA LTDA,Empresário (Individual),Pessoa Jurídica
+00479418000123,A N ROTA FARMACIA VETERINARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00480194000170,ASCON CONTABILIDADE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00481679000188,HIGH-TECH INFORMATICA INDUSTRIA E COMERCIO LTDA - FALIDO,Sociedade Empresária Limitada,Pessoa Jurídica
 00481722000105,ENGESTE EMPRESA DE ENGENHARIA DO CENTRO OESTE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -701,7 +702,7 @@ favorecido,nome,natureza_juridica,tipo
 00514301000133,POSTO UNIAO DE BRASNORTE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00517666000111,RIOSOLIDARIO - OBRA SOCIAL DO RIO DE JANEIRO,Associação Privada,Pessoa Jurídica
 00518215000107,ASSOC.DE MULHERES TRAB. RURAIS DO ASSENT. CASTRO ALVES,Associação Privada,Pessoa Jurídica
-00518398000152,FERREIRA PRESTACAO DE SERVICOS AUTOMOTIVOS LTDA,Empresário (Individual),Pessoa Jurídica
+00518398000152,FERREIRA PRESTACAO DE SERVICOS AUTOMOTIVOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00520304000180,TYPE TECNOLOGIA DA INFORMACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00521113000132,SALVER CONSTRUTORA E INCORPORADORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00525856000180,ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS DE MONTE ALTO,Associação Privada,Pessoa Jurídica
@@ -891,7 +892,7 @@ favorecido,nome,natureza_juridica,tipo
 00678603000147,CONSORCIO INTERM P/CONS REMAN RIO PR E AREAS INFLUENC.,Consórcio Público de Direito Público (Associação Pública),Pessoa Jurídica
 00678835000103,POSTO ACESITA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00679912000131,C & M INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-00680004000168,DELFINO PECAS E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+00680004000168,DELFINO PECAS E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00680746000193,LOJAO DA REFRIGERACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00680868000180,CAFE EXPORT INDUSTRIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 00684095000100,ASSOC DE PROTECAO ASSIST SAUDE E EDUCACAO DE UIRAUNA PB,Associação Privada,Pessoa Jurídica
@@ -2123,7 +2124,7 @@ favorecido,nome,natureza_juridica,tipo
 01576286000110,NUCLEO DE DESENVOLVIMENTO SOCIO-CULTURAL NACAO IMPERIAL ORGANIZACAO DA SOCIEDADE CIVIL DE INTERESSE PUBLICO,Associação Privada,Pessoa Jurídica
 01576782000174,MUNICIPIO DE PRATANIA,Município,Pessoa Jurídica
 01576817000175,CENTRO NACIONAL DE PESQUISA EM ENERGIA E MATERIAIS,Associação Privada,Pessoa Jurídica
-01577013000190,ASSOCIACAO DE DESENVOLVIMENTO COMUNITARIO DE LONDRINA,Sem informação,Pessoa Jurídica
+01577013000190,ASSOCIACAO DE DESENVOLVIMENTO COMUNITARIO DE LONDRINA,Associação Privada,Pessoa Jurídica
 01577844000162,MUNICIPIO DE SAO PEDRO DOS CRENTES,Município,Pessoa Jurídica
 01578276000114,ASLI COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 01578554000133,MUNICIPIO DE GOVERNADOR LUIZ ROCHA,Município,Pessoa Jurídica
@@ -3125,6 +3126,7 @@ favorecido,nome,natureza_juridica,tipo
 01913443000136,D M P RESISTENCIAS MATERIAL ELETRICO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 01914113000165,TOLDOS & COBERTURAS MCLAROS IND.COM.LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 01914137000114,AQUATICA SLADE CONFECCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+01914212000147,OLIVEIRA SANCHES & SANCHES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 01914458000119,ASSOCIACAO MARINGA APOIANDO A RECUPERACAO DE VIDAS-MAREV,Associação Privada,Pessoa Jurídica
 01914855000190,POSTO PRINCESA DO NORTE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 01915071000268,INTECQ - INSTITUTO DE PESQUISA TECNOLOGICA E CONTROLE DE QUALIDADE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -3245,7 +3247,7 @@ favorecido,nome,natureza_juridica,tipo
 02000030000123,COMUNIDADE TERAPEUTICA ROSA DE SARON,Associação Privada,Pessoa Jurídica
 02000309000107,MOSELLI VEICULOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02000441000119,SIMCO COMERCIO IMPORTACAO EXPORTACAO DE MAQUINAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-02001296000190,UNICA CONSULTORES S.A.,Sociedade Empresária Limitada,Pessoa Jurídica
+02001296000190,UNICA CONSULTORES S.A.,Sociedade Anônima Fechada,Pessoa Jurídica
 02001655000100,REZENDE & DINIZ NETO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02004662000327,WERFEN MEDICAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02005077000180,KORAL HOSPITALAR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -3476,7 +3478,7 @@ favorecido,nome,natureza_juridica,tipo
 02164820000144,MUNICIPIO DE CACHOEIRA DE GOIAS,Município,Pessoa Jurídica
 02165050000154,MUNICIPIO DE JOAQUIM PIRES - FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 02166127000100,DANTHI MED COMERCIO DE MATERIAIS MEDICOS E HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-02167921000179,E.A C COSTA LTDA,Empresário (Individual),Pessoa Jurídica
+02167921000179,E.A C COSTA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02168943000153,FUNDACAO DE EDUCACAO TECNOLOGICA E CULTURAL DA PARAIBA FUNETEC PB,Fundação Privada,Pessoa Jurídica
 02169204000186,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 02171558000165,CLAITON F PIRES & CIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -3573,7 +3575,7 @@ favorecido,nome,natureza_juridica,tipo
 02228938000199,"D-X INDUSTRIA, COMERCIO, IMPORTACAO E EXPORTACAO LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
 02229408000165,J M NASCIMENTO COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02229511000105,TOTAL TOPOGRAFIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-02229660000174,SERRA VERDE ENGENHARIA E TOPOGRAFIA LTDA,Sem informação,Pessoa Jurídica
+02229660000174,SERRA VERDE ENGENHARIA E TOPOGRAFIA LTDA,Sociedade Simples Limitada,Pessoa Jurídica
 02230693000134,VDS VASCULAR DEVICE SOLUTIONS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02231746000131,AUTO POSTO MARAJA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02231948000183,EPIS INDUSTRIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -3960,6 +3962,7 @@ favorecido,nome,natureza_juridica,tipo
 02466678000190,"VANOR LOCACOES, SERVICOS DE TERRAPLENAGEM E LIMPEZA LTDA.",Sociedade Empresária Limitada,Pessoa Jurídica
 02467492000155,FUNDO ESTADUAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Estadual ou do Distrito Federal,Pessoa Jurídica
 02467531000114,CENTRO DE ORIENTACAO E EDUCACAO A JUVENTUDE,Associação Privada,Pessoa Jurídica
+02468103000106,UNICA CORRESPONDENTE IMOBILIARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02468437000180,MUNICIPIO DE SAO FRANCISCO DE GOIAS,Município,Pessoa Jurídica
 02468894000174,POSTO OURO NEGRO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02469350000127,COELSA ENGENHARIA CONSTRUCOES E SANEAMENTO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -4000,6 +4003,7 @@ favorecido,nome,natureza_juridica,tipo
 02488031000169,CDG COMBUSTIVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02490351000153,AH COMERCIO E SERVICO DE ELETRO ELETRONICO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02492310000791,A. SILVA FERRAGENS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+02492735000105,RODRIGUES E COUTO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02493174000169,PETROLLUZ MATERIAIS ELETRICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02493321000109,LOJAS HB LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02493692000182,ASSOCIACAO DOS PRODUTORES RURAIS DA REGIAO DO PERUANO,Associação Privada,Pessoa Jurídica
@@ -4228,7 +4232,7 @@ favorecido,nome,natureza_juridica,tipo
 02627690000139,MIRAINOX LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02627820000133,SAMARITANO SAO FRANCISCO DE ASSIS,Associação Privada,Pessoa Jurídica
 02629342000109,MELO & PINHEIRO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-02629588000172,FIRST MEDICAL SERVICE S.A.,Sociedade Empresária Limitada,Pessoa Jurídica
+02629588000172,FIRST MEDICAL SERVICE S.A.,Sociedade Anônima Fechada,Pessoa Jurídica
 02631359000192,AUTO POSTO MEDALHA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02631972000100,SCHMIDT EQUIPAMENTOS TOPOGRAFICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02632324000178,M & G EMPREENDIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -4476,7 +4480,7 @@ favorecido,nome,natureza_juridica,tipo
 02801696000180,MITSUBISHI MATERIALS BRASIL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02803608000180,DIFEMAQ FERRAMENTAS E MAQUINAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02803608000260,DIFEMAQ FERRAMENTAS E MAQUINAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-02803684000195,FERRAGENS 4 IRMAOS LTDA,Empresário (Individual),Pessoa Jurídica
+02803684000195,FERRAGENS 4 IRMAOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02804090000107,COMERCIO DERIVADOS DE PETROLEO LAR DE MENINAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 02804586000172,ASSOCIACAO BRASILEIRA DE ESPORTE NA NATUREZA E AVENTURA,Associação Privada,Pessoa Jurídica
 02804864000191,BELUMA COMERCIO DE COMBUSTIVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -5461,7 +5465,7 @@ favorecido,nome,natureza_juridica,tipo
 03407083000126,PERFORMACE AGRO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 03407288000101,COOPERATIVA DOS PESCADORES ARTESANAIS - COOPERPESCA ARTESANAL,Cooperativa,Pessoa Jurídica
 03407308000144,ELITE AUTOMACAO COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-03408755000118,EXPRESS REMOCOES LTDA,Sociedade Simples Limitada,Pessoa Jurídica
+03408755000118,EXPRESS REMOCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 03408911000140,MUNICIPIO DE POXOREO,Município,Pessoa Jurídica
 03409038000100,CENTRO CULTURAL AFRO BRASILEIRO FRANCISCO SOLANO TRINDADE,Associação Privada,Pessoa Jurídica
 03409235000120,CENTRO SOCIAL MADRE VIRGINIA - CESMAV,Associação Privada,Pessoa Jurídica
@@ -5757,7 +5761,7 @@ favorecido,nome,natureza_juridica,tipo
 03564207000187,REALIZA ACABAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 03566347000194,VIEIRA & RANITE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 03566923000101,S. NOLLI COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-03566978000103,CONSTRUELEN MATERIAIS DE CONSTRUCAO LTDA,Empresário (Individual),Pessoa Jurídica
+03566978000103,CONSTRUELEN MATERIAIS DE CONSTRUCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 03567930000110,MUNICIPIO DE ANTONIO JOAO,Município,Pessoa Jurídica
 03568318000161,MUNICIPIO DE IGUATEMI,Município,Pessoa Jurídica
 03568433000136,MUNICIPIO DE AMAMBAI,Município,Pessoa Jurídica
@@ -5960,7 +5964,7 @@ favorecido,nome,natureza_juridica,tipo
 03657851000108,INSTITUTO ESCOLA DO TEATRO BOLSHOI NO BRASIL,Associação Privada,Pessoa Jurídica
 03658028000109,SECRETARIA DE ESTADO DE CULTURA E ECONOMIA CRIATIVA DO DISTRITO FEDERAL,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,Pessoa Jurídica
 03658656000194,ASSOCIACAO PULSAR COMPANHIA DE DANCA,Associação Privada,Pessoa Jurídica
-03659166000102,INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVAVEIS-IBAMA,Autarquia Federal,Pessoa Jurídica
+03659166000102,SEM INFORMACAO,Autarquia Federal,Pessoa Jurídica
 03659378000190,SOFA CENTER INDUSTRIA E COMERCIO DE MOVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 03659427000194,JP SERVICOS DE IMPRENSA LTDA,Sociedade Simples Limitada,Pessoa Jurídica
 03660128000170,POSTO UMARITUBA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -9697,7 +9701,7 @@ favorecido,nome,natureza_juridica,tipo
 05675447000184,SERRANA - PROJETOS E CONSTRUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 05675929000134,ASSOCIACAO CASA DE APOIO ROMEIROS DE NOSSA SENHORA APARECIDA,Associação Privada,Pessoa Jurídica
 05676156000100,FORUM NACIONAL DE DANCA - FND,Fundação Privada,Pessoa Jurídica
-05677555000196,ARCHITECTUS LTDA,Sociedade Simples Pura,Pessoa Jurídica
+05677555000196,ARCHITECTUS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 05678197000136,FOPA & GOLANOSKI LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 05678767000198,GSK PRODUTOS LABORATORIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 05678997000157,ECOFALANTE,Associação Privada,Pessoa Jurídica
@@ -10849,7 +10853,7 @@ favorecido,nome,natureza_juridica,tipo
 06246554000150,KOCH ELECTRON MICROSCOPY LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 06247949000177,COOPERATIVA DOS TRABALHADORES NA AGRICULTURA FAMILIAR DE MANACAPURU,Associação Privada,Pessoa Jurídica
 06248164000119,JOSE AVAILTON DA CUNHA,Empresário (Individual),Pessoa Jurídica
-06251197000118,WERITON FERREIRA DA COSTA LTDA,Empresário (Individual),Pessoa Jurídica
+06251197000118,WERITON FERREIRA DA COSTA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 06252160000295,R CATARINO COMERCIAL DE COMBUSTIVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 06252768000139,EMG ELETRO MECANICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 06253894000108,ELINALDO VINENTE DE OLIVEIRA,Empresário (Individual),Pessoa Jurídica
@@ -10966,7 +10970,7 @@ favorecido,nome,natureza_juridica,tipo
 06309339000150,BIOTECHNOLOGY COMERCIO DE PRODUTOS HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 06309428000105,ASSOCIACAO DE ARTESAOS DE CURRAL GRANDE,Associação Privada,Pessoa Jurídica
 06310639000150,C A PINHEIRO QUEIROZ LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-06310679000100,SIB SPACE IMAGING BRASIL PRODUTOS E REPRESENTACOES LTDA,Sociedade Anônima Fechada,Pessoa Jurídica
+06310679000100,SIB SPACE IMAGING BRASIL PRODUTOS E REPRESENTACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 06311155000125,RN CONSULTORIA E ASSESSORIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 06311243000127,EURO TRUCK IMPLEMENTOS RODOVIARIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 06311787000199,PORTAL NORTE SEGURANCA PATRIMONIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -13254,6 +13258,7 @@ favorecido,nome,natureza_juridica,tipo
 07815993000107,VERZZON -ADMINISTRACAO DE SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 07816350000170,CARITAS INTERPAROQUIAL DE SALTO,Associação Privada,Pessoa Jurídica
 07816633000111,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
+07816912000185,1AARON COMERCIO DE INSTALACOES COMERCIAIS E ESCRITORIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 07816912000266,1AARON COMERCIO DE INSTALACOES COMERCIAIS E ESCRITORIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 07817107000176,MODULO TRATORES E IMPLEMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 07817107000257,MODULO TRATORES E IMPLEMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -14051,7 +14056,7 @@ favorecido,nome,natureza_juridica,tipo
 08219232000147,MENDEX NETWORKS TELECOMUNICACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08219775000164,PRIMO'S COMERCIO DE PRODUTOS DE INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08219802000107,DELINEA TECNOLOGIA EDUCACIONAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-08219942000177,R. MAZZO COMERCIO DE MOVEIS LTDA,Empresário (Individual),Pessoa Jurídica
+08219942000177,R. MAZZO COMERCIO DE MOVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08220275000142,GRAFICA E EDITORA MOVIMENTO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08220864000120,HGA TERCEIRIZACAO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08220895000181,"COOPERATIVA DE PRODUCAO, INDUSTRIALIZACAO E COMERCIALIZACAO UNIAO DO OESTE",Cooperativa,Pessoa Jurídica
@@ -14439,7 +14444,7 @@ favorecido,nome,natureza_juridica,tipo
 08427232000132,CARLOS ALBERTO GUIMARAES MENEZES E CIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08427246000156,TRANSMEGA TRANSPORTES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08427422000150,BIOGENETIX IMPORTACAO E EXPORTACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-08427697000193,VILSON AMAURI SOARES DE SOARES E CIA LTDA,Empresário (Individual),Pessoa Jurídica
+08427697000193,VILSON AMAURI SOARES DE SOARES E CIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08427999000161,ASSOCIACAO DOS DEFICIENTES FISICOS DE ALAGOAS ADEFAL,Associação Privada,Pessoa Jurídica
 08428765000139,LIGA NORTE RIOGRANDENSE CONTRA O CANCER,Associação Privada,Pessoa Jurídica
 08429002000102,ASSOCIACAO DOS CRIADORES DE CAVALO DE SELA DE ARAPIRACA - ACESA,Associação Privada,Pessoa Jurídica
@@ -14465,7 +14470,7 @@ favorecido,nome,natureza_juridica,tipo
 08439201000100,S N SINALIZADORA NACIONAL E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08439528000173,COLINA DO BRASIL COMERCIO DE MATERIAIS HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08439549000199,MUNICIPIO DE CRAIBAS,Município,Pessoa Jurídica
-08439717000146,AEON FACILITY MANAGEMENT S/A,Sociedade Empresária Limitada,Pessoa Jurídica
+08439717000146,AEON FACILITY MANAGEMENT S/A,Sociedade Anônima Fechada,Pessoa Jurídica
 08439978000166,ASSOC COM DOS M MINI E P PROD R DO POV DE PAU DARCO,Associação Privada,Pessoa Jurídica
 08440584000128,KCINCO CAMINHOES E ONIBUS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08441389000112,COMPREHENSE DO BRASIL ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -14789,7 +14794,7 @@ favorecido,nome,natureza_juridica,tipo
 08640219000167,FUNDO MUNICIPAL DE SAUDE DE CONCEICAO DE MACABU,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 08640642000167,IDA APARECIDA GUTIERREZ DOURADO,Empresário (Individual),Pessoa Jurídica
 08642138000104,"SECRETARIA DE ASSISTENCIA SOCIAL, COMBATE A FOME E POLITICAS SOBRE DROGAS",Órgão Público do Poder Executivo Estadual ou do Distrito Federal,Pessoa Jurídica
-08643136000121,GIRO NORTE COMERCIO DE PNEUS E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+08643136000121,GIRO NORTE COMERCIO DE PNEUS E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08643644000100,CONSTRUSERVICE - EMPREENDIMENTOS E CONSTRUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08644690000123,CET-SEG SEGURANCA ARMADA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08644690000204,CET-SEG SEGURANCA ARMADA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -14925,7 +14930,7 @@ favorecido,nome,natureza_juridica,tipo
 08703140000138,MOURACOM COMERCIO DE ARTIGOS DE INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08703778000179,FUNDO MUNICIPAL DE SAUDE DE FLORIDA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 08703785000170,FUNDO MUNICIPAL DE SAUDE DE MANDAGUACU,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
-08704069000108,COLATINA AR CONDICIONADO LTDA,Empresário (Individual),Pessoa Jurídica
+08704069000108,COLATINA AR CONDICIONADO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08704174000147,MSKT COMERCIO DE COMBUSTIVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08704475000170,FUNDO MUNICIPAL DE SAUDE DE PAULO AFONSO,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 08704691000116,CORESE SERVICOS ESPECIALIZADOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -15053,7 +15058,7 @@ favorecido,nome,natureza_juridica,tipo
 08767154000115,MUNICIPIO DE BREJO DO CRUZ,Município,Pessoa Jurídica
 08767786000189,VITALAB - COMERCIO DE PRODUTOS PARA LABORATORIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08767884000116,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
-08769451000108,RIZA SECURITIZADORA S.A.,Sociedade Anônima Fechada,Pessoa Jurídica
+08769451000108,RIZA SECURITIZADORA S.A.,Sociedade Anônima Aberta,Pessoa Jurídica
 08770637000179,VIDEOHD BROADCAST EMPREENDIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08770872000140,R. HULLER ALARMES,Empresário (Individual),Pessoa Jurídica
 08771702000180,MGD INDUSTRIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -15328,7 +15333,7 @@ favorecido,nome,natureza_juridica,tipo
 08877271000131,SIMILAR & COMPATIVEL INDUSTRIA DE EQUIPAMENTOS MEDICOS ODONTOLOGICOS LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 08878287000169,INSTITUTO AMBIENTAL DE PESQUISA E INOVACAO TRILHOS DO JEQUITIBA - IAPITJ,Associação Privada,Pessoa Jurídica
 08878462000118,"SETOR MB CONSTRUCOES, SERVICOS E COMERCIO LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
-08878503000176,INSTITUTO PROFESSOR JOSE ELIAS MURAD,Fundação Privada,Pessoa Jurídica
+08878503000176,INSTITUTO PROFESSOR JOSE ELIAS MURAD,Associação Privada,Pessoa Jurídica
 08878760000108,FUNDO MUNICIPAL DE SAUDE DE PALOTINA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 08878773000187,LEIDA DE OLIVEIRA BARROS & CIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 08880553000198,OCEANIC COMERCIO E REPRESENTACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -15717,6 +15722,7 @@ favorecido,nome,natureza_juridica,tipo
 09020353000128,PAC ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 09020873000130,SCIENTIFIC DENTAL MEDICAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 09021203000139,VILLA TOMIAZZI PAISAGISMO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+09021537000102,CHAGAS & CARDOSO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 09021952000166,"INSTITUTO PARAENSE DE DESPORTO, EDUCACAO, CULTURA E DESENVOLVIMENTO SOCIAL SAMURAI-ZEN",Associação Privada,Pessoa Jurídica
 09022372000193,FUNDO MUNICIPAL DE SAUDE DE JANDAIA DO SUL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 09022398000131,AGEM TECNOLOGIA DISTRIBUIDORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -16459,7 +16465,7 @@ favorecido,nome,natureza_juridica,tipo
 09341011000100,L BARBERINO DERIVADOS DE PETROLEO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 09341233000122,FUNDACAO UNIVERSIDADE FEDERAL DO PAMPA - UNIPAMPA,Fundação Pública de Direito Público Federal,Pessoa Jurídica
 09341315000177,FUNDO MUNICIPAL DE SAUDE - MUNICIPIO DE PITANGA PARANA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
-09341816000153,2M COMERCIO LTDA,Empresário (Individual),Pessoa Jurídica
+09341816000153,2M COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 09341833000190,KRIA PUBLICIDADE E PROPAGANDA LTDA,Sociedade Simples Limitada,Pessoa Jurídica
 09342161000138,ELIMCO SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 09342351000155,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -16941,7 +16947,7 @@ favorecido,nome,natureza_juridica,tipo
 09554532000145,INOVAR SERVICOS DE MANUTENCAO E APOIO ADMINISTRATIVO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 09554714000116,INSTITUTO EVOLUI - IE,Associação Privada,Pessoa Jurídica
 09555110000194,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
-09555259000173,CST - MEDICINA DO TRABALHO LTDA,Sociedade Simples Limitada,Pessoa Jurídica
+09555259000173,CST - MEDICINA DO TRABALHO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 09556006000114,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 09556140000115,SECRETARIA DE ESTADO DE DIREITOS HUMANOS E PARTICIPACAO POPULAR-SEDIHPOP.,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,Pessoa Jurídica
 09556239000117,J. M. GURGEL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -17884,7 +17890,7 @@ favorecido,nome,natureza_juridica,tipo
 10437790000120,NPM COMERCIAL DE COMBUSTIVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10437956000109,ESPACO CULT ARTE E CULTURA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10438115000116,VETMOC DISTRIBUIDORA DE PRODUTOS AGROPECUARIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-10438215000142,PRIMEIRA COMPANHIA DE INFANTARIA,Órgão Público do Poder Executivo Federal,Pessoa Jurídica
+10438215000142,CODIGO INEXISTENTE NO SIAFI,Órgão Público do Poder Executivo Federal,Pessoa Jurídica
 10438451000169,"INSTITUTO NACIONAL DE GESTAO. EDUCACAO, TECNOLOGIAE INOVACAO - INGETI",Associação Privada,Pessoa Jurídica
 10438570000111,MUNICIPIO DE PASSAGEM FRANCA,Município,Pessoa Jurídica
 10439655000114,PHENIX SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -18377,7 +18383,7 @@ favorecido,nome,natureza_juridica,tipo
 10593310000110,PMDSL - FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 10593919000190,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 10594533000100,FUNDO MUNICIPAL DE SAUDE JOACABA - FMS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
-10596093000112,GABINETE DO ESCRITORIO LTDA,Empresário (Individual),Pessoa Jurídica
+10596093000112,GABINETE DO ESCRITORIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10596145000150,COREANA VEICULOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10596399000179,ATLANTIS COMERCIO DE MAQUINAS E EQUIPAMENTOS EIRELI,Empresa Individual de Responsabilidade Limitada (de Natureza Empresária),Pessoa Jurídica
 10596721000160,GEORGINI PRODUTOS HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -18971,7 +18977,7 @@ favorecido,nome,natureza_juridica,tipo
 10822663000145,LAFARE PROJETOS CONSTRUCOES E EMPREENDIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10822750000100,FUNDO MUNICIPAL DE SAUDE DE SALOA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 10822771000118,FUNDO MUNICIPAL DE SAUDE - FUMSAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
-10823109000182,I H M MARQUES LTDA,Empresário (Individual),Pessoa Jurídica
+10823109000182,I H M MARQUES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10823327000117,COOPERATIVA DA AGRICULTURA FAMILIAR E ECONOMIA SOLIDARIA DO VALE DO JIQUIRICA - COOAMA,Cooperativa,Pessoa Jurídica
 10823380000118,THOTEM BRASIL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10824074000104,ANELO SURGICAL COMERCIO DE PRODUTOS HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -19286,7 +19292,7 @@ favorecido,nome,natureza_juridica,tipo
 10957855000169,AGR BOTELHO ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10960962000146,TAMFSERV SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10961360000103,TIWA TECNOLOGIA DA INFORMACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-10962176000188,URANIA NONATO DE OLIVEIRA DE CARVALHO LTDA,Empresário (Individual),Pessoa Jurídica
+10962176000188,URANIA NONATO DE OLIVEIRA DE CARVALHO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10962421000157,FRANCISCO DAS CHAGAS MARQUES DE LIMA - EM RECUPERACAO JUDICIAL,Empresário (Individual),Pessoa Jurídica
 10963967000122,COOPERATIVA AGROPECUARIA AGUAS BELAS COOPERAB,Cooperativa,Pessoa Jurídica
 10965285000159,INSTITUTO MOVIMENTO ESPERANCA,Associação Privada,Pessoa Jurídica
@@ -19320,6 +19326,7 @@ favorecido,nome,natureza_juridica,tipo
 10976987000138,POSTO SAO JUDAS TADEU LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10977391000152,INSTITUTO FAUSTO GIANNECCHINI - ESPORTE & EDUCACAO,Associação Privada,Pessoa Jurídica
 10977915000105,ENGEQUIP-RJ METAL MECANICA E CONSTRUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+10978106000118,CIRURGICA FAMED DISTRIBUIDORA DE PRODUTOS HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10978682000165,PLINIO CAVALCANTI & CIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10980338000100,SHREWD COMERCIO DE MATERIAIS ELETRICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 10980376000163,DIOGO IANZER VIEDO & CIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -20880,7 +20887,7 @@ favorecido,nome,natureza_juridica,tipo
 11379632000124,DTC - CONSTRUTORA E EMPREENDIMENTOS IMOBILIARIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 11379774000191,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11380216000146,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
-11380698000134,ENGECONSULT S.A,Sociedade Empresária Limitada,Pessoa Jurídica
+11380698000134,ENGECONSULT S.A,Sociedade Anônima Fechada,Pessoa Jurídica
 11380843000187,FUNDO MUNICIPAL DE SAUDE DE IPORA DO OESTE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11381070000153,FUNDO MUNICIPAL DE SAUDE DE CAMPOS DE JULIO,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11381097000146,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -21724,6 +21731,7 @@ favorecido,nome,natureza_juridica,tipo
 11527599000132,FUNDO MUNICIPAL DE SAUDE DO MUNICIPIO DE BOQUIRA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11527773000147,CORE SERVICOS E INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 11528843000181,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
+11528972000170,AVN EMPRESARIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 11530230000189,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11533245000109,FUNDO MUNICIPAL DE SAUDE DE ARACAS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11533627000124,CLOVIS DE BARROS LIMA CONSTRUCOES E INCORPORACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -22297,7 +22305,7 @@ favorecido,nome,natureza_juridica,tipo
 11768479000127,FUNDO MUNICIPAL DE SAUDE DE ARCO-IRIS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11768545000169,FUNDO MUNICIPAL DE SAUDE DE PRESIDENTE BERNARDES,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11768552000160,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
-11768658000164,PALCO DE PAPEL PRODUCOES LTDA,Empresário (Individual),Pessoa Jurídica
+11768658000164,PALCO DE PAPEL PRODUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 11769125000105,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11769998000100,JGM MANUTENCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 11770182000104,FUNDO MUNICIPAL DE SAUDE DE GUARAPARI,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -22422,7 +22430,7 @@ favorecido,nome,natureza_juridica,tipo
 11813811000128,FUNDO MUNICIPAL DE SAUDE DO MUNICIPIO DE HUMAITA - AMAZONAS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11813814000161,LMP CONSULTORIA IMOBILIARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 11813986000135,FUNDO MUNICIPAL DE SAUDE DO MUNICIPIO DE COMENDADOR LEVY GASPARIAN,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
-11814221000110,R B MOURAO COMERCIAL LTDA,Empresário (Individual),Pessoa Jurídica
+11814221000110,R B MOURAO COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 11814454000112,FUNDO MUNICIPAL DE SAUDE DE GUARUJA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11814527000176,FUNDO MUNICIPAL DE SAUDE DE DUAS ESTRADAS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11814540000125,FUNDO MUNICIPAL DE SAUDE DE RAFALE FERNANDES,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -22731,7 +22739,7 @@ favorecido,nome,natureza_juridica,tipo
 11886613000194,N C LOPES DOS SANTOS,Empresário (Individual),Pessoa Jurídica
 11886643000109,FUNDO MUNICIPAL DE SAUDE DE SAO JOSE DA BELA VISTA-SP,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11887350000138,RGM CONSTRUTORA E ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-11887398000146,CGFASTNET TELECOM LTDA,Empresário (Individual),Pessoa Jurídica
+11887398000146,CGFASTNET TELECOM LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 11888249000100,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL DE JAGUARIAIVA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11888327000168,FUNDO MUNICIPAL DE SAUDE DE SAO DOMINGOS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11888596000124,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -22915,6 +22923,7 @@ favorecido,nome,natureza_juridica,tipo
 11930883000155,FUNDO MUNICIPAL DE SAUDE DE BARRA DO GARCAS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11930910000190,FUNDO MUNICIPAL DE SAUDE DE CASSIA DOS COQUEIROS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11930935000193,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
+11931197000107,INSTITUTO DE DESENVOLVIMENTO ECONOMICO ESTUDOS PESQUISAS E PROJETOS SUSTENTAVEIS - IDEEPPS,Associação Privada,Pessoa Jurídica
 11931527000156,FUNDO MUNICIPAL DE SAUDE DE RIO VERMELHO,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11931568000142,FUNDO MUNICIPAL DE SAUDE DE SANTA CRUZ DO ARARI MATRIZ,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 11931702000105,FUNDO MUNICIPAL DE SAUDE DE IPUEIRA-RN,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -25028,7 +25037,7 @@ favorecido,nome,natureza_juridica,tipo
 12788027000170,ESTRELAR SIRIUS PRESENTES & DECORACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 12789468000196,CASSIA APARECIDA XAVIER FALQUEIRO 29055609838,Empresário (Individual),Pessoa Jurídica
 12790499000167,CONSTEMA CONSTRUTORA E EMPREENDIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-12791293000151,CHARLLEY PEREIRA DA SILVA LTDA,Empresário (Individual),Pessoa Jurídica
+12791293000151,CHARLLEY PEREIRA DA SILVA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 12792863000128,PRO TECNOLOGIA E ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 12793110000137,SIGPLAST EMBALAGENS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 12793520000188,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -25227,7 +25236,7 @@ favorecido,nome,natureza_juridica,tipo
 12940490000195,POSTO DE COMBUSTIVEIS DISTRITO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 12941232000123,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 12941509000118,SOMBRA COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-12941636000117,SOLUCTION LOGISTICA E EVENTOS S.A.,Sociedade Empresária Limitada,Pessoa Jurídica
+12941636000117,SOLUCTION LOGISTICA E EVENTOS S.A.,Sociedade Anônima Fechada,Pessoa Jurídica
 12941791000133,S CAMPOS VASCONCELOS SERVICOS,Empresário (Individual),Pessoa Jurídica
 12941827000189,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 12941905000145,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL - FMAS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -26695,7 +26704,7 @@ favorecido,nome,natureza_juridica,tipo
 13634993000103,MUNICIPIO DE ITAPEBI,Município,Pessoa Jurídica
 13635008000176,MUNICIPIO DE SANTA CRUZ CABRALIA,Município,Pessoa Jurídica
 13635016000112,MUNICIPIO DE PORTO SEGURO,Município,Pessoa Jurídica
-13635622000138,ALINE CARLOS RIBEIRO ARQUITETURA LTDA,Empresário (Individual),Pessoa Jurídica
+13635622000138,ALINE CARLOS RIBEIRO ARQUITETURA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 13635973000149,DEFENSORIA PUBLICA DO ESTADO DE GOIAS,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,Pessoa Jurídica
 13637453000175,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL - FMAS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 13637888000110,INSTITUTO CULTURAL IRACEMA - ICI,Associação Privada,Pessoa Jurídica
@@ -27807,7 +27816,7 @@ favorecido,nome,natureza_juridica,tipo
 13932227000117,FUNDO MUNICIPAL DE SAUDE DE SAO GABRIEL DA PALHA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 13932309000161,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 13932396000157,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
-13933118000114,INSTITUTO BRUNO GIORGI,Sem informação,Pessoa Jurídica
+13933118000114,INSTITUTO BRUNO GIORGI,Associação Privada,Pessoa Jurídica
 13933936000117,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 13933955000143,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 13934718000105,MAX SANDER DE OLIVEIRA GONCALVES,Empresário (Individual),Pessoa Jurídica
@@ -28233,6 +28242,7 @@ favorecido,nome,natureza_juridica,tipo
 14133259000115,FUNDO MUNICIPAL DE SAUDE DE LINHA NOVA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 14133730000175,SULPARA CAMINHOES E MAQUINAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 14134270000108,FUNDO MUNICIPAL DE SAUDE DE PALESTINA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
+14135452000195,TOTAL AGRIBUSINESS COMERCIO DE PRODUTOS AGROPECUARIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 14136133000102,COMPAKTO - DISTRIBUIDORA E LOGISTICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 14136159000142,FUNDO MUNICIPAL DE SAUDE DE NOVO ARIPUANA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 14136368000196,S E COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -28721,7 +28731,7 @@ favorecido,nome,natureza_juridica,tipo
 14378714000142,INOVARE COMERCIO E PLANEJAMENTO ADMINISTRATIVO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 14378753000140,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL DE SANANDUVA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 14378816000168,14.378.816 VALDECI GONCALVES,Empresário (Individual),Pessoa Jurídica
-14379830000186,LFM & A CURSOS E TREINAMENTOS LTDA,Empresário (Individual),Pessoa Jurídica
+14379830000186,LFM & A CURSOS E TREINAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 14380564000101,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 14380833000130,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 14381217000101,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL - FMAS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -28853,7 +28863,7 @@ favorecido,nome,natureza_juridica,tipo
 14455678000173,MTECH COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 14455697000108,DOMINI PRESTADORA DE SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 14456525000140,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
-14456632000179,METTA CONSTRUTORA E INCORPORADORA LTDA,Empresário (Individual),Pessoa Jurídica
+14456632000179,METTA CONSTRUTORA E INCORPORADORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 14457531000112,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 14457810000186,CHEIL COMERCIO DE EQUIPAMENTOS SERVICOS IMPORTACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 14458284000179,COOPERATIVA MISTA DE PRODUCAO E COMERCIALIZACAO COMPONESA DO ESTADO DE ALAGOAS,Cooperativa,Pessoa Jurídica
@@ -28889,6 +28899,7 @@ favorecido,nome,natureza_juridica,tipo
 14474778000147,SM MALHAS E CONFECCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 14475207000127,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL DE OLHO DAGUA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 14475823000188,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
+14475934000194,FABIANA DE MORAES MATHIAS,Empresário (Individual),Pessoa Jurídica
 14476316000169,FUNDO MUNICIPAL DE SAUDE - F.M.S.,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 14476436000166,SOCIEDADE ENTOMOLOGICA DO BRASIL,Associação Privada,Pessoa Jurídica
 14476859000186,FUNDO MUNICIPAL DE SAUDE DE CAMPO NOVO DO PARECIS/MT,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -30918,7 +30929,7 @@ favorecido,nome,natureza_juridica,tipo
 15583788000183,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 15583794000130,EDITIONE EDITORACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 15583839000177,PELT PROJETOS E CONSTRUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-15585000000259,ASSOCIACAO AMANDO O PROXIMO,Sem informação,Pessoa Jurídica
+15585000000259,ASSOCIACAO AMANDO O PROXIMO,Associação Privada,Pessoa Jurídica
 155851,INST. FED. FLUMINENSE/CAMPUS QUISSAMA,Sem informação,Unidade Gestora
 15585176000120,YARIN CONSTRUTORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 15587985000170,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL DE GUARATUBA - FUMAS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -31098,6 +31109,7 @@ favorecido,nome,natureza_juridica,tipo
 15747992000192,SLC SERVICOS EM SEGURANCA DO TRABALHO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 15748437000185,IMPERADOR SOLUCOES COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 15750165000158,AUTO POSTO BRILHANTE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+15751676000194,COOPERATIVA DE TRABALHO MAOS VERDES,Cooperativa,Pessoa Jurídica
 15753795000186,FUNDO MUNICIPAL DE SAUDE DO MUNICIPIO DE RESERVA - PR,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 15755663000193,FERNANDO O B BARRA & CIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 15756649000104,COOPERATIVA REGIONAL DOS ASSENTADOS DA REGIAO SUL DO ESTADO DE SERGIPE - COOPERARSUL,Cooperativa,Pessoa Jurídica
@@ -31423,7 +31435,7 @@ favorecido,nome,natureza_juridica,tipo
 16501564000148,C & C CAMPINAS COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 16501916000165,ELETROPECAS TI COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 16502551000193,SITRAN SINALIZACAO DE TRANSITO INDUSTRIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-16502615000156,D. M. FREITAS E CIA LTDA,Empresário (Individual),Pessoa Jurídica
+16502615000156,D. M. FREITAS E CIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 16502748000122,ICL SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 16503202000196,SE7E COMERCIAL E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 16503366000113,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -31969,7 +31981,7 @@ favorecido,nome,natureza_juridica,tipo
 16986952000166,ACAO SOCIAL SANTO ANTONIO,Associação Privada,Pessoa Jurídica
 16988145000182,I & C IMPORTS - COMERCIO E SERVICOS PARA MOTOCICLETAS LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 16988753000863,DCCO LOCADORA DE MAQUINAS E EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-16989002000276,ELIANE RESTA DAL ROSSO GOYA LTDA,Empresário (Individual),Pessoa Jurídica
+16989002000276,ELIANE RESTA DAL ROSSO GOYA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 16992407000182,FUNDO MUNICIPAL DE SAUDE DE ITAPIRA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 16992819000112,INSTITUTO BENEFICENTE E SOCIAL VIVA CONTRIBUINDO - IVC,Associação Privada,Pessoa Jurídica
 16993139000113,CGP SOLUTIONS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -32366,7 +32378,7 @@ favorecido,nome,natureza_juridica,tipo
 17280127000104,MODASA BRASIL COMERCIO IMPORTACAO EXPORTACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 17280959000120,SANTA LUCIA CONSULTORIA EM COMERCIO VAREJISTA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 17281091000345,ATACADO COMIRAN LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-17281106000103,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,Sociedade de Economia Mista,Pessoa Jurídica
+17281106000103,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,Sociedade Anônima Aberta,Pessoa Jurídica
 17281668000157,PNEUSOLA PNEUS E PECAS S/A - FALIDA,Sociedade Anônima Fechada,Pessoa Jurídica
 17281973000220,COFERMETA SA,Sociedade Anônima Fechada,Pessoa Jurídica
 17281973001382,COFERMETA SA,Sociedade Anônima Fechada,Pessoa Jurídica
@@ -32528,7 +32540,7 @@ favorecido,nome,natureza_juridica,tipo
 17407238000139,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Órgão Público do Poder Executivo Municipal,Pessoa Jurídica
 17410071000165,GRUPO E IMPORTACAO E EXPORTACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 17410111000179,VILLEGA COMERCIO E REFRIGERACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-17410769000180,INNOVE FOTO CINEMA LTDA,Empresário (Individual),Pessoa Jurídica
+17410769000180,INNOVE FOTO CINEMA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 17411311000146,JOAQUIM DE MATTOS SOBRINHO,Empresário (Individual),Pessoa Jurídica
 17411381000102,J B C COMERCIO DE APARELHOS ELETRONICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 17412397000121,CENTOPEIA ENSINO E ECONOMIA CRIATIVA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -33054,6 +33066,7 @@ favorecido,nome,natureza_juridica,tipo
 17829671000162,FUNDO MUNICIPAL DE CULTURA DE IRARA,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 17831042000177,COOPERATIVA DE BENEFICIAMENTO COMERCIALIZACAO E PRESTACAO DE SERVICOS DOS AGRICULTORES ASSENTADOS - COOPTERRA,Cooperativa,Pessoa Jurídica
 17832268000192,KOKAR INDUSTRIA E COMERCIO DE TINTAS LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
+17832664000110,COBALTECH COMERCIO E SERVICOS DE FERRAMENTAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 17833040000117,CENTRO DE RECUPERACAO MISSIONARIO DE CRISTO,Associação Privada,Pessoa Jurídica
 17833503000140,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL FELICIO DOS SANTOS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 17833996000119,CRISTO CONSTRUCOES E TRANSPORTES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -33859,7 +33872,7 @@ favorecido,nome,natureza_juridica,tipo
 18260489000287,MUNICIPIO DE TUPACIGUARA,Município,Pessoa Jurídica
 18260497000142,MUNICIPIO DE CENTRALINA,Município,Pessoa Jurídica
 18260505000150,MUNICIPIO DE PRATA,Município,Pessoa Jurídica
-18261811000101,RAPIDO DISTRIBUIDORA E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+18261811000101,RAPIDO DISTRIBUIDORA E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 18261828000169,VITA IT COMERCIO E SERVICOS DE SOLUCOES EM TI LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 18265415000152,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL-FMAS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 18266878000139,COMERCIAL NOSSO LAR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -33996,7 +34009,7 @@ favorecido,nome,natureza_juridica,tipo
 18307397000124,MUNICIPIO DE COLUNA,Município,Pessoa Jurídica
 18307405000132,MUNICIPIO DE DIVINOLANDIA DE MINAS,Município,Pessoa Jurídica
 18307413000189,MUNICIPIO DE DORES DE GUANHAES,Município,Pessoa Jurídica
-18307416000112,BELEZA DE CORPO E ALMA LTDA,Empresário (Individual),Pessoa Jurídica
+18307416000112,BELEZA DE CORPO E ALMA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 18307421000125,MUNICIPIO DE GONZAGA,Município,Pessoa Jurídica
 18307439000127,MUNICIPIO DE GUANHAES,Município,Pessoa Jurídica
 18307447000173,MUNICIPIO DE PAULISTAS,Município,Pessoa Jurídica
@@ -34160,7 +34173,7 @@ favorecido,nome,natureza_juridica,tipo
 18371119000136,JOAO DE JESUS DONZELLA,Empresário (Individual),Pessoa Jurídica
 18373473000108,ESPORTE GLOBAL COMERCIO DE ARTIGOS ESPORTIVOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 18375347000184,AVOAR ARTE E CULTURA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-18376163000139,FLORES EDUCACAO E CULTURA LTDA,Empresário (Individual),Pessoa Jurídica
+18376163000139,FLORES EDUCACAO E CULTURA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 18376208000175,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 18377101000141,POSTO 7 COMBUSTIVEIS LIMITADA,Sociedade Empresária Limitada,Pessoa Jurídica
 18377380000143,AUTO POSTO BRISA DE BAURU II LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -34637,7 +34650,7 @@ favorecido,nome,natureza_juridica,tipo
 18692847000140,AGRIMED AGRIMENSURA TOPOGRAFIA E GEORREFERENCIAMENTO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 18694030000100,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL DE SANTOS DUMONT,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 18694818000117,VGD DISTRIBUIDORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-18695016000121,CONSTRUTORA PREMIUM LTDA,Empresário (Individual),Pessoa Jurídica
+18695016000121,CONSTRUTORA PREMIUM LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 18695347000161,BRENA VIEIRA LIRA CAVALCANTE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 18696690000120,POSTO TEX KAR LIMITADA,Sociedade Empresária Limitada,Pessoa Jurídica
 18697295000162,MS TELECOM SERVICES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -34881,7 +34894,7 @@ favorecido,nome,natureza_juridica,tipo
 18917521000173,ANWAR SLEIMAN HACHOUCHE,Empresário (Individual),Pessoa Jurídica
 18917693000147,OBJET COMERCIO DE EQUIPAMENTOS E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 18918142000106,DCCO NORTE SOLUCOES EM ENERGIA E EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-18918743000100,M. T. ALMEIDA LTDA,Empresário (Individual),Pessoa Jurídica
+18918743000100,M. T. ALMEIDA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 18919260000120,PREFEITURA DO MUNICIPIO DE PORTO VELHO - FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 18919534000181,MARMORARIA UBERABA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 18920861000153,"LIDEA INDUSTRIA, COMERCIO, IMPORTACAO E EXPORTACAO LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
@@ -35762,7 +35775,7 @@ favorecido,nome,natureza_juridica,tipo
 19785908000186,GRUNNER ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 19786103000157,COOPERATIVA DA AGRICULTURA FAMILIAR SOLIDARIA DO ESTADO DE MINAS GERAIS - COOPERAF,Cooperativa,Pessoa Jurídica
 19789633000159,TOTAL COMERCIO VAREJISTA DE EQUIPAMENTOS DE SOM E ILUMINACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-19791538000190,MACEIO MEDICAL PRODUTOS MEDICO-HOSPITALAR LTDA,Empresário (Individual),Pessoa Jurídica
+19791538000190,MACEIO MEDICAL PRODUTOS MEDICO-HOSPITALAR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 19795706000115,"ENOVE ENGENHARIA, COMERCIO DE MATERIAS ELETRICOS E ENERGIAS RENOVAVEIS LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
 19797563000180,ASSOCIACAO DE PRODUCAO E SERVICOS DOS AGRICULTORES E AGRICULTORAS FAMILIARES DO MUNICIPIO DE BENEDITINOS PIAUI,Associação Privada,Pessoa Jurídica
 19799908000135,MARANATHA COMERCIO E SERVICOS GERAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -35860,7 +35873,7 @@ favorecido,nome,natureza_juridica,tipo
 19911286000195,ALANK BATISTA VIANA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 19911312000185,ASSOCIACAO HOSPITAL VALE DO JEQUITINHONHA,Associação Privada,Pessoa Jurídica
 19912966000123,D. A. NASCIMENTO COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-19912983000160,E NILBA PARAGUAIO CENTRO TECNICO LTDA,Empresário (Individual),Pessoa Jurídica
+19912983000160,E NILBA PARAGUAIO CENTRO TECNICO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 19913488000176,H2R DISTRIBUIDORA DE PRODUTOS HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 19913591000116,VFM - DISTRIBUIDORA LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 19914179000110,VICTOR HI-TECH DO BRASIL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -35964,7 +35977,7 @@ favorecido,nome,natureza_juridica,tipo
 20013345000197,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL - FMAS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 20013885000170,GDK ENGENHARIA E CONSULTORIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20014456000118,DIOGO RAPHAEL LOPES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-20018836000120,C V S ASSUMPCAO LTDA,Empresário (Individual),Pessoa Jurídica
+20018836000120,C V S ASSUMPCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20020203000157,MULTI MODAL ESTRATEGICA MME LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20022974000183,NORDEN TECNOLOGIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20025041000140,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -36386,14 +36399,14 @@ favorecido,nome,natureza_juridica,tipo
 20476623000142,CARBALLO COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20478819000176,FASTIPLAN SERVICOS LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 20480448000167,SCALA FM STEREO DE BELO HORIZONTE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-20481118000196,RUMO CLIMATIZACAO LTDA,Empresário (Individual),Pessoa Jurídica
+20481118000196,RUMO CLIMATIZACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20481143000170,CAMERA MAIS - EQUIPAMENTOS FOTOGRAFICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20483193000196,BRASIDAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20483319000122,BANDA DE MUSICA BENICIO MOREIRA,Associação Privada,Pessoa Jurídica
 20485436000125,INSTITUTO OBJETIVA ALAGOAS,Associação Privada,Pessoa Jurídica
 20489064000105,PROSPER COMERCIO E DISTRIBUICAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20489785000115,STEEL SOLUTION MOBILIARIO CORPORATIVO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-20494248000163,DETOX DEDETIZADORA LTDA,Sociedade Simples Limitada,Pessoa Jurídica
+20494248000163,DETOX DEDETIZADORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20495149000287,PRODOESTE VEICULOS E SERVICOS LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 20496317000178,JAISON CLEBER SILVEIRA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20496725000120,FORMAUTO PECAS E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -36459,7 +36472,7 @@ favorecido,nome,natureza_juridica,tipo
 20587922000154,COOPERATIVA DA AGRICULTURA FAMILIAR DE CACHOEIRO DE ITAPEMIRIM,Cooperativa,Pessoa Jurídica
 20591114000160,CERQUEIRA CORREIA ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20593359000127,MINAS DISTRIBUIDORA DE MEDICAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-20593482000148,MED MAIS SAUDE E SEGURANCA OCUPACIONAL LTDA,Empresário (Individual),Pessoa Jurídica
+20593482000148,MED MAIS SAUDE E SEGURANCA OCUPACIONAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20593591000165,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 20593787000150,POLLYANA GONCALVES BARROS RODRIGUES,Empresário (Individual),Pessoa Jurídica
 20595141000101,PROATIVA COMERCIO DE ALIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -36601,7 +36614,7 @@ favorecido,nome,natureza_juridica,tipo
 20775803000125,JOAO PAULO COELHO BOVO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20776492000119,PLANED COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20782247000114,TD MEDICAL SUPPLIES IMPORTACAO E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-20782880000102,"NORDESTE MEDICAL, REPRESENTACAO, IMPORTACAO E EXPORTACAO DE PRODUTOS HOSPITALARES S/A",Sociedade Empresária Limitada,Pessoa Jurídica
+20782880000102,"NORDESTE MEDICAL, REPRESENTACAO, IMPORTACAO E EXPORTACAO DE PRODUTOS HOSPITALARES S/A",Sociedade Anônima Fechada,Pessoa Jurídica
 20784313000195,RM COMERCIO DE MERCADORIAS E MATERIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20785092000170,C. DE FATIMA FERRARI LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20785575000174,FANKORTE INDUSTRIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -36708,7 +36721,7 @@ favorecido,nome,natureza_juridica,tipo
 20908431000168,REALIZE AVALIACOES E PERICIAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20912243000103,ASSOCIACAO COMUNITARIA ASSISTENCIAL E FILANTROPICA RECUPERANDO VIDAS,Associação Privada,Pessoa Jurídica
 20912888000146,COMERCIAL DE HORTALICA VERDE E VIDA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-20915722000183,N A FERREIRA SUPRIMENTOS DE INFORMATICA LTDA,Empresário (Individual),Pessoa Jurídica
+20915722000183,N A FERREIRA SUPRIMENTOS DE INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20916650000199,JOB MANUTENCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 20917225000114,HOSPITAL SAO JOAO BATISTA DE ITAMOGI,Associação Privada,Pessoa Jurídica
 20917302000217,ASSOCIACAO CENTRO SOCIAL ESCOLA RESTAURANDO VIDAS,Associação Privada,Pessoa Jurídica
@@ -36909,7 +36922,7 @@ favorecido,nome,natureza_juridica,tipo
 21127476000168,ABDIM VIVER BEM SEM LIMITE - ASSOCIACAO BRASILEIRA DE DISTROFIA MUSCULAR VIVER BEM SEM LIMITE,Associação Privada,Pessoa Jurídica
 21128750000113,LANCONEX TECNOLOGIA COMERCIO IMPORTACAO E EXPORTACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 21129179000151,FUNDO MUNICIPAL DE ACAO SOCIAL,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
-21130342000104,POLEN ATIVOS PATRIMONIAIS LTDA,Empresário (Individual),Pessoa Jurídica
+21130342000104,POLEN ATIVOS PATRIMONIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 21137143000110,CENTRAL BRASIL INSTRUMENTOS DE MEDICAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 21140837000106,C A C FURTADO SERVICOS DE MECANICA,Empresário (Individual),Pessoa Jurídica
 21142203000192,ASSOCIACAO SAO VICENTE DE PAULO DE JOAO MONLEVADE - MG,Associação Privada,Pessoa Jurídica
@@ -36942,7 +36955,7 @@ favorecido,nome,natureza_juridica,tipo
 21173967000145,METAL LIDER LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 21175072000140,EDUARDO FRANCISCO CEPEDA 67142656700,Empresário (Individual),Pessoa Jurídica
 21181004000193,ELITE CONSTRUTORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-21183741000125,GRAFICA SAGA LTDA,Empresário (Individual),Pessoa Jurídica
+21183741000125,GRAFICA SAGA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 21185463000145,ICMB INFORMATICA PRODUTOS E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 21186804000105,UNIVERSIDADE FEDERAL DE SAO JOAO DEL-REI,Fundação Pública de Direito Público Federal,Pessoa Jurídica
 21187875000114,COMERCIAL SOUSA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -37545,7 +37558,7 @@ favorecido,nome,natureza_juridica,tipo
 21909028000116,DALMIR D THUROW,Empresário (Individual),Pessoa Jurídica
 21911084000195,FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL-(FMAS)DO MUNICIPIO DE JATAIZINHO,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 21912865000102,ELO BRASIL COBRANCAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-21916610000100,MARANGATU FILMES E PRODUCOES LTDA,Empresário (Individual),Pessoa Jurídica
+21916610000100,MARANGATU FILMES E PRODUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 21918616000116,AGUAS DE BURITIS SANEAMENTO S.A,Sociedade Anônima Fechada,Pessoa Jurídica
 21919820000151,LMA COMERCIO DE MATERIAIS E EQUIPAMENTOS PARA ESCRITORIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 21921392000100,IF ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -38606,7 +38619,7 @@ favorecido,nome,natureza_juridica,tipo
 23126915000143,BUFFET REQUINTE RECEPCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23129429000189,MUNICIPIO FLORES DO PIAUI-FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 23130098000105,TREND IND. COM. EQUIPAMENTOS INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-23131342000146,ONO TECNOLOGIA E SEGURANCA DIGITAL SA,Sociedade Empresária Limitada,Pessoa Jurídica
+23131342000146,ONO TECNOLOGIA E SEGURANCA DIGITAL SA,Sociedade Anônima Fechada,Pessoa Jurídica
 23132211000183,MUNICIPIO DE SAO JOAO DO PIAUI - FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 23139891000167,BTG COMERCIAL CIRURGICO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23140085000109,IGM EMPREENDIMENTOS IMOBILIARIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -38646,7 +38659,7 @@ favorecido,nome,natureza_juridica,tipo
 23172555000116,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 23174519000191,POSTO D'ANGELIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23174519000515,POSTO D'ANGELIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-23176087000158,MARIA MARGARIDA DE SOUZA ATHANAZIO LTDA,Empresário (Individual),Pessoa Jurídica
+23176087000158,MARIA MARGARIDA DE SOUZA ATHANAZIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23177362000158,CARLOS ALBERTO FERREIRA DE SOUZA,Empresário (Individual),Pessoa Jurídica
 23178513000192,COOPERATIVA AGROPECUARIA NOVA AMAZONIA - COOPANA,Cooperativa,Pessoa Jurídica
 23178866000192,OPPORTUNITAT COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -38655,7 +38668,7 @@ favorecido,nome,natureza_juridica,tipo
 23179533000188,FUNDO MUNICIPAL DE SAUDE,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
 23182624000172,G CARVALHO E MOTA COMERCIO E SERVICO,Empresário (Individual),Pessoa Jurídica
 23186829000126,JOSE MARINHO DE ARAUJO 24669792687,Empresário (Individual),Pessoa Jurídica
-23186928000108,TMM AGROCOMERCIAL LTDA,Empresário (Individual),Pessoa Jurídica
+23186928000108,TMM AGROCOMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23188297000166,23.188.297 MARGARETH CUNHA DA SILVA,Empresário (Individual),Pessoa Jurídica
 23188464000179,CA BASTOS,Empresário (Individual),Pessoa Jurídica
 23188943000195,PLENITUDE CONSTRUTORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -38759,7 +38772,7 @@ favorecido,nome,natureza_juridica,tipo
 23312871000146,EXEMPLARMED CONSULTORIA HOSPITALAR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23313283000127,PARAGON FARMA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23313897000109,"H S CONSTRUTORA, COMERCIO E SERVICOS LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
-23315122000172,MARCOS DE OLIVEIRA CANTANHEDE,Sem informação,Pessoa Jurídica
+23315122000172,MARCOS DE OLIVEIRA CANTANHEDE,Empresário (Individual),Pessoa Jurídica
 23317114000165,M & L TAQUARUCU AUTO CENTER LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23317916000175,MUNDO OFFICE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23318541000168,J S L DA SILVA,Empresário (Individual),Pessoa Jurídica
@@ -38889,7 +38902,7 @@ favorecido,nome,natureza_juridica,tipo
 23486211000181,R L COSTA COMERCIO,Empresário (Individual),Pessoa Jurídica
 23489834000108,MUNICIPIO DE TEJUCUOCA,Município,Pessoa Jurídica
 23490345000176,CENTRAL NACIONAL DE APOSENTADOS E PENSIONISTAS- (ASSOCIACAO SANTO ANTONIO),Associação Privada,Pessoa Jurídica
-23490705000130,PAMPA LTDA,Empresário (Individual),Pessoa Jurídica
+23490705000130,PAMPA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23491453000163,INSTITUTO CEU ESTRELA GUIA - ICEG,Associação Privada,Pessoa Jurídica
 23492026000108,JP SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23492879000131,F T S SERVICOS DE CONSTRUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -39180,7 +39193,7 @@ favorecido,nome,natureza_juridica,tipo
 23874023000120,COMERCIAL DE MOVEIS VALE DO SAO FRANCISCO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23874115000100,INSTITUTO GERMINANDO SONS,Organização Social (OS),Pessoa Jurídica
 23875884000123,MILTON KABITSCHKE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-23876953000113,N S DE OLIVEIRA COMERCIO DE MERCADORIAS LTDA,Empresário (Individual),Pessoa Jurídica
+23876953000113,N S DE OLIVEIRA COMERCIO DE MERCADORIAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23878066000184,TORRES NOVAS CONSTRUTORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23879002000106,DISAC COMERCIAL E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 23879606000144,EQUIPE 2MF AGENCIA DE EVENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -39480,7 +39493,7 @@ favorecido,nome,natureza_juridica,tipo
 24279558000116,ASSOCIACAO DESPORTIVA ATLETICA BITURUNA - ADAB,Associação Privada,Pessoa Jurídica
 24280354000103,FEDERACAO DAS ASSOCIACOES E COOPERATIVAS DE ARTESAOS DO ESTADO DE ALAGOAS,Associação Privada,Pessoa Jurídica
 24281318000156,POSTO IRMAOS NUNES COMERCIO VAREJISTA DE COMBUSTIVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-24281924000171,TEC.NET INFORMATICA LTDA,Empresário (Individual),Pessoa Jurídica
+24281924000171,TEC.NET INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 24282215000100,O. BRITO LIMA FILHO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 24283880000119,ASSOCIACAO CULTURAL ESPORTIVA E LAZER NOVA ROSA DA PENHA,Organização Social (OS),Pessoa Jurídica
 24284710000159,SISTEMICA SOLUCOES CORPORATIVAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -40007,7 +40020,7 @@ favorecido,nome,natureza_juridica,tipo
 24907701000177,TEMPER ENGENHARIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 24908634000105,AR FRIO COMERCIO DE REFRIGERACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 24910222000100,PRIME DISTRIBUIDORA DE ALIMENTOS E COMERCIO DE VARIEDADES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-24911081000140,PISO FORTE LTDA,Empresário (Individual),Pessoa Jurídica
+24911081000140,PISO FORTE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 24912303000149,M V R DE SOUZA COMERCIO ATACADISTA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 24913412000180,BR BPO TECNOLOGIA E SERVICOS S.A.,Sociedade Anônima Fechada,Pessoa Jurídica
 24913657000108,L P MENDONCA SOBRINHO,Empresário (Individual),Pessoa Jurídica
@@ -40566,7 +40579,7 @@ favorecido,nome,natureza_juridica,tipo
 25976418000160,NR INDUSTRIA E COMERCIO DE PRODUTOS E ROUPAS HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 25990187000149,"ASSOCIACAO COMUNITARIA DOS PESCADORES, EXTRATIVISTAS E AGRICULTORES FAMILIARES DE SAO ROMAO",Associação Privada,Pessoa Jurídica
 25992745000105,DANIEL SILVA AIRES 02327233038,Empresário (Individual),Pessoa Jurídica
-25995281000190,TG NETO COMERCIO E SOLUCOES EMPRESARIAIS LTDA,Empresário (Individual),Pessoa Jurídica
+25995281000190,TG NETO COMERCIO E SOLUCOES EMPRESARIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 26001230000169,ASSOCIACAO BENEFICENTE SAO JOAO BATISTA,Associação Privada,Pessoa Jurídica
 26014442000180,JOSE JAIR DE OLIVEIRA,Empresário (Individual),Pessoa Jurídica
 26025401000190,BLUE EYE SOLUCOES EM TECNOLOGIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -40757,7 +40770,7 @@ favorecido,nome,natureza_juridica,tipo
 26290146000102,G A DA COSTA - ESPORTES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 26290355000156,LM DISTRIBUIDORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 26290918000106,DANIELA TENFEN DISTRIBUIDORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-26294192000180,F V P COELHO LTDA.,Empresário (Individual),Pessoa Jurídica
+26294192000180,F V P COELHO LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 26298433000169,CONSTRUTORA CARVALHO VALENTE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 26299693000159,TELEALPHA COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 26299856000101,ROC ENGENHARIA E PROJETOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -41496,7 +41509,7 @@ favorecido,nome,natureza_juridica,tipo
 27180373000148,IMPRIMO 3D LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27183604000177,TECBOL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27184259000196,LICITE BRASIL COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-27184935000121,LEATRICE QUIRINO PIRES LTDA,Empresário (Individual),Pessoa Jurídica
+27184935000121,LEATRICE QUIRINO PIRES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27185340000190,PUBLI CONSULTORIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27186728000106,TINARI DISTRIBUICAO E IMPORTACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27187087000104,SANTA CASA DE MISERICORDIA DE CACHOEIRO DE ITAPEMIRIM,Associação Privada,Pessoa Jurídica
@@ -41607,7 +41620,7 @@ favorecido,nome,natureza_juridica,tipo
 27304489000141,ANTONIO ALVES DA SILVA JUNIOR 91987113420,Empresário (Individual),Pessoa Jurídica
 27307079000154,LG COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27308366000189,MOVIMENTE BRASIL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-27308740000146,HFS PRODUTOS E SERVICOS EM RADIOLOGIA ODONTOLOGICA LTDA,Empresário (Individual),Pessoa Jurídica
+27308740000146,HFS PRODUTOS E SERVICOS EM RADIOLOGIA ODONTOLOGICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27308745000179,ALP BOLSAS INDUSTRIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27309879000104,OMICS SOLUCOES PARA LABORATORIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27310598000171,INDUSTRIA DE MOVEIS IRAPURU LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -41908,7 +41921,7 @@ favorecido,nome,natureza_juridica,tipo
 27658129000148,FUNDACAO HOSPITALAR E DE ASSIST SOC DE DOMINGOS MARTINS,Fundação Privada,Pessoa Jurídica
 27658628000135,VEDAMAC COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27660632000138,APMDOURADO MULTI SERVICOS E TECNOLOGIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-27663787000128,MINI DEPOSITO DE BEBIDAS MESQUITA LTDA,Empresário (Individual),Pessoa Jurídica
+27663787000128,MINI DEPOSITO DE BEBIDAS MESQUITA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27667307000105,BLUE RJ ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27669022000103,CR3 COMERCIO ELETRONICO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 27671902000106,FLARE COMERCIO VAREJO E ATACADO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -42385,7 +42398,7 @@ favorecido,nome,natureza_juridica,tipo
 28325460000109,EFICIENTE COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28325560000135,RICCOLAB PRODUTOS PARA LABORATORIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28326512000161,ANDRASCHKO E ANDRASCHKO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-28326963000107,JR INOX ITAPERUNA LTDA,Empresário (Individual),Pessoa Jurídica
+28326963000107,JR INOX ITAPERUNA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28329561000158,AFIX SOLUCOES EMPRESARIAS E GOVERNAMENTAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28331609000162,PRIME ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28332277000130,JADE MULLER CARNEIRO 02928448322,Empresário (Individual),Pessoa Jurídica
@@ -42578,7 +42591,7 @@ favorecido,nome,natureza_juridica,tipo
 28562706000166,LUIS ROCHA COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28564177000130,MUNICIPIO DE DUAS BARRAS,Município,Pessoa Jurídica
 28564958000124,JA&A SOLUCOES INTEGRADAS EM GESTAO LC LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-28566791000130,J. RENDRO LTDA,Empresário (Individual),Pessoa Jurídica
+28566791000130,J. RENDRO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28567290000179,ASSOCIACAO CEARENSE DAS FEDERACOES DESPORTIVAS - ASCEFED,Associação Privada,Pessoa Jurídica
 28567438000175,TECAR DIESEL CAMINHOES E ONIBUS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28567438000256,TECAR DIESEL CAMINHOES E ONIBUS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -42733,7 +42746,7 @@ favorecido,nome,natureza_juridica,tipo
 28766510000193,DESAFIO FARMA DISTRIBUIDORA DE MEDICAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28767460000169,PLATIUM INDUSTRIA E COMERCIO DE MOVEIS E EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28769028000107,INSTITUTO DE SAUDE LUCENA SANCHEZ,Associação Privada,Pessoa Jurídica
-28776956000107,GUEDES E SILVA LTDA,Empresário (Individual),Pessoa Jurídica
+28776956000107,GUEDES E SILVA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28780007000192,QUALITY LUX COMERCIO E INDUSTRIA DE MATERIAIS ELETRICOS E ILUMINACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28780181000135,HORT COMERCIO DE PRODUTOS ALIMENTICIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28782750000181,"GREMIO RECREATIVO CULTURAL, SOCIAL, ESPORTIVO, RURAL ESTRELA DO SAMBA DE TIBIRICA",Associação Privada,Pessoa Jurídica
@@ -42753,6 +42766,7 @@ favorecido,nome,natureza_juridica,tipo
 28799171000141,ASSOCIACAO CIDADE PARA TODOS,Associação Privada,Pessoa Jurídica
 28800572000174,TRICORDER INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28801589000146,FEDERAL GOURMET CONSERVACAO E SERVICOS GERAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+28801589001118,FEDERAL GOURMET CONSERVACAO E SERVICOS GERAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28801626000116,GALILEO TECNOLOGIA EM SAUDE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28801765000140,UBERABA EXTINTORES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 28803105000106,WALLACE CARNEIRO LIMA 12878622766,Empresário (Individual),Pessoa Jurídica
@@ -43102,6 +43116,7 @@ favorecido,nome,natureza_juridica,tipo
 29230662000130,DISTRIMAB COMERCIO DE MEDICAMENTOS E MATERIAL HOSPITALAR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29230740000104,ADRIANA WERCH BIRCK,Empresário (Individual),Pessoa Jurídica
 29233652000158,MHS PRODUTOS E SERVICOS EIRELI,Empresa Individual de Responsabilidade Limitada (de Natureza Empresária),Pessoa Jurídica
+29236209000130,FINATTO COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29237568000102,ANTONIO WENDELL PIMENTEL ARAUJO SOUSA TEIXEIRA,Empresário (Individual),Pessoa Jurídica
 29241950000190,M3 COMERCIAL E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29243014000118,COMTEX UNIFORMES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -43171,7 +43186,7 @@ favorecido,nome,natureza_juridica,tipo
 29316048000195,MAIS SOLUTION PROJETOS E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29316650000122,ALFALAB MATERIAL PARA LABORATORIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29316713000140,AUTO POSTO MATHEUS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-29320105000100,J.D DUARTE MATERIAL ESPORTIVO LTDA,Empresário (Individual),Pessoa Jurídica
+29320105000100,J.D DUARTE MATERIAL ESPORTIVO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29321059000163,C. A. TECH ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29321094000182,NOVA SMAR S/A,Sociedade Anônima Fechada,Pessoa Jurídica
 29321197000142,TECNOTON APARELHOS MEDICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -43182,7 +43197,7 @@ favorecido,nome,natureza_juridica,tipo
 29324239000107,INSTITUTO ANJOS DA GUARDA,Associação Privada,Pessoa Jurídica
 29324552000137,COOPERATIVA DE PRODUCAO E DESENVOLVIMENTO DO POVO INDIGENA PAITER SURUI - RO/MT (COOPAITER),Cooperativa,Pessoa Jurídica
 29325600000101,M J COMERCIO E DISTRIBUIDORA DE MATERIAL MEDICO E HOSPITALAR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-29328967000189,SMARTCAR LTDA,Empresário (Individual),Pessoa Jurídica
+29328967000189,SMARTCAR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29329985000185,MDR DISTRIBUICAO E IMPORTACAO DE PRODUTOS PARA A SAUDE S/A,Sociedade Anônima Fechada,Pessoa Jurídica
 29331151000104,M. R. DIAS PAIAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29331665000160,MAIS ELETRONICO IMPORT LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -43353,7 +43368,7 @@ favorecido,nome,natureza_juridica,tipo
 29617126000191,VANIZIA S FERREIRA,Empresário (Individual),Pessoa Jurídica
 29617173000135,M3 SERVICOS SINALIZACOES E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29617957000163,CASA DE REFERENCIA MULHERES MIRABAL,Associação Privada,Pessoa Jurídica
-29618083000169,"JOCERES AGRO, COMERCIO E SERVICOS LTDA",Empresário (Individual),Pessoa Jurídica
+29618083000169,"JOCERES AGRO, COMERCIO E SERVICOS LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
 29621201000198,OURO NORTE CONSTRUCOES E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29626289000130,C.G - DISTRIBUIDORA DE ALIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29628340000143,PERIN 4V MATERIAIS DE CONSTRUCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -43537,7 +43552,7 @@ favorecido,nome,natureza_juridica,tipo
 29940894000181,MAIS OPCOES COMERCIO E DISTRIBUIDORA DE MATERIAIS DE CONSTRUCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29941064000179,P A PEREIRA,Empresário (Individual),Pessoa Jurídica
 29942731000138,CONCEPT SERVICE SERVICOS GERAIS,Sociedade Empresária Limitada,Pessoa Jurídica
-29942841000108,LOGISTIK SERVICOS E COMERCIO LTDA,Empresário (Individual),Pessoa Jurídica
+29942841000108,LOGISTIK SERVICOS E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29946443000151,G L OLIVEIRA EXTINTORES & SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29947634000138,NEW WORLD SOLAR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 29952796000164,AUTO POSTO GLOBAL ARENA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -43822,7 +43837,7 @@ favorecido,nome,natureza_juridica,tipo
 30389350000152,MULTIMAT COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 30393954000172,WP COMPANY COMERCIO E SERVICOS TECNOLOGIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 30398556000149,ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS,Associação Privada,Pessoa Jurídica
-30398587000108,IRG SOARES COMERCIO LTDA,Empresário (Individual),Pessoa Jurídica
+30398587000108,IRG SOARES COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 30399473000174,GIGA ATACADO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 30403596000131,SOCIEDADE MUSICAL LIRA DA ESPERANCA,Associação Privada,Pessoa Jurídica
 30405899000193,A. F. COELHO CAVALCANTE,Empresário (Individual),Pessoa Jurídica
@@ -44105,7 +44120,7 @@ favorecido,nome,natureza_juridica,tipo
 30836461000160,INSTITUTO DE ASSISTENCIA SOCIAL E SAUDE SAO RAFAEL-CHOPINZINHO/PR,Associação Privada,Pessoa Jurídica
 30843402000119,DOIS K COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 30847063000149,A.A.A.T ASSOCIACAO AMIGOS DOS ANIMAIS DE TABIRA PE,Associação Privada,Pessoa Jurídica
-30848225000163,RAPHAEL SERGIO OLIVEIRA MENDES LTDA,Empresário (Individual),Pessoa Jurídica
+30848225000163,RAPHAEL SERGIO OLIVEIRA MENDES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 30848671000178,ELAINE NEVES DE MEDEIROS,Empresário (Individual),Pessoa Jurídica
 30849352000187,ASSOCIACAO PELA DEFESA DOS PROFISSIONAIS DAS SEGURANCAS DA BAHIA,Associação Privada,Pessoa Jurídica
 30849820000113,ASSOCIACAO AGROEXTRATIVISTA DO ASSENTAMENTO BARREIRO - AGROEX-BA,Associação Privada,Pessoa Jurídica
@@ -44302,6 +44317,7 @@ favorecido,nome,natureza_juridica,tipo
 31170338000115,DF ELETROTECNICA COMERCIO MANUTENCAO E LOCACAO DE EQUIPAMENTOS ELETRICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31172587000140,GALVAO ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31173839000155,POLO DISTRIBUIDORA E PRESTADORA DE SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+31178313000168,ASH ENGENHARIA INTEGRADA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31179378000128,GUSTAVO DIAS DE SOUZA 06770868903,Empresário (Individual),Pessoa Jurídica
 31180776000164,31.180.776 LUCAS SILVA DO ROSARIO,Empresário (Individual),Pessoa Jurídica
 31181029000140,MAURICIO JOSE DE BARROS,Empresário (Individual),Pessoa Jurídica
@@ -44366,7 +44382,7 @@ favorecido,nome,natureza_juridica,tipo
 31278058000125,PACLAU COMERCIO DE MATERIAIS ELETROELETRONICOS E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31278215000100,TORK CASA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31279292000177,POSTO DE COMBUSTIVEIS VSB LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-31279954000109,WB COMMERCE LTDA,Empresário (Individual),Pessoa Jurídica
+31279954000109,WB COMMERCE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31280504000136,CARITAS DIOCESANA DE TEOFILO OTONI,Associação Privada,Pessoa Jurídica
 31283874000127,LEAC COMERCIO DE PRODUTOS PARA PESQUISA CIENTIFICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31284307000195,ROBERTA E. DE BARROS VALDEVINO,Empresário (Individual),Pessoa Jurídica
@@ -44459,6 +44475,7 @@ favorecido,nome,natureza_juridica,tipo
 31411095000160,ORGENIO GONCALVES VIANA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31416895000173,AUTO POSTO ALVORADA LONDRINA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31420049000127,FULL HOUSE BUFFET PRODUCOES E EVENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+31420280000110,ARTE TORRES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31422307000104,MWRS COMERCIO DE EQUIPAMENTOS MEDICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31422703000131,FR MEDEIROS COMERCIO INDUSTRIA E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31423420000104,MAIBE COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -44506,7 +44523,7 @@ favorecido,nome,natureza_juridica,tipo
 31487035000120,CENTRO SOCIAL CATIRI EM ACAO,Associação Privada,Pessoa Jurídica
 31490741000121,ALCANTARA INDUSTRIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31493304000161,JORGE VALDECI CAMPOS PANTOJA 17274192272,Empresário (Individual),Pessoa Jurídica
-31494539000178,LICITAFER LTDA,Empresário (Individual),Pessoa Jurídica
+31494539000178,LICITAFER LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31494840000181,"ASSOCIACAO DE MULHERES EMPREENDEDORAS AGRICOLAS DE CORREGO MOACIR, GOVERNADOR LINDENBERG-ES",Associação Privada,Pessoa Jurídica
 31495962000273,B2W INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31497010000108,2S COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -44597,7 +44614,7 @@ favorecido,nome,natureza_juridica,tipo
 31624401000146,DM SOLUCOES DIGITAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31625146000156,AP COMERCIO DE PRODUTOS DE LIMPEZA E INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31625610000104,POSTO NEGO VEIO COMERCIO DE COMBUSTIVEIS E LUBRIFICANTES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-31628566000196,PRIMETEC SERVICOS ESPECIALIZADOS LTDA,Empresário (Individual),Pessoa Jurídica
+31628566000196,PRIMETEC SERVICOS ESPECIALIZADOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31628708000115,J.A.CARNES & CIA LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 31633529000176,CGP COMERCIO DE COMBUSTIVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31634238000100,ERINOX EQUIPAMENTOS PARA COZINHAS INDUSTRIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -44617,7 +44634,7 @@ favorecido,nome,natureza_juridica,tipo
 31658323000109,W&V COMERCIO VAREJISTA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31659618000191,CORBA EDITORA ARTES GRAFICAS LIMITADA,Sociedade Empresária Limitada,Pessoa Jurídica
 31660321000146,M P DE OLIVEIRA - COMERCIO,Empresário (Individual),Pessoa Jurídica
-31661017000113,HEMAX COMERCIO E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+31661017000113,HEMAX COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31661792000179,FRUTIMAK FABRICACAO DE MAQUINAS E EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31666544000110,AGUA DOCE MATERIAIS DE CONSTRUCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 31668444000204,MAPATECH COMERCIO E SERVICOS EM TECNOLOGIA DA INFORMACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -44969,7 +44986,7 @@ favorecido,nome,natureza_juridica,tipo
 32208383000184,VIDA COMERCIO DE PRODUTOS E SERVICOS HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 32208670000194,ASSOCIACAO CULTURAL DA ARQUIDIOCESE DO RIO DE JANEIRO,Associação Privada,Pessoa Jurídica
 32209959000128,INSTITUTO SINAL DO VALE,Associação Privada,Pessoa Jurídica
-32212062000153,DOUGLAS DA ROSA LTDA,Empresário (Individual),Pessoa Jurídica
+32212062000153,DOUGLAS DA ROSA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 32213135000121,MOBCORP MOBILIARIO CORPORATIVO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 32216244000100,RACITEC HIDRAULICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 32216668000167,"MIGUEL HERNANDEZ INDUSTRIA, COMERCIO DE EQUIPAMENTOS DE SEGURANCA LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
@@ -45031,6 +45048,7 @@ favorecido,nome,natureza_juridica,tipo
 32296435000111,DANILO JOSE TOSE,Empresário (Individual),Pessoa Jurídica
 32299683000116,ASSOCIACAO BENEFICENTE ENSINE MAO AMIGA,Associação Privada,Pessoa Jurídica
 32299748000123,ENDO MOTORS COMERCIO DE VEICULOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+32300137000158,HANDREIY VINICIUS MORAES DJUBATIE MANUTENCAO,Empresário (Individual),Pessoa Jurídica
 32300172000177,TECH MOVEIS E EQUIPAMENTOS PARA ESCRITORIO E ESCOLA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 323002,DEPARTAMENTO NAC. DE PRODUCAO MINERAL - SEDE,Sem informação,Unidade Gestora
 32300342000113,GTX ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -45389,7 +45407,7 @@ favorecido,nome,natureza_juridica,tipo
 32850995000176,COMERCIAL TRES ACORDES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 32855236000104,SECRETARIA DE ESTADO DE POLICIA CIVIL,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,Pessoa Jurídica
 32855632000123,MARLON BRENDO ROCHA WANDERLEY 02392258210,Empresário (Individual),Pessoa Jurídica
-32857347000141,ESTUDIO RAFAEL CAMPOS LTDA,Sem informação,Pessoa Jurídica
+32857347000141,ESTUDIO RAFAEL CAMPOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 32861890000112,LIDER DISTIBUIDORA DE PRODUTOS FARMACEUTICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 32863499000157,RMF DYNAMIC LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 32863558000197,WGO MULTIMIDIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -45784,7 +45802,7 @@ favorecido,nome,natureza_juridica,tipo
 33402939000131,AEROPORTOS DO SUDESTE DO BRASIL S.A,Sociedade Anônima Fechada,Pessoa Jurídica
 33404351000117,LUZITANO MATERIAIS DE CONSTRUCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 33404525000141,33.404.525 ANGELO BATISTA DE SOUZA,Empresário (Individual),Pessoa Jurídica
-33405851000173,MESTRE DOS BORDADOS LTDA,Empresário (Individual),Pessoa Jurídica
+33405851000173,MESTRE DOS BORDADOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 33406436000134,STEEL COMERCIO DE MAQUINAS AGRICOLAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 33407516000104,PAULO ROBERTO GOMES NETO 88519341772,Empresário (Individual),Pessoa Jurídica
 33408537000144,FERNANDA R. C. DOS ANJOS COMERCIO E SERVICOS,Empresário (Individual),Pessoa Jurídica
@@ -46181,7 +46199,7 @@ favorecido,nome,natureza_juridica,tipo
 33966390000108,O. E. PEREIRA BRINQUEDOS,Empresário (Individual),Pessoa Jurídica
 33968417000100,L C I COMERCIO DE MATERIAL DE CONSTRUCAO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 33969486000120,ASSOCIACAO DOS PROF DE ED FISICA DO ESTADO DO R JANEIRO,Associação Privada,Pessoa Jurídica
-33969748000156,A C LOCACOES E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+33969748000156,A C LOCACOES E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 33973493000103,WENGE ENGENHARIA E PROJETOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 33975682000107,BUSINESS SOLUCOES CORPORATIVAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 33975778000175,NEZCAN COMERCIO DE EQUIPAMENTOS E SERVICOS ESPECIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -47127,7 +47145,7 @@ favorecido,nome,natureza_juridica,tipo
 35530424000142,DELCIO GONCALVES PEREIRA JUNIOR 08443105658,Empresário (Individual),Pessoa Jurídica
 35533585000190,LEAL ANDRADE TRANSPORTES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 35534016000169,VETUS SAUDE ANIMAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-35535081000109,R P NORONHA LTDA,Empresário (Individual),Pessoa Jurídica
+35535081000109,R P NORONHA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 35535976000143,ANTONIO FRANCISCO VIEIRA DA SILVA 04632908363,Empresário (Individual),Pessoa Jurídica
 35536845000180,FESTMED COMERCIO E IMPORTACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 35537506000119,ANDERSON PHABLO DE SOUZA SANTOS,Empresário (Individual),Pessoa Jurídica
@@ -47233,7 +47251,7 @@ favorecido,nome,natureza_juridica,tipo
 35706923000148,LAILA LUCIO FELISBINO 12281744663,Empresário (Individual),Pessoa Jurídica
 35709143000151,RD CONSULTORIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 35710233000162,INOVA SOLUCOES EM ENGENHARIA E COMERCIO DE MATERIAIS ELETRICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-35711699000182,R R G DOS SANTOS LTDA,Empresário (Individual),Pessoa Jurídica
+35711699000182,R R G DOS SANTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 35715234000108,FIORI VEICOLO S.A,Sociedade Anônima Fechada,Pessoa Jurídica
 35715234000957,FIORI VEICOLO S.A,Sociedade Anônima Fechada,Pessoa Jurídica
 35722974000163,SUPRIFITAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -47380,7 +47398,7 @@ favorecido,nome,natureza_juridica,tipo
 35991091000159,FC INSTALACOES INDUSTRIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 35991611000123,AUTO POSTO CONILON LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 35992406000182,LEITE & SCHNEIDER ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-35993167000185,OSMARINA MARTINS DA SILVA DUTRA,Sociedade Empresária Limitada,Pessoa Jurídica
+35993167000185,OSMARINA MARTINS DA SILVA DUTRA,Empresário (Individual),Pessoa Jurídica
 35993635000111,FRANCARRO AUTO CENTER COMERCIO E SERVICOS AUTOMOTIVOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 35996549000162,35.996.549 MATHEUS DA SILVA PEREIRA,Empresário (Individual),Pessoa Jurídica
 35997345000146,HOSPIDROGAS COMERCIO DE PRODUTOS HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -47923,7 +47941,7 @@ favorecido,nome,natureza_juridica,tipo
 37110985000118,PLANNER GESTAO FINANCEIRA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 37111778000188,DIGITAL SERVICOS EM TECNOLOGIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 37113040000150,CENTRO FEMINISTA DE ESTUDOS E ASSESSORIA,Associação Privada,Pessoa Jurídica
-37113180000128,ASSOCIACAO DAS PIONEIRAS SOCIAIS,Associação Privada,Pessoa Jurídica
+37113180000128,ASSOCIACAO DAS PIONEIRAS SOCIAIS,Serviço Social Autônomo,Pessoa Jurídica
 37115386000197,INOVATTO VEICULOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 37115482000135,POLICIA CIVIL DO DISTRITO FEDERAL,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,Pessoa Jurídica
 37116704000134,FUNDACAO DE EMPREENDIMENTOS CIENTIFICOS E TECNOLOGICOS,Fundação Privada,Pessoa Jurídica
@@ -47979,7 +47997,7 @@ favorecido,nome,natureza_juridica,tipo
 37205520000140,37.205.520 GERALDO JOSE DA SILVA JUNIOR,Empresário (Individual),Pessoa Jurídica
 37211131000128,CASA NEON CUNHA,Associação Privada,Pessoa Jurídica
 37212719000104,MUNICIPIO DE NOVA ALVORADA DO SUL,Município,Pessoa Jurídica
-37213001000124,FRANZON AUDIO FINESSE LTDA.,Empresário (Individual),Pessoa Jurídica
+37213001000124,FRANZON AUDIO FINESSE LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 37215516000163,37.215.516 CLOVIS ALVES MESQUITA NETO,Empresário (Individual),Pessoa Jurídica
 37217648000124,GOD BLESS BUSINESS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 37220733000141,ARTEMISIA MATERIAIS E REPRESENTACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -48049,7 +48067,7 @@ favorecido,nome,natureza_juridica,tipo
 37332102000114,MARINA PORTO SEGURO E ESCOLA NAUTICA 002 LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 37332353000107,MC LOCACOES E TERRAPLENAGEM LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 37334256000145,OLIVIA RIBEIRO DA SILVA NETA,Empresário (Individual),Pessoa Jurídica
-37335204000193,IMPRIMA CERTO COMERCIO E SERVICOS GRAFICOS LTDA,Empresário (Individual),Pessoa Jurídica
+37335204000193,IMPRIMA CERTO COMERCIO E SERVICOS GRAFICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 37338005000139,"GROWAVE COMUNICACAO, MARKETING E PRODUCOES LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
 37339608000155,FIO FORTE MATERIAL ELETRICO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 37344355000108,MUNICIPIO DE SANDOLANDIA,Município,Pessoa Jurídica
@@ -48644,6 +48662,7 @@ favorecido,nome,natureza_juridica,tipo
 38657001000186,KARINE GUEDES DE AGUIAR COSTA 30263023842,Empresário (Individual),Pessoa Jurídica
 38657012000166,AUTO POSTO BRASIL PETRO MUZAMBINHO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 38658399000175,DATAMED LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+38660268000122,F C BRITO NERES ENGENHARIA & SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 38662607000100,DIMECOL DISTRIBUIDORA DE MATERIAIS PARA ESCRITORIO COLINA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 38664140000137,HAP ENGENHARIA S/A,Sociedade Anônima Fechada,Pessoa Jurídica
 38684007000142,AUTO POSTO NEVES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -48795,7 +48814,7 @@ favorecido,nome,natureza_juridica,tipo
 39420351000197,DUPLA NEY VALLE CLAUDIA GAMBOA DESIGN E PROPAGANDA LTDA,Sociedade Simples Limitada,Pessoa Jurídica
 39420376000190,MIXX CONSTRUCOES E LOCACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 39422495000182,MEDSUPPLIES EQUIPAMENTOS MEDICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-39425550000198,LIBERTY RAMOS & LICITACOES & CONTRATOS & COMERCIO LTDA,Empresário (Individual),Pessoa Jurídica
+39425550000198,LIBERTY RAMOS & LICITACOES & CONTRATOS & COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 39432161000190,MVB MUSIC LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 39435028000197,LUVI COMERCIO DE MERCADORIAS E SERVICOS CORPORATIVOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 39435759000132,FC SOLUCOES INTEGRADAS MULTISETORIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -48805,7 +48824,7 @@ favorecido,nome,natureza_juridica,tipo
 39446392000152,CASA ALTA COMERCIO TRANSACOES E ADMINISTRACAO IMOBILIARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 39451696000108,QUALINORTE COMERCIO DE PRODUTOS HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 39452583000127,MADDAX COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-39452748000160,COMERCIAL VERTENTES MG LTDA,Empresário (Individual),Pessoa Jurídica
+39452748000160,COMERCIAL VERTENTES MG LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 39459340000110,MBER COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 39475862000106,LEAL COMERCIO DE EQUIPAMENTOS DE REFRIGERACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 39485396000140,MUNICIPIO DE JAPERI,Município,Pessoa Jurídica
@@ -48837,6 +48856,7 @@ favorecido,nome,natureza_juridica,tipo
 39554597000151,MUNICIPIO DE COMENDADOR LEVY GASPARIAN,Município,Pessoa Jurídica
 39554605000160,MUNICIPIO DE AREAL,Município,Pessoa Jurídica
 39555503000169,EMPRESA JORNALISTICA DIARIO DO VALE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+39556276000196,RHC PRODUTOS E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 39560008000148,MUNICIPIO DE QUATIS,Município,Pessoa Jurídica
 39560888000152,GRAZIELLA MARIA TAVARES DA SILVA,Empresário (Individual),Pessoa Jurídica
 39563911000162,FUNDO MUNICIPAL DE SAUDE PMVR SMS,Fundo Público da Administração Direta Municipal,Pessoa Jurídica
@@ -48897,7 +48917,7 @@ favorecido,nome,natureza_juridica,tipo
 39715102000129,COOPERATIVA UNIDOS DO PONTAL,Cooperativa,Pessoa Jurídica
 39725140000162,ARQUITETURA E DESIGN MALANGE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 39725409000100,CRISTO REI COMERCIO E SERVICO DE REFRIGERACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-39726775000184,CASA ROSA CULTURAL E ASSISTENCIAL - LGBT,Sem informação,Pessoa Jurídica
+39726775000184,CASA ROSA CULTURAL E ASSISTENCIAL - LGBT,Associação Privada,Pessoa Jurídica
 39738408000109,D M PINHEIRO BEZERRA COMERCIAL E SERVICOS,Empresário (Individual),Pessoa Jurídica
 39739307000144,PASSAMANI DISTRIBUIDORA DE MATERIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 39745841000163,ASSOCIACAO CRECHE ARCO-IRIS,Organização Social (OS),Pessoa Jurídica
@@ -49133,6 +49153,7 @@ favorecido,nome,natureza_juridica,tipo
 40372402000131,ASSOCIACAO FILHOS DO SERTAO TRANSFORMANDO VIDAS,Associação Privada,Pessoa Jurídica
 40373144000108,ARCTRADE ARQUITETURA E ENGENHARIA LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 40376139000159,JDS - ENGENHARIA E CONSULTORIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+40377481000173,40.377.481 ALLAN SILVA GALVAO,Empresário (Individual),Pessoa Jurídica
 40378333000173,UNITED AIR LINES INC,"Estabelecimento, no Brasil, de Sociedade Estrangeira",Pessoa Jurídica
 40378440000100,WATERSERVICE PROJETOS INSTALACOES E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 40380377000138,GUSTAVO VINICIUS DE SOUZA 43053576821,Empresário (Individual),Pessoa Jurídica
@@ -49419,7 +49440,7 @@ favorecido,nome,natureza_juridica,tipo
 41080722000180,DISLUB COMBUSTIVEIS S.A.,Sociedade Anônima Fechada,Pessoa Jurídica
 41080722000938,DISLUB COMBUSTIVEIS S.A.,Sociedade Anônima Fechada,Pessoa Jurídica
 41081966000188,LIZ PARA COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-41083335000106,G. C. BERNARDI - ENGENHARIA E PERICIA LTDA,Empresário (Individual),Pessoa Jurídica
+41083335000106,G. C. BERNARDI - ENGENHARIA E PERICIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 41086624000150,MUNDIAL CIENTIFICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 41087715000100,EMPORIO DAS LICITACOES COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 41090173000125,ASSOCIACAO CULTURAL MARIA TIANA,Associação Privada,Pessoa Jurídica
@@ -49532,7 +49553,7 @@ favorecido,nome,natureza_juridica,tipo
 41345916000160,R. G. J. LIMA,Empresário (Individual),Pessoa Jurídica
 41345975000139,EXCELLENCE42 C&T LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 41353078000177,NATALIA SPIANDORIM BARCARO 48004558801,Empresário (Individual),Pessoa Jurídica
-41361498000103,BM REFORMA CONTRUCAO LTDA,Empresário (Individual),Pessoa Jurídica
+41361498000103,BM REFORMA CONTRUCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 41368911000153,INSTITUTO LUGAR DE AJUDA,Associação Privada,Pessoa Jurídica
 41368911000404,INSTITUTO LUGAR DE AJUDA,Associação Privada,Pessoa Jurídica
 41368911000668,INSTITUTO LUGAR DE AJUDA,Associação Privada,Pessoa Jurídica
@@ -49603,7 +49624,7 @@ favorecido,nome,natureza_juridica,tipo
 41497853000168,RA&FEL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 415001,EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS,Sem informação,Unidade Gestora
 41504947000117,REJANE PARADZINSKI,Empresário (Individual),Pessoa Jurídica
-41510645000151,BENEDITO ANTAO DE SOUSA SOBRINHO LTDA,Empresário (Individual),Pessoa Jurídica
+41510645000151,BENEDITO ANTAO DE SOUSA SOBRINHO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 41511926000129,GK COMERCIO E DISTRIBUICAO DE ALIMENTOS E PRODUTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 41513297000176,LZX COMERCIO DE EQUIPAMENTOS PARA PESCA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 41513622000109,CAMALEON LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -49668,7 +49689,7 @@ favorecido,nome,natureza_juridica,tipo
 41611716000102,MUNICIPIO DE BEQUIMAO,Município,Pessoa Jurídica
 41611856000180,MUNICIPIO DE PERI MIRIM,Município,Pessoa Jurídica
 41621094000101,KNERD DISTRIBUIDORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-41622110000172,N R TI SERVICOS TECNOLOGICOS LTDA,Empresário (Individual),Pessoa Jurídica
+41622110000172,N R TI SERVICOS TECNOLOGICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 41623742000150,CARLOS ALEXANDRE GOMES CAMPOS,Empresário (Individual),Pessoa Jurídica
 41626169000139,DUVEL DISTRIBUIDORA DE VEICULOS E PECAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 41626169000309,DUVEL DISTRIBUIDORA DE VEICULOS E PECAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -49908,6 +49929,7 @@ favorecido,nome,natureza_juridica,tipo
 42206269000764,CONCESSIONARIA DO BLOCO CENTRAL S.A.,Sociedade Anônima Fechada,Pessoa Jurídica
 42207004000195,J. R. DE PAULA,Empresário (Individual),Pessoa Jurídica
 42212128000169,MATHEUS VARIANI CASAGRANDE,Empresário (Individual),Pessoa Jurídica
+42215097000108,CV MOBILIARIOS URBANOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 42215162000197,DOUGLAS CARVALHO DA SILVA,Empresário (Individual),Pessoa Jurídica
 42218273000157,B RODRIGUES MAGALHAES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 42218356000146,FLITZ DA SILVA OLIVEIRA 116.693.756-92,Empresário (Individual),Pessoa Jurídica
@@ -50539,6 +50561,7 @@ favorecido,nome,natureza_juridica,tipo
 44013159006580,SIEMENS ENERGY BRASIL LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 44014135000181,DIVERSUS COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44016257000107,ORGANIZACAO SOCIAL AMALGAMAR FORMACAO POPULAR CONSULTORIA ADVOCACY E INTERSECCIONALIDADE (OSAFPCAI),Associação Privada,Pessoa Jurídica
+44025861000108,ZOR IMPORTADORA E DISTRIBUIDORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44027693000181,ASSOCIACAO DE CULTURA E RESISTENCIA AFRO-BRASILEIRA NZO KIAMBETA NJIMBO - CASA DA SAGRADA RIQUEZA,Organização Social (OS),Pessoa Jurídica
 44030799000134,SOCIEDADE AMIGOS DO JARDIM INDEPENDENCIA,Associação Privada,Pessoa Jurídica
 44030881000169,KMF SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -50557,7 +50580,7 @@ favorecido,nome,natureza_juridica,tipo
 44060520000165,GO ATACADISTA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44061083000102,JARDIPLAN URBANIZACAO E PAISAGISMO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44061616000148,ASSOCIACAO INSTITUTO DIVERCIDADES,Associação Privada,Pessoa Jurídica
-44061640000187,44.061.640 WELLINGTON CARVALHO RAMOS,Sem informação,Pessoa Jurídica
+44061640000187,44.061.640 WELLINGTON CARVALHO RAMOS,Empresário (Individual),Pessoa Jurídica
 44062140000160,RS COMERCIO E SERVICO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44065539000102,OLS ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44066276000148,HIDERALDO GOMES TEIXEIRA,Empresário (Individual),Pessoa Jurídica
@@ -50668,7 +50691,7 @@ favorecido,nome,natureza_juridica,tipo
 44420375000186,AJ COMERCIO DE PRODUTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44421284000165,CODI ACADEMY TREINAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44425239000189,SANTA CASA DE MISERICORDIA DOUTOR OSWALDO SIQUEIRA LYRA,Associação Privada,Pessoa Jurídica
-44428201000160,L E C SOUSA LTDA,Empresário (Individual),Pessoa Jurídica
+44428201000160,L E C SOUSA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44428506000171,MUNICIPIO DE ANDRADINA,Município,Pessoa Jurídica
 44429540000160,DISTRIBUIDORA ESPIRITO SANTO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44430221000175,MUNICIPIO DE MURUTINGA DO SUL,Município,Pessoa Jurídica
@@ -50699,7 +50722,7 @@ favorecido,nome,natureza_juridica,tipo
 44450107000107,ELITH INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44450747000117,TUBOFIRE COMERCIO DE MATERIAIS CONTRA INCENDIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44461413000149,POWER FIT EQUIPAMENTOS ESPORTIVOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-44462387000173,ANDREYA BISPO DE LIMA LTDA,Empresário (Individual),Pessoa Jurídica
+44462387000173,ANDREYA BISPO DE LIMA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44468854000172,MAMUTIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44470300000100,MUNICIPIO DE ECHAPORA,Município,Pessoa Jurídica
 44474725000197,AGUIA COMERCIO DE PRODUTOS SANEANTES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -50878,7 +50901,7 @@ favorecido,nome,natureza_juridica,tipo
 44794495000143,LUCIANO TENORIO DE FRANCA QUEIROZ 05082877402,Empresário (Individual),Pessoa Jurídica
 44799278000146,ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS DE ESPIRITO SANTO DO PINHAL,Associação Privada,Pessoa Jurídica
 44801853000106,JR UTILIDADES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-44804558000103,LATTOS REFRIGERACAO LTDA,Empresário (Individual),Pessoa Jurídica
+44804558000103,LATTOS REFRIGERACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44812602000119,TRIDR TIC LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44816310000154,K. K. D. BATISTA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 44818547000174,XLAN LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -51089,7 +51112,7 @@ favorecido,nome,natureza_juridica,tipo
 45199432000101,NUCLEO PRODUTOS DE LIMPEZA E DESCARTAVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 45200029000155,MUNICIPIO DE LAVRINHAS,Município,Pessoa Jurídica
 45200623000146,MUNICIPIO DE SAO JOSE DO BARREIRO,Município,Pessoa Jurídica
-45208218000174,JAIR MAIA PARIS LTDA,Empresário (Individual),Pessoa Jurídica
+45208218000174,JAIR MAIA PARIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 45212008000150,MUNICIPIO DE ROSEIRA,Município,Pessoa Jurídica
 45214379000170,CREATIVE PACK EDUCATIONAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 45218484000188,GESPI INDUSTRIA E COMERCIO DE EQUIPAMENTOS AERONAUTICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -51228,6 +51251,7 @@ favorecido,nome,natureza_juridica,tipo
 45423554000130,DIPELL COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 45424853000199,DOUGLAS HENRIQUE RODRIGUES SEVERIANO 13267075661,Empresário (Individual),Pessoa Jurídica
 45425692000158,45.425.692 JOSE PEREIRA DOS SANTOS,Empresário (Individual),Pessoa Jurídica
+45432833000160,"ROMANO SAUDE, EDUCACAO & CULTURA INTEGRADA LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
 45434285000107,BEM FIX MATERIAIS ELETRICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 45437175000107,SANTA CASA DE MISERICORDIA DE TAQUARITUBA,Associação Privada,Pessoa Jurídica
 45438114000156,WPPT CONFECCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -51329,7 +51353,7 @@ favorecido,nome,natureza_juridica,tipo
 45709912000175,MUNICIPIO DE VIRADOURO,Município,Pessoa Jurídica
 45709920000111,MUNICIPIO DE BEBEDOURO,Município,Pessoa Jurídica
 45712198000174,VITE TECNOLOGIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-45712530000109,JS CONFECCOES & PERSONALIZADOS LTDA,Empresário (Individual),Pessoa Jurídica
+45712530000109,JS CONFECCOES & PERSONALIZADOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 45717678000128,CONSTRUTORA REALEZA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 45718401000110,45.718.401 THIAGO BARBOSA DA ROCHA MOTTA,Empresário (Individual),Pessoa Jurídica
 45718988000167,ASSOCIACAO CULTURAL DE RENOVACAO TECNOLOGICA SOROCABANA,Associação Privada,Pessoa Jurídica
@@ -51762,6 +51786,7 @@ favorecido,nome,natureza_juridica,tipo
 46533699000156,COOPERATIVA MISTA DO AGRONEGOCIO GOIANO COMAGRO,Cooperativa,Pessoa Jurídica
 46536739000113,PIXTEC COMERCIO E TECNOLOGIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 46538607000120,J. F. ALVES DE MORAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+46543009000140,COMERCIAL ROMANA CAMPOS LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 46543079000106,46.543.079 MARA JULIO FACCION,Empresário (Individual),Pessoa Jurídica
 46550505000120,MITSUBISHI ELECTRIC DO BRASIL COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 46555218000103,LILIBYTE COMERCIAL VIRTUAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -51959,7 +51984,7 @@ favorecido,nome,natureza_juridica,tipo
 46803272000120,ASSOCIACAO DE DESENVOLVIMENTO COMUNITARIO QUEIMADA BONITA,Associação Privada,Pessoa Jurídica
 46810136000168,CADMUS COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 46813147000100,SANTORO TECH E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-46814846000166,J. SANTOS RODRIGUES LTDA,Empresário (Individual),Pessoa Jurídica
+46814846000166,J. SANTOS RODRIGUES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 46824002000104,K V OLIVEIRA SILVA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 46830865000186,RODOPOSTO MARISTELA LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 46840524000191,WN MOVEIS PARA ESCRITORIO E ELETRODOMESTICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -52032,7 +52057,7 @@ favorecido,nome,natureza_juridica,tipo
 47018307000183,FELIPE MARCEL VOLPATO,Empresário (Individual),Pessoa Jurídica
 47018676000176,"REDE MUNICIPAL DR. MARIO GATTI DE URGENCIA, EMERGENCIA E HOSPITALAR",Autarquia Municipal,Pessoa Jurídica
 47023085000197,AER - ASSOCIACAO ESPORTIVA RENASCER,Associação Privada,Pessoa Jurídica
-47025414000139,ANGELO BERGAMASCO GUILHERME VESTUARIO LTDA,Empresário (Individual),Pessoa Jurídica
+47025414000139,ANGELO BERGAMASCO GUILHERME VESTUARIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 47025565000197,R.R OZARA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 47028904000199,NHC SERVICOS E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 47031476000153,GS MATERIAIS E EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -52214,7 +52239,7 @@ favorecido,nome,natureza_juridica,tipo
 47582184000109,ASSOC DE PAIS E AMIGOS DOS EXCEPCIONAIS DE IG DO TIETE,Associação Privada,Pessoa Jurídica
 47583752000196,ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS DE PEDERS,Associação Privada,Pessoa Jurídica
 47583946000191,"SYDESK SERVICOS ADMINISTRATIVOS, AUTOMACAO EMPRESARIAL E TECNOLOGIA LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
-47588127000137,LD COMERCIO & SOLUCOES LTDA,Empresário (Individual),Pessoa Jurídica
+47588127000137,LD COMERCIO & SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 47594523000177,PROMOVE COMERCIO & SERVICOS DE NEGOCIOS EM GERAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 47600364000176,ALBIERI ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 47603710000250,"IBRASILL STORE, MIDIA, EDUCACIONAL E PARTICIPACOES LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
@@ -52380,6 +52405,7 @@ favorecido,nome,natureza_juridica,tipo
 48090120000153,SAFRAN HELICOPTER ENGINES INDUSTRIA E COMERCIO DO BRASIL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48094034000119,ROMAG EQUIPAMENTOS PARA COZINHAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48094205000100,AUTO POSTO VIPAM LIMITADA,Sociedade Empresária Limitada,Pessoa Jurídica
+48104729000134,FINE COFFEE INDUSTRIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48110599000142,MECANICA JV LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48125206000174,GESSICA DA ROSA DINIZ LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48128031000159,FAC VEICULOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -52484,10 +52510,10 @@ favorecido,nome,natureza_juridica,tipo
 48433452000193,SANTA CASA DE MISERICORDIA N S DAS DORES DE GAL SALGADO,Associação Privada,Pessoa Jurídica
 48437027000172,48.437.027 EDSON LAZDENAS,Empresário (Individual),Pessoa Jurídica
 48437606000115,TRIUNFY COMERCIO E INOVACOES TECNOLOGICAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-48440654000162,MH AUTO CENTER LTDA,Empresário (Individual),Pessoa Jurídica
+48440654000162,MH AUTO CENTER LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48440789000128,INSTITUTO BRANDAO TEAM - ITB,Associação Privada,Pessoa Jurídica
 48441477000139,48.441.477 VICTOR MORENO SIMOES,Empresário (Individual),Pessoa Jurídica
-48442372000102,BONNA COMERCIO E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+48442372000102,BONNA COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48447897000122,ALPHAMEDIC EQUIPAMENTOS INDUSTRIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48448526000165,ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS DE GUAIRA,Associação Privada,Pessoa Jurídica
 48451121000186,AMC COMERCIO DE ALIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -52728,7 +52754,7 @@ favorecido,nome,natureza_juridica,tipo
 48929090000126,W2 SOLUCOES INDUSTRIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48937632000102,ALPHA SOLUCOES E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48939276000166,MEDI HOUSE INDUSTRIA E COMERCIO DE PRODUTOS CIRURGICOS E HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-48940196000120,JRV SERVICOS E COMERCIO LTDA,Empresário (Individual),Pessoa Jurídica
+48940196000120,JRV SERVICOS E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48941539000171,JMA TREINAMENTOS E SOLUCOES PUBLICAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48941653000100,INSTITUTO LICIDATA TREINAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 48943133000128,LIBRASIL INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -52995,7 +53021,7 @@ favorecido,nome,natureza_juridica,tipo
 49681778000100,COPLAN CONSTRUTORA PLANALTO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 49681792000104,TRZ COMERCIO DE MATERIAIS ESPORTIVOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 49691469000103,RAFAEL RODRIGUES DOS SANTOS,Empresário (Individual),Pessoa Jurídica
-49695571000187,DESK CLEAR COMERCIO LTDA,Empresário (Individual),Pessoa Jurídica
+49695571000187,DESK CLEAR COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 49695909000109,APARECIDA COMBUSTIVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 49696692000143,CARVALHO & SANTOS DISTRIBUICAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 49699977000138,MR PALETS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -53122,7 +53148,7 @@ favorecido,nome,natureza_juridica,tipo
 50116590000190,SGCORP COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50116864000141,TLS EQUIPAMENTOS DE PROTECAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50119585000131,IRMANDADE DA SANTA CASA DE MISERICORDIA DE ITATIBA,Associação Privada,Pessoa Jurídica
-50119612000176,J T MORAES SERVICOS E COMERCIO LTDA,Empresário (Individual),Pessoa Jurídica
+50119612000176,J T MORAES SERVICOS E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50121066000108,IM SOLUCOES INTEGRADAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50122571000177,MUNICIPIO DE ITATIBA,Município,Pessoa Jurídica
 50126591000116,SIMTEC MAQUINAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -53160,7 +53186,7 @@ favorecido,nome,natureza_juridica,tipo
 50212723000122,MARQUES DUARTE CONSTRUCAO E INCORPORACAO DE OBRAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50213589000184,DISTRIBUIDORA RAMALHO DE PRODUTOS EM GERAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50215022000147,ACAZE ASSESSORIA COMERCIAL LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
-50220898000181,LCMA COMERCIAL LTDA,Empresário (Individual),Pessoa Jurídica
+50220898000181,LCMA COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50222827000118,AUTO POSTO ELDORADO DE TAQUARITINGA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50224909000100,REDEX COMERCIO INTELIGENTE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50229297000130,F K IND E COMERCIO E CONFECCAO DE UNIFORMES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -53285,7 +53311,7 @@ favorecido,nome,natureza_juridica,tipo
 50559576000161,VIVA A MAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50565936000138,SANTA CASA DE MISERICORDIA DE JALES,Associação Privada,Pessoa Jurídica
 50567060000169,DENTAL IPO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-50570701000134,JARDEL SANTOS COMERCIO E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+50570701000134,JARDEL SANTOS COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50570753000100,IRMANDADE DA SANTA CASA DE MISERICORDIA DE PAL D OESTE,Associação Privada,Pessoa Jurídica
 50572395000175,IRMANDADE DA SANTA CASA DE MISERICORDIA DE STA FE SUL,Associação Privada,Pessoa Jurídica
 50575922000103,50.575.922 THIAGO PUCCI DE CARVALHO,Empresário (Individual),Pessoa Jurídica
@@ -53350,7 +53376,7 @@ favorecido,nome,natureza_juridica,tipo
 50764669000128,GIS ENGENHARIA E CONSTRUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50764887000162,SITIO DAS MANGUEIRAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50765288000163,MPD ENGENHARIA LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
-50767768000163,CAPITAL MANUTENCAO E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+50767768000163,CAPITAL MANUTENCAO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50770391000100,M&A LICITACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50770445000129,PALETRANS EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 50770682000190,50.770.682 CLAUDIO ALVES DA ROCHA JUNIOR,Empresário (Individual),Pessoa Jurídica
@@ -53615,11 +53641,12 @@ favorecido,nome,natureza_juridica,tipo
 51598902000102,NEPIN ACESSORIOS INDUSTRIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 51607431000151,F & K BRASIL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 51610101000115,51.610.101 MARCOS AUGUSTO COSTA DA FONSECA FILHO,Empresário (Individual),Pessoa Jurídica
+51612828000131,HOSPITAL MATERNIDADE FREI GALVAO,Associação Privada,Pessoa Jurídica
 51619906000120,CENTRO DE PREVENCAO E REABIL DE DEFICIENCIA DA VISAO,Associação Privada,Pessoa Jurídica
 51621518000183,CABANA MAGAZINE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 51625567000194,BGN COMERCIAL DE MOVEIS PARA ESCRITORIO,Empresário (Individual),Pessoa Jurídica
 51628440000129,MAX ESCOLAR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-51630225000162,AVODAH SOLUTIONS LTDA,Empresário (Individual),Pessoa Jurídica
+51630225000162,AVODAH SOLUTIONS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 51636045000198,JAE COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 51643485000172,LUCAS O. SANTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 51647234000166,FC DISTRIBUIDORA TEXTIL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -53669,6 +53696,7 @@ favorecido,nome,natureza_juridica,tipo
 51817739000121,LBG COMMERCE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 51820371000150,CINECLUBE CAUIM,Associação Privada,Pessoa Jurídica
 51820785000180,CANTINHO DO CEU HOSPITAL DE RETAGUARDA,Associação Privada,Pessoa Jurídica
+51823588000114,51.823.588 JACKELINE DA SILVA SANTANA,Empresário (Individual),Pessoa Jurídica
 51826451000113,FUNDACAO DE PESQUISAS CIENTIFICAS DE RIBEIRAO PRETO - FUNPEC-RP,Fundação Privada,Pessoa Jurídica
 51828370000152,J. V. S. FRANCO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 51831556000160,G A G COMERCIO DE MOVEIS PARA ESCRITORIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -53817,7 +53845,7 @@ favorecido,nome,natureza_juridica,tipo
 52347972000150,GATHUS COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 52348765000110,GTF IMPORTS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 52350927000155,FFS CONSTRUCOES E REFORMAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-52356268000245,CONSORCIO DE DESENV DA REGIAO DE GOVERNO DE SJBVISTA,Consórcio Público de Direito Privado,Pessoa Jurídica
+52356268000245,CONSORCIO DE DESENV DA REGIAO DE GOVERNO DE SJBVISTA,Associação Privada,Pessoa Jurídica
 52359692000162,MUNICIPIO DE BOM JESUS DOS PERDOES,Município,Pessoa Jurídica
 52359927000116,ROMA CONSULTORIA PRIME LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 52366838000105,FUNDACAO SINDROME DE DOWN,Associação Privada,Pessoa Jurídica
@@ -53872,7 +53900,7 @@ favorecido,nome,natureza_juridica,tipo
 52541273000147,NL COMERCIO EXTERIOR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 52543766000116,SANTA CASA DE MISERICORDIA DE MOGI DAS CRUZES,Associação Privada,Pessoa Jurídica
 52543773000118,52.543.773 CRISTIANE OLIVEIRA MACHADO,Empresário (Individual),Pessoa Jurídica
-52547260000185,JS SOLUCOES INTEGRADAS LTDA,Empresário (Individual),Pessoa Jurídica
+52547260000185,JS SOLUCOES INTEGRADAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 52549937000114,LPG MUSICAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 52558481000159,"COOPERATIVA DAS AGRICULTORAS FAMILIARES, POVOS TRADICIONAIS E ECONOMIA SOLIDARIA - FLORYA",Cooperativa,Pessoa Jurídica
 52566052000123,52.566.052 MATHEUS SOARES SEABRA,Empresário (Individual),Pessoa Jurídica
@@ -53967,7 +53995,7 @@ favorecido,nome,natureza_juridica,tipo
 52890176000160,MOSAICO SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 52890701000147,CORMED WINNER LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 52894977000101,LD ASTEN COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-52896290000105,E78 COMERCIO E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+52896290000105,E78 COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 52898194000198,CM COMANDOS LINEARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 52899208000198,RAIMUNDO LUNA DE OLIVEIRA JUNIOR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 52901917000160,POSSES EMPIRE SERVICOS E SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -53980,7 +54008,7 @@ favorecido,nome,natureza_juridica,tipo
 52923632000120,52.923.632 MARCUS VINICIUS RODRIGUES PULCHERIO SANTOS,Empresário (Individual),Pessoa Jurídica
 52925136000106,52.925.136 RAYSSA ZAIRA BOTELHO LUCENA FREITAS,Empresário (Individual),Pessoa Jurídica
 52928225000106,52.928.225 JOYCE DO CARMO ESTEVES CASTRO,Empresário (Individual),Pessoa Jurídica
-52929721000184,VS. NEGOCIOS PUBLICOS LTDA,Empresário (Individual),Pessoa Jurídica
+52929721000184,VS. NEGOCIOS PUBLICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 52931512000175,FORTUNA LICITACOES LIMITADA,Sociedade Empresária Limitada,Pessoa Jurídica
 52940533000157,BOMBAS LEAO S/A,Sociedade Anônima Fechada,Pessoa Jurídica
 52941614000171,ASSOCIACAO DE BENEMERENCIA SENHOR BOM JESUS,Associação Privada,Pessoa Jurídica
@@ -54136,7 +54164,7 @@ favorecido,nome,natureza_juridica,tipo
 53441926000189,AUGUSMED HOSPITALAR COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 53448772000157,DEBRUM MOVEIS CORPORATIVOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 53452157000114,COLLECT IMPORTACAO E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-53458742000121,J. VICTOR NERY DE CARVALHO SUPRIMENTOS LTDA,Empresário (Individual),Pessoa Jurídica
+53458742000121,J. VICTOR NERY DE CARVALHO SUPRIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 53460683000126,DRASCOM DIGITAL COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 53463628000190,53.463.628 ADRIANO HENRIQUE DE SOUZA TRINDADE,Empresário (Individual),Pessoa Jurídica
 53463762000190,FTS EQUIPAMENTOS TATICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -54259,7 +54287,7 @@ favorecido,nome,natureza_juridica,tipo
 53989109000160,POSTO DE SERVICOS GUADALUPE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 53994497000177,UNISCIENCE DO BRASIL INDUSTRIA E COMERCIO DE EQUIPAMENTOS PARA LABORATORIO LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 53995286000159,53.995.286 ANNY GABRIELY GOMES DE FARIA SANTOS,Empresário (Individual),Pessoa Jurídica
-54005372000130,METODO STORE LTDA,Empresário (Individual),Pessoa Jurídica
+54005372000130,METODO STORE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 54021271000152,POLYANA MARCONI SPORT LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 54021326000124,54.021.326 FRANCISCO DE MATOS DANTAS,Empresário (Individual),Pessoa Jurídica
 54022967000101,SANTA CASA DE MISERICORDIA DE PIEDADE,Fundação Privada,Pessoa Jurídica
@@ -54279,7 +54307,7 @@ favorecido,nome,natureza_juridica,tipo
 54092603000190,J. N. SERVICOS ESPECIALIZADOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 54093572000191,JR LICITACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 54103042000187,54.103.042 FELIPE FERREIRA DE TOLEDO,Empresário (Individual),Pessoa Jurídica
-54107641000179,FL VAZ COMERCIO LTDA,Empresário (Individual),Pessoa Jurídica
+54107641000179,FL VAZ COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 54113262000191,LICITEMAX COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 54119845000120,MAGITEC CONSTRUTORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 54122213000115,SANTA CASA DE MISERICORDIA DE PINDAMONHANGABA,Associação Privada,Pessoa Jurídica
@@ -54499,7 +54527,7 @@ favorecido,nome,natureza_juridica,tipo
 55121602000199,DIBRON COMERCIO DE ARTIGOS ORTOPEDICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55126981000100,GFE DO BRASIL LIMITADA,Sociedade Empresária Limitada,Pessoa Jurídica
 55131425000121,55.131.425 DENISE MONTEIRO DE AZEVEDO SOUZA,Empresário (Individual),Pessoa Jurídica
-55141155000130,MTN LICITACOES LTDA,Empresário (Individual),Pessoa Jurídica
+55141155000130,MTN LICITACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55144267000144,55.144.267 SILVANA REGINA MARIA VALVERDE,Empresário (Individual),Pessoa Jurídica
 55144409000173,TINGAH TECNOLOGIA EM BEBIDAS E ALIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55149348000137,ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS,Associação Privada,Pessoa Jurídica
@@ -54518,7 +54546,7 @@ favorecido,nome,natureza_juridica,tipo
 55216226000116,GESNER COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55219559000107,H & G SOLUCOES AMBIENTAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55222447000105,LINTECH DO BRASIL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-55223364000122,A&A LOGISTICA LTDA,Empresário (Individual),Pessoa Jurídica
+55223364000122,A&A LOGISTICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55236828000135,55.236.828 BLAS OMAR ROZADILLA,Empresário (Individual),Pessoa Jurídica
 55237517000190,VIGS COMERCIAL E INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55238699000114,R&R SERVICOS E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -54568,7 +54596,7 @@ favorecido,nome,natureza_juridica,tipo
 55391431000118,OUROFLEX COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55394686000134,KZY LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55400236000107,55.400.236 DAVI EMANOEL DA COSTA SILVA,Empresário (Individual),Pessoa Jurídica
-55404761000109,B2G COMERCIO E SOLUCOES LTDA,Empresário (Individual),Pessoa Jurídica
+55404761000109,B2G COMERCIO E SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55416530000107,KR COMERCIO E REPRESENTACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55417996000127,CRONUSTEC TECNOLOGIA E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55422008000138,RD PRODUTOS CRIOGENICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -54630,9 +54658,9 @@ favorecido,nome,natureza_juridica,tipo
 55794200000155,TEASE ELETRONICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55796470000103,GRATUS EMPREENDIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55797870000125,BRAVA ESPORTES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-55803799000146,ACP MULT COMERCIO LTDA,Sem informação,Pessoa Jurídica
+55803799000146,ACP MULT COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55805545000167,BIOBAN FRUTPECUARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-55806046000194,CENTRO DE FORMACAO DE CONDUTORES A/B IMPERIAL LTDA,Sociedade Simples Limitada,Pessoa Jurídica
+55806046000194,CENTRO DE FORMACAO DE CONDUTORES A/B IMPERIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55807217000108,POLARIS DISTRIBUIDORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55808167000175,LUPIAN ATACADO E VAREJO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55809258000125,55.809.258 ANDREIA OLIVEIRA DANTAS ALMEIDA,Empresário (Individual),Pessoa Jurídica
@@ -54648,7 +54676,7 @@ favorecido,nome,natureza_juridica,tipo
 55894222000197,55.894.222 MERILUCI CARVALHO CHARABA,Empresário (Individual),Pessoa Jurídica
 55903645000126,AUTO POSTO KINTA RODA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55905350000199,PAINEIRAS LIMPEZA E SERVICOS GERAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-55908780000164,W&M DA SILVA LTDA,Empresário (Individual),Pessoa Jurídica
+55908780000164,W&M DA SILVA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55911366000104,NANO SEPARATION TECHNOLOGIES - INDUSTRIA COMERCIO E REPRESENTACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55913536000190,LAST MOON EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 55918679000194,55.918.679 JORGE LUCAS SANTANA RAMOS,Empresário (Individual),Pessoa Jurídica
@@ -54678,9 +54706,9 @@ favorecido,nome,natureza_juridica,tipo
 56005035000178,VALERE ESTETICA AUTOMOTIVA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 56009756000156,AUTO POSTO CAMPINEIRA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 56014475000191,DELTRONIX EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-56015884000102,TRIANNE SERVICOS E COMERCIO LTDA,Empresário (Individual),Pessoa Jurídica
+56015884000102,TRIANNE SERVICOS E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 56015894000148,ASS DE PAIS E AMIGOS DOS EXCEPCIONAIS DE RIBEIRAO PRETO,Associação Privada,Pessoa Jurídica
-56019203000184,P.G. MANUTENCOES LTDA,Sem informação,Pessoa Jurídica
+56019203000184,P.G. MANUTENCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 56023443000152,HOSPITAL DAS CLINICAS DA FACULDADE DE MEDICINA DE RPUSP,Autarquia Estadual ou do Distrito Federal,Pessoa Jurídica
 56024581000156,MUNICIPIO DE RIBEIRAO PRETO,Município,Pessoa Jurídica
 56029880000183,E. S. OLIVEIRA COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -54805,7 +54833,7 @@ favorecido,nome,natureza_juridica,tipo
 56998701003484,ABBOTT LABORATORIOS DO BRASIL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 56998982001260,BRISTOL-MYERS SQUIBB FARMACEUTICA LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 56998982003122,BRISTOL-MYERS SQUIBB FARMACEUTICA LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
-57011529000128,HOUSE CORPORATE COMERCIO E SERVICOS PUBLICITARIOS LTDA,Empresário (Individual),Pessoa Jurídica
+57011529000128,HOUSE CORPORATE COMERCIO E SERVICOS PUBLICITARIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57012146000174,RNL DISTRIBUIDORA E NEGOCIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57012702000102,57.012.702 ANA CARLA SANTOS PEREIRA COSTA,Empresário (Individual),Pessoa Jurídica
 57017774000142,BRASEQ BRASILEIRA DE EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -54817,6 +54845,7 @@ favorecido,nome,natureza_juridica,tipo
 57038952000111,SANTA CASA DE MISERICORDIA DE SANTO AMARO,Associação Privada,Pessoa Jurídica
 57046742000175,57.046.742 THIAGO FERREIRA SOUSA DE MORAIS,Empresário (Individual),Pessoa Jurídica
 57048285000158,F5 DISTRIBUIDORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+57050993000123,E.A. MELO PRODUTOS PARA SAUDE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57056239000109,18TEC INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57064498000173,F A COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57065960000157,INOVE COMERCIO E LICITACOES LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -54841,7 +54870,7 @@ favorecido,nome,natureza_juridica,tipo
 57135675000165,COMERCIAL LENA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57142749000190,EF INDUSTRIA DE PAPEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57142978000105,BRASOFTWARE INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-57156070000150,MN COMERCIO E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+57156070000150,MN COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57159219000155,B2R SOLUCOES E VENDAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57162288000118,57.162.288 RUBIA FERREIRA DE SOUZA,Empresário (Individual),Pessoa Jurídica
 57163393000171,BARFER LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -54852,7 +54881,7 @@ favorecido,nome,natureza_juridica,tipo
 57176890000104,VOB SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57183816000115,MEMPHIS ENGENHARIA E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57185981000106,EL2 COMERCIO VAREJISTA DE COMBUSTIVEIS E LUBRIFICANTES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-57199615000106,BESSA & COSTA SOLUCOES LTDA,Empresário (Individual),Pessoa Jurídica
+57199615000106,BESSA & COSTA SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57202418000107,AIMARA COMERCIO E REPRESENTACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57202418000441,AIMARA COMERCIO E REPRESENTACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57207953000142,JOAO MARCOS CHIQUETE & CIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -54886,7 +54915,7 @@ favorecido,nome,natureza_juridica,tipo
 57285920000110,57.285.920 RUBENS RIBEIRO DE ANDRADE JUNIOR,Empresário (Individual),Pessoa Jurídica
 57287383000148,57.287.383 FERNANDO DE SOUZA ALVES,Empresário (Individual),Pessoa Jurídica
 57290337000106,57.290.337 MERREMII KARAO JAGUARIBARAS,Empresário (Individual),Pessoa Jurídica
-57292943000152,DESVELO SOLUCOES LTDA,Empresário (Individual),Pessoa Jurídica
+57292943000152,DESVELO SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57293031000103,57.293.031 ANDRE LUIS MIRANDA DA SILVA,Empresário (Individual),Pessoa Jurídica
 57296606000133,IMPERIO PARTICIPACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57304479000177,DIGEL ELETRICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -54925,7 +54954,7 @@ favorecido,nome,natureza_juridica,tipo
 57452557000180,MARTINS RODRIGUES COMERCIO DIGITAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57460463000153,ABBA BIDS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57475658000177,57.475.658 JOSE OTAVIO MATOS PAZ ZENI,Empresário (Individual),Pessoa Jurídica
-57482887000119,SANCHES BLANES INDUSTRIA DE MAQUINAS E FERRAMENTAS LTDA,Sociedade Anônima Fechada,Pessoa Jurídica
+57482887000119,SANCHES BLANES INDUSTRIA DE MAQUINAS E FERRAMENTAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57494031000163,COMPANHIA BRASILEIRA DE CARTUCHOS,Sociedade Anônima Fechada,Pessoa Jurídica
 57494031001054,COMPANHIA BRASILEIRA DE CARTUCHOS,Sociedade Anônima Fechada,Pessoa Jurídica
 57494198000124,FORTE RAIZ MATERIAIS DE LIMPEZA E HIGIENE PESSOAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -54938,7 +54967,7 @@ favorecido,nome,natureza_juridica,tipo
 57557176000166,MOURA ENGENHARIA PRODUCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57562366000171,TATSUOTECH COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57566943000101,57.566.943 VANDERLEI CRISTIANO OIAN,Empresário (Individual),Pessoa Jurídica
-57567644000183,COMERCIAL FERRAGENS MOREIRA LTDA,Sem informação,Pessoa Jurídica
+57567644000183,COMERCIAL FERRAGENS MOREIRA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57569733000169,ALFAPRESS PROJETOS E CONFECCOES DE CIRCUITOS IMPRESSOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57582793000111,FESTO BRASIL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57585471000126,GOC DE MINAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55004,7 +55033,7 @@ favorecido,nome,natureza_juridica,tipo
 57978916000138,57.978.916 VICTOR GABRIEL VAZ DA SILVA,Empresário (Individual),Pessoa Jurídica
 57980641000177,SETOR MAQUINAS E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57984437000124,AUTO POSTO POR DO SOL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-57989302000151,EM LICITACOES E CONSULTORIA LTDA,Empresário (Individual),Pessoa Jurídica
+57989302000151,EM LICITACOES E CONSULTORIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57991151000176,D&P PREVIDENCIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57991888000199,MANEZA COMERCIO DE MOVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 57993706000119,JTS EQUIPAMENTOS MEDICOS E ESTETICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55034,10 +55063,12 @@ favorecido,nome,natureza_juridica,tipo
 58157989000121,A G E M COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 58162673000128,58.162.673 WAGNER ESPIRITO SANTO FIGUEIREDO,Empresário (Individual),Pessoa Jurídica
 58168865000141,TECNOFAST COMERCIO E REPRESENTACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+58173748000176,E S CARVALHO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 58184023000183,DANIELE SILVA DE OLIVEIRA,Empresário (Individual),Pessoa Jurídica
 58193483000178,SCHOBELL INDUSTRIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 58198524000119,IRMANDADE DA SANTA CASA DE MISERICORDIA DE SANTOS,Associação Privada,Pessoa Jurídica
 58200015000183,MUNICIPIO DE SANTOS,Município,Pessoa Jurídica
+58204446000118,58.204.446 TIAGO GOMES DA SILVA,Empresário (Individual),Pessoa Jurídica
 58216011000193,VENTILAR MAQUINAS E FERRAMENTAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 58222910000107,ASSISTENCIA A INFANCIA DE SANTOS GOTA DE LEITE,Associação Privada,Pessoa Jurídica
 58227825000123,58.227.825 SUELANIA DA SILVA CORREA,Empresário (Individual),Pessoa Jurídica
@@ -55175,7 +55206,7 @@ favorecido,nome,natureza_juridica,tipo
 59115670000104,COOPERATIVA DE AGRICULTURA FAMILIAR E ECONOMIA SOLIDARIA DO LIMOEIRO,Cooperativa,Pessoa Jurídica
 59126045000150,VIACAO SANTO IGNACIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59126048000193,59.126.048 SILVIA ERGANG MATOS,Empresário (Individual),Pessoa Jurídica
-59128481000168,ABY EMPREENDIMENTOS LTDA,Empresário (Individual),Pessoa Jurídica
+59128481000168,ABY EMPREENDIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59131363000109,IX MEDICAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59132053000109,M DA S LIMA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59138364000185,59.138.364 KEROLAYNE APARECIDA SOUZA MENDONCA,Empresário (Individual),Pessoa Jurídica
@@ -55225,7 +55256,7 @@ favorecido,nome,natureza_juridica,tipo
 59406791000105,NHS COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59408005000281,MITUTOYO SUL AMERICANA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59413943000199,VALIFIRE SISTEMA CONTRA INCENDIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-59446843000169,BARBOSA TURAN EMPREENDIMENTOS LTDA,Empresário (Individual),Pessoa Jurídica
+59446843000169,BARBOSA TURAN EMPREENDIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59447634000130,ISIDRO SOLUCOES INTEGRADAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59452167000136,"2VW COMERCIO, FORMACAO E DESENVOLVIMENTO LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
 59454686000133,BRASCONTROL INDUSTRIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55276,7 +55307,7 @@ favorecido,nome,natureza_juridica,tipo
 59643465000103,ONIX TECNOLOGIA E AUTOMACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59650556000176,MACOM INSTRUMENTAL CIRURGICO INDUSTRIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59657874000169,M.R.A. - INDUSTRIA DE EQUIPAMENTOS ELETRONICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-59659157000176,BCHOW SOLUCOES LTDA,Empresário (Individual),Pessoa Jurídica
+59659157000176,BCHOW SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59662312000103,BALITEK INSTRUMENTOS E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59683094000193,PREVISAO INDUSTRIA E COMERCIO DE PRESILHAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59704510000192,TOLEDO DO BRASIL INDUSTRIA DE BALANCAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55324,7 +55355,7 @@ favorecido,nome,natureza_juridica,tipo
 59899088000178,AUTO POSTO BEIRA RIO SANTA CRUZ LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59900704000163,FACULDADE DE FILOS CIENC E LETRAS DE S J DO RIO PARDO,Autarquia Municipal,Pessoa Jurídica
 59901454000186,SANTA CASA DE MISERICORDIA HOSPITAL SAO VICENTE,Associação Privada,Pessoa Jurídica
-59909566000183,ARX MANUTENCAO E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+59909566000183,ARX MANUTENCAO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 59910155000108,59.910.155 MARCO ANTONIO DOS REIS,Empresário (Individual),Pessoa Jurídica
 59918208000137,59.918.208 RENATA BATISTA DA SILVA,Empresário (Individual),Pessoa Jurídica
 59933705000104,SPECTRA TEC.IND.COMERCIO E SERV.DE INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55415,7 +55446,7 @@ favorecido,nome,natureza_juridica,tipo
 60396959000110,COMPONENTES-COMERCIO DE PNEUMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 60397874000903,FUJIFILM DO BRASIL LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 60401623000106,60.401.623 VAMARA OLIVEIRA CORREIA,Empresário (Individual),Pessoa Jurídica
-60403604000100,BXR COMPANY LTDA,Empresário (Individual),Pessoa Jurídica
+60403604000100,BXR COMPANY LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 60412996000174,MELLO S A MAQUINAS E EQUIPAMENTOS,Sociedade Anônima Fechada,Pessoa Jurídica
 60415063000130,60.415.063 ELISSON CARVALHO SANTOS,Empresário (Individual),Pessoa Jurídica
 60418480000137,COMERCIO E INDUSTRIA IRMAOS SALFATIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55496,7 +55527,7 @@ favorecido,nome,natureza_juridica,tipo
 60762846000190,ASSOCIACAO CRUZ VERDE,Associação Privada,Pessoa Jurídica
 60765823000130,SOCIEDADE BENEF ISRAELITABRAS HOSPITAL ALBERT EINSTEIN,Associação Privada,Pessoa Jurídica
 60771177000113,MARCO ANTONIO TASCA FERREIRA,Empresário (Individual),Pessoa Jurídica
-60771616000198,2RA COMERCIO E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+60771616000198,2RA COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 60779168000179,60.779.168 LEILA ALVES SIMOES,Empresário (Individual),Pessoa Jurídica
 60781050000185,R&P NEGOCIOS INTEGRADOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 60782013000191,INCLUSIT - CONSULTORIA E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55523,7 +55554,7 @@ favorecido,nome,natureza_juridica,tipo
 60860087000107,BRINK'S SEGURANCA E TRANSPORTE DE VALORES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 60863966000184,DEJAM ENGENHARIA E SERVICOS PREDIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 60869013000123,CENTRO AUDITIVO WIDEX-BRASITOM LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-60876096000188,AL COMERCIO DE MATERIAIS LTDA,Empresário (Individual),Pessoa Jurídica
+60876096000188,AL COMERCIO DE MATERIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 60877859000105,EDITORA EDGARD BLUCHER LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 60893245000117,ELETRO MAGNETICA GUIDON LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 60894136001439,ORIGINAL VEICULOS S A,Sociedade Anônima Fechada,Pessoa Jurídica
@@ -55695,7 +55726,7 @@ favorecido,nome,natureza_juridica,tipo
 61490098000105,61.490.098 JOSIANE CELESTINA DE ALMEIDA,Empresário (Individual),Pessoa Jurídica
 61498917000152,V2 LICITACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61502324000546,REFRIGELO CLIMATIZACAO DE AMBIENTES S.A.,Sociedade Anônima Fechada,Pessoa Jurídica
-61503043000184,ASTRION BUSINESS GROUP COMERCIO E SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+61503043000184,ASTRION BUSINESS GROUP COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61505900000185,G3 LICITACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61511127000160,SOCIEDADE BRASILEIRA DE CULTURA JAPONESA E DE ASSISTENCIA SOCIAL,Associação Privada,Pessoa Jurídica
 61521807000164,CAMERAS LES CHANSONS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55720,7 +55751,7 @@ favorecido,nome,natureza_juridica,tipo
 61602199028475,COMPANHIA ULTRAGAZ S A,Sociedade Anônima Fechada,Pessoa Jurídica
 61607925000190,GEORGES ROBERT EFSTATHIOU,Empresário (Individual),Pessoa Jurídica
 61615420000177,61.615.420 VANESSA FERRAZ MAFRA LOPES,Empresário (Individual),Pessoa Jurídica
-61650030000138,ALINE CERQUEIRA DE OLIVEIRA LTDA,Empresário (Individual),Pessoa Jurídica
+61650030000138,ALINE CERQUEIRA DE OLIVEIRA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61652237000141,VICTORIOUS COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61657396000139,DDK LICITACOES E CONTRATOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61687764000191,61.687.764 ROSA MARIA GONCALVES LOPES,Empresário (Individual),Pessoa Jurídica
@@ -55729,14 +55760,14 @@ favorecido,nome,natureza_juridica,tipo
 61702498000129,FABIO JUNIOR DE MELO GAFSKI,Empresário (Individual),Pessoa Jurídica
 61703072000190,61.703.072 RAFAEL PENA SANTOS,Empresário (Individual),Pessoa Jurídica
 61705380000154,FUNDACAO DE APOIO A PESQUISA AGRICOLA,Fundação Privada,Pessoa Jurídica
-61712321000103,HEXPERT EQUIPAMENTOS LTDA,Empresário (Individual),Pessoa Jurídica
+61712321000103,HEXPERT EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61718627000177,61.718.627 YURI SILVA SIQUEIRA,Empresário (Individual),Pessoa Jurídica
 61742678000134,V2 METALURGICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61750246000175,ACAO COMUNITARIA DO BRASIL VOCACAO,Associação Privada,Pessoa Jurídica
 61752820000124,TECNICA PERMATRON INDUSTRIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61757086000196,ROCHA MENDES DISTRIBUIDORA E REPRESENTACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61771120000187,SUTCARE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-61790970000122,MARAN & PINHEIRO LICITACOES LTDA,Sem informação,Pessoa Jurídica
+61790970000122,MARAN & PINHEIRO LICITACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61796408000106,ARTESURF SERVICO E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61797924000155,HEWLETT-PACKARD BRASIL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61797924000236,HEWLETT-PACKARD BRASIL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55766,7 +55797,7 @@ favorecido,nome,natureza_juridica,tipo
 61910484000109,61.910.484 JOAO PAULO DE PAULA NASCIMENTO,Empresário (Individual),Pessoa Jurídica
 61924335000190,BICKI MOVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61924981000158,INSTITUTO DE PESOS E MEDIDAS DO ESTADO DE SAO PAULO,Autarquia Estadual ou do Distrito Federal,Pessoa Jurídica
-61925686000116,OPTIMA 3S LTDA,Empresário (Individual),Pessoa Jurídica
+61925686000116,OPTIMA 3S LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61929410000106,POSTO PRESIDENTE JK LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61941298000129,JHP AR CONDICIONADO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 61944758000172,TECH SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55876,13 +55907,13 @@ favorecido,nome,natureza_juridica,tipo
 62581763000120,IDE COMPANY LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62592316000177,MAGNA COMERCIO DE BALANCAS LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 62593932000142,PI SOLUCOES E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-62621234000103,FOCUS SOLUCOES PARA EMPRESAS LTDA,Empresário (Individual),Pessoa Jurídica
+62621234000103,FOCUS SOLUCOES PARA EMPRESAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62644139000125,62.644.139 MARIA DE FATIMA BARBOZA RODRIGUES SOARES,Empresário (Individual),Pessoa Jurídica
 62645501000182,MATREN COMERCIO DE EQUIPAMENTOS E SUPRIMENTOS DE INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62645689000169,62.645.689 SAMUEL RODRIGUES DOURADO,Empresário (Individual),Pessoa Jurídica
 62663309000119,62.663.309 MAYARA BELLAN,Empresário (Individual),Pessoa Jurídica
 62664842000103,PNEUS ALBUQUERQUE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-62708409000114,ENESCIL ENGENHARIA DE PROJETOS LTDA,Sociedade Simples Limitada,Pessoa Jurídica
+62708409000114,ENESCIL ENGENHARIA DE PROJETOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62722635000150,VERTICE COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62723651000167,62.723.651 DIEGO GOMES DO NASCIMENTO,Empresário (Individual),Pessoa Jurídica
 62723838000160,POLITERM INSTRUMENTOS DE MEDICAO LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55892,9 +55923,9 @@ favorecido,nome,natureza_juridica,tipo
 62792827000132,REFERENCE TECNOLOGIA DA INFORMACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62798699000134,OBRAS SOCIAIS NOSSA SENHORA AQUIROPITA,Associação Privada,Pessoa Jurídica
 62802335000180,FEDERACAO PAULISTA DE BASKETBALL,Associação Privada,Pessoa Jurídica
-62812148000188,LFONSECA SERVICOS LTDA,Empresário (Individual),Pessoa Jurídica
+62812148000188,LFONSECA SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62837356000131,CENTRAL TEC COMERCIO E ASSISTENCIA TECNICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-62841925000112,ELEVARE COMERCIO E SUPRIMENTOS LTDA,Empresário (Individual),Pessoa Jurídica
+62841925000112,ELEVARE COMERCIO E SUPRIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62842293000101,62.842.293 HERNANI MARCUS SILVA E SILVA,Empresário (Individual),Pessoa Jurídica
 62859299000191,AMAZONAS TRANSPORTE E TECNOLOGIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62861877000124,RADIO CULTURA DE CERQUILHO FM LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55908,7 +55939,7 @@ favorecido,nome,natureza_juridica,tipo
 62941281000134,MAUELL SERVICOS DE TECNOLOGIA LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 62954987000130,CARLSONS PRODUTOS INDUSTRIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62955505219860,IGREJA DO EVANGELHO QUADRANGULAR,Organização Religiosa,Pessoa Jurídica
-62958500000198,JULIANA DE MENDONCA VOLPINI BATARRA LICITACOES LTDA,Empresário (Individual),Pessoa Jurídica
+62958500000198,JULIANA DE MENDONCA VOLPINI BATARRA LICITACOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62969589001593,CSL BEHRING COMERCIO DE PRODUTOS FARMACEUTICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62969951000120,RPL ROLAMENTOS PAULISTA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 62974396000125,62.974.396 PABLO LUIZ RODRIGUES KERBER,Empresário (Individual),Pessoa Jurídica
@@ -55949,7 +55980,7 @@ favorecido,nome,natureza_juridica,tipo
 63245894000108,63.245.894 VALDANE DOS SANTOS LOPES FIUSA,Empresário (Individual),Pessoa Jurídica
 63246458000145,ENGENHARIA E MANUTENCAO GERAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63293021000162,CCS CONSTRUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-63293976000110,VSR ESPORTES LTDA,Empresário (Individual),Pessoa Jurídica
+63293976000110,VSR ESPORTES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63297287000183,POSTO MORADA NOVA DERIVADOS DE PETROLEO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63297287000264,POSTO MORADA NOVA DERIVADOS DE PETROLEO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63305585000178,PIRAMIDE INFORMATICA E EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -55987,7 +56018,7 @@ favorecido,nome,natureza_juridica,tipo
 63505812000109,ROBEVALDO ALVES LIMA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63506398000152,MANOEL ARCANJO OLIVEIRA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63522193000160,63.522.193 PEDRO RAUL DE ALMEIDA,Empresário (Individual),Pessoa Jurídica
-63527100000190,RDS3 EMPRESARIAL LTDA,Empresário (Individual),Pessoa Jurídica
+63527100000190,RDS3 EMPRESARIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63534309000181,S COSTA CARVALHO FEITOSA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63542443000124,FORTES TECNOLOGIA EM SISTEMAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63550190000130,63.550.190 LEANDRO SANTOS DE FREITAS,Empresário (Individual),Pessoa Jurídica
@@ -56062,6 +56093,7 @@ favorecido,nome,natureza_juridica,tipo
 63772925000170,JRP REPRESENTACOES COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63777254000130,ATIBAIA ENGENHARIA CONSTRUCOES E SANEAMENTO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63777817000190,PINHEIROS SERVICOS E SOLUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+63780872000130,FUNDACAO DE APOIO AO INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA DE MINAS GERAIS - FAPIFMG,Fundação Privada,Pessoa Jurídica
 63786925000120,LEIDYMAR COMERCIAL E DISTRIBUIDORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63786990000155,MUNICIPIO DE VALE DO PARAISO,Município,Pessoa Jurídica
 63787071000104,MUNICIPIO DE MIRANTE DA SERRA,Município,Pessoa Jurídica
@@ -56073,7 +56105,7 @@ favorecido,nome,natureza_juridica,tipo
 63813173000149,63.813.173 LUANA ALVES LUNA,Empresário (Individual),Pessoa Jurídica
 63815252000199,NIKKEI DESIGN LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63819288000140,"ABL - CBK ENGENHARIA,ARQUITETURA E PAISAGISMO LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
-63832644000166,63.832.644 WASHINGTON DE OLIVEIRA ROCHA,Sem informação,Pessoa Jurídica
+63832644000166,63.832.644 WASHINGTON DE OLIVEIRA ROCHA,Empresário (Individual),Pessoa Jurídica
 63833883000130,U F AGUIAR LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63834022000177,PRAZERES E TEIXEIRA TRANSPORTES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 63845119000185,CHURRASCARIA CASA NOVA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -56112,7 +56144,7 @@ favorecido,nome,natureza_juridica,tipo
 64112295000170,IMPAC COMERCIAL E TECNOLOGIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 64112428000109,VIVA SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 64122773000123,SAMUEL AFLALO,Empresário (Individual),Pessoa Jurídica
-64131757000105,JS SOLUCOES INTELIGENTES LTDA,Empresário (Individual),Pessoa Jurídica
+64131757000105,JS SOLUCOES INTELIGENTES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 64138944000102,HIPPERQUIMICA DO BRASIL INDUSTRIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 64139910000132,DS PREDIAL MANUTENCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 64141708000145,R.MALUF ENGENHARIA & CONSTRUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -56127,9 +56159,9 @@ favorecido,nome,natureza_juridica,tipo
 64260426000167,64.260.426 KAUAN ALMEIDA ARAGAO,Empresário (Individual),Pessoa Jurídica
 64262876000199,VORTEX EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 64305053000101,LLM VARIEDADE E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-64323021000120,BW SOLUCOES COMERCIAIS LTDA,Empresário (Individual),Pessoa Jurídica
-64329244000103,COMERCIAL BRASIL CAMARGO LTDA,Empresário (Individual),Pessoa Jurídica
-64349898000190,GFP SUPRIMENTOS LTDA,Empresário (Individual),Pessoa Jurídica
+64323021000120,BW SOLUCOES COMERCIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+64329244000103,COMERCIAL BRASIL CAMARGO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+64349898000190,GFP SUPRIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 64370885000365,NATUREFARM LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 64377518000121,MARCA D'AGUA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 64440688000103,CIRURGICA JOAO PRODUTOS MEDICO-HOSPITALARES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -56209,7 +56241,7 @@ favorecido,nome,natureza_juridica,tipo
 65313538000100,PRESTOBAT LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 65323552000186,LINCE INSTALACOES E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 65325268000149,FREIOS-VIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-65332029000116,ITA SHOP NACIONAL E IMPORTADOS LTDA,Empresário (Individual),Pessoa Jurídica
+65332029000116,ITA SHOP NACIONAL E IMPORTADOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 65354250000175,GAROA CONSTRUCOES & EMPREENDIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 65443939000176,J.F. - EQUIPAMENTOS CIENTIFICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 65444294000196,65.444.294 ROBERTO FABIO CONWAY BACCARAT,Empresário (Individual),Pessoa Jurídica
@@ -56286,8 +56318,8 @@ favorecido,nome,natureza_juridica,tipo
 66275808000190,66.275.808 RAFAEL HENRIQUE DE CAMPOS,Empresário (Individual),Pessoa Jurídica
 66280794000100,66.280.794 ALEXANDRE PEGIGAN PERES DE LIMA,Empresário (Individual),Pessoa Jurídica
 66289059000150,HORIZONTE ENGENHARIA E CONSTRUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-66294470000113,PJMR NEGOCIOS LTDA,Empresário (Individual),Pessoa Jurídica
-66295968000109,MAANAIM CONSULTORIA LTDA,Sem informação,Pessoa Jurídica
+66294470000113,PJMR NEGOCIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+66295968000109,MAANAIM CONSULTORIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 66330164000195,66.330.164 JOSE OTACILIO DA SILVA JUNIOR,Empresário (Individual),Pessoa Jurídica
 66343930000156,POSTO ROMUALDO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 66364431000145,CONSTRUTORA TOUBES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -56354,7 +56386,7 @@ favorecido,nome,natureza_juridica,tipo
 67172437000183,MUNICIPIO DE HOLAMBRA,Município,Pessoa Jurídica
 67179200000124,FUNDACAO SOCIEDADE COMUNICACAO CULTURA E TRABALHO,Fundação Privada,Pessoa Jurídica
 67185694000150,GRUPO DE APOIO AO ADOLESCENTE E A CRIANCA COM C GRAACC,Associação Privada,Pessoa Jurídica
-67191944000164,M&B GESTAO E SUPRIMENTOS LTDA,Sem informação,Pessoa Jurídica
+67191944000164,M&B GESTAO E SUPRIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67196196000102,AUTO POSTO ARAPUA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67210336000150,"DYAR INDUSTRIA E COMERCIO DE MOVEIS, MAQUINAS E EQUIPAMENTOS LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
 67272757000105,R-BIOPHARM BRASIL COMERCIO DE PRODUTOS PARA ANALISE DE ALIMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -56372,7 +56404,7 @@ favorecido,nome,natureza_juridica,tipo
 67403154000103,A. M. MOLITERNO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67405936000173,PEUGEOT-CITROEN DO BRASIL AUTOMOVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67405936001064,PEUGEOT-CITROEN DO BRASIL AUTOMOVEIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-67423152000178,IBG INDUSTRIA BRASILEIRA DE GASES S.A.,Sociedade Empresária Limitada,Pessoa Jurídica
+67423152000178,IBG INDUSTRIA BRASILEIRA DE GASES S.A.,Sociedade Anônima Fechada,Pessoa Jurídica
 67439513000174,TECNOTEXTIL-INDUSTRIA E COMERCIO DE CINTAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67457705000103,BMS IMPORTACAO EXPORTACAO DE EQUIPAMENTOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67500058000175,POSTO LALA MORUMBI LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -56399,7 +56431,7 @@ favorecido,nome,natureza_juridica,tipo
 67744375000137,EXCELL COMERCIO DE BOMBAS HIDRAULICAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67748764000130,THIPLAN COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67767566000114,CONSTRUTORA OBRAVALE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-67769381000149,JD METALURGICA E ESQUADRIAS LTDA,Sem informação,Pessoa Jurídica
+67769381000149,JD METALURGICA E ESQUADRIAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67774679000147,NOVA ANALITICA IMPORTACAO E EXPORTACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67803726001024,SUPORTE SERVICOS DE SEGURANCA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67827568000151,MAXIMARCAS COMERCIO E SERVICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -56407,7 +56439,7 @@ favorecido,nome,natureza_juridica,tipo
 67836288000100,"GRUPO PELA VALORIZACAO, INTEGRACAO E DIGNIDADE DO DOENTE DE AIDS DE SAO PAULO (PELA VIDDA- SP)",Fundação Privada,Pessoa Jurídica
 67855783000166,EQUIPOSERV EQUIPAMENTOS INDUSTRIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67865360000127,ALLSEG SEGURADORA S/A,Sociedade Anônima Fechada,Pessoa Jurídica
-67867392000161,67.867.392 GUSTAVO GABRIEL DE ABREU CANDIDO,Sem informação,Pessoa Jurídica
+67867392000161,67.867.392 GUSTAVO GABRIEL DE ABREU CANDIDO,Empresário (Individual),Pessoa Jurídica
 67870667000116,WMB MUDANCAS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 67882621000117,"J.G. MORIYA REPRESENTACAO, IMPORTADORA E EXPORTADORA COMERCIAL LTDA.",Sociedade Empresária Limitada,Pessoa Jurídica
 67897538000111,ELETROLAB INDUSTRIA E COMERCIO DE EQUIPAMENTOS PARA LABORATORIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -56434,7 +56466,7 @@ favorecido,nome,natureza_juridica,tipo
 68270214000111,J B GALHARDO & CIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 68280551000190,MICROMAX COMERCIO E SERVICOS EM INFORMATICA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 68287143000160,ACTIVE ENGENHARIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-68294919000179,68.294.919 RAVIK SILVA CARLOS,Sem informação,Pessoa Jurídica
+68294919000179,68.294.919 RAVIK SILVA CARLOS,Empresário (Individual),Pessoa Jurídica
 68313105000134,COMPETITIVIDADE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 68314830000127,FUNDACAO DE APOIO A UNIVERSIDADE DE SAO PAULO,Fundação Privada,Pessoa Jurídica
 68317072000109,AUTO POSTO JBF SERTAOZINHO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -56462,7 +56494,7 @@ favorecido,nome,natureza_juridica,tipo
 68573765000154,HOLOS - CONSULTORIA E ASSESSORIA LTDA,Sociedade Simples Limitada,Pessoa Jurídica
 68577063000149,ELIAH FARMACIA DE MANIPULACAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 68581198000188,DINAMAN EQUIPAMENTOS PARA LABORATORIOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-68582475000177,AVANTIS COMERCIAL LTDA,Sem informação,Pessoa Jurídica
+68582475000177,AVANTIS COMERCIAL LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 68594274000190,UNIVERSAL FERMAT BAZAR E MATERIAIS DE CONSTRUCAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 68599703000111,ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS,Associação Privada,Pessoa Jurídica
 68600097000107,GALLO SPORT'S INDUSTRIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -56493,7 +56525,7 @@ favorecido,nome,natureza_juridica,tipo
 68780709000190,LINHA MEDICA EQUIPAMENTOS PARA MEDICINA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 68806405000155,"ALBATROZ - ARQUITETURA, CONSTRUCAO E RESTAURO LTDA",Sociedade Empresária Limitada,Pessoa Jurídica
 68814961000173,MEDIVAX INDUSTRIA E COMERCIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-68881648000158,C.A ATLANTICO MATERIAL DE CONSTRUCOES LTDA,Empresário (Individual),Pessoa Jurídica
+68881648000158,C.A ATLANTICO MATERIAL DE CONSTRUCOES LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 68886605000165,MARTE EQUIPAMENTOS PARA LABORATORIO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 68905074000100,DGA DISTRIBUIDORA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 68912740000138,PROAUTO ELECTRIC LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -56510,6 +56542,7 @@ favorecido,nome,natureza_juridica,tipo
 69030518000174,FLOTY - EQUIPAMENTOS AQUATICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 69069904000170,CORTICAL COMERCIO DE PRODUTOS CIRURGICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 69102457000103,TUV RHEINLAND SERVICOS INDUSTRIAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
+69104917000132,GRUPO TECNICO DE APOIO,Associação Privada,Pessoa Jurídica
 69112514000135,PRIMASOFT INFORMATICA LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 69119782000189,CTA CONSULTORIA TECNICA E ASSESSORIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 69120236000168,ASSOCIACAO DE PAIS AMIGOS E DEFICIENTES VISUAIS SBC.,Associação Privada,Pessoa Jurídica
@@ -56599,7 +56632,7 @@ favorecido,nome,natureza_juridica,tipo
 70318597000100,H DE P CAVALCANTI FILHO - LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 70318902000156,HIPERLINK COMERCIO E SERVICO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 70361910000185,MATERIAIS DE CONSTRUCAO ANDRADE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-70361951000171,BIDOIA E ZANCANARO LTDA,Empresário (Individual),Pessoa Jurídica
+70361951000171,BIDOIA E ZANCANARO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 70366828000143,ASSOCIACAO DESPORTIVA MOURA,Associação Privada,Pessoa Jurídica
 70392154000151,AUTO VIDROS CAMPO GRANDE LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 70429956000199,OLMIR IORIS & CIA LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -58701,7 +58734,7 @@ favorecido,nome,natureza_juridica,tipo
 87069589000162,GOBBO & CIA.LTDA.,Sociedade Empresária Limitada,Pessoa Jurídica
 87093605000829,ASSOCIACAO BENEFICENTE SAO JOSE,Associação Privada,Pessoa Jurídica
 87112736000130,SERVICO DE APOIO AS MICRO E PEQUENAS EMPRESAS DO ESTADO DO RIO GRANDE DO SUL,Serviço Social Autônomo,Pessoa Jurídica
-87133666000104,GA EDUCACAO S.A.,Sociedade Empresária Limitada,Pessoa Jurídica
+87133666000104,GA EDUCACAO S.A.,Sociedade Anônima Fechada,Pessoa Jurídica
 87134086000123,MOBRA SERVICOS DE VIGILANCIA LTDA - MASSA FALIDA,Sociedade Empresária Limitada,Pessoa Jurídica
 87146148000117,QUALIPLAX INDUSTRIA DE PLASTICOS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 87156352000119,INCOTERM SOLUCOES EM MEDICAO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
@@ -59456,7 +59489,7 @@ favorecido,nome,natureza_juridica,tipo
 92221589000176,IRMAOS KOPERECK LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 92225259000159,INDUSTRIA MECANICA NTC LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 92225739000110,COMPUCOM SOLUCOES DIGITAIS LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
-92227180000167,PAULO AFONSO LUCCAS DE CAMARGO LTDA,Empresário (Individual),Pessoa Jurídica
+92227180000167,PAULO AFONSO LUCCAS DE CAMARGO LTDA,Sociedade Empresária Limitada,Pessoa Jurídica
 92238096000149,ASSOCIACAO BRASILEIRA DE CRIADORES DE CAVALOS CRIOULOS,Associação Privada,Pessoa Jurídica
 92238914000103,ASSOCIACAO PELOTENSE DE ASSISTENCIA E CULTURA,Associação Privada,Pessoa Jurídica
 92242080000100,UNIVERSIDADE FEDERAL DE PELOTAS,Fundação Pública de Direito Público Federal,Pessoa Jurídica

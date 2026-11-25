@@ -5,7 +5,7 @@ ano,natureza,valor
 2014,Cooperativa,103000.00
 2014,Empresa Individual de Responsabilidade Limitada (de Natureza Empresária),202528.99
 2014,Empresa Pública,87.93
-2014,Empresário (Individual),380250.01
+2014,Empresário (Individual),379660.52
 2014,Entidade Sindical,200000.00
 2014,"Estabelecimento, no Brasil, de Sociedade Estrangeira",150.75
 2014,Fundação Privada,1430082.94
@@ -19,20 +19,19 @@ ano,natureza,valor
 2014,Sem informação,543948.65
 2014,Sociedade Anônima Aberta,11.25
 2014,Sociedade Anônima Fechada,1040901.56
-2014,Sociedade Empresária Limitada,18278572.45
+2014,Sociedade Empresária Limitada,18279161.94
 2014,Sociedade Simples Limitada,583664.54
 2014,Sociedade de Economia Mista,1421543.01
 2014,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,500000.00
 2014,Órgão Público do Poder Judiciário Estadual,539911.00
-2015,Associação Privada,309468925.62
+2015,Associação Privada,289919459.62
 2015,Autarquia Estadual ou do Distrito Federal,6980000.00
 2015,Autarquia Federal,41160.39
 2015,Autarquia Municipal,480358.00
-2015,Consórcio Público de Direito Privado,200000.00
 2015,Consórcio Público de Direito Público (Associação Pública),2536016.64
 2015,Empresa Individual de Responsabilidade Limitada (de Natureza Empresária),758024.82
 2015,Empresa Pública,5304901.26
-2015,Empresário (Individual),2292722.26
+2015,Empresário (Individual),2292202.81
 2015,Estado ou Distrito Federal,7251578.97
 2015,Fundação Privada,66291079.77
 2015,Fundação Pública de Direito Privado Municipal,1000000.00
@@ -46,9 +45,10 @@ ano,natureza,valor
 2015,Município,595349778.79
 2015,Pessoa Fisica,1006401.44
 2015,Sem informação,471984.10
+2015,Serviço Social Autônomo,19749466.00
 2015,Sociedade Anônima Aberta,13864089.70
-2015,Sociedade Anônima Fechada,15779646.27
-2015,Sociedade Empresária Limitada,125919089.31
+2015,Sociedade Anônima Fechada,15745831.87
+2015,Sociedade Empresária Limitada,125953423.16
 2015,Sociedade Simples Limitada,4265119.10
 2015,Sociedade Simples Pura,32163.50
 2015,Sociedade de Economia Mista,191207708.83
@@ -56,17 +56,16 @@ ano,natureza,valor
 2015,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,33270068.49
 2015,Órgão Público do Poder Executivo Municipal,2100000.00
 2015,Órgão Público do Poder Judiciário Estadual,971511.93
-2016,Associação Privada,361879762.08
+2016,Associação Privada,327876367.08
 2016,Autarquia Estadual ou do Distrito Federal,64073648.48
 2016,Autarquia Federal,42870.29
 2016,Autarquia Municipal,539078.72
-2016,Consórcio Público de Direito Privado,500000.00
 2016,Consórcio Público de Direito Público (Associação Pública),5381733.31
 2016,Consórcio de Sociedades,5491171.36
 2016,Cooperativa,4284156.67
 2016,Empresa Individual de Responsabilidade Limitada (de Natureza Empresária),1337303.26
 2016,Empresa Pública,237154011.29
-2016,Empresário (Individual),4130301.20
+2016,Empresário (Individual),4113850.49
 2016,Entidade Sindical,200000.00
 2016,Estado ou Distrito Federal,172000178.03
 2016,Fundação Privada,120817718.80
@@ -82,19 +81,18 @@ ano,natureza,valor
 2016,Organização Internacional,25171761.65
 2016,Pessoa Fisica,14776943.15
 2016,Sem informação,9567010090.93
-2016,Serviço Social Autônomo,1700000.00
-2016,Sociedade Anônima Aberta,1638184.18
-2016,Sociedade Anônima Fechada,115624329.30
-2016,Sociedade Empresária Limitada,597904596.56
+2016,Serviço Social Autônomo,36203395.00
+2016,Sociedade Anônima Aberta,1638188.34
+2016,Sociedade Anônima Fechada,116509443.30
+2016,Sociedade Empresária Limitada,597313712.41
 2016,Sociedade Simples Limitada,2968573.75
-2016,Sociedade Simples Pura,277779.14
-2016,Sociedade de Economia Mista,1852028212.17
+2016,Sociedade de Economia Mista,1852028208.01
 2016,Órgão Público Autônomo Estadual ou do Distrito Federal,500000.00
 2016,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,217527592.11
 2016,Órgão Público do Poder Executivo Federal,5351.15
 2016,Órgão Público do Poder Executivo Municipal,803734.68
 2016,Órgão Público do Poder Judiciário Estadual,184420.30
-2017,Associação Privada,558719134.67
+2017,Associação Privada,516468733.67
 2017,Autarquia Estadual ou do Distrito Federal,48211820.95
 2017,Autarquia Federal,239346.02
 2017,Autarquia Municipal,3125418.83
@@ -104,7 +102,7 @@ ano,natureza,valor
 2017,Cooperativa,4130611.56
 2017,Empresa Individual de Responsabilidade Limitada (de Natureza Empresária),2470817.46
 2017,Empresa Pública,278141146.58
-2017,Empresário (Individual),8138922.04
+2017,Empresário (Individual),8016113.25
 2017,Entidade Sindical,2263980.19
 2017,"Estabelecimento, no Brasil, de Sociedade Estrangeira",10128505.30
 2017,Estado ou Distrito Federal,217480799.14
@@ -123,20 +121,20 @@ ano,natureza,valor
 2017,Organização Religiosa,130149.14
 2017,Pessoa Fisica,21423160.45
 2017,Sem informação,513719788.27
-2017,Serviço Social Autônomo,30762.92
-2017,Sociedade Anônima Aberta,87013892.90
-2017,Sociedade Anônima Fechada,525763025.83
-2017,Sociedade Empresária Limitada,1048459709.92
+2017,Serviço Social Autônomo,42281163.92
+2017,Sociedade Anônima Aberta,87014457.63
+2017,Sociedade Anônima Fechada,526303760.83
+2017,Sociedade Empresária Limitada,1048042303.71
 2017,Sociedade Empresária em Nome Coletivo,22641.95
-2017,Sociedade Simples Limitada,3847818.50
+2017,Sociedade Simples Limitada,3847298.50
 2017,Sociedade Simples Pura,1631078.02
-2017,Sociedade de Economia Mista,3769613586.29
+2017,Sociedade de Economia Mista,3769613021.56
 2017,Órgão Público Autônomo Estadual ou do Distrito Federal,2140040.54
 2017,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,214481461.22
 2017,Órgão Público do Poder Executivo Federal,10943.32
 2017,Órgão Público do Poder Executivo Municipal,3807442.74
 2017,Órgão Público do Poder Judiciário Estadual,2701951.78
-2018,Associação Privada,215690292.75
+2018,Associação Privada,159928146.75
 2018,Autarquia Estadual ou do Distrito Federal,28477456.37
 2018,Autarquia Federal,301291.89
 2018,Autarquia Municipal,850151.65
@@ -147,7 +145,7 @@ ano,natureza,valor
 2018,Empresa Domiciliada no Exterior,15384054.07
 2018,Empresa Individual de Responsabilidade Limitada (de Natureza Empresária),4601313.17
 2018,Empresa Pública,95043090.87
-2018,Empresário (Individual),4725859.84
+2018,Empresário (Individual),4596723.44
 2018,Entidade Sindical,1158406.23
 2018,"Estabelecimento, no Brasil, de Sociedade Estrangeira",64862464.94
 2018,Estado ou Distrito Federal,191321216.91
@@ -165,22 +163,21 @@ ano,natureza,valor
 2018,Organização Religiosa,1693.32
 2018,Pessoa Fisica,15665267.60
 2018,Sem informação,69770307.24
-2018,Serviço Social Autônomo,309640.00
-2018,Sociedade Anônima Aberta,12716976.99
-2018,Sociedade Anônima Fechada,566003982.32
-2018,Sociedade Empresária Limitada,1401112729.50
+2018,Serviço Social Autônomo,56071786.00
+2018,Sociedade Anônima Aberta,12731117.85
+2018,Sociedade Anônima Fechada,565996550.34
+2018,Sociedade Empresária Limitada,1401241541.48
 2018,Sociedade Empresária em Comandita por Ações,309.58
 2018,Sociedade Empresária em Nome Coletivo,7760.92
 2018,Sociedade Simples Limitada,5943818.75
-2018,Sociedade Simples Pura,5555.58
-2018,Sociedade de Economia Mista,7232828539.76
+2018,Sociedade de Economia Mista,7232827710.88
 2018,Órgão Público Autônomo Estadual ou do Distrito Federal,426019.67
 2018,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,461834655.05
 2018,Órgão Público do Poder Executivo Federal,2039.36
 2018,Órgão Público do Poder Executivo Municipal,1222816.78
 2018,Órgão Público do Poder Judiciário Estadual,155636.43
 2018,Órgão Público do Poder Legislativo Estadual ou do Distrito Federal,200000.00
-2019,Associação Privada,360501903.79
+2019,Associação Privada,358173929.79
 2019,Autarquia Estadual ou do Distrito Federal,27684134.37
 2019,Autarquia Federal,162220.18
 2019,Autarquia Municipal,2172607.63
@@ -191,7 +188,7 @@ ano,natureza,valor
 2019,Empresa Domiciliada no Exterior,7945580.13
 2019,Empresa Individual de Responsabilidade Limitada (de Natureza Empresária),3158947.90
 2019,Empresa Pública,247543871.10
-2019,Empresário (Individual),7615163.13
+2019,Empresário (Individual),7559479.62
 2019,"Estabelecimento, no Brasil, de Sociedade Estrangeira",60451653.33
 2019,Estado ou Distrito Federal,185708718.36
 2019,Fundação Privada,160525082.59
@@ -210,19 +207,19 @@ ano,natureza,valor
 2019,Pessoa Fisica,14148917.43
 2019,Sem informação,8403342.56
 2019,Serviço Notarial e Registral (Cartório),5536.08
-2019,Serviço Social Autônomo,832000.00
-2019,Sociedade Anônima Aberta,11717456.36
-2019,Sociedade Anônima Fechada,218269800.01
-2019,Sociedade Empresária Limitada,1176447243.36
-2019,Sociedade Simples Limitada,4006578.61
+2019,Serviço Social Autônomo,3159974.00
+2019,Sociedade Anônima Aberta,11717512.01
+2019,Sociedade Anônima Fechada,218546059.21
+2019,Sociedade Empresária Limitada,1176229807.67
+2019,Sociedade Simples Limitada,4003438.61
 2019,Sociedade Simples Pura,170832.00
-2019,Sociedade de Economia Mista,6168018101.96
+2019,Sociedade de Economia Mista,6168018046.31
 2019,Órgão Público Autônomo Estadual ou do Distrito Federal,522891.20
 2019,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,417805786.95
 2019,Órgão Público do Poder Executivo Federal,24641.68
 2019,Órgão Público do Poder Executivo Municipal,1951750.84
 2019,Órgão Público do Poder Judiciário Estadual,47811.67
-2020,Associação Privada,550487054.13
+2020,Associação Privada,546287054.13
 2020,Autarquia Estadual ou do Distrito Federal,99041162.72
 2020,Autarquia Federal,6054153.13
 2020,Autarquia Municipal,2936779.40
@@ -234,7 +231,7 @@ ano,natureza,valor
 2020,Cooperativa,2615397.69
 2020,Empresa Individual de Responsabilidade Limitada (de Natureza Empresária),2561581.20
 2020,Empresa Pública,671837248.81
-2020,Empresário (Individual),48842942.65
+2020,Empresário (Individual),46915270.98
 2020,Entidade Sindical,614482.90
 2020,"Estabelecimento, no Brasil, de Sociedade Estrangeira",315814.09
 2020,Estado ou Distrito Federal,427187554.00
@@ -252,14 +249,14 @@ ano,natureza,valor
 2020,Pessoa Fisica,463927556.00
 2020,Sem informação,826906316.77
 2020,Serviço Notarial e Registral (Cartório),10225.60
-2020,Serviço Social Autônomo,43693400.96
-2020,Sociedade Anônima Aberta,58777181.71
-2020,Sociedade Anônima Fechada,521742361.88
-2020,Sociedade Empresária Limitada,2351365235.17
-2020,Sociedade Simples Limitada,24864374.42
+2020,Serviço Social Autônomo,47893400.96
+2020,Sociedade Anônima Aberta,58862616.40
+2020,Sociedade Anônima Fechada,523639645.46
+2020,Sociedade Empresária Limitada,2351465841.26
+2020,Sociedade Simples Limitada,24794156.42
 2020,Sociedade Simples Pura,269747.73
 2020,Sociedade Unipessoal de Advogados,57250.00
-2020,Sociedade de Economia Mista,10115834512.19
+2020,Sociedade de Economia Mista,10115749077.50
 2020,Órgão Público Autônomo Estadual ou do Distrito Federal,3620000.00
 2020,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,687875637.74
 2020,Órgão Público do Poder Executivo Federal,233375040.23
@@ -275,7 +272,7 @@ ano,natureza,valor
 2021,Cooperativa,5534791.56
 2021,Empresa Individual de Responsabilidade Limitada (de Natureza Empresária),896085.80
 2021,Empresa Pública,197761889.62
-2021,Empresário (Individual),22733167.06
+2021,Empresário (Individual),20521035.51
 2021,Entidade Sindical,1727391.18
 2021,"Estabelecimento, no Brasil, de Sociedade Estrangeira",5923091.15
 2021,Estado ou Distrito Federal,464618017.50
@@ -296,19 +293,19 @@ ano,natureza,valor
 2021,Sem informação,139851085.65
 2021,Serviço Notarial e Registral (Cartório),9002.15
 2021,Serviço Social Autônomo,10258284.14
-2021,Sociedade Anônima Aberta,21128096.70
-2021,Sociedade Anônima Fechada,326132862.53
-2021,Sociedade Empresária Limitada,2748606509.39
-2021,Sociedade Simples Limitada,11309427.74
-2021,Sociedade Simples Pura,956829.84
-2021,Sociedade de Economia Mista,14196389991.44
+2021,Sociedade Anônima Aberta,21160778.46
+2021,Sociedade Anônima Fechada,328533000.76
+2021,Sociedade Empresária Limitada,2748492630.20
+2021,Sociedade Simples Limitada,11270994.39
+2021,Sociedade Simples Pura,921135.70
+2021,Sociedade de Economia Mista,14196357309.68
 2021,Órgão Público Autônomo Estadual ou do Distrito Federal,4546733.58
 2021,Órgão Público Autônomo Municipal,896109.00
 2021,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,1036474553.25
 2021,Órgão Público do Poder Executivo Federal,3246197.74
 2021,Órgão Público do Poder Executivo Municipal,7868905.90
 2021,Órgão Público do Poder Judiciário Estadual,3039.34
-2022,Associação Privada,699477688.89
+2022,Associação Privada,681420209.89
 2022,Autarquia Estadual ou do Distrito Federal,190078084.46
 2022,Autarquia Federal,695011.67
 2022,Autarquia Municipal,10176325.38
@@ -319,11 +316,11 @@ ano,natureza,valor
 2022,Cooperativa,9782023.78
 2022,Empresa Individual de Responsabilidade Limitada (de Natureza Empresária),76455.33
 2022,Empresa Pública,210955650.67
-2022,Empresário (Individual),16209785.62
+2022,Empresário (Individual),14900640.54
 2022,Entidade Sindical,1314830.05
 2022,"Estabelecimento, no Brasil, de Sociedade Estrangeira",236.83
 2022,Estado ou Distrito Federal,395439227.24
-2022,Fundação Privada,455088158.53
+2022,Fundação Privada,454788158.53
 2022,Fundação Pública de Direito Privado Municipal,376760.46
 2022,Fundação Pública de Direito Público Estadual ou do Distrito Federal,23596753.10
 2022,Fundação Pública de Direito Público Federal,3912.00
@@ -337,13 +334,13 @@ ano,natureza,valor
 2022,Organização Social (OS),611660.00
 2022,Pessoa Fisica,9770452.67
 2022,Sem informação,25639814.94
-2022,Serviço Social Autônomo,15455858.30
-2022,Sociedade Anônima Aberta,25912262.75
-2022,Sociedade Anônima Fechada,157540872.84
-2022,Sociedade Empresária Limitada,2814624775.69
+2022,Serviço Social Autônomo,33813337.30
+2022,Sociedade Anônima Aberta,25912280.27
+2022,Sociedade Anônima Fechada,161002557.84
+2022,Sociedade Empresária Limitada,2812689581.16
 2022,Sociedade Simples Limitada,6000594.01
-2022,Sociedade Simples Pura,826372.38
-2022,Sociedade de Economia Mista,16470151827.35
+2022,Sociedade Simples Pura,609026.99
+2022,Sociedade de Economia Mista,16470151809.83
 2022,Sociedade em Conta de Participação,487.73
 2022,Órgão Público Autônomo Estadual ou do Distrito Federal,9742418.78
 2022,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,794454297.09
@@ -358,7 +355,7 @@ ano,natureza,valor
 2023,Consórcio de Sociedades,1269179.18
 2023,Cooperativa,18161882.65
 2023,Empresa Pública,203986682.17
-2023,Empresário (Individual),16618817.91
+2023,Empresário (Individual),16487930.32
 2023,Entidade Sindical,1199915.30
 2023,"Estabelecimento, no Brasil, de Sociedade Estrangeira",30404330.17
 2023,Estado ou Distrito Federal,807368067.03
@@ -378,23 +375,23 @@ ano,natureza,valor
 2023,Sem informação,23363442.73
 2023,Serviço Social Autônomo,12306172.40
 2023,Sociedade Anônima Aberta,28917528.19
-2023,Sociedade Anônima Fechada,155440759.03
-2023,Sociedade Empresária Limitada,2184687232.90
-2023,Sociedade Simples Limitada,8137368.27
-2023,Sociedade Simples Pura,402374.51
+2023,Sociedade Anônima Fechada,160694292.56
+2023,Sociedade Empresária Limitada,2179776986.79
+2023,Sociedade Simples Limitada,8133102.27
+2023,Sociedade Simples Pura,194240.68
 2023,Sociedade de Economia Mista,14463683590.85
 2023,Órgão Público Autônomo Estadual ou do Distrito Federal,1303284.88
 2023,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,605412699.68
 2023,Órgão Público do Poder Executivo Municipal,5229199.37
 2023,Órgão Público do Poder Judiciário Estadual,10012747.95
-2024,Associação Privada,820122173.56
+2024,Associação Privada,800366658.56
 2024,Autarquia Estadual ou do Distrito Federal,77508226.57
 2024,Autarquia Municipal,1069188.55
 2024,Consórcio Público de Direito Público (Associação Pública),17987005.41
 2024,Consórcio de Sociedades,18041507.02
 2024,Cooperativa,31065847.83
 2024,Empresa Pública,205224900.77
-2024,Empresário (Individual),20875525.22
+2024,Empresário (Individual),20299916.74
 2024,Entidade Sindical,1782500.00
 2024,"Estabelecimento, no Brasil, de Sociedade Estrangeira",517917.79
 2024,Estado ou Distrito Federal,1030392515.61
@@ -412,25 +409,25 @@ ano,natureza,valor
 2024,Organização Social (OS),3881524.00
 2024,Pessoa Fisica,16314694.64
 2024,Sem informação,25406415.55
-2024,Serviço Social Autônomo,3499074.63
-2024,Sociedade Anônima Aberta,37114091.96
-2024,Sociedade Anônima Fechada,187453507.13
-2024,Sociedade Empresária Limitada,2001719228.49
-2024,Sociedade Simples Limitada,10077653.48
-2024,Sociedade Simples Pura,605908.82
-2024,Sociedade de Economia Mista,19265814910.92
+2024,Serviço Social Autônomo,23254589.63
+2024,Sociedade Anônima Aberta,37114141.47
+2024,Sociedade Anônima Fechada,190064361.78
+2024,Sociedade Empresária Limitada,1999705252.19
+2024,Sociedade Simples Limitada,10076653.48
+2024,Sociedade Simples Pura,585638.95
+2024,Sociedade de Economia Mista,19265814861.41
 2024,Órgão Público Autônomo Estadual ou do Distrito Federal,5579715.70
 2024,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,431752697.78
 2024,Órgão Público do Poder Executivo Municipal,22445939.62
 2024,Órgão Público do Poder Judiciário Estadual,1675781.93
-2025,Associação Privada,2118808225.19
+2025,Associação Privada,2110908225.19
 2025,Autarquia Estadual ou do Distrito Federal,185593148.23
 2025,Autarquia Municipal,1469058.57
 2025,Consórcio Público de Direito Público (Associação Pública),21588343.15
 2025,Consórcio de Sociedades,1515760.50
 2025,Cooperativa,45211530.11
 2025,Empresa Pública,365813065.95
-2025,Empresário (Individual),16553256.29
+2025,Empresário (Individual),15211056.29
 2025,Entidade Sindical,12030580.31
 2025,"Estabelecimento, no Brasil, de Sociedade Estrangeira",1304.62
 2025,Estado ou Distrito Federal,629045192.22
@@ -450,10 +447,10 @@ ano,natureza,valor
 2025,Produtor Rural (Pessoa Física),180.00
 2025,Sem informação,21495322.56
 2025,Serviço Notarial e Registral (Cartório),472.50
-2025,Serviço Social Autônomo,29441877.24
+2025,Serviço Social Autônomo,37341877.24
 2025,Sociedade Anônima Aberta,20684932.11
-2025,Sociedade Anônima Fechada,64357407.60
-2025,Sociedade Empresária Limitada,2155230526.94
+2025,Sociedade Anônima Fechada,68711887.10
+2025,Sociedade Empresária Limitada,2152218247.44
 2025,Sociedade Empresária em Nome Coletivo,14.03
 2025,Sociedade Simples Limitada,2664570.36
 2025,Sociedade de Economia Mista,153950407.75
@@ -461,40 +458,40 @@ ano,natureza,valor
 2025,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,818511643.48
 2025,Órgão Público do Poder Executivo Municipal,12405158.15
 2025,Órgão Público do Poder Judiciário Estadual,2850586.32
-2026,Associação Privada,1920426475.42
-2026,Autarquia Estadual ou do Distrito Federal,70766793.98
+2026,Associação Privada,1909431337.27
+2026,Autarquia Estadual ou do Distrito Federal,70911454.73
 2026,Autarquia Municipal,2415030.84
 2026,Consórcio Público de Direito Público (Associação Pública),187670234.00
 2026,Consórcio de Sociedades,3522806.93
-2026,Cooperativa,64063877.11
-2026,Empresa Pública,233168993.16
+2026,Cooperativa,64663877.11
+2026,Empresa Pública,233169345.60
 2026,Empresa Simples de Inovação - Inova Simples,7406.00
-2026,Empresário (Individual),17294946.16
+2026,Empresário (Individual),16316520.90
 2026,Entidade Sindical,23870428.39
 2026,Estado ou Distrito Federal,435605663.09
-2026,Fundação Privada,751935236.80
+2026,Fundação Privada,762647551.26
 2026,Fundação Pública de Direito Privado Municipal,640900.00
-2026,Fundação Pública de Direito Público Estadual ou do Distrito Federal,14658663.86
+2026,Fundação Pública de Direito Público Estadual ou do Distrito Federal,15513112.96
 2026,Fundação Pública de Direito Público Municipal,3200000.00
-2026,Fundo Público da Administração Direta Estadual ou do Distrito Federal,2438513801.67
-2026,Fundo Público da Administração Direta Municipal,20675530073.04
+2026,Fundo Público da Administração Direta Estadual ou do Distrito Federal,2440263741.67
+2026,Fundo Público da Administração Direta Municipal,20681729737.04
 2026,Inscrição Genéric,1955335.35
 2026,Inscrição Genérica,1976683.01
-2026,Município,8461229339.70
-2026,Organização Internacional,17793390.38
+2026,Município,8514367566.43
+2026,Organização Internacional,27275953.34
 2026,Organização Religiosa,2824940.20
 2026,Organização Social (OS),11240297.00
-2026,Pessoa Fisica,19320041.38
-2026,Sem informação,102646674.03
+2026,Pessoa Fisica,19497886.10
+2026,Sem informação,102011790.06
 2026,Serviço Notarial e Registral (Cartório),1411.81
-2026,Serviço Social Autônomo,26702818.27
-2026,Sociedade Anônima Aberta,13033979.24
-2026,Sociedade Anônima Fechada,41957980.28
-2026,Sociedade Empresária Limitada,2184041819.88
-2026,Sociedade Simples Limitada,1706339.66
+2026,Serviço Social Autônomo,49952818.27
+2026,Sociedade Anônima Aberta,13036999.35
+2026,Sociedade Anônima Fechada,46671432.94
+2026,Sociedade Empresária Limitada,2195960276.03
+2026,Sociedade Simples Limitada,1708239.66
 2026,Sociedade Simples Pura,2394468.89
-2026,Sociedade de Economia Mista,108227685.49
+2026,Sociedade de Economia Mista,110205994.77
 2026,Órgão Público Autônomo Estadual ou do Distrito Federal,3001006.42
-2026,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,491594756.69
+2026,Órgão Público do Poder Executivo Estadual ou do Distrito Federal,492327226.99
 2026,Órgão Público do Poder Executivo Municipal,15470888.00
 2026,Órgão Público do Poder Judiciário Estadual,200000.00

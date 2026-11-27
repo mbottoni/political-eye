@@ -16660,9 +16660,9 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-08,,Pessoa Fisica,MT,SÃO FÉLIX DO ARAGUAIA,1,1919.86
 ,2017-08,,Pessoa Fisica,MT,TANGARÁ DA SERRA,1,4910.14
 ,2017-08,,Pessoa Fisica,PA,ABAETETUBA,1,2556.38
-,2017-08,,Pessoa Fisica,PA,ALMEIRIM,2,2954.80
+,2017-08,,Pessoa Fisica,PA,ALMEIRIM,3,4414.20
 ,2017-08,,Pessoa Fisica,PA,ANANINDEUA,1,2031.62
-,2017-08,,Pessoa Fisica,PA,BELÉM,25,32799.40
+,2017-08,,Pessoa Fisica,PA,BELÉM,24,31340.00
 ,2017-08,,Pessoa Fisica,PA,BREVES,1,1519.00
 ,2017-08,,Pessoa Fisica,PA,CASTANHAL,1,1046.40
 ,2017-08,,Pessoa Fisica,PA,MARABÁ,2,4046.48
@@ -26334,8 +26334,8 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-11,,Pessoa Fisica,MT,SÃO FÉLIX DO ARAGUAIA,1,1358.76
 ,2017-11,,Pessoa Fisica,MT,VÁRZEA GRANDE,1,869.40
 ,2017-11,,Pessoa Fisica,PA,ABAETETUBA,1,223.86
-,2017-11,,Pessoa Fisica,PA,ALTAMIRA,2,1209.42
-,2017-11,,Pessoa Fisica,PA,BELÉM,22,14131.71
+,2017-11,,Pessoa Fisica,PA,ALTAMIRA,3,1317.42
+,2017-11,,Pessoa Fisica,PA,BELÉM,21,14023.71
 ,2017-11,,Pessoa Fisica,PA,CASTANHAL,2,447.72
 ,2017-11,,Pessoa Fisica,PA,CONCEIÇÃO DO ARAGUAIA,2,1199.61
 ,2017-11,,Pessoa Fisica,PA,MARABÁ,4,2507.08
@@ -30434,8 +30434,9 @@ codigo_emenda,ano_mes,favorecido,tipo_favorecido,uf,municipio,n_favorecidos,valo
 ,2017-12,,Pessoa Fisica,MT,SÃO FÉLIX DO ARAGUAIA,1,447.72
 ,2017-12,,Pessoa Fisica,MT,VÁRZEA GRANDE,1,1514.94
 ,2017-12,,Pessoa Fisica,PA,ABAETETUBA,1,223.86
-,2017-12,,Pessoa Fisica,PA,ALTAMIRA,1,1384.80
-,2017-12,,Pessoa Fisica,PA,BELÉM,42,29359.83
+,2017-12,,Pessoa Fisica,PA,ALMEIRIM,1,713.22
+,2017-12,,Pessoa Fisica,PA,ALTAMIRA,2,1827.30
+,2017-12,,Pessoa Fisica,PA,BELÉM,40,28204.11
 ,2017-12,,Pessoa Fisica,PA,BRAGANÇA,1,380.04
 ,2017-12,,Pessoa Fisica,PA,CAPANEMA,1,380.04
 ,2017-12,,Pessoa Fisica,PA,CASTANHAL,3,1853.40

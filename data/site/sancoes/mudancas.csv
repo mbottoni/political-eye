@@ -72,4 +72,9 @@ data,lista,mudanca,kind,n
 2026-11-26,ceis,entrou,pessoa,1
 2026-11-26,ceis,saiu,empresa,42
 2026-11-26,ceis,saiu,pessoa,8
+2026-11-26,cepim,saiu,empresa,1
 2026-11-26,cnep,entrou,empresa,1
+2026-11-27,ceis,entrou,empresa,54
+2026-11-27,ceis,entrou,pessoa,5
+2026-11-27,ceis,saiu,empresa,38
+2026-11-27,ceis,saiu,pessoa,2
